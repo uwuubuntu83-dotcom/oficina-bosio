@@ -19,16 +19,21 @@ jobs:
         env:
           CF: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           GH: ${{ secrets.DESPERTADOR_TOKEN }}
-          CK: ${{ secrets.CELU_KEY }}
-          PIN: ${{ secrets.OFICINA_PIN }}
+          TG: ${{ secrets.TELEGRAM_TOKEN }}
+          CK0: ${{ secrets.CELU_KEY }}
+          PIN0: ${{ secrets.OFICINA_PIN }}
         run: |
           falta=""
           [ -z "$CF" ] && falta="$falta CLOUDFLARE_API_TOKEN"
           [ -z "$GH" ] && falta="$falta DESPERTADOR_TOKEN"
-          [ -z "$CK" ] && falta="$falta CELU_KEY"
-          [ -z "$PIN" ] && falta="$falta OFICINA_PIN"
+          [ -z "$TG" ] && falta="$falta TELEGRAM_TOKEN"
           if [ -n "$falta" ]; then echo "::warning::Faltan estos secretos:$falta. Cargalos y corré este paso de nuevo."; echo "listo=no" >> "$GITHUB_OUTPUT"; else echo "listo=si" >> "$GITHUB_OUTPUT"; fi
-          echo "dueno=$(node -e 'try{process.stdout.write(String(require(\"./data/estado.json\").dueno||\"\"))}catch(e){}')" >> "$GITHUB_OUTPUT"
+          # La clave del celu y el PIN: si no los cargaste, salen de la clave de Telegram (la oficina te los manda por Telegram).
+          CK=$(node -e 'const c=require("crypto");const d=p=>c.createHash("sha256").update(p+":"+process.env.TG).digest("hex");process.stdout.write(process.env.CK0||d("celu").slice(0,32))')
+          PIN=$(node -e 'const c=require("crypto");const d=p=>c.createHash("sha256").update(p+":"+process.env.TG).digest("hex");process.stdout.write(process.env.PIN0||String(parseInt(d("pin").slice(0,12),16)%1e8).padStart(8,"0"))')
+          echo "::add-mask::$CK"; echo "::add-mask::$PIN"
+          { echo "CELU_KEY=$CK"; echo "OFICINA_PIN=$PIN"; } >> "$GITHUB_ENV"
+          echo "dueno=$(node -e 'try{process.stdout.write(String(require(process.cwd()+"/data/estado.json").dueno||""))}catch(e){}')" >> "$GITHUB_OUTPUT"
       - name: Subir a Cloudflare
         if: steps.claves.outputs.listo == 'si'
         uses: cloudflare/wrangler-action@v3
@@ -45,5 +50,3 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           GH_TOKEN: ${{ secrets.DESPERTADOR_TOKEN }}
-          CELU_KEY: ${{ secrets.CELU_KEY }}
-          OFICINA_PIN: ${{ secrets.OFICINA_PIN }}

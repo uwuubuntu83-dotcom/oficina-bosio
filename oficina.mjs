@@ -185,7 +185,18 @@ async function tg(metodo, datos) {
   catch (e) { console.log("Telegram sin conexión:", e.message); tg.error = `${metodo}: sin conexión (${e.message})`; return null; }
 }
 /* ---------- buzón en Cloudflare: celu bot + órdenes desde la página ---------- */
-const BUZON = (ENV.BUZON_URL || BASE.buzon || "").replace(/\/+$/, ""); const PIN = ENV.OFICINA_PIN || "";
+const BUZON = (ENV.BUZON_URL || BASE.buzon || "").replace(/\/+$/, "");
+// Si Jonathan no cargó CELU_KEY / OFICINA_PIN, salen solos de la clave de Telegram (el instalador del buzón calcula lo mismo).
+const derivar = pre => crypto.createHash("sha256").update(pre + ":" + TG_TOKEN).digest("hex");
+const PIN = ENV.OFICINA_PIN || (TG_TOKEN ? String(parseInt(derivar("pin").slice(0, 12), 16) % 1e8).padStart(8, "0") : "");
+const CELU_KEY = ENV.CELU_KEY || (TG_TOKEN ? derivar("celu").slice(0, 32) : "");
+async function avisarBuzonListo() {
+  if (!BUZON || !PIN || !est.dueno || est.hechos.buzonAvisado) return;
+  try { const r = await traer(BUZON + "/", {}, 10000); if (!r.ok) return; } catch { return; }
+  const cmd = `echo '{"url": "${BUZON}", "celu_key": "${CELU_KEY}", "mudado": "si"}' > ~/celu_solo/nube.json && pkill -f vigia_celu.py; nohup python ~/celu_solo/vigia_celu.py >/dev/null 2>&1 &`;
+  const ok = await enviar(`✅ El buzón ya está instalado en Cloudflare.\n\n1️⃣ En el celu del bot, abrí Termux, pegá este mensaje de abajo (es un solo comando) y tocá Enter. Eso conecta el celu con la oficina.\n\n2️⃣ Tu PIN de la página es: ${PIN}\nTe lo pide una sola vez al tocar 📱 Celu.\n\nDespués escribime «celu» para ver si quedó andando.`);
+  if (ok && await enviar(cmd)) { est.hechos.buzonAvisado = NOW.toISOString(); log("Gerente general", "avisó que el buzón está listo"); }
+}
 async function buzon(ruta, cuerpo) {
   if (!BUZON || !PIN) throw new Error("el buzón del celu todavía no está instalado");
   const r = await traer(BUZON + ruta, cuerpo ? { method: "POST", headers: { "content-type": "application/json", "x-pin": PIN }, body: JSON.stringify(cuerpo) } : { headers: { "x-pin": PIN } }, 20000);
@@ -714,6 +725,7 @@ async function main() {
   if (TG_TOKEN && !est.botUsuario) { const me = await tg("getMe", {}); if (me && me.username) est.botUsuario = me.username; }
   if (!est.pendientes.length) est.pendientes = leerPrivSeguro("pendientes", []);
   await procesarMensajes();
+  await avisarBuzonListo();
   await revisarExternos();
   if (MODO.startsWith("correr:")) est.pendientes.push({ bot: MODO.slice(7), orden: "", origen: "manual" });
   const quedan = [];
