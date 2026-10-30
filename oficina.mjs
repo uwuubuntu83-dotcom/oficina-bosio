@@ -13,7 +13,7 @@ const ENV = process.env;
 const TG_TOKEN = ENV.TELEGRAM_TOKEN || "";
 const MODO = (ENV.MODO || "auto").trim();
 const NOW = ENV.FAKE_NOW ? new Date(ENV.FAKE_NOW) : new Date();
-const URLS = { gemini: ENV.GEMINI_BASE || "https://generativelanguage.googleapis.com/v1beta", tg: ENV.TG_BASE || "https://api.telegram.org", dolar: ENV.DOLAR_URL || "https://dolarapi.com/v1/dolares", rss: ENV.RSS_BASE || "https://news.google.com/rss/search", clima: ENV.CLIMA_URL || "https://api.open-meteo.com/v1/forecast" };
+const URLS = { gemini: ENV.GEMINI_BASE || "https://generativelanguage.googleapis.com/v1beta", tg: ENV.TG_BASE || "https://api.telegram.org", dolar: ENV.DOLAR_URL || "https://dolarapi.com/v1/dolares", rss: ENV.RSS_BASE || "https://news.google.com/rss/search", bing: ENV.BING_BASE || "https://www.bing.com/news/search", clima: ENV.CLIMA_URL || "https://api.open-meteo.com/v1/forecast" };
 
 /* ---------- utilidades ---------- */
 const ar = (d = NOW) => new Date(d.getTime() - 3 * 3600e3);
@@ -368,7 +368,7 @@ function listaComidas(dias) { const r = leerPrivSeguro("comidas", []).filter(x =
 function resumenEjercicio(dias) { const r = leerPrivSeguro("ejercicio", []).filter(x => x.t >= hace(dias)); const si = new Set(r.filter(x => x.hizo).map(x => x.f)); return `💪 Actividad de los últimos ${dias} días: entrenaste o caminaste ${si.size} de ${dias} días.\n${r.map(x => `${x.hizo ? "✅" : "▫️"} ${x.f.slice(8, 10)}/${x.f.slice(5, 7)}: ${x.texto}`).join("\n") || "(no anotaste nada todavía)"}`; }
 function parseItems(xml) {
   const out = [];
-  for (const m of xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/g)) { const it = m[1]; out.push({ titulo: decode((it.match(/<title[^>]*>([\s\S]*?)<\/title>/) || [])[1]), link: decode((it.match(/<link>([\s\S]*?)<\/link>/) || [])[1]), fuente: decode((it.match(/<source[^>]*>([\s\S]*?)<\/source>/) || [])[1]), fecha: decode((it.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1]) }); }
+  for (const m of xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/g)) { const it = m[1]; out.push({ titulo: decode((it.match(/<title[^>]*>([\s\S]*?)<\/title>/) || [])[1]), link: decode((it.match(/<link>([\s\S]*?)<\/link>/) || [])[1]), fuente: decode((it.match(/<source[^>]*>([\s\S]*?)<\/source>/) || it.match(/<News:Source>([\s\S]*?)<\/News:Source>/i) || [])[1]), fecha: decode((it.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1]) }); }
   for (const m of xml.matchAll(/<entry\b[^>]*>([\s\S]*?)<\/entry>/g)) { const it = m[1]; out.push({ titulo: decode((it.match(/<title[^>]*>([\s\S]*?)<\/title>/) || [])[1]), link: ((it.match(/<link[^>]*href="([^"]+)"/) || [])[1] || ""), fuente: "", fecha: decode((it.match(/<(?:updated|published)>([\s\S]*?)<\/(?:updated|published)>/) || [])[1]) }); }
   return out;
 }
@@ -389,12 +389,12 @@ const RECETAS = {
   },
   async rss(b, sb, { resumen } = {}) {
     const vistos = new Set(sb.memoria.vistos || []); const items = [];
-    const fuentesUrl = [...(b.receta.busquedas || []).map(q => ({ q, url: `${URLS.rss}?q=${encodeURIComponent(q + " when:" + (b.receta.dias || 3) + "d")}&hl=es-419&gl=AR&ceid=AR:es-419` })), ...(b.receta.feeds || []).map(u => ({ q: u, url: u, feed: true }))];
-    for (const { q, url, feed } of fuentesUrl) {
+    const fuentesUrl = [...(b.receta.busquedas || []).flatMap(q => [{ q, url: `${URLS.rss}?q=${encodeURIComponent(q + " when:" + (b.receta.dias || 3) + "d")}&hl=es-419&gl=AR&ceid=AR:es-419` }, ...(ENV.SIN_BING ? [] : [{ q: q + " (Bing)", url: `${URLS.bing}?q=${encodeURIComponent(q)}&format=rss&setlang=es-AR&cc=AR&qft=interval%3d%22${(b.receta.dias || 3) <= 1 ? 7 : 8}%22`, bing: true }])]), ...(b.receta.feeds || []).map(u => ({ q: u, url: u, feed: true }))];
+    for (const { q, url, feed, bing } of fuentesUrl) {
       try {
-        const r0 = await traer(url); if (!r0.ok) throw new Error("respondió " + r0.status); const xml = await r0.text();
+        const r0 = await traer(url); if (!r0.ok) { if (bing) continue; throw new Error("respondió " + r0.status); } const xml = await r0.text();
         for (const it0 of parseItems(xml)) {
-          const { titulo, link } = it0; const fuente = it0.fuente || (feed ? new URL(url).hostname.replace(/^www\./, "") : ""); const fecha = it0.fecha;
+          const { titulo } = it0; let link = it0.link; if (bing) { const u = (link.match(/[?&]url=([^&]+)/) || [])[1]; if (u) link = decodeURIComponent(u); } const fuente = it0.fuente || (feed ? new URL(url).hostname.replace(/^www\./, "") : ""); const fecha = it0.fecha;
           if (feed && fecha && Date.now() - new Date(fecha) > (b.receta.dias || 3) * 86400e3 && sb.memoria.vistos) continue;
           const clave = titulo.toLowerCase().replace(/\s+-\s+[^-]+$/, "").slice(0, 90);
           if (!titulo || !link || vistos.has(clave) || items.some(x => x.clave === clave)) continue;
