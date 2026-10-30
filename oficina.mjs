@@ -599,6 +599,8 @@ async function procesarMensajes() {
     est.pendientes.push({ bot: null, orden: txt.slice(0, 600), t: NOW.toISOString(), origen: "orden" });
     log("Jonathan", "mandó una orden por Telegram");
   }
+  // le confirmo a Telegram que ya los leí (si no, el despertador cree que siguen sin atender)
+  if (ups.length) await tg("getUpdates", { offset: est.tgOffset, limit: 1, timeout: 0 });
 }
 async function repartir(p) {
   const g = est.bots.gerente; g.estado = "trabajando";

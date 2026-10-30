@@ -1,0 +1,41 @@
+name: Instalar despertador
+
+# Instala (o actualiza) el despertador en Cloudflare. Corre solo cuando cambia su código, o a mano desde Actions.
+on:
+  push:
+    paths: ["despertador/**", ".github/workflows/despertador.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  instalar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Revisar claves
+        id: claves
+        env:
+          CF: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          GH: ${{ secrets.DESPERTADOR_TOKEN }}
+        run: |
+          if [ -z "$CF" ] || [ -z "$GH" ]; then
+            echo "Faltan los secretos CLOUDFLARE_API_TOKEN o DESPERTADOR_TOKEN. Cuando los cargues, corré este paso de nuevo."
+            echo "listo=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "listo=si" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Subir a Cloudflare
+        if: steps.claves.outputs.listo == 'si'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: despertador
+          secrets: |
+            TELEGRAM_TOKEN
+            GH_TOKEN
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          GH_TOKEN: ${{ secrets.DESPERTADOR_TOKEN }}

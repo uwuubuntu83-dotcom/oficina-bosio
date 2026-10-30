@@ -1,0 +1,12 @@
+name = "oficina-despertador"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+workers_dev = true
+
+[triggers]
+crons = ["* * * * *"]   # cada minuto (gratis en Cloudflare)
+
+[vars]
+REPO = "uwuubuntu83-dotcom/oficina-bosio"
+WORKFLOW = "oficina.yml"
+RAMA = "main"
