@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta name="version" content="20261030173032">
+<meta name="version" content="20261030174146">
 <meta http-equiv="Cache-Control" content="no-cache">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -104,6 +104,8 @@ h1 span{color:var(--gold)}
 .m.rp button{background:none;border:0;color:var(--gold);padding:0;margin-top:4px;font-size:12px}
 .quick{display:flex;gap:6px;overflow-x:auto;padding:8px 12px;border-top:1px solid var(--line)}
 .quick button,.quick a{background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-size:12px;white-space:nowrap;text-decoration:none;color:var(--ink)}
+.chat-tabs{display:flex;gap:6px;padding:8px 12px 0}.chat-tabs button{flex:1;background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 10px;font:inherit;font-size:13px}.chat-tabs button[aria-pressed=true]{background:var(--ok);color:#06210f;border-color:transparent;font-weight:600}
+.m.cv{max-width:92%}.m.cv.yo{margin-left:auto;background:#163a28;border-color:#2f6b4c}
 .compose{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line)}
 .compose input{flex:1;min-width:0;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:10px;color:var(--ink);font:inherit}
 .compose button{background:var(--ok);color:#06210f;border:0;border-radius:10px;padding:0 14px;font-weight:600}
@@ -159,7 +161,7 @@ code{font-family:var(--f-mono);background:var(--panel2);border-radius:4px;paddin
     </section>
     <aside class="chat" aria-label="Chat de la oficina">
       <h2>💬 Chat de la oficina</h2>
-      <div class="msgs" id="msgs"></div>
+      <div class="chat-tabs" id="chatTabs"></div><div class="msgs" id="msgs"></div>
       <div class="quick" id="quick"></div>
       <form class="compose" id="compose"><input id="orden" placeholder="Escribile una orden al Gerente general…" aria-label="Orden para el gerente" autocomplete="off"><button>Enviar</button></form>
       <div class="compose-note" id="note">La orden le llega directo al Gerente (te pide tu PIN la primera vez) y te contesta por Telegram en 1 o 2 minutos.</div>
@@ -239,7 +241,17 @@ function pintarOrg(){
     g.append(card)}
   v.append(g);
 }
+/* un solo chat: lo mismo que ves en Telegram y en el panel del celu (guardado en el buzón, privado con tu PIN) */
+OF.chatModo="chat";OF.conv=null;
+async function cargarConv(){if(!getPin())return;try{const d=await buzon("/oficina/chat");OF.conv=d.chat||[];if(OF.chatModo==="chat")pintarConv()}catch(e){}}
+function pintarConv(){const box=$("#msgs");const abajo=box.scrollHeight-box.scrollTop-box.clientHeight<60;box.innerHTML="";
+  if(!OF.conv||!OF.conv.length)box.append(h("div",{class:"m"},h("span",{class:"empty"},"Todavía no hay mensajes. Escribí abajo: «estado», «celu programa de hoy», «gasté 5000 en nafta»…")));
+  for(const m of (OF.conv||[]).slice(-120)){const yo=/^vos/.test(m.de);box.append(h("div",{class:"m cv"+(yo?" yo":"")},h("div",{class:"who"},yo?"🙋 "+m.de:(m.de==="celu"?"📱 Celu bot":m.de==="oficina"?"🏢 Oficina":"🤖 "+m.de)),h("div",{style:"white-space:pre-wrap"},m.texto),h("time",{},fmt(new Date(m.t).toISOString()))))}
+  if(abajo||!OF.convVisto){box.scrollTop=box.scrollHeight;OF.convVisto=true}}
 function pintarChat(){
+  const tabs=$("#chatTabs");if(tabs){tabs.innerHTML="";for(const[k,l]of[["chat","💬 Chat"],["act","📋 Actividad"]])tabs.append(h("button",{"aria-pressed":String(OF.chatModo===k),onclick:()=>{OF.chatModo=k;OF.convVisto=false;pintarChat();if(k==="chat")cargarConv()}},l))}
+  if(OF.chatModo==="chat"&&getPin()){pintarConv();pintarQuick();return}
+  if(OF.chatModo==="chat"&&!getPin()){const box=$("#msgs");box.innerHTML="";box.append(h("div",{class:"m"},"🔒 Para ver el chat (el mismo de Telegram y del celu) poné tu PIN una vez. ",h("button",{onclick:()=>pedirPin(()=>{cargarConv()})},"Poner PIN")));pintarQuick();return}
   const box=$("#msgs");const keep=box.scrollTop;box.innerHTML="";const o=OF.ORG,e=OF.EST;
   const reps=o.bots.map(b=>({b,s:(e.bots||{})[b.id]||{}})).filter(x=>x.s.informe&&x.s.ultimaCorrida).sort((x,y)=>new Date(y.s.ultimaCorrida)-new Date(x.s.ultimaCorrida)).slice(0,8);
   const items=[...reps.map(x=>({t:x.s.ultimaCorrida,rep:x})),...(e.log||[]).slice(0,40).filter(l=>!/^(Oficina|Mesa de entrada)$/.test(l.quien)).map(l=>({t:l.t,log:l}))].sort((a,b)=>new Date(b.t)-new Date(a.t)).slice(0,45);
@@ -248,14 +260,16 @@ function pintarChat(){
     if(it.rep){const {b,s}=it.rep;const a=o.areas.find(x=>x.id===b.area)||{};box.append(h("div",{class:"m rp",style:"--c:"+(a.color||"#888")},h("div",{class:"who"},(a.icono||"")+" "+b.nombre+(s.puntaje?" · ⭐ "+s.puntaje+"/10":"")),h("div",{},(s.resumen||"").slice(0,200)+(s.resumen&&s.resumen.length>200?"…":"")),h("button",{onclick:()=>verBot(b)},"Ver informe completo"),h("time",{},fmt(it.t))))}
     else box.append(h("div",{class:"m"},h("span",{class:"who"},it.log.quien+": "),it.log.que,h("time",{},fmt(it.t))));
   }
-  box.scrollTop=keep;
-  const q=$("#quick");q.innerHTML="";const u=e.botUsuario;
-  for(const [lbl,cmd] of [["📋 Estado","estado"],["👥 Organigrama","bots"],["➕ Contratar bot","contratar: "],["🏢 Crear área","crear area "],["💵 Dólar ya","correr dolar"],["🌤️ Clima","correr clima"]])q.append(h("button",{onclick:()=>{$("#orden").value=cmd;$("#orden").focus()}},lbl));
-  $("#note").textContent="La orden le llega directo al Gerente (la primera vez te pide tu PIN) y te contesta por Telegram en 1 o 2 minutos. Para el celu: «celu programa de hoy», «celu pausa» o el botón 📱 Celu.";
+  box.scrollTop=keep;pintarQuick()}
+function pintarQuick(){
+  const q=$("#quick");q.innerHTML="";
+  for(const [lbl,cmd] of [["📋 Estado","estado"],["📱 Celu","celu"],["📅 Programa del celu","celu programa de hoy"],["💸 Gastos","gastos"],["👥 Organigrama","bots"],["➕ Contratar bot","contratar: "],["🏢 Crear área","crear area "],["💵 Dólar ya","correr dolar"],["🌤️ Clima","correr clima"]])q.append(h("button",{onclick:()=>{$("#orden").value=cmd;$("#orden").focus()}},lbl));
+  $("#note").textContent="Es el mismo chat que Telegram y que el panel del celu: escribas donde escribas, se ve en los tres. Lo del celu contesta al instante; lo demás en 1 o 2 minutos.";
 }
 $("#compose").addEventListener("submit",async ev=>{ev.preventDefault();const t=$("#orden").value.trim();if(!t)return;
-  if(getPin()){try{await buzon("/oficina/gerente",{texto:t});$("#orden").value="";$("#note").textContent="✅ Orden enviada. El Gerente te contesta por Telegram en 1 o 2 minutos.";return}catch(e){$("#note").textContent="⚠️ "+e.message+". La mando por Telegram."}}
-  pedirPin(async()=>{try{await buzon("/oficina/gerente",{texto:t});$("#orden").value="";$("#note").textContent="✅ Orden enviada. El Gerente te contesta por Telegram en 1 o 2 minutos."}catch(e){$("#note").textContent="⚠️ "+e.message}});});
+  const mandar=async()=>{try{await buzon("/oficina/gerente",{texto:t});$("#orden").value="";OF.chatModo="chat";OF.convVisto=false;await cargarConv();pintarChat()}catch(e){$("#note").textContent="⚠️ "+e.message}};
+  if(getPin())mandar();else pedirPin(mandar);});
+setInterval(()=>{if(OF.chatModo==="chat"&&!document.hidden)cargarConv()},6000);
 function pedirPin(despues){$("#dT").textContent="🔒 Tu PIN de la oficina";const B=$("#dB");B.innerHTML="";
   const inp=h("input",{type:"password",inputmode:"numeric",placeholder:"PIN (te llegó por Telegram)",style:"flex:1;min-width:0;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:10px;color:var(--ink);font:inherit","aria-label":"PIN"});
   B.append(h("p",{},"Escribilo una vez y queda guardado en este navegador (en modo incógnito se borra al cerrarlo)."),h("form",{class:"compose",style:"padding:0;border:0",onsubmit:e=>{e.preventDefault();if(inp.value.trim()){setPin(inp.value.trim());$("#dlg").close();despues&&despues()}}},inp,h("button",{},"Guardar y enviar")));
@@ -328,7 +342,7 @@ document.querySelectorAll("#bar button").forEach(b=>b.addEventListener("click",(
   if(OF.vista==="org")setVista("2d");pintar();if(window.OF3D)window.OF3D.enfocar();
 }));
 let v0="2d";try{v0=localStorage.getItem("of-vista")||"2d"}catch(e){}
-cargar().then(()=>setVista(v0));setInterval(cargar,60000);
+cargar().then(()=>{setVista(v0);cargarConv()});setInterval(cargar,60000);
 /* se actualiza sola cuando hay una versión nueva de la página */
 const VER=(document.querySelector('meta[name="version"]')||{}).content||"";
 setInterval(async()=>{try{const t=await (await fetch(location.pathname+"?v="+Date.now(),{cache:"no-store"})).text();const m=t.match(/<meta name="version" content="([^"]+)"/);if(m&&VER&&m[1]!==VER&&!$("#dlg").open)location.reload()}catch(e){}},120000);

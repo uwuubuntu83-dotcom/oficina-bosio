@@ -6,14 +6,14 @@
 // Las claves (CELU_KEY, OFICINA_PIN, TELEGRAM_TOKEN, GH_TOKEN) son secretos de Cloudflare: nunca están en el código.
 import { DurableObject } from "cloudflare:workers";
 
-const MAX_CHAT = 120;
+const MAX_CHAT = 400;
 const json = (o, st = 200, extra = {}) => new Response(JSON.stringify(o), { status: st, headers: { "content-type": "application/json; charset=utf-8", ...extra } });
 
 export class Buzon extends DurableObject {
   async fetch(req) {
     const u = new URL(req.url); const s = this.ctx.storage;
     const body = req.method === "POST" ? await req.json().catch(() => ({})) : {};
-    const anotar = async e => { const c = (await s.get("chat")) || []; c.push({ t: Date.now(), ...e }); await s.put("chat", c.slice(-MAX_CHAT)); };
+    const anotar = async (...es) => { const c = (await s.get("chat")) || []; let t = Date.now(); for (const e of es) c.push({ t: t++, ...e }); await s.put("chat", c.slice(-MAX_CHAT)); };
     switch (u.pathname) {
       case "/celu/estado":
         await s.put("estado", { t: Date.now(), estado: body.estado || {}, diagnostico: body.diagnostico || {}, cripto: body.cripto || {} });
@@ -27,10 +27,11 @@ export class Buzon extends DurableObject {
         const r = { de: "celu", texto: String(body.texto || "").slice(0, 4000), urgente: !!body.urgente, informe: !!body.informe, alerta: !!body.alerta };
         await anotar(r);
         const tgHasta = (await s.get("tgHasta")) || 0;
-        return json({ ok: true, aTelegram: r.urgente || r.alerta || r.informe || Date.now() < tgHasta, texto: r.texto });
+        const periodico = /últimos \d+ min/i.test(r.texto);           // el resumen de cada 15 min queda solo en el chat de la oficina
+        return json({ ok: true, aTelegram: r.urgente || r.alerta || !periodico, texto: r.texto });
       }
       case "/oficina/celu":
-        return json({ estado: (await s.get("estado")) || null, chat: ((await s.get("chat")) || []).slice(-50), pendientes: ((await s.get("ordenes")) || []).length, ahora: Date.now() });
+        return json({ estado: (await s.get("estado")) || null, chat: ((await s.get("chat")) || []).slice(-120), pendientes: ((await s.get("ordenes")) || []).length, ahora: Date.now() });
       case "/oficina/orden": {
         const o = { id: crypto.randomUUID().slice(0, 8) };
         let que;
@@ -39,13 +40,26 @@ export class Buzon extends DurableObject {
         else if (body.tipo === "ajuste" && typeof body.telegram === "boolean") { o.tipo = "ajuste"; o.telegram = body.telegram; que = "Avisos por Telegram: " + (body.telegram ? "prendidos" : "apagados"); }
         else return json({ ok: false, error: "orden no válida" }, 400);
         const l = (await s.get("ordenes")) || []; l.push(o); await s.put("ordenes", l.slice(-50));
-        await anotar({ de: body.origen === "telegram" ? "vos (Telegram)" : "vos", texto: que });
-        if (body.origen === "telegram") await s.put("tgHasta", Date.now() + 15 * 60e3);   // lo que conteste el celu en los próximos 15 min va a tu Telegram
-        return json({ ok: true, id: o.id });
+        if (body.origen !== "telegram") await anotar({ de: "vos (panel del celu)", texto: "📱 " + que });   // lo de Telegram ya lo anota la oficina
+        return json({ ok: true, id: o.id, que });
+      }
+      case "/oficina/chat": {                          // lo que la oficina le dice a Jonathan (y lo que él escribe por Telegram): un solo chat
+        if (req.method === "POST") { const ms = (body.mensajes || []).filter(m => m && m.texto).slice(0, 80).map(m => ({ de: String(m.de || "oficina").slice(0, 60), texto: String(m.texto).slice(0, 4000) })); if (ms.length) await anotar(...ms); return json({ ok: true, n: ms.length }); }
+        return json({ chat: ((await s.get("chat")) || []).slice(-120) });
       }
       case "/oficina/gerente": {                       // órdenes para el Gerente escritas en la página
         if (req.method === "POST") {
           const t = String(body.texto || "").trim().slice(0, 600); if (!t) return json({ ok: false, error: "orden vacía" }, 400);
+          await anotar({ de: "vos (oficina)", texto: t });
+          const c = ordenCeluDe(t);
+          if (c) {                                                            // «celu ...»: lo resuelvo acá mismo, sin esperar a la oficina
+            const e = await s.get("estado");
+            let resp = null;
+            if (c.ver === "estado") resp = textoCelu(e); else if (c.ver === "plan") resp = textoPlan(e); else if (c.ver === "informe") resp = "🧾 Informe del celu de hoy\n\n" + textoCelu(e) + "\n\n" + textoPlan(e);
+            else { const l = (await s.get("ordenes")) || []; l.push({ id: crypto.randomUUID().slice(0, 8), ...c.orden }); await s.put("ordenes", l.slice(-50)); resp = "📱 Se lo pasé al celu bot. Lo agarra en 15 segundos y te contesta acá."; }
+            await anotar({ de: "oficina", texto: resp });
+            return json({ ok: true, celu: true, respuesta: resp });
+          }
           const g = (await s.get("gerente")) || []; g.push({ t: Date.now(), texto: t }); await s.put("gerente", g.slice(-20));
           return json({ ok: true });
         }
@@ -65,9 +79,41 @@ function cors(env, req) {
   return o === (env.ORIGEN || "https://uwuubuntu83-dotcom.github.io") ? { "access-control-allow-origin": o, "access-control-allow-headers": "content-type, x-pin", "access-control-allow-methods": "GET, POST, OPTIONS", vary: "origin" } : {};
 }
 
-async function telegram(env, texto) {
+async function telegram(env, texto, prefijo = "📱 Celu bot:\n") {
   if (!env.TELEGRAM_TOKEN || !env.DUENO || !texto) return;
-  await fetch(`https://api.telegram.org/bot${env.TELEGRAM_TOKEN}/sendMessage`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ chat_id: env.DUENO, text: ("📱 Celu bot:\n" + texto).slice(0, 4000), disable_web_page_preview: true }) }).catch(() => {});
+  await fetch(`https://api.telegram.org/bot${env.TELEGRAM_TOKEN}/sendMessage`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ chat_id: env.DUENO, text: (prefijo + texto).slice(0, 4000), disable_web_page_preview: true }) }).catch(() => {});
+}
+
+// ---- órdenes «celu ...» escritas en la página (mismas palabras que por Telegram)
+function ordenCeluDe(t) {
+  const m = String(t).match(/^\/?celu(?:\s*bot)?\b[\s:,.-]*(.*)$/is); if (!m) return null;
+  const q = m[1].trim(), low = q.toLowerCase();
+  if (!q || /^(estado|c[oó]mo (est[aá]|and[aá])|anda\??)$/.test(low)) return { ver: "estado" };
+  if (/^(programa|plan|agenda|tareas|qu[eé] (tiene|hace|le toca))/.test(low)) return { ver: "plan" };
+  if (/^(informe|reporte|resumen)/.test(low)) return { ver: "informe" };
+  const QUE = "(\\s+(con\\s+)?(el\\s+|los\\s+)?(instagram|celu|bot|bots|todo|redes))?\\s*[.!]*$";
+  if (new RegExp("^(paus[a-záéíóú]*|fren[a-záéíóú]*|par[aá])" + QUE).test(low)) return { orden: { tipo: "accion", accion: "pausa_ig" } };
+  if (new RegExp("^(segu[ií]|seguir|sigue|activ[a-záéíóú]*|arranc[a-záéíóú]*|continu[a-záéíóú]*)" + QUE).test(low)) return { orden: { tipo: "accion", accion: "seguir_ig" } };
+  if (/^reinici/.test(low)) return { orden: { tipo: "accion", accion: "reiniciar_ig" } };
+  if (/^(avisos|telegram) (on|si|sí|prend)/.test(low)) return { orden: { tipo: "ajuste", telegram: true } };
+  if (/^(avisos|telegram) (off|no|apag)/.test(low)) return { orden: { tipo: "ajuste", telegram: false } };
+  return { orden: { tipo: "chat", texto: q } };
+}
+const horaAR = () => new Date(Date.now() - 3 * 3600e3).toISOString().slice(11, 16), fechaAR = () => new Date(Date.now() - 3 * 3600e3).toISOString().slice(0, 10);
+function textoCelu(E) {
+  if (!E || !E.t) return "📱 El celu todavía no mandó señales al buzón.";
+  const x = E.estado || {}, rh = x.redes_hoy || {}, min = Math.round((Date.now() - E.t) / 60000);
+  const bat = x.bateria != null ? " · batería " + (typeof x.bateria === "object" ? (x.bateria.porcentaje ?? x.bateria.percentage ?? "?") : x.bateria) + "%" : "";
+  return `📱 Celu bot · ${min <= 10 ? "🟢 andando" : "🔴 no responde hace " + min + " min (revisá Termux, el Wi-Fi y la depuración inalámbrica)"}\nBot de Instagram: ${x.pausa ? "⏸ en pausa" : x.bot_vivo ? "trabajando" : "parado"}${bat}\n\nHoy: ${rh.publicaciones || 0} publicaciones · ${rh.historias || 0} historias · ${rh.reels || 0} reels/reposts · ${rh.seguidos || 0} seguidos · ${rh.gringo || 0} gringo · ${rh.errores || 0} errores${(rh.ultimas || []).length ? "\n\nÚltimo que hizo:\n" + rh.ultimas.slice(-6).map(l => "• " + l).join("\n") : ""}`;
+}
+const TAREAS = { historia: "📸 Historia de Instagram", repost: "🔁 Repost", publicar: "🖼️ Publicación", reel: "🎬 Reel", reel_ia: "🤖 Reel con IA", seguir: "➕ Seguir cuentas", fb_compartir: "📘 Compartir en Facebook", fb_historia: "📘 Historia de Facebook", fb_seguir: "📘 Seguir en Facebook", ofertas: "🏷️ Oferta", grin_unfollow: "➖ Gringo: dejar de seguir" };
+const nombreT = t => TAREAS[t] || (/^memes_/.test(t) ? "😂 Memes: " + t.slice(6) : /^obra_/.test(t) ? "🧱 Obra: " + t.slice(5) : "• " + t.replace(/_/g, " "));
+function textoPlan(E) {
+  const pl = E && E.estado && E.estado.plan_hoy;
+  if (!pl || !pl.tareas) return "📅 El celu todavía no mandó su plan.";
+  if (pl.fecha !== fechaAR()) return `📅 El plan que tiene el celu es del ${pl.fecha}: todavía no armó el de hoy.`;
+  const hh = horaAR(), q = pl.tareas.filter(t => t[0] >= hh), por = {}; for (const t of q) por[t[1]] = (por[t[1]] || 0) + 1;
+  return `📅 Programa de hoy del celu bot\nTotal: ${pl.tareas.length} tareas · quedan ${q.length}\n\n${Object.entries(por).sort((a, z) => z[1] - a[1]).map(([k, v]) => `${nombreT(k)}: ${v}`).join("\n") || "No le quedan tareas por hoy."}${q.length ? "\n\n⏭️ Próximas:\n" + q.slice(0, 15).map(t => `${t[0]}  ${nombreT(t[1])}${t[2] ? " ×" + t[2] : ""}`).join("\n") : ""}`;
 }
 
 export default {
@@ -88,9 +134,15 @@ export default {
       const pin = req.headers.get("x-pin") || u.searchParams.get("pin") || "";
       if (!env.OFICINA_PIN || pin !== env.OFICINA_PIN) return json({ ok: false, error: "PIN incorrecto" }, 401, h);
       if (p === "/oficina/ia") return json(await iaCloudflare(env, await req.json().catch(() => ({}))), 200, h);
-      const r = await buzon(env).fetch(req);
+      const cuerpo = req.method === "POST" ? await req.text() : null;
+      const r = await buzon(env).fetch(new Request(req.url, { method: req.method, headers: req.headers, body: cuerpo }));
+      const j = r.ok && cuerpo ? await r.clone().json().catch(() => ({})) : {};
+      const b = cuerpo ? (() => { try { return JSON.parse(cuerpo); } catch { return {}; } })() : {};
       const out = new Response(r.body, r); for (const [k, v] of Object.entries(h)) out.headers.set(k, v);
-      if (p === "/oficina/gerente" && req.method === "POST" && r.ok) ctx.waitUntil(revisar(env, true));   // orden desde la página: despierto ya
+      if (r.ok && p === "/oficina/gerente" && req.method === "POST") {          // un solo chat: lo que escribís en la página también queda en tu Telegram
+        ctx.waitUntil((async () => { await telegram(env, b.texto, "🖥️ Vos (desde la oficina):\n"); if (j.respuesta) await telegram(env, j.respuesta, ""); else if (!j.celu) await revisar(env, true); })());
+      }
+      if (r.ok && p === "/oficina/orden" && req.method === "POST" && b.origen !== "telegram" && j.que) ctx.waitUntil(telegram(env, j.que, "🖥️ Vos (panel del celu):\n📱 "));
       return out;
     }
     if (p === "/despertar") return json(await revisar(env));

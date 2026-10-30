@@ -262,8 +262,11 @@ async function ordenCelu(t) {
   await enviar(`📱 Se lo pasé al celu bot${o.tipo === "chat" ? ": «" + q.slice(0, 80) + "»" : ""}. Lo agarra en 15 segundos y te contesta acá.`);
 }
 const escHTML = s => String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const CONV = []; // un solo chat: todo lo que la oficina te dice va también al chat de la página (en el buzón, privado con PIN)
+async function guardarConv() { if (!CONV.length || !BUZON || !PIN) return; try { await buzon("/oficina/chat", { mensajes: CONV.splice(0) }); } catch (e) { console.log("chat del buzón:", e.message); } }
 async function enviar(texto, botId, opt = {}) {
   if (!est.dueno) return null;
+  { const b = botId && botPorId(botId); CONV.push({ de: b ? b.nombre : "Gerente general", texto: String(opt.html ? String(texto).replace(/<a href="([^"]+)">([^<]*)<\/a>/g, "$2 ($1)").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"') : texto).slice(0, 4000) }); }
   const partes = []; let t = opt.html ? String(texto) : limpiar(texto);
   while (t.length > 3900) { let c = t.lastIndexOf("\n", 3900); if (c < 1000) c = 3900; partes.push(t.slice(0, c)); t = t.slice(c).trim(); }
   partes.push(t);
@@ -644,6 +647,7 @@ async function procesarMensajes() {
     const chat = m.chat.id; const txt = (m.text || m.caption || "").trim();
     if (!est.dueno) { if (m.chat.type === "private") { est.dueno = chat; log("Gerente general", `quedó vinculado el Telegram de ${m.from && m.from.first_name || "el dueño"}`); await enviar(`✅ Listo, ${m.from && m.from.first_name || "jefe"}: quedaste como dueño de la oficina. Solo te obedezco a vos.\n\n${AYUDA()}`); } continue; }
     if (chat !== est.dueno) continue;
+    if (!u.web) CONV.push({ de: "vos (Telegram)", texto: m.photo ? "📸 " + (txt || "foto") : txt });
     const resp = m.reply_to_message && est.mensajes[m.reply_to_message.message_id];
     if (m.photo) {
       const foto = m.photo[m.photo.length - 1].file_id; const rb = resp && botPorId(resp);
@@ -795,10 +799,11 @@ async function main() {
   if ((MODO === "auto" && horaAR() >= CFG.gerente.entrenamiento && est.hechos.entrenamiento !== fechaAR()) || MODO === "entrenar") { est.hechos.entrenamiento = fechaAR(); await entrenar(); }
   est.bots.gerente.estado = est.pendientes.length ? "trabajando" : "esperando";
   est.actualizado = NOW.toISOString();
+  await guardarConv();
   escribirPriv("pendientes", est.pendientes); const pendPublicos = est.pendientes.length; est.pendientes = []; est.pendientesCant = pendPublicos;
   est.config = { telegram: !!TG_TOKEN, gemini: PROV.some(p => p.tipo === "gemini"), dueno: !!est.dueno, ias: [...new Set(PROV.map(p => p.nombre))] };
   escribir(FEST, est);
   escribir(path.join(DATA, "organigrama.json"), { oficina: CFG.oficina, dueno: CFG.dueno, gerente: CFG.gerente, areas: CFG.areas, bots: CFG.bots.map(b => ({ ...b, tipoTxt: tipoTxt(b), horarioTxt: horarioTxt(b) })), limites: CFG.limites });
   console.log(`Listo. Consultas de IA en esta corrida: ${consultasCorrida}. Hoy: ${est.consumo.consultas}.`);
 }
-main().catch(e => { console.error(e); log("Oficina", "error general: " + e.message); est.actualizado = NOW.toISOString(); try { if (est.pendientes && est.pendientes.length) { escribirPriv("pendientes", est.pendientes); est.pendientes = []; } } catch {} escribir(FEST, est); });
+main().catch(async e => { console.error(e); try { await guardarConv(); } catch {} log("Oficina", "error general: " + e.message); est.actualizado = NOW.toISOString(); try { if (est.pendientes && est.pendientes.length) { escribirPriv("pendientes", est.pendientes); est.pendientes = []; } } catch {} escribir(FEST, est); });
