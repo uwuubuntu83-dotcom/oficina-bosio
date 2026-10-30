@@ -1,1009 +1,1783 @@
 {
-  "version": 2,
-  "bots": {
+ "version": 2,
+ "bots": {
+  "dolar": {
+   "estado": "listo",
+   "corridas": 3,
+   "fallas": 1,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "💵 Dólar hoy (23:53 hs)\n• Oficial: compra $1510 · venta $1560 (+0.0%)\n• Blue: compra $1545 · venta $1565 (+0.0%)\n• Bolsa: compra $1557.8 · venta $1568.8 (+0.0%)\n• Contado con liquidación: compra $1649.8 · venta $1650.3 (",
+   "informe": "data/informes/dolar/2026-10-29-2353.md",
+   "pausado": false,
+   "memoria": {
+    "dolarBase": {
+     "oficial": 1560,
+     "blue": 1565,
+     "bolsa": 1568.8,
+     "contadoconliqui": 1650.3,
+     "mayorista": 1539,
+     "cripto": 1643.99,
+     "tarjeta": 2028
+    },
+    "dolarFecha": "2026-10-30",
     "dolar": {
-      "estado": "listo",
-      "corridas": 2,
-      "fallas": 1,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:53:21.717Z",
-      "resumen": "💵 Dólar hoy (23:53 hs)\n• Oficial: compra $1510 · venta $1560 (+0.0%)\n• Blue: compra $1545 · venta $1565 (+0.0%)\n• Bolsa: compra $1557.8 · venta $1568.8 (+0.0%)\n• Contado con liquidación: compra $1649.8 · venta $1650.3 (",
-      "informe": "data/informes/dolar/2026-10-29-2353.md",
-      "pausado": false,
-      "memoria": {
-        "dolarBase": {
-          "oficial": 1560,
-          "blue": 1565,
-          "bolsa": 1568.8,
-          "contadoconliqui": 1650.3,
-          "mayorista": 1539,
-          "cripto": 1643.99,
-          "tarjeta": 2028
-        },
-        "dolarFecha": "2026-10-29",
-        "dolar": {
-          "oficial": 1560,
-          "blue": 1565,
-          "bolsa": 1568.8,
-          "contadoconliqui": 1650.3,
-          "mayorista": 1539,
-          "cripto": 1643.99,
-          "tarjeta": 2028
-        },
-        "ultimoChequeo": "2026-10-30T02:53:21.717Z",
-        "resumenFecha": "2026-10-29"
-      }
+     "oficial": 1560,
+     "blue": 1565,
+     "bolsa": 1568.8,
+     "contadoconliqui": 1650.3,
+     "mayorista": 1539,
+     "cripto": 1643.99,
+     "tarjeta": 2028
     },
-    "inmuebles": {
-      "estado": "falló",
-      "corridas": 0,
-      "fallas": 1,
-      "fallasSeguidas": 1,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:15:30.038Z",
-      "resumen": "Falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/",
-      "informe": null,
-      "pausado": false
-    },
-    "precios_obra": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false
-    },
-    "licitaciones": {
-      "estado": "listo",
-      "corridas": 2,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:53:21.717Z",
-      "resumen": "🧱 Clientes y licitaciones\n\n• El Niño. Licitan desagües pluviales en San Francisco por más de $ 2.500 millones (La Voz del Interior)\n  https://news.google.com/rss/articles/CBMiqgFBVV95cUxQT3lzS0E5NmdDQ1FKZHF1S3dPVDlIdlhP",
-      "informe": "data/informes/licitaciones/2026-10-29-2353.md",
-      "pausado": false,
-      "memoria": {
-        "vistos": [
-          "el niño. licitan desagües pluviales en san francisco por más de $ 2.500 millones",
-          "anuncian la licitación de 11,9 kilómetros de la ruta s-433 en villa santa rosa",
-          "el centro botí celebra el centenario de los concursos de cerámica de la rambla con exposic",
-          "el centro rafael botí reúne en córdoba 17 obras premiadas en los concursos de alfarería de",
-          "otro recurso paraliza la adjudicación de las obras de edificación de la base logística de ",
-          "el gobierno da luz verde a 200 millones de euros en subvenciones a promotores y fondos de ",
-          "más de medio millón de euros para eliminar barreras en las avenidas de república argentina",
-          "guadalcázar construirá un nuevo tanatorio inspirado en un dolmen",
-          "villa santa rosa: la provincia anunció la pavimentación de la ruta que conecta con tinoco",
-          "circunvalación: con usd350 millones, apuran obra para completarla en 2027",
-          "privatización de rutas nacionales con peajes: 20 constructoras compiten en la última licit",
-          "los vecinos de la avenida ollerías demandan un plan común para arreglar los soportales",
-          "se pavimentará la ruta que une a villa santa rosa con tinoco",
-          "la base logística de córdoba se topa con un segundo freno: la adjudicación de la dirección",
-          "el banco nación ya prestó los $32.000 millones de anses para hipotecarios: cuántos crédito",
-          "pp acusa al gobierno de \"negar información de obra del museo arqueológico que tiene desde "
-        ],
-        "ultimoChequeo": "2026-10-30T02:53:21.717Z"
-      }
-    },
-    "ideas_jb": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "noticias": {
-      "estado": "falló",
-      "corridas": 0,
-      "fallas": 1,
-      "fallasSeguidas": 1,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:15:30.038Z",
-      "resumen": "Falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/",
-      "informe": null,
-      "pausado": false
-    },
-    "escapadas": {
-      "estado": "falló",
-      "corridas": 0,
-      "fallas": 1,
-      "fallasSeguidas": 1,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:15:30.038Z",
-      "resumen": "Falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "ia_gratis": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "gerente": {
-      "estado": "trabajando",
-      "resumen": "Mandó el parte diario",
-      "ultimaCorrida": null
-    },
-    "terrenos": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": "2026-10-30T02:59:16.579Z",
-      "resumen": "A pedido: trabaja solo cuando se lo pedís.",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "casas": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "autos": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "negocios": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "m2": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "materiales": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "noticias_vm": {
-      "estado": "listo",
-      "corridas": 2,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:53:21.717Z",
-      "resumen": "📰 Noticias de Villa María\n\n• Clima en Villa Maria del Rio Seco hoy: cuál es el pronóstico del tiempo para el 29 de octubre de 2026 (La Nación)\n  https://news.google.com/rss/articles/CBMi-wFBVV95cUxOSHE5VFFPWjk0WVFsb0N4e",
-      "informe": "data/informes/noticias_vm/2026-10-29-2353.md",
-      "pausado": false,
-      "memoria": {
-        "vistos": [
-          "clima en villa maria del rio seco hoy: cuál es el pronóstico del tiempo para el 29 de octu",
-          "calleri propone una copa davis en villa maría y accastello apoya la idea",
-          "palpitando halloween: ¿qué historias paranormales conocen los villamarienses? (video)",
-          "estuvo preso, salió y volvió a robar a los meses: la nueva condena a “jetón” pereyra en có",
-          "córdoba mostró resultados educativos superiores al promedio nacional y avances en comprens",
-          "estaba prófugo por narcotráfico en córdoba y fue capturado en la pampa",
-          "recuperaron en villa maría una motocicleta robada en pozo del molle",
-          "comenzó un paro nacional docente para pedir justicia por nancy godoy",
-          "realizan una cadena de oración para un menor accidentado en villa nueva",
-          "turismo. córdoba lanzó su temporada de verano con la nueva \"ruta 100\" como producto a ofre",
-          "villa maría será sede del aat challenger ieb+ en su cierre de temporada argentina de tenis",
-          "presentan un libro sobre industrias kaiser",
-          "clima en villa maria del rio seco hoy: cuál es el pronóstico del tiempo para el 30 de octu",
-          "llegaron a villa huidobro 50 árboles para forestar distintos espacios verdes |",
-          "presentaron el challenger de villa maría con entrada gratuita hasta el jueves",
-          "grupo ecipsa entregó una nueva etapa del megaproyecto residencial en villa devoto | 29 de "
-        ],
-        "ultimoChequeo": "2026-10-30T02:53:21.717Z"
-      }
-    },
-    "noticias_ar": {
-      "estado": "listo",
-      "corridas": 2,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:53:21.717Z",
-      "resumen": "📰 Economía y obra pública\n\n• Daniel González, a días de renunciar a su cargo en el Gobierno: “El RIGI no puede solucionar todos los problemas de los argentinos” (Infobae)\n  https://news.google.com/rss/articles/CBMinAJBV",
-      "informe": "data/informes/noticias_ar/2026-10-29-2353.md",
-      "pausado": false,
-      "memoria": {
-        "vistos": [
-          "daniel gonzález, a días de renunciar a su cargo en el gobierno: “el rigi no puede solucion",
-          "el documental sobre el lado oculto del mundial de qatar se presentará en mar del plata",
-          "el fmi planteó cuatro ejes para reactivar la economía argentina | 29 de octubre de 2026",
-          "¿por qué la elección de lula afecta al mercado argentino? (mobile)",
-          "el fmi reconoce caída de la actividad pero \"aconseja\" a milei profundizar el programa de a",
-          "el titular del banco central afirmó que argentina puede afrontar tensiones cambiarias en 2",
-          "n5 ganó el premio a la innovación con impacto 2026 de la fundación banco nación y endeavor",
-          "el fmi apuesta a profundizar las reformas de javier milei para pasar del ajuste al crecimi",
-          "melconian cuestionó el modelo económico de milei: advirtió por la parálisis de la industri",
-          "¿qué pasó en la economía argentina?: columna del lic. julián marino",
-          "patagones: la filial de la federación agraria argentina avanza en la construcción de su se",
-          "melconian cuestionó el rumbo económico: “no nos pegamos un tiro porque está vaca muerta”",
-          "qué se sabe de los barrios gremiales del megaplan de casas",
-          "cuatro medidas. el fmi reconoce caída de la actividad pero \"aconseja\" a milei profundizar ",
-          "vaca muerta y la minería pueden impulsar las exportaciones, pero en rdeco advierten: “el d",
-          "rdeco: qué necesitan la industria y la construcción para recuperar competitividad y activi",
-          "ciudad de córdoba: así avanza la limpieza y desmalezado del canal maestro sur",
-          "horacio berra resaltó las oportunidades para la construcción",
-          "el gas llega a barrio san cayetano: “el objetivo es que en tres años la ciudad completa te",
-          "ante la recesión, caputo se anima a una herejía"
-        ],
-        "ultimoChequeo": "2026-10-30T02:53:21.717Z"
-      }
-    },
-    "mundo": {
-      "estado": "listo",
-      "corridas": 2,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:53:21.717Z",
-      "resumen": "🌎 Noticias del mundo\n\n• Europa propone anticiparse al riesgo climático: la sostenibilidad también consiste en proteger a las personas (Prevención Integral)\n  https://news.google.com/rss/articles/CBMi9AFBVV95cUxNNlJqelct",
-      "informe": "data/informes/mundo/2026-10-29-2353.md",
-      "pausado": false,
-      "memoria": {
-        "vistos": [
-          "europa propone anticiparse al riesgo climático: la sostenibilidad también consiste en prot",
-          "dinamarca, primer país de la unión europea en ratificar el acuerdo global modernizado con ",
-          "votantes latinos preocupados por inmigración y economía: así se perfilan las elecciones de",
-          "wall street cierra con pérdidas por desplome de alphabet y cifras sólidas de la economía d",
-          "defiende alejandro armenta modelo económico de la 4t",
-          "torreón analiza oportunidades económicas ante el nuevo orden global",
-          "países de la ue rechazan el plan de bruselas de gravar más el gas que la electricidad",
-          "curiosidades de muertos: un recorrido atípico por los cementerios europeos",
-          "noticieros en europa se unen ante prácticas depredadoras de mark zuckerberg, ceo de meta",
-          "brasil podría superar a italia y rusia en 2027: el crecimiento que cambiaría el mapa econó",
-          "china dispara sus exportaciones de tecnología limpia: qué significa para la economía mundi",
-          "rodrigo huescas vuelve a sonreír en europa: asistencia y 90 minutos para clasificar al cop",
-          "la economía estadounidense está creciendo con fuerza gracias al auge del gasto y la invers",
-          "se acelera la inflación en estados unidos; suben los precios y golpean la economía",
-          "el niño podría recortar el crecimiento de la economía peruana a 2% en 2027",
-          "horizonte europa abre nuevas oportunidades de financiación para la química sostenible y la"
-        ],
-        "ultimoChequeo": "2026-10-30T02:53:21.717Z"
-      }
-    },
-    "ideas_redes": {
-      "estado": "listo",
-      "corridas": 1,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": 9,
-      "historial": [
-        {
-          "f": "2026-10-30T02:43:55.644Z",
-          "p": 9,
-          "orden": false
-        }
-      ],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:43:55.644Z",
-      "resumen": "POST 1: Dólar vs. Ladrillo (Reel Humor + Inversión)\n* Idea: Comparar la inestabilidad financiera con la seguridad de construir en Córdoba.\n* Guion: (Joni mirando el celular con cara de preocupación) \"Yo viendo cómo varía",
-      "informe": "data/informes/ideas_redes/2026-10-29-2343.md",
-      "pausado": false,
-      "memoria": {},
-      "modelo": "Google Gemini · gemini-3.6-flash"
-    },
-    "celular_bot": {
-      "estado": "sin conectar",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "vuelos": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "comida": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "entrenamiento": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "imagen": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "clima": {
-      "estado": "listo",
-      "corridas": 2,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:53:21.717Z",
-      "resumen": "🌤️ Clima en Villa María, Córdoba\n• Hoy 29/10: 15° a 29° · lluvia 43% · viento 13 km/h\n• Mañana 30/10: 16° a 28° · lluvia 75% · viento 15 km/h\n• Pasado 31/10: 15° a 29° · lluvia 65% · viento 15 km/h\n\n⚠️ Para la obra:\nMañ",
-      "informe": "data/informes/clima/2026-10-29-2353.md",
-      "pausado": false,
-      "memoria": {
-        "ultimoChequeo": "2026-10-30T02:53:21.717Z"
-      }
-    },
-    "vencimientos": {
-      "estado": "listo",
-      "corridas": 1,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:53:21.717Z",
-      "resumen": "🧾 Vencimientos e impuestos\n\n• ¿Pagas el monotributo desde el celular? La nueva opción rápida que habilitó ARCA para el próximo vencimiento (Infozona)\n  https://news.google.com/rss/articles/CBMi0AFBVV95cUxNbkx4ZXcwNW11SE",
-      "informe": "data/informes/vencimientos/2026-10-29-2353.md",
-      "pausado": false,
-      "memoria": {
-        "vistos": [
-          "¿pagas el monotributo desde el celular? la nueva opción rápida que habilitó arca para el p",
-          "las pymes industriales acumulan 14 trimestres de caída y una de cada siete enfrenta embarg",
-          "arca extendió el vencimiento de ganancias: cuánto tiempo queda para presentar la declaraci",
-          "ganancias: se prorrogó el plazo de presentación para personas humanas",
-          "arca modifica la emisión de facturas del monotributo social desde noviembre",
-          "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
-        ],
-        "ultimoChequeo": "2026-10-30T02:53:21.717Z"
-      }
-    },
-    "tarifas": {
-      "estado": "listo",
-      "corridas": 2,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:53:21.717Z",
-      "resumen": "🧾 Servicios y tarifas de la casa\n\n• El Gobierno reglamentó por decreto la restricción de la «zona fría», perjudicando a millones de usuarios de 94 distritos (Estado de Alerta)\n  https://news.google.com/rss/articles/CBMi",
-      "informe": "data/informes/tarifas/2026-10-29-2353.md",
-      "pausado": false,
-      "memoria": {
-        "vistos": [
-          "el gobierno reglamentó por decreto la restricción de la «zona fría», perjudicando a millon",
-          "apj gas denunció que 3.300.000 de argentinos pagarán tarifas más caras tras la reglamentac",
-          "los aumentos de noviembre golpean el bolsillo de los platenses: qué sube desde el domingo",
-          "aumentos de noviembre: transporte, alquileres y prepagas",
-          "transporte, alquileres, prepagas y más: uno por uno, todos los aumentos que llegan en novi",
-          "aumentos de noviembre 2026: cuánto subirán las prepagas, los alquileres, la telefonía y el",
-          "reporte sobre el incremento en el precio del pescado por el fenómeno el niño en villa marí",
-          "los aumentos que llegan en noviembre 2026: transporte público, servicios, alquileres, prep",
-          "bruselas no espera un problema de suministro energético pero le preocupa el alza de los pr",
-          "pollo llega a 50 pesos por kilo en el mercado revolución de córdoba",
-          "golpe al bolsillo: aprueban fuerte aumento en los combustibles",
-          "todo aumenta en noviembre: colectivos, prepagas, alquileres, colegios y servicios, uno por"
-        ],
-        "ultimoChequeo": "2026-10-30T02:53:21.717Z"
-      }
-    },
-    "ofertas": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "ideas_apps": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "ideas_videos": {
-      "estado": "esperando",
-      "corridas": 0,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": null,
-      "ultimaCorrida": null,
-      "resumen": "",
-      "informe": null,
-      "pausado": false,
-      "memoria": {}
-    },
-    "paginas": {
-      "estado": "listo",
-      "corridas": 2,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:53:21.717Z",
-      "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
-      "informe": "data/informes/paginas/2026-10-29-2353.md",
-      "pausado": false,
-      "memoria": {
-        "caidas": {
-          "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": false,
-          "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
-          "https://bosio-central.uwuubuntu83.workers.dev/": false
-        },
-        "ultimoChequeo": "2026-10-30T02:53:21.717Z",
-        "resumenFecha": "2026-10-29"
-      }
-    },
-    "salud_oficina": {
-      "estado": "listo",
-      "corridas": 2,
-      "fallas": 0,
-      "fallasSeguidas": 0,
-      "puntaje": null,
-      "historial": [],
-      "likes": 0,
-      "dislikes": 0,
-      "nivel": 1,
-      "ultimaFecha": "2026-10-29",
-      "ultimaCorrida": "2026-10-30T02:53:21.717Z",
-      "resumen": "🛠️ Salud de la oficina · 2026-10-29\nBots: 28 · trabajaron hoy: 12\n❌ Fallaron: Escapadas de finde (Gemini no respondió: gemini-3.6-flash: 429 You exceeded your)\n📱 Celular bot (Instagram): todavía no está conectado (ver ",
-      "informe": "data/informes/salud_oficina/2026-10-29-2353.md",
-      "pausado": false,
-      "memoria": {
-        "ultimoChequeo": "2026-10-30T02:53:21.717Z"
-      }
+    "ultimoChequeo": "2026-10-30T08:34:35.545Z",
+    "resumenFecha": "2026-10-29"
+   }
+  },
+  "inmuebles": {
+   "estado": "falló",
+   "corridas": 0,
+   "fallas": 1,
+   "fallasSeguidas": 1,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:15:30.038Z",
+   "resumen": "Falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/",
+   "informe": null,
+   "pausado": false
+  },
+  "precios_obra": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false
+  },
+  "licitaciones": {
+   "estado": "listo",
+   "corridas": 3,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "🧱 Clientes y licitaciones\n\n• Llaryora anunció la licitación de 11,9 kilómetros de la S-433 en Villa Santa Rosa (Reporte Regional)\n  https://news.google.com/rss/articles/CBMiogFBVV95cUxQSm5WTF91UE1Cd2p4Y2JoZTNiempuWndURG",
+   "informe": "data/informes/licitaciones/2026-10-30-0534.md",
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "llaryora anunció la licitación de 11,9 kilómetros de la s-433 en villa santa rosa",
+     "el centro botí se une al centenario de concursos de alfarería y cerámica de la rambla con ",
+     "metro de madrid licita dos contratos millonarios de soporte y rutas",
+     "el niño. licitan desagües pluviales en san francisco por más de $ 2.500 millones",
+     "anuncian la licitación de 11,9 kilómetros de la ruta s-433 en villa santa rosa",
+     "el centro botí celebra el centenario de los concursos de cerámica de la rambla con exposic",
+     "el centro rafael botí reúne en córdoba 17 obras premiadas en los concursos de alfarería de",
+     "otro recurso paraliza la adjudicación de las obras de edificación de la base logística de ",
+     "el gobierno da luz verde a 200 millones de euros en subvenciones a promotores y fondos de ",
+     "más de medio millón de euros para eliminar barreras en las avenidas de república argentina",
+     "guadalcázar construirá un nuevo tanatorio inspirado en un dolmen",
+     "villa santa rosa: la provincia anunció la pavimentación de la ruta que conecta con tinoco",
+     "circunvalación: con usd350 millones, apuran obra para completarla en 2027",
+     "privatización de rutas nacionales con peajes: 20 constructoras compiten en la última licit",
+     "los vecinos de la avenida ollerías demandan un plan común para arreglar los soportales",
+     "se pavimentará la ruta que une a villa santa rosa con tinoco",
+     "la base logística de córdoba se topa con un segundo freno: la adjudicación de la dirección",
+     "el banco nación ya prestó los $32.000 millones de anses para hipotecarios: cuántos crédito",
+     "pp acusa al gobierno de \"negar información de obra del museo arqueológico que tiene desde "
+    ],
+    "ultimoChequeo": "2026-10-30T08:34:35.545Z"
+   }
+  },
+  "ideas_jb": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "noticias": {
+   "estado": "falló",
+   "corridas": 0,
+   "fallas": 1,
+   "fallasSeguidas": 1,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:15:30.038Z",
+   "resumen": "Falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/",
+   "informe": null,
+   "pausado": false
+  },
+  "escapadas": {
+   "estado": "falló",
+   "corridas": 0,
+   "fallas": 1,
+   "fallasSeguidas": 1,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:15:30.038Z",
+   "resumen": "Falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "ia_gratis": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "gerente": {
+   "estado": "trabajando",
+   "resumen": "Mandó el parte diario",
+   "ultimaCorrida": null
+  },
+  "terrenos": {
+   "estado": "postergado",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-2.5-flash-lite: 404 This model models/gemini-2.5-flash-lite is no longer available to new users. Please update | Google Gemini/gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "casas": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "autos": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "negocios": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "m2": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "materiales": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "noticias_vm": {
+   "estado": "listo",
+   "corridas": 3,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "📰 Noticias de Villa María\n\n• Clima en Villa Maria del Rio Seco hoy: cuál es el pronóstico del tiempo para el 29 de octubre de 2026 (La Nación)\n  https://news.google.com/rss/articles/CBMi-wFBVV95cUxOSHE5VFFPWjk0WVFsb0N4e",
+   "informe": "data/informes/noticias_vm/2026-10-29-2353.md",
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "tiene 19 años y fue detenido por intentar robarse tuberías de una casa",
+     "dos jóvenes heridas tras un choque entre un auto y una moto",
+     "uepc y organizaciones feministas exigieron justicia por nancy godoy en villa maría",
+     "fue detenida por robar elementos médicos de un centro de salud privado",
+     "halloween, micky rodríguez y la carrera rosa: qué hacer el fin de semana",
+     "juzgarán a un enfermero acusado de abusar a una mujer en el dispensario de idiazábal",
+     "patinaje artístico: gran cosecha de podios para la región en el open de las sierras",
+     "¡fuerzas, thiago! el joven accidentado en villa nueva sigue con pronóstico reservado",
+     "un joven y un menor detenidos por levantar un portón para robar una moto",
+     "un hombre y dos jovencitas detenidas por robar una cubierta de una gomería",
+     "clima en villa maria del rio seco hoy: cuál es el pronóstico del tiempo para el 29 de octu",
+     "calleri propone una copa davis en villa maría y accastello apoya la idea",
+     "palpitando halloween: ¿qué historias paranormales conocen los villamarienses? (video)",
+     "estuvo preso, salió y volvió a robar a los meses: la nueva condena a “jetón” pereyra en có",
+     "córdoba mostró resultados educativos superiores al promedio nacional y avances en comprens",
+     "estaba prófugo por narcotráfico en córdoba y fue capturado en la pampa",
+     "recuperaron en villa maría una motocicleta robada en pozo del molle",
+     "comenzó un paro nacional docente para pedir justicia por nancy godoy",
+     "realizan una cadena de oración para un menor accidentado en villa nueva",
+     "turismo. córdoba lanzó su temporada de verano con la nueva \"ruta 100\" como producto a ofre",
+     "villa maría será sede del aat challenger ieb+ en su cierre de temporada argentina de tenis",
+     "presentan un libro sobre industrias kaiser",
+     "clima en villa maria del rio seco hoy: cuál es el pronóstico del tiempo para el 30 de octu",
+     "llegaron a villa huidobro 50 árboles para forestar distintos espacios verdes |",
+     "presentaron el challenger de villa maría con entrada gratuita hasta el jueves",
+     "grupo ecipsa entregó una nueva etapa del megaproyecto residencial en villa devoto | 29 de "
+    ],
+    "ultimoChequeo": "2026-10-30T08:34:35.545Z",
+    "bandeja": [
+     {
+      "titulo": "Tiene 19 años y fue detenido por intentar robarse tuberías de una casa",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMmVma2thYUVrekpxWWVyRllYb3pGaWNETzFwWWc3V3I3Z1ZMdEgtR0tjUjJDVWxqY1RkWGlCeXRlbWZCZUVRVGlMQUtsZnFUbmFjdlBNaXdUOGwxS1ZNalUxWWU2ak0yT2RHdnd2WXFqaktVeUxnNndNdkhfUDVVS1AtalBINzR3S0hrTnl2b2FFMFVHdEk3b1hIRnp1aHM?oc=5",
+      "fuente": "Villa María VIVO"
+     },
+     {
+      "titulo": "Dos jóvenes heridas tras un choque entre un auto y una moto",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQNW50b3ppbURhMjY5c0dNUkVlcmZhaG1sZ2dhLXkxM0UyX1BnWVpuYUtFSTczTjJYbUNmMHRqek81SXhPQVc0d3M2T3BudGFXWVlDRHZrb041T0pSZElKZllsZGV5aVF1Ry14VElQMkt6VVBqWGRGWjZVaC1kRFhuRF9INlVUUUEya0FHSmp0enE?oc=5",
+      "fuente": "Villa María VIVO"
+     },
+     {
+      "titulo": "UEPC y organizaciones feministas exigieron justicia por Nancy Godoy en Villa María",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPMlRoMl85VHA0SmtleDhPakoxOVhYcWJ4RzNlZmctUDUzbWFsNWVxYURsRk5qT0FibGZrR2VaZC1sZWczWkNvMHJydldRNjdodDhlU0dtYkRSSXdUUmgweXdhOUtZVV9Ma3ZEZklUTmRVTkZMNnhZRk1hbTVUQUx2dml3SS1QMWNVZzRqSHc1dG94MEZ4VUF1QjdiLXdDWWh1Q2xqcUVaZzhkRmtVeDNr?oc=5",
+      "fuente": "Villa María VIVO"
+     },
+     {
+      "titulo": "Fue detenida por robar elementos médicos de un centro de salud privado",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNa19oNllHazY0ZHJGVUcwN1R4enM1Nk1OSHFNdk11Mkd1cV9tMktLS0l0WURhQjQ5eTRQdVNaX2hGNFJPOGszN09uSzBCM1NiREwySWVlUW96bEV3MEtWT0MzQWszMnFWSFJPSl95RG5QNUdsWDBZcWh1ZGNLRmczalBUUmZwSFNSX0RLTU9JQU9IdnF6RzYwaUlaOWhBcVk?oc=5",
+      "fuente": "Villa María VIVO"
+     },
+     {
+      "titulo": "Halloween, Micky Rodríguez y la Carrera Rosa: qué hacer el fin de semana",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNYTUxd2JZcGEtSU9Sb09qTWk1dnF1Mnk0LUdBZG1FaU96SzNDdkFuZFFrU0x4aVZLd1Q1NEZuZHl3eVE3MjVic29oVjdLS200WmFLMFNxUTE0LS03MW5qVGpLc00ydk1Ibnc4Zjh1T3BhN2s2U3JIU1VUMUtaNkNGUzRfS1hJRzc2TDY4?oc=5",
+      "fuente": "Villa María VIVO"
+     },
+     {
+      "titulo": "Juzgarán a un enfermero acusado de abusar a una mujer en el dispensario de Idiazábal",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPclpSRVR0WTAwOE5Odm5JVXFROTJjNFJvc0tRdVJjemp3SkJrbVczWkNSU3c5bEZrN0dhLTRlLVNwM25GbHo4Uno5dm10OFIyM2JocHpzNVo4cHA4c2p1RlczZ1VSUEZ1WGpZa0w5QlI5d0JYVjVGd2NYYmtFY09sWTZqenpfZEZNRDUya2V5em9COU54enBycU9PbTdEUVRMUGJKWUVUS3IxSHZRZUU2QlBzLUF2N3ptVGRPT2gwYllTbi15OFl1TTFGaw?oc=5",
+      "fuente": "Villa Maria Ya"
+     },
+     {
+      "titulo": "Patinaje artístico: gran cosecha de podios para la región en el Open de las Sierras",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNcU9XMUlKbTRxbTYxOE1pSzM1U05vT2NFenF4dEFXMTFWOGwzVUVlcHpEUHVnaWg2enJHSW5mZmt0NkVIeGVpajRHU3FQYy1vTDQ1SGRoNVBfeTlBRzR4c2lLdkFtWkdaVU5HMS1KNmF6cUdueW4ybXlBUFhfZHVCQnNWTUpEQQ?oc=5",
+      "fuente": "Villa María VIVO"
+     },
+     {
+      "titulo": "¡Fuerzas, Thiago! El joven accidentado en Villa Nueva sigue con pronóstico reservado",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQME5zRzJoY3NTUk54Q2ZkT3l5aGZDMW1kWDlidkREOXF2TnVfMzRSS01qYUYzU2FnMjdyaEJmZUdyUHlmbDZUSmZZS3VZSkVrT1RpZkhGX05SaFZ5bHNwck9BQnFObXh6YWFodF9nVEdVSWpiSkI4cHg2NXlsWXp1dk5UN0MxZTdiNVQ0TmRWX2tpSDY3bnFSeTl2RkZyNEhtV1pRSE5FRlh5dDU1Q3NLazRLTDd1aVp2a0Y5eUt2MjBGLVVVWWcw?oc=5",
+      "fuente": "Villa Maria Ya"
+     },
+     {
+      "titulo": "Un joven y un menor detenidos por levantar un portón para robar una moto",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZzQteW9LSFA2VjVXNjBmT09uOUNGOGlaZzdqbHNRQnNVbWxnOTdVdjN0LUtKNGtNUHh1Uzl0QUlKZkpuOGFmNGZHWkM0QVFHUms2TTVNakxMUnFFZ25FaVFKX0NuWlBHLTBoZHpwcFFxZE05UkxjMXlwS0FhS3ByaWowSFZYcEY1c19UOHFVd193RXllSnR5Wko3QWlDNkUwZjhuMUM2ZjllODRvTG5MYnJ0c0VGcnFwNmVj?oc=5",
+      "fuente": "Villa Maria Ya"
+     },
+     {
+      "titulo": "Un hombre y dos jovencitas detenidas por robar una cubierta de una gomería",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUFhEem90R3Q3RzZDY2FmOVI1dTVmanZSbE96RWQzemVMVnpSM3BEOG5jaW56NlZxcFRFam1GSUQ0TXpPeXI2b0xHdG9QSjBUdml5bzJpZUhYanVTUm94OHdpajk0S3JfNDRiRENSVVNiMW9PQm5UZGxyd3ZyTm1LQV9wWUJEeU9Ma2hjMi1aQVYtbXlLemVGZ1F1N3d4T3phZ2tlbWRzRW53WXZMTUdYRldDbE1PcFFlZ0xrUzBR?oc=5",
+      "fuente": "Villa Maria Ya"
+     }
+    ],
+    "entregas": {
+     "fecha": "2026-10-30",
+     "hechas": []
     }
+   }
   },
-  "log": [
-    {
-      "t": "2026-10-30T02:59:16.579Z",
-      "quien": "Terrenos baratos",
-      "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-4-argon: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-    },
-    {
-      "t": "2026-10-30T02:59:16.579Z",
-      "quien": "IA",
-      "que": "Google Gemini gemini-4-argon: cupo diario agotado, sigo con otra"
-    },
-    {
-      "t": "2026-10-30T02:59:16.579Z",
-      "quien": "Terrenos baratos",
-      "que": "empezó su tarea"
-    },
-    {
-      "t": "2026-10-30T02:59:16.579Z",
-      "quien": "Mesa de entrada",
-      "que": "sin mensajes nuevos"
-    },
-    {
-      "t": "2026-10-30T02:59:16.579Z",
-      "quien": "Oficina",
-      "que": "abre (correr:terrenos) · IA conectadas: gemini, github"
-    },
-    {
-      "t": "2026-10-30T02:53:21.717Z",
-      "quien": "Monitor de salud",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:53:21.717Z",
-      "quien": "Estado de mis páginas",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:53:21.717Z",
-      "quien": "Servicios y tarifas de la casa",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:53:21.717Z",
-      "quien": "Vencimientos e impuestos",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:53:21.717Z",
-      "quien": "Clima para la obra",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:53:21.717Z",
-      "quien": "Noticias del mundo",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:53:21.717Z",
-      "quien": "Economía y obra pública",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:53:21.717Z",
-      "quien": "Noticias de Villa María",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:53:21.717Z",
-      "quien": "Clientes y licitaciones",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:53:21.717Z",
-      "quien": "Dólar",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:53:21.717Z",
-      "quien": "Mesa de entrada",
-      "que": "sin mensajes nuevos"
-    },
-    {
-      "t": "2026-10-30T02:53:21.717Z",
-      "quien": "Oficina",
-      "que": "abre (sinIA) · IA conectadas: gemini, github"
-    },
-    {
-      "t": "2026-10-30T02:52:28.858Z",
-      "quien": "Terrenos baratos",
-      "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.5-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.5-flash-lite: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-    },
-    {
-      "t": "2026-10-30T02:52:28.858Z",
-      "quien": "Terrenos baratos",
-      "que": "empezó su tarea"
-    },
-    {
-      "t": "2026-10-30T02:52:28.858Z",
-      "quien": "Gerente general",
-      "que": "quedó vinculado el Telegram de Jonathan"
-    },
-    {
-      "t": "2026-10-30T02:52:28.858Z",
-      "quien": "Mesa de entrada",
-      "que": "llegaron 1 mensajes de Telegram"
-    },
-    {
-      "t": "2026-10-30T02:52:28.858Z",
-      "quien": "Oficina",
-      "que": "abre (auto) · IA conectadas: gemini, github"
-    },
-    {
-      "t": "2026-10-30T02:50:06.356Z",
-      "quien": "Terrenos baratos",
-      "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.5-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.5-flash-lite: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-    },
-    {
-      "t": "2026-10-30T02:50:06.356Z",
-      "quien": "Terrenos baratos",
-      "que": "empezó su tarea"
-    },
-    {
-      "t": "2026-10-30T02:50:06.356Z",
-      "quien": "Mesa de entrada",
-      "que": "sin mensajes nuevos (todavía no hay dueño vinculado: mandale cualquier mensaje al bot)"
-    },
-    {
-      "t": "2026-10-30T02:50:06.356Z",
-      "quien": "Oficina",
-      "que": "abre (auto) · IA conectadas: gemini, github"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Monitor de salud",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Estado de mis páginas",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Servicios y tarifas de la casa",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Clima para la obra",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Ideas de posteos",
-      "que": "entregó (9/10 · Google Gemini · gemini-3.6-flash)"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Control de calidad",
-      "que": "Ideas de posteos: 9/10"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Ideas de posteos",
-      "que": "empezó su tarea"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Noticias del mundo",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Economía y obra pública",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Noticias de Villa María",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Clientes y licitaciones",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Terrenos baratos",
-      "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-4-argon: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "IA",
-      "que": "Google Gemini gemini-4-argon: cupo diario agotado, sigo con otra"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Terrenos baratos",
-      "que": "empezó su tarea"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Dólar",
-      "que": "entregó (sin IA)"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Mesa de entrada",
-      "que": "sin mensajes nuevos"
-    },
-    {
-      "t": "2026-10-30T02:43:55.644Z",
-      "quien": "Oficina",
-      "que": "abre (auto) · IA conectadas: gemini, github"
-    },
-    {
-      "t": "2026-10-30T02:15:30.038Z",
-      "quien": "Gerente general",
-      "que": "mandó el parte diario"
-    },
-    {
-      "t": "2026-10-30T02:15:30.038Z",
-      "quien": "Escapadas y vuelos baratos",
-      "que": "falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/"
-    },
-    {
-      "t": "2026-10-30T02:15:30.038Z",
-      "quien": "Escapadas y vuelos baratos",
-      "que": "empezó su tarea programada"
-    },
-    {
-      "t": "2026-10-30T02:15:30.038Z",
-      "quien": "Noticias de Argentina y Córdoba",
-      "que": "falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/"
-    },
-    {
-      "t": "2026-10-30T02:15:30.038Z",
-      "quien": "Noticias de Argentina y Córdoba",
-      "que": "empezó su tarea programada"
-    },
-    {
-      "t": "2026-10-30T02:15:30.038Z",
-      "quien": "Terrenos y casas baratas",
-      "que": "falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/"
-    },
-    {
-      "t": "2026-10-30T02:15:30.038Z",
-      "quien": "Terrenos y casas baratas",
-      "que": "empezó su tarea programada"
-    },
-    {
-      "t": "2026-10-30T02:15:30.038Z",
-      "quien": "Dólar y mercado",
-      "que": "falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/"
-    },
-    {
-      "t": "2026-10-30T02:15:30.038Z",
-      "quien": "Dólar y mercado",
-      "que": "empezó su tarea programada"
-    },
-    {
-      "t": "2026-10-30T02:15:30.038Z",
-      "quien": "Oficina",
-      "que": "abre (auto)"
+  "noticias_ar": {
+   "estado": "listo",
+   "corridas": 3,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "📰 Economía y obra pública\n\n• Daniel González, a días de renunciar a su cargo en el Gobierno: “El RIGI no puede solucionar todos los problemas de los argentinos” (Infobae)\n  https://news.google.com/rss/articles/CBMinAJBV",
+   "informe": "data/informes/noticias_ar/2026-10-29-2353.md",
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "oficializaron la renuncia de daniel gonzález como secretario de coordinación de energía y ",
+     "río cuarto: el municipio impulsa tres nuevos loteos con servicios en la ciudad",
+     "radiografía de galperin, el argentino más rico: radicalización tuitera, apoyo a milei y su",
+     "el fondo recomienda reforzar la creación de empleos y más inversiones",
+     "un concejal de villa nueva conduce la mesa de jóvenes concejales del pj cordobés",
+     "villa carlos paz: el juego de un outsider enciende las alarmas en el plan reeleccionista d",
+     "el fmi sugirió medidas para que la argentina siga acumulando reservas",
+     "economía en recesión técnica: la señal que complica el panorama de milei",
+     "el fmi pidió acelerar la compra de reservas netas y detalló las medidas acordadas con arge",
+     "el bcra anticipó una recuperación de la economía tras la “recesión” del tercer trimestre",
+     "daniel gonzález, a días de renunciar a su cargo en el gobierno: “el rigi no puede solucion",
+     "el documental sobre el lado oculto del mundial de qatar se presentará en mar del plata",
+     "el fmi planteó cuatro ejes para reactivar la economía argentina | 29 de octubre de 2026",
+     "¿por qué la elección de lula afecta al mercado argentino? (mobile)",
+     "el fmi reconoce caída de la actividad pero \"aconseja\" a milei profundizar el programa de a",
+     "el titular del banco central afirmó que argentina puede afrontar tensiones cambiarias en 2",
+     "n5 ganó el premio a la innovación con impacto 2026 de la fundación banco nación y endeavor",
+     "el fmi apuesta a profundizar las reformas de javier milei para pasar del ajuste al crecimi",
+     "melconian cuestionó el modelo económico de milei: advirtió por la parálisis de la industri",
+     "¿qué pasó en la economía argentina?: columna del lic. julián marino",
+     "patagones: la filial de la federación agraria argentina avanza en la construcción de su se",
+     "melconian cuestionó el rumbo económico: “no nos pegamos un tiro porque está vaca muerta”",
+     "qué se sabe de los barrios gremiales del megaplan de casas",
+     "cuatro medidas. el fmi reconoce caída de la actividad pero \"aconseja\" a milei profundizar ",
+     "vaca muerta y la minería pueden impulsar las exportaciones, pero en rdeco advierten: “el d",
+     "rdeco: qué necesitan la industria y la construcción para recuperar competitividad y activi",
+     "ciudad de córdoba: así avanza la limpieza y desmalezado del canal maestro sur",
+     "horacio berra resaltó las oportunidades para la construcción",
+     "el gas llega a barrio san cayetano: “el objetivo es que en tres años la ciudad completa te",
+     "ante la recesión, caputo se anima a una herejía"
+    ],
+    "ultimoChequeo": "2026-10-30T08:34:35.545Z",
+    "bandeja": [
+     {
+      "titulo": "Oficializaron la renuncia de Daniel González como secretario de Coordinación de Energía y Minería",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOZlpFX2p5d2hCbUM2WGR6TWhheFdYWXljb0dQU1d1ZmRsNUhiUkJTa1g0enctMFBVMHo0WjFZdGFGQ0JRQk5ZWEdTZVp4RzN6SWtJcGRPTUtqU0YySmdCUjk1R3FGeFpkeWtCcmFUZlp0X3NZQk5vYkMxTHZZay1BVXFrMXdMU3dkcEFhNXRjc0lsSUdrcnhkRGVCbFRNdG92Zk1CVW9xNVJtY2luc0k4M1JNTnpORVlmeElxRFE5VGFzamtFYTJ3?oc=5",
+      "fuente": "Diario Neuquino"
+     },
+     {
+      "titulo": "Río Cuarto: El municipio impulsa tres nuevos loteos con servicios en la ciudad",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOM3NpYjdOcFhMOUhqUHlWU3VzODkybVhBallJMTVKNXFRTmZiY3FCdTZNam5QdWNMbHdRdEwtWnhLR3R3b05tcDREMU1uYU80NzB3b3ZqZmY3amsweXhGTGNLZTVvNnRsVS1CeEkzcWxYVHNoX2JmSUo3a3NIOVdnYTdEanVxWFhmSVJ2VnZjSmh1Vm5wTWNaRw?oc=5",
+      "fuente": "ENREDACCIÓN"
+     },
+     {
+      "titulo": "Radiografía de Galperin, el argentino más rico: radicalización tuitera, apoyo a Milei y su rol como tecno magnate latino",
+      "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNTnlRR3ZWb1pBLUI1NHJGUnBTUk1yNWRhck9Xejd4aV94dkVuZWNaZFAwZXh3dGoyZVlPdWlHQktENGRwazUtd2dheF9OZFZTX1NjZ1N0cnpJSXVMNFVLNVhSOGZ2clVqcWV5WlRBWWdkYnJ0MjVYeS1LUU5Xc2lUdmxYSW9jamY4dkEzMFp1c05LaE82Qm5TSWtKejRlWE5jSXNVTDhOSnU5bkFUVGVvU3pWbzVrNVdjdEdZZEFDY2FELVBqZ1paZVhHdDk2QURxVmJhWTNnRUFZb3R2QUM5MFFBOXVsN1htS2x1UXB5ZUh2bzlO0gGPAkFVX3lxTE1hVW0zcmdwZnZqS05NRUJTZ3V6NFd1QUlmeVlUaS1jUFRUVlcxUUR0V0JMLW8zRzVYSUllVnZ3VGRaY0JWUklaX2QwUUlydGRjNExrQkw4bjV6TlRJOUlTaENSekpTOG1UQjFkV3BaZ2gtUG1Mal9EaXp6ZGlOUDhVc1JJY2VJWkVtbUk4TGNGNHJ6eU9rNElIU1FOYnRsdm1qV0I0clZqUnpuMm5YTExNNlJlcFZ2OUtVZDljZ0FMbkJ5dU12WEZjT0Y4MTNJUVkyYmJybW1UcTJFQ2NHSHhiVmllblg4d2NPazVSSXVUM0ZZWVE2aTlxWXN2OTZLSjdENHNWVXVieFZtbWJCVGM?oc=5",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "El Fondo recomienda reforzar la creación de empleos y más inversiones",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNRW9oYlZFazdRZHhYeUxzMGptQzN3bjJITXFDRmJCcl9BdGpXVDU5UWpQeWpjNHY4VG8td2dnb05BS0k0UC1JQ3hVZE1scEkwVlJvN2UyWlVWeWlHNXN4Yy0ta2EyUE9oalVmRzltcU5BSG80Ui1uTGxEam5zNzdPbHZQYWdHQUZtSzRCOGJYUVZxYkNZZWk2alVLbTdKRUZ0MC1jWnJuWDdTNm1ILWdtNDB4ejdsSG0xb1RJQ09fSGdLWjRDZklfVkl5Um5lVWJfUnBtOFVYRGVmcVU?oc=5",
+      "fuente": "Diario El Día de La Plata"
+     },
+     {
+      "titulo": "Un concejal de Villa Nueva conduce la Mesa de Jóvenes Concejales del PJ cordobés",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWDh1RXYzZEJFZjJ1T2JIWVZJNS1tUjhxSkhJNHJwZC1xM21iX3E3Q0pYV0xHbTh4MHhHZEJyb2Q3NFF1Q0g2V2FjSVFjZXBhV1kzeUpJTU9BaHRXYUQxd2dTNGFaUDZpWDV3MVpKdUNkUEpONU9nQ0lvcWxtNDFIczB4YW84MTZsckYyUTF4V1dObmFvZE9nQVlkbnZUYmRsU1d1Q3hIcWxPc3pid1AzemVlYW83VXI00gG4AUFVX3lxTFBYOHVFdjNkQkVmMnVPYkhZVkk1LW1SOHFKSEk0cnBkLXEzbWJfcTdDSlhXTEdtOHgweEdkQnJvZDc0UXVDSDZXYWNJUWNlcGFXWTN5SklNT0FodFdhRDF3Z1M0YVpQNmlYNXcxWkp1Q2RQSk41T2dDSW9xbG00MUhzMHhhbzgxNmxyRjJRMXhXV05uYW9kT2dBWWRudlRiZGxTV3VDeEhxbE9zemJ3UDN6ZWVhbzdVcjQ?oc=5",
+      "fuente": "Alfil"
+     },
+     {
+      "titulo": "Villa Carlos Paz: el juego de un outsider enciende las alarmas en el plan reeleccionista de Esteban Avilés",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNRmM5blE4QmZuX2ppLTFGVFF1UWUwRVNOeU8wSmdSVUQ5T1BpbHhEME1WSVdBNWhndVk3MkF3ZkV4NWlfbm5UMzJHOE5DUjFYV3BxRk1hS2lhMjAxX2FjanVQOWJaUVF4Nzhpc1dhN3lvTnlodkVHdl9nOWxDOFBJM2NBMEpJajFTV2RNWENmRUFqN2JGOURZaE9DTEgtMzJ3ODFhUDh5X2NKYXVrcWVJdkR3Wk90dmw4bFJjTGpnS1Y5YTMzUS1rdXdCM2x5bDJEUk1MbXFoc0FwZ3NG0gHcAUFVX3lxTE1GYzluUThCZm5famktMUZUUXVRZTBFU055TzBKZ1JVRDlPUGlseEQwTVZJV0E1aGd1WTcyQXdmRXg1aV9ublQzMkc4TkNSMVhXcHFGTWFLaWEyMDFfYWNqdVA5YlpRUXg3OGlzV2E3eW9OeWh2RUd2X2c5bEM4UEkzY0EwSklqMVNXZE1YQ2ZFQWo3YkY5RFloT0NMSC0zMnc4MWFQOHlfY0phdWtxZUl2RHdaT3R2bDhsUmNMamdLVjlhMzNRLWt1d0IzbHlsMkRSTUxtcWhzQXBnc0Y?oc=5",
+      "fuente": "Letra P"
+     },
+     {
+      "titulo": "El FMI sugirió medidas para que la Argentina siga acumulando reservas",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORXF1dWpmS0c2OWxEaWRjdWVjSUsxZFpJNkxiaG9QeFI1NW9vblFvWnc1Z3NSVXJVNTRoSVVCWkxSZS1HZmp1QXlJdF85UmI4ZXdSUGQyWGxpbHNDeWVpZXVmYTVaSGVMSW5LUjg3VTlOejBQb3RtdDhDZWJaX1NpSF9Ebzc3OVJ3VU9rNEVqTXZlUGVkY09yWGxOaFBuTkd3OGZXYmdxMkRQN1ZzVl9xQWRKVmPSAboBQVVfeXFMT01MR0Jra2FhTjhoZVRKVUtJdmp3RGxidC1MZ3V3ZVFKSVBUSFFsTkJKcGZlNGNrRWFDOU5xandwSk05aVhYZElZeFBBWUtCVl92c0R0WnNMb19KM1A1Y2YyQzE0WG9TUmoxZF9EQ3A1eVlQWnpEN0dEVUpCWG5fZmVJUzY5aE91aE1ReWlEWU81Qy1rbnRyNUc4Smp1WEVNa0FEVmxqMV96YzV1SzRaQzNkVTAwNGZ6R2tB?oc=5",
+      "fuente": "La Gaceta"
+     },
+     {
+      "titulo": "Economía en recesión técnica: la señal que complica el panorama de Milei",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNM2ZqbjdzVGlRRHRVMV9qQkhMamZPWGV3Q2k4dGp1amVyal9SSmFwenRzTmZzdkJIMGstdEF1OTYtRkpaYmRZTEswNUpZT0ZraE1FZTFVSHZLZ0FfZ2RnSDJfNGI5Qklia1RkSGNIQ1cwUEhYMHVGdzhBWTl1dGlzRW9jaDcta0ZCQnVFN1gzSHlVV0hZU01FV3o1VnNHak5HOTBmVEREb1I0S19oLUF3cFFWMA?oc=5",
+      "fuente": "Prensa Libre Online"
+     },
+     {
+      "titulo": "El FMI pidió acelerar la compra de reservas netas y detalló las medidas acordadas con Argentina",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE56WDdSLXlxS05LcHNOeHFLcE1hZDFpeFdncjdLVnJoYXI2ZTBHUElRcjFKUXp2SmJ2THJsVVdSeG9nWUU1S3U1ZkxaM3JudmJJbjc3ZlgxYkxyTnpSSkl0b2szUDR5czhMeVBtVXRCZw?oc=5",
+      "fuente": "» Cholila Online"
+     },
+     {
+      "titulo": "El BCRA anticipó una recuperación de la economía tras la “recesión” del tercer trimestre",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVm1CMkx2R3pqTUxOejQwaTBLeEsyVy1teE9NamRQeUVnRVh0OUM3MGpNNG5pUmVMU2tkd1lvbnVWU1FmLVp2dnBuNlpVZDBLeElfM1dlVkFwMXFRNFZIWWhxMDRrQVV5d09faWJWdEVxd2lSdTVELU9SUFBYWXVpTlgwa2hZczJPeW1tWkkyQ3ppZThVTldqWVJfZzVFaG50bDlPcjRmUkZ0cDlT?oc=5",
+      "fuente": "Economis"
+     }
+    ],
+    "entregas": {
+     "fecha": "2026-10-30",
+     "hechas": []
     }
-  ],
-  "pendientes": [
+   }
+  },
+  "mundo": {
+   "estado": "listo",
+   "corridas": 2,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:53:21.717Z",
+   "resumen": "🌎 Noticias del mundo\n\n• Europa propone anticiparse al riesgo climático: la sostenibilidad también consiste en proteger a las personas (Prevención Integral)\n  https://news.google.com/rss/articles/CBMi9AFBVV95cUxNNlJqelct",
+   "informe": "data/informes/mundo/2026-10-29-2353.md",
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "europa propone anticiparse al riesgo climático: la sostenibilidad también consiste en prot",
+     "dinamarca, primer país de la unión europea en ratificar el acuerdo global modernizado con ",
+     "votantes latinos preocupados por inmigración y economía: así se perfilan las elecciones de",
+     "wall street cierra con pérdidas por desplome de alphabet y cifras sólidas de la economía d",
+     "defiende alejandro armenta modelo económico de la 4t",
+     "torreón analiza oportunidades económicas ante el nuevo orden global",
+     "países de la ue rechazan el plan de bruselas de gravar más el gas que la electricidad",
+     "curiosidades de muertos: un recorrido atípico por los cementerios europeos",
+     "noticieros en europa se unen ante prácticas depredadoras de mark zuckerberg, ceo de meta",
+     "brasil podría superar a italia y rusia en 2027: el crecimiento que cambiaría el mapa econó",
+     "china dispara sus exportaciones de tecnología limpia: qué significa para la economía mundi",
+     "rodrigo huescas vuelve a sonreír en europa: asistencia y 90 minutos para clasificar al cop",
+     "la economía estadounidense está creciendo con fuerza gracias al auge del gasto y la invers",
+     "se acelera la inflación en estados unidos; suben los precios y golpean la economía",
+     "el niño podría recortar el crecimiento de la economía peruana a 2% en 2027",
+     "horizonte europa abre nuevas oportunidades de financiación para la química sostenible y la"
+    ],
+    "ultimoChequeo": "2026-10-30T02:53:21.717Z"
+   }
+  },
+  "ideas_redes": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": 9,
+   "historial": [
     {
-      "bot": "terrenos",
-      "orden": "",
-      "origen": "manual"
+     "f": "2026-10-30T02:43:55.644Z",
+     "p": 9,
+     "orden": false
     }
-  ],
-  "mensajes": {
-    "4": "dolar",
-    "5": "licitaciones",
-    "6": "licitaciones",
-    "7": "noticias_vm",
-    "8": "noticias_ar",
-    "9": "noticias_ar",
-    "10": "mundo",
-    "11": "mundo",
-    "12": "clima",
-    "13": "vencimientos",
-    "14": "tarifas",
-    "15": "paginas",
-    "16": "salud_oficina"
+   ],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:43:55.644Z",
+   "resumen": "POST 1: Dólar vs. Ladrillo (Reel Humor + Inversión)\n* Idea: Comparar la inestabilidad financiera con la seguridad de construir en Córdoba.\n* Guion: (Joni mirando el celular con cara de preocupación) \"Yo viendo cómo varía",
+   "informe": "data/informes/ideas_redes/2026-10-29-2343.md",
+   "pausado": false,
+   "memoria": {},
+   "modelo": "Google Gemini · gemini-3.6-flash"
   },
-  "tgOffset": 196508479,
-  "hechos": {
-    "parte": "2026-10-29",
-    "entrenamiento": "2026-10-29"
+  "celular_bot": {
+   "estado": "sin conectar",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
   },
-  "consumo": {
-    "fecha": "2026-10-29",
-    "consultas": 52,
-    "por": {
-      "gemini": 16,
-      "github": 4
-    }
+  "vuelos": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
   },
-  "botUsuario": "GrupoBosiobot",
-  "actualizado": "2026-10-30T02:59:16.579Z",
-  "modelo": "gemini-3.8-flash",
-  "config": {
-    "telegram": true,
-    "gemini": true,
-    "dueno": true,
-    "ias": [
-      "Google Gemini",
-      "GitHub Models"
-    ]
+  "comida": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
   },
-  "ia": {
-    "fecha": "2026-10-29",
-    "agotado": {
-      "gemini:gemini-3.8-flash": 1793329187306,
-      "gemini:gemini-3.7-flash": 1793329193837,
-      "gemini:gemini-4-argon": true
+  "entrenamiento": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "imagen": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "clima": {
+   "estado": "listo",
+   "corridas": 3,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "⚠️ Cambió el pronóstico para la obra\n\n🌤️ Clima en Villa María, Córdoba\n• Hoy 30/10: 15° a 26° · lluvia 72% · viento 19 km/h\n• Mañana 31/10: 13° a 28° · lluvia 77% · viento 16 km/h\n• Pasado 01/11: 17° a 27° · lluvia 78% ",
+   "informe": "data/informes/clima/2026-10-30-0534.md",
+   "pausado": false,
+   "memoria": {
+    "ultimoChequeo": "2026-10-30T08:34:35.545Z",
+    "ultimoAviso": "Hoy: 72% de lluvia (8.9 mm)|Mañana: 77% de lluvia (2.1 mm)|Pasado: 78% de lluvia (9 mm)"
+   }
+  },
+  "vencimientos": {
+   "estado": "listo",
+   "corridas": 2,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "🧾 Vencimientos e impuestos\n\n• Cómo pagar el monotributo de ARCA con el celular y evitar el vencimiento (Ambito)\n  https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRlJneHk2RFUzS3BaR1hvVUcyXzBfZUF4bG9FNE4tY29yRkt5Zk1f",
+   "informe": "data/informes/vencimientos/2026-10-30-0534.md",
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "cómo pagar el monotributo de arca con el celular y evitar el vencimiento",
+     "ganancias simplificada de arca: cuándo hay que adherir, ratificar o convalidar",
+     "arca habilitó una nueva forma de pagar el monotributo: cómo funciona",
+     "ganancias simplificado: arca aclaró quiénes deben hacer otro trámite antes del viernes",
+     "arca: cómo financiar la deuda del monotributo en 20 cuotas desde el celular",
+     "monotributo: arca explicó qué pasa si no se paga una cuota y cómo ponerse al día sin dejar",
+     "¿pagas el monotributo desde el celular? la nueva opción rápida que habilitó arca para el p",
+     "las pymes industriales acumulan 14 trimestres de caída y una de cada siete enfrenta embarg",
+     "arca extendió el vencimiento de ganancias: cuánto tiempo queda para presentar la declaraci",
+     "ganancias: se prorrogó el plazo de presentación para personas humanas",
+     "arca modifica la emisión de facturas del monotributo social desde noviembre",
+     "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
+    ],
+    "ultimoChequeo": "2026-10-30T08:34:35.545Z"
+   }
+  },
+  "tarifas": {
+   "estado": "listo",
+   "corridas": 3,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• Corte de agua y luz hasta el 1 de noviembre: zonas afectadas y hora de reposición (Agencia Andina)\n  https://news.google.com/rss/articles/CBMitgFBVV95cUxNODYwV3Z6VzlURHdCTmNYak80WWtBb2tYc1dLQm",
+   "informe": "data/informes/tarifas/2026-10-30-0534.md",
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "corte de agua y luz hasta el 1 de noviembre: zonas afectadas y hora de reposición",
+     "zona fría: la reducción del subsidio aprobada por el congreso provocó una suba promedio de",
+     "uno por uno, todos los aumentos que llegan en noviembre: transporte, educación y salud ent",
+     "alquileres, micros, colegios, prepagas y más: los aumentos que llegan en noviembre y presi",
+     "noviembre arranca con aumentos en transporte, alquileres y prepagas",
+     "aumentos de noviembre 2026: cuánto subirán colectivos, alquileres, colegios y prepagas",
+     "el gobierno reglamentó por decreto la restricción de la «zona fría», perjudicando a millon",
+     "apj gas denunció que 3.300.000 de argentinos pagarán tarifas más caras tras la reglamentac",
+     "los aumentos de noviembre golpean el bolsillo de los platenses: qué sube desde el domingo",
+     "aumentos de noviembre: transporte, alquileres y prepagas",
+     "transporte, alquileres, prepagas y más: uno por uno, todos los aumentos que llegan en novi",
+     "aumentos de noviembre 2026: cuánto subirán las prepagas, los alquileres, la telefonía y el",
+     "reporte sobre el incremento en el precio del pescado por el fenómeno el niño en villa marí",
+     "los aumentos que llegan en noviembre 2026: transporte público, servicios, alquileres, prep",
+     "bruselas no espera un problema de suministro energético pero le preocupa el alza de los pr",
+     "pollo llega a 50 pesos por kilo en el mercado revolución de córdoba",
+     "golpe al bolsillo: aprueban fuerte aumento en los combustibles",
+     "todo aumenta en noviembre: colectivos, prepagas, alquileres, colegios y servicios, uno por"
+    ],
+    "ultimoChequeo": "2026-10-30T08:34:35.545Z"
+   }
+  },
+  "ofertas": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "ideas_apps": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "ideas_videos": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "paginas": {
+   "estado": "listo",
+   "corridas": 3,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
+   "informe": "data/informes/paginas/2026-10-29-2353.md",
+   "pausado": false,
+   "memoria": {
+    "caidas": {
+     "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": false,
+     "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
+     "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "huella": "bYGg"
+    "ultimoChequeo": "2026-10-30T08:34:35.545Z",
+    "resumenFecha": "2026-10-29"
+   }
   },
-  "dueno": 1237559052
+  "salud_oficina": {
+   "estado": "listo",
+   "corridas": 2,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:53:21.717Z",
+   "resumen": "🛠️ Salud de la oficina · 2026-10-29\nBots: 28 · trabajaron hoy: 12\n❌ Fallaron: Escapadas de finde (Gemini no respondió: gemini-3.6-flash: 429 You exceeded your)\n📱 Celular bot (Instagram): todavía no está conectado (ver ",
+   "informe": "data/informes/salud_oficina/2026-10-29-2353.md",
+   "pausado": false,
+   "memoria": {
+    "ultimoChequeo": "2026-10-30T02:53:21.717Z"
+   }
+  },
+  "precio_mmo": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "🧱 Valor m² del Colegio de MMO\n\n• Oliva actualizó el Índice de la Construcción con un aumento del 2,44% y la cuota de vivienda se fijó entre $200.185 y $400.371 (eldiariodeoliva.com)\n  https://news.google.com/rss/article",
+   "informe": "data/informes/precio_mmo/2026-10-30-0534.md",
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "oliva actualizó el índice de la construcción con un aumento del 2,44% y la cuota de vivien",
+     "construir una casa: los gastos que no incluye el precio por m2",
+     "el costo de la construcción tuvo en septiembre la menor suba del año",
+     "córdoba: el índice del costo de la construcción aumentó 1,2% en septiembre",
+     "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
+     "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
+    ],
+    "ultimoChequeo": "2026-10-30T08:34:35.545Z"
+   }
+  },
+  "mundo_economia": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "Guardé 10 novedades para la próxima entrega (08:00).",
+   "informe": null,
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "españa destina 437 millones al año al mantenimiento del ave frente a los 1.130 millones de",
+     "economía de eu se acelera 3.4% en el 3t y supera pronósticos",
+     "lo que parecía imposible en 1990 ya es realidad: la economía de polonia supera a japón en ",
+     "el banco de japón dice que la inflación alcanza el 2 % tras 13 años",
+     "japón da la sorpresa: mantiene los tipos al 1,25% y acelera la venta de activos",
+     "brasil: la batalla acaba de comenzar",
+     "grupo jorge: la empresa aragonesa que exporta jamón a más de 100 países, incluidos china y",
+     "banco de japón mantiene tasas sin cambios; ipc ya en meta del 2% - investing.com méxico",
+     "chile negocia con estados unidos eliminar aranceles que afectan a sus exportaciones",
+     "jordan bardella apuesta por introducir “una preferencia europea” en los contratos públicos"
+    ],
+    "bandeja": [
+     {
+      "titulo": "España destina 437 millones al año al mantenimiento del AVE frente a los 1.130 millones de Japón, pese a tener redes de alta velocidad de tamaño similar",
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNQkRSSW5VQVc1RlMxN0dqQXQ2U3NfSUlkbmVUNlZ1bFN0N2dzV09DU3NEQVZQQThZUDdzZG81UmhGdEx2anZveGQ3TE5BYkxRbWNtSzFyLVBvcGJOaGZMT2lVT2dmMGphR29ZbUJZdnFYSzRaNnJHdDVTUmFZeHd6dGVsUmFRdmRMX0VBUDlQRkIxY2lHVkxPTWpUa3ljcnZTM3R4SDJZQXN4QkN4YU5vMDdwajQyaVZkXzVXb2ZrU3FIbWJSRUdGd2V4eGVaUkx4enZ6alRHbGdoUlRVZVNPQlJNZHhaWU1pWmdEZFF6S0JGdllQVkZPUGtwbWlTak5yc0HSAYcCQVVfeXFMUHhHRVo0bWNzSWsyN2l5aHlqZnQ1eEhHT0dyU210U1NQUTJ3S2hxMTVuU2hrUVNTNHp4Y0pObk9tUDVZZHd1bmt0TFRWRnNnRHE2eGtnWWJSd0RDNVI3TXJNcy04Vy1DaDhMTzlDQUN2bWxXZUFRdFpXdHl6Mm02YUJRbHdCM21NQXQwSndnTFZ1dVFpek9aRVV5eE82dDkyLTBpYUFLeDh6ZDNyVlY0RlJQaVcybC1Rd2lWVExVZGxMQmdDX3VoNWJoNW1BbTYtSGhvR2RmNDdTUFYwenlxRDcwaF9ta2JKR1VtVEJXeGI4b3FmRGNJMDZDc3FzVXljSTFYNEs2dGc?oc=5",
+      "fuente": "El Blog Salmón"
+     },
+     {
+      "titulo": "Economía de EU se acelera 3.4% en el 3T y supera pronósticos",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWHo5bkQxOVFlN0pyTU53YTgwRkpHRUphdEo5X2l0d1ZQZjFOZnFweWVOU24xUFRDQVFfaGdlR0tRVDN0ZzFlZ1dxLV94RjBFWXo2M1VVbEE3Y3NLbkhIX0pqUnFKS0NuX1R2VE8zYWcwSHpqWEhSeS1fbWpHOEMta2lJcnFmY1FCN2JaRHR6YXFOZG1QdE5YZmhweVB3OWVMM3l1OEVaT2RWa1NPS0lCUQ?oc=5",
+      "fuente": "El Financiero"
+     },
+     {
+      "titulo": "Lo que parecía imposible en 1990 ya es realidad: la economía de Polonia supera a Japón en PIB per cápita y España está a solo 55 dólares",
+      "link": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxNWjFtem1lUjhkTy1BbzhxNnBIT2NuRFNDZ3dPWVZlWjYwOV9HVVhNLWt5Z3NLNnpteldtcHNJY0ZyS1JlZkUyX2h4WEpKbTQ4STJhal8wQ1UzRUlMeE5pc2NFcDFka1VieW1GY0pqWXZ3WnFETGFJUkhlVV8td05ENVphVVV5OV85WUdqZk9FaE9WbTVzaHhqSmVNTFFsR1BRaHdoaFU3MFRuS2xlQU5OZzJ6VDNhdFIyUjhhMDhTRllPODV2VnZ6VlhqYzFKaDVlbzVyZ0hkYUpGRWxSOWdmZVRMdU1MVU1zanB4SGZzdXJzLUM0M09od21Hc0VaanktZW1GdTlLRzhCME44TGl2XzZzd1hieFhUMnc0YnU3UUZnVHpFbWFmLQ?oc=5",
+      "fuente": "El Economista"
+     },
+     {
+      "titulo": "El Banco de Japón dice que la inflación alcanza el 2 % tras 13 años",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObDN1Q0xxOGpjdzgxRTRSSTU2TF9nVEVXb01ibDdQUzFLdHNXNDBUOHVsSUYyeWlBX0JhTjBpamJZWDB2SHhkc1plbGRDRkpuV0pjLVd6LUdVM2ZVZ0RlNVhuZ015MGFrM0pCaGNJYl9CRkdlTTQxc1REMW5Wdi1fS0lfVUFPTHI5Q2tHeXpOTVNwMERYcnN6OVVPWXREaVltNXc?oc=5",
+      "fuente": "Euronews.com"
+     },
+     {
+      "titulo": "Japón da la sorpresa: mantiene los tipos al 1,25% y acelera la venta de activos",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOc3NiQUxDOTA1VV9iajdRYThLSjVseFFEempkYUdCMXdqWmhMZjRwb045SVZZWG1vUjZrbzAtMmhFTzRrRjFhQzBnb0Z2bnk1aDAxMWNHQl9kMVA2OE5sZHA4Y25qUDFCaW1wNG1aRWFWdG9YbjdhcDBtQUtGSnNxUFRVV2pMOFBTR2drZmJ2QXpuck01NlQyOERBeEw4NnktMWxSaUpEcUVmZ19DWHBnMEltUmVvSVpIUmRZUUUxc9IBvwFBVV95cUxOc3NiQUxDOTA1VV9iajdRYThLSjVseFFEempkYUdCMXdqWmhMZjRwb045SVZZWG1vUjZrbzAtMmhFTzRrRjFhQzBnb0Z2bnk1aDAxMWNHQl9kMVA2OE5sZHA4Y25qUDFCaW1wNG1aRWFWdG9YbjdhcDBtQUtGSnNxUFRVV2pMOFBTR2drZmJ2QXpuck01NlQyOERBeEw4NnktMWxSaUpEcUVmZ19DWHBnMEltUmVvSVpIUmRZUUUxcw?oc=5",
+      "fuente": "Negocios.com"
+     },
+     {
+      "titulo": "Brasil: la batalla acaba de comenzar",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1iZWk2MlJEdHpESmFjOFFZU3VLUDg5c1FlLVlLTFQ5UV9KMlJZTXRLVjBCRmg2OGVsSXEydUo1M1FKbExNTDlRQWowdi1GaFBGUlZyQVJ2d0xTV1FDUnRVNHRmRXppOTla?oc=5",
+      "fuente": "Rebelión"
+     },
+     {
+      "titulo": "Grupo Jorge: la empresa aragonesa que exporta jamón a más de 100 países, incluidos China y Japón",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSkdjOEIzeDVIRjhWdjU4REZ3Xy1qNkk1c1o3SmhMRUl5WEtMX3J0UU40aVZNNlgxMHZ1T0wwZ1RoQm1aQmx1b1IzTjh1eEZ6UnNwM2ZOS1VwMXd0OWEyTWc1cDV6eVZLdVJnakJ4RDdoZTRKeUhUOWNCRlUzX0ItZkJQT2h5U2ZKeFhLbWtMZEFIZVpPRmVxMmM1M2p0Zw?oc=5",
+      "fuente": "Hoy Aragón"
+     },
+     {
+      "titulo": "Banco de Japón mantiene tasas sin cambios; IPC ya en meta del 2% - Investing.com México",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNVFdUYldURzhGeXV1WXFBeFZWOC1xS0w4TGtQb3RFV1pWX2NodTBzVW9ObWxtdHJLMFBVakRBYjNpaEhDbWVnR203Q2x2a2UySG0wOW1DSEpiUXBKeUM3VnhKRjk5T3FhdUFVLUxiY0Q2UTluX25uV3RoWHhPYXBwUldRMkxwZlBFbHBRYlJ2RkVfSWNVR1d2WGc3NGt0Nmh1aDBhbHo1MnNSUWs5bGdfM1dWR2dPdw?oc=5",
+      "fuente": "Investing.com México - Finanzas, Bolsa y Forex"
+     },
+     {
+      "titulo": "Chile negocia con Estados Unidos eliminar aranceles que afectan a sus exportaciones",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUE1jNDlNTGNKbnRRSkVpanFWTUk2eDlWcHlURk5hSjhyQVBUZjlmREFKdlJFQ0FtVW1aRVp4NGY5Y0VnenhzWnRUa2pOY3pTOWVyZlZ6eHhENmxEdnY3bHJIc0hBZml0QWwySmFCdE11TVVZVUJBcDF5bDR6MHJST3ZnTkdLRjRFU3k3QWdpNXY5Q1hzSFd3WkV2cVdSdThjWWRYSzJORVVQTldWbGgyZXRR?oc=5",
+      "fuente": "https://zonazero.cl/"
+     },
+     {
+      "titulo": "Jordan Bardella apuesta por introducir “una preferencia europea” en los contratos públicos",
+      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPYjh1NjloQmRoVzllV0ZyTEZXQkU0ZHdTcGVIaEwyYVM3UW9zajBhb2xYUl9pM2FtVUdKc3FYRHpqZFhVa1EtanRzY1NnUW8tc3lSY29wMnFWZlBVdElINXdTa2J4QWhMXzhiUmt5dUhleWhsQ0p0ZWpGOF9CRnFtemVJZ1J1VzlxQmNqcktKa3RpbDAzVVlvRm5CanBtVHlEMUV3Z1o4LWlvcWttc19YTVRuNm1teU96c3NJZVpDeEpIbzRRQU1kX0ZQN2JybGRwbkFSNWdQYmtLdw?oc=5",
+      "fuente": "Nueva Economía Fórum"
+     }
+    ],
+    "entregas": {
+     "fecha": "2026-10-30",
+     "hechas": []
+    },
+    "ultimoChequeo": "2026-10-30T08:34:35.545Z"
+   }
+  },
+  "mundo_tecnologia": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "Guardé 10 novedades para la próxima entrega (08:00).",
+   "informe": null,
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "baterías para coches eléctricos mucho más seguras: corea desarrolla una tecnología de refr",
+     "leapmotor y el avance del automóvil chino en europa",
+     "waymo y toyota preparan pruebas de robotaxis en japón y exploran otros mercados",
+     "la fuga inversora de la tecnología llega al mercado europeo: el cierre semanal pone en dud",
+     "el dictador norcoreano kim jong-un ordenó a su ejército una rápida expansión de la tecnolo",
+     "volkswagen da un giro histórico: utilizará tecnología china en sus futuros coches",
+     "argentina presentó a estados unidos sus planes para ampliar la industria nuclear",
+     "tecnológicas se venden en wall street por temores de ia",
+     "gonzalo abellán: \"el hidrógeno verde es estratégico para europa porque puede liderar su de",
+     "grupo jorge: la empresa aragonesa que exporta jamón a más de 100 países, incluidos china y"
+    ],
+    "bandeja": [
+     {
+      "titulo": "Baterías para coches eléctricos mucho más seguras: Corea desarrolla una tecnología de refrigeración durante la carga rápida mediante pulverización",
+      "link": "https://news.google.com/rss/articles/CBMimAJBVV95cUxOTmJCOXViYTdabkFKY0l3M1l0a0JuTDIxOVRFdUtmTW5zTnVzdGpsME9sd3dhODZiLURLMWM1TTQzOU5zZWY0aE5Rckk4NEJvUkZ1ZnhnT2dPemUzLXdhbUQwQkk3aG5iTVVINGtyeWpXczAzUlJPT0dxUmVESU1vODYzcmN4cDQwLUhtbndMU1Y3OXN0YkprTGJDY1hILXA2dnlhZlNuYVpoN0hLQVZnVDFVdU85bl9OR0xpdHpEZlgzZVV0OEJsSzNBRjFlS2w0aGpHenplQ016YTdUNVdLQldzLW1mMk5wcEliZ2haWFZ3RVJmZDV3N2hEQ2xQYWVSdFpHb1JSaXMtRm9IMDhxb3I2REt4bWFo?oc=5",
+      "fuente": "Híbridos y Eléctricos"
+     },
+     {
+      "titulo": "Leapmotor y el avance del automóvil chino en Europa",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOXy1QcGRDMG5uNmUwRmxQbmRURTZ0UHh4TjRhQzNSMDBOM1U0cWZ1aEg2cWNVZy1BN0tiVXpaVWpKQVBaQzhoSWQ4aHdfVGgtb3VkaFdGNkhIRHZDLUNrLTZhenFQNkFUemFJVUZYMzAxbnNhUWtXczc0dEtBQ21ZNnN3andjSHJQQkVqZkFYVW9SUQ?oc=5",
+      "fuente": "Revista Emprendedores"
+     },
+     {
+      "titulo": "Waymo y Toyota preparan pruebas de robotaxis en Japón y exploran otros mercados",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxObEZCcWxXaFUza1hOdEJxS3dBc3g3MW5SYnFZcFlBaC1VX2hlQk5jYXJxTURDX0FpYzVvUmVpaWJWcWNJVndEa0ZwWHdmSUVqdlJjVVV3NjNlb3FKZURIb3VyY3Z1MUtveGVrVXRmZWk2Yk1POWQtTjAyTHhFV1ZVSDQ1R00waVdsanhjWHZ1Y1M2VjdKdVc4dnRtWnV2QkU0aEJEWWluMkhFN0VET1U0a09iMGpESWRDdzBWZnhn?oc=5",
+      "fuente": "DiarioBitcoin"
+     },
+     {
+      "titulo": "La fuga inversora de la tecnología llega al mercado europeo: el cierre semanal pone en duda la tendencia del Ibex 35",
+      "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOQVdzRWVXQWV0LWN4dVhlUll3Q0NrMEU5ODdjTzVUckpoMXlCREctaGI1aUpBVFJYaGJ2cXZIb3RqQ1l4anhkSmFQeGdUMHl6RUEycmRwa0J5cTY3ZHRiT1VJeGZwRmhFRXJERzZ4QUhQVFB6VDRkS2c0dUUxeUk0NUNjSGFkdFMtTDdiU2VmTVFoZ3d1VU11U05UMDVCTERiYTROSFFnQWl4TGJMWjVmUEc3SUNLYnZmNlBCX1VfWkQtRTUtbWRQVTh6eGpneTFPLUhMdE9ySTRRWk5lbzU4WHFDZzZMTm5seXRETG0xWmhOdzd3R2J2clM3UU1Wbkp2ZDdQQXJIeXNXU3ZMTWl4UTZlY0VyQnVtNElmZDNNONIBigJBVV95cUxNT3hrQUg1WXkwOWFaa2pzYnpYazBYdmxKQnJPVkJON0djY3dTSHN3dk1peXkxZGc5X1NXd2xNUlZJRkJSZHNyWENSU0UycEgxQ1FkQUNGUkQ1ZmtSOS1rOGdrcU5NSDhRS2s2MnJpMkJJdnhHaTFMTW9MQXNHaXgwSFdXOVVIaXFVVUM4WGJvYmV4M3NKSUlKbnN5SndnNi1TNGUyVkN6MUlGajhtRXFGblVVa0NiRVhmMWkwR1NfSDNhblFKZE1Caml3Z011Yldlelg0WGxaaUE1UGp2SERWaHdSaWdwNkdfbzJXR015elBwOVNHSjkxYWlfOFJHcUU4VlhuQXJsS2NBZw?oc=5",
+      "fuente": "El Economista"
+     },
+     {
+      "titulo": "El dictador norcoreano Kim Jong-un ordenó a su Ejército una rápida expansión de la tecnología de drones en plena tensión con Seúl",
+      "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxOejdadnF1bGN3RGljNk1BV1MyX2VOMVo0NlZ5VmdybE9rbDhUM3FBdG1rdmlLZTZabEQ0NmRwMEJOYmRqX1BGUTRTbUU3MXliRmhUSlVPdl9sMjdpQlR0dTVCeFlCLUw1a0ZReFBrSVl5R2NOYzJHOGo1QWFySTBYSUdJS3haTXlwck1mT2pFSURRd3JlOUZNMDhrMTFEbk9BS0ZRNDQ1bU5QZWk4MGhGSlVWc2E1UnZxNmxMdHZidFlaVGYxSnNQN29Qamh6aktFTzlXZmNjS05mU3p4UjdXQjRmTmtpVzhnVkFHdHYzeUZnMlRrSXF4TFFhLVlNM2VIU1pERHlzcWdBM1nSAaYCQVVfeXFMUHQ0S29CMDg2S3ZWem83eEdwLW1rMHZWdFZZaWVTTldrN1ZDTGw2elRPNnVvTS03ZjFKTXFiQ0dnWE1lTUpaLXhicVRRdkNpTjNPU0dpVTN1SDBiV2otdFg2R2FGcGNyQVFzb3gtTmFMTFVWRjRmUm4tUXRWSURrcl9ham9DSUl0NGpwQ01RZkZncTdlcHNfRzNnTjZXWm5pWDByVFZFV3owYkdsemc4eG55VGRwSFh5NVVfdU9DVWNLUjdjMjVDVkRNTHhuVE9qZFZ3YjRGTXpmdFJRTVpGTVNwR2N6ekdvTGM4T0RFWWlCazZXY1A3NTNUZ2J0U1BHRFN4NDFvYVFDa1NkYXhLWURJa0FxM282M3BnUFZGR0Z1ZnIweW5n?oc=5",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "Volkswagen da un giro histórico: utilizará tecnología china en sus futuros coches",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPbHg0Vi1kYXlIQ2FSLWJqNi0zd0hvTnp2ZlVFT3Jwc3J2bEF2R041QldGVVZDOXpKVnAxWkpodThwTTZLNEZWTGY3NFA2SmRTaGdYSzBwdG5zcWs5eWliWVlGQU1zMFMtRF9NeHJIQnFRMVFnTVRDcnpQcWRoNk5FaVpiUUp3aXh4QV8xRnlHb3VnaE5Cd29sUGczVFV2TklEVzhQVmF3ajZIOVdDVHNQa0hHd3U2ZjZXTjZhNV91SnVvUnVlbTdvSS13Y2docjdFcWJhSWY5SklYRmQxc1pn?oc=5",
+      "fuente": "Somos Eléctricos"
+     },
+     {
+      "titulo": "Argentina presentó a Estados Unidos sus planes para ampliar la industria nuclear",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOc1lWWHM2Q1J4enRmQkhjSklmdW44ZlphRkZkV3B0LXMzaFE1UE1Oc1RNdFVmTjI0ZkZhN0ZteDlUeEkyWTdjVXdnNVZiTTkwaXh6c1dFVzBnc0tWemN0MTAwNkN3Qmp2OVlMUHlHeHZ4cWVKV2lhTTNpZ0ZXdHhsN2V1NWpKODVfUFc4T2RMM1pxZDFTODl4a2FsVlR6RmZWX2xYNzF3Wm9Kd19tUFkycXlGdVR4aDdHLWRj?oc=5",
+      "fuente": "El Intransigente"
+     },
+     {
+      "titulo": "Tecnológicas se venden en Wall Street por temores de IA",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOVGlDenFTVXZmQlFOUUNHOVVuR1o0TEVjNEhpc0hrQnJ4MGVVZkhIRk1uRFpNVTV2aHdXMnl0cmVCR0FqR0MwS1V3ZTFWREVQRTN4UmdlMnp5Nm5LTWkwdkQtQ1VsN19OaHBSc1ZJZTBNQU1xeXJNRHJ6ZHY4dWZiV0hXZ0c0VzZpQXVYdjd1dlNObVBia3JUODIwRWthTmZjbWFZbjA4RdIBrAFBVV95cUxPVnNXc2NJaDhfa2VCMVZnYnRtT1VhdnAzVHh1cGdHbmRrd1VfbzI4Q3MwWWFudTZiLTVpME1MNlBOVGJ5Nl81bGtGX3FUbmFscTRHUE02X0ZoVDRRVEFuWjZOZGhIamRXVlJaSTlQdWJoX3ZORTNZX2FMQTFZMDJuSDlYbHg4WEdJM3FSOUZmZXA0alFEUVNIQnBOUTlxVEFiaElhNGdaWGhwZ1Nf?oc=5",
+      "fuente": "El Economista"
+     },
+     {
+      "titulo": "Gonzalo Abellán: \"El hidrógeno verde es estratégico para Europa porque puede liderar su desarrollo\"",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPelRHcl9XZlVHQTM4RTZYVlZSZ1ZYWGhGSi1zU2cycVpyWURRbFpseG40OVlPMmM2SEhDa0JzdjJ3M05KZkRHSFBYRERYSUV0Qm0xdVVaVHVpSlFqR2Roa3BSdVkyV09aTW00MWJMd2lpS2I3RVpJNHZEVzVRem11U2JqYUx0QXU5czZBSk1xU25NeUZYWEJaRTlqQTFqdjExQ2d3dzVWYktyZmVjN1BJckQ2YnVtUWtSeHlycEQ3enRUTlVuZ2ppcGRHNDRBZHFISVJudGFLNFdQSWp0V29IQ1FrQQ?oc=5",
+      "fuente": "Castellón Plaza"
+     },
+     {
+      "titulo": "Grupo Jorge: la empresa aragonesa que exporta jamón a más de 100 países, incluidos China y Japón",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSkdjOEIzeDVIRjhWdjU4REZ3Xy1qNkk1c1o3SmhMRUl5WEtMX3J0UU40aVZNNlgxMHZ1T0wwZ1RoQm1aQmx1b1IzTjh1eEZ6UnNwM2ZOS1VwMXd0OWEyTWc1cDV6eVZLdVJnakJ4RDdoZTRKeUhUOWNCRlUzX0ItZkJQT2h5U2ZKeFhLbWtMZEFIZVpPRmVxMmM1M2p0Zw?oc=5",
+      "fuente": "Hoy Aragón"
+     }
+    ],
+    "entregas": {
+     "fecha": "2026-10-30",
+     "hechas": []
+    },
+    "ultimoChequeo": "2026-10-30T08:34:35.545Z"
+   }
+  },
+  "mundo_salud": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "Guardé 10 novedades para la próxima entrega (08:00).",
+   "informe": null,
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "nutricare ha sido galardonada con el título de marca nacional de vietnam durante 10 años c",
+     "la oms aboga por la desinstitucionalización y la transición hacia una atención comunitaria",
+     "fujimori y bukele firman acuerdo de cooperación en seguridad, justicia, salud y educación",
+     "las compras libres de impuestos en japón pasarán al “sistema de reembolso” en noviembre",
+     "la tecnología médica china refuerza la salud en américa latina en el marco de apec",
+     "más de 140 científicos piden a oms declarar la emergencia climática",
+     "ancelotti sigue apostando en vinícius y la juventud para medirse a japón y singapur",
+     "¡carrera por la salud global! presentan a los siete candidatos para dirigir la oms¡carrera",
+     "la vivienda en texas se comió los avances salariales de 2025, según nuevos datos del censo",
+     "casi único en el mundo: rusia desarrolla un fármaco para tratar formas agresivas de cáncer"
+    ],
+    "bandeja": [
+     {
+      "titulo": "Nutricare ha sido galardonada con el título de Marca Nacional de Vietnam durante 10 años consecutivos.",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5NNm9Gc2MxSGlQdXU1cG93aTJuOFMtcHVYS280UzlIdTdVLXpiZnRSNWVldGxxZWdySTQ3OUlUYlFrb2lLa3Jxb3ZxVXRQNENERUx3?oc=5",
+      "fuente": "شبكة تواصل الإخبارية"
+     },
+     {
+      "titulo": "La OMS aboga por la desinstitucionalización y la transición hacia una atención comunitaria en salud mental",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNZlduLUdKTDBWbHVYUmpPSjIyUUdQaFQ4Nk5GQzE0aXBUSVoxZGZDY1pBRE1vWjQzWnRKZWI4Q0NiSy1kU29UeFE4cHcxT290RHcyZ2VkS001LVU3WllFWkZQT193b1FVc3ZITlk1cllLWVlhRkJ6VU96NTl1azllQnJWR2w1S2laakVxUk5Za2Yxb3ZjYnZ4VXdKV1lqWFBBbnBIVEhEbkNwQkRtamVNYW9ZUFdQQnFyOTJ6QWM3QXphWWVWT3lFS0tPbVdBTEQwMVl4TWFuRmd1TjZ4?oc=5",
+      "fuente": "https://www.infocop.es/"
+     },
+     {
+      "titulo": "Fujimori y Bukele firman acuerdo de cooperación en seguridad, justicia, salud y educación",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMDNFODVpbFdkWTBZZnhzOGVfc3NHeGxXc2xkNkw0cGFYRWlPMXJIaXJET0g2Ui1TYjJiMzVndTdmNGhfMzdtX1JHWm5BekJqM0xCakk3cDJrdVBWNDFSM08xZWlxTE1UTVp6MGtWLUxHYUtrcHpDejMxaG1PUk4xUmtMa0NMSFEwSG5qYi1GUm1kMGNhT2JxY19BSGRGWlk4eEluRXBBTmo?oc=5",
+      "fuente": "Gestión"
+     },
+     {
+      "titulo": "Las compras libres de impuestos en Japón pasarán al “sistema de reembolso” en noviembre",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9VR3NVSDg4VUxOeUJxRVQzVDczUm5lRVdQZ294SEh3eXhjVHNNMU9pVHJfMHp1MXpQMGlhdGpEZ2xJaFFGY2owM1lxaE1OaHU5eEV1VA?oc=5",
+      "fuente": "Nippon.com"
+     },
+     {
+      "titulo": "La tecnología médica china refuerza la salud en América Latina en el marco de APEC",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPVlI1MlpLR3RyY3hJZTJfa2dFR3V3Q0QyLWRzSzFTUlJxSVp0WEJnMzJ0enZmRG55Uk1sRW5RQmNJcUhWV09iZWRjT1ZSSGFaemFXendLcEMtb1hVNmhUV3RzaWg0YmVJSEs2N2Z5MkRLRXRjQ1RHVzdIdWdKcWxpbHFJaVJfQTd3UGpwTkJCR215dnpOcUYyQ253OVg0eDR0d2RMSmo0ek1nT3Q20gG6AUFVX3lxTE8zc2sxbEktaVJnOGNsaE1QNGNsNG9DYkRZZE95S3lLblJEMnlIdllSQ3MxM0szMnVOVFd6QzhVUzJVdEhzWXRUbnNDYzBlT3MxYzh4YXVqemkwS0laVFBJdnBPNE1fc0hNRGtQeWsxdE41NkEzRk51YjJjTG1RSW0tWEo4V01XNXdtMXZmenk3SFdfRXhYR3o1ZERWc2hYQ3EyRS1Fam9HbmE1Mkxpd29IYVc0S2FXSV9Sdw?oc=5",
+      "fuente": "TV Azteca"
+     },
+     {
+      "titulo": "Más de 140 científicos piden a OMS declarar la emergencia climática",
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPRVB5ZFJ1QjNSOHlGMTRfVlFscjQzenI2a0JPQmNZQzRrSzd1UE5yaUF1M1lQaGFYVmhJV1NRMmljSFFMVkV5el9qX21ta0FzRHpqQTZTeXQzRllsa0djbkk0YTdNMl9uZVQ0Zy1ZWEhDcS1NLWYtSk14TjhaS2F2M3BodEExaUphUUl2ZDRBRVNKMGVUMm44dFRvU1hpOUhNbkFudXloOG1rLU5ENnVVWDc4ZW5DOE1uNlNjTi1QeTlReGMwajF5ZzdyR1dTQXNsQVg5X0k4Z9IB1wFBVV95cUxPRVB5ZFJ1QjNSOHlGMTRfVlFscjQzenI2a0JPQmNZQzRrSzd1UE5yaUF1M1lQaGFYVmhJV1NRMmljSFFMVkV5el9qX21ta0FzRHpqQTZTeXQzRllsa0djbkk0YTdNMl9uZVQ0Zy1ZWEhDcS1NLWYtSk14TjhaS2F2M3BodEExaUphUUl2ZDRBRVNKMGVUMm44dFRvU1hpOUhNbkFudXloOG1rLU5ENnVVWDc4ZW5DOE1uNlNjTi1QeTlReGMwajF5ZzdyR1dTQXNsQVg5X0k4Zw?oc=5",
+      "fuente": "Economía Sustentable"
+     },
+     {
+      "titulo": "Ancelotti sigue apostando en Vinícius y la juventud para medirse a Japón y Singapur",
+      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQWkxtSFlXLU9hWXU4em1MVTJSVTBnNDhmYlZlY3FRNkJSMTVZcjd0YzI3eHFMRDlpNTNjXzVtNnF5dXItTzU1SVE4RDJCdThVOVJDa3o4SzlSNFhPUHptQ2FPY2F3MElILUF3X3hHUXhmWWZDNGtZeDJwQVR2ODQ1R25IR3VWMHpRUVU0ZkFUc2ZkczdIcXdrQTdPbkV5OFZmMm5GOEtGTmxMcmd1bzA0UnFKTkU2RWo1RzQ3a0tvX1ZSQUFBcVFMQ0VaNFRMTmxvOWdFZExZcFR5dw?oc=5",
+      "fuente": "RFI"
+     },
+     {
+      "titulo": "¡Carrera por la salud global! Presentan a los siete candidatos para dirigir la OMS¡Carrera por la salud global! Presentan a los siete candidatos para dirigir la OMS",
+      "link": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNTVhJb3paMWE5bkxHSFAxQktHVjdUbkg1SUNYS0ZvdlVldlNObUJSRHliWjh5SF9TVWg0TUkwTXRzMjRWdDdUTXhvSDV3RE5hcGdnSW1sV2haQlFTSzdiNE9QRUNEVUpGclpLNW5yMXRfbUlfOGVkZ2lxWmVKS3FITWRuSU1WTTFlOU5XX1E4S21Yd2VNZUJRZnR0SXViUzR0M2xJejZCUUZhcEV5WFNqV3RaRk4wMWh1V2x4aHloNTlpRDV5eGMzaTdIUmFXQ25CeDhINkk5T0FIbUtnS2tqT1BNQVRVeW1RZW40TkpXOEFva09OUzBENGxtNmI1eEE2cl9HeHRVd1FZTzlqaHJJamgxQWxUaFl3Z2FtN1JzRXdMOEIwbEE?oc=5",
+      "fuente": "Cadena Politica"
+     },
+     {
+      "titulo": "La vivienda en Texas se comió los avances salariales de 2025, según nuevos datos del Censo federal",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOa1FmSDVUN3hxWGRka09LbWU3SnpmOG1oU2I3RHJMMVFsN2FlV0lVVkdfaWVnRGVFUVpnRzY2V3V2TmxZNV9aWWhvM3l4UFBrZDVNNDlQcjVzQ2g3dl95SGJYSnVKNU9lUWVpT09Mb014b0pKTEN3U2VQaFVtMjR4VVVKa2RWMFRDX25ybGdvY1JONVFUcjg0M1ZZeVlJcmlvMHlVb1hMVnJzSnhlOFg4b0dlQzQzRklySERZSlY5cUZhMDNwUFNKZVQzaE52Mnk2eUpmR1ltc0pzV0N0WXgwVWxB0gH8AUFVX3lxTE92aTlDWEJob0VzZ2tpb3ZYOV9kTzF0cGxOU2poekVONm96eW5yTndpY1NNS1J2YnpYNm83WkhocDA4X0JEM0hnTjdvODRJOEpLOGVNWkk5cWtkNEF5a2xlNm9QYXVkYTk0RzRvZzVOd29iVmwzZzRJMTI4Y2ZFSEh1NUlseEpkaGR1bm9jRzRQMTVyTWUzT0FKX1RPcUViM1Y4OXdMZUxPYml2ZnVldWxHTFlZVEI2REZ1d3hZbUR4R1NyZEl3TXpHYUNzRkxZWnBGNWtiMWY5aGZGcURmWHJoZFpSdTRYMFE1TVoxQlVkX3kyMXlRVGFBU05raw?oc=5",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "Casi único en el mundo: Rusia desarrolla un fármaco para tratar formas agresivas de cáncer de mama",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE03cVBzSHhPWHNPTlFaVW1YNEg1YUpMQlBfQTVIV292YnZDT05KNm8tdXk2dUJyU29NZlpuTmZLVElWOTZ6Wk5CSkJBZUJYQjlXTkZtODdMZEhYbHhWM280VkhFYWJWRkliZjFGN3k1c2hidDdrVHM0?oc=5",
+      "fuente": "La iguana TV"
+     }
+    ],
+    "entregas": {
+     "fecha": "2026-10-30",
+     "hechas": []
+    },
+    "ultimoChequeo": "2026-10-30T08:34:35.545Z"
+   }
+  },
+  "comidas": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {
+    "horas": {
+     "fecha": "2026-10-30",
+     "hechas": []
+    }
+   }
+  },
+  "ejercicio": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {
+    "horas": {
+     "fecha": "2026-10-30",
+     "hechas": []
+    }
+   }
+  },
+  "nutricionista": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "personal_trainer": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "psicologo": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "asesor_imagen": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "implante_capilar": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "gastos_casa": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {
+    "horas": {
+     "fecha": "2026-10-30",
+     "hechas": []
+    }
+   }
+  },
+  "gastos_personales": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {
+    "horas": {
+     "fecha": "2026-10-30",
+     "hechas": []
+    }
+   }
+  },
+  "noticias_tec": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": "2026-10-30T08:34:35.545Z",
+   "resumen": "Guardé 10 novedades para la próxima entrega (09:00).",
+   "informe": null,
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "antel y honor presentaron en uruguay el nuevo 600 elite 5g con funciones de inteligencia a",
+     "expedia lanza más de 30 novedades con ia para transformar la búsqueda, reserva y gestión d",
+     "elon musk afirma que spacex puede construir una red celular en 3 años",
+     "hon hai technology group presenta 3 nuevos modelos de referencia de vehículos eléctricos",
+     "autos que se estacionan solos y más de mil kilómetros con un tanque: las novedades de una ",
+     "acciones google: por qué alphabet cayó 12% en un día",
+     "comparativa definitiva de gemini 2026: de 2.5 a gemini 4",
+     "siri ai ya habla español: funciones y cómo activarla",
+     "falsos emuladores de ps5 en github buscan robar contraseñas con malware",
+     "fallos en herramientas de ia exponen archivos y equipos de desarrolladores"
+    ],
+    "bandeja": [
+     {
+      "titulo": "Antel y Honor presentaron en Uruguay el nuevo 600 Elite 5G con funciones de inteligencia artificial",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQeU1KQzdfVkZNZ3haQUwxbzV4WFkxWkNkaE5EWG9CVzM5SnZsNmIzLVBnWmxsOVlXdUhYcnF2akdPbmRWWW1PLTgzM1c4S0RHeXY5Qk1pZ0dQUnhjUUhDUUVoU1dWVDRxNDQyMW1KOGNBMEhZVndMaVN1RWlURGRvMU9kRDRsZUdHRVFQVVN4TW9FczlEb0xjbDY2WEZhanBxQVdGMktIeGVjMzdlVzZJWU4tcnVGLUh4UGREV05RclItN2x3ZEIyWDBYS3lVNnRySzJIbg?oc=5",
+      "fuente": "Crónicas Económicas"
+     },
+     {
+      "titulo": "Expedia lanza más de 30 novedades con IA para transformar la búsqueda, reserva y gestión de viajes",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPS2JyVVhnQ1ljMVZZRHJ3Q2JQZ1BUQUN3ODFWYTNKRjBLZXp1eHRBRVhCVmFwMmVDU1lmd2ZBTFcySWhRdExXMEtNWmptUDUzbGtqUktTc0h6QjUySEpCZTI4MTB6NVktSF9CX1A3UnNzSTFsZGNUWU5Od1c4QkhHWjBpUG8wc0Z2QTRUXzRnUkxydUlkUWo3Sm5zTjNoV0dkdnpaTHVfNndaNUNjTlFkSG9uZkVvUTRyc2ZrS2I5SG53Tkx3WEE?oc=5",
+      "fuente": "Smart Travel News"
+     },
+     {
+      "titulo": "Elon Musk afirma que SpaceX puede construir una red celular en 3 años",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPaHZ6UTB6TmdkQWVGN0tzTU1zaVJtNVhEanRnU3F4NUROelI5RHEzanhsY21jb0h1V3dfbkV6OXk1Y0xINXNQVV91TmQ2YW9tSTdNNXNoRkJZN29GZjI5Z1BHakZSSmlBMlE2WWs5UTk3OWpXZDRRSE1HMUZoWlpJV1N6QUJtWnVOSzRibjdnOEhld2pTMzJLcEppY0lnMG5hd0toc1VDWHZfU1lMd2hUYWdlUjRwdTRadHc?oc=5",
+      "fuente": "IDNFinancials"
+     },
+     {
+      "titulo": "Hon Hai Technology Group presenta 3 nuevos modelos de referencia de vehículos eléctricos",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA3SUIyQ1RhN3NZMjE5NVlmWlJ5SmZtNm1VMGVTcERTdjJqSVZQZEp1Q2JPNVN2RFZiMlB3cUVOdUExOHZLYklGdjdTYkhkWXRYNU53bEZZRExKYmR4NmJxMG1HRi01akNLckU3WA?oc=5",
+      "fuente": "TradingView"
+     },
+     {
+      "titulo": "Autos que se estacionan solos y más de mil kilómetros con un tanque: las novedades de una cumbre en China",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOcG9Sb2laUHYyX01WYnFmTDNpSWhwUkFsTXhtRXpoeHJaWEdaX2VRQWdzbi01ek4wTk5xQW9wWmFlTVpaZGZqa2JJUVllYWFqSXYwUHlGOHJNZTNmSnJxQ3o4VFZpSmoxdmNVcGYxTlFHck5hWkJoM2FOM1RZS0xSNklCYnRic0ZrcHhCc3laOUxKNmo2WHZFZm8wdnd4MVBVUHNkZXlvUlhuaENfZWFOQU11STJ3TC16UEdsVTNQc2tzdlpMZTlidFdNWENKaHB4NlVwQXJwVGpPQmgxQS1vbTlB0gH8AUFVX3lxTFBEbzIyM3VmUXRudS1qbTdqaTlISzVNN2F4d0JZWnczNy1zajZsSS1XaHUwQ0U3b3ZiWFlBVVRlemVqY2xwX2NoVGkzQlBCemRvbTRTMFNWeDlVR0xMZ0ZJQXN0a25nRDRJWlNsR1UxSzhnU3lQdVdqZzVrcnV0NlM3aFRSNlVBSVlhU1Y1RmUzSjE5YUtnZElCdnMxVmR3SnY4eEdVU2pBMjNIaDFNQkVieXdlUVByYWlYU2JOUjJPV3RUbkh4dGJrakZ0WkpRZnREbXVGaUo4OHFLV01rMTcyNll5NWQ5bGwxRnBtSzZlQ2liVlpGTE1SakxXNA?oc=5",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "Acciones Google: por qué Alphabet cayó 12% en un día",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNTFlIU2ZiX0JhajBReExFNHlkUG8tYTRkSnp3V2JxU0dsdlk4aktsTGctYl9iOXM4QmVRNlNHN2J6QzU2c3gzajJEVHgwUkNBdmVkVWVoWmY0bXpfSDEyWkdWYmVSRmN3V0pfWXVkS0VURlFwVzN1VVA2N1Fkbk9uVGViN09namdsMnhUeNIBjAFBVV95cUxNTFlIU2ZiX0JhajBReExFNHlkUG8tYTRkSnp3V2JxU0dsdlk4aktsTGctYl9iOXM4QmVRNlNHN2J6QzU2c3gzajJEVHgwUkNBdmVkVWVoWmY0bXpfSDEyWkdWYmVSRmN3V0pfWXVkS0VURlFwVzN1VVA2N1Fkbk9uVGViN09namdsMnhUeA?oc=5",
+      "fuente": "La Verdad Noticias"
+     },
+     {
+      "titulo": "Comparativa definitiva de Gemini 2026: de 2.5 a Gemini 4",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9FM1B4bVZoWVotZHh2eFVxUnRyX1B2bXNqZ1dtX0FDdkNqQWszb0V2YlVDUzVKekFxSFlQT196XzZ1cVFTWkZvRFBPamRxeTZnUE9hdm1UOTFVYXl3ZnJz?oc=5",
+      "fuente": "Fello AI"
+     },
+     {
+      "titulo": "Siri AI ya habla español: funciones y cómo activarla",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOMEwySGtfNzc1NmZLSVd1QTdCNEg2LWlRb3hDVHhNTWx2amdNdjVmVnBwOGF5OEY2dmhMQ1FIVWZJc3ZJLVo0OVdBZjhhelZxWXloNFZld2l0dXhhZGpid2g1RUVhN29lTGNfM1BhNVRfWkNtR0FJdFRiZW1MOVlNbDc2cmx5UDhSaTROcGpmNGVUd9IBmgFBVV95cUxOb2t6TXVscXRuVktNSnljSE5CVlM4S2RvdTc1N0lYVDQzb1pRTmV3SzlOZ01zM1lnYkNDWWdwMnZZLTg0UDZXLU1JSEFJQVBRMnhybGo0cXczX3VNMVRtU2dETEc2VzdJYnJJbFpjQUxwbHlXQXJwMHp1NUxhM3d2VGZPbGliMkdyMEhiTE5ZWXZ3ZnNGd24xS293?oc=5",
+      "fuente": "La Verdad Noticias"
+     },
+     {
+      "titulo": "Falsos emuladores de PS5 en GitHub buscan robar contraseñas con malware",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPYVZ2YTMzSTJia091RTg4NzItdmcyVGZrTXVRWHd1bjd6dm5OMFFyWFFjMzY0clB4ejB1clJiQUFvaVVhRzNFNFNSeTRDV2I2cjM5V1ZKTk9Ed21YUXJWQnE0U3U3Y3ZWdXRHMW1kcThMeXFBU1REUWMwMll2eEhaNXpZeUh6Yy1mUmtLMGVTTkV1QzBURHFucUNwckR0OWhTa0lqZTBfUHFRdkJEMEd3aDJDMA?oc=5",
+      "fuente": "DiarioBitcoin"
+     },
+     {
+      "titulo": "Fallos en herramientas de IA exponen archivos y equipos de desarrolladores",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPOGw2ZWNyZE5yYUxyT2ZSNzJyWXEwYmJjNDYtRFdoUHd4UERUQnRSclRHVkl5bnhBemZlam9tak5MdWNBZTRhbWtfUU5jNG9NYl84Q1FEaDEtRFNxVDNZam9OOE9ia2NYUHJFaUFIVmpXeDNUR0wtSVFvRGxnWVRPcy0wMU02c0NhRUVjdENuUzk3eThzY3dtekRsR0ZsRzVGRjZibjRQNEhkNV9uQnJlUHh0T1FLSWM?oc=5",
+      "fuente": "DiarioBitcoin"
+     }
+    ],
+    "entregas": {
+     "fecha": "2026-10-30",
+     "hechas": []
+    },
+    "ultimoChequeo": "2026-10-30T08:34:35.545Z"
+   }
+  }
+ },
+ "log": [
+  {
+   "t": "2026-10-30T08:34:35.545Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T08:34:35.545Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T08:34:35.545Z",
+   "quien": "Clima para la obra",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T08:34:35.545Z",
+   "quien": "Valor m² del Colegio de MMO",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T08:34:35.545Z",
+   "quien": "Clientes y licitaciones",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T08:34:35.545Z",
+   "quien": "Gerente general",
+   "que": "orden en espera por cupo: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 503 This model is currently experiencing high demand. Spikes in demand are usually temporary.  | Google Gemini/gemini-4-argon: 429 You exceeded your current quota, please check your plan and billing details. For more inf"
+  },
+  {
+   "t": "2026-10-30T08:34:35.545Z",
+   "quien": "IA",
+   "que": "Google Gemini gemini-4-argon: cupo diario agotado, sigo con otra"
+  },
+  {
+   "t": "2026-10-30T08:34:35.545Z",
+   "quien": "Gerente general",
+   "que": "hace la orden él mismo"
+  },
+  {
+   "t": "2026-10-30T08:34:35.545Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-2.5-flash-lite: 404 This model models/gemini-2.5-flash-lite is no longer available to new users. Please update | Google Gemini/gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T08:34:35.545Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T08:34:35.545Z",
+   "quien": "Jonathan",
+   "que": "mandó una orden por Telegram"
+  },
+  {
+   "t": "2026-10-30T08:34:35.545Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 mensajes de Telegram"
+  },
+  {
+   "t": "2026-10-30T08:34:35.545Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github"
+  },
+  {
+   "t": "2026-10-30T02:59:16.579Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-4-argon: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T02:59:16.579Z",
+   "quien": "IA",
+   "que": "Google Gemini gemini-4-argon: cupo diario agotado, sigo con otra"
+  },
+  {
+   "t": "2026-10-30T02:59:16.579Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T02:59:16.579Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-30T02:59:16.579Z",
+   "quien": "Oficina",
+   "que": "abre (correr:terrenos) · IA conectadas: gemini, github"
+  },
+  {
+   "t": "2026-10-30T02:53:21.717Z",
+   "quien": "Monitor de salud",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:53:21.717Z",
+   "quien": "Estado de mis páginas",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:53:21.717Z",
+   "quien": "Servicios y tarifas de la casa",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:53:21.717Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:53:21.717Z",
+   "quien": "Clima para la obra",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:53:21.717Z",
+   "quien": "Noticias del mundo",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:53:21.717Z",
+   "quien": "Economía y obra pública",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:53:21.717Z",
+   "quien": "Noticias de Villa María",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:53:21.717Z",
+   "quien": "Clientes y licitaciones",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:53:21.717Z",
+   "quien": "Dólar",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:53:21.717Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-30T02:53:21.717Z",
+   "quien": "Oficina",
+   "que": "abre (sinIA) · IA conectadas: gemini, github"
+  },
+  {
+   "t": "2026-10-30T02:52:28.858Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.5-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.5-flash-lite: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T02:52:28.858Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T02:52:28.858Z",
+   "quien": "Gerente general",
+   "que": "quedó vinculado el Telegram de Jonathan"
+  },
+  {
+   "t": "2026-10-30T02:52:28.858Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 mensajes de Telegram"
+  },
+  {
+   "t": "2026-10-30T02:52:28.858Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github"
+  },
+  {
+   "t": "2026-10-30T02:50:06.356Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.5-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.5-flash-lite: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T02:50:06.356Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T02:50:06.356Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos (todavía no hay dueño vinculado: mandale cualquier mensaje al bot)"
+  },
+  {
+   "t": "2026-10-30T02:50:06.356Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Monitor de salud",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Estado de mis páginas",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Servicios y tarifas de la casa",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Clima para la obra",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Ideas de posteos",
+   "que": "entregó (9/10 · Google Gemini · gemini-3.6-flash)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Control de calidad",
+   "que": "Ideas de posteos: 9/10"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Ideas de posteos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Noticias del mundo",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Economía y obra pública",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Noticias de Villa María",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Clientes y licitaciones",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-4-argon: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "IA",
+   "que": "Google Gemini gemini-4-argon: cupo diario agotado, sigo con otra"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Dólar",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Gerente general",
+   "que": "mandó el parte diario"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Escapadas y vuelos baratos",
+   "que": "falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Escapadas y vuelos baratos",
+   "que": "empezó su tarea programada"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Noticias de Argentina y Córdoba",
+   "que": "falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Noticias de Argentina y Córdoba",
+   "que": "empezó su tarea programada"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Terrenos y casas baratas",
+   "que": "falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Terrenos y casas baratas",
+   "que": "empezó su tarea programada"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Dólar y mercado",
+   "que": "falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Dólar y mercado",
+   "que": "empezó su tarea programada"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Oficina",
+   "que": "abre (auto)"
+  }
+ ],
+ "pendientes": [],
+ "mensajes": {
+  "4": "dolar",
+  "5": "licitaciones",
+  "6": "licitaciones",
+  "7": "noticias_vm",
+  "8": "noticias_ar",
+  "9": "noticias_ar",
+  "10": "mundo",
+  "11": "mundo",
+  "12": "clima",
+  "13": "vencimientos",
+  "14": "tarifas",
+  "15": "paginas",
+  "16": "salud_oficina",
+  "18": "licitaciones",
+  "19": "precio_mmo",
+  "20": "clima",
+  "21": "vencimientos",
+  "22": "tarifas"
+ },
+ "tgOffset": 196508480,
+ "hechos": {
+  "parte": "2026-10-29",
+  "entrenamiento": "2026-10-29"
+ },
+ "consumo": {
+  "fecha": "2026-10-30",
+  "consultas": 11,
+  "busquedas": 0,
+  "por": {
+   "gemini": 7,
+   "github": 4
+  }
+ },
+ "botUsuario": "GrupoBosiobot",
+ "actualizado": "2026-10-30T08:34:35.545Z",
+ "modelo": "gemini-3.8-flash",
+ "config": {
+  "telegram": true,
+  "gemini": true,
+  "dueno": true,
+  "ias": [
+   "Google Gemini",
+   "GitHub Models"
+  ]
+ },
+ "ia": {
+  "fecha": "2026-10-30",
+  "agotado": {
+   "gemini:gemini-2.5-flash": true,
+   "gemini:gemini-2.5-flash-lite": true,
+   "gemini:gemini-flash-latest": 1793349319688,
+   "github:openai/gpt-4.1-mini": 1793349889883,
+   "github:openai/gpt-4o-mini": 1793349892358,
+   "github:meta/Llama-3.3-70B-Instruct": 1793349894855,
+   "github:mistral-ai/mistral-small-2503": 1793349987693,
+   "gemini:gemini-3.8-flash": 1793349990763,
+   "gemini:gemini-3.7-flash": 1793350006795,
+   "gemini:gemini-4-argon": true
+  },
+  "huella": "bYGg",
+  "ultimo": {
+   "prov": "Google Gemini",
+   "modelo": "gemini-3.8-flash",
+   "t": "2026-10-30T08:34:35.545Z"
+  }
+ },
+ "dueno": 1237559052,
+ "pendientesCant": 2
 }

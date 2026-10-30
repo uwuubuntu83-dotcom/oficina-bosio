@@ -32,7 +32,7 @@
   },
   {
    "id": "mundo",
-   "nombre": "Información mundial",
+   "nombre": "Prensa mundial",
    "icono": "🌎",
    "color": "#3b6f8f",
    "pausada": false
@@ -52,16 +52,9 @@
    "pausada": false
   },
   {
-   "id": "salud",
-   "nombre": "Salud e imagen",
-   "icono": "💪",
-   "color": "#4f8a2f",
-   "pausada": false
-  },
-  {
    "id": "asistente",
    "nombre": "Asistente personal",
-   "icono": "🗂️",
+   "icono": "🧑‍⚕️",
    "color": "#8a6d2f",
    "pausada": false
   },
@@ -126,21 +119,15 @@
     "alertaPorcentaje": 2
    },
    "horario": {
-    "dias": [
-     1,
-     2,
-     3,
-     4,
-     5
-    ],
-    "cada": 60,
-    "desde": "10:00",
-    "hasta": "18:00",
+    "dias": "todos",
+    "cada": 30,
+    "desde": "00:00",
+    "hasta": "23:59",
     "resumen": "10:30"
    },
-   "mision": "Cotización del dólar oficial, blue, MEP, CCL, tarjeta y cripto. Resumen cada mañana y alerta si alguno se mueve más de 2% en el día.",
+   "mision": "Vigila el dólar oficial, blue, MEP, CCL, tarjeta y cripto cada 30 minutos, todo el día. Te manda el resumen a las 10:30 y te avisa al instante si alguno se mueve más de 2%.",
    "tipoTxt": "⚙️ sin IA",
-   "horarioTxt": "lun, mar, mie, jue, vie, cada 60 min de 10:00 a 18:00 (resumen 10:30)"
+   "horarioTxt": "todos los días, cada 30 min de 00:00 a 23:59 (resumen 10:30)"
   },
   {
    "id": "terrenos",
@@ -149,11 +136,7 @@
    "tipo": "ia",
    "buscar": true,
    "horario": {
-    "dias": [
-     1,
-     4
-    ],
-    "hora": "09:00"
+    "apedido": true
    },
    "mision": "Buscar los terrenos más baratos publicados en Villa María y Villa Nueva, y destacar las oportunidades por precio por m².",
    "entregable": "Hasta 8 terrenos con precio, superficie, precio por m², barrio y link a la publicación. Al final, la mejor oportunidad y por qué.",
@@ -163,7 +146,7 @@
     "Ordenadas por conveniencia"
    ],
    "tipoTxt": "🧠 IA + internet",
-   "horarioTxt": "lun, jue 09:00"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
    "id": "casas",
@@ -172,11 +155,7 @@
    "tipo": "ia",
    "buscar": true,
    "horario": {
-    "dias": [
-     2,
-     5
-    ],
-    "hora": "09:00"
+    "apedido": true
    },
    "mision": "Buscar casas en venta baratas o para refaccionar en Villa María y Villa Nueva que sirvan como oportunidad para un maestro mayor de obras.",
    "entregable": "Hasta 8 casas con precio, superficie, estado, barrio y link. Marcar cuáles conviene refaccionar y revender.",
@@ -186,7 +165,7 @@
     "Análisis de oportunidad concreto"
    ],
    "tipoTxt": "🧠 IA + internet",
-   "horarioTxt": "mar, vie 09:00"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
    "id": "autos",
@@ -195,10 +174,7 @@
    "tipo": "ia",
    "buscar": true,
    "horario": {
-    "dias": [
-     6
-    ],
-    "hora": "10:00"
+    "apedido": true
    },
    "mision": "Buscar utilitarios y camionetas usadas en oferta en Córdoba que sirvan para la obra.",
    "entregable": "Hasta 6 vehículos con modelo, año, kilómetros, precio y link.",
@@ -208,7 +184,7 @@
     "Útiles para trabajo"
    ],
    "tipoTxt": "🧠 IA + internet",
-   "horarioTxt": "sab 10:00"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
    "id": "negocios",
@@ -217,10 +193,7 @@
    "tipo": "ia",
    "buscar": true,
    "horario": {
-    "dias": [
-     3
-    ],
-    "hora": "11:00"
+    "apedido": true
    },
    "mision": "Detectar oportunidades de negocio reales en Córdoba relacionadas con construcción, refacciones e inmuebles (planes de vivienda, créditos, obras nuevas).",
    "entregable": "3 a 5 oportunidades con qué es, por qué conviene, cómo aprovecharla y fuente.",
@@ -230,7 +203,7 @@
     "Nada genérico"
    ],
    "tipoTxt": "🧠 IA + internet",
-   "horarioTxt": "mie 11:00"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
    "id": "licitaciones",
@@ -245,21 +218,92 @@
      "licitación vivienda Córdoba",
      "concurso de precios obra Córdoba"
     ],
-    "max": 8
+    "max": 8,
+    "requiere": [
+     "licita",
+     "obra",
+     "concurso",
+     "adjudic",
+     "paviment",
+     "construc",
+     "vivienda",
+     "cloaca",
+     "desag"
+    ]
    },
    "horario": {
-    "dias": [
-     1,
-     2,
-     3,
-     4,
-     5
-    ],
-    "hora": "08:30"
+    "dias": "todos",
+    "cada": 60,
+    "desde": "00:00",
+    "hasta": "23:59"
    },
-   "mision": "Avisar licitaciones y concursos de obra nuevos en Córdoba y Villa María, con link a la fuente. Solo manda lo que no avisó antes.",
+   "mision": "Revisa cada hora, todo el día, si salieron licitaciones o concursos de obra nuevos en Córdoba y Villa María, y te avisa al instante con el link.",
    "tipoTxt": "⚙️ sin IA",
-   "horarioTxt": "lun, mar, mie, jue, vie 08:30"
+   "horarioTxt": "todos los días, cada 60 min de 00:00 a 23:59"
+  },
+  {
+   "id": "precio_mmo",
+   "nombre": "Valor m² del Colegio de MMO",
+   "area": "constructora",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "rss",
+    "feeds": [
+     "https://tecnicoscba.com.ar/feed/"
+    ],
+    "busquedas": [
+     "\"maestros mayores de obras\" Córdoba valor metro cuadrado",
+     "\"Colegio de Maestros Mayores de Obras\" Córdoba",
+     "costo de la construcción Córdoba metro cuadrado"
+    ],
+    "dias": 45,
+    "max": 6,
+    "requiere": [
+     "costo",
+     "valor",
+     "m2",
+     "m²",
+     "metro cuadrado",
+     "honorario",
+     "arancel",
+     "actualiza",
+     "aumento",
+     "índice",
+     "indice",
+     "construcción"
+    ],
+    "prioridad": [
+     "tecnicoscba"
+    ]
+   },
+   "horario": {
+    "dias": "todos",
+    "cada": 180,
+    "desde": "00:00",
+    "hasta": "23:59"
+   },
+   "mision": "Revisa varias veces por día la página del Colegio de Maestros Mayores de Obras y Técnicos de Córdoba (tecnicoscba.com.ar) y las noticias del costo del m² en Córdoba. Cuando publican un valor nuevo del metro cuadrado o de honorarios, te avisa al instante con el link.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "todos los días, cada 180 min de 00:00 a 23:59"
+  },
+  {
+   "id": "clima",
+   "nombre": "Clima para la obra",
+   "area": "constructora",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "clima"
+   },
+   "horario": {
+    "dias": "todos",
+    "cada": 120,
+    "desde": "00:00",
+    "hasta": "23:59",
+    "resumen": "06:45"
+   },
+   "mision": "Pronóstico de Villa María a las 6:45 para planificar la obra, y vigila cada 2 horas: si aparece lluvia fuerte o viento que frene la obra, te avisa al instante.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "todos los días, cada 120 min de 00:00 a 23:59 (resumen 06:45)"
   },
   {
    "id": "m2",
@@ -268,10 +312,7 @@
    "tipo": "ia",
    "buscar": true,
    "horario": {
-    "dias": [
-     1
-    ],
-    "hora": "08:00"
+    "apedido": true
    },
    "mision": "Informar el costo actual de construcción por m² en Córdoba según el índice oficial y los colegios profesionales.",
    "entregable": "Costo por m² con fecha y fuente, variación contra el mes anterior y qué significa para presupuestar.",
@@ -281,7 +322,7 @@
     "Explicación breve y útil"
    ],
    "tipoTxt": "🧠 IA + internet",
-   "horarioTxt": "lun 08:00"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
    "id": "materiales",
@@ -290,10 +331,7 @@
    "tipo": "ia",
    "buscar": true,
    "horario": {
-    "dias": [
-     1
-    ],
-    "hora": "08:45"
+    "apedido": true
    },
    "mision": "Informar los precios actuales de los materiales clave en Córdoba: cemento, hierro, ladrillo, arena, cal, cerámico.",
    "entregable": "Tabla con cada material, unidad, precio, fuente y fecha.",
@@ -303,7 +341,7 @@
     "Unidades claras"
    ],
    "tipoTxt": "🧠 IA + internet",
-   "horarioTxt": "lun 08:45"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
    "id": "ideas_jb",
@@ -312,10 +350,7 @@
    "tipo": "ia",
    "buscar": false,
    "horario": {
-    "dias": [
-     3
-    ],
-    "hora": "10:00"
+    "apedido": true
    },
    "mision": "Proponer publicaciones para las redes de Constructora JB que muestren trabajo, consejos de obra y confianza.",
    "entregable": "5 ideas con título, texto listo para pegar (máximo 4 líneas), formato (foto, video corto o carrusel) y qué mostrar en la imagen.",
@@ -325,7 +360,7 @@
     "Tono cercano de Córdoba"
    ],
    "tipoTxt": "🧠 IA",
-   "horarioTxt": "mie 10:00"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
    "id": "noticias_vm",
@@ -336,21 +371,48 @@
     "tipo": "rss",
     "busquedas": [
      "Villa María Córdoba",
-     "Villa Nueva Córdoba"
+     "Villa María seguridad policía",
+     "Villa María trabajo empleo",
+     "Villa María clima tormenta",
+     "Villa Nueva Córdoba",
+     "\"El Diario del Centro del País\"",
+     "\"Villa María Vivo\"",
+     "\"Villa María Ya\""
     ],
-    "max": 8
+    "max": 10,
+    "excluir": [
+     "rio seco",
+     "río seco"
+    ],
+    "prioridad": [
+     "eldiariocba",
+     "diario del centro",
+     "villa maría vivo",
+     "villa maria vivo",
+     "villamariavivo",
+     "villa maría ya",
+     "villa maria ya",
+     "villamariaya"
+    ],
+    "entrega": [
+     "07:30",
+     "13:00",
+     "20:00"
+    ]
    },
    "horario": {
     "dias": "todos",
-    "hora": "07:30"
+    "cada": 60,
+    "desde": "00:00",
+    "hasta": "23:59"
    },
-   "mision": "Titulares nuevos de Villa María y Villa Nueva con link, todas las mañanas.",
+   "mision": "Junta todo el día lo que pasa en Villa María y Villa Nueva (seguridad, trabajo, clima, ciudad), primero lo de El Diario del Centro del País, Villa María Vivo y Villa María Ya, y te lo manda a las 7:30, 13:00 y 20:00.",
    "tipoTxt": "⚙️ sin IA",
-   "horarioTxt": "todos los días 07:30"
+   "horarioTxt": "todos los días, cada 60 min de 00:00 a 23:59"
   },
   {
    "id": "noticias_ar",
-   "nombre": "Economía y obra pública",
+   "nombre": "Argentina: economía y obra pública",
    "area": "prensa",
    "tipo": "codigo",
    "receta": {
@@ -361,37 +423,118 @@
      "obra pública Córdoba",
      "créditos hipotecarios Argentina"
     ],
-    "max": 10
+    "max": 10,
+    "entrega": [
+     "07:30",
+     "13:00",
+     "20:00"
+    ]
    },
    "horario": {
     "dias": "todos",
-    "hora": "08:00"
+    "cada": 60,
+    "desde": "00:00",
+    "hasta": "23:59"
    },
-   "mision": "Titulares nuevos de economía, construcción, obra pública y créditos, con link.",
+   "mision": "Junta todo el día las noticias de economía, construcción, obra pública y créditos de Argentina y te las manda a las 7:30, 13:00 y 20:00.",
    "tipoTxt": "⚙️ sin IA",
-   "horarioTxt": "todos los días 08:00"
+   "horarioTxt": "todos los días, cada 60 min de 00:00 a 23:59"
   },
   {
-   "id": "mundo",
-   "nombre": "Noticias del mundo",
+   "id": "mundo_economia",
+   "nombre": "Mundo: economía",
    "area": "mundo",
    "tipo": "codigo",
    "receta": {
     "tipo": "rss",
     "busquedas": [
-     "economía mundial",
-     "Europa noticias",
-     "Estados Unidos economía"
+     "China economía",
+     "Japón economía",
+     "Estados Unidos economía",
+     "Rusia economía",
+     "Europa economía",
+     "India Brasil economía"
     ],
-    "max": 8
+    "max": 10,
+    "entrega": [
+     "08:00",
+     "14:00",
+     "20:00"
+    ]
    },
    "horario": {
     "dias": "todos",
-    "hora": "12:00"
+    "cada": 60,
+    "desde": "00:00",
+    "hasta": "23:59"
    },
-   "mision": "Titulares nuevos del mundo que pueden afectar a la Argentina, con link.",
+   "mision": "Junta todo el día lo más importante de la economía de China, Japón, Estados Unidos, Rusia, Europa, India y Brasil, y te lo manda a las 8:00, 14:00 y 20:00.",
    "tipoTxt": "⚙️ sin IA",
-   "horarioTxt": "todos los días 12:00"
+   "horarioTxt": "todos los días, cada 60 min de 00:00 a 23:59"
+  },
+  {
+   "id": "mundo_tecnologia",
+   "nombre": "Mundo: tecnología",
+   "area": "mundo",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "rss",
+    "busquedas": [
+     "China tecnología",
+     "Japón tecnología",
+     "Estados Unidos tecnología",
+     "Rusia tecnología",
+     "Corea del Sur tecnología",
+     "Europa tecnología"
+    ],
+    "max": 10,
+    "entrega": [
+     "08:00",
+     "14:00",
+     "20:00"
+    ]
+   },
+   "horario": {
+    "dias": "todos",
+    "cada": 60,
+    "desde": "00:00",
+    "hasta": "23:59"
+   },
+   "mision": "Junta todo el día los avances tecnológicos de China, Japón, Estados Unidos, Rusia, Corea y Europa, y te los manda a las 8:00, 14:00 y 20:00.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "todos los días, cada 60 min de 00:00 a 23:59"
+  },
+  {
+   "id": "mundo_salud",
+   "nombre": "Mundo: salud y ciencia",
+   "area": "mundo",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "rss",
+    "busquedas": [
+     "China salud avance médico",
+     "Japón salud ciencia",
+     "Estados Unidos salud avance médico",
+     "Rusia salud",
+     "OMS salud mundial",
+     "descubrimiento científico"
+    ],
+    "max": 10,
+    "entrega": [
+     "08:00",
+     "14:00",
+     "20:00"
+    ]
+   },
+   "horario": {
+    "dias": "todos",
+    "cada": 60,
+    "desde": "00:00",
+    "hasta": "23:59"
+   },
+   "mision": "Junta todo el día las novedades de salud y ciencia de las potencias del mundo y de la OMS, y te las manda a las 8:00, 14:00 y 20:00.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "todos los días, cada 60 min de 00:00 a 23:59"
   },
   {
    "id": "ideas_redes",
@@ -400,11 +543,7 @@
    "tipo": "ia",
    "buscar": false,
    "horario": {
-    "dias": [
-     1,
-     4
-    ],
-    "hora": "11:00"
+    "apedido": true
    },
    "mision": "Proponer posteos para las cuentas de Instagram de Jonathan (humor, obra, vida en Córdoba) que sumen seguidores.",
    "entregable": "5 posteos con idea, texto o guion corto, hashtags y mejor horario para publicar.",
@@ -414,7 +553,7 @@
     "Pensados para Instagram"
    ],
    "tipoTxt": "🧠 IA",
-   "horarioTxt": "lun, jue 11:00"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
    "id": "celular_bot",
@@ -433,10 +572,7 @@
    "tipo": "ia",
    "buscar": true,
    "horario": {
-    "dias": [
-     4
-    ],
-    "hora": "18:00"
+    "apedido": true
    },
    "mision": "Proponer escapadas de fin de semana baratas en auto desde Villa María.",
    "entregable": "3 escapadas con destino, distancia, qué hacer, dónde dormir barato con precio y link.",
@@ -446,7 +582,7 @@
     "Opciones baratas"
    ],
    "tipoTxt": "🧠 IA + internet",
-   "horarioTxt": "jue 18:00"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
    "id": "vuelos",
@@ -455,10 +591,7 @@
    "tipo": "ia",
    "buscar": true,
    "horario": {
-    "dias": [
-     2
-    ],
-    "hora": "19:00"
+    "apedido": true
    },
    "mision": "Buscar ofertas de vuelos desde Córdoba para las próximas semanas, nacionales e internacionales.",
    "entregable": "Hasta 6 ofertas con destino, fechas, precio total y link.",
@@ -468,89 +601,209 @@
     "Precios totales"
    ],
    "tipoTxt": "🧠 IA + internet",
-   "horarioTxt": "mar 19:00"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
-   "id": "comida",
-   "nombre": "Comida sana",
-   "area": "salud",
-   "tipo": "ia",
-   "buscar": false,
-   "horario": {
-    "dias": [
-     0
-    ],
-    "hora": "10:00"
-   },
-   "mision": "Armar el menú saludable y barato de la semana para alguien que trabaja en obra, con la lista de compras.",
-   "entregable": "Menú de 7 días (desayuno, almuerzo para llevar a la obra, cena) y lista de compras agrupada.",
-   "criterios": [
-    "Comidas simples y baratas",
-    "Almuerzos que se puedan llevar",
-    "Lista de compras completa"
-   ],
-   "tipoTxt": "🧠 IA",
-   "horarioTxt": "dom 10:00"
-  },
-  {
-   "id": "entrenamiento",
-   "nombre": "Entrenamiento",
-   "area": "salud",
-   "tipo": "ia",
-   "buscar": false,
-   "horario": {
-    "dias": [
-     1
-    ],
-    "hora": "06:30"
-   },
-   "mision": "Armar la rutina de ejercicios de la semana, corta y sin gimnasio, para antes o después de la obra.",
-   "entregable": "Rutina de 5 días de 20 minutos con ejercicios, series y repeticiones, y cómo progresar.",
-   "criterios": [
-    "Ejercicios claros",
-    "Sin equipamiento",
-    "Progresión semanal"
-   ],
-   "tipoTxt": "🧠 IA",
-   "horarioTxt": "lun 06:30"
-  },
-  {
-   "id": "imagen",
-   "nombre": "Asesor de imagen",
-   "area": "salud",
-   "tipo": "ia",
-   "buscar": false,
-   "horario": {
-    "dias": [
-     5
-    ],
-    "hora": "12:00"
-   },
-   "mision": "Dar consejos de imagen personal y profesional para un maestro mayor de obras que se muestra en redes.",
-   "entregable": "3 consejos concretos de la semana (ropa, cuidado personal, cómo salir en fotos y videos).",
-   "criterios": [
-    "Consejos concretos",
-    "Aplicables con poco presupuesto",
-    "Pensados para su trabajo"
-   ],
-   "tipoTxt": "🧠 IA",
-   "horarioTxt": "vie 12:00"
-  },
-  {
-   "id": "clima",
-   "nombre": "Clima para la obra",
+   "id": "comidas",
+   "nombre": "¿Qué comiste?",
    "area": "asistente",
    "tipo": "codigo",
+   "privado": true,
    "receta": {
-    "tipo": "clima"
+    "tipo": "pregunta",
+    "registro": "comidas",
+    "preguntas": {
+     "08:30": "☕ Buen día. ¿Qué desayunaste?",
+     "13:00": "🍽️ ¿Qué almorzaste hoy?",
+     "17:30": "🥪 ¿Merendaste algo? ¿Qué?",
+     "21:30": "🌙 ¿Qué cenaste?"
+    }
    },
    "horario": {
     "dias": "todos",
-    "hora": "06:45"
+    "horas": [
+     "08:30",
+     "13:00",
+     "17:30",
+     "21:30"
+    ]
    },
-   "mision": "Pronóstico de Villa María para hoy y los próximos 2 días, con aviso si va a llover o hay viento fuerte que afecte la obra.",
+   "mision": "Te pregunta todos los días a las 8:30, 13:00, 17:30 y 21:30 qué comiste y lo anota (privado). También podés escribirle cuando quieras: «almorcé milanesa con ensalada».",
    "tipoTxt": "⚙️ sin IA",
-   "horarioTxt": "todos los días 06:45"
+   "horarioTxt": "todos los días a las 08:30, 13:00, 17:30, 21:30"
+  },
+  {
+   "id": "ejercicio",
+   "nombre": "Seguimiento de ejercicio",
+   "area": "asistente",
+   "tipo": "codigo",
+   "privado": true,
+   "receta": {
+    "tipo": "pregunta",
+    "registro": "ejercicio",
+    "preguntas": {
+     "20:30": "🏃 ¿Hiciste ejercicio o caminaste hoy? Contame qué y cuánto (ej: «caminé 40 min»). Si no, decime «no»."
+    }
+   },
+   "horario": {
+    "dias": "todos",
+    "horas": [
+     "20:30"
+    ]
+   },
+   "mision": "Todos los días a las 20:30 te pregunta si entrenaste o caminaste y lo anota (privado). Los domingos te pasa cómo te fue en la semana.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "todos los días a las 20:30"
+  },
+  {
+   "id": "nutricionista",
+   "nombre": "Nutricionista",
+   "area": "asistente",
+   "tipo": "ia",
+   "privado": true,
+   "buscar": false,
+   "registros": [
+    "comidas"
+   ],
+   "horario": {
+    "apedido": true
+   },
+   "mision": "Ser el nutricionista de Jonathan: revisar lo que anotó que comió, decirle qué está bien y qué mejorar, y armarle menús simples y baratos para alguien que trabaja en obra y quiere bajar grasa y ganar músculo. Si le manda la foto de un plato, la analiza.",
+   "entregable": "Análisis corto de lo que comió (lo bueno y lo que hay que cambiar) y el plan concreto: menú, porciones aproximadas y lista de compras si la pide.",
+   "criterios": [
+    "Basado en lo que anotó de verdad",
+    "Concreto y fácil de cumplir",
+    "Recomienda consultar a un profesional ante problemas de salud"
+   ],
+   "tipoTxt": "🧠 IA",
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
+  },
+  {
+   "id": "personal_trainer",
+   "nombre": "Personal trainer",
+   "area": "asistente",
+   "tipo": "ia",
+   "privado": true,
+   "buscar": false,
+   "registros": [
+    "ejercicio",
+    "comidas"
+   ],
+   "horario": {
+    "apedido": true
+   },
+   "mision": "Ser el personal trainer de Jonathan para empezar a trabajar el físico: rutinas cortas en casa o gimnasio, progresión según lo que anotó que hizo, y motivación sin vueltas.",
+   "entregable": "Rutina del día o de la semana con ejercicios, series, repeticiones y descansos, adaptada a lo que viene haciendo, y el próximo objetivo.",
+   "criterios": [
+    "Adaptado a lo que anotó",
+    "Ejercicios claros y seguros",
+    "Progresión realista"
+   ],
+   "tipoTxt": "🧠 IA",
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
+  },
+  {
+   "id": "psicologo",
+   "nombre": "Psicólogo / acompañante",
+   "area": "asistente",
+   "tipo": "ia",
+   "privado": true,
+   "buscar": false,
+   "registros": [
+    "ejercicio",
+    "comidas"
+   ],
+   "horario": {
+    "apedido": true
+   },
+   "mision": "Escuchar y acompañar a Jonathan cuando lo necesite: ayudarlo a ordenar lo que siente y piensa, bajar el estrés del trabajo y sostener los hábitos nuevos. No reemplaza a un psicólogo de verdad: si nota algo serio, le recomienda con calidez consultar a un profesional, y si hay riesgo, que llame al 135 o al 0800 345 1435 (Centro de Asistencia al Suicida).",
+   "entregable": "Una respuesta cálida y humana, que valide lo que siente y proponga uno o dos pasos concretos.",
+   "criterios": [
+    "Empático y sin juzgar",
+    "Nada de diagnósticos",
+    "Deriva a un profesional si hace falta"
+   ],
+   "tipoTxt": "🧠 IA",
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
+  },
+  {
+   "id": "asesor_imagen",
+   "nombre": "Asesor de imagen",
+   "area": "asistente",
+   "tipo": "ia",
+   "privado": true,
+   "buscar": false,
+   "horario": {
+    "apedido": true
+   },
+   "mision": "Ser el asesor de imagen de Jonathan: cuando le manda una foto suya, le dice con honestidad qué mejorar (pelo, barba, ropa, postura, cómo salir en fotos y videos) para verse mejor en lo personal y en sus redes.",
+   "entregable": "Lo que ya le queda bien, 3 a 5 cambios concretos ordenados por impacto y qué comprar o pedir en la peluquería, con poco presupuesto.",
+   "criterios": [
+    "Honesto y respetuoso",
+    "Basado en la foto",
+    "Cambios concretos y baratos"
+   ],
+   "tipoTxt": "🧠 IA",
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
+  },
+  {
+   "id": "implante_capilar",
+   "nombre": "Implante capilar",
+   "area": "asistente",
+   "tipo": "ia",
+   "buscar": true,
+   "horario": {
+    "apedido": true
+   },
+   "mision": "Averiguar precios, clínicas y opciones de implante capilar en Villa María y Córdoba capital, y cómo financiarlo.",
+   "entregable": "Hasta 6 clínicas con técnica (FUE, DHI), precio o rango, financiación, reseñas y link, más qué preguntar en la consulta.",
+   "criterios": [
+    "Clínicas reales con link",
+    "Precios con fecha",
+    "Compara opciones"
+   ],
+   "tipoTxt": "🧠 IA + internet",
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
+  },
+  {
+   "id": "gastos_casa",
+   "nombre": "Gastos de la casa",
+   "area": "contaduria",
+   "tipo": "codigo",
+   "privado": true,
+   "receta": {
+    "tipo": "servicios",
+    "registro": "casa"
+   },
+   "horario": {
+    "dias": "todos",
+    "horas": [
+     "09:00"
+    ]
+   },
+   "mision": "Lleva los servicios de la casa (luz, gas, agua, internet, alquiler, tasas). Todos los días a las 9:00 revisa qué vence y te avisa 3 días antes y si algo quedó sin pagar. Anotás con «servicio luz vence 10» y «pagué luz 34800».",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "todos los días a las 09:00"
+  },
+  {
+   "id": "gastos_personales",
+   "nombre": "Gastos personales",
+   "area": "contaduria",
+   "tipo": "codigo",
+   "privado": true,
+   "receta": {
+    "tipo": "gastos",
+    "registro": "gastos"
+   },
+   "horario": {
+    "dias": "todos",
+    "horas": [
+     "21:45"
+    ]
+   },
+   "mision": "Anota tus gastos personales cuando le escribís («gasté 5000 en nafta») o le mandás la foto del comprobante, los separa por categoría y te manda el resumen los domingos y el día 1 de cada mes.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "todos los días a las 21:45"
   },
   {
    "id": "vencimientos",
@@ -567,18 +820,18 @@
     "max": 6
    },
    "horario": {
-    "dias": [
-     1
-    ],
-    "hora": "09:15"
+    "dias": "todos",
+    "cada": 180,
+    "desde": "00:00",
+    "hasta": "23:59"
    },
-   "mision": "Novedades de vencimientos de ARCA, monotributo e Ingresos Brutos de Córdoba, con link.",
+   "mision": "Revisa cada 3 horas novedades de vencimientos de ARCA, monotributo e Ingresos Brutos de Córdoba y te avisa cuando aparece algo nuevo.",
    "tipoTxt": "⚙️ sin IA",
-   "horarioTxt": "lun 09:15"
+   "horarioTxt": "todos los días, cada 180 min de 00:00 a 23:59"
   },
   {
    "id": "tarifas",
-   "nombre": "Servicios y tarifas de la casa",
+   "nombre": "Aumentos de servicios",
    "area": "contaduria",
    "tipo": "codigo",
    "receta": {
@@ -592,15 +845,14 @@
     "max": 6
    },
    "horario": {
-    "dias": [
-     1,
-     4
-    ],
-    "hora": "09:30"
+    "dias": "todos",
+    "cada": 180,
+    "desde": "00:00",
+    "hasta": "23:59"
    },
-   "mision": "Aumentos de luz, gas, agua y prepagas que afectan los gastos de la casa, con link.",
+   "mision": "Revisa cada 3 horas si anunciaron aumentos de luz, gas, agua, prepagas o alquileres, y te avisa cuando aparece algo nuevo.",
    "tipoTxt": "⚙️ sin IA",
-   "horarioTxt": "lun, jue 09:30"
+   "horarioTxt": "todos los días, cada 180 min de 00:00 a 23:59"
   },
   {
    "id": "ofertas",
@@ -609,10 +861,7 @@
    "tipo": "ia",
    "buscar": true,
    "horario": {
-    "dias": [
-     5
-    ],
-    "hora": "17:00"
+    "apedido": true
    },
    "mision": "Buscar ofertas de herramientas eléctricas y materiales en tiendas que venden en Córdoba (MercadoLibre, Easy, Sodimac y corralones).",
    "entregable": "Hasta 8 ofertas con producto, precio, descuento y link.",
@@ -622,7 +871,7 @@
     "Útiles para la obra"
    ],
    "tipoTxt": "🧠 IA + internet",
-   "horarioTxt": "vie 17:00"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
    "id": "ideas_apps",
@@ -631,10 +880,7 @@
    "tipo": "ia",
    "buscar": false,
    "horario": {
-    "dias": [
-     2
-    ],
-    "hora": "15:00"
+    "apedido": true
    },
    "mision": "Proponer apps o webs simples que Jonathan pueda crear con Forja para su constructora o para vender.",
    "entregable": "3 ideas con problema que resuelve, para quién, funciones principales y el pedido listo para pegar en Forja.",
@@ -644,7 +890,7 @@
     "Útiles para su negocio"
    ],
    "tipoTxt": "🧠 IA",
-   "horarioTxt": "mar 15:00"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
    "id": "ideas_videos",
@@ -653,10 +899,7 @@
    "tipo": "ia",
    "buscar": false,
    "horario": {
-    "dias": [
-     3
-    ],
-    "hora": "16:00"
+    "apedido": true
    },
    "mision": "Proponer videos cortos de obra y formatos de streaming que combinen humor y construcción.",
    "entregable": "3 ideas de videos cortos con guion de 30 segundos y 2 ideas de shows de streaming con estructura.",
@@ -666,7 +909,42 @@
     "Fáciles de grabar con el celu"
    ],
    "tipoTxt": "🧠 IA",
-   "horarioTxt": "mie 16:00"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
+  },
+  {
+   "id": "noticias_tec",
+   "nombre": "Lo último en tecnología",
+   "area": "tecnologia",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "rss",
+    "busquedas": [
+     "inteligencia artificial novedades",
+     "nuevo modelo de IA lanzamiento",
+     "OpenAI Google Anthropic Meta anuncio",
+     "programación software novedades",
+     "GitHub herramienta nueva",
+     "celulares lanzamiento",
+     "ciberseguridad alerta"
+    ],
+    "dias": 2,
+    "max": 10,
+    "entrega": [
+     "09:00",
+     "13:00",
+     "17:00",
+     "21:00"
+    ]
+   },
+   "horario": {
+    "dias": "todos",
+    "cada": 60,
+    "desde": "00:00",
+    "hasta": "23:59"
+   },
+   "mision": "Busca todo el día lo último en tecnología: IA, software, código, celulares y ciberseguridad. Te lo manda a las 9:00, 13:00, 17:00 y 21:00.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "todos los días, cada 60 min de 00:00 a 23:59"
   },
   {
    "id": "paginas",
@@ -683,13 +961,13 @@
    },
    "horario": {
     "dias": "todos",
-    "cada": 60,
+    "cada": 30,
     "desde": "00:00",
     "hasta": "23:59"
    },
-   "mision": "Revisar cada hora que tus páginas estén funcionando y avisar si alguna se cae o vuelve.",
+   "mision": "Revisa cada 30 minutos, todo el día, que tus páginas funcionen, y te avisa al instante si alguna se cae o vuelve.",
    "tipoTxt": "⚙️ sin IA",
-   "horarioTxt": "todos los días, cada 60 min de 00:00 a 23:59"
+   "horarioTxt": "todos los días, cada 30 min de 00:00 a 23:59"
   },
   {
    "id": "ia_gratis",
@@ -698,10 +976,7 @@
    "tipo": "ia",
    "buscar": true,
    "horario": {
-    "dias": [
-     6
-    ],
-    "hora": "10:30"
+    "apedido": true
    },
    "mision": "Encontrar herramientas de IA gratis nuevas o mejoradas que le sirvan a Jonathan para su constructora, redes o automatizar.",
    "entregable": "Hasta 5 herramientas con qué hacen, qué incluye gratis, para qué le sirve y link oficial.",
@@ -711,7 +986,7 @@
     "Link oficial"
    ],
    "tipoTxt": "🧠 IA + internet",
-   "horarioTxt": "sab 10:30"
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
    "id": "salud_oficina",
@@ -725,7 +1000,7 @@
     "dias": "todos",
     "hora": "21:00"
    },
-   "mision": "Revisar cada noche qué bots fallaron, cuáles están en pausa, si el celu da señales y cuánta IA se usó, y avisar si hay algo para arreglar.",
+   "mision": "Parte de salud de la oficina todas las noches a las 21:00. Además, en cada vuelta (cada 30 minutos) vigila que el celular bot dé señales y te avisa si se corta.",
    "tipoTxt": "⚙️ sin IA",
    "horarioTxt": "todos los días 21:00"
   }
