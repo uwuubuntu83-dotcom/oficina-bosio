@@ -560,10 +560,28 @@
    "nombre": "Celular bot (Instagram)",
    "area": "redes",
    "tipo": "externo",
-   "alertaMin": 90,
-   "mision": "Los bots del celular que manejan las redes con Termux y Python. Reportan a la oficina con reportar.py y avisa si el celu deja de dar señales.",
+   "alertaMin": 30,
+   "mision": "El celular (Samsung A51 con Termux) que maneja Instagram y Facebook: historias, publicaciones, reels, reposts, seguir y el gringo. Le habla a la oficina por el buzón de Cloudflare cada 15 segundos. Le das órdenes con «celu ...» por Telegram o desde el panel 📱 Celu de la página.",
    "tipoTxt": "📱 celular",
    "horarioTxt": "trabaja en el celular"
+  },
+  {
+   "id": "informe_redes",
+   "nombre": "Informe del celu",
+   "area": "redes",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "celu_informe"
+   },
+   "horario": {
+    "dias": "todos",
+    "horas": [
+     "22:00"
+    ]
+   },
+   "mision": "Todas las noches a las 22:00 te pasa qué hizo hoy el celu bot en Instagram y Facebook: publicaciones, historias, reels, seguidos, errores y si sigue andando. Sin IA.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "todos los días a las 22:00"
   },
   {
    "id": "escapadas",
