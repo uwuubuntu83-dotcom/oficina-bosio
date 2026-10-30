@@ -184,7 +184,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-30T02:50:06.356Z",
+   "ultimaCorrida": "2026-10-30T02:52:28.858Z",
    "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.5-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.5-flash-lite: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
@@ -633,6 +633,31 @@
  },
  "log": [
   {
+   "t": "2026-10-30T02:52:28.858Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.5-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.5-flash-lite: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T02:52:28.858Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T02:52:28.858Z",
+   "quien": "Gerente general",
+   "que": "quedó vinculado el Telegram de Jonathan"
+  },
+  {
+   "t": "2026-10-30T02:52:28.858Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 mensajes de Telegram"
+  },
+  {
+   "t": "2026-10-30T02:52:28.858Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github"
+  },
+  {
    "t": "2026-10-30T02:50:06.356Z",
    "quien": "Terrenos baratos",
    "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.5-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.5-flash-lite: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
@@ -790,26 +815,26 @@
  ],
  "pendientes": [],
  "mensajes": {},
- "tgOffset": 0,
+ "tgOffset": 196508479,
  "hechos": {
   "parte": "2026-10-29",
   "entrenamiento": "2026-10-29"
  },
  "consumo": {
   "fecha": "2026-10-29",
-  "consultas": 46,
+  "consultas": 49,
   "por": {
-   "gemini": 10,
+   "gemini": 13,
    "github": 4
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-30T02:50:06.356Z",
+ "actualizado": "2026-10-30T02:52:28.858Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
   "gemini": true,
-  "dueno": false,
+  "dueno": true,
   "ias": [
    "Google Gemini",
    "GitHub Models"
@@ -825,14 +850,15 @@
    "github:openai/gpt-4o-mini": 1793328856366,
    "github:meta/Llama-3.3-70B-Instruct": 1793328858873,
    "github:mistral-ai/mistral-small-2503": 1793328877713,
-   "gemini:gemini-3.6-flash": 1793328636977,
-   "gemini:gemini-3.5-flash": 1793328643463,
-   "gemini:gemini-3.5-flash-lite": 1793328649964
+   "gemini:gemini-3.6-flash": 1793328780395,
+   "gemini:gemini-3.5-flash": 1793328786848,
+   "gemini:gemini-3.5-flash-lite": 1793328793353
   },
   "ultimo": {
    "prov": "Google Gemini",
    "modelo": "gemini-3.6-flash",
    "t": "2026-10-30T02:43:55.644Z"
   }
- }
+ },
+ "dueno": 1237559052
 }
