@@ -295,7 +295,7 @@ function escribirPriv(id, v) { const iv = crypto.randomBytes(12); const c = cryp
 function anotar(id, e) { const r = leerPriv(id, []); r.push({ t: NOW.toISOString(), f: fechaAR(), h: horaAR(), ...e }); escribirPriv(id, r.slice(-4000)); return r; }
 const pesos = n => "$" + Math.round(n).toLocaleString("es-AR");
 function leerMonto(s) { let t = String(s); let a; do { a = t; t = t.replace(/(\d)\.(\d{3})(?!\d)/, "$1$2"); } while (t !== a); const m = t.match(/\$?\s*(\d+(?:,\d+)?)\s*(k\b|mil\b|lucas\b|luca\b)?/i); if (!m) return null; let v = parseFloat(m[1].replace(",", ".")); if (m[2]) v *= 1000; return v > 0 ? v : null; }
-const CATS = [["Auto y combustible", /(nafta|gasoil|combustible|ypf|shell|axion|estacionamiento|peaje|mec[aá]nic|gomer|lavadero|repuesto)/i], ["Comida y súper", /(s[uú]per|\bpan\b|carne|fruta|verdura|leche|caf[eé]|gaseosa|almac[eé]n|carnicer|verduler|panader|comida|delivery|rotiser|pizza|empanada|kiosco|mercado|fiambrer|helad)/i], ["Salud", /(farmacia|remedio|m[eé]dic|dentista|odont|an[aá]lisis|kinesi|psic[oó]log|nutricion)/i], ["Ropa e imagen", /(ropa|zapatilla|remera|pantal[oó]n|peluquer|barber|perfume|corte de pelo)/i], ["Salidas", /(bar\b|cerveza|birra|boliche|cine|salida|restaurant|resto|asado|fernet|cumple|regalo)/i], ["Obra y herramientas", /(herramienta|corral[oó]n|ferreter|material|cemento|pintur|pinceleta)/i], ["Tecnología y suscripciones", /(celular|cargador|auricular|app\b|suscripci|netflix|spotify|youtube|google|chatgpt|disney|steam)/i], ["Deporte", /(gimnasio|gym|club|suplement|prote[ií]na|creatina|paleta|f[uú]tbol)/i]];
+const CATS = [["Auto y combustible", /(nafta|gasoil|combustible|ypf|shell|axion|estacionamiento|peaje|mec[aá]nic|gomer|lavadero|repuesto)/i], ["Comida y súper", /(s[uú]per|\bpan\b|carne|fruta|verdura|leche|caf[eé]|gaseosa|almac[eé]n|carnicer|verduler|panader|comida|delivery|rotiser|pizza|empanada|kiosco|mercado|fiambrer|helad)/i], ["Salud", /(farmacia|remedio|m[eé]dic|dentista|odont|an[aá]lisis|kinesi|psic[oó]log|nutricion)/i], ["Ropa e imagen", /(ropa|zapatilla|remera|pantal[oó]n|peluquer|barber|perfume|corte de pelo)/i], ["Salidas", /(bar\b|cerveza|birra|boliche|cine|salida|restaurant|resto|asado|fernet|cumple|regalo)/i], ["Casa y arreglos", /(plomer|electricist|gasista|alba[ñn]il|arreglo|cerrajer|limpieza|muebl|electrodom)/i], ["Obra y herramientas", /(herramienta|corral[oó]n|ferreter|material|cemento|pintur|pinceleta)/i], ["Tecnología y suscripciones", /(celular|cargador|auricular|app\b|suscripci|netflix|spotify|youtube|google|chatgpt|disney|steam)/i], ["Deporte", /(gimnasio|gym|club|suplement|prote[ií]na|creatina|paleta|f[uú]tbol)/i]];
 const categoria = t => (CATS.find(([, r]) => r.test(t)) || ["Otros"])[0];
 const RX_SERV = /\b(luz|epec|gas|ecogas|agua|cooperativa|internet|wifi|fibra|cable|directv|flow|tel[eé]fono|alquiler|expensas|municipal(idad)?|tasa|rentas|inmobiliario|seguro|prepaga|obra social|patente)\b/i;
 function resumenGastos(desde, hasta, titulo) {
@@ -600,6 +600,7 @@ const MOMENTO = () => { const h = horaAR(); return h < "11:00" ? "desayuno" : h 
 const RX_COMIDA = /^(desayun|almorc|almuerzo|merend|merienda|cen[eé]\b|cena\b|com[ií]\b|tom[eé]\b|picote|comida:)/i;
 const RX_EJER = /^(camin[eé]|corr[ií]|trot[eé]|entren[eé]|hice\s+(ejercicio|gimnasio|gym|pesas|abdominales|flexiones|cardio|bici|rutina)|fui\s+al\s+(gym|gimnasio|club)|nad[eé]|anduve en bici|no\s+(hice|entren[eé]|camin[eé])|ejercicio:)/i;
 const RX_GASTO = /^(gast[eé]|gasto\b|compr[eé]|pagu[eé]|pago\b)/i;
+const RX_GASTO_EN = /(?:^|[^a-záéíóúñ])(gast[eéoó]|gastamos|gastos?|compr[eéoó]|compramos|pagu[eé]|pag[oó]|pagamos|se[ñn]a|abon[eéoó]|cargu[eé]|transfer[ií])(?![a-záéíóúñ])/i; // en cualquier parte del mensaje
 // Anotaciones SIN IA: comidas, ejercicio, gastos y servicios. Devuelve true si lo manejó.
 async function registrar(txt, desdeBot) {
   const reg = desdeBot && desdeBot.receta && desdeBot.receta.registro; let mm;
@@ -614,19 +615,20 @@ async function registrar(txt, desdeBot) {
   if (/^(qu[eé]\s+com[ií](\s+hoy)?|comidas(\s+de)?\s+hoy|mis\s+comidas|comidas)$/i.test(txt)) { await enviar(`🍽️ Hoy anotaste:\n${listaComidas(1)}`); return true; }
   if (/^comidas(\s+de\s+la)?\s+semana$/i.test(txt)) { await enviar(`🍽️ Últimos 7 días:\n${listaComidas(7)}`); return true; }
   if (/^(mi\s+)?(ejercicio|actividad)(\s+(de\s+la\s+)?semana)?$/i.test(txt)) { await enviar(resumenEjercicio(7)); return true; }
-  if (reg === "gastos" || reg === "casa" || (!desdeBot && RX_GASTO.test(txt))) {
+  if (reg === "gastos" || reg === "casa" || (!desdeBot && (RX_GASTO.test(txt) || (RX_GASTO_EN.test(txt) && /\d/.test(txt))))) {
     const monto = leerMonto(txt); if (!monto) { await enviar("💸 No vi el monto. Mandámelo así: «gasté 5000 en nafta» o «pagué luz 34800»."); return true; }
-    const det = txt.replace(RX_GASTO, "").replace(/\$?\s*\d[\d.,]*\s*(k|mil|lucas?)?/i, "").replace(/^\s*(en|de|la|el|por)\s+/i, "").trim() || "sin detalle";
+    const ayer = /\bayer\b/i.test(txt); const f = ayer ? fechaAR(new Date(NOW - 86400e3)) : fechaAR();
+    const det = txt.replace(/\b(ayer|hoy|reci[eé]n|tambi[eé]n|esta (mañana|tarde|noche))(?![a-záéíóúñ])/gi, " ").replace(new RegExp(RX_GASTO_EN.source, "gi"), " ").replace(/\$?\s*\d[\d.,]*\s*(k|mil|lucas?|pesos)?/i, " ").replace(/\s{2,}/g, " ").replace(/^[\s,.:;-]*((en|de|la|el|le|al|por|para|un|una)\s+)*/i, "").replace(/[\s,.:;-]+$/, "").trim() || "sin detalle";
     if (reg === "casa" || RX_SERV.test(txt)) { const serv = (txt.match(RX_SERV) || [det])[0]; const { nom, conocido } = pagarServicio(serv, monto, det); await enviar(`🏠 Pago de ${nom} anotado: ${pesos(monto)}.${conocido ? "" : `\n(Para que te avise los vencimientos: «servicio ${nom} vence 10».)`}`); return true; }
-    const cat = categoria(det); anotar("gastos", { texto: det.slice(0, 200), monto, cat }); const mes = leerPriv("gastos", []).filter(x => x.f.slice(0, 7) === fechaAR().slice(0, 7)).reduce((a, x) => a + x.monto, 0);
-    await enviar(`💸 Anotado: ${pesos(monto)} · ${det} · ${cat}\nEn el mes llevás ${pesos(mes)} en gastos personales.`); return true;
+    const cat = categoria(det); anotar("gastos", { texto: det.slice(0, 200), monto, cat, f }); const mes = leerPriv("gastos", []).filter(x => x.f.slice(0, 7) === fechaAR().slice(0, 7)).reduce((a, x) => a + x.monto, 0);
+    await enviar(`💸 Anotado${ayer ? " (ayer)" : ""}: ${pesos(monto)} · ${det} · ${cat}\nEn el mes llevás ${pesos(mes)} en gastos personales.`); return true;
   }
   return false;
 }
 // Varias anotaciones juntas («gasté 5000 en nafta, 3000 en súper y 1200 en pan»): una por renglón o separadas por coma / «y».
 async function registrarLote(txt, b) {
-  const reg = b.receta.registro; let partes = String(txt).split(/\n|;|,(?!\d{3}\b)|\s+y\s+(?=[^\n]*\d)/i).map(s => s.trim()).filter(Boolean);
-  if (reg === "gastos" || reg === "casa") { const pref = (String(txt).match(/^(gast[eé]|gasto|compr[eé]|pagu[eé])/i) || [""])[0]; partes = partes.filter(s => leerMonto(s)).map(s => /^(gast|compr|pagu|pago)/i.test(s) || !pref ? s : pref + " " + s); }
+  const reg = b.receta.registro; let partes = String(txt).split(/\n|;|\.\s+|,(?!\d{3}\b)|\s+y\s+(?=[^\n]*\d)|\s+tambi[eé]n\s+/i).map(s => s.trim()).filter(Boolean);
+  if (reg === "gastos" || reg === "casa") { const ayer = /\bayer\b/i.test(txt); partes = partes.filter(s => leerMonto(s)).map(s => (RX_GASTO_EN.test(s) ? s : "gasté " + s) + (ayer && !/\bayer\b/i.test(s) ? " ayer" : "")); }
   let n = 0; for (const s of partes) { try { if (await registrar(s, b)) n++; } catch (e) { log(b.nombre, "no pude anotar: " + e.message); } }
   return n;
 }
@@ -656,7 +658,7 @@ async function procesarMensajes() {
       log("Mesa de entrada", "llegó una foto (no se guarda)"); continue;
     }
     if (resp && botPorId(resp) && botPorId(resp).receta?.registro) { try { if (await registrar(txt, botPorId(resp))) continue; } catch (e) { await enviar("⚠️ No pude anotarlo: " + e.message); continue; } }
-    if (/(gast|compr[eé]|pagu[eé]|pago\b)/i.test(txt) && (txt.match(/\d[\d.,]*/g) || []).length > 1 && botPorId("gastos_personales")) { try { const n = await registrarLote(txt, botPorId("gastos_personales")); if (n) { log("Contaduría", `anotó ${n} gastos (privado)`); continue; } } catch {} }
+    if (RX_GASTO_EN.test(txt) && /\d/.test(txt) && !/^(mis\s+)?gastos(\s+(del\s+mes|de\s+la\s+semana|semana))?$/i.test(txt) && botPorId("gastos_personales")) { try { const n = await registrarLote(txt, botPorId("gastos_personales")); if (n) { log("Contaduría", `anotó ${n} gastos (privado)`); continue; } } catch {} }
     try { if (await registrar(txt, null)) { log("Asistente personal", "anotó algo (privado)"); continue; } } catch (e) { await enviar("⚠️ No pude anotarlo: " + e.message); continue; }
     if (resp && botPorId(resp)) {
       const b = botPorId(resp); const sb = est.bots[b.id];
