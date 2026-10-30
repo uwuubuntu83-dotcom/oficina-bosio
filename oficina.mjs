@@ -46,7 +46,7 @@ const est = leer(FEST, {});
 est.version = 2; est.bots ||= {}; est.log ||= []; est.pendientes ||= []; est.mensajes ||= {}; est.tgOffset ||= 0; est.hechos ||= {}; est.ia ||= {};
 if (!est.consumo || est.consumo.fecha !== fechaAR()) est.consumo = { fecha: fechaAR(), consultas: 0, busquedas: 0, por: {} };
 est.consumo.por ||= {}; est.consumo.busquedas ||= 0;
-const huellaClaves = ["GEMINI_API_KEY", "GROQ_API_KEY", "OPENROUTER_API_KEY", "MISTRAL_API_KEY", "SAMBANOVA_API_KEY", "NVIDIA_API_KEY", "CEREBRAS_API_KEY", "CLOUDFLARE_API_TOKEN", "COHERE_API_KEY", "HF_TOKEN"].map(k => (ENV[k] || "").slice(-4)).join("");
+const huellaClaves = ["GEMINI_API_KEY", "GROQ_API_KEY", "OPENROUTER_API_KEY", "MISTRAL_API_KEY", "SAMBANOVA_API_KEY", "NVIDIA_API_KEY", "CEREBRAS_API_KEY", "CLOUDFLARE_API_TOKEN", "COHERE_API_KEY", "HF_TOKEN", "ZAI_API_KEY", "DASHSCOPE_API_KEY"].map(k => (ENV[k] || "").slice(-4)).join("");
 if (est.ia.fecha !== fechaAR() || est.ia.huella !== huellaClaves) est.ia = { fecha: fechaAR(), agotado: {}, huella: huellaClaves }; // clave nueva = cupo nuevo
 const nuevoBot = () => ({ estado: "esperando", corridas: 0, fallas: 0, fallasSeguidas: 0, puntaje: null, historial: [], likes: 0, dislikes: 0, nivel: 1, ultimaFecha: null, ultimaCorrida: null, resumen: "", informe: null, pausado: false, memoria: {} });
 for (const b of bots()) { const nuevo = !est.bots[b.id]; est.bots[b.id] = Object.assign(nuevoBot(), est.bots[b.id]); if (nuevo && b.pausado) est.bots[b.id].pausado = true; }
@@ -71,6 +71,9 @@ if (ENV.CLOUDFLARE_API_TOKEN && ENV.CLOUDFLARE_ACCOUNT_ID) PROV.push({ id: "clou
 claves("COHERE_API_KEY").forEach(k => PROV.push({ id: "cohere", nombre: "Cohere", tipo: "openai", base: "https://api.cohere.ai/compatibility/v1", key: k, modelos: ["command-a-03-2025", "command-r-plus-08-2024"], tope: 30 }));
 claves("HF_TOKEN").forEach(k => PROV.push({ id: "huggingface", nombre: "Hugging Face", tipo: "openai", base: "https://router.huggingface.co/v1", key: k, modelos: ["openai/gpt-oss-120b", "meta-llama/Llama-3.3-70B-Instruct", "Qwen/Qwen3-32B"], tope: 30 }));
 if (ENV.LLM_EXTRA_BASE && ENV.LLM_EXTRA_KEY) PROV.push({ id: "extra", nombre: "IA extra", tipo: "openai", base: ENV.LLM_EXTRA_BASE.replace(/\/+$/, ""), key: ENV.LLM_EXTRA_KEY, modelos: (ENV.LLM_EXTRA_MODELS || "").split(",").map(s => s.trim()).filter(Boolean) });
+claves("ZAI_API_KEY").forEach(k => PROV.push({ id: "zai", nombre: "Z.ai (GLM)", tipo: "openai", base: "https://api.z.ai/api/paas/v4", key: k, modelos: ["glm-4.5-flash", "glm-4.7-flash", "glm-4-flash-250414"] }));
+claves("DASHSCOPE_API_KEY").forEach(k => PROV.push({ id: "qwen", nombre: "Alibaba Qwen", tipo: "openai", base: "https://dashscope-intl.aliyuncs.com/compatible-mode/v1", key: k, modelos: ["qwen-plus", "qwen-flash", "qwen-turbo", "qwen-max"] }));
+if (ENV.SIN_POLLINATIONS !== "1") PROV.push({ id: "pollinations", nombre: "Pollinations", tipo: "openai", url: "https://text.pollinations.ai/openai", key: "", modelos: ["openai", "mistral"], ultimo: true }); // gratis y sin clave: último respaldo
 if ((ENV.BUZON_URL || BASE.buzon) && (ENV.OFICINA_PIN || TG_TOKEN)) PROV.push({ id: "cfai", nombre: "Cloudflare Workers AI", tipo: "buzon", key: "-", modelos: ["@cf/meta/llama-3.3-70b-instruct-fp8-fast", "@cf/meta/llama-4-scout-17b-16e-instruct", "@cf/mistralai/mistral-small-3.1-24b-instruct", "@cf/qwen/qwen2.5-coder-32b-instruct"], maxFallas: 4 });
 if (ENV.MOCK_PROVIDERS) for (const id of ENV.MOCK_PROVIDERS.split(",")) PROV.push({ id, nombre: id, tipo: "openai", base: ENV.MOCK_OPENAI_BASE, key: "x", modelos: ["m1", "m2"] });
 
@@ -132,10 +135,10 @@ async function llamarBuzon(p, modelo, prompt, { json }) {
 }
 async function llamarOpenAI(p, modelo, prompt, { json, imagen }) {
   await pausa(p); usar(p.id);
-  const headers = { "content-type": "application/json", authorization: "Bearer " + p.key };
+  const headers = { "content-type": "application/json", ...(p.key ? { authorization: "Bearer " + p.key } : {}) };
   if (p.id.startsWith("openrouter")) { headers["X-Title"] = "Oficina Bosio"; headers["HTTP-Referer"] = "https://uwuubuntu83-dotcom.github.io/oficina-bosio/"; }
   const body = { model: modelo, messages: [{ role: "user", content: imagen ? [{ type: "text", text: prompt }, { type: "image_url", image_url: { url: `data:${imagen.mime};base64,${imagen.b64}` } }] : prompt }], temperature: json ? 0.2 : 0.5, max_tokens: 4096 };
-  const r = await traer(p.base + "/chat/completions", { method: "POST", headers, body: JSON.stringify(body) }, 120000);
+  const r = await traer(p.url || (p.base + "/chat/completions"), { method: "POST", headers, body: JSON.stringify(body) }, 120000);
   const j = await r.json().catch(() => ({}));
   if (!r.ok) return { error: true, status: r.status, j, msg: (j.error && (j.error.message || j.error)) || j.message || String(r.status) };
   const m = ((j.choices || [])[0] || {}).message || {};
@@ -153,7 +156,7 @@ async function ia(prompt, { buscar = false, json = false, imagen = null } = {}) 
   let lista;
   if (imagen) lista = [...PROV.filter(p => p.tipo === "gemini"), ...PROV.filter(p => p.id === "github")]; // las que pueden ver fotos
   else if (buscar) lista = [...PROV.filter(p => p.buscar), ...PROV.filter(p => p.buscarModelo)];
-  else { const otros = PROV.filter(p => p.tipo !== "gemini"); const gem = PROV.filter(p => p.tipo === "gemini"); rueda++; lista = [...otros.slice(rueda % (otros.length || 1)), ...otros.slice(0, rueda % (otros.length || 1)), ...gem]; }
+  else { const otros = PROV.filter(p => p.tipo !== "gemini" && !p.ultimo); const gem = PROV.filter(p => p.tipo === "gemini"); rueda++; lista = [...otros.slice(rueda % (otros.length || 1)), ...otros.slice(0, rueda % (otros.length || 1)), ...gem, ...PROV.filter(p => p.ultimo)]; }
   if (!lista.length) throw Object.assign(new Error(imagen ? "no hay ninguna IA que pueda ver fotos conectada" : buscar ? "no hay ninguna IA con búsqueda conectada (falta GEMINI_API_KEY)" : "no hay ninguna IA conectada"), { cupo: true });
   const errores = [];
   for (const p of lista) {

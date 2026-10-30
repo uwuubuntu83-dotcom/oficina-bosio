@@ -51,6 +51,8 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
           LLM_EXTRA_BASE: ${{ secrets.LLM_EXTRA_BASE }}
           LLM_EXTRA_KEY: ${{ secrets.LLM_EXTRA_KEY }}
           LLM_EXTRA_MODELS: ${{ secrets.LLM_EXTRA_MODELS }}
