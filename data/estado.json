@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 16,
+   "corridas": 17,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-10-30T19:46:53.434Z",
+   "ultimaCorrida": "2026-10-30T20:27:43.252Z",
    "resumen": "💵 Dólar hoy (10:35 hs)\n• Oficial: compra $1510 · venta $1560\n• Blue: compra $1545 · venta $1565\n• Bolsa: compra $1557.8 · venta $1568.8\n• Contado con liquidación: compra $1649.8 · venta $1650.3\n• Mayorista: compra $1530",
    "informe": "data/informes/dolar/2026-10-30-1035.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1645.46,
      "tarjeta": 2028
     },
-    "ultimoChequeo": "2026-10-30T19:46:53.434Z",
+    "ultimoChequeo": "2026-10-30T20:27:43.252Z",
     "resumenFecha": "2026-10-30"
    }
   },
@@ -200,7 +200,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-30T20:07:29.495Z",
+   "ultimaCorrida": "2026-10-30T20:27:43.252Z",
    "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)",
    "informe": null,
    "pausado": false,
@@ -920,7 +920,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
    "ultimaCorrida": "2026-10-30T19:12:45.080Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 55 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 75 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -1194,7 +1194,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 16,
+   "corridas": 17,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1203,7 +1203,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-30T19:46:53.434Z",
+   "ultimaCorrida": "2026-10-30T20:27:43.252Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -1213,7 +1213,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-10-30T19:46:53.434Z",
+    "ultimoChequeo": "2026-10-30T20:27:43.252Z",
     "resumenFecha": "2026-10-29"
    }
   },
@@ -2442,6 +2442,31 @@
  },
  "log": [
   {
+   "t": "2026-10-30T20:27:43.252Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)"
+  },
+  {
+   "t": "2026-10-30T20:27:43.252Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T20:27:43.252Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 mensajes de Telegram"
+  },
+  {
+   "t": "2026-10-30T20:27:43.252Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 órdenes desde la página"
+  },
+  {
+   "t": "2026-10-30T20:27:43.252Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
+  {
    "t": "2026-10-30T20:07:29.495Z",
    "quien": "Terrenos baratos",
    "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)"
@@ -3616,16 +3641,16 @@
  },
  "consumo": {
   "fecha": "2026-10-30",
-  "consultas": 103,
+  "consultas": 107,
   "busquedas": 0,
   "por": {
-   "gemini": 88,
+   "gemini": 91,
    "github": 12,
-   "groq": 3
+   "groq": 4
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-30T20:07:29.495Z",
+ "actualizado": "2026-10-30T20:27:43.252Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -3641,7 +3666,9 @@
    "NVIDIA",
    "Cohere",
    "Hugging Face",
+   "Z.ai (GLM)",
    "LLM7",
+   "Upstage",
    "Pollinations",
    "Cloudflare Workers AI"
   ]
@@ -3651,10 +3678,10 @@
   "agotado": {
    "gemini:gemini-2.5-flash": true,
    "gemini:gemini-2.5-flash-lite": true,
-   "gemini:gemini-flash-latest": 1793390893523,
+   "gemini:gemini-flash-latest": 1793392107735,
    "groq:groq/compound": true
   },
-  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYumg0="
+  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
  },
  "dueno": 1237559052,
  "pendientesCant": 1
