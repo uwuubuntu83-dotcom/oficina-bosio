@@ -930,6 +930,82 @@
    "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
+   "id": "yt_tendencias",
+   "nombre": "YouTube: temas que pegan",
+   "area": "audiovisual",
+   "tipo": "ia",
+   "buscar": true,
+   "horario": {
+    "apedido": true
+   },
+   "mision": "Buscar qué temas y formatos están funcionando ahora en YouTube y Shorts en Argentina para un canal de obra, construcción, humor y vida en Córdoba, y proponer qué video hacer.",
+   "entregable": "5 temas concretos con por qué funcionan ahora (con ejemplo o fuente), el formato (Short o video largo) y el gancho de los primeros 3 segundos.",
+   "criterios": [
+    "Temas actuales con fuente",
+    "Pensados para su canal",
+    "Gancho concreto"
+   ],
+   "tipoTxt": "🧠 IA + internet",
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
+  },
+  {
+   "id": "yt_guion",
+   "nombre": "YouTube: guionista",
+   "area": "audiovisual",
+   "tipo": "ia",
+   "buscar": false,
+   "horario": {
+    "apedido": true
+   },
+   "mision": "Escribir el guion completo del video que Jonathan pida (Short de 30-60 segundos o video largo), en tono cordobés, directo y con humor, para grabarlo con el celular.",
+   "entregable": "Guion listo para grabar: gancho de 3 segundos, desarrollo escena por escena (qué se dice y qué se ve), cierre con llamado a la acción y duración estimada.",
+   "criterios": [
+    "Gancho fuerte al principio",
+    "Fácil de grabar con el celu",
+    "Lenguaje natural de Córdoba"
+   ],
+   "tipoTxt": "🧠 IA",
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
+  },
+  {
+   "id": "yt_titulos",
+   "nombre": "YouTube: títulos y descripción",
+   "area": "audiovisual",
+   "tipo": "ia",
+   "buscar": false,
+   "horario": {
+    "apedido": true
+   },
+   "mision": "Escribir títulos, descripción y etiquetas que hagan que la gente haga clic y que YouTube recomiende el video, sin engañar.",
+   "entregable": "5 títulos (máximo 60 caracteres) ordenados del mejor al peor, la descripción lista para pegar (primeras 2 líneas fuertes, capítulos si es largo, hashtags) y 15 etiquetas.",
+   "criterios": [
+    "Títulos cortos y con curiosidad",
+    "Descripción lista para pegar",
+    "Sin clickbait mentiroso"
+   ],
+   "tipoTxt": "🧠 IA",
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
+  },
+  {
+   "id": "yt_miniatura",
+   "nombre": "YouTube: miniatura",
+   "area": "audiovisual",
+   "tipo": "ia",
+   "buscar": false,
+   "horario": {
+    "apedido": true
+   },
+   "mision": "Diseñar la miniatura del video: qué foto sacar, qué cara poner, qué texto grande (máximo 3 palabras), colores y composición, y el pedido listo para una IA de imágenes gratis.",
+   "entregable": "3 ideas de miniatura con: foto o escena, expresión, texto grande, colores, ubicación de cada cosa, y para la mejor, el pedido (prompt) listo para pegar en una IA de imágenes.",
+   "criterios": [
+    "Se entiende en un vistazo",
+    "Texto de 3 palabras o menos",
+    "Fácil de hacer con el celu"
+   ],
+   "tipoTxt": "🧠 IA",
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
+  },
+  {
    "id": "noticias_tec",
    "nombre": "Lo último en tecnología",
    "area": "tecnologia",

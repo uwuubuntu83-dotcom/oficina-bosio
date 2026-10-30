@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 14,
+   "corridas": 15,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-10-30T18:48:02.151Z",
+   "ultimaCorrida": "2026-10-30T19:17:52.609Z",
    "resumen": "💵 Dólar hoy (10:35 hs)\n• Oficial: compra $1510 · venta $1560\n• Blue: compra $1545 · venta $1565\n• Bolsa: compra $1557.8 · venta $1568.8\n• Contado con liquidación: compra $1649.8 · venta $1650.3\n• Mayorista: compra $1530",
    "informe": "data/informes/dolar/2026-10-30-1035.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1645.46,
      "tarjeta": 2028
     },
-    "ultimoChequeo": "2026-10-30T18:48:02.151Z",
+    "ultimoChequeo": "2026-10-30T19:17:52.609Z",
     "resumenFecha": "2026-10-30"
    }
   },
@@ -200,7 +200,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-30T18:48:02.151Z",
+   "ultimaCorrida": "2026-10-30T19:17:52.609Z",
    "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
@@ -789,7 +789,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "sin señal",
+   "estado": "listo",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -799,32 +799,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-10-30T17:15:40.175Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 92 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "ultimaCorrida": "2026-10-30T19:12:45.080Z",
+   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": false,
    "memoria": {
     "celu": {
-     "t": 1793380540175,
+     "t": 1793387565080,
      "redes_hoy": {
-      "publicaciones": 8,
-      "historias": 18,
+      "publicaciones": 9,
+      "historias": 21,
       "reels": 13,
       "seguidos": 28,
       "gringo": 0,
-      "errores": 17,
+      "errores": 23,
       "reinicios": 60,
       "ultimas": [
-       "14:04 ✔ Repost publicado en tu perfil",
-       "14:05 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
-       "14:05 Instagram: ahora en @maestromayordeobrasjb",
-       "14:06 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
-       "14:07 Claude: no dejó arreglo nuevo (todo bien)",
-       "14:09 Instagram: ahora en @soycordobes.jpg",
-       "14:10 ✔ Historia compartida (avioncito)",
-       "14:11 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
-       "14:12 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
-       "14:13 Claude: no dejó arreglo nuevo (todo bien)"
+       "15:53 adb connect 127.0.0.1:33119: failed to connect to '127.0.0.1:33119': Connection refused",
+       "15:53 Buscando el puerto Wi-Fi del celular en 127.0.0.1...",
+       "15:53 Puerto encontrado: 127.0.0.1:5555",
+       "15:53 Puerto Wi-Fi nuevo encontrado y guardado: 127.0.0.1:5555",
+       "15:53 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "16:04 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
+       "16:04 Claude: no encontré el chat de Claude para bajar el arreglo",
+       "16:09 Post elegido de #albañileria",
+       "16:10 ✔ Historia compartida (avioncito)",
+       "16:11 Chat: 2 reels en el chat, 0 sin subir"
       ]
      }
     },
@@ -1066,7 +1066,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 14,
+   "corridas": 15,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1075,7 +1075,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-30T18:48:02.151Z",
+   "ultimaCorrida": "2026-10-30T19:17:52.609Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -1085,7 +1085,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-10-30T18:48:02.151Z",
+    "ultimoChequeo": "2026-10-30T19:17:52.609Z",
     "resumenFecha": "2026-10-29"
    }
   },
@@ -2000,9 +2000,97 @@
      "hechas": []
     }
    }
+  },
+  "yt_tendencias": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "yt_guion": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "yt_titulos": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "yt_miniatura": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
   }
  },
  "log": [
+  {
+   "t": "2026-10-30T19:17:52.609Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T19:17:52.609Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T19:17:52.609Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-30T19:17:52.609Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, cfai"
+  },
   {
    "t": "2026-10-30T18:48:02.151Z",
    "quien": "Terrenos baratos",
@@ -3089,16 +3177,16 @@
  },
  "consumo": {
   "fecha": "2026-10-30",
-  "consultas": 92,
+  "consultas": 95,
   "busquedas": 0,
   "por": {
-   "gemini": 79,
+   "gemini": 82,
    "github": 12,
    "groq": 1
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-30T18:48:02.151Z",
+ "actualizado": "2026-10-30T19:17:52.609Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -3118,11 +3206,11 @@
   "agotado": {
    "gemini:gemini-2.5-flash": true,
    "gemini:gemini-2.5-flash-lite": true,
-   "gemini:gemini-flash-latest": 1793386113121,
+   "gemini:gemini-flash-latest": 1793387903561,
    "groq:groq/compound": true,
    "gemini:gemini-2.5-pro": true,
-   "gemini:gemini-3.8-flash": 1793386119632,
-   "gemini:gemini-3.7-flash": 1793386126137
+   "gemini:gemini-3.8-flash": 1793387909996,
+   "gemini:gemini-3.7-flash": 1793387916493
   },
   "huella": "bYGgOLG154bb2k9maac9"
  },
