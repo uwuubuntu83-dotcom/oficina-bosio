@@ -200,7 +200,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-30T19:46:53.434Z",
+   "ultimaCorrida": "2026-10-30T20:07:29.495Z",
    "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)",
    "informe": null,
    "pausado": false,
@@ -920,7 +920,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
    "ultimaCorrida": "2026-10-30T19:12:45.080Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 34 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 55 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -2442,6 +2442,26 @@
  },
  "log": [
   {
+   "t": "2026-10-30T20:07:29.495Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)"
+  },
+  {
+   "t": "2026-10-30T20:07:29.495Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T20:07:29.495Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-30T20:07:29.495Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, llm7, pollinations, cfai"
+  },
+  {
    "t": "2026-10-30T19:46:53.434Z",
    "quien": "Aumentos de servicios",
    "que": "entregó (sin IA)"
@@ -3596,16 +3616,16 @@
  },
  "consumo": {
   "fecha": "2026-10-30",
-  "consultas": 99,
+  "consultas": 103,
   "busquedas": 0,
   "por": {
-   "gemini": 85,
+   "gemini": 88,
    "github": 12,
-   "groq": 2
+   "groq": 3
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-30T19:46:53.434Z",
+ "actualizado": "2026-10-30T20:07:29.495Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -3621,6 +3641,8 @@
    "NVIDIA",
    "Cohere",
    "Hugging Face",
+   "LLM7",
+   "Pollinations",
    "Cloudflare Workers AI"
   ]
  },
@@ -3629,10 +3651,10 @@
   "agotado": {
    "gemini:gemini-2.5-flash": true,
    "gemini:gemini-2.5-flash-lite": true,
-   "gemini:gemini-flash-latest": 1793389659389,
+   "gemini:gemini-flash-latest": 1793390893523,
    "groq:groq/compound": true
   },
-  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYu"
+  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYumg0="
  },
  "dueno": 1237559052,
  "pendientesCant": 1
