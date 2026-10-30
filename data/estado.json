@@ -177,7 +177,7 @@
    "memoria": {}
   },
   "gerente": {
-   "estado": "esperando",
+   "estado": "trabajando",
    "resumen": "Mandó el parte diario",
    "ultimaCorrida": null
   },
@@ -192,8 +192,8 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-30T02:52:28.858Z",
-   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.5-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.5-flash-lite: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
+   "ultimaCorrida": "2026-10-30T02:59:16.579Z",
+   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-4-argon: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
    "memoria": {}
@@ -684,6 +684,31 @@
  },
  "log": [
   {
+   "t": "2026-10-30T02:59:16.579Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-4-argon: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T02:59:16.579Z",
+   "quien": "IA",
+   "que": "Google Gemini gemini-4-argon: cupo diario agotado, sigo con otra"
+  },
+  {
+   "t": "2026-10-30T02:59:16.579Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T02:59:16.579Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-30T02:59:16.579Z",
+   "quien": "Oficina",
+   "que": "abre (correr:terrenos) · IA conectadas: gemini, github"
+  },
+  {
    "t": "2026-10-30T02:53:21.717Z",
    "quien": "Monitor de salud",
    "que": "entregó (sin IA)"
@@ -924,7 +949,13 @@
    "que": "abre (auto)"
   }
  ],
- "pendientes": [],
+ "pendientes": [
+  {
+   "bot": "terrenos",
+   "orden": "",
+   "origen": "manual"
+  }
+ ],
  "mensajes": {
   "4": "dolar",
   "5": "licitaciones",
@@ -947,14 +978,14 @@
  },
  "consumo": {
   "fecha": "2026-10-29",
-  "consultas": 49,
+  "consultas": 52,
   "por": {
-   "gemini": 13,
+   "gemini": 16,
    "github": 4
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-30T02:53:21.717Z",
+ "actualizado": "2026-10-30T02:59:16.579Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -968,22 +999,11 @@
  "ia": {
   "fecha": "2026-10-29",
   "agotado": {
-   "gemini:gemini-3.8-flash": 1793328997714,
-   "gemini:gemini-3.7-flash": 1793329117713,
-   "gemini:gemini-4-argon": true,
-   "github:openai/gpt-4.1-mini": 1793328853880,
-   "github:openai/gpt-4o-mini": 1793328856366,
-   "github:meta/Llama-3.3-70B-Instruct": 1793328858873,
-   "github:mistral-ai/mistral-small-2503": 1793328877713,
-   "gemini:gemini-3.6-flash": 1793328780395,
-   "gemini:gemini-3.5-flash": 1793328786848,
-   "gemini:gemini-3.5-flash-lite": 1793328793353
+   "gemini:gemini-3.8-flash": 1793329187306,
+   "gemini:gemini-3.7-flash": 1793329193837,
+   "gemini:gemini-4-argon": true
   },
-  "ultimo": {
-   "prov": "Google Gemini",
-   "modelo": "gemini-3.6-flash",
-   "t": "2026-10-30T02:43:55.644Z"
-  }
+  "huella": "bYGg"
  },
  "dueno": 1237559052
 }
