@@ -29,3 +29,18 @@ Se cargan en Settings → Secrets and variables → Actions:
 Después hay que mandarle `/start` al bot desde Telegram. El primero que lo hace queda como dueño, y el bot ignora a cualquier otra persona.
 
 **Importante:** el repositorio es público para que GitHub lo corra gratis. Los informes se pueden ver, así que no le pidas a la oficina cosas privadas. Las claves no se ven: quedan guardadas en los secretos.
+
+## Buzón en Cloudflare (celu bot + órdenes desde la página + despertador)
+
+`buzon/worker.js` es un Worker gratis de Cloudflare (con un Durable Object para guardar) que:
+
+- **Habla con el celu bot** con su protocolo de siempre: `POST /celu/estado`, `GET /celu/ordenes`, `POST /celu/respuesta` (encabezado `x-clave` = secreto `CELU_KEY`).
+- **Atiende la página** con PIN (`x-pin` = secreto `OFICINA_PIN`): `GET /oficina/celu`, `POST /oficina/orden`, `POST /oficina/gerente`.
+- **Despierta a la oficina** cada minuto si hay un mensaje de Telegram o una orden de la página, y la arranca si GitHub se atrasó con su vuelta de cada 30 minutos.
+
+Se instala solo con el workflow **Instalar buzón** cuando están cargados los secretos `CLOUDFLARE_API_TOKEN`, `DESPERTADOR_TOKEN`, `CELU_KEY` y `OFICINA_PIN`.
+En el celu, `~/celu_solo/nube.json` queda así (sin la clave de Cloudflare):
+```json
+{ "url": "https://oficina-buzon.uwuubuntu83.workers.dev", "celu_key": "LA_MISMA_QUE_CELU_KEY", "mudado": "si" }
+```
+Por Telegram: `celu programa de hoy`, `celu subí una historia`, `celu pausa`, `celu seguí`, `celu reiniciar`, `celu informe`, `celu`.

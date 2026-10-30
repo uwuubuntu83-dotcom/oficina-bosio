@@ -1,0 +1,21 @@
+name = "oficina-buzon"
+main = "worker.js"
+compatibility_date = "2025-04-01"
+workers_dev = true
+
+[triggers]
+crons = ["* * * * *"]   # cada minuto (gratis)
+
+[vars]
+REPO = "uwuubuntu83-dotcom/oficina-bosio"
+WORKFLOW = "oficina.yml"
+RAMA = "main"
+ORIGEN = "https://uwuubuntu83-dotcom.github.io"
+
+[[durable_objects.bindings]]
+name = "BUZON"
+class_name = "Buzon"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Buzon"]

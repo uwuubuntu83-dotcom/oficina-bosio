@@ -184,6 +184,36 @@ async function tg(metodo, datos) {
   try { const r = await traer(`${URLS.tg}/bot${TG_TOKEN}/${metodo}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(datos || {}) }, 30000); const j = await r.json(); if (!j.ok) { console.log("Telegram:", metodo, j.description); tg.error = `${metodo}: ${j.description}`; } return j.ok ? j.result : null; }
   catch (e) { console.log("Telegram sin conexión:", e.message); tg.error = `${metodo}: sin conexión (${e.message})`; return null; }
 }
+/* ---------- buzón en Cloudflare: celu bot + órdenes desde la página ---------- */
+const BUZON = (ENV.BUZON_URL || BASE.buzon || "").replace(/\/+$/, ""); const PIN = ENV.OFICINA_PIN || "";
+async function buzon(ruta, cuerpo) {
+  if (!BUZON || !PIN) throw new Error("el buzón del celu todavía no está instalado");
+  const r = await traer(BUZON + ruta, cuerpo ? { method: "POST", headers: { "content-type": "application/json", "x-pin": PIN }, body: JSON.stringify(cuerpo) } : { headers: { "x-pin": PIN } }, 20000);
+  if (!r.ok) throw new Error("el buzón respondió " + r.status); return r.json();
+}
+async function alCelu(orden) { return buzon("/oficina/orden", { ...orden, origen: "telegram" }); }
+function textoCelu(e) {
+  const E = e && e.estado; if (!E || !E.t) return "📱 El celu todavía no mandó señales al buzón. Falta cambiar el link en ~/celu_solo/nube.json y reiniciar el vigía.";
+  const x = E.estado || {}, rh = x.redes_hoy || {}, min = Math.round((Date.now() - E.t) / 60000);
+  return `📱 Celu bot · ${min <= 10 ? "🟢 andando" : "🔴 no responde hace " + min + " min (revisá la depuración inalámbrica)"}\nBot de Instagram: ${x.pausa ? "⏸ en pausa" : x.bot_vivo ? "trabajando" : "parado"}${x.bateria != null ? " · batería " + (typeof x.bateria === "object" ? (x.bateria.porcentaje ?? x.bateria.percentage ?? JSON.stringify(x.bateria)) : x.bateria) + "%" : ""}${x.calor ? " · 🔥 pausado por calor" : ""}\n\nHoy: ${rh.publicaciones || 0} publicaciones · ${rh.historias || 0} historias · ${rh.reels || 0} reels/reposts · ${rh.seguidos || 0} seguidos · ${rh.gringo || 0} dejados de seguir (gringo) · ${rh.errores || 0} errores · ${rh.reinicios || 0} reinicios${(rh.ultimas || []).length ? "\n\nÚltimo que hizo:\n" + rh.ultimas.slice(-6).map(l => "• " + l).join("\n") : ""}`;
+}
+const RX_CELU = /^\/?celu(?:\s*bot)?\b[\s:,.-]*(.*)$/is;
+const RX_CELU_AUTO = /^(programa de hoy|(sub[ií]|public[aá]|compart[ií]|hac[eé]|mand[aá])(?=\s).{0,40}\b(historia|reel|publicaci[oó]n|posteo|repost)|paus[aá] (el )?(instagram|celu)|reinici[aá] (el )?(instagram|celu|bot de instagram))/i;
+async function ordenCelu(t) {
+  const q = t.trim(); const low = q.toLowerCase();
+  if (!q || /^(estado|c[oó]mo (est[aá]|and[aá])|anda\??)$/.test(low)) { await enviar(textoCelu(await buzon("/oficina/celu"))); return; }
+  if (/^(informe|reporte|resumen)/.test(low)) { await enviar("🧾 Informe del celu de hoy\n\n" + textoCelu(await buzon("/oficina/celu"))); return; }
+  let o;
+  const QUE = "(\\s+(con\\s+)?(el\\s+|los\\s+)?(instagram|celu|bot|bots|todo|redes))?\\s*[.!]*$";
+  if (new RegExp("^(paus[a-záéíóú]*|fren[a-záéíóú]*|par[aá])" + QUE).test(low)) o = { tipo: "accion", accion: "pausa_ig" };
+  else if (new RegExp("^(segu[ií]|seguir|sigue|activ[a-záéíóú]*|arranc[a-záéíóú]*|continu[a-záéíóú]*)" + QUE).test(low)) o = { tipo: "accion", accion: "seguir_ig" };
+  else if (/^reinici/.test(low)) o = { tipo: "accion", accion: "reiniciar_ig" };
+  else if (/^(avisos|telegram) (on|si|sí|prend)/.test(low)) o = { tipo: "ajuste", telegram: true };
+  else if (/^(avisos|telegram) (off|no|apag)/.test(low)) o = { tipo: "ajuste", telegram: false };
+  else o = { tipo: "chat", texto: q };
+  await alCelu(o); log("Redes sociales", "le pasó una orden al celu bot");
+  await enviar(`📱 Se lo pasé al celu bot${o.tipo === "chat" ? ": «" + q.slice(0, 80) + "»" : ""}. Lo agarra en 15 segundos y te contesta acá.`);
+}
 const escHTML = s => String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 async function enviar(texto, botId, opt = {}) {
   if (!est.dueno) return null;
@@ -298,6 +328,9 @@ const RECETAS = {
     sb.memoria.caidas = ahora;
     return { texto: lineas.join("\n"), enviar: cambios.length > 0, alerta: cambios.join("\n") };
   },
+  async celu_informe(b, sb) {
+    const e = await buzon("/oficina/celu"); return { texto: "🧾 Informe del día del celu bot\n\n" + textoCelu(e), enviar: true };
+  },
   async recordatorio(b) { return { texto: `⏰ ${b.receta.texto || b.mision}`, enviar: true }; },
   // pregunta: te pregunta a horario fijo (sin IA). Lo que respondas se anota en su registro privado.
   async pregunta(b, sb, { hora } = {}) {
@@ -331,7 +364,7 @@ const RECETAS = {
     l.push(`Bots: ${bots().length} · trabajaron hoy: ${bots().filter(x => est.bots[x.id]?.ultimaFecha === fechaAR()).length}`);
     if (fallaron.length) l.push("❌ Fallaron: " + fallaron.map(x => `${x.nombre} (${(est.bots[x.id].resumen || "").replace(/^Falló: /, "").slice(0, 60)})`).join("; "));
     if (pausados.length) l.push("⏸ En pausa: " + pausados.map(x => x.nombre).join(", ") + ". Para reactivar: «activar ID».");
-    for (const { b: x, hb } of ext) l.push(hb ? `📱 ${x.nombre}: última señal ${new Date(hb.t).toLocaleString("es-AR", { timeZone: "America/Argentina/Cordoba" })} (${hb.estado})` : `📱 ${x.nombre}: todavía no está conectado (ver reportar.py).`);
+    for (const { b: x, hb } of ext) l.push(x.id === "celular_bot" && est.bots[x.id].memoria.celu ? `📱 ${x.nombre}: última señal ${new Date(est.bots[x.id].memoria.celu.t).toLocaleString("es-AR", { timeZone: "America/Argentina/Cordoba" })} (por el buzón)` : hb ? `📱 ${x.nombre}: última señal ${new Date(hb.t).toLocaleString("es-AR", { timeZone: "America/Argentina/Cordoba" })} (${hb.estado})` : `📱 ${x.nombre}: todavía no está conectado al buzón.`);
     l.push(`🤖 IA hoy: ${est.consumo.consultas} consultas (${est.consumo.busquedas} con búsqueda) · ${Object.entries(est.consumo.por).map(([k, v]) => `${k}: ${v}`).join(", ") || "ninguna"}`);
     l.push(`🔌 IA conectadas: ${PROV.length ? [...new Set(PROV.map(p => p.nombre))].join(", ") : "ninguna"}`);
     if (!fallaron.length && !pausados.length) l.push("✅ Todo en orden.");
@@ -447,6 +480,7 @@ const AYUDA = () => `Soy el Gerente general de la ${CFG.oficina}. Escribime:
 • pausar area Nombre / activar area Nombre / eliminar area Nombre.
 • eliminar ID (o despedir ID) — lo saco de la oficina.
 • horario ID 09:00 lun,jue — le cambio el horario.
+• celu ... — órdenes al celu bot: «celu programa de hoy», «celu subí una historia», «celu pausa», «celu seguí», «celu reiniciar», «celu informe», «celu» (cómo anda).
 • Respondé un informe con 👍, 👎 o un comentario: ese bot se entrena con eso esa noche.
 
 📒 Anotar (sin IA, privado):
@@ -547,10 +581,11 @@ async function procesarMensajes() {
     log("Mesa de entrada", `Telegram no entregó mensajes (${tg.error || "sin detalle"})${info && info.url ? " · tenía un webhook: " + info.url : ""}`);
     if (info && info.url) { await tg("deleteWebhook", { drop_pending_updates: false }); ups = await tg("getUpdates", { offset: est.tgOffset, timeout: 0 }); }
   }
-  ups = ups || [];
+  ups = ups || []; const reales = ups.length;
+  if (BUZON && PIN) { try { const w = await buzon("/oficina/gerente?sacar=1"); for (const o of w.ordenes || []) ups.push({ update_id: null, web: true, message: { chat: { id: est.dueno, type: "private" }, text: o.texto } }); if ((w.ordenes || []).length) log("Mesa de entrada", `llegaron ${w.ordenes.length} órdenes desde la página`); } catch (e) { if (!/no está instalado/.test(e.message)) log("Mesa de entrada", "no pude leer el buzón: " + e.message); } }
   log("Mesa de entrada", ups.length ? `llegaron ${ups.length} mensajes de Telegram` : `sin mensajes nuevos${est.dueno ? "" : " (todavía no hay dueño vinculado: mandale cualquier mensaje al bot)"}`);
   for (const u of ups) {
-    est.tgOffset = u.update_id + 1;
+    if (u.update_id != null) est.tgOffset = u.update_id + 1;
     const m = u.message || u.edited_message; if (!m || (!m.text && !m.photo)) continue;
     const chat = m.chat.id; const txt = (m.text || m.caption || "").trim();
     if (!est.dueno) { if (m.chat.type === "private") { est.dueno = chat; log("Gerente general", `quedó vinculado el Telegram de ${m.from && m.from.first_name || "el dueño"}`); await enviar(`✅ Listo, ${m.from && m.from.first_name || "jefe"}: quedaste como dueño de la oficina. Solo te obedezco a vos.\n\n${AYUDA()}`); } continue; }
@@ -572,6 +607,7 @@ async function procesarMensajes() {
       log("Jonathan", `opinó sobre ${b.nombre}: ${txt.slice(0, 80)}`); await enviar(`📝 Anotado para ${b.nombre}. Lo aplica desde el entrenamiento de esta noche.`); continue;
     }
     const low = txt.toLowerCase().replace(/^\//, "").trim(); let mm;
+    if ((mm = txt.match(RX_CELU)) || RX_CELU_AUTO.test(txt)) { try { await ordenCelu(mm ? mm[1] : txt); } catch (e) { await enviar("📱 No pude hablar con el celu: " + e.message); } continue; }
     if (/^(start|ayuda|help|hola|menu|menú)$/.test(low)) { await enviar(AYUDA()); continue; }
     if (/^(estado|tablero|novedades)$/.test(low)) { await enviar(tablero()); continue; }
     if (/^(bots|organigrama)$/.test(low)) { await enviar(`👑 ${CFG.dueno} (dueño)\n🎯 ${CFG.gerente.nombre}: ${CFG.gerente.mision}\n\n` + CFG.areas.map(a => { const bs = bots().filter(b => b.area === a.id); return `${a.icono} Gerente de ${a.nombre}\n` + (bs.length ? bs.map(b => `  • ${b.nombre} (${b.id}) · ${tipoTxt(b)} · ${horarioTxt(b)}`).join("\n") : "  (sin empleados)"); }).join("\n\n")); continue; }
@@ -600,16 +636,17 @@ async function procesarMensajes() {
     log("Jonathan", "mandó una orden por Telegram");
   }
   // le confirmo a Telegram que ya los leí (si no, el despertador cree que siguen sin atender)
-  if (ups.length) await tg("getUpdates", { offset: est.tgOffset, limit: 1, timeout: 0 });
+  if (reales) await tg("getUpdates", { offset: est.tgOffset, limit: 1, timeout: 0 });
 }
 async function repartir(p) {
   const g = est.bots.gerente; g.estado = "trabajando";
-  const lista = bots().filter(b => b.tipo !== "externo").map(b => `- ${b.id}: ${b.nombre} (${areaDe(b).nombre}, ${tipoTxt(b)}) — ${b.mision}`).join("\n");
+  const lista = bots().filter(b => b.tipo !== "externo" || (b.id === "celular_bot" && BUZON && PIN)).map(b => `- ${b.id}: ${b.nombre} (${areaDe(b).nombre}, ${tipoTxt(b)}) — ${b.mision}`).join("\n");
   const r = await ia(`Sos el Gerente general de una oficina de bots. Tu jefe ordenó: "${p.orden}"
 Empleados:\n${lista}
 Elegí el empleado que mejor la cumple. Si ninguno encaja, elegí "gerente" (la hacés vos).
 Respondé SOLO un JSON: {"bot":"id o gerente","instruccion":"la orden clara para ese empleado","aviso":"frase corta para el jefe diciendo a quién se la pasaste","buscar":true si hace falta buscar en internet}`, { json: true });
   const j = parsearJSON(r.texto) || {}; const b = botPorId(j.bot);
+  if (b && b.id === "celular_bot") { await ordenCelu(j.instruccion || p.orden); g.estado = "listo"; return; }
   if (b && b.tipo !== "externo") {
     log("Gerente general", `le pasó la orden a ${b.nombre}`); await enviar(`📥 ${j.aviso || `Se la paso a ${b.nombre}.`}`);
     // los bots sin IA hacen su tarea tal cual (gratis); los de IA reciben la orden concreta
@@ -646,7 +683,8 @@ async function entrenar() {
 }
 async function revisarExternos() {
   for (const b of bots().filter(x => x.tipo === "externo")) {
-    const sb = est.bots[b.id]; const hb = leer(path.join(DATA, "externos", b.id + ".json"), null);
+    const sb = est.bots[b.id]; let hb = leer(path.join(DATA, "externos", b.id + ".json"), null);
+    if (b.id === "celular_bot" && BUZON && PIN) { try { const e = await buzon("/oficina/celu"); if (e.estado) { hb = { t: new Date(e.estado.t).toISOString(), estado: e.estado.estado && e.estado.estado.bot_vivo === false && !e.estado.estado.pausa ? "error" : "ok", detalle: textoCelu(e).split("\n").slice(0, 3).join(" · ").slice(0, 200) }; sb.memoria.celu = { t: e.estado.t, redes_hoy: (e.estado.estado || {}).redes_hoy || {} }; } } catch (e) { log("Redes sociales", "no pude leer el buzón del celu: " + e.message); } }
     if (!hb) { sb.estado = "sin conectar"; continue; }
     const min = (Date.now() - new Date(hb.t).getTime()) / 60000;
     sb.ultimaCorrida = hb.t; sb.resumen = hb.detalle || hb.estado; sb.estado = min > (b.alertaMin || 90) ? "sin señal" : hb.estado === "error" ? "falló" : "listo";

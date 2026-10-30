@@ -31,6 +31,7 @@ jobs:
         env:
           MODO: ${{ github.event.inputs.modo || 'auto' }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          OFICINA_PIN: ${{ secrets.OFICINA_PIN }}   # para hablar con el buzón del celu (Cloudflare)
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # IA gratis: cualquiera que tenga su clave cargada entra en la rotación. Se pueden sumar varias claves de Gemini (proyectos distintos).
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
