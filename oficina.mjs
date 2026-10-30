@@ -60,7 +60,7 @@ function log(quien, que) { est.log.unshift({ t: NOW.toISOString(), quien, que: S
 const claves = pref => [ENV[pref], ...Array.from({ length: 9 }, (_, i) => ENV[`${pref}_${i + 2}`]), ...(ENV[pref + "S"] || "").split(",")].map(s => (s || "").trim()).filter(Boolean);
 const PROV = [];
 claves("GEMINI_API_KEY").forEach((k, i) => PROV.push({ id: "gemini" + (i ? i + 1 : ""), nombre: "Google Gemini" + (i ? " #" + (i + 1) : ""), tipo: "gemini", key: k, buscar: true, modelos: null }));
-if (ENV.GITHUB_TOKEN) PROV.push({ id: "github", nombre: "GitHub Models", tipo: "openai", base: "https://models.github.ai/inference", key: ENV.GITHUB_TOKEN, modelos: ["openai/gpt-4.1-mini", "openai/gpt-4o-mini", "meta/Llama-3.3-70B-Instruct", "mistral-ai/mistral-small-2503"] });
+if (ENV.GITHUB_TOKEN) PROV.push({ id: "github", nombre: "GitHub Models", tipo: "openai", base: "https://models.github.ai/inference", key: ENV.GITHUB_TOKEN, modelos: ["openai/gpt-4.1-mini", "openai/gpt-4o-mini", "meta/Llama-3.3-70B-Instruct", "deepseek/DeepSeek-V3-0324", "openai/gpt-4.1", "openai/gpt-4o", "mistral-ai/mistral-small-2503", "xai/grok-3-mini", "meta/Llama-4-Scout-17B-16E-Instruct", "cohere/cohere-command-a", "microsoft/Phi-4", "openai/gpt-4.1-nano"], maxFallas: 6 });
 claves("GROQ_API_KEY").forEach((k, i) => PROV.push({ id: "groq" + (i ? i + 1 : ""), nombre: "Groq", tipo: "openai", base: "https://api.groq.com/openai/v1", key: k, modelos: ["openai/gpt-oss-120b", "llama-3.3-70b-versatile", "qwen/qwen3-32b", "openai/gpt-oss-20b", "meta-llama/llama-4-scout-17b-16e-instruct", "llama-3.1-8b-instant"], buscarModelo: "groq/compound" }));
 claves("OPENROUTER_API_KEY").forEach((k, i) => PROV.push({ id: "openrouter" + (i ? i + 1 : ""), nombre: "OpenRouter", tipo: "openai", base: "https://openrouter.ai/api/v1", key: k, modelos: null, gratis: true }));
 claves("CEREBRAS_API_KEY").forEach(k => PROV.push({ id: "cerebras", nombre: "Cerebras", tipo: "openai", base: "https://api.cerebras.ai/v1", key: k, modelos: ["gpt-oss-120b", "zai-glm-4.7", "llama-3.3-70b", "qwen-3-32b"] }));
@@ -71,6 +71,7 @@ if (ENV.CLOUDFLARE_API_TOKEN && ENV.CLOUDFLARE_ACCOUNT_ID) PROV.push({ id: "clou
 claves("COHERE_API_KEY").forEach(k => PROV.push({ id: "cohere", nombre: "Cohere", tipo: "openai", base: "https://api.cohere.ai/compatibility/v1", key: k, modelos: ["command-a-03-2025", "command-r-plus-08-2024"], tope: 30 }));
 claves("HF_TOKEN").forEach(k => PROV.push({ id: "huggingface", nombre: "Hugging Face", tipo: "openai", base: "https://router.huggingface.co/v1", key: k, modelos: ["openai/gpt-oss-120b", "meta-llama/Llama-3.3-70B-Instruct", "Qwen/Qwen3-32B"], tope: 30 }));
 if (ENV.LLM_EXTRA_BASE && ENV.LLM_EXTRA_KEY) PROV.push({ id: "extra", nombre: "IA extra", tipo: "openai", base: ENV.LLM_EXTRA_BASE.replace(/\/+$/, ""), key: ENV.LLM_EXTRA_KEY, modelos: (ENV.LLM_EXTRA_MODELS || "").split(",").map(s => s.trim()).filter(Boolean) });
+if ((ENV.BUZON_URL || BASE.buzon) && (ENV.OFICINA_PIN || TG_TOKEN)) PROV.push({ id: "cfai", nombre: "Cloudflare Workers AI", tipo: "buzon", key: "-", modelos: ["@cf/meta/llama-3.3-70b-instruct-fp8-fast", "@cf/meta/llama-4-scout-17b-16e-instruct", "@cf/mistralai/mistral-small-3.1-24b-instruct", "@cf/qwen/qwen2.5-coder-32b-instruct"], maxFallas: 4 });
 if (ENV.MOCK_PROVIDERS) for (const id of ENV.MOCK_PROVIDERS.split(",")) PROV.push({ id, nombre: id, tipo: "openai", base: ENV.MOCK_OPENAI_BASE, key: "x", modelos: ["m1", "m2"] });
 
 const agotado = clave => est.ia.agotado[clave] === true || (typeof est.ia.agotado[clave] === "number" && est.ia.agotado[clave] > Date.now());
@@ -119,6 +120,16 @@ async function llamarGemini(p, modelo, prompt, { buscar, json, imagen }) {
   if (!texto) return { error: true, status: 200, msg: "respuesta vacía" };
   return { texto, fuentes };
 }
+async function llamarBuzon(p, modelo, prompt, { json }) {
+  await pausa(p); usar(p.id);
+  const base = (ENV.BUZON_URL || BASE.buzon || "").replace(/\/+$/, "");
+  const pin = ENV.OFICINA_PIN || (TG_TOKEN ? String(parseInt(crypto.createHash("sha256").update("pin:" + TG_TOKEN).digest("hex").slice(0, 12), 16) % 1e8).padStart(8, "0") : "");
+  const r = await traer(base + "/oficina/ia", { method: "POST", headers: { "content-type": "application/json", "x-pin": pin }, body: JSON.stringify({ modelo, prompt, json }) }, 120000);
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) return { error: true, status: r.status, j, msg: j.error || String(r.status) };
+  if (j.error) return { error: true, status: j.status || 500, j: {}, msg: j.msg || "error" };
+  return { texto: j.texto, fuentes: [] };
+}
 async function llamarOpenAI(p, modelo, prompt, { json, imagen }) {
   await pausa(p); usar(p.id);
   const headers = { "content-type": "application/json", authorization: "Bearer " + p.key };
@@ -160,7 +171,7 @@ async function ia(prompt, { buscar = false, json = false, imagen = null } = {}) 
       let r;
       for (let reintento = 0; reintento < 2; reintento++) {
         consultasCorrida++; est.consumo.consultas++;
-        try { r = p.tipo === "gemini" ? await llamarGemini(p, modelo, prompt, { buscar, json, imagen }) : await llamarOpenAI(p, modelo, prompt, { json, imagen }); }
+        try { r = p.tipo === "gemini" ? await llamarGemini(p, modelo, prompt, { buscar, json, imagen }) : p.tipo === "buzon" ? await llamarBuzon(p, modelo, prompt, { json }) : await llamarOpenAI(p, modelo, prompt, { json, imagen }); }
         catch (e) { r = { error: true, status: 0, msg: e.name === "AbortError" ? "tardó demasiado" : "sin conexión" }; }
         if (r.error && r.status === 429 && reintento === 0) { const rd = retryDe(r.j); if (!rd.porDia && rd.segundos > 0 && rd.segundos <= 45) { await sleep(rd.segundos * 1000 + 800); continue; } }
         break;
@@ -171,7 +182,7 @@ async function ia(prompt, { buscar = false, json = false, imagen = null } = {}) 
       else if (r.status === 401 || r.status === 403) { marcar(p.id, 0); log("IA", `${p.nombre}: la clave no es válida o no tiene permiso`); break; }
       else if (r.status === 404 || r.status === 400 || r.status === 422) marcar(clave, 0);
       else marcar(clave, 10 * 60e3);
-      if (++fallasProv >= 3) break;
+      if (++fallasProv >= (p.maxFallas || 3)) break;
     }
   }
   throw Object.assign(new Error(errores.length ? "ninguna IA respondió (" + errores.slice(-2).join(" | ") + ")" : (buscar ? "las IA que buscan en internet están sin cupo por ahora" : "todas las IA están sin cupo por ahora")), { cupo: true });

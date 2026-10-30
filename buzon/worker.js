@@ -87,6 +87,7 @@ export default {
       if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: h });
       const pin = req.headers.get("x-pin") || u.searchParams.get("pin") || "";
       if (!env.OFICINA_PIN || pin !== env.OFICINA_PIN) return json({ ok: false, error: "PIN incorrecto" }, 401, h);
+      if (p === "/oficina/ia") return json(await iaCloudflare(env, await req.json().catch(() => ({}))), 200, h);
       const r = await buzon(env).fetch(req);
       const out = new Response(r.body, r); for (const [k, v] of Object.entries(h)) out.headers.set(k, v);
       if (p === "/oficina/gerente" && req.method === "POST" && r.ok) ctx.waitUntil(revisar(env, true));   // orden desde la página: despierto ya
@@ -97,6 +98,20 @@ export default {
   },
   async scheduled(evento, env, ctx) { ctx.waitUntil(revisar(env)); }
 };
+
+// IA gratis de Cloudflare (Workers AI, plan free: ~10.000 "neuronas" por día) para la oficina
+async function iaCloudflare(env, b) {
+  if (!env.AI) return { error: true, status: 503, msg: "Workers AI no está conectado" };
+  try {
+    const r = await env.AI.run(b.modelo || "@cf/meta/llama-3.3-70b-instruct-fp8-fast", { messages: [{ role: "user", content: String(b.prompt || "").slice(0, 60000) }], max_tokens: 3000, temperature: b.json ? 0.2 : 0.5 });
+    let t = r && (typeof r.response === "string" ? r.response : r.response != null ? JSON.stringify(r.response) : (r.choices && r.choices[0] && r.choices[0].message && r.choices[0].message.content) || "");
+    t = String(t || "").replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+    return t ? { texto: t } : { error: true, status: 200, msg: "respuesta vacía" };
+  } catch (e) {
+    const m = String(e && e.message || e);
+    return { error: true, status: /4006|neuron|limit|quota|capacity|429/i.test(m) ? 429 : /not found|5007|No such model/i.test(m) ? 404 : 500, msg: m.slice(0, 200) };
+  }
+}
 
 // Despertador + reloj fijo
 async function revisar(env, forzar = false) {
