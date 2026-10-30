@@ -160,7 +160,7 @@ code{font-family:var(--f-mono);background:var(--panel2);border-radius:4px;paddin
       <div class="msgs" id="msgs"></div>
       <div class="quick" id="quick"></div>
       <form class="compose" id="compose"><input id="orden" placeholder="Escribile una orden al Gerente general…" aria-label="Orden para el gerente" autocomplete="off"><button>Enviar</button></form>
-      <div class="compose-note" id="note">Con tu PIN, la orden llega directo y el Gerente te contesta por Telegram. Sin PIN, se copia y se abre Telegram.</div>
+      <div class="compose-note" id="note">La orden le llega directo al Gerente (te pide tu PIN la primera vez) y te contesta por Telegram en 1 o 2 minutos.</div>
     </aside>
   </div>
 </div>
@@ -253,7 +253,11 @@ function pintarChat(){
 }
 $("#compose").addEventListener("submit",async ev=>{ev.preventDefault();const t=$("#orden").value.trim();if(!t)return;
   if(getPin()){try{await buzon("/oficina/gerente",{texto:t});$("#orden").value="";$("#note").textContent="✅ Orden enviada. El Gerente te contesta por Telegram en 1 o 2 minutos.";return}catch(e){$("#note").textContent="⚠️ "+e.message+". La mando por Telegram."}}
-  const u=OF.EST.botUsuario;if(!u)return;try{await navigator.clipboard.writeText(t)}catch(e){}window.open("https://t.me/"+u,"_blank","noopener");$("#note").textContent="Orden copiada: pegala en el chat de Telegram que se abrió.";});
+  pedirPin(async()=>{try{await buzon("/oficina/gerente",{texto:t});$("#orden").value="";$("#note").textContent="✅ Orden enviada. El Gerente te contesta por Telegram en 1 o 2 minutos."}catch(e){$("#note").textContent="⚠️ "+e.message}});});
+function pedirPin(despues){$("#dT").textContent="🔒 Tu PIN de la oficina";const B=$("#dB");B.innerHTML="";
+  const inp=h("input",{type:"password",inputmode:"numeric",placeholder:"PIN (te llegó por Telegram)",style:"flex:1;min-width:0;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:10px;color:var(--ink);font:inherit","aria-label":"PIN"});
+  B.append(h("p",{},"Escribilo una vez y queda guardado en este navegador (en modo incógnito se borra al cerrarlo)."),h("form",{class:"compose",style:"padding:0;border:0",onsubmit:e=>{e.preventDefault();if(inp.value.trim()){setPin(inp.value.trim());$("#dlg").close();despues&&despues()}}},inp,h("button",{},"Guardar y enviar")));
+  $("#dlg").open||$("#dlg").showModal();setTimeout(()=>inp.focus(),50)}
 /* ---------- buzón (Cloudflare): celu bot y órdenes directas, con PIN guardado solo en este navegador ---------- */
 const BUZON_URL=()=>((OF.ORG&&OF.ORG.buzon)||"https://oficina-buzon.uwuubuntu83.workers.dev");
 function getPin(){try{return localStorage.getItem("of-pin")||""}catch(e){return OF.pin||""}}
