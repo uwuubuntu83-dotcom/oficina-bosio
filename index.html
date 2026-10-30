@@ -181,7 +181,7 @@ function st(b){const s=(OF.EST.bots||{})[b.id]||{};
   if(s.estado==="falló")return{k:"bad",t:"falló"};
   if(s.ultimaFecha===hoyAR()||(b.horario&&b.horario.cada&&s.ultimoChequeo)) return{k:"ok",t:b.horario&&b.horario.cada?"vigilando":"cumplió hoy"};
   if(b.horario&&b.horario.cada&&s.memoria&&s.memoria.ultimoChequeo)return{k:"ok",t:"vigilando"};
-  const h=b.horario||{};const toca=!h.dias||h.dias==="todos"||h.dias.includes(diaAR());
+  const h=b.horario||{};if(h.apedido)return{k:"idle",t:"a pedido"};const toca=!h.dias||h.dias==="todos"||h.dias.includes(diaAR());
   return toca?{k:"wait",t:"le toca "+(h.hora||h.desde||"hoy")}:{k:"idle",t:"hoy descansa"};
 }
 const kindIco=b=>b.tipo==="codigo"?"⚙️":b.tipo==="externo"?"📱":"🧠";

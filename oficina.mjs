@@ -343,7 +343,7 @@ async function trabajar(b, { orden = "", origen = "agenda", resumen = false } = 
 /* ==========================================================================================
    EL GERENTE
    ========================================================================================== */
-const horarioTxt = b => { const h = b.horario || {}; if (b.tipo === "externo") return "trabaja en el celular"; const d = !h.dias || h.dias === "todos" ? "todos los días" : h.dias.map(x => DIAS3[x]).join(", "); return h.cada ? `${d}, cada ${h.cada} min de ${h.desde} a ${h.hasta}${h.resumen ? ` (resumen ${h.resumen})` : ""}` : `${d} ${h.hora}`; };
+const horarioTxt = b => { const h = b.horario || {}; if (b.tipo === "externo") return "trabaja en el celular"; if (h.apedido) return "a pedido (solo cuando se lo pedís)"; const d = !h.dias || h.dias === "todos" ? "todos los días" : h.dias.map(x => DIAS3[x]).join(", "); return h.cada ? `${d}, cada ${h.cada} min de ${h.desde} a ${h.hasta}${h.resumen ? ` (resumen ${h.resumen})` : ""}` : `${d} ${h.hora}`; };
 const tipoTxt = b => b.tipo === "codigo" ? "⚙️ sin IA" : b.tipo === "externo" ? "📱 celular" : b.buscar ? "🧠 IA + internet" : "🧠 IA";
 function tablero() {
   const l = [`🏢 ${CFG.oficina} · ${fechaAR()} ${horaAR()}`, `IA hoy: ${est.consumo.consultas} consultas · ${PROV.length} IA conectadas`, ""];
@@ -378,19 +378,20 @@ Hay dos tipos de bot:
   · recordatorio: mandar un aviso fijo. {"tipo":"recordatorio","texto":"..."}
 - "ia": cuando hace falta pensar, redactar o buscar y analizar en internet. "buscar": true solo si necesita datos actuales de internet.
 Respondé SOLO un JSON:
-{"id":"corto_sin_espacios","nombre":"Nombre visible","area":"id de área existente o nombre de un área nueva","tipo":"codigo|ia","receta":{...solo si es codigo},"buscar":true|false,"horario":{"dias":"todos" o [0-6 con 0=domingo],"hora":"HH:MM"},"mision":"qué hace","entregable":"qué entrega (si es ia)","criterios":["...","..."]}`, { json: true });
+{"id":"corto_sin_espacios","nombre":"Nombre visible","area":"id de área existente o nombre de un área nueva","tipo":"codigo|ia","receta":{...solo si es codigo},"buscar":true|false,"horario":{"apedido":true} si el jefe NO dijo cada cuánto ni cuándo, o {"dias":"todos" o [0-6 con 0=domingo],"hora":"HH:MM"} si lo dijo,"mision":"qué hace","entregable":"qué entrega (si es ia)","criterios":["...","..."]}`, { json: true });
   const j = parsearJSON(r.texto); if (!j || !j.nombre || !j.mision) throw new Error("no pude diseñar el bot, probá describirlo de otra forma");
   let id = slug(j.id || j.nombre); while (botPorId(id)) id += "2";
   let area = CFG.areas.find(a => a.id === j.area || a.nombre.toLowerCase() === String(j.area || "").toLowerCase());
   if (!area) { area = { id: slug(j.area || "nueva_area"), nombre: String(j.area || "Nueva área").slice(0, 40), icono: "📁", color: COLORES[extra.areas.length % COLORES.length] }; extra.areas.push(area); CFG.areas.push(area); }
   const tipo = j.tipo === "codigo" && j.receta && RECETAS[j.receta.tipo] ? "codigo" : "ia";
-  const horario = j.horario && (j.horario.hora || j.horario.cada) ? j.horario : { dias: "todos", hora: "09:00" };
+  const dijoCuando = /(todos los d[ií]as|cada |lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo|\d{1,2}(:\d{2})?\s*(hs|h\b|am|pm)|a la mañana|a la noche|semanal|diari|mensual)/i.test(pedido);
+  const horario = dijoCuando && j.horario && (j.horario.hora || j.horario.cada) ? j.horario : { apedido: true };
   if (horario.hora && !/^\d{2}:\d{2}$/.test(horario.hora)) horario.hora = "09:00";
   const bot = { id, nombre: String(j.nombre).slice(0, 50), area: area.id, tipo, horario, mision: String(j.mision).slice(0, 500), creado: NOW.toISOString() };
   if (tipo === "codigo") bot.receta = j.receta; else { bot.buscar = !!j.buscar; bot.entregable = String(j.entregable || "Un resultado concreto y listo para usar.").slice(0, 400); bot.criterios = Array.isArray(j.criterios) && j.criterios.length ? j.criterios.slice(0, 5).map(String) : ["Concreto", "Útil", "Sin relleno"]; }
   extra.bots.push(bot); CFG.bots.push(bot); est.bots[id] = nuevoBot(); guardarExtra();
   log("Gerente general", `contrató a ${bot.nombre} (${tipoTxt(bot)}) en ${area.nombre}`);
-  await enviar(`🤝 Contraté a «${bot.nombre}» en ${area.icono} ${area.nombre}\nTipo: ${tipoTxt(bot)}\nTarea: ${bot.mision}\nHorario: ${horarioTxt(bot)}\n\nPara probarlo ya: «correr ${id}». Si no te gusta: «despedir ${id}».`);
+  await enviar(`🤝 Contraté a «${bot.nombre}» en ${area.icono} ${area.nombre}\nTipo: ${tipoTxt(bot)}\nTarea: ${bot.mision}\nHorario: ${horarioTxt(bot)}\n\n${horario.apedido ? "No corre solo: trabaja cuando le pidas algo o escribas «correr " + id + "»." : "Para probarlo ya: «correr " + id + "»."} Si ya no lo necesitás: «pausar ${id}» o «eliminar ${id}».`);
   return bot;
 }
 async function procesarMensajes() {
@@ -502,7 +503,7 @@ async function revisarExternos() {
 /* ---------- ciclo ---------- */
 function toca(b) {
   const s = est.bots[b.id]; if (!s || s.pausado || areaPausada(b) || b.tipo === "externo") return null;
-  const h = b.horario || {}; const diasOk = !h.dias || h.dias === "todos" || h.dias.includes(diaAR()); if (!diasOk) return null;
+  const h = b.horario || {}; if (h.apedido) return null; const diasOk = !h.dias || h.dias === "todos" || h.dias.includes(diaAR()); if (!diasOk) return null;
   const hh = horaAR();
   if (h.cada) {
     if (h.resumen && hh >= h.resumen && s.memoria.resumenFecha !== fechaAR()) return { resumen: true };
