@@ -184,8 +184,8 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-30T02:43:55.644Z",
-   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-4-argon: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
+   "ultimaCorrida": "2026-10-30T02:50:06.356Z",
+   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.5-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.5-flash-lite: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
    "memoria": {}
@@ -633,6 +633,26 @@
  },
  "log": [
   {
+   "t": "2026-10-30T02:50:06.356Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.5-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.5-flash-lite: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T02:50:06.356Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T02:50:06.356Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos (todavía no hay dueño vinculado: mandale cualquier mensaje al bot)"
+  },
+  {
+   "t": "2026-10-30T02:50:06.356Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github"
+  },
+  {
    "t": "2026-10-30T02:43:55.644Z",
    "quien": "Monitor de salud",
    "que": "entregó (sin IA)"
@@ -777,14 +797,14 @@
  },
  "consumo": {
   "fecha": "2026-10-29",
-  "consultas": 43,
+  "consultas": 46,
   "por": {
-   "gemini": 7,
+   "gemini": 10,
    "github": 4
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-30T02:43:55.644Z",
+ "actualizado": "2026-10-30T02:50:06.356Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -804,7 +824,10 @@
    "github:openai/gpt-4.1-mini": 1793328853880,
    "github:openai/gpt-4o-mini": 1793328856366,
    "github:meta/Llama-3.3-70B-Instruct": 1793328858873,
-   "github:mistral-ai/mistral-small-2503": 1793328877713
+   "github:mistral-ai/mistral-small-2503": 1793328877713,
+   "gemini:gemini-3.6-flash": 1793328636977,
+   "gemini:gemini-3.5-flash": 1793328643463,
+   "gemini:gemini-3.5-flash-lite": 1793328649964
   },
   "ultimo": {
    "prov": "Google Gemini",
