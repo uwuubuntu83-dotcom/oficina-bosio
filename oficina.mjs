@@ -86,7 +86,7 @@ async function modelosGemini(p) {
     const j = await (await traer(`${URLS.gemini}/models?pageSize=200&key=${encodeURIComponent(p.key)}`)).json();
     const ms = (j.models || []).filter(m => (m.supportedGenerationMethods || []).includes("generateContent") && /gemini|gemma/.test(m.name) && !/(embed|tts|image|live|audio|vision|aqa|learnlm|robotics|computer|thinking)/i.test(m.name)).map(m => m.name.replace(/^models\//, ""));
     const score = n => { const v = parseFloat((n.match(/(?:gemini|gemma)-(\d+(?:\.\d+)?)/) || [])[1] || 0); return (/gemini/.test(n) ? 100 : 0) + v * 10 + (/flash/.test(n) && !/lite/.test(n) ? 3 : /lite/.test(n) ? 2 : /pro/.test(n) ? 1 : 0) - (/(preview|exp|\d{3,}$)/.test(n) ? 0.5 : 0); };
-    p.modelos = ms.sort((a, b) => score(b) - score(a)).slice(0, 6);
+    p.todos = ms.sort((a, b) => score(b) - score(a)); p.modelos = p.todos.slice(0, 6);
   } catch { p.modelos = []; }
   if (!p.modelos.length) p.modelos = ["gemini-2.5-flash", "gemini-2.5-flash-lite"];
   return p.modelos;
@@ -147,7 +147,7 @@ async function ia(prompt, { buscar = false, json = false } = {}) {
     if (agotado(p.id)) continue;
     let modelos;
     if (buscar && p.buscarModelo) modelos = [p.buscarModelo];
-    else if (p.tipo === "gemini") modelos = await modelosGemini(p);
+    else if (p.tipo === "gemini") { modelos = await modelosGemini(p); if (buscar) { const todos = p.todos || modelos; const pref = [/^gemini-2\.5-flash$/, /^gemini-2\.5-flash-lite$/, /^gemini-2\.0-flash$/, /^gemini-flash-latest$/, /^gemini-2\.5-pro$/]; const prim = pref.flatMap(r => todos.filter(m => r.test(m))); modelos = [...new Set([...prim, "gemini-2.5-flash", "gemini-2.5-flash-lite", ...modelos])].slice(0, 7); } }
     else if (p.gratis) modelos = await modelosOpenRouter(p);
     else modelos = p.modelos || [];
     let fallasProv = 0;
@@ -454,7 +454,7 @@ Empleados:\n${lista}
 Elegí el empleado que mejor la cumple. Si ninguno encaja, elegí "gerente" (la hacés vos).
 Respondé SOLO un JSON: {"bot":"id o gerente","instruccion":"la orden clara para ese empleado","aviso":"frase corta para el jefe diciendo a quién se la pasaste","buscar":true si hace falta buscar en internet}`, { json: true });
   const j = parsearJSON(r.texto) || {}; const b = botPorId(j.bot);
-  if (b && b.tipo !== "externo" && !est.bots[b.id].pausado) {
+  if (b && b.tipo !== "externo") {
     log("Gerente general", `le pasó la orden a ${b.nombre}`); await enviar(`📥 ${j.aviso || `Se la paso a ${b.nombre}.`}`);
     // los bots sin IA hacen su tarea tal cual (gratis); los de IA reciben la orden concreta
     await trabajar(b, { orden: b.tipo === "codigo" ? "" : (j.instruccion || p.orden), origen: "orden" });

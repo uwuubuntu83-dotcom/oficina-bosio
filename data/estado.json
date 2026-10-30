@@ -182,7 +182,7 @@
    "ultimaCorrida": null
   },
   "terrenos": {
-   "estado": "postergado",
+   "estado": "esperando",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -193,9 +193,9 @@
    "nivel": 1,
    "ultimaFecha": null,
    "ultimaCorrida": "2026-10-30T02:59:16.579Z",
-   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-4-argon: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
+   "resumen": "En pausa: se activa cuando se lo pidas al gerente.",
    "informe": null,
-   "pausado": false,
+   "pausado": true,
    "memoria": {}
   },
   "casas": {
