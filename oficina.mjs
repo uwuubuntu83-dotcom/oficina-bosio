@@ -45,7 +45,8 @@ const est = leer(FEST, {});
 est.version = 2; est.bots ||= {}; est.log ||= []; est.pendientes ||= []; est.mensajes ||= {}; est.tgOffset ||= 0; est.hechos ||= {}; est.ia ||= {};
 if (!est.consumo || est.consumo.fecha !== fechaAR()) est.consumo = { fecha: fechaAR(), consultas: 0, busquedas: 0, por: {} };
 est.consumo.por ||= {};
-if (est.ia.fecha !== fechaAR()) est.ia = { fecha: fechaAR(), agotado: {} };
+const huellaClaves = ["GEMINI_API_KEY", "GROQ_API_KEY", "OPENROUTER_API_KEY", "MISTRAL_API_KEY", "SAMBANOVA_API_KEY", "NVIDIA_API_KEY", "CEREBRAS_API_KEY", "CLOUDFLARE_API_TOKEN", "COHERE_API_KEY", "HF_TOKEN"].map(k => (ENV[k] || "").slice(-4)).join("");
+if (est.ia.fecha !== fechaAR() || est.ia.huella !== huellaClaves) est.ia = { fecha: fechaAR(), agotado: {}, huella: huellaClaves }; // clave nueva = cupo nuevo
 const nuevoBot = () => ({ estado: "esperando", corridas: 0, fallas: 0, fallasSeguidas: 0, puntaje: null, historial: [], likes: 0, dislikes: 0, nivel: 1, ultimaFecha: null, ultimaCorrida: null, resumen: "", informe: null, pausado: false, memoria: {} });
 for (const b of bots()) { const nuevo = !est.bots[b.id]; est.bots[b.id] = Object.assign(nuevoBot(), est.bots[b.id]); if (nuevo && b.pausado) est.bots[b.id].pausado = true; }
 est.bots.gerente = Object.assign({ estado: "esperando", resumen: "" }, est.bots.gerente);
