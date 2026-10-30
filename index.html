@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="es">
 <head>
+<meta name="version" content="20261030172930">
+<meta http-equiv="Cache-Control" content="no-cache">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Oficina Bosio</title>
@@ -327,6 +329,9 @@ document.querySelectorAll("#bar button").forEach(b=>b.addEventListener("click",(
 }));
 let v0="2d";try{v0=localStorage.getItem("of-vista")||"2d"}catch(e){}
 cargar().then(()=>setVista(v0));setInterval(cargar,60000);
+/* se actualiza sola cuando hay una versión nueva de la página */
+const VER=(document.querySelector('meta[name="version"]')||{}).content||"";
+setInterval(async()=>{try{const t=await (await fetch(location.pathname+"?v="+Date.now(),{cache:"no-store"})).text();const m=t.match(/<meta name="version" content="([^"]+)"/);if(m&&VER&&m[1]!==VER&&!$("#dlg").open)location.reload()}catch(e){}},120000);
 let cargando3D=false;function iniciar3D(){if(window.OF3D||cargando3D)return;cargando3D=true;import("./oficina3d.js").catch(()=>{$("#v3d").append(h("div",{class:"fallback3"},"No se pudo cargar la vista 3D en este dispositivo. Usá la vista 2D."))})}
 </script>
 </body>
