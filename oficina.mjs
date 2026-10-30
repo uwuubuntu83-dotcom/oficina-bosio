@@ -624,6 +624,26 @@ const RECETAS = {
     const l = [`💻 Soporte · disponibilidad de tus páginas (últimos ${dias.length} días)`, ...Object.entries(t).map(([url, [ok, n]]) => { const p = n ? ok / n * 100 : 0; return `${p >= 99 ? "🟢" : p >= 95 ? "🟡" : "🔴"} ${url.replace(/^https?:\/\//, "").replace(/\/$/, "")}: ${p.toFixed(1)}% arriba${p < 99 ? ` (~${Math.round((n - ok) * 30 / 60)} h caída)` : ""}` })];
     return { texto: l.join("\n"), enviar: true };
   },
+  // ---- ⏰ Recordatorios a pedido y fechas importantes (corre en cada vuelta)
+  async recordatorios(b, sb) {
+    const ahora = fechaAR() + " " + horaAR(), r = leerPrivSeguro("recordatorios", []), toca = r.filter(x => x.fecha + " " + x.hora <= ahora);
+    if (toca.length) { escribirPriv("recordatorios", r.filter(x => !toca.includes(x))); for (const x of toca) await enviar(`⏰ Recordatorio: ${x.texto}`); }
+    const f = leerPrivSeguro("fechas", []), hoy = new Date(NOW.getTime() - 3 * 3600e3); const avisos = [];
+    if (horaAR() >= "08:00" && sb.memoria.fechasAvisadas !== fechaAR()) { sb.memoria.fechasAvisadas = fechaAR();
+      for (const x of f) for (const [n, txt] of [[0, "HOY"], [3, "en 3 días"]]) { const d = new Date(hoy.getTime() + n * 86400e3); if (d.getUTCDate() === x.dd && d.getUTCMonth() + 1 === x.mm) avisos.push(`🎂 ${txt}: ${x.tipo} de ${x.quien} (${x.dd}/${x.mm})`); } }
+    return { texto: avisos.join("\n") || "Sin recordatorios por ahora.", enviar: avisos.length > 0 };
+  },
+  // ---- 📅 Feriados y fines de semana largos (ArgentinaDatos, gratis)
+  async feriados(b, sb) {
+    const y = Number(fechaAR().slice(0, 4)); let fer = [];
+    for (const yy of [y, y + 1]) { try { const r = await traer(`https://api.argentinadatos.com/v1/feriados/${yy}`, {}, 15000); if (r.ok) fer = fer.concat(await r.json()); } catch {} }
+    if (!fer.length) throw new Error("no pude leer los feriados");
+    const hoy = fechaAR(), prox = fer.filter(x => x.fecha >= hoy).sort((a, z) => a.fecha.localeCompare(z.fecha));
+    const en = n => fechaAR(new Date(NOW - -n * 86400e3)), cerca = prox.filter(x => x.fecha <= en(7));
+    if (!cerca.length) return { texto: "Sin feriados esta semana.", enviar: false };
+    const largo = x => { const d = new Date(x.fecha + "T12:00:00Z").getUTCDay(); return d === 1 || d === 5 ? " → ¡fin de semana largo!" : ""; };
+    return { texto: `📅 Feriados de los próximos 7 días:\n` + cerca.map(x => `• ${DIAS[new Date(x.fecha + "T12:00:00Z").getUTCDay()]} ${x.fecha.slice(8, 10)}/${x.fecha.slice(5, 7)}: ${x.nombre}${x.tipo === "puente" ? " (puente turístico)" : ""}${largo(x)}`).join("\n") + "\n\nPlanificá la obra y los pagos: los bancos no abren. Para una escapada: «escapadas».", enviar: true };
+  },
   async salud() {
     const l = []; const fallaron = bots().filter(x => est.bots[x.id]?.estado === "falló"); const pausados = bots().filter(x => est.bots[x.id]?.pausado);
     const ext = bots().filter(x => x.tipo === "externo").map(x => ({ b: x, hb: leer(path.join(DATA, "externos", x.id + ".json"), null) }));
@@ -738,7 +758,7 @@ async function trabajar(b, { orden = "", origen = "agenda", resumen = false, hor
 /* ==========================================================================================
    EL GERENTE
    ========================================================================================== */
-const horarioTxt = b => { const h = b.horario || {}; if (b.tipo === "externo") return "trabaja en el celular"; if (h.apedido) return "a pedido (solo cuando se lo pedís)"; const d = !h.dias || h.dias === "todos" ? "todos los días" : h.dias.map(x => DIAS3[x]).join(", "); return h.horas ? `${d} a las ${h.horas.join(", ")}` : h.cada ? `${d}, cada ${h.cada} min de ${h.desde} a ${h.hasta}${h.resumen ? ` (resumen ${h.resumen})` : ""}` : `${d} ${h.hora}`; };
+const horarioTxt = b => { const h = b.horario || {}; if (b.tipo === "externo") return "trabaja en el celular"; if (h.apedido) return "a pedido (solo cuando se lo pedís)"; const d = !h.dias || h.dias === "todos" ? "todos los días" : h.dias.map(x => DIAS3[x]).join(", "); return h.diaMes ? `el ${h.diaMes.join(" y ")} de cada mes a las ${(h.horas || [h.hora]).join(", ")}` : h.horas ? `${d} a las ${h.horas.join(", ")}` : h.cada ? `${d}, cada ${h.cada} min de ${h.desde} a ${h.hasta}${h.resumen ? ` (resumen ${h.resumen})` : ""}` : `${d} ${h.hora}`; };
 const tipoTxt = b => b.tipo === "codigo" ? "⚙️ sin IA" : b.tipo === "externo" ? "📱 celular" : b.buscar ? "🧠 IA + internet" : "🧠 IA";
 function tablero() {
   const l = [`🏢 ${CFG.oficina} · ${fechaAR()} ${horaAR()}`, `IA hoy: ${est.consumo.consultas} consultas · ${PROV.length} IA conectadas`, ""];
@@ -765,6 +785,7 @@ const AYUDA = () => `Soy el Gerente general de la ${CFG.oficina}. Escribime:
 • «caminé 40 minutos», «hice pesas», «no entrené» — tu actividad.
 • «gasté 5000 en nafta» — gasto personal. «pagué luz 34800» — servicio de la casa.
 • «servicio luz vence 10 35000» — te aviso antes de cada vencimiento.
+• recordame mañana a las 9 pagar el monotributo · recordatorios · cumple de mamá 15/11 · fechas
 • consejo — el contador te dice cómo venís y dónde cortar · inversiones — qué hacer con lo que ahorrás
 • perfil: me tengo que cuidar del colesterol — lo tienen en cuenta los bots de salud y plata (privado)
 • torta (gráfico e informe de gastos del mes) · torta semana · torta mes pasado · servicios · comidas · ejercicio · borrar último gasto
@@ -825,6 +846,24 @@ Respondé SOLO un JSON: {"monto": total en pesos como número sin símbolos ni p
   else { const cat = categoria(det + " " + (p.orden || "")); anotar("gastos", { texto: det, monto, cat, origen: "comprobante" }); await enviar(`🧾 Leí el comprobante y lo anoté: ${pesos(monto)} · ${det} · ${cat}.\nSi está mal, escribí «borrar último gasto».`); }
   log("Contaduría", "anotó un comprobante (privado)");
 }
+/* ---------- recordatorios y fechas (sin IA) ---------- */
+const MESES_N = { enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, julio: 7, agosto: 8, septiembre: 9, setiembre: 9, octubre: 10, noviembre: 11, diciembre: 12 };
+function leerCuando(t) { // devuelve { fecha: "AAAA-MM-DD", hora: "HH:MM", resto } o null
+  let s = " " + t.toLowerCase() + " ", fecha = null, hora = null; const hoy = new Date(NOW.getTime() - 3 * 3600e3);
+  const iso = d => d.toISOString().slice(0, 10); const mas = n => iso(new Date(hoy.getTime() + n * 86400e3));
+  let m;
+  if ((m = s.match(/\b(?:a las|a la|tipo|\ba)\s*(\d{1,2})(?:[:.](\d{2}))?\s*(?:hs|h|horas)?\b/)) || (m = s.match(/\b(\d{1,2})[:.](\d{2})\s*(?:hs|h)?\b/)) || (m = s.match(/\b(\d{1,2})\s*(?:hs|h)\b/))) { let h = Number(m[1]); if (/tarde|noche/.test(s) && h < 12) h += 12; if (h < 24) { hora = String(h).padStart(2, "0") + ":" + (m[2] || "00"); s = s.replace(m[0], " "); } }
+  if ((m = s.match(/\ben (\d{1,3}) (minutos?|horas?)\b/))) { const ms = Number(m[1]) * (m[2].startsWith("h") ? 3600e3 : 60e3); const d = new Date(hoy.getTime() + ms); fecha = iso(d); hora = d.toISOString().slice(11, 16); s = s.replace(m[0], " "); }
+  else if (/\bpasado mañana\b/.test(s)) { fecha = mas(2); s = s.replace(/pasado mañana/, " "); }
+  else if (/\bmañana\b/.test(s) && !/\bde la mañana\b|\bpor la mañana\b/.test(s)) { fecha = mas(1); s = s.replace(/\bmañana\b/, " "); }
+  else if (/\bhoy\b/.test(s)) { fecha = mas(0); s = s.replace(/\bhoy\b/, " "); }
+  else if ((m = s.match(/\b(?:el )?(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?\b/))) { let y = m[3] ? Number(m[3].length === 2 ? "20" + m[3] : m[3]) : hoy.getUTCFullYear(); let d = `${y}-${m[2].padStart(2, "0")}-${m[1].padStart(2, "0")}`; if (!m[3] && d < iso(hoy)) d = `${y + 1}${d.slice(4)}`; fecha = d; s = s.replace(m[0], " "); }
+  else if ((m = s.match(/\b(?:el )?(\d{1,2}) de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)\b/))) { const y = hoy.getUTCFullYear(); let d = `${y}-${String(MESES_N[m[2]]).padStart(2, "0")}-${m[1].padStart(2, "0")}`; if (d < iso(hoy)) d = `${y + 1}${d.slice(4)}`; fecha = d; s = s.replace(m[0], " "); }
+  else if ((m = s.match(/\b(?:el )?(lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo)\b/))) { const idx = ["domingo", "lunes", "martes", "miercoles", "jueves", "viernes", "sabado"].indexOf(m[1].normalize("NFD").replace(/[̀-ͯ]/g, "")); let n = (idx - hoy.getUTCDay() + 7) % 7 || 7; fecha = mas(n); s = s.replace(m[0], " "); }
+  if (!fecha && hora) fecha = hora > iso(hoy).slice(0, 0) + hoy.toISOString().slice(11, 16) ? mas(0) : mas(1);
+  if (!fecha) return null;
+  return { fecha, hora: hora || "09:00", resto: s.replace(/\b(de la tarde|de la noche|de la mañana|por la mañana|que|de|a)\s*$/g, "").replace(/\s{2,}/g, " ").trim() };
+}
 const MOMENTO = () => { const h = horaAR(); return h < "11:00" ? "desayuno" : h < "15:30" ? "almuerzo" : h < "19:30" ? "merienda" : "cena"; };
 const RX_COMIDA = /^(desayun|almorc|almuerzo|merend|merienda|cen[eé]\b|cena\b|com[ií]\b|tom[eé]\b|picote|comida:)/i;
 const RX_EJER = /^(camin[eé]|corr[ií]|trot[eé]|entren[eé]|hice\s+(ejercicio|gimnasio|gym|pesas|abdominales|flexiones|cardio|bici|rutina)|fui\s+al\s+(gym|gimnasio|club)|nad[eé]|anduve en bici|no\s+(hice|entren[eé]|camin[eé])|ejercicio:)/i;
@@ -837,6 +876,16 @@ async function registrar(txt, desdeBot) {
   if (reg === "ejercicio" || (!desdeBot && RX_EJER.test(txt))) { const hizo = !/^(no\b|nada|hoy no|ni\b)/i.test(txt); anotar("ejercicio", { texto: txt.slice(0, 400), hizo }); const sem = new Set(leerPriv("ejercicio", []).filter(x => x.hizo && x.t >= hace(7)).map(x => x.f)).size; await enviar(hizo ? `💪 ¡Bien! Anotado. Esta semana llevás ${sem} día(s) activo(s).` : `📝 Anotado. Mañana arrancamos: aunque sea 20 minutos de caminata.`); return true; }
   if (/^(consejo|consejero|contador|c[oó]mo vengo|c[oó]mo voy)(\s+(con\s+)?(los\s+|mis\s+)?(gastos|la plata|plata))?\s*[?!.]*$/i.test(txt) && botPorId("consejero")) { est.pendientes.push({ bot: "consejero", orden: "", t: NOW.toISOString(), origen: "orden" }); return true; }
   if (/^(inversiones|invertir|inversor|asesor|d[oó]nde invierto|qu[eé] hago con (mis |los |el )?(ahorros?|plata))\s*[?!.]*$/i.test(txt) && botPorId("inversor")) { est.pendientes.push({ bot: "inversor", orden: "", t: NOW.toISOString(), origen: "orden" }); return true; }
+  if ((mm = txt.match(/^(?:record[aá]me|recordame|acordame|avisame|av[ií]same)\s+(.+)$/is))) {
+    const c = leerCuando(mm[1]); if (!c) { await enviar("⏰ No entendí cuándo. Probá: «recordame mañana a las 9 pagar el monotributo», «recordame el 15/11 llamar al cliente», «recordame en 2 horas sacar el pollo»."); return true; }
+    const qué = c.resto.replace(/^(que|de)\s+/i, "") || "lo que me pediste"; const r = leerPriv("recordatorios", []); r.push({ id: Date.now().toString(36), fecha: c.fecha, hora: c.hora, texto: qué }); escribirPriv("recordatorios", r);
+    await enviar(`⏰ Listo: el ${c.fecha.slice(8, 10)}/${c.fecha.slice(5, 7)} a las ${c.hora} te recuerdo «${qué}».\n(Se avisa en la vuelta de la oficina: puede llegar hasta 30 minutos después.)`); return true; }
+  if (/^(mis\s+)?recordatorios$/i.test(txt)) { const r = leerPriv("recordatorios", []).sort((a, z) => (a.fecha + a.hora).localeCompare(z.fecha + z.hora)); await enviar(r.length ? "⏰ Tus recordatorios:\n" + r.map((x, i) => `${i + 1}. ${x.fecha.slice(8, 10)}/${x.fecha.slice(5, 7)} ${x.hora} · ${x.texto}`).join("\n") + "\n\nPara borrar: «borrar recordatorio 2»." : "No tenés recordatorios. Ej: «recordame mañana a las 9 pagar el monotributo»."); return true; }
+  if ((mm = txt.match(/^borrar\s+recordatorio\s+(\d+)$/i))) { const r = leerPriv("recordatorios", []).sort((a, z) => (a.fecha + a.hora).localeCompare(z.fecha + z.hora)); const x = r.splice(Number(mm[1]) - 1, 1)[0]; escribirPriv("recordatorios", r); await enviar(x ? `🗑️ Borré «${x.texto}».` : "No encontré ese número. Escribí «recordatorios»."); return true; }
+  if ((mm = txt.match(/^(cumple|cumplea[ñn]os|aniversario|fecha)\s+(?:de\s+)?(.+?)\s+(?:el\s+)?(\d{1,2})\/(\d{1,2})\s*$/i)) || (mm = txt.match(/^(cumple|cumplea[ñn]os|aniversario|fecha)\s+(?:de\s+)?(.+?)\s+(?:el\s+)?(\d{1,2}) de (enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)\s*$/i))) {
+    const mes = isNaN(Number(mm[4])) ? MESES_N[mm[4].toLowerCase()] : Number(mm[4]); const f = leerPriv("fechas", []); f.push({ tipo: /aniv/i.test(mm[1]) ? "aniversario" : /cumple/i.test(mm[1]) ? "cumpleaños" : "fecha", quien: mm[2].trim(), dd: Number(mm[3]), mm: mes }); escribirPriv("fechas", f);
+    await enviar(`🎂 Anotado: ${mm[2].trim()} el ${mm[3]}/${mes}. Te aviso 3 días antes y el mismo día.`); return true; }
+  if (/^(mis\s+)?(fechas|cumplea[ñn]os|cumples)$/i.test(txt)) { const f = leerPriv("fechas", []).sort((a, z) => a.mm - z.mm || a.dd - z.dd); await enviar(f.length ? "🎂 Tus fechas:\n" + f.map(x => `• ${String(x.dd).padStart(2, "0")}/${String(x.mm).padStart(2, "0")} · ${x.tipo} de ${x.quien}`).join("\n") : "No tenés fechas. Ej: «cumple de mamá 15/11»."); return true; }
   if ((mm = txt.match(/^(?:mi\s+)?perfil\s*:\s*(.{3,})$/is))) { const pf = leerPriv("perfil", []); pf.push({ t: NOW.toISOString(), texto: mm[1].trim().slice(0, 400) }); escribirPriv("perfil", pf.slice(-40)); await enviar(`🔒 Anotado en tu perfil privado: «${mm[1].trim().slice(0, 120)}». El nutricionista, el trainer y el consejero financiero lo van a tener en cuenta siempre.`); return true; }
   if (/^(ver\s+)?(mi\s+)?perfil$/i.test(txt)) { const pf = leerPriv("perfil", []); await enviar(pf.length ? "🔒 Tu perfil privado:\n" + pf.map((x, i) => `${i + 1}. ${x.texto}`).join("\n") + "\n\nPara sumar algo: «perfil: ...». Para borrar todo: «borrar perfil»." : "Tu perfil está vacío. Contame algo así: «perfil: me tengo que cuidar del colesterol»."); return true; }
   if (/^borrar\s+(mi\s+)?perfil$/i.test(txt)) { escribirPriv("perfil", []); await enviar("🗑️ Borré tu perfil privado."); return true; }
@@ -1037,7 +1086,7 @@ async function revisarExternos() {
 /* ---------- ciclo ---------- */
 function toca(b) {
   const s = est.bots[b.id]; if (!s || s.pausado || areaPausada(b) || b.tipo === "externo") return null;
-  const h = b.horario || {}; if (h.apedido) return null; const diasOk = !h.dias || h.dias === "todos" || h.dias.includes(diaAR()); if (!diasOk) return null;
+  const h = b.horario || {}; if (h.apedido) return null; const diasOk = !h.dias || h.dias === "todos" || h.dias.includes(diaAR()); if (!diasOk) return null; if (h.diaMes && !h.diaMes.includes(Number(fechaAR().slice(8, 10)))) return null;
   const hh = horaAR();
   if (h.horas) { const ent = s.memoria.horas && s.memoria.horas.fecha === fechaAR() ? s.memoria.horas : (s.memoria.horas = { fecha: fechaAR(), hechas: s.memoria.horas ? [] : h.horas.filter(x => x < hh) }); /* la primera vez no repite las que ya pasaron */ const pend = h.horas.filter(x => hh >= x && !ent.hechas.includes(x)); if (!pend.length) return null; ent.hechas.push(...pend); return { resumen: false, hora: pend[pend.length - 1] }; }
   if (h.cada) {

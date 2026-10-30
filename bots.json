@@ -779,6 +779,41 @@
       "mision": "Sin IA. Los domingos a las 20:45: semáforo de tu semana (días que entrenaste, comidas pesadas, cuánto anotaste) contra la semana anterior, y la meta para la próxima."
     },
     {
+      "id": "recordatorios",
+      "nombre": "Recordatorios y cumpleaños",
+      "area": "asistente",
+      "tipo": "codigo",
+      "privado": true,
+      "receta": {
+        "tipo": "recordatorios"
+      },
+      "horario": {
+        "dias": "todos",
+        "cada": 30,
+        "desde": "00:00",
+        "hasta": "23:59"
+      },
+      "mision": "Sin IA. Te recuerda lo que le pidas («recordame mañana a las 9 pagar el monotributo», «recordame en 2 horas sacar el pollo») y te avisa los cumpleaños y fechas importantes 3 días antes y el mismo día («cumple de mamá 15/11»)."
+    },
+    {
+      "id": "feriados",
+      "nombre": "Feriados y findes largos",
+      "area": "asistente",
+      "tipo": "codigo",
+      "receta": {
+        "tipo": "feriados"
+      },
+      "horario": {
+        "dias": [
+          1
+        ],
+        "horas": [
+          "08:00"
+        ]
+      },
+      "mision": "Sin IA. Los lunes a las 8:00 te avisa los feriados de la semana y si hay fin de semana largo, para planificar la obra, los pagos y alguna escapada."
+    },
+    {
       "id": "nutricionista",
       "nombre": "Nutricionista",
       "area": "asistente",
@@ -954,6 +989,26 @@
         "hasta": "23:59"
       },
       "mision": "Revisa cada 3 horas novedades de vencimientos de ARCA, monotributo e Ingresos Brutos de Córdoba y te avisa cuando aparece algo nuevo."
+    },
+    {
+      "id": "monotributo",
+      "nombre": "Vencimiento del monotributo",
+      "area": "contaduria",
+      "tipo": "codigo",
+      "receta": {
+        "tipo": "recordatorio",
+        "texto": "🧾 El monotributo vence el 20 de este mes. Pagalo desde la app de tu banco o Mercado Pago con el VEP (ARCA → Monotributo → Pagar). Si ya lo pagaste, ignorá este aviso."
+      },
+      "horario": {
+        "dias": "todos",
+        "diaMes": [
+          17
+        ],
+        "horas": [
+          "09:15"
+        ]
+      },
+      "mision": "Sin IA. El 17 de cada mes te recuerda que el 20 vence el monotributo."
     },
     {
       "id": "tarifas",
