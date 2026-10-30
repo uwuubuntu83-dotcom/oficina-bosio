@@ -177,8 +177,8 @@ function parsearJSON(t) { const s = String(t || "").replace(/```(?:json)?/g, "")
 /* ---------- Telegram ---------- */
 async function tg(metodo, datos) {
   if (!TG_TOKEN) return null;
-  try { const r = await traer(`${URLS.tg}/bot${TG_TOKEN}/${metodo}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(datos || {}) }, 30000); const j = await r.json(); if (!j.ok) console.log("Telegram:", metodo, j.description); return j.ok ? j.result : null; }
-  catch (e) { console.log("Telegram sin conexión:", e.message); return null; }
+  try { const r = await traer(`${URLS.tg}/bot${TG_TOKEN}/${metodo}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(datos || {}) }, 30000); const j = await r.json(); if (!j.ok) { console.log("Telegram:", metodo, j.description); tg.error = `${metodo}: ${j.description}`; } return j.ok ? j.result : null; }
+  catch (e) { console.log("Telegram sin conexión:", e.message); tg.error = `${metodo}: sin conexión (${e.message})`; return null; }
 }
 async function enviar(texto, botId) {
   if (!est.dueno) return null;
@@ -237,7 +237,7 @@ const RECETAS = {
   },
   async web_estado(b, sb) {
     const antes = sb.memoria.caidas || {}; const ahora = {}; const cambios = []; const lineas = [];
-    for (const u of b.receta.urls || []) { let ok = false, det = ""; try { const r = await traer(u, {}, 20000); ok = r.status < 400; det = String(r.status); } catch (e) { det = e.name === "AbortError" ? "no responde" : "error de conexión"; } ahora[u] = !ok; lineas.push(`${ok ? "✅" : "❌"} ${u} (${det})`); if (!ok && !antes[u]) cambios.push(`❌ Se cayó: ${u} (${det})`); if (ok && antes[u]) cambios.push(`✅ Volvió: ${u}`); }
+    for (const u of b.receta.urls || []) { let ok = false, det = ""; try { const r = await traer(u, {}, 20000); ok = r.status < 500 && r.status !== 404; det = String(r.status); /* 401/403 = la página responde pero protege contra robots: está viva */ } catch (e) { det = e.name === "AbortError" ? "no responde" : "error de conexión"; } ahora[u] = !ok; lineas.push(`${ok ? "✅" : "❌"} ${u} (${det})`); if (!ok && !antes[u]) cambios.push(`❌ Se cayó: ${u} (${det})`); if (ok && antes[u]) cambios.push(`✅ Volvió: ${u}`); }
     sb.memoria.caidas = ahora;
     return { texto: lineas.join("\n"), enviar: cambios.length > 0, alerta: cambios.join("\n") };
   },
@@ -394,8 +394,14 @@ Respondé SOLO un JSON:
 }
 async function procesarMensajes() {
   if (!TG_TOKEN) return;
-  const ups = await tg("getUpdates", { offset: est.tgOffset, timeout: 0 }) || [];
-  log("Mesa de entrada", ups.length ? `llegaron ${ups.length} mensajes de Telegram` : "sin mensajes nuevos");
+  let ups = await tg("getUpdates", { offset: est.tgOffset, timeout: 0, allowed_updates: ["message", "edited_message"] });
+  if (ups === null) {
+    const info = await tg("getWebhookInfo", {});
+    log("Mesa de entrada", `Telegram no entregó mensajes (${tg.error || "sin detalle"})${info && info.url ? " · tenía un webhook: " + info.url : ""}`);
+    if (info && info.url) { await tg("deleteWebhook", { drop_pending_updates: false }); ups = await tg("getUpdates", { offset: est.tgOffset, timeout: 0 }); }
+  }
+  ups = ups || [];
+  log("Mesa de entrada", ups.length ? `llegaron ${ups.length} mensajes de Telegram` : `sin mensajes nuevos${est.dueno ? "" : " (todavía no hay dueño vinculado: mandale cualquier mensaje al bot)"}`);
   for (const u of ups) {
     est.tgOffset = u.update_id + 1;
     const m = u.message || u.edited_message; if (!m || !m.text) continue;
