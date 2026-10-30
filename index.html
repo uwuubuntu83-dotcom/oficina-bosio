@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Oficina Bosio</title>
+<meta name="description" content="La oficina de bots de Jonathan: quién trabaja, qué entregó y cómo viene cada uno.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Concepto: planta de oficina vista desde arriba, en pixel art (idea tomada de Star-Office-UI): cada bot en su escritorio, la luz del puesto dice si trabajó. */
+:root{
+  --bg:#efe9df; --floor-a:#e3d8c6; --floor-b:#dccfba; --panel:#fbf8f3; --ink:#2a2420; --muted:#6f655b; --line:#cbbfae;
+  --wall:#4a3f36; --desk:#9a6b43; --desk-top:#b98455; --screen:#1d2a33; --glow:#6fe0a8;
+  --ok:#2f8a4f; --warn:#b7791f; --bad:#c0392b; --idle:#8a8178; --accent:#c4542b;
+  --f-pixel:"Pixelify Sans", "Courier New", monospace; --f-body:"Atkinson Hyperlegible", system-ui, sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{--bg:#1d1916;--floor-a:#2a241f;--floor-b:#26201b;--panel:#231e1a;--ink:#efe6da;--muted:#a99d90;--line:#3d342d;--wall:#0f0c0a;--desk:#6e4a2d;--desk-top:#8a5d39;--screen:#0c1318;--accent:#e2774e;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.45}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1280px;margin:0 auto;padding-block:18px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 24px;margin-bottom:14px}
+h1{font-family:var(--f-pixel);font-size:34px;margin:0;letter-spacing:.5px;line-height:1}
+.sub{color:var(--muted);margin:4px 0 0}
+.stats{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.stat{background:var(--panel);border:2px solid var(--line);padding:6px 10px;font-family:var(--f-pixel);font-size:14px;white-space:nowrap}
+.stat b{font-size:18px}
+.banner{border:2px dashed var(--warn);background:color-mix(in srgb,var(--warn) 12%,var(--panel));padding:10px 14px;margin-bottom:14px}
+.layout{display:grid;grid-template-columns:1fr 330px;gap:16px;align-items:start}
+@media(max-width:980px){.layout{grid-template-columns:1fr}}
+/* organigrama */
+.org{display:flex;flex-direction:column;align-items:center;gap:0;margin-bottom:14px}
+.boss{background:var(--wall);color:#f6efe4;padding:10px 16px;font-family:var(--f-pixel);display:flex;gap:12px;align-items:center;border:3px solid #000;box-shadow:4px 4px 0 rgba(0,0,0,.25);cursor:pointer;max-width:100%}
+.boss small{display:block;font-family:var(--f-body);opacity:.8;font-size:12.5px}
+.trunk{width:4px;height:16px;background:var(--wall)}
+.branches{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;border-top:4px solid var(--wall);padding-top:8px;max-width:100%}
+.branch{font-family:var(--f-pixel);font-size:13px;padding:3px 8px;border:2px solid var(--wall);background:var(--panel)}
+/* planta */
+.floor{background-color:var(--floor-a);background-image:linear-gradient(45deg,var(--floor-b) 25%,transparent 25%,transparent 75%,var(--floor-b) 75%),linear-gradient(45deg,var(--floor-b) 25%,transparent 25%,transparent 75%,var(--floor-b) 75%);background-size:32px 32px;background-position:0 0,16px 16px;border:6px solid var(--wall);padding:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.room{border:4px solid var(--rc);background:color-mix(in srgb,var(--rc) 8%,transparent);padding:30px 10px 10px;position:relative;min-width:0}
+.room h2{position:absolute;top:-4px;left:-4px;margin:0;background:var(--rc);color:#fff;font-family:var(--f-pixel);font-size:14px;padding:3px 10px;font-weight:500}
+.desks{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px}
+.desk{background:none;border:0;padding:0;cursor:pointer;text-align:center;color:inherit;font:inherit;position:relative}
+.scene{height:84px;position:relative;margin:0 auto;width:100px;image-rendering:pixelated}
+.table{position:absolute;bottom:8px;left:6px;right:6px;height:22px;background:var(--desk);border-top:6px solid var(--desk-top);box-shadow:0 4px 0 rgba(0,0,0,.18)}
+.monitor{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);width:34px;height:22px;background:var(--screen);border:3px solid #111}
+.monitor::after{content:"";position:absolute;bottom:-9px;left:12px;width:4px;height:6px;background:#111}
+.desk.st-ok .monitor{background:color-mix(in srgb,var(--glow) 55%,var(--screen));box-shadow:0 0 12px var(--glow)}
+.desk.st-bad .monitor{background:#5a1712;box-shadow:0 0 10px var(--bad)}
+.person{position:absolute;bottom:22px;left:14px;width:20px;height:30px}
+.person .head{width:14px;height:14px;background:#e8b98f;margin:0 auto;border:2px solid #3a2a1e;position:relative}
+.person .head::before{content:"";position:absolute;top:-2px;left:-2px;right:-2px;height:5px;background:var(--hair,#3a2a1e)}
+.person .body{width:20px;height:14px;background:var(--rc);border:2px solid #222;margin-top:-1px}
+.desk.st-ok .person,.desk.st-run .person{animation:type .6s steps(2) infinite}
+@keyframes type{50%{transform:translateY(-2px)}}
+.desk.st-idle .person,.desk.st-pause .person{opacity:.55;left:auto;right:6px;bottom:0}
+.bubble{position:absolute;top:0;right:4px;font-family:var(--f-pixel);font-size:12px;background:var(--panel);border:2px solid var(--ink);padding:0 4px;line-height:16px}
+.desk.st-bad .bubble{background:var(--bad);color:#fff;border-color:#000}
+.desk.st-ok .bubble{background:var(--ok);color:#fff;border-color:#000}
+.name{font-weight:700;font-size:13px;line-height:1.2;margin-top:2px;overflow-wrap:anywhere}
+.meta{font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){.desk .person{animation:none!important}}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:10px 0 0}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px;background:var(--c);border:2px solid #000}
+/* columna lateral */
+aside{display:flex;flex-direction:column;gap:14px;min-width:0}
+.card{background:var(--panel);border:3px solid var(--wall);padding:12px 14px;box-shadow:4px 4px 0 rgba(0,0,0,.12);min-width:0}
+.card h3{font-family:var(--f-pixel);font-size:17px;margin:0 0 8px;font-weight:500}
+.feed{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px;max-height:420px;overflow:auto;font-size:13.5px}
+.feed time{color:var(--muted);font-variant-numeric:tabular-nums;font-size:12px;margin-right:4px}
+.feed b{font-weight:700}
+.howto ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:5px}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;background:color-mix(in srgb,var(--line) 45%,transparent);padding:0 4px}
+/* detalle */
+dialog{border:4px solid var(--wall);background:var(--panel);color:var(--ink);padding:0;width:min(760px,calc(100% - 24px));max-height:calc(100% - 24px)}
+dialog::backdrop{background:rgba(20,15,10,.55)}
+.dhead{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px;background:var(--wall);color:#f6efe4}
+.dhead h2{margin:0;font-family:var(--f-pixel);font-size:20px;font-weight:500}
+.dhead button{font:inherit;background:#f6efe4;color:var(--wall);border:2px solid #000;padding:4px 10px;cursor:pointer}
+.dbody{padding:14px 16px;display:flex;flex-direction:column;gap:14px;overflow:auto;max-height:calc(100vh - 120px)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14px}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0}
+.report{border:2px solid var(--line);padding:12px;background:var(--bg);font-size:14px;overflow-wrap:anywhere;max-height:420px;overflow:auto}
+.report h1,.report h2,.report h3{font-family:var(--f-pixel);font-size:16px;margin:.6em 0 .3em}
+.report ul{padding-left:20px}
+.spark{width:100%;height:64px;display:block}
+.pill{display:inline-block;font-family:var(--f-pixel);font-size:12.5px;padding:1px 8px;border:2px solid #000;color:#fff;background:var(--c)}
+.empty{color:var(--muted);font-style:italic}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div><h1>Oficina Bosio</h1><p class="sub" id="sub">Cargando la oficina…</p></div>
+    <div class="stats" id="stats"></div>
+  </header>
+  <div id="banner"></div>
+  <div class="layout">
+    <main>
+      <div class="org" id="org"></div>
+      <div class="floor" id="floor" aria-label="Planta de la oficina"></div>
+      <div class="legend">
+        <span style="--c:var(--ok)">Trabajó hoy (luz verde)</span>
+        <span style="--c:var(--warn)">Le toca hoy más tarde</span>
+        <span style="--c:var(--idle)">Hoy descansa</span>
+        <span style="--c:var(--bad)">Falló</span>
+        <span style="--c:#555">En pausa</span>
+      </div>
+    </main>
+    <aside>
+      <section class="card howto" id="howto"></section>
+      <section class="card"><h3>Lo que pasó en la oficina</h3><ul class="feed" id="feed"></ul></section>
+    </aside>
+  </div>
+</div>
+<dialog id="dlg" aria-labelledby="dTitle"><div class="dhead"><h2 id="dTitle"></h2><button id="dClose">Cerrar</button></div><div class="dbody" id="dBody"></div></dialog>
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+const h=(t,a={},...k)=>{const e=document.createElement(t);for(const[x,v]of Object.entries(a)){if(v==null||v===false)continue;if(x==="class")e.className=v;else if(x==="style")e.setAttribute("style",v);else if(x.startsWith("on"))e.addEventListener(x.slice(2),v);else e.setAttribute(x,v)}for(const c of k.flat()){if(c==null||c===false)continue;e.append(c.nodeType?c:document.createTextNode(String(c)))}return e};
+const DIAS=["dom","lun","mar","mié","jue","vie","sáb"];
+const ar=d=>new Date(d.getTime()-3*3600e3);
+const hoyAR=()=>ar(new Date()).toISOString().slice(0,10);
+const horaAR=()=>ar(new Date()).toISOString().slice(11,16);
+const diaAR=()=>ar(new Date()).getUTCDay();
+const hace=iso=>{if(!iso)return"nunca";const m=Math.round((Date.now()-new Date(iso))/60000);if(m<1)return"recién";if(m<60)return"hace "+m+" min";const hh=Math.round(m/60);if(hh<24)return"hace "+hh+" h";return"hace "+Math.round(hh/24)+" d"};
+const fmt=iso=>{const d=ar(new Date(iso));return d.toISOString().slice(8,10)+"/"+d.toISOString().slice(5,7)+" "+d.toISOString().slice(11,16)};
+let CFG=null,EST=null;
+async function cargar(){
+  const bust="?t="+Date.now();
+  try{const [c,e]=await Promise.all([fetch("bots.json"+bust).then(r=>r.json()),fetch("data/estado.json"+bust).then(r=>r.json()).catch(()=>({}))]);CFG=c;EST=e||{};pintar()}
+  catch(err){$("#sub").textContent="No pude leer el estado de la oficina. Recargá en un rato."}
+}
+function estadoDe(b){const s=(EST.bots||{})[b.id]||{};
+  if(s.pausado)return{k:"pause",txt:"En pausa",c:"#555",bub:"⏸"};
+  if(s.estado==="trabajando")return{k:"run",txt:"Trabajando",c:"var(--ok)",bub:"..."};
+  if(s.estado==="falló"&&s.ultimaFecha===hoyAR())return{k:"bad",txt:"Falló",c:"var(--bad)",bub:"!"};
+  if(s.ultimaFecha===hoyAR())return{k:"ok",txt:"Trabajó hoy",c:"var(--ok)",bub:"✓"};
+  const h=b.horario;const tocaHoy=h.dias==="todos"||h.dias.includes(diaAR());
+  if(tocaHoy)return{k:"wait",txt:"Le toca hoy "+h.hora,c:"var(--warn)",bub:h.hora};
+  return{k:"idle",txt:"Hoy descansa",c:"var(--idle)",bub:"z"};
+}
+const horarioTxt=b=>(b.horario.dias==="todos"?"todos los días":b.horario.dias.map(d=>DIAS[d]).join(", "))+" · "+b.horario.hora;
+function pintar(){
+  const bots=CFG.bots,sb=EST.bots||{};
+  const n={ok:0,bad:0,pause:0,wait:0};for(const b of bots){const k=estadoDe(b).k;if(n[k]!=null)n[k]++}
+  $("#sub").textContent=(EST.actualizado?"Última actividad "+hace(EST.actualizado)+" · ":"")+bots.length+" bots en "+CFG.areas.length+" áreas · se actualiza sola";
+  const st=$("#stats");st.innerHTML="";
+  st.append(h("div",{class:"stat"},h("b",{},n.ok)," trabajaron hoy"),h("div",{class:"stat"},h("b",{},n.wait)," esperan su turno"),h("div",{class:"stat"},h("b",{},n.bad)," con fallas"),h("div",{class:"stat"},"IA hoy ",h("b",{},(EST.consumo&&EST.consumo.fecha===hoyAR()?EST.consumo.consultas:0)+"/"+CFG.limites.consultasPorDia)));
+  const ban=$("#banner");ban.innerHTML="";const cf=EST.config||{};
+  if(!EST.actualizado)ban.append(h("div",{class:"banner"},"La oficina todavía no arrancó. En la primera vuelta (cada 30 minutos) los bots se sientan en sus escritorios."));
+  else if(!cf.gemini||!cf.telegram)ban.append(h("div",{class:"banner"},"Falta conectar "+[!cf.gemini&&"la clave de Gemini",!cf.telegram&&"el bot de Telegram"].filter(Boolean).join(" y ")+" en los secretos del repositorio (Settings → Secrets and variables → Actions)."));
+  else if(!cf.dueno)ban.append(h("div",{class:"banner"},"Falta vincular tu Telegram: abrí el bot y mandale /start."));
+  const org=$("#org");org.innerHTML="";const g=sb.gerente||{};
+  org.append(h("div",{class:"boss",role:"button",tabindex:"0",onclick:verGerente,onkeydown:e=>{if(e.key==="Enter")verGerente()}},h("span",{style:"font-size:22px"},"👔"),h("div",{},CFG.gerente.nombre,h("small",{},g.resumen||"Recibe tus órdenes y las reparte"))),h("div",{class:"trunk"}),
+    h("div",{class:"branches"},CFG.areas.map(a=>h("span",{class:"branch",style:"border-color:"+a.color},a.nombre+" · "+bots.filter(b=>b.area===a.id).length))));
+  const fl=$("#floor");fl.innerHTML="";
+  for(const a of CFG.areas){const room=h("section",{class:"room",style:"--rc:"+a.color},h("h2",{},a.nombre));const ds=h("div",{class:"desks"});
+    bots.filter(b=>b.area===a.id).forEach((b,i)=>{const s=sb[b.id]||{};const e=estadoDe(b);
+      ds.append(h("button",{class:"desk st-"+e.k,onclick:()=>verBot(b),title:b.nombre+": "+e.txt,"aria-label":b.nombre+", "+e.txt},
+        h("div",{class:"scene"},h("div",{class:"monitor"}),h("div",{class:"person",style:"--hair:"+["#3a2a1e","#7a4a1e","#111","#a0522d"][i%4]},h("div",{class:"head"}),h("div",{class:"body"})),h("div",{class:"table"}),h("span",{class:"bubble"},e.bub)),
+        h("div",{class:"name"},b.nombre),h("div",{class:"meta"},e.txt),h("div",{class:"meta"},"nivel "+(s.nivel||1)+(s.puntaje?" · ⭐ "+s.puntaje+"/10":""))))});
+    room.append(ds);fl.append(room)}
+  const how=$("#howto");how.innerHTML="";const user=EST.botUsuario;
+  how.append(h("h3",{},"Cómo darle órdenes"),h("ol",{},
+    h("li",{},"Abrí el bot en Telegram: ",user?h("a",{href:"https://t.me/"+user,target:"_blank",rel:"noopener"},"@"+user):h("span",{class:"empty"},"se muestra cuando el bot quede conectado"),"."),
+    h("li",{},"Escribile como a un gerente: ",h("code",{},"buscame terrenos de menos de 15 millones"),". Se lo pasa al bot que corresponde y te trae el resultado (tarda hasta unos 30 a 60 minutos)."),
+    h("li",{},h("code",{},"estado")," muestra cómo está cada bot. ",h("code",{},"correr dolar")," lo hace trabajar ahora."),
+    h("li",{},"Respondé un informe con 👍, 👎 o un comentario: el bot lo usa para entrenarse a la noche.")));
+  const fd=$("#feed");fd.innerHTML="";const lg=(EST.log||[]).slice(0,60);
+  if(!lg.length)fd.append(h("li",{class:"empty"},"Todavía no hay movimientos."));
+  for(const x of lg)fd.append(h("li",{},h("time",{},fmt(x.t)),h("b",{},x.quien+": "),x.que));
+}
+function md(t){const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+  return esc(t).split("\n").map(l=>{if(/^#{1,3}\s/.test(l))return"<h3>"+l.replace(/^#+\s/,"")+"</h3>";if(/^\s*[-*•]\s/.test(l))return"<li>"+l.replace(/^\s*[-*•]\s/,"")+"</li>";if(/^---+$/.test(l))return"<hr>";return l?"<p>"+l+"</p>":""}).join("")
+   .replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>').replace(/(^|[\s(])(https?:\/\/[^\s<)]+)/g,'$1<a href="$2" target="_blank" rel="noopener">$2</a>').replace(/(<li>.*?<\/li>)+/g,m=>"<ul>"+m+"</ul>")}
+function spark(hist){if(!hist||hist.length<2)return h("p",{class:"empty"},"Todavía no hay suficientes trabajos para ver la evolución.");
+  const W=300,H=60,n=hist.length;const pts=hist.map((x,i)=>[8+i*(W-16)/(n-1),H-6-(x.p-1)*(H-14)/9]);
+  const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");svg.setAttribute("viewBox","0 0 "+W+" "+H);svg.setAttribute("class","spark");svg.setAttribute("role","img");svg.setAttribute("aria-label","Puntajes de calidad: "+hist.map(x=>x.p).join(", "));
+  svg.innerHTML='<line x1="0" x2="'+W+'" y1="'+(H-6-6*(H-14)/9)+'" y2="'+(H-6-6*(H-14)/9)+'" stroke="currentColor" stroke-opacity=".25" stroke-dasharray="4 4"/><polyline fill="none" stroke="var(--accent)" stroke-width="3" points="'+pts.map(p=>p.join(",")).join(" ")+'"/>'+pts.map((p,i)=>'<rect x="'+(p[0]-3)+'" y="'+(p[1]-3)+'" width="6" height="6" fill="'+(hist[i].p>=7?"var(--ok)":"var(--bad)")+'"/>').join("");
+  return svg}
+async function verBot(b){const s=(EST.bots||{})[b.id]||{};const e=estadoDe(b);const area=CFG.areas.find(a=>a.id===b.area);
+  $("#dTitle").textContent=b.nombre;const body=$("#dBody");body.innerHTML="";
+  body.append(h("div",{},h("span",{class:"pill",style:"--c:"+e.c},e.txt)," ",h("span",{class:"pill",style:"--c:"+area.color},area.nombre)),
+    h("dl",{class:"kv"},h("dt",{},"Su tarea"),h("dd",{},b.mision),h("dt",{},"Entrega"),h("dd",{},b.entregable),h("dt",{},"Horario"),h("dd",{},horarioTxt(b)),h("dt",{},"Último trabajo"),h("dd",{},s.ultimaCorrida?hace(s.ultimaCorrida):"todavía no trabajó"),
+      h("dt",{},"Nivel"),h("dd",{},(s.nivel||1)+" (sube cada noche que se entrena)"),h("dt",{},"Trabajos"),h("dd",{},(s.corridas||0)+" hechos · "+(s.fallas||0)+" fallas · 👍 "+(s.likes||0)+" · 👎 "+(s.dislikes||0)),h("dt",{},"Usá en Telegram"),h("dd",{},h("code",{},"correr "+b.id))),
+    h("div",{},h("h3",{style:"font-family:var(--f-pixel);font-weight:500;margin:0 0 6px"},"Calidad de sus trabajos"),spark(s.historial)));
+  const lec=h("div",{class:"report"},h("p",{class:"empty"},"Cargando…"));const rep=h("div",{class:"report"},h("p",{class:"empty"},s.informe?"Cargando…":"Todavía no entregó ningún informe."));
+  body.append(h("h3",{style:"font-family:var(--f-pixel);font-weight:500;margin:0"},"Último informe"),rep,h("h3",{style:"font-family:var(--f-pixel);font-weight:500;margin:0"},"Lo que aprendió"),lec);
+  $("#dlg").showModal();
+  if(s.informe)fetch(s.informe+"?t="+Date.now()).then(r=>r.ok?r.text():Promise.reject()).then(t=>rep.innerHTML=md(t)).catch(()=>rep.innerHTML='<p class="empty">No pude abrir el informe.</p>');
+  fetch("data/lecciones/"+b.id+".md?t="+Date.now()).then(r=>r.ok?r.text():Promise.reject()).then(t=>lec.innerHTML=md(t)).catch(()=>lec.innerHTML='<p class="empty">Todavía no se entrenó. La primera noche después de trabajar aprende de sus notas.</p>');
+}
+function verGerente(){$("#dTitle").textContent=CFG.gerente.nombre;const body=$("#dBody");body.innerHTML="";const g=(EST.bots||{}).gerente||{};
+  body.append(h("dl",{class:"kv"},h("dt",{},"Su tarea"),h("dd",{},CFG.gerente.mision),h("dt",{},"Parte diario"),h("dd",{},"todos los días "+CFG.gerente.parteDiario),h("dt",{},"Entrenamiento"),h("dd",{},"todas las noches "+CFG.gerente.entrenamiento),h("dt",{},"Último movimiento"),h("dd",{},g.resumen||"—"),h("dt",{},"Órdenes en espera"),h("dd",{},String((EST.pendientes||[]).length))));
+  $("#dlg").showModal()}
+$("#dClose").addEventListener("click",()=>$("#dlg").close());
+$("#dlg").addEventListener("click",e=>{if(e.target.id==="dlg")$("#dlg").close()});
+cargar();setInterval(cargar,60000);
+})();
+</script>
+</body>
+</html>

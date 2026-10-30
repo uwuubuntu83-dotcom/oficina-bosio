@@ -1,0 +1,94 @@
+{
+  "oficina": "Oficina Bosio",
+  "dueno": "Jonathan",
+  "contexto": "Jonathan es maestro mayor de obras en Villa María, Córdoba, Argentina. Tiene la Constructora JB. Le interesan las inversiones (dólar, terrenos, casas), las noticias de Argentina y Córdoba, el turismo barato y las herramientas de IA gratis.",
+  "limites": { "consultasPorDia": 180, "consultasPorCorrida": 30 },
+  "gerente": {
+    "id": "gerente",
+    "nombre": "Gerente general",
+    "mision": "Recibe las órdenes de Jonathan, se las pasa al bot o área que corresponde, controla que cumplan y le trae el resumen de toda la oficina.",
+    "parteDiario": "20:00",
+    "entrenamiento": "23:00"
+  },
+  "areas": [
+    { "id": "inversiones", "nombre": "Inversiones", "color": "#2f7d4f" },
+    { "id": "constructora", "nombre": "Constructora JB", "color": "#b5651d" },
+    { "id": "informacion", "nombre": "Información", "color": "#2f5fa8" },
+    { "id": "turismo", "nombre": "Turismo", "color": "#0e8a8a" },
+    { "id": "mejora", "nombre": "Mejora del sistema", "color": "#7a4fa8" }
+  ],
+  "bots": [
+    {
+      "id": "dolar",
+      "nombre": "Dólar y mercado",
+      "area": "inversiones",
+      "horario": { "dias": "todos", "hora": "08:00" },
+      "mision": "Informar la cotización de HOY del dólar oficial, blue, MEP y CCL en Argentina, la variación contra ayer y una línea con lo más importante del mercado (inflación, tasas, riesgo país) si hubo novedades.",
+      "entregable": "Lista corta con cada cotización (compra y venta) y su fuente, variación del día y 1 a 3 líneas de contexto.",
+      "criterios": ["Valores de hoy con fecha", "Cada número con su fuente", "Sin relleno ni consejos genéricos"]
+    },
+    {
+      "id": "inmuebles",
+      "nombre": "Terrenos y casas baratas",
+      "area": "inversiones",
+      "horario": { "dias": [1, 4], "hora": "09:00" },
+      "mision": "Buscar los terrenos y casas más baratos publicados en Villa María y Villa Nueva (Córdoba) en portales inmobiliarios, y destacar las oportunidades por precio por m².",
+      "entregable": "Hasta 8 publicaciones con precio, superficie, precio por m², barrio y link a la publicación. Al final, cuál es la mejor oportunidad y por qué.",
+      "criterios": ["Publicaciones reales con link", "Precio y superficie de cada una", "Ordenadas por conveniencia"]
+    },
+    {
+      "id": "precios_obra",
+      "nombre": "Precios de construcción",
+      "area": "constructora",
+      "horario": { "dias": [1], "hora": "08:30" },
+      "mision": "Informar el costo actual de construcción por m² en Córdoba (índice oficial y colegios profesionales) y los precios de los materiales clave: cemento, hierro, ladrillo, arena, cal.",
+      "entregable": "Tabla corta con costo por m² y precio de cada material con unidad, fuente y fecha del dato, y la variación contra el mes anterior si está disponible.",
+      "criterios": ["Datos del mes actual o el último publicado, con fecha", "Fuente de cada precio", "Unidades claras"]
+    },
+    {
+      "id": "licitaciones",
+      "nombre": "Licitaciones y clientes",
+      "area": "constructora",
+      "horario": { "dias": [2, 5], "hora": "09:00" },
+      "mision": "Buscar licitaciones públicas y privadas de obra abiertas en Córdoba (provincia y municipios cercanos a Villa María) y oportunidades de clientes para una constructora chica.",
+      "entregable": "Lista de licitaciones abiertas con organismo, objeto, monto si se publica, fecha de apertura y link. Si no hay nuevas, decirlo claro.",
+      "criterios": ["Licitaciones vigentes (fecha de apertura futura)", "Link oficial de cada una", "Nada inventado"]
+    },
+    {
+      "id": "ideas_jb",
+      "nombre": "Ideas de publicaciones JB",
+      "area": "constructora",
+      "horario": { "dias": [3], "hora": "10:00" },
+      "mision": "Proponer publicaciones para las redes de Constructora JB basadas en tendencias reales de construcción y temas que la gente de Córdoba busca esta semana.",
+      "entregable": "5 ideas de publicación, cada una con título, texto listo para pegar (máximo 4 líneas), formato (foto, video corto o carrusel) y por qué funcionaría.",
+      "criterios": ["Textos listos para usar", "Ideas concretas de obra, no frases genéricas", "Adaptadas a Córdoba"]
+    },
+    {
+      "id": "noticias",
+      "nombre": "Noticias de Argentina y Córdoba",
+      "area": "informacion",
+      "horario": { "dias": "todos", "hora": "07:30" },
+      "mision": "Resumir las noticias más importantes de HOY en Argentina, Córdoba y Villa María, priorizando economía, obra pública, construcción y lo que afecte el bolsillo.",
+      "entregable": "Entre 5 y 8 noticias, cada una en una o dos líneas, con el medio y el link.",
+      "criterios": ["Noticias de hoy o de las últimas 24 horas", "Link de cada noticia", "Sin opinión ni relleno"]
+    },
+    {
+      "id": "escapadas",
+      "nombre": "Escapadas y vuelos baratos",
+      "area": "turismo",
+      "horario": { "dias": [4], "hora": "18:00" },
+      "mision": "Buscar escapadas de fin de semana baratas desde Villa María y ofertas de vuelos desde Córdoba para las próximas semanas.",
+      "entregable": "3 escapadas en auto (destino, distancia, qué hacer, costo aproximado) y hasta 5 ofertas de vuelos con precio, fechas y link.",
+      "criterios": ["Precios actuales con link", "Fechas concretas", "Opciones realmente baratas"]
+    },
+    {
+      "id": "ia_gratis",
+      "nombre": "IAs gratis útiles",
+      "area": "mejora",
+      "horario": { "dias": [6], "hora": "10:00" },
+      "mision": "Encontrar herramientas de IA gratis o con plan gratis nuevas o mejoradas esta semana que le sirvan a Jonathan para su constructora, redes o automatizar tareas.",
+      "entregable": "Hasta 5 herramientas con qué hacen, qué incluye gratis, para qué le sirve a Jonathan y link oficial.",
+      "criterios": ["Novedades reales de esta semana o este mes", "Qué es gratis exactamente", "Link oficial"]
+    }
+  ]
+}
