@@ -4,7 +4,7 @@
  "gerente": {
   "id": "gerente",
   "nombre": "Gerente general",
-  "mision": "Mesa de entrada y dirección: recibe las órdenes de Jonathan, se las pasa al área y al bot que corresponde, controla que cumplan y le trae el resumen de toda la oficina.",
+  "mision": "Mesa de entrada y dirección: recibe tus órdenes y se las pasa al área que corresponde. Todos los días a las 20:00 te manda el parte del día en 10 renglones, con lo que hay que revisar.",
   "parteDiario": "20:00",
   "entrenamiento": "23:00"
  },
@@ -206,6 +206,42 @@
    "horarioTxt": "a pedido (solo cuando se lo pedís)"
   },
   {
+   "id": "inversor",
+   "nombre": "Asesor de inversiones",
+   "area": "inversiones",
+   "tipo": "codigo",
+   "privado": true,
+   "receta": {
+    "tipo": "inversor"
+   },
+   "horario": {
+    "apedido": true
+   },
+   "mision": "Sin IA. Trabaja con el contador: toma lo que podés ahorrar por mes y te dice qué hacer con eso (fondo de emergencia, dólar MEP, plazo fijo o money market), con las mejores tasas de plazo fijo de hoy y la inflación real, para que tu plata no pierda. Le escribís «inversiones».",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "a pedido (solo cuando se lo pedís)"
+  },
+  {
+   "id": "analista",
+   "nombre": "Analista de inversiones",
+   "area": "inversiones",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "analista"
+   },
+   "horario": {
+    "dias": [
+     1
+    ],
+    "horas": [
+     "09:00"
+    ]
+   },
+   "mision": "Sin IA. Los lunes a las 9:00: cómo se movió cada dólar en la semana y en el mes, la brecha, la mejor tasa de plazo fijo y la inflación, y qué rindió más.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "lun a las 09:00"
+  },
+  {
    "id": "licitaciones",
    "nombre": "Clientes y licitaciones",
    "area": "constructora",
@@ -298,12 +334,36 @@
     "dias": "todos",
     "cada": 120,
     "desde": "00:00",
-    "hasta": "23:59",
-    "resumen": "06:45"
+    "hasta": "23:59"
    },
-   "mision": "Pronóstico de Villa María a las 6:45 para planificar la obra, y vigila cada 2 horas: si aparece lluvia fuerte o viento que frene la obra, te avisa al instante.",
+   "mision": "Sin IA. Vigila el pronóstico cada 2 horas y te avisa al instante si aparece lluvia fuerte o viento que frene la obra. El resumen de la mañana te lo da el Jefe de obra.",
    "tipoTxt": "⚙️ sin IA",
-   "horarioTxt": "todos los días, cada 120 min de 00:00 a 23:59 (resumen 06:45)"
+   "horarioTxt": "todos los días, cada 120 min de 00:00 a 23:59"
+  },
+  {
+   "id": "jefe_obra",
+   "nombre": "Jefe de obra",
+   "area": "constructora",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "jefe_obra"
+   },
+   "horario": {
+    "dias": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "horas": [
+     "06:50"
+    ]
+   },
+   "mision": "Sin IA. De lunes a sábado a las 6:50 te dice si se puede trabajar afuera hoy y en qué horario (lluvia, viento, calor o heladas), cómo viene mañana, las licitaciones de la semana y lo último del valor del m² del Colegio de MMO.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "lun, mar, mie, jue, vie, sab a las 06:50"
   },
   {
    "id": "m2",
@@ -439,6 +499,54 @@
    "mision": "Junta todo el día las noticias de economía, construcción, obra pública y créditos de Argentina y te las manda a las 7:30, 13:00 y 20:00.",
    "tipoTxt": "⚙️ sin IA",
    "horarioTxt": "todos los días, cada 60 min de 00:00 a 23:59"
+  },
+  {
+   "id": "editor",
+   "nombre": "Editor de la semana",
+   "area": "prensa",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "editor",
+    "secciones": [
+     [
+      [
+       "noticias_vm"
+      ],
+      "🏙️ Villa María"
+     ],
+     [
+      [
+       "noticias_ar"
+      ],
+      "🇦🇷 Argentina: economía y obra pública"
+     ],
+     [
+      [
+       "mundo_economia",
+       "mundo_tecnologia",
+       "mundo_salud"
+      ],
+      "🌎 El mundo"
+     ],
+     [
+      [
+       "noticias_tec"
+      ],
+      "💻 Tecnología"
+     ]
+    ]
+   },
+   "horario": {
+    "dias": [
+     0
+    ],
+    "horas": [
+     "19:00"
+    ]
+   },
+   "mision": "Sin IA. Los domingos a las 19:00: lo más importante de la semana (los temas de los que más se habló) de Villa María, Argentina, el mundo y tecnología.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "dom a las 19:00"
   },
   {
    "id": "mundo_economia",
@@ -584,6 +692,45 @@
    "horarioTxt": "todos los días a las 22:00"
   },
   {
+   "id": "lista_gringo",
+   "nombre": "Lista del Gringo",
+   "area": "redes",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "celu_orden",
+    "texto": "lista"
+   },
+   "horario": {
+    "dias": "todos",
+    "horas": [
+     "10:00"
+    ]
+   },
+   "mision": "Sin IA. Todos los días a las 10:00 le pide al celu la lista de cuentas para dejar de seguir en @gringobosio y te la manda. Contestás «celu 1-50», «celu todas las mujeres» o «celu ninguna».",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "todos los días a las 10:00"
+  },
+  {
+   "id": "community",
+   "nombre": "Community manager",
+   "area": "redes",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "community"
+   },
+   "horario": {
+    "dias": [
+     1
+    ],
+    "horas": [
+     "09:30"
+    ]
+   },
+   "mision": "Sin IA. Los lunes a las 9:30: la semana del celu contra la anterior (publicaciones, historias, reels, seguidos, gringo, errores y reinicios) y si hay algo que revisar.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "lun a las 09:30"
+  },
+  {
    "id": "escapadas",
    "nombre": "Escapadas de finde",
    "area": "turismo",
@@ -672,6 +819,66 @@
    "mision": "Todos los días a las 20:30 te pregunta si entrenaste o caminaste y lo anota (privado). Los domingos te pasa cómo te fue en la semana.",
    "tipoTxt": "⚙️ sin IA",
    "horarioTxt": "todos los días a las 20:30"
+  },
+  {
+   "id": "semaforo_salud",
+   "nombre": "Semáforo de salud",
+   "area": "asistente",
+   "tipo": "codigo",
+   "privado": true,
+   "receta": {
+    "tipo": "semaforo_salud"
+   },
+   "horario": {
+    "dias": [
+     0
+    ],
+    "horas": [
+     "20:45"
+    ]
+   },
+   "mision": "Sin IA. Los domingos a las 20:45: semáforo de tu semana (días que entrenaste, comidas pesadas, cuánto anotaste) contra la semana anterior, y la meta para la próxima.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "dom a las 20:45"
+  },
+  {
+   "id": "recordatorios",
+   "nombre": "Recordatorios y cumpleaños",
+   "area": "asistente",
+   "tipo": "codigo",
+   "privado": true,
+   "receta": {
+    "tipo": "recordatorios"
+   },
+   "horario": {
+    "dias": "todos",
+    "cada": 30,
+    "desde": "00:00",
+    "hasta": "23:59"
+   },
+   "mision": "Sin IA. Te recuerda lo que le pidas («recordame mañana a las 9 pagar el monotributo», «recordame en 2 horas sacar el pollo») y te avisa los cumpleaños y fechas importantes 3 días antes y el mismo día («cumple de mamá 15/11»).",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "todos los días, cada 30 min de 00:00 a 23:59"
+  },
+  {
+   "id": "feriados",
+   "nombre": "Feriados y findes largos",
+   "area": "asistente",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "feriados"
+   },
+   "horario": {
+    "dias": [
+     1
+    ],
+    "horas": [
+     "08:00"
+    ]
+   },
+   "mision": "Sin IA. Los lunes a las 8:00 te avisa los feriados de la semana y si hay fin de semana largo, para planificar la obra, los pagos y alguna escapada.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "lun a las 08:00"
   },
   {
    "id": "nutricionista",
@@ -819,9 +1026,30 @@
      "21:45"
     ]
    },
-   "mision": "Anota tus gastos personales cuando le escribís («gasté 5000 en nafta») o le mandás la foto del comprobante, los separa por categoría y te manda el resumen los domingos y el día 1 de cada mes.",
+   "mision": "Anota tus gastos cuando le escribís como sea («ayer gasté 5000 en nafta», «compré pan 1200 y carne 8000», «le pagué al plomero 25000») o le mandás la foto del comprobante. Los separa por categoría como tu banco y, cuando le pedís «torta», te manda el gráfico de torta con el informe. Solo, los domingos (semana) y el día 1 (mes anterior).",
    "tipoTxt": "⚙️ sin IA",
    "horarioTxt": "todos los días a las 21:45"
+  },
+  {
+   "id": "consejero",
+   "nombre": "Contador y consejero financiero",
+   "area": "contaduria",
+   "tipo": "codigo",
+   "privado": true,
+   "receta": {
+    "tipo": "consejero"
+   },
+   "horario": {
+    "dias": [
+     0
+    ],
+    "horas": [
+     "10:00"
+    ]
+   },
+   "mision": "Sin IA. Mira tus gastos reales, te dice cómo venís en el mes, cuánto vas a cerrar, dónde se va la plata y dónde cortar sin sufrir; calcula cuánto podés ahorrar (en pesos y dólares) y te marca las comidas pesadas que no te convienen para la salud. Te escribe los domingos a las 10:00 y cuando le pedís «consejo».",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "dom a las 10:00"
   },
   {
    "id": "vencimientos",
@@ -846,6 +1074,28 @@
    "mision": "Revisa cada 3 horas novedades de vencimientos de ARCA, monotributo e Ingresos Brutos de Córdoba y te avisa cuando aparece algo nuevo.",
    "tipoTxt": "⚙️ sin IA",
    "horarioTxt": "todos los días, cada 180 min de 00:00 a 23:59"
+  },
+  {
+   "id": "monotributo",
+   "nombre": "Vencimiento del monotributo",
+   "area": "contaduria",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "recordatorio",
+    "texto": "🧾 El monotributo vence el 20 de este mes. Pagalo desde la app de tu banco o Mercado Pago con el VEP (ARCA → Monotributo → Pagar). Si ya lo pagaste, ignorá este aviso."
+   },
+   "horario": {
+    "dias": "todos",
+    "diaMes": [
+     17
+    ],
+    "horas": [
+     "09:15"
+    ]
+   },
+   "mision": "Sin IA. El 17 de cada mes te recuerda que el 20 vence el monotributo.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "el 17 de cada mes a las 09:15"
   },
   {
    "id": "tarifas",
@@ -1062,6 +1312,26 @@
    "mision": "Revisa cada 30 minutos, todo el día, que tus páginas funcionen, y te avisa al instante si alguna se cae o vuelve.",
    "tipoTxt": "⚙️ sin IA",
    "horarioTxt": "todos los días, cada 30 min de 00:00 a 23:59"
+  },
+  {
+   "id": "soporte",
+   "nombre": "Soporte de páginas",
+   "area": "tecnologia",
+   "tipo": "codigo",
+   "receta": {
+    "tipo": "soporte"
+   },
+   "horario": {
+    "dias": [
+     1
+    ],
+    "horas": [
+     "10:00"
+    ]
+   },
+   "mision": "Sin IA. Los lunes a las 10:00: qué porcentaje del tiempo estuvo arriba cada una de tus páginas en la semana y cuánto estuvo caída.",
+   "tipoTxt": "⚙️ sin IA",
+   "horarioTxt": "lun a las 10:00"
   },
   {
    "id": "ia_gratis",

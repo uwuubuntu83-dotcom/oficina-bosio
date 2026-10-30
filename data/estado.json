@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 18,
+   "corridas": 19,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-10-30T20:52:47.042Z",
+   "ultimaCorrida": "2026-10-30T21:27:53.966Z",
    "resumen": "💵 Dólar hoy (10:35 hs)\n• Oficial: compra $1510 · venta $1560\n• Blue: compra $1545 · venta $1565\n• Bolsa: compra $1557.8 · venta $1568.8\n• Contado con liquidación: compra $1649.8 · venta $1650.3\n• Mayorista: compra $1530",
    "informe": "data/informes/dolar/2026-10-30-1035.md",
    "pausado": false,
@@ -36,8 +36,19 @@
      "cripto": 1645.46,
      "tarjeta": 2028
     },
-    "ultimoChequeo": "2026-10-30T20:52:47.042Z",
-    "resumenFecha": "2026-10-30"
+    "ultimoChequeo": "2026-10-30T21:27:53.966Z",
+    "resumenFecha": "2026-10-30",
+    "hist": {
+     "2026-10-30": {
+      "oficial": 1560,
+      "blue": 1565,
+      "bolsa": 1575,
+      "contadoconliqui": 1658.5,
+      "mayorista": 1534,
+      "cripto": 1653.91,
+      "tarjeta": 2028
+     }
+    }
    }
   },
   "inmuebles": {
@@ -201,7 +212,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-30T20:57:54.313Z",
+   "ultimaCorrida": "2026-10-30T21:27:53.966Z",
    "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
@@ -940,36 +951,59 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-10-30T20:55:31.333Z",
+   "ultimaCorrida": "2026-10-30T21:25:53.072Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": false,
    "memoria": {
     "celu": {
-     "t": 1793393731333,
+     "t": 1793395553072,
      "redes_hoy": {
       "publicaciones": 9,
-      "historias": 22,
+      "historias": 24,
       "reels": 13,
-      "seguidos": 31,
+      "seguidos": 48,
       "gringo": 1,
       "errores": 24,
       "reinicios": 62,
       "ultimas": [
-       "17:40 ✔ Gringo: dejé de seguir a @danalucia.s (aprobada por vos)",
-       "17:41 Gringo: corto acá, sigo entre las próximas tareas",
-       "17:43 Instagram: ahora en @maestromayordeobrasjb",
-       "17:45 ✔ Historia compartida (avioncito)",
-       "17:46 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
-       "17:46 Instagram: ahora en @maestromayordeobrasjb",
-       "17:52 Instagram: ahora en @soycordobes.jpg",
-       "17:53 ✔ Memes: seguido (1/5) seguidores de @memesdealesito",
-       "17:54 ✔ Memes: seguido (2/5) seguidores de @memesdealesito",
-       "17:55 ✔ Memes: seguido (3/5) seguidores de @memesdealesito"
+       "18:13 ✔ Memes: seguido (3/5) seguidores de @lobobasado",
+       "18:14 ✔ Memes: seguido (4/5) seguidores de @lobobasado",
+       "18:15 ✔ Memes: seguido (5/5) seguidores de @lobobasado",
+       "18:16 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
+       "18:17 Claude: no dejó arreglo nuevo (todo bien)",
+       "18:19 ✔ Historia compartida (avioncito)",
+       "18:21 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
+       "18:21 Claude: no dejó arreglo nuevo (todo bien)",
+       "18:24 Post elegido de #construyendonuestracasa",
+       "18:25 ✔ Historia compartida (avioncito)"
       ]
      }
     },
-    "avisoSinSenal": "2026-10-30T19:12:45.080Z"
+    "avisoSinSenal": "2026-10-30T19:12:45.080Z",
+    "diario": {
+     "2026-10-30": {
+      "publicaciones": 9,
+      "historias": 24,
+      "reels": 13,
+      "seguidos": 48,
+      "gringo": 1,
+      "errores": 24,
+      "reinicios": 62,
+      "ultimas": [
+       "18:13 ✔ Memes: seguido (3/5) seguidores de @lobobasado",
+       "18:14 ✔ Memes: seguido (4/5) seguidores de @lobobasado",
+       "18:15 ✔ Memes: seguido (5/5) seguidores de @lobobasado",
+       "18:16 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
+       "18:17 Claude: no dejó arreglo nuevo (todo bien)",
+       "18:19 ✔ Historia compartida (avioncito)",
+       "18:21 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
+       "18:21 Claude: no dejó arreglo nuevo (todo bien)",
+       "18:24 Post elegido de #construyendonuestracasa",
+       "18:25 ✔ Historia compartida (avioncito)"
+      ]
+     }
+    }
    }
   },
   "vuelos": {
@@ -1215,7 +1249,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 18,
+   "corridas": 19,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1224,7 +1258,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-30T20:52:47.042Z",
+   "ultimaCorrida": "2026-10-30T21:27:53.966Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -1234,8 +1268,24 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-10-30T20:52:47.042Z",
-    "resumenFecha": "2026-10-29"
+    "ultimoChequeo": "2026-10-30T21:27:53.966Z",
+    "resumenFecha": "2026-10-29",
+    "uptime": {
+     "2026-10-30": {
+      "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
+       1,
+       1
+      ],
+      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
+       1,
+       1
+      ],
+      "https://bosio-central.uwuubuntu83.workers.dev/": [
+       1,
+       1
+      ]
+     }
+    }
    }
   },
   "salud_oficina": {
@@ -2500,9 +2550,255 @@
    "informe": null,
    "pausado": false,
    "memoria": {}
+  },
+  "inversor": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "analista": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "jefe_obra": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {
+    "horas": {
+     "fecha": "2026-10-30",
+     "hechas": [
+      "06:50"
+     ]
+    }
+   }
+  },
+  "editor": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "lista_gringo": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {
+    "horas": {
+     "fecha": "2026-10-30",
+     "hechas": [
+      "10:00"
+     ]
+    }
+   }
+  },
+  "community": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "semaforo_salud": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "recordatorios": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": "2026-10-30T21:27:53.966Z",
+   "resumen": "🔒 Privado",
+   "informe": null,
+   "pausado": false,
+   "memoria": {
+    "fechasAvisadas": "2026-10-30",
+    "ultimoChequeo": "2026-10-30T21:27:53.966Z"
+   }
+  },
+  "feriados": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "consejero": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "monotributo": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "soporte": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
   }
  },
  "log": [
+  {
+   "t": "2026-10-30T21:27:53.966Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T21:27:53.966Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T21:27:53.966Z",
+   "quien": "Redes sociales",
+   "que": "el celu ahora te avisa todo por la oficina"
+  },
+  {
+   "t": "2026-10-30T21:27:53.966Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-30T21:27:53.966Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-10-30T20:57:54.313Z",
    "quien": "Terrenos baratos",
@@ -3913,14 +4209,15 @@
  "hechos": {
   "parte": "2026-10-29",
   "entrenamiento": "2026-10-29",
-  "buzonAvisado": "2026-10-30T13:35:53.482Z"
+  "buzonAvisado": "2026-10-30T13:35:53.482Z",
+  "celuAvisosOficina": "2026-10-30T21:27:53.966Z"
  },
  "consumo": {
   "fecha": "2026-10-30",
-  "consultas": 217,
+  "consultas": 220,
   "busquedas": 0,
   "por": {
-   "gemini": 109,
+   "gemini": 112,
    "github": 36,
    "groq": 14,
    "llm7": 1,
@@ -3933,7 +4230,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-30T20:57:54.313Z",
+ "actualizado": "2026-10-30T21:27:53.966Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -3961,10 +4258,10 @@
   "agotado": {
    "gemini:gemini-2.5-flash": true,
    "gemini:gemini-2.5-flash-lite": true,
-   "gemini:gemini-flash-latest": 1793393906706,
+   "gemini:gemini-flash-latest": 1793395705259,
    "groq:groq/compound": true,
    "gemini:gemini-2.5-pro": true,
-   "gemini:gemini-3.8-flash": 1793393913242,
+   "gemini:gemini-3.8-flash": 1793395711816,
    "cfai:@cf/meta/llama-3.3-70b-instruct-fp8-fast": 1793392898439,
    "cfai:@cf/meta/llama-4-scout-17b-16e-instruct": 1793392900867,
    "cfai:@cf/mistralai/mistral-small-3.1-24b-instruct": 1793392903457,
@@ -3975,7 +4272,7 @@
    "github:deepseek/DeepSeek-V3-0324": 1793394188584,
    "github:openai/gpt-4.1": 1793394191093,
    "github:openai/gpt-4o": 1793394193599,
-   "gemini:gemini-3.7-flash": 1793393919742,
+   "gemini:gemini-3.7-flash": 1793395718311,
    "groq:openai/gpt-oss-120b": 1793393623669,
    "groq:llama-3.3-70b-versatile": true,
    "groq:qwen/qwen3-32b": true,
