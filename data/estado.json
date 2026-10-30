@@ -199,7 +199,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-30T15:47:57.490Z",
+   "ultimaCorrida": "2026-10-30T15:49:09.365Z",
    "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
@@ -1732,7 +1732,7 @@
   },
   "gastos_personales": {
    "estado": "listo",
-   "corridas": 2,
+   "corridas": 3,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1741,7 +1741,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-10-30T15:47:57.490Z",
+   "ultimaCorrida": "2026-10-30T15:49:09.365Z",
    "resumen": "🔒 Privado: te lo mandó por Telegram.",
    "informe": null,
    "pausado": false,
@@ -1750,7 +1750,7 @@
      "fecha": "2026-10-30",
      "hechas": []
     },
-    "ultimoChequeo": "2026-10-30T15:47:57.490Z"
+    "ultimoChequeo": "2026-10-30T15:49:09.365Z"
    }
   },
   "noticias_tec": {
@@ -1946,6 +1946,46 @@
   }
  },
  "log": [
+  {
+   "t": "2026-10-30T15:49:09.365Z",
+   "quien": "Gastos personales",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T15:49:09.365Z",
+   "quien": "Gerente general",
+   "que": "le pasó la orden a Gastos personales"
+  },
+  {
+   "t": "2026-10-30T15:49:09.365Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T15:49:09.365Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T15:49:09.365Z",
+   "quien": "Jonathan",
+   "que": "mandó una orden por Telegram"
+  },
+  {
+   "t": "2026-10-30T15:49:09.365Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 mensajes de Telegram"
+  },
+  {
+   "t": "2026-10-30T15:49:09.365Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 órdenes desde la página"
+  },
+  {
+   "t": "2026-10-30T15:49:09.365Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github"
+  },
   {
    "t": "2026-10-30T15:47:57.490Z",
    "quien": "Gastos personales",
@@ -2779,7 +2819,8 @@
   "70": "licitaciones",
   "84": "licitaciones",
   "86": "gastos_personales",
-  "88": "gastos_personales"
+  "88": "gastos_personales",
+  "90": "gastos_personales"
  },
  "tgOffset": 196508494,
  "hechos": {
@@ -2789,15 +2830,15 @@
  },
  "consumo": {
   "fecha": "2026-10-30",
-  "consultas": 69,
+  "consultas": 73,
   "busquedas": 0,
   "por": {
-   "gemini": 57,
+   "gemini": 61,
    "github": 12
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-30T15:47:57.490Z",
+ "actualizado": "2026-10-30T15:49:09.365Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -2813,14 +2854,14 @@
   "agotado": {
    "gemini:gemini-2.5-flash": true,
    "gemini:gemini-2.5-flash-lite": true,
-   "gemini:gemini-flash-latest": 1793375308705,
+   "gemini:gemini-flash-latest": 1793375380356,
    "github:openai/gpt-4.1-mini": 1793375752418,
    "github:openai/gpt-4o-mini": 1793375754840,
    "github:meta/Llama-3.3-70B-Instruct": 1793375757364,
    "github:mistral-ai/mistral-small-2503": 1793375891949,
-   "gemini:gemini-3.8-flash": 1793375315233,
+   "gemini:gemini-3.8-flash": 1793375386879,
    "gemini:gemini-2.5-pro": true,
-   "gemini:gemini-3.7-flash": 1793375321726,
+   "gemini:gemini-3.7-flash": 1793375393394,
    "gemini:gemini-4-argon": true,
    "gemini:gemini-3.6-flash": 1793375766897,
    "gemini:gemini-3.5-flash": 1793375776814
@@ -2829,7 +2870,7 @@
   "ultimo": {
    "prov": "Google Gemini",
    "modelo": "gemini-3.5-flash-lite",
-   "t": "2026-10-30T15:47:57.490Z"
+   "t": "2026-10-30T15:49:09.365Z"
   }
  },
  "dueno": 1237559052,
