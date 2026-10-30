@@ -47,6 +47,28 @@ jobs:
             GH_TOKEN
             CELU_KEY
             OFICINA_PIN
+            GEMINI_API_KEY
+            GROQ_API_KEY
+            CEREBRAS_API_KEY
+            SAMBANOVA_API_KEY
+            OPENROUTER_API_KEY
+            NVIDIA_API_KEY
+            ZAI_API_KEY
+            LLM7_API_KEY
+            UPSTAGE_API_KEY
+            HF_TOKEN
+            COHERE_API_KEY
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           GH_TOKEN: ${{ secrets.DESPERTADOR_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          LLM7_API_KEY: ${{ secrets.LLM7_API_KEY }}
+          UPSTAGE_API_KEY: ${{ secrets.UPSTAGE_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}

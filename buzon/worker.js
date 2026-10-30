@@ -134,6 +134,7 @@ export default {
       const pin = req.headers.get("x-pin") || u.searchParams.get("pin") || "";
       if (!env.OFICINA_PIN || pin !== env.OFICINA_PIN) return json({ ok: false, error: "PIN incorrecto" }, 401, h);
       if (p === "/oficina/ia") return json(await iaCloudflare(env, await req.json().catch(() => ({}))), 200, h);
+      if (p === "/oficina/llm") return json(await rotarIA(env, await req.json().catch(() => ({}))), 200, h);   // Forja y cualquier app tuya: todas las IA gratis en rueda
       const cuerpo = req.method === "POST" ? await req.text() : null;
       const r = await buzon(env).fetch(new Request(req.url, { method: req.method, headers: req.headers, body: cuerpo }));
       const j = r.ok && cuerpo ? await r.clone().json().catch(() => ({})) : {};
@@ -163,6 +164,47 @@ async function iaCloudflare(env, b) {
     const m = String(e && e.message || e);
     return { error: true, status: /4006|neuron|limit|quota|capacity|429/i.test(m) ? 429 : /not found|5007|No such model/i.test(m) ? 404 : 500, msg: m.slice(0, 200) };
   }
+}
+
+// ---- Rueda de IA gratis (como FreeLLMAPI, pero en internet 24 h): si una no tiene cupo, pasa a la siguiente
+const PROVEEDORES = [
+  ["GROQ_API_KEY", "Groq", "https://api.groq.com/openai/v1", ["openai/gpt-oss-120b", "moonshotai/kimi-k2-instruct", "llama-3.3-70b-versatile"]],
+  ["CEREBRAS_API_KEY", "Cerebras", "https://api.cerebras.ai/v1", ["gpt-oss-120b", "qwen-3-235b-a22b-instruct-2507", "llama-3.3-70b"]],
+  ["GEMINI_API_KEY", "Gemini", "https://generativelanguage.googleapis.com/v1beta/openai", ["gemini-2.5-flash", "gemini-2.5-flash-lite"], true],
+  ["SAMBANOVA_API_KEY", "SambaNova", "https://api.sambanova.ai/v1", ["DeepSeek-V3.1", "Meta-Llama-3.3-70B-Instruct"]],
+  ["OPENROUTER_API_KEY", "OpenRouter", "https://openrouter.ai/api/v1", ["openai/gpt-oss-120b:free", "qwen/qwen3-coder:free", "deepseek/deepseek-chat-v3-0324:free"]],
+  ["NVIDIA_API_KEY", "NVIDIA", "https://integrate.api.nvidia.com/v1", ["openai/gpt-oss-120b", "meta/llama-3.3-70b-instruct"]],
+  ["ZAI_API_KEY", "Z.ai", "https://api.z.ai/api/paas/v4", ["glm-4.5-flash"]],
+  ["LLM7_API_KEY", "LLM7", "https://api.llm7.io/v1", ["default", "fast"]],
+  ["UPSTAGE_API_KEY", "Upstage", "https://api.upstage.ai/v1", ["solar-pro2"]],
+  ["HF_TOKEN", "Hugging Face", "https://router.huggingface.co/v1", ["openai/gpt-oss-120b"]],
+  ["COHERE_API_KEY", "Cohere", "https://api.cohere.ai/compatibility/v1", ["command-a-03-2025"]]
+];
+const sinCupo = {}; // proveedor:modelo -> hasta cuándo saltearlo (vive mientras el worker está despierto)
+async function rotarIA(env, b) {
+  const msgs = (b.messages || []).filter(m => m && m.content).map(m => ({ role: m.role === "assistant" ? "assistant" : m.role === "system" ? "system" : "user", content: String(m.content).slice(0, 200000) }));
+  if (!msgs.length) return { error: true, msg: "no hay mensaje" };
+  const imgs = (b.images || []).slice(0, 4);
+  if (imgs.length) { const u = msgs[msgs.length - 1]; u.content = [{ type: "text", text: u.content }, ...imgs.map(x => ({ type: "image_url", image_url: { url: `data:${x.mime};base64,${x.data}` } }))]; }
+  const errores = [], ahora = Date.now();
+  let lista = PROVEEDORES.filter(([k]) => env[k]);
+  if (imgs.length) lista = lista.filter(p => p[4]);                       // con foto: solo las que ven imágenes
+  for (const [k, nombre, base, modelos] of lista) for (const modelo of modelos) {
+    const id = nombre + ":" + modelo; if ((sinCupo[id] || 0) > ahora) continue;
+    try {
+      const r = await fetch(base + "/chat/completions", { method: "POST", headers: { "content-type": "application/json", authorization: "Bearer " + env[k] }, body: JSON.stringify({ model: modelo, messages: msgs, temperature: 0.5 }) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) { errores.push(`${nombre}: ${r.status}`); sinCupo[id] = ahora + (r.status === 429 ? 5 * 60e3 : r.status === 401 || r.status === 403 ? 6 * 3600e3 : 60e3); if (r.status === 401 || r.status === 403) break; continue; }
+      const c = (j.choices || [])[0] || {}; const t = String((c.message && c.message.content) || "").replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+      if (t) return { texto: t, modelo: `${nombre} · ${modelo}`, cortado: c.finish_reason === "length" };
+      errores.push(`${nombre}: vacío`);
+    } catch (e) { errores.push(`${nombre}: sin conexión`); }
+  }
+  if (!imgs.length) {
+    if (env.AI) { try { const r = await env.AI.run("@cf/meta/llama-3.3-70b-instruct-fp8-fast", { messages: msgs.map(m => ({ role: m.role, content: String(m.content) })), max_tokens: 4000 }); const t = typeof r.response === "string" ? r.response.trim() : ""; if (t) return { texto: t, modelo: "Cloudflare · llama-3.3-70b" }; } catch (e) { errores.push("Cloudflare: " + String(e.message || e).slice(0, 40)); } }
+    try { const r = await fetch("https://text.pollinations.ai/openai", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ model: "openai", messages: msgs }) }); const j = await r.json().catch(() => ({})); const t = String((((j.choices || [])[0] || {}).message || {}).content || "").trim(); if (t) return { texto: t, modelo: "Pollinations" }; errores.push("Pollinations: " + r.status); } catch { errores.push("Pollinations: sin conexión"); }
+  }
+  return { error: true, msg: "Todas las IA están sin cupo en este momento: " + errores.slice(-5).join(" · ") };
 }
 
 // Despertador + reloj fijo
