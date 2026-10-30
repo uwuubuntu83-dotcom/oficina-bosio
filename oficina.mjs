@@ -4,6 +4,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import zlib from "node:zlib";
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const DATA = path.join(ROOT, "data");
@@ -295,9 +296,66 @@ function escribirPriv(id, v) { const iv = crypto.randomBytes(12); const c = cryp
 function anotar(id, e) { const r = leerPriv(id, []); r.push({ t: NOW.toISOString(), f: fechaAR(), h: horaAR(), ...e }); escribirPriv(id, r.slice(-4000)); return r; }
 const pesos = n => "$" + Math.round(n).toLocaleString("es-AR");
 function leerMonto(s) { let t = String(s); let a; do { a = t; t = t.replace(/(\d)\.(\d{3})(?!\d)/, "$1$2"); } while (t !== a); const m = t.match(/\$?\s*(\d+(?:,\d+)?)\s*(k\b|mil\b|lucas\b|luca\b)?/i); if (!m) return null; let v = parseFloat(m[1].replace(",", ".")); if (m[2]) v *= 1000; return v > 0 ? v : null; }
-const CATS = [["Auto y combustible", /(nafta|gasoil|combustible|ypf|shell|axion|estacionamiento|peaje|mec[aá]nic|gomer|lavadero|repuesto)/i], ["Comida y súper", /(s[uú]per|\bpan\b|carne|fruta|verdura|leche|caf[eé]|gaseosa|almac[eé]n|carnicer|verduler|panader|comida|delivery|rotiser|pizza|empanada|kiosco|mercado|fiambrer|helad)/i], ["Salud", /(farmacia|remedio|m[eé]dic|dentista|odont|an[aá]lisis|kinesi|psic[oó]log|nutricion)/i], ["Ropa e imagen", /(ropa|zapatilla|remera|pantal[oó]n|peluquer|barber|perfume|corte de pelo)/i], ["Salidas", /(bar\b|cerveza|birra|boliche|cine|salida|restaurant|resto|asado|fernet|cumple|regalo)/i], ["Casa y arreglos", /(plomer|electricist|gasista|alba[ñn]il|arreglo|cerrajer|limpieza|muebl|electrodom)/i], ["Obra y herramientas", /(herramienta|corral[oó]n|ferreter|material|cemento|pintur|pinceleta)/i], ["Tecnología y suscripciones", /(celular|cargador|auricular|app\b|suscripci|netflix|spotify|youtube|google|chatgpt|disney|steam)/i], ["Deporte", /(gimnasio|gym|club|suplement|prote[ií]na|creatina|paleta|f[uú]tbol)/i]];
+const CATS = [
+  ["Créditos y financiación", /(cuota|pr[eé]stamo|cr[eé]dito|tarjeta|resumen de la tarjeta|financiaci|plan de pago)/i],
+  ["Impuestos", /(impuesto|monotributo|arca|afip|rentas|ingresos brutos|patente|inmobiliario|tasa municipal|multa)/i],
+  ["Transporte", /(nafta|gasoil|combustible|ypf|shell|axion|estacionamiento|peaje|mec[aá]nic|gomer|lavadero|repuesto|uber|remis|taxi|colectivo|cabify|didi)/i],
+  ["Comidas y bebidas", /(s[uú]per|\bpan\b|carne|fruta|verdura|leche|caf[eé]|gaseosa|almac[eé]n|carnicer|verduler|panader|comida|delivery|rotiser|pizza|empanada|kiosco|mercado|fiambrer|helad|almuerzo|cena|desayuno|bar\b|cerveza|birra|fernet|restaurant|resto|asado)/i],
+  ["Salud", /(farmacia|remedio|m[eé]dic|dentista|odont|an[aá]lisis|kinesi|psic[oó]log|nutricion|prepaga|obra social)/i],
+  ["Shopping", /(ropa|zapatilla|remera|pantal[oó]n|perfume|celular|cargador|auricular|regalo|mercadolibre|mercado libre)/i],
+  ["Entretenimiento", /(boliche|cine|salida|cumple|netflix|spotify|youtube|disney|steam|juego|recital|entrada)/i],
+  ["Cuidado personal", /(peluquer|barber|corte de pelo|gimnasio|gym|suplement|prote[ií]na|creatina)/i],
+  ["Casa y arreglos", /(plomer|electricist|gasista|alba[ñn]il|arreglo|cerrajer|limpieza|muebl|electrodom)/i],
+  ["Obra y herramientas", /(herramienta|corral[oó]n|ferreter|material|cemento|pintur|pinceleta)/i],
+  ["Transferencias", /(transfer|le pas[eé]|le mand[eé]|le di)/i]
+];
 const categoria = t => (CATS.find(([, r]) => r.test(t)) || ["Otros"])[0];
 const RX_SERV = /\b(luz|epec|gas|ecogas|agua|cooperativa|internet|wifi|fibra|cable|directv|flow|tel[eé]fono|alquiler|expensas|municipal(idad)?|tasa|rentas|inmobiliario|seguro|prepaga|obra social|patente)\b/i;
+/* ---------- gráfico de torta en PNG, hecho a mano (sin IA, sin librerías, sin mandar tus datos a nadie) ---------- */
+const COLORES_TORTA = [["🟥", [221, 46, 68]], ["🟧", [244, 144, 12]], ["🟨", [253, 203, 88]], ["🟩", [120, 177, 89]], ["🟦", [85, 172, 238]], ["🟪", [170, 142, 214]], ["🟫", [193, 105, 79]], ["⬜", [225, 228, 232]]];
+const CRC = Array.from({ length: 256 }, (_, n) => { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; return c >>> 0; });
+const crc32 = b => { let c = 0xffffffff; for (const x of b) c = CRC[(c ^ x) & 255] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; };
+function pngTorta(partes, size = 640) {
+  const W = size, H = size, cx = W / 2, cy = H / 2, R = W * 0.47, r = W * 0.25, bg = [15, 18, 28];
+  const tot = partes.reduce((a, p) => a + p.v, 0) || 1; let acc = 0; const arcos = partes.map(p => { const a0 = acc; acc += p.v / tot * 2 * Math.PI; return [a0, acc, p.rgb]; });
+  const colorEn = (x, y) => { const dx = x - cx, dy = y - cy, d = Math.hypot(dx, dy); if (d < r || d > R) return bg; let a = Math.atan2(dx, -dy); if (a < 0) a += 2 * Math.PI; const s = arcos.find(([a0, a1]) => a >= a0 && a < a1) || arcos[arcos.length - 1]; return s[2]; };
+  const raw = Buffer.alloc((W * 3 + 1) * H);
+  for (let y = 0; y < H; y++) { raw[y * (W * 3 + 1)] = 0; for (let x = 0; x < W; x++) { let R_ = 0, G = 0, B = 0; for (const [sx, sy] of [[0.25, 0.25], [0.75, 0.25], [0.25, 0.75], [0.75, 0.75]]) { const c = colorEn(x + sx, y + sy); R_ += c[0]; G += c[1]; B += c[2]; } const o = y * (W * 3 + 1) + 1 + x * 3; raw[o] = R_ >> 2; raw[o + 1] = G >> 2; raw[o + 2] = B >> 2; } }
+  const chunk = (t, d) => { const len = Buffer.alloc(4); len.writeUInt32BE(d.length); const td = Buffer.concat([Buffer.from(t), d]); const c = Buffer.alloc(4); c.writeUInt32BE(crc32(td)); return Buffer.concat([len, td, c]); };
+  const ihdr = Buffer.alloc(13); ihdr.writeUInt32BE(W, 0); ihdr.writeUInt32BE(H, 4); ihdr[8] = 8; ihdr[9] = 2;
+  return Buffer.concat([Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]), chunk("IHDR", ihdr), chunk("IDAT", zlib.deflateSync(raw)), chunk("IEND", Buffer.alloc(0))]);
+}
+async function enviarFoto(png, caption) {
+  if (!TG_TOKEN || !est.dueno) return null;
+  try { const fd = new FormData(); fd.append("chat_id", String(est.dueno)); if (caption) fd.append("caption", caption.slice(0, 1000)); fd.append("photo", new Blob([png], { type: "image/png" }), "gastos.png"); const r = await traer(`${URLS.tg}/bot${TG_TOKEN}/sendPhoto`, { method: "POST", body: fd }, 60000); const j = await r.json(); return j.ok ? j.result : null; } catch (e) { console.log("sendPhoto:", e.message); return null; }
+}
+const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+function datosGastos(desde, hasta) {
+  const g = leerPriv("gastos", []).filter(x => x.f >= desde && x.f <= hasta), c = leerPriv("pagos_casa", []).filter(x => x.f >= desde && x.f <= hasta);
+  const todos = [...g.map(x => ({ ...x, cat: CATS.some(([n]) => n === x.cat) ? x.cat : categoria(x.texto || "") })), ...c.map(x => ({ ...x, texto: x.servicio, cat: "Cuentas y servicios" }))];
+  const por = {}; for (const x of todos) por[x.cat] = (por[x.cat] || 0) + x.monto;
+  return { todos, por, total: todos.reduce((a, x) => a + x.monto, 0) };
+}
+// Informe con torta: periodo = "mes" | "mes pasado" | "semana"
+async function informeGastos(periodo = "mes") {
+  const hoy = fechaAR(); let desde, hasta = hoy, titulo, ant;
+  const mesDe = (y, m) => [new Date(Date.UTC(y, m, 1)).toISOString().slice(0, 10), new Date(Date.UTC(y, m + 1, 0)).toISOString().slice(0, 10)];
+  const Y = Number(hoy.slice(0, 4)), M = Number(hoy.slice(5, 7)) - 1;
+  if (/pasad|anterior/.test(periodo)) { [desde, hasta] = mesDe(Y, M - 1); titulo = `Gastos de ${MESES[(M + 11) % 12]}`; ant = mesDe(Y, M - 2); }
+  else if (/semana/.test(periodo)) { desde = fechaAR(new Date(NOW - 6 * 86400e3)); titulo = "Gastos de los últimos 7 días"; ant = [fechaAR(new Date(NOW - 13 * 86400e3)), fechaAR(new Date(NOW - 7 * 86400e3))]; }
+  else { desde = hoy.slice(0, 8) + "01"; titulo = `Gastos de ${MESES[M]} (hasta hoy)`; const [a0] = mesDe(Y, M - 1); ant = [a0, a0.slice(0, 8) + hoy.slice(8, 10)]; }
+  const d = datosGastos(desde, hasta), p = datosGastos(ant[0], ant[1]);
+  if (!d.total) { await enviar(`📊 ${titulo}\n\nTodavía no hay gastos anotados en ese período. Escribime, por ejemplo: «gasté 5000 en nafta» o «pagué luz 34800».`); return; }
+  let filas = Object.entries(d.por).sort((a, z) => z[1] - a[1]);
+  if (filas.length > COLORES_TORTA.length) { const resto = filas.slice(COLORES_TORTA.length - 1).reduce((a, [, v]) => a + v, 0); filas = [...filas.slice(0, COLORES_TORTA.length - 1), ["Otras categorías", resto]]; }
+  const png = pngTorta(filas.map(([, v], i) => ({ v, rgb: COLORES_TORTA[i][1] })));
+  const dias = Math.max(1, Math.round((new Date(hasta) - new Date(desde)) / 86400e3) + 1), mayor = d.todos.reduce((a, x) => x.monto > a.monto ? x : a, d.todos[0]);
+  const vs = p.total ? Math.round((d.total - p.total) / p.total * 100) : null;
+  const txt = `📊 ${titulo}\n💰 Total: ${pesos(d.total)}${vs != null ? ` (${vs >= 0 ? "+" : ""}${vs}% contra el mismo período anterior)` : ""}\n\n` + filas.map(([k, v], i) => `${COLORES_TORTA[i][0]} ${k}: ${pesos(v)} · ${Math.round(v / d.total * 100)}%${p.por[k] ? (v > p.por[k] * 1.2 ? " ⬆️" : v < p.por[k] * 0.8 ? " ⬇️" : "") : ""}`).join("\n") + `\n\n📌 Gasto más grande: ${pesos(mayor.monto)} · ${mayor.texto || "-"} (${mayor.f.slice(8, 10)}/${mayor.f.slice(5, 7)})\n📅 Promedio por día: ${pesos(d.total / dias)} · ${d.todos.length} gastos anotados`;
+  await enviarFoto(png, `📊 ${titulo} · ${pesos(d.total)}`);
+  await enviar(txt);
+  log("Contaduría", "mandó el informe de gastos con gráfico (privado)");
+}
 function resumenGastos(desde, hasta, titulo) {
   const g = leerPriv("gastos", []).filter(x => x.f >= desde && x.f <= hasta); const serv = leerPriv("pagos_casa", []).filter(x => x.f >= desde && x.f <= hasta);
   const por = {}; for (const x of g) por[x.cat] = (por[x.cat] || 0) + x.monto;
@@ -403,8 +461,8 @@ const RECETAS = {
   // gastos: resumen de tus gastos personales (sin IA). Domingo: semana. Día 1: el mes anterior.
   async gastos(b, sb, { resumen } = {}) {
     const hoy = fechaAR(); const d = Number(hoy.slice(8, 10));
-    if (d === 1) { const prev = new Date(Date.UTC(Number(hoy.slice(0, 4)), Number(hoy.slice(5, 7)) - 2, 1)).toISOString().slice(0, 7); return { texto: resumenGastos(prev + "-01", prev + "-31", `Gastos de ${prev.slice(5)}/${prev.slice(0, 4)}`), enviar: true }; }
-    if (diaAR() === 0) return { texto: resumenGastos(fechaAR(new Date(NOW - 6 * 86400e3)), hoy, "Gastos de la semana"), enviar: true };
+    if (d === 1) { await informeGastos("mes pasado"); return { texto: "Informe del mes con gráfico enviado.", enviar: false }; }
+    if (diaAR() === 0) { await informeGastos("semana"); return { texto: "Informe de la semana con gráfico enviado.", enviar: false }; }
     return { texto: resumenGastos(hoy.slice(0, 8) + "01", hoy, "Gastos del mes hasta hoy"), enviar: false };
   },
   async salud() {
@@ -538,7 +596,7 @@ const AYUDA = () => `Soy el Gerente general de la ${CFG.oficina}. Escribime:
 • «caminé 40 minutos», «hice pesas», «no entrené» — tu actividad.
 • «gasté 5000 en nafta» — gasto personal. «pagué luz 34800» — servicio de la casa.
 • «servicio luz vence 10 35000» — te aviso antes de cada vencimiento.
-• gastos · gastos semana · servicios · comidas · comidas semana · ejercicio · borrar último gasto
+• torta (gráfico e informe de gastos del mes) · torta semana · torta mes pasado · servicios · comidas · ejercicio · borrar último gasto
 • 📸 Foto de un ticket con la palabra «comprobante»: lo leo y lo anoto. Otra foto tuya: el asesor de imagen te da su opinión.
 Oficina visual: https://uwuubuntu83-dotcom.github.io/oficina-bosio/`;
 const COLORES = ["#c2417a", "#2f7d4f", "#b5651d", "#2f5fa8", "#7a4fa8", "#0e8a8a", "#a0522d", "#4a5bbf", "#8a6d2f", "#5f5f5f"];
@@ -609,8 +667,9 @@ async function registrar(txt, desdeBot) {
   if ((mm = txt.match(/^servicio\s+(.+?)\s+vence\s+(?:el\s+)?(?:d[ií]a\s+)?(\d{1,2})\b\s*(.*)$/i))) { const lista = leerPriv("servicios", []); const nombre = mm[1].trim().slice(0, 30); const ant = lista.find(x => slug(x.nombre) === slug(nombre)); const monto = leerMonto(mm[3]); if (ant) Object.assign(ant, { dia: Number(mm[2]), monto: monto || ant.monto }); else lista.push({ nombre, dia: Number(mm[2]), monto, pagos: {} }); escribirPriv("servicios", lista); await enviar(`🏠 ${ant ? "Actualicé" : "Agregué"} ${nombre}: vence el ${mm[2]} de cada mes${monto ? ", aprox. " + pesos(monto) : ""}. Te aviso 3 días antes.`); return true; }
   if ((mm = txt.match(/^(?:borrar|quitar|sacar)\s+servicio\s+(.+)$/i))) { const lista = leerPriv("servicios", []); const n = lista.length; const q = slug(mm[1]); escribirPriv("servicios", lista.filter(x => slug(x.nombre) !== q)); await enviar(n !== lista.filter(x => slug(x.nombre) !== q).length ? "🗑️ Listo, lo saqué." : "No encontré ese servicio. Escribí «servicios»."); return true; }
   if (/^(mis\s+)?servicios$/i.test(txt)) { const r = await RECETAS.servicios(botPorId("gastos_casa") || {}, { memoria: {} }); await enviar(r.texto); return true; }
-  if (/^(mis\s+)?gastos(\s+del\s+mes)?$|^resumen\s+(de\s+)?gastos$/i.test(txt)) { await enviar(resumenGastos(fechaAR().slice(0, 8) + "01", fechaAR(), "Gastos del mes hasta hoy")); return true; }
-  if (/^gastos\s+(de\s+la\s+)?semana$/i.test(txt)) { await enviar(resumenGastos(fechaAR(new Date(NOW - 6 * 86400e3)), fechaAR(), "Gastos de la semana")); return true; }
+  if (/^(mis\s+)?gastos(\s+del\s+mes)?$|^(resumen|informe)\s+(de\s+)?(los\s+)?gastos(\s+del\s+mes)?$|^(la\s+)?torta(\s+de)?(\s+(los|mis))?(\s+gastos)?$|^gr[aá]fico(\s+de)?(\s+(los|mis))?\s+gastos$/i.test(txt)) { await informeGastos("mes"); return true; }
+  if (/^(gastos|informe|torta|gr[aá]fico)(\s+de)?(\s+(los|mis))?(\s+gastos)?\s+(de\s+la\s+)?semana$/i.test(txt)) { await informeGastos("semana"); return true; }
+  if (/^(gastos|informe|torta|gr[aá]fico)(\s+de)?(\s+(los|mis))?(\s+gastos)?(\s+del)?\s+mes\s+(pasado|anterior)$/i.test(txt)) { await informeGastos("mes pasado"); return true; }
   if (/^borrar\s+(el\s+)?[uú]ltimo\s+gasto$/i.test(txt)) { const g = leerPriv("gastos", []), c = leerPriv("pagos_casa", []); const ug = g[g.length - 1], uc = c[c.length - 1]; if (!ug && !uc) { await enviar("No hay gastos para borrar."); return true; } if (!uc || (ug && ug.t > uc.t)) { g.pop(); escribirPriv("gastos", g); await enviar(`🗑️ Borré: ${pesos(ug.monto)} · ${ug.texto}`); } else { c.pop(); escribirPriv("pagos_casa", c); const lista = leerPriv("servicios", []); const sv = lista.find(x => x.nombre === uc.servicio); if (sv && sv.pagos) { delete sv.pagos[uc.f.slice(0, 7)]; escribirPriv("servicios", lista); } await enviar(`🗑️ Borré el pago de ${uc.servicio}: ${pesos(uc.monto)}`); } return true; }
   if (/^(qu[eé]\s+com[ií](\s+hoy)?|comidas(\s+de)?\s+hoy|mis\s+comidas|comidas)$/i.test(txt)) { await enviar(`🍽️ Hoy anotaste:\n${listaComidas(1)}`); return true; }
   if (/^comidas(\s+de\s+la)?\s+semana$/i.test(txt)) { await enviar(`🍽️ Últimos 7 días:\n${listaComidas(7)}`); return true; }
@@ -658,7 +717,7 @@ async function procesarMensajes() {
       log("Mesa de entrada", "llegó una foto (no se guarda)"); continue;
     }
     if (resp && botPorId(resp) && botPorId(resp).receta?.registro) { try { if (await registrar(txt, botPorId(resp))) continue; } catch (e) { await enviar("⚠️ No pude anotarlo: " + e.message); continue; } }
-    if (RX_GASTO_EN.test(txt) && /\d/.test(txt) && !/^(mis\s+)?gastos(\s+(del\s+mes|de\s+la\s+semana|semana))?$/i.test(txt) && botPorId("gastos_personales")) { try { const n = await registrarLote(txt, botPorId("gastos_personales")); if (n) { log("Contaduría", `anotó ${n} gastos (privado)`); continue; } } catch {} }
+    if (RX_GASTO_EN.test(txt) && /\d/.test(txt) && !/^((mis|los)\s+)?(gastos|informe|torta|gr[aá]fico|resumen)\b[^\d]*$/i.test(txt) && botPorId("gastos_personales")) { try { const n = await registrarLote(txt, botPorId("gastos_personales")); if (n) { log("Contaduría", `anotó ${n} gastos (privado)`); continue; } } catch {} }
     try { if (await registrar(txt, null)) { log("Asistente personal", "anotó algo (privado)"); continue; } } catch (e) { await enviar("⚠️ No pude anotarlo: " + e.message); continue; }
     if (resp && botPorId(resp)) {
       const b = botPorId(resp); const sb = est.bots[b.id];

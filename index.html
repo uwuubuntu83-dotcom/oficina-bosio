@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta name="version" content="20261030174146">
+<meta name="version" content="20261030180120">
 <meta http-equiv="Cache-Control" content="no-cache">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -244,9 +244,14 @@ function pintarOrg(){
 /* un solo chat: lo mismo que ves en Telegram y en el panel del celu (guardado en el buzón, privado con tu PIN) */
 OF.chatModo="chat";OF.conv=null;
 async function cargarConv(){if(!getPin())return;try{const d=await buzon("/oficina/chat");OF.conv=d.chat||[];if(OF.chatModo==="chat")pintarConv()}catch(e){}}
+/* si el mensaje es un informe de gastos (líneas «🟥 Categoría: $X · N%»), dibujo la torta */
+const TCOL={"🟥":"#dd2e44","🟧":"#f4900c","🟨":"#fdcb58","🟩":"#78b159","🟦":"#55acee","🟪":"#aa8ed6","🟫":"#c1694f","⬜":"#e1e4e8"};
+function tortaDe(t){const fs=[...String(t).matchAll(/^(🟥|🟧|🟨|🟩|🟦|🟪|🟫|⬜) ([^:\n]+): \$([\d.]+)/gm)].map(m=>({c:TCOL[m[1]],v:Number(m[3].replace(/\./g,""))}));if(fs.length<1)return null;
+  const tot=fs.reduce((a,x)=>a+x.v,0)||1;let a0=-Math.PI/2;const R=60,r=32,C=70;const arcs=fs.map(x=>{const a1=a0+x.v/tot*2*Math.PI;const L=(a1-a0)>Math.PI?1:0;const p=(a,rr)=>[C+rr*Math.cos(a),C+rr*Math.sin(a)];const [x0,y0]=p(a0,R),[x1,y1]=p(a1-1e-4,R),[x2,y2]=p(a1-1e-4,r),[x3,y3]=p(a0,r);const d=`M${x0},${y0}A${R},${R} 0 ${L} 1 ${x1},${y1}L${x2},${y2}A${r},${r} 0 ${L} 0 ${x3},${y3}Z`;a0=a1;return `<path d="${d}" fill="${x.c}"/>`});
+  const sv=document.createElementNS("http://www.w3.org/2000/svg","svg");sv.setAttribute("viewBox","0 0 140 140");sv.setAttribute("width","140");sv.setAttribute("height","140");sv.setAttribute("role","img");sv.setAttribute("aria-label","Gráfico de torta de los gastos");sv.innerHTML=arcs.join("");const w=h("div",{style:"display:flex;justify-content:center;margin:4px 0 6px"});w.append(sv);return w}
 function pintarConv(){const box=$("#msgs");const abajo=box.scrollHeight-box.scrollTop-box.clientHeight<60;box.innerHTML="";
   if(!OF.conv||!OF.conv.length)box.append(h("div",{class:"m"},h("span",{class:"empty"},"Todavía no hay mensajes. Escribí abajo: «estado», «celu programa de hoy», «gasté 5000 en nafta»…")));
-  for(const m of (OF.conv||[]).slice(-120)){const yo=/^vos/.test(m.de);box.append(h("div",{class:"m cv"+(yo?" yo":"")},h("div",{class:"who"},yo?"🙋 "+m.de:(m.de==="celu"?"📱 Celu bot":m.de==="oficina"?"🏢 Oficina":"🤖 "+m.de)),h("div",{style:"white-space:pre-wrap"},m.texto),h("time",{},fmt(new Date(m.t).toISOString()))))}
+  for(const m of (OF.conv||[]).slice(-120)){const yo=/^vos/.test(m.de);box.append(h("div",{class:"m cv"+(yo?" yo":"")},h("div",{class:"who"},yo?"🙋 "+m.de:(m.de==="celu"?"📱 Celu bot":m.de==="oficina"?"🏢 Oficina":"🤖 "+m.de)),tortaDe(m.texto),h("div",{style:"white-space:pre-wrap"},m.texto),h("time",{},fmt(new Date(m.t).toISOString()))))}
   if(abajo||!OF.convVisto){box.scrollTop=box.scrollHeight;OF.convVisto=true}}
 function pintarChat(){
   const tabs=$("#chatTabs");if(tabs){tabs.innerHTML="";for(const[k,l]of[["chat","💬 Chat"],["act","📋 Actividad"]])tabs.append(h("button",{"aria-pressed":String(OF.chatModo===k),onclick:()=>{OF.chatModo=k;OF.convVisto=false;pintarChat();if(k==="chat")cargarConv()}},l))}
@@ -263,7 +268,7 @@ function pintarChat(){
   box.scrollTop=keep;pintarQuick()}
 function pintarQuick(){
   const q=$("#quick");q.innerHTML="";
-  for(const [lbl,cmd] of [["📋 Estado","estado"],["📱 Celu","celu"],["📅 Programa del celu","celu programa de hoy"],["💸 Gastos","gastos"],["👥 Organigrama","bots"],["➕ Contratar bot","contratar: "],["🏢 Crear área","crear area "],["💵 Dólar ya","correr dolar"],["🌤️ Clima","correr clima"]])q.append(h("button",{onclick:()=>{$("#orden").value=cmd;$("#orden").focus()}},lbl));
+  for(const [lbl,cmd] of [["📋 Estado","estado"],["📱 Celu","celu"],["📅 Programa del celu","celu programa de hoy"],["📊 Torta de gastos","torta"],["👥 Organigrama","bots"],["➕ Contratar bot","contratar: "],["🏢 Crear área","crear area "],["💵 Dólar ya","correr dolar"],["🌤️ Clima","correr clima"]])q.append(h("button",{onclick:()=>{$("#orden").value=cmd;$("#orden").focus()}},lbl));
   $("#note").textContent="Es el mismo chat que Telegram y que el panel del celu: escribas donde escribas, se ve en los tres. Lo del celu contesta al instante; lo demás en 1 o 2 minutos.";
 }
 $("#compose").addEventListener("submit",async ev=>{ev.preventDefault();const t=$("#orden").value.trim();if(!t)return;
