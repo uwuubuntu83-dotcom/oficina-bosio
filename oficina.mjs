@@ -268,7 +268,7 @@ function escribirPriv(id, v) { const iv = crypto.randomBytes(12); const c = cryp
 function anotar(id, e) { const r = leerPriv(id, []); r.push({ t: NOW.toISOString(), f: fechaAR(), h: horaAR(), ...e }); escribirPriv(id, r.slice(-4000)); return r; }
 const pesos = n => "$" + Math.round(n).toLocaleString("es-AR");
 function leerMonto(s) { let t = String(s); let a; do { a = t; t = t.replace(/(\d)\.(\d{3})(?!\d)/, "$1$2"); } while (t !== a); const m = t.match(/\$?\s*(\d+(?:,\d+)?)\s*(k\b|mil\b|lucas\b|luca\b)?/i); if (!m) return null; let v = parseFloat(m[1].replace(",", ".")); if (m[2]) v *= 1000; return v > 0 ? v : null; }
-const CATS = [["Auto y combustible", /(nafta|gasoil|combustible|ypf|shell|axion|estacionamiento|peaje|mec[aá]nic|gomer|lavadero|repuesto)/i], ["Comida y súper", /(s[uú]per|almac[eé]n|carnicer|verduler|panader|comida|delivery|rotiser|pizza|empanada|kiosco|mercado|fiambrer|helad)/i], ["Salud", /(farmacia|remedio|m[eé]dic|dentista|odont|an[aá]lisis|kinesi|psic[oó]log|nutricion)/i], ["Ropa e imagen", /(ropa|zapatilla|remera|pantal[oó]n|peluquer|barber|perfume|corte de pelo)/i], ["Salidas", /(bar\b|cerveza|birra|boliche|cine|salida|restaurant|resto|asado|fernet|cumple|regalo)/i], ["Obra y herramientas", /(herramienta|corral[oó]n|ferreter|material|cemento|pintur|pinceleta)/i], ["Tecnología y suscripciones", /(celular|cargador|auricular|app\b|suscripci|netflix|spotify|youtube|google|chatgpt|disney|steam)/i], ["Deporte", /(gimnasio|gym|club|suplement|prote[ií]na|creatina|paleta|f[uú]tbol)/i]];
+const CATS = [["Auto y combustible", /(nafta|gasoil|combustible|ypf|shell|axion|estacionamiento|peaje|mec[aá]nic|gomer|lavadero|repuesto)/i], ["Comida y súper", /(s[uú]per|\bpan\b|carne|fruta|verdura|leche|caf[eé]|gaseosa|almac[eé]n|carnicer|verduler|panader|comida|delivery|rotiser|pizza|empanada|kiosco|mercado|fiambrer|helad)/i], ["Salud", /(farmacia|remedio|m[eé]dic|dentista|odont|an[aá]lisis|kinesi|psic[oó]log|nutricion)/i], ["Ropa e imagen", /(ropa|zapatilla|remera|pantal[oó]n|peluquer|barber|perfume|corte de pelo)/i], ["Salidas", /(bar\b|cerveza|birra|boliche|cine|salida|restaurant|resto|asado|fernet|cumple|regalo)/i], ["Obra y herramientas", /(herramienta|corral[oó]n|ferreter|material|cemento|pintur|pinceleta)/i], ["Tecnología y suscripciones", /(celular|cargador|auricular|app\b|suscripci|netflix|spotify|youtube|google|chatgpt|disney|steam)/i], ["Deporte", /(gimnasio|gym|club|suplement|prote[ií]na|creatina|paleta|f[uú]tbol)/i]];
 const categoria = t => (CATS.find(([, r]) => r.test(t)) || ["Otros"])[0];
 const RX_SERV = /\b(luz|epec|gas|ecogas|agua|cooperativa|internet|wifi|fibra|cable|directv|flow|tel[eé]fono|alquiler|expensas|municipal(idad)?|tasa|rentas|inmobiliario|seguro|prepaga|obra social|patente)\b/i;
 function resumenGastos(desde, hasta, titulo) {
@@ -596,6 +596,13 @@ async function registrar(txt, desdeBot) {
   }
   return false;
 }
+// Varias anotaciones juntas («gasté 5000 en nafta, 3000 en súper y 1200 en pan»): una por renglón o separadas por coma / «y».
+async function registrarLote(txt, b) {
+  const reg = b.receta.registro; let partes = String(txt).split(/\n|;|,(?!\d{3}\b)|\s+y\s+(?=[^\n]*\d)/i).map(s => s.trim()).filter(Boolean);
+  if (reg === "gastos" || reg === "casa") { const pref = (String(txt).match(/^(gast[eé]|gasto|compr[eé]|pagu[eé])/i) || [""])[0]; partes = partes.filter(s => leerMonto(s)).map(s => /^(gast|compr|pagu|pago)/i.test(s) || !pref ? s : pref + " " + s); }
+  let n = 0; for (const s of partes) { try { if (await registrar(s, b)) n++; } catch (e) { log(b.nombre, "no pude anotar: " + e.message); } }
+  return n;
+}
 async function procesarMensajes() {
   if (!TG_TOKEN) return;
   let ups = await tg("getUpdates", { offset: est.tgOffset, timeout: 0, allowed_updates: ["message", "edited_message"] });
@@ -621,6 +628,7 @@ async function procesarMensajes() {
       log("Mesa de entrada", "llegó una foto (no se guarda)"); continue;
     }
     if (resp && botPorId(resp) && botPorId(resp).receta?.registro) { try { if (await registrar(txt, botPorId(resp))) continue; } catch (e) { await enviar("⚠️ No pude anotarlo: " + e.message); continue; } }
+    if (/(gast|compr[eé]|pagu[eé]|pago\b)/i.test(txt) && (txt.match(/\d[\d.,]*/g) || []).length > 1 && botPorId("gastos_personales")) { try { const n = await registrarLote(txt, botPorId("gastos_personales")); if (n) { log("Contaduría", `anotó ${n} gastos (privado)`); continue; } } catch {} }
     try { if (await registrar(txt, null)) { log("Asistente personal", "anotó algo (privado)"); continue; } } catch (e) { await enviar("⚠️ No pude anotarlo: " + e.message); continue; }
     if (resp && botPorId(resp)) {
       const b = botPorId(resp); const sb = est.bots[b.id];
@@ -670,6 +678,7 @@ Elegí el empleado que mejor la cumple. Si ninguno encaja, elegí "gerente" (la 
 Respondé SOLO un JSON: {"bot":"id o gerente","instruccion":"la orden clara para ese empleado","aviso":"frase corta para el jefe diciendo a quién se la pasaste","buscar":true si hace falta buscar en internet}`, { json: true });
   const j = parsearJSON(r.texto) || {}; const b = botPorId(j.bot);
   if (b && b.id === "celular_bot") { await ordenCelu(j.instruccion || p.orden); g.estado = "listo"; return; }
+  if (b && b.tipo === "codigo" && b.receta && b.receta.registro) { const n = await registrarLote(p.orden, b); if (n) { log("Gerente general", `le pasó ${n} anotaciones a ${b.nombre}`); g.estado = "listo"; return; } }
   if (b && b.tipo !== "externo") {
     log("Gerente general", `le pasó la orden a ${b.nombre}`); await enviar(`📥 ${j.aviso || `Se la paso a ${b.nombre}.`}`);
     // los bots sin IA hacen su tarea tal cual (gratis); los de IA reciben la orden concreta
