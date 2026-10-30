@@ -724,6 +724,7 @@ async function main() {
   for (const id of Object.keys(est.bots)) if (est.bots[id].estado === "trabajando") est.bots[id].estado = "esperando";
   if (TG_TOKEN && !est.botUsuario) { const me = await tg("getMe", {}); if (me && me.username) est.botUsuario = me.username; }
   if (!est.pendientes.length) est.pendientes = leerPrivSeguro("pendientes", []);
+  { const viejas = est.pendientes.filter(p => p.t && NOW - new Date(p.t) > 6 * 3600e3); if (viejas.length) { est.pendientes = est.pendientes.filter(p => !viejas.includes(p)); log("Gerente general", `descartó ${viejas.length} órdenes viejas que esperaban IA`); await enviar(`🗑️ Descarté ${viejas.length} orden(es) de hace más de 6 horas que no se pudieron hacer por falta de IA: ${viejas.map(p => "«" + String(p.orden || p.bot || p.tipo).slice(0, 40) + "»").join(", ")}. Si todavía las necesitás, pedímelas de nuevo.`); } }
   await procesarMensajes();
   await avisarBuzonListo();
   await revisarExternos();
