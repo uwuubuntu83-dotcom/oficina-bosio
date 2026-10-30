@@ -1,1 +1,209 @@
-{}
+{
+ "version": 1,
+ "bots": {
+  "dolar": {
+   "estado": "falló",
+   "corridas": 0,
+   "fallas": 1,
+   "fallasSeguidas": 1,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:15:30.038Z",
+   "resumen": "Falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/",
+   "informe": null,
+   "pausado": false
+  },
+  "inmuebles": {
+   "estado": "falló",
+   "corridas": 0,
+   "fallas": 1,
+   "fallasSeguidas": 1,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:15:30.038Z",
+   "resumen": "Falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/",
+   "informe": null,
+   "pausado": false
+  },
+  "precios_obra": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false
+  },
+  "licitaciones": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false
+  },
+  "ideas_jb": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false
+  },
+  "noticias": {
+   "estado": "falló",
+   "corridas": 0,
+   "fallas": 1,
+   "fallasSeguidas": 1,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:15:30.038Z",
+   "resumen": "Falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/",
+   "informe": null,
+   "pausado": false
+  },
+  "escapadas": {
+   "estado": "falló",
+   "corridas": 0,
+   "fallas": 1,
+   "fallasSeguidas": 1,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:15:30.038Z",
+   "resumen": "Falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/",
+   "informe": null,
+   "pausado": false
+  },
+  "ia_gratis": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false
+  },
+  "gerente": {
+   "estado": "esperando",
+   "resumen": "Mandó el parte diario",
+   "ultimaCorrida": null
+  }
+ },
+ "log": [
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Gerente general",
+   "que": "mandó el parte diario"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Escapadas y vuelos baratos",
+   "que": "falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Escapadas y vuelos baratos",
+   "que": "empezó su tarea programada"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Noticias de Argentina y Córdoba",
+   "que": "falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Noticias de Argentina y Córdoba",
+   "que": "empezó su tarea programada"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Terrenos y casas baratas",
+   "que": "falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Terrenos y casas baratas",
+   "que": "empezó su tarea programada"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Dólar y mercado",
+   "que": "falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Dólar y mercado",
+   "que": "empezó su tarea programada"
+  },
+  {
+   "t": "2026-10-30T02:15:30.038Z",
+   "quien": "Oficina",
+   "que": "abre (auto)"
+  }
+ ],
+ "pendientes": [],
+ "mensajes": {},
+ "tgOffset": 0,
+ "hechos": {
+  "parte": "2026-10-29",
+  "entrenamiento": "2026-10-29"
+ },
+ "consumo": {
+  "fecha": "2026-10-29",
+  "consultas": 32
+ },
+ "botUsuario": "GrupoBosiobot",
+ "actualizado": "2026-10-30T02:15:30.038Z",
+ "modelo": "gemini-3.8-flash",
+ "config": {
+  "telegram": true,
+  "gemini": true,
+  "dueno": false
+ }
+}
