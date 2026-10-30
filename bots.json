@@ -1,7 +1,7 @@
 {
   "oficina": "Oficina Bosio",
   "dueno": "Jonathan Bosio",
-  "contexto": "Jonathan Bosio es maestro mayor de obras en Villa María, Córdoba, Argentina. Tiene la Constructora JB. Le interesan las inversiones (dólar, terrenos, casas, autos), las noticias de Argentina y Córdoba, el turismo barato, su salud e imagen, el streaming y las herramientas de IA gratis.",
+  "contexto": "Jonathan Bosio es maestro mayor de obras en Villa María, Córdoba, Argentina. Tiene la Constructora JB. Le interesan las inversiones (dólar, terrenos, lotes, casas, autos), las noticias de Villa María, Argentina y el mundo, la tecnología y la IA, el turismo barato, el streaming y las redes. Quiere mejorar su físico, su alimentación y su imagen personal, y ordenar sus gastos.",
   "ubicacion": {
     "lugar": "Villa María, Córdoba",
     "lat": -32.4075,
@@ -40,7 +40,7 @@
     },
     {
       "id": "mundo",
-      "nombre": "Información mundial",
+      "nombre": "Prensa mundial",
       "icono": "🌎",
       "color": "#3b6f8f"
     },
@@ -57,15 +57,9 @@
       "color": "#0e8a8a"
     },
     {
-      "id": "salud",
-      "nombre": "Salud e imagen",
-      "icono": "💪",
-      "color": "#4f8a2f"
-    },
-    {
       "id": "asistente",
       "nombre": "Asistente personal",
-      "icono": "🗂️",
+      "icono": "🧑‍⚕️",
       "color": "#8a6d2f"
     },
     {
@@ -233,6 +227,66 @@
       "mision": "Revisa cada hora, todo el día, si salieron licitaciones o concursos de obra nuevos en Córdoba y Villa María, y te avisa al instante con el link."
     },
     {
+      "id": "precio_mmo",
+      "nombre": "Valor m² del Colegio de MMO",
+      "area": "constructora",
+      "tipo": "codigo",
+      "receta": {
+        "tipo": "rss",
+        "feeds": [
+          "https://tecnicoscba.com.ar/feed/"
+        ],
+        "busquedas": [
+          "\"maestros mayores de obras\" Córdoba valor metro cuadrado",
+          "\"Colegio de Maestros Mayores de Obras\" Córdoba",
+          "costo de la construcción Córdoba metro cuadrado"
+        ],
+        "dias": 45,
+        "max": 6,
+        "requiere": [
+          "costo",
+          "valor",
+          "m2",
+          "m²",
+          "metro cuadrado",
+          "honorario",
+          "arancel",
+          "actualiza",
+          "aumento",
+          "índice",
+          "indice",
+          "construcción"
+        ],
+        "prioridad": [
+          "tecnicoscba"
+        ]
+      },
+      "horario": {
+        "dias": "todos",
+        "cada": 180,
+        "desde": "00:00",
+        "hasta": "23:59"
+      },
+      "mision": "Revisa varias veces por día la página del Colegio de Maestros Mayores de Obras y Técnicos de Córdoba (tecnicoscba.com.ar) y las noticias del costo del m² en Córdoba. Cuando publican un valor nuevo del metro cuadrado o de honorarios, te avisa al instante con el link."
+    },
+    {
+      "id": "clima",
+      "nombre": "Clima para la obra",
+      "area": "constructora",
+      "tipo": "codigo",
+      "receta": {
+        "tipo": "clima"
+      },
+      "horario": {
+        "dias": "todos",
+        "cada": 120,
+        "desde": "00:00",
+        "hasta": "23:59",
+        "resumen": "06:45"
+      },
+      "mision": "Pronóstico de Villa María a las 6:45 para planificar la obra, y vigila cada 2 horas: si aparece lluvia fuerte o viento que frene la obra, te avisa al instante."
+    },
+    {
       "id": "m2",
       "nombre": "Precio del m² en Córdoba",
       "area": "constructora",
@@ -292,12 +346,28 @@
         "tipo": "rss",
         "busquedas": [
           "Villa María Córdoba",
-          "Villa Nueva Córdoba"
+          "Villa María seguridad policía",
+          "Villa María trabajo empleo",
+          "Villa María clima tormenta",
+          "Villa Nueva Córdoba",
+          "\"El Diario del Centro del País\"",
+          "\"Villa María Vivo\"",
+          "\"Villa María Ya\""
         ],
-        "max": 8,
+        "max": 10,
         "excluir": [
           "rio seco",
           "río seco"
+        ],
+        "prioridad": [
+          "eldiariocba",
+          "diario del centro",
+          "villa maría vivo",
+          "villa maria vivo",
+          "villamariavivo",
+          "villa maría ya",
+          "villa maria ya",
+          "villamariaya"
         ],
         "entrega": [
           "07:30",
@@ -311,11 +381,11 @@
         "desde": "00:00",
         "hasta": "23:59"
       },
-      "mision": "Junta todo el día las noticias nuevas de Villa María y Villa Nueva y te las manda a las 7:30, 13:00 y 20:00."
+      "mision": "Junta todo el día lo que pasa en Villa María y Villa Nueva (seguridad, trabajo, clima, ciudad), primero lo de El Diario del Centro del País, Villa María Vivo y Villa María Ya, y te lo manda a las 7:30, 13:00 y 20:00."
     },
     {
       "id": "noticias_ar",
-      "nombre": "Economía y obra pública",
+      "nombre": "Argentina: economía y obra pública",
       "area": "prensa",
       "tipo": "codigo",
       "receta": {
@@ -339,23 +409,27 @@
         "desde": "00:00",
         "hasta": "23:59"
       },
-      "mision": "Junta todo el día las noticias nuevas de economía, construcción, obra pública y créditos y te las manda a las 7:30, 13:00 y 20:00."
+      "mision": "Junta todo el día las noticias de economía, construcción, obra pública y créditos de Argentina y te las manda a las 7:30, 13:00 y 20:00."
     },
     {
-      "id": "mundo",
-      "nombre": "Noticias del mundo",
+      "id": "mundo_economia",
+      "nombre": "Mundo: economía",
       "area": "mundo",
       "tipo": "codigo",
       "receta": {
         "tipo": "rss",
         "busquedas": [
-          "economía mundial",
-          "Europa noticias",
-          "Estados Unidos economía"
+          "China economía",
+          "Japón economía",
+          "Estados Unidos economía",
+          "Rusia economía",
+          "Europa economía",
+          "India Brasil economía"
         ],
-        "max": 8,
+        "max": 10,
         "entrega": [
           "08:00",
+          "14:00",
           "20:00"
         ]
       },
@@ -365,7 +439,67 @@
         "desde": "00:00",
         "hasta": "23:59"
       },
-      "mision": "Junta todo el día las noticias del mundo que pueden afectar a la Argentina y te las manda a las 8:00 y 20:00."
+      "mision": "Junta todo el día lo más importante de la economía de China, Japón, Estados Unidos, Rusia, Europa, India y Brasil, y te lo manda a las 8:00, 14:00 y 20:00."
+    },
+    {
+      "id": "mundo_tecnologia",
+      "nombre": "Mundo: tecnología",
+      "area": "mundo",
+      "tipo": "codigo",
+      "receta": {
+        "tipo": "rss",
+        "busquedas": [
+          "China tecnología",
+          "Japón tecnología",
+          "Estados Unidos tecnología",
+          "Rusia tecnología",
+          "Corea del Sur tecnología",
+          "Europa tecnología"
+        ],
+        "max": 10,
+        "entrega": [
+          "08:00",
+          "14:00",
+          "20:00"
+        ]
+      },
+      "horario": {
+        "dias": "todos",
+        "cada": 60,
+        "desde": "00:00",
+        "hasta": "23:59"
+      },
+      "mision": "Junta todo el día los avances tecnológicos de China, Japón, Estados Unidos, Rusia, Corea y Europa, y te los manda a las 8:00, 14:00 y 20:00."
+    },
+    {
+      "id": "mundo_salud",
+      "nombre": "Mundo: salud y ciencia",
+      "area": "mundo",
+      "tipo": "codigo",
+      "receta": {
+        "tipo": "rss",
+        "busquedas": [
+          "China salud avance médico",
+          "Japón salud ciencia",
+          "Estados Unidos salud avance médico",
+          "Rusia salud",
+          "OMS salud mundial",
+          "descubrimiento científico"
+        ],
+        "max": 10,
+        "entrega": [
+          "08:00",
+          "14:00",
+          "20:00"
+        ]
+      },
+      "horario": {
+        "dias": "todos",
+        "cada": 60,
+        "desde": "00:00",
+        "hasta": "23:59"
+      },
+      "mision": "Junta todo el día las novedades de salud y ciencia de las potencias del mundo y de la OMS, y te las manda a las 8:00, 14:00 y 20:00."
     },
     {
       "id": "ideas_redes",
@@ -427,72 +561,188 @@
       ]
     },
     {
-      "id": "comida",
-      "nombre": "Comida sana",
-      "area": "salud",
-      "tipo": "ia",
-      "buscar": false,
-      "horario": {
-        "apedido": true
-      },
-      "mision": "Armar el menú saludable y barato de la semana para alguien que trabaja en obra, con la lista de compras.",
-      "entregable": "Menú de 7 días (desayuno, almuerzo para llevar a la obra, cena) y lista de compras agrupada.",
-      "criterios": [
-        "Comidas simples y baratas",
-        "Almuerzos que se puedan llevar",
-        "Lista de compras completa"
-      ]
-    },
-    {
-      "id": "entrenamiento",
-      "nombre": "Entrenamiento",
-      "area": "salud",
-      "tipo": "ia",
-      "buscar": false,
-      "horario": {
-        "apedido": true
-      },
-      "mision": "Armar la rutina de ejercicios de la semana, corta y sin gimnasio, para antes o después de la obra.",
-      "entregable": "Rutina de 5 días de 20 minutos con ejercicios, series y repeticiones, y cómo progresar.",
-      "criterios": [
-        "Ejercicios claros",
-        "Sin equipamiento",
-        "Progresión semanal"
-      ]
-    },
-    {
-      "id": "imagen",
-      "nombre": "Asesor de imagen",
-      "area": "salud",
-      "tipo": "ia",
-      "buscar": false,
-      "horario": {
-        "apedido": true
-      },
-      "mision": "Dar consejos de imagen personal y profesional para un maestro mayor de obras que se muestra en redes.",
-      "entregable": "3 consejos concretos de la semana (ropa, cuidado personal, cómo salir en fotos y videos).",
-      "criterios": [
-        "Consejos concretos",
-        "Aplicables con poco presupuesto",
-        "Pensados para su trabajo"
-      ]
-    },
-    {
-      "id": "clima",
-      "nombre": "Clima para la obra",
+      "id": "comidas",
+      "nombre": "¿Qué comiste?",
       "area": "asistente",
       "tipo": "codigo",
+      "privado": true,
       "receta": {
-        "tipo": "clima"
+        "tipo": "pregunta",
+        "registro": "comidas",
+        "preguntas": {
+          "08:30": "☕ Buen día. ¿Qué desayunaste?",
+          "13:00": "🍽️ ¿Qué almorzaste hoy?",
+          "17:30": "🥪 ¿Merendaste algo? ¿Qué?",
+          "21:30": "🌙 ¿Qué cenaste?"
+        }
       },
       "horario": {
         "dias": "todos",
-        "cada": 120,
-        "desde": "00:00",
-        "hasta": "23:59",
-        "resumen": "06:45"
+        "horas": [
+          "08:30",
+          "13:00",
+          "17:30",
+          "21:30"
+        ]
       },
-      "mision": "Pronóstico de Villa María a las 6:45 todos los días, y vigila cada 2 horas: si aparece lluvia fuerte o viento que frene la obra, te avisa al instante."
+      "mision": "Te pregunta todos los días a las 8:30, 13:00, 17:30 y 21:30 qué comiste y lo anota (privado). También podés escribirle cuando quieras: «almorcé milanesa con ensalada»."
+    },
+    {
+      "id": "ejercicio",
+      "nombre": "Seguimiento de ejercicio",
+      "area": "asistente",
+      "tipo": "codigo",
+      "privado": true,
+      "receta": {
+        "tipo": "pregunta",
+        "registro": "ejercicio",
+        "preguntas": {
+          "20:30": "🏃 ¿Hiciste ejercicio o caminaste hoy? Contame qué y cuánto (ej: «caminé 40 min»). Si no, decime «no»."
+        }
+      },
+      "horario": {
+        "dias": "todos",
+        "horas": [
+          "20:30"
+        ]
+      },
+      "mision": "Todos los días a las 20:30 te pregunta si entrenaste o caminaste y lo anota (privado). Los domingos te pasa cómo te fue en la semana."
+    },
+    {
+      "id": "nutricionista",
+      "nombre": "Nutricionista",
+      "area": "asistente",
+      "tipo": "ia",
+      "privado": true,
+      "buscar": false,
+      "registros": [
+        "comidas"
+      ],
+      "horario": {
+        "apedido": true
+      },
+      "mision": "Ser el nutricionista de Jonathan: revisar lo que anotó que comió, decirle qué está bien y qué mejorar, y armarle menús simples y baratos para alguien que trabaja en obra y quiere bajar grasa y ganar músculo. Si le manda la foto de un plato, la analiza.",
+      "entregable": "Análisis corto de lo que comió (lo bueno y lo que hay que cambiar) y el plan concreto: menú, porciones aproximadas y lista de compras si la pide.",
+      "criterios": [
+        "Basado en lo que anotó de verdad",
+        "Concreto y fácil de cumplir",
+        "Recomienda consultar a un profesional ante problemas de salud"
+      ]
+    },
+    {
+      "id": "personal_trainer",
+      "nombre": "Personal trainer",
+      "area": "asistente",
+      "tipo": "ia",
+      "privado": true,
+      "buscar": false,
+      "registros": [
+        "ejercicio",
+        "comidas"
+      ],
+      "horario": {
+        "apedido": true
+      },
+      "mision": "Ser el personal trainer de Jonathan para empezar a trabajar el físico: rutinas cortas en casa o gimnasio, progresión según lo que anotó que hizo, y motivación sin vueltas.",
+      "entregable": "Rutina del día o de la semana con ejercicios, series, repeticiones y descansos, adaptada a lo que viene haciendo, y el próximo objetivo.",
+      "criterios": [
+        "Adaptado a lo que anotó",
+        "Ejercicios claros y seguros",
+        "Progresión realista"
+      ]
+    },
+    {
+      "id": "psicologo",
+      "nombre": "Psicólogo / acompañante",
+      "area": "asistente",
+      "tipo": "ia",
+      "privado": true,
+      "buscar": false,
+      "registros": [
+        "ejercicio",
+        "comidas"
+      ],
+      "horario": {
+        "apedido": true
+      },
+      "mision": "Escuchar y acompañar a Jonathan cuando lo necesite: ayudarlo a ordenar lo que siente y piensa, bajar el estrés del trabajo y sostener los hábitos nuevos. No reemplaza a un psicólogo de verdad: si nota algo serio, le recomienda con calidez consultar a un profesional, y si hay riesgo, que llame al 135 o al 0800 345 1435 (Centro de Asistencia al Suicida).",
+      "entregable": "Una respuesta cálida y humana, que valide lo que siente y proponga uno o dos pasos concretos.",
+      "criterios": [
+        "Empático y sin juzgar",
+        "Nada de diagnósticos",
+        "Deriva a un profesional si hace falta"
+      ]
+    },
+    {
+      "id": "asesor_imagen",
+      "nombre": "Asesor de imagen",
+      "area": "asistente",
+      "tipo": "ia",
+      "privado": true,
+      "buscar": false,
+      "horario": {
+        "apedido": true
+      },
+      "mision": "Ser el asesor de imagen de Jonathan: cuando le manda una foto suya, le dice con honestidad qué mejorar (pelo, barba, ropa, postura, cómo salir en fotos y videos) para verse mejor en lo personal y en sus redes.",
+      "entregable": "Lo que ya le queda bien, 3 a 5 cambios concretos ordenados por impacto y qué comprar o pedir en la peluquería, con poco presupuesto.",
+      "criterios": [
+        "Honesto y respetuoso",
+        "Basado en la foto",
+        "Cambios concretos y baratos"
+      ]
+    },
+    {
+      "id": "implante_capilar",
+      "nombre": "Implante capilar",
+      "area": "asistente",
+      "tipo": "ia",
+      "buscar": true,
+      "horario": {
+        "apedido": true
+      },
+      "mision": "Averiguar precios, clínicas y opciones de implante capilar en Villa María y Córdoba capital, y cómo financiarlo.",
+      "entregable": "Hasta 6 clínicas con técnica (FUE, DHI), precio o rango, financiación, reseñas y link, más qué preguntar en la consulta.",
+      "criterios": [
+        "Clínicas reales con link",
+        "Precios con fecha",
+        "Compara opciones"
+      ]
+    },
+    {
+      "id": "gastos_casa",
+      "nombre": "Gastos de la casa",
+      "area": "contaduria",
+      "tipo": "codigo",
+      "privado": true,
+      "receta": {
+        "tipo": "servicios",
+        "registro": "casa"
+      },
+      "horario": {
+        "dias": "todos",
+        "horas": [
+          "09:00"
+        ]
+      },
+      "mision": "Lleva los servicios de la casa (luz, gas, agua, internet, alquiler, tasas). Todos los días a las 9:00 revisa qué vence y te avisa 3 días antes y si algo quedó sin pagar. Anotás con «servicio luz vence 10» y «pagué luz 34800»."
+    },
+    {
+      "id": "gastos_personales",
+      "nombre": "Gastos personales",
+      "area": "contaduria",
+      "tipo": "codigo",
+      "privado": true,
+      "receta": {
+        "tipo": "gastos",
+        "registro": "gastos"
+      },
+      "horario": {
+        "dias": "todos",
+        "horas": [
+          "21:45"
+        ]
+      },
+      "mision": "Anota tus gastos personales cuando le escribís («gasté 5000 en nafta») o le mandás la foto del comprobante, los separa por categoría y te manda el resumen los domingos y el día 1 de cada mes."
     },
     {
       "id": "vencimientos",
@@ -518,7 +768,7 @@
     },
     {
       "id": "tarifas",
-      "nombre": "Servicios y tarifas de la casa",
+      "nombre": "Aumentos de servicios",
       "area": "contaduria",
       "tipo": "codigo",
       "receta": {
@@ -537,7 +787,7 @@
         "desde": "00:00",
         "hasta": "23:59"
       },
-      "mision": "Revisa cada 3 horas aumentos de luz, gas, agua, prepagas y alquileres, y te avisa cuando aparece algo nuevo."
+      "mision": "Revisa cada 3 horas si anunciaron aumentos de luz, gas, agua, prepagas o alquileres, y te avisa cuando aparece algo nuevo."
     },
     {
       "id": "ofertas",
@@ -589,6 +839,39 @@
         "Originales",
         "Fáciles de grabar con el celu"
       ]
+    },
+    {
+      "id": "noticias_tec",
+      "nombre": "Lo último en tecnología",
+      "area": "tecnologia",
+      "tipo": "codigo",
+      "receta": {
+        "tipo": "rss",
+        "busquedas": [
+          "inteligencia artificial novedades",
+          "nuevo modelo de IA lanzamiento",
+          "OpenAI Google Anthropic Meta anuncio",
+          "programación software novedades",
+          "GitHub herramienta nueva",
+          "celulares lanzamiento",
+          "ciberseguridad alerta"
+        ],
+        "dias": 2,
+        "max": 10,
+        "entrega": [
+          "09:00",
+          "13:00",
+          "17:00",
+          "21:00"
+        ]
+      },
+      "horario": {
+        "dias": "todos",
+        "cada": 60,
+        "desde": "00:00",
+        "hasta": "23:59"
+      },
+      "mision": "Busca todo el día lo último en tecnología: IA, software, código, celulares y ciberseguridad. Te lo manda a las 9:00, 13:00, 17:00 y 21:00."
     },
     {
       "id": "paginas",
