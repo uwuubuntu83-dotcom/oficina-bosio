@@ -381,6 +381,7 @@ const RECETAS = {
     const lineas = lista.map(d => { const k = d.casa || d.nombre; hoy[k] = d.venta; const prev = ant[k]; let var_ = ""; if (prev && d.venta) { const pc = (d.venta - prev) / prev * 100; var_ = Math.abs(pc) >= 0.05 ? ` (${pc >= 0 ? "+" : ""}${pc.toFixed(1)}%)` : ""; if (Math.abs(pc) >= (b.receta.alertaPorcentaje || 2)) alertas.push(`${d.nombre}: ${pc >= 0 ? "subió" : "bajó"} ${Math.abs(pc).toFixed(1)}% → $${d.venta}`); } return `• ${d.nombre}: compra $${d.compra ?? "-"} · venta $${d.venta ?? "-"}${var_}`; });
     if (resumen || !sb.memoria.dolarBase || sb.memoria.dolarFecha !== fechaAR()) { sb.memoria.dolarBase = hoy; sb.memoria.dolarFecha = fechaAR(); }
     sb.memoria.dolar = sb.memoria.dolarBase;
+    { const h = sb.memoria.hist ||= {}; h[fechaAR()] = hoy; for (const k of Object.keys(h).sort().slice(0, -120)) delete h[k]; } // historial diario para ver la tendencia
     const texto = `💵 Dólar hoy (${horaAR()} hs)\n${lineas.join("\n")}\n\nFuente: dolarapi.com`;
     if (resumen) return { texto, enviar: true };
     if (alertas.length) { const k = alertas.join("|"); if (sb.memoria.ultimaAlerta === k) return { texto, enviar: false }; sb.memoria.ultimaAlerta = k; return { texto: `🚨 Movimiento fuerte del dólar\n${alertas.join("\n")}\n\n${texto}`, enviar: true }; }
@@ -418,6 +419,7 @@ const RECETAS = {
       nuevos = sb.memoria.bandeja.slice(-(b.receta.max || 8)); sb.memoria.bandeja = [];
     } else if (resumen && sb.memoria.bandeja && sb.memoria.bandeja.length) { nuevos = [...sb.memoria.bandeja, ...nuevos].slice(-(b.receta.max || 8)); sb.memoria.bandeja = []; }
     if (!nuevos.length) return { texto: "Sin novedades desde la última vez.", enviar: false };
+    sb.memoria.semana = [...(sb.memoria.semana || []).filter(x => Date.now() - x.t < 8 * 86400e3), ...nuevos.map(x => ({ titulo: x.titulo, link: x.link, fuente: x.fuente, t: Date.now() }))].slice(-300); // para el editor de la semana
     return { texto: `${areaDe(b).icono} ${b.nombre}\n\n` + nuevos.map(x => `• ${x.titulo}${x.fuente ? " (" + x.fuente + ")" : ""}\n  ${x.link}`).join("\n"), html: `<b>${escHTML(areaDe(b).icono + " " + b.nombre)}</b>\n\n` + nuevos.map(x => `• <a href="${escHTML(x.link)}">${escHTML(x.titulo)}</a>${x.fuente ? " <i>(" + escHTML(x.fuente) + ")</i>" : ""}`).join("\n\n"), enviar: true };
   },
   async clima(b, sb, { resumen } = {}) {
@@ -435,6 +437,7 @@ const RECETAS = {
     const antes = sb.memoria.caidas || {}; const ahora = {}; const cambios = []; const lineas = [];
     for (const u of b.receta.urls || []) { let ok = false, det = ""; try { const r = await traer(u, {}, 20000); ok = r.status < 500 && r.status !== 404; det = String(r.status); /* 401/403 = la página responde pero protege contra robots: está viva */ } catch (e) { det = e.name === "AbortError" ? "no responde" : "error de conexión"; } ahora[u] = !ok; lineas.push(`${ok ? "✅" : "❌"} ${u} (${det})`); if (!ok && !antes[u]) cambios.push(`❌ Se cayó: ${u} (${det})`); if (ok && antes[u]) cambios.push(`✅ Volvió: ${u}`); }
     sb.memoria.caidas = ahora;
+    { const u = sb.memoria.uptime ||= {}; const d = u[fechaAR()] ||= {}; for (const k of Object.keys(ahora)) { d[k] ||= [0, 0]; d[k][1]++; if (!ahora[k]) d[k][0]++; } for (const k of Object.keys(u).sort().slice(0, -30)) delete u[k]; }
     return { texto: lineas.join("\n"), enviar: cambios.length > 0, alerta: cambios.join("\n") };
   },
   async celu_orden(b, sb) { await alCelu({ tipo: "chat", texto: b.receta.texto }); return { texto: `Le pedí al celu: «${b.receta.texto}». Te contesta en un minuto.`, enviar: false }; },
@@ -524,6 +527,102 @@ const RECETAS = {
       "\n🚫 Evitá: dólar blue de dudosa procedencia, «inversiones» que prometen ganancias fijas altas, y pedir préstamos para invertir.",
       "(Reglas generales automáticas, no es asesoramiento financiero profesional.)"];
     return { texto: l.filter(x => x !== "").join("\n"), enviar: true };
+  },
+  // ---- 🧱 Jefe de obra (sin IA): ¿se trabaja hoy?, licitaciones de la semana, último valor del m²
+  async jefe_obra(b, sb) {
+    const u = CFG.ubicacion; let clima = "";
+    try { const r = await traer(`${URLS.clima}?latitude=${u.lat}&longitude=${u.lon}&hourly=precipitation_probability,precipitation,wind_speed_10m,temperature_2m&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_speed_10m_max&timezone=America%2FArgentina%2FCordoba&forecast_days=2`); const j = await r.json(); const h = j.hourly, d = j.daily;
+      const horas = h.time.map((t, i) => ({ h: Number(t.slice(11, 13)), dia: t.slice(0, 10), ll: h.precipitation_probability[i], mm: h.precipitation[i], v: h.wind_speed_10m[i], tt: h.temperature_2m[i] })).filter(x => x.dia === d.time[0] && x.h >= 7 && x.h <= 18);
+      const malas = horas.filter(x => (x.ll >= 60 && x.mm >= 0.5) || x.v >= 40), calor = horas.filter(x => x.tt >= 34), frio = horas.filter(x => x.tt <= 3);
+      const tramo = arr => arr.length ? `${String(arr[0].h).padStart(2, "0")}–${String(arr[arr.length - 1].h + 1).padStart(2, "0")} h` : "";
+      clima = malas.length >= 6 ? `🔴 Hoy no conviene trabajar afuera: lluvia o viento fuerte entre las ${tramo(malas)}. Aprovechá para tareas bajo techo, compras o presupuestos.` : malas.length ? `🟡 Se puede trabajar, pero ojo entre las ${tramo(malas)} (lluvia o viento). Programá hormigón y pintura exterior fuera de ese horario.` : `🟢 Día apto para trabajar afuera (${Math.round(d.temperature_2m_min[0])}° a ${Math.round(d.temperature_2m_max[0])}°).`;
+      if (calor.length) clima += ` 🥵 Calor fuerte ${tramo(calor)}: hidratación y descansos; mojá el hormigón fresco.`;
+      if (frio.length) clima += ` 🥶 Frío fuerte ${tramo(frio)}: no hormigonar ni revocar con heladas.`;
+      clima += `\n   Mañana: ${Math.round(d.temperature_2m_min[1])}° a ${Math.round(d.temperature_2m_max[1])}° · lluvia ${d.precipitation_probability_max[1]}% (${d.precipitation_sum[1]} mm) · viento ${Math.round(d.wind_speed_10m_max[1])} km/h.`;
+    } catch (e) { clima = "⚪ No pude leer el pronóstico (" + e.message + ")."; }
+    const lic = ((est.bots.licitaciones || {}).memoria || {}).semana || [], lic7 = lic.filter(x => Date.now() - x.t < 7 * 86400e3);
+    const mmo = (((est.bots.precio_mmo || {}).memoria || {}).semana || []).slice(-1)[0];
+    const l = [`🧱 Jefe de obra · ${DIAS[diaAR()]} ${fechaAR().slice(8, 10)}/${fechaAR().slice(5, 7)}`, clima,
+      `📋 Licitaciones y concursos de obra en los últimos 7 días: ${lic7.length}${lic7.length ? "\n" + lic7.slice(-3).map(x => "   • " + x.titulo.slice(0, 90)).join("\n") : ""}`,
+      mmo ? `📐 Lo último del Colegio de MMO / costo del m²: ${mmo.titulo.slice(0, 100)} (${new Date(mmo.t).toLocaleDateString("es-AR")})\n   ${mmo.link}` : "📐 Sin novedades del valor del m² del Colegio de MMO por ahora."];
+    return { texto: l.join("\n"), enviar: true };
+  },
+  // ---- 🏠 Analista de inversiones (sin IA): tendencia del dólar, brecha, plazo fijo vs inflación
+  async analista(b, sb) {
+    const h = ((est.bots.dolar || {}).memoria || {}).hist || {}, dias = Object.keys(h).sort();
+    if (dias.length < 2) return { texto: "🏠 Analista: todavía estoy juntando el historial del dólar. En unos días te muestro la tendencia.", enviar: true };
+    const hoy = h[dias[dias.length - 1]], hace = n => h[dias[Math.max(0, dias.length - 1 - n)]] || {};
+    const var_ = (k, n) => { const a = hace(n)[k], z = hoy[k]; return a && z ? ((z - a) / a * 100) : null; };
+    const fmtv = v => v == null ? "s/d" : `${v >= 0 ? "+" : ""}${v.toFixed(1)}%`;
+    const casas = [["oficial", "Oficial"], ["bolsa", "MEP"], ["contadoconliqui", "CCL"], ["blue", "Blue"], ["tarjeta", "Tarjeta"]].filter(([k]) => hoy[k]);
+    const brecha = hoy.blue && hoy.oficial ? ((hoy.blue / hoy.oficial - 1) * 100).toFixed(0) : null;
+    let tna = null, ent = "", infl = null;
+    try { const r = await traer("https://api.argentinadatos.com/v1/finanzas/tasas/plazoFijo", {}, 15000); if (r.ok) { const t = (await r.json()).filter(x => x.tnaClientes).sort((x, z) => z.tnaClientes - x.tnaClientes)[0]; if (t) { tna = t.tnaClientes * (t.tnaClientes < 1 ? 100 : 1); ent = t.entidad; } } } catch {}
+    try { const r = await traer("https://api.argentinadatos.com/v1/finanzas/indices/inflacion", {}, 15000); if (r.ok) { const j = await r.json(); infl = j[j.length - 1]; } } catch {}
+    const dl30 = var_("bolsa", 30), tem = tna ? tna / 12 : null;
+    const gana = [tem != null ? ["Plazo fijo", tem] : null, dl30 != null && dias.length >= 25 ? ["Dólar MEP", dl30] : null, infl ? ["Inflación", infl.valor] : null].filter(Boolean).sort((a, z) => z[1] - a[1]);
+    const l = [`🏠 Analista de inversiones · semana al ${fechaAR().slice(8, 10)}/${fechaAR().slice(5, 7)}`,
+      ...casas.map(([k, n]) => `• ${n}: $${hoy[k]} · 7 días ${fmtv(var_(k, 7))}${dias.length >= 25 ? " · 30 días " + fmtv(var_(k, 30)) : ""}`),
+      brecha ? `📏 Brecha blue/oficial: ${brecha}%${Number(brecha) > 30 ? " (alta: ojo, suele anticipar saltos)" : ""}` : "",
+      tna ? `🏦 Mejor plazo fijo: ${ent} ${tna.toFixed(1)}% anual (~${tem.toFixed(2)}% por mes)` : "",
+      infl ? `📊 Inflación último mes: ${infl.valor}%` : "",
+      gana.length >= 2 ? `🏁 En el último mes rindió más: ${gana.map(([n, v]) => `${n} ${v.toFixed(1)}%`).join(" > ")}` : "",
+      "➡️ «inversiones» para ver qué hacer con lo que ahorrás. (Información general, no es asesoramiento profesional.)"].filter(Boolean);
+    return { texto: l.join("\n"), enviar: true };
+  },
+  // ---- 📰 Editor (sin IA): lo más importante de la semana según cuántas notas hablaron de lo mismo
+  async editor(b, sb) {
+    const STOP = new Set("desde sobre entre hasta para porque cuando donde quien quienes cual cuales tiene tienen tras contra durante según mismo misma otros otras todos todas puede pueden será serán están estaba fueron nuevo nueva nuevos nuevas años mayor menor ahora este esta estos estas había hacer hace también parte primer primera luego después antes millones córdoba argentina villa maría país".split(" "));
+    const norm = w => w.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    const out = [`📰 Lo más importante de la semana · ${fechaAR().slice(8, 10)}/${fechaAR().slice(5, 7)}`];
+    for (const [ids, tit] of b.receta.secciones) {
+      const items = ids.flatMap(id => ((est.bots[id] || {}).memoria || {}).semana || []).filter(x => Date.now() - x.t < 7 * 86400e3);
+      if (!items.length) continue;
+      const pal = t => [...new Set(norm(t).match(/[a-zñ]{5,}/g) || [])].filter(w => !STOP.has(w));
+      const freq = {}; for (const x of items) for (const w of pal(x.titulo)) freq[w] = (freq[w] || 0) + 1;
+      const elegidos = []; for (const x of items.map(x => ({ ...x, p: pal(x.titulo), s: pal(x.titulo).reduce((a, w) => a + (freq[w] > 1 ? freq[w] : 0), 0) })).sort((a, z) => z.s - a.s)) { if (elegidos.some(e => e.p.filter(w => x.p.includes(w)).length >= 2)) continue; elegidos.push(x); if (elegidos.length >= 4) break; }
+      out.push("", tit, ...elegidos.map(x => `• ${x.titulo}${x.fuente ? " (" + x.fuente + ")" : ""}\n  ${x.link}`));
+    }
+    return { texto: out.length > 1 ? out.join("\n") : "📰 Editor: todavía no junté noticias esta semana.", enviar: true };
+  },
+  // ---- 🧑‍⚕️ Semáforo de salud (sin IA): ejercicio y comidas de esta semana contra la anterior
+  async semaforo_salud(b, sb) {
+    const RX_PESADA = /(frit|milanes|pizza|hamburgues|asado|chorizo|morcilla|salame|fiambre|embutid|panceta|manteca|factura|medialuna|torta|helado|papas fritas|empanada|choripan|achuras|mayonesa)/i;
+    const ej = leerPrivSeguro("ejercicio", []), co = leerPrivSeguro("comidas", []);
+    const sem = (arr, a, z) => arr.filter(x => x.t >= hace(a) && x.t < hace(z));
+    const dias = arr => new Set(arr.filter(x => x.hizo).map(x => x.f)).size;
+    const e1 = dias(sem(ej, 7, 0)), e0 = dias(sem(ej, 14, 7)), c1 = sem(co, 7, 0), c0 = sem(co, 14, 7), p1 = c1.filter(x => RX_PESADA.test(x.texto)).length, p0 = c0.filter(x => RX_PESADA.test(x.texto)).length;
+    const luz = (v, verde, amarillo) => v >= verde ? "🟢" : v >= amarillo ? "🟡" : "🔴";
+    const pctP = c1.length ? Math.round(p1 / c1.length * 100) : 0;
+    const l = [`🧑‍⚕️ Semáforo de salud · semana al ${fechaAR().slice(8, 10)}/${fechaAR().slice(5, 7)}`,
+      `${luz(e1, 4, 2)} Actividad: ${e1} de 7 días (la semana pasada ${e0})${e1 > e0 ? " ⬆️ ¡mejoraste!" : e1 < e0 ? " ⬇️" : ""}`,
+      c1.length ? `${pctP <= 20 ? "🟢" : pctP <= 40 ? "🟡" : "🔴"} Comidas pesadas: ${p1} de ${c1.length} anotadas (${pctP}%) · la semana pasada ${p0}` : "⚪ No anotaste comidas esta semana: respondé las preguntas de «¿Qué comiste?».",
+      `${luz(c1.length, 18, 8)} Registro: anotaste ${c1.length} comidas (ideal: 3 o 4 por día)`,
+      "", e1 < 3 ? "🎯 Meta de la semana: 3 caminatas de 30 minutos." : "🎯 Meta de la semana: sumá 1 día más de actividad.",
+      p1 > 3 ? "🍽️ Cambiá 2 comidas pesadas por pollo o pescado a la plancha, legumbres o verduras." : "🍽️ Seguí así con las comidas.",
+      "Pedile detalle al «nutricionista» o al «personal trainer» cuando quieras."];
+    return { texto: l.join("\n"), enviar: true };
+  },
+  // ---- 📱 Community manager (sin IA): semana del celu contra la semana anterior
+  async community(b, sb) {
+    const dd = ((est.bots.celular_bot || {}).memoria || {}).diario || {}, dias = Object.keys(dd).sort();
+    if (!dias.length) return { texto: "📱 Community manager: todavía no tengo historial del celu. Vuelvo a mirar la semana que viene.", enviar: true };
+    const suma = (desde, hasta) => { const t = {}; for (const d of dias.filter(x => x >= desde && x < hasta)) for (const [k, v] of Object.entries(dd[d] || {})) if (typeof v === "number") t[k] = (t[k] || 0) + v; return t; };
+    const f = n => fechaAR(new Date(NOW - n * 86400e3)), a = suma(f(7), f(-1)), z = suma(f(14), f(7));
+    const fila = (k, n) => `• ${n}: ${a[k] || 0}${z[k] != null ? ` (semana anterior ${z[k]}${a[k] > z[k] ? " ⬆️" : a[k] < z[k] ? " ⬇️" : ""})` : ""}`;
+    const l = [`📱 Community manager · últimos 7 días`, fila("publicaciones", "Publicaciones"), fila("historias", "Historias"), fila("reels", "Reels y reposts"), fila("seguidos", "Cuentas seguidas"), fila("gringo", "Gringo: dejados de seguir"), fila("errores", "Errores"), fila("reinicios", "Reinicios de Instagram")];
+    const tot = (a.publicaciones || 0) + (a.historias || 0) + (a.reels || 0), err = a.errores || 0;
+    l.push("", tot && err / tot > 0.5 ? `⚠️ Muchos errores (${err} para ${tot} publicaciones): revisá «celu estado».` : "✅ El ritmo de publicación viene bien.");
+    l.push("(Visualizaciones, comentarios y mensajes por cuenta: pendiente de enseñarle al celu a leer el Panel profesional.)");
+    return { texto: l.join("\n"), enviar: true };
+  },
+  // ---- 💻 Soporte (sin IA): cuánto estuvo caída cada página en la semana
+  async soporte(b, sb) {
+    const u = ((est.bots.paginas || {}).memoria || {}).uptime || {}, dias = Object.keys(u).sort().slice(-7);
+    if (!dias.length) return { texto: "💻 Soporte: todavía no tengo historial de las páginas.", enviar: true };
+    const t = {}; for (const d of dias) for (const [url, [ok, n]] of Object.entries(u[d])) { t[url] ||= [0, 0]; t[url][0] += ok; t[url][1] += n; }
+    const l = [`💻 Soporte · disponibilidad de tus páginas (últimos ${dias.length} días)`, ...Object.entries(t).map(([url, [ok, n]]) => { const p = n ? ok / n * 100 : 0; return `${p >= 99 ? "🟢" : p >= 95 ? "🟡" : "🔴"} ${url.replace(/^https?:\/\//, "").replace(/\/$/, "")}: ${p.toFixed(1)}% arriba${p < 99 ? ` (~${Math.round((n - ok) * 30 / 60)} h caída)` : ""}` })];
+    return { texto: l.join("\n"), enviar: true };
   },
   async salud() {
     const l = []; const fallaron = bots().filter(x => est.bots[x.id]?.estado === "falló"); const pausados = bots().filter(x => est.bots[x.id]?.pausado);
@@ -926,7 +1025,7 @@ async function entrenar() {
 async function revisarExternos() {
   for (const b of bots().filter(x => x.tipo === "externo")) {
     const sb = est.bots[b.id]; let hb = leer(path.join(DATA, "externos", b.id + ".json"), null);
-    if (b.id === "celular_bot" && BUZON && PIN) { try { const e = await buzon("/oficina/celu"); if (e.estado) { hb = { t: new Date(e.estado.t).toISOString(), estado: e.estado.estado && e.estado.estado.bot_vivo === false && !e.estado.estado.pausa ? "error" : "ok", detalle: textoCelu(e).split("\n").slice(0, 3).join(" · ").slice(0, 200) }; sb.memoria.celu = { t: e.estado.t, redes_hoy: (e.estado.estado || {}).redes_hoy || {} }; } } catch (e) { log("Redes sociales", "no pude leer el buzón del celu: " + e.message); } }
+    if (b.id === "celular_bot" && BUZON && PIN) { try { const e = await buzon("/oficina/celu"); if (e.estado) { hb = { t: new Date(e.estado.t).toISOString(), estado: e.estado.estado && e.estado.estado.bot_vivo === false && !e.estado.estado.pausa ? "error" : "ok", detalle: textoCelu(e).split("\n").slice(0, 3).join(" · ").slice(0, 200) }; sb.memoria.celu = { t: e.estado.t, redes_hoy: (e.estado.estado || {}).redes_hoy || {} }; { const dd = sb.memoria.diario ||= {}; dd[fechaAR(new Date(e.estado.t))] = sb.memoria.celu.redes_hoy; for (const k of Object.keys(dd).sort().slice(0, -60)) delete dd[k]; } } } catch (e) { log("Redes sociales", "no pude leer el buzón del celu: " + e.message); } }
     if (!hb) { sb.estado = "sin conectar"; continue; }
     const min = (Date.now() - new Date(hb.t).getTime()) / 60000;
     sb.ultimaCorrida = hb.t; sb.resumen = hb.detalle || hb.estado; sb.estado = min > (b.alertaMin || 90) ? "sin señal" : hb.estado === "error" ? "falló" : "listo";
