@@ -1,21 +1,44 @@
 {
- "version": 1,
+ "version": 2,
  "bots": {
   "dolar": {
-   "estado": "falló",
-   "corridas": 0,
+   "estado": "listo",
+   "corridas": 1,
    "fallas": 1,
-   "fallasSeguidas": 1,
+   "fallasSeguidas": 0,
    "puntaje": null,
    "historial": [],
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-30T02:15:30.038Z",
-   "resumen": "Falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/",
-   "informe": null,
-   "pausado": false
+   "ultimaCorrida": "2026-10-30T02:43:55.644Z",
+   "resumen": "💵 Dólar hoy (23:43 hs)\n• Oficial: compra $1510 · venta $1560\n• Blue: compra $1545 · venta $1565\n• Bolsa: compra $1557.8 · venta $1568.8\n• Contado con liquidación: compra $1649.8 · venta $1650.3\n• Mayorista: compra $1530",
+   "informe": "data/informes/dolar/2026-10-29-2343.md",
+   "pausado": false,
+   "memoria": {
+    "dolarBase": {
+     "oficial": 1560,
+     "blue": 1565,
+     "bolsa": 1568.8,
+     "contadoconliqui": 1650.3,
+     "mayorista": 1539,
+     "cripto": 1643.99,
+     "tarjeta": 2028
+    },
+    "dolarFecha": "2026-10-29",
+    "dolar": {
+     "oficial": 1560,
+     "blue": 1565,
+     "bolsa": 1568.8,
+     "contadoconliqui": 1650.3,
+     "mayorista": 1539,
+     "cripto": 1643.99,
+     "tarjeta": 2028
+    },
+    "ultimoChequeo": "2026-10-30T02:43:55.644Z",
+    "resumenFecha": "2026-10-29"
+   }
   },
   "inmuebles": {
    "estado": "falló",
@@ -50,8 +73,8 @@
    "pausado": false
   },
   "licitaciones": {
-   "estado": "esperando",
-   "corridas": 0,
+   "estado": "listo",
+   "corridas": 1,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -59,11 +82,24 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": null,
-   "ultimaCorrida": null,
-   "resumen": "",
-   "informe": null,
-   "pausado": false
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:43:55.644Z",
+   "resumen": "🧱 Clientes y licitaciones\n\n• Villa Santa Rosa: la Provincia anunció la pavimentación de la ruta que conecta con Tinoco (Reporte Regional)\n  https://news.google.com/rss/articles/CBMitgFBVV95cUxOYThibEUxRHN3UHdXSnV4NjE2SV",
+   "informe": "data/informes/licitaciones/2026-10-29-2343.md",
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "villa santa rosa: la provincia anunció la pavimentación de la ruta que conecta con tinoco",
+     "circunvalación: con usd350 millones, apuran obra para completarla en 2027",
+     "privatización de rutas nacionales con peajes: 20 constructoras compiten en la última licit",
+     "los vecinos de la avenida ollerías demandan un plan común para arreglar los soportales",
+     "se pavimentará la ruta que une a villa santa rosa con tinoco",
+     "la base logística de córdoba se topa con un segundo freno: la adjudicación de la dirección",
+     "el banco nación ya prestó los $32.000 millones de anses para hipotecarios: cuántos crédito",
+     "pp acusa al gobierno de \"negar información de obra del museo arqueológico que tiene desde "
+    ],
+    "ultimoChequeo": "2026-10-30T02:43:55.644Z"
+   }
   },
   "ideas_jb": {
    "estado": "esperando",
@@ -79,7 +115,8 @@
    "ultimaCorrida": null,
    "resumen": "",
    "informe": null,
-   "pausado": false
+   "pausado": false,
+   "memoria": {}
   },
   "noticias": {
    "estado": "falló",
@@ -111,7 +148,8 @@
    "ultimaCorrida": "2026-10-30T02:15:30.038Z",
    "resumen": "Falló: Gemini no respondió: gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/",
    "informe": null,
-   "pausado": false
+   "pausado": false,
+   "memoria": {}
   },
   "ia_gratis": {
    "estado": "esperando",
@@ -127,15 +165,558 @@
    "ultimaCorrida": null,
    "resumen": "",
    "informe": null,
-   "pausado": false
+   "pausado": false,
+   "memoria": {}
   },
   "gerente": {
    "estado": "esperando",
    "resumen": "Mandó el parte diario",
    "ultimaCorrida": null
+  },
+  "terrenos": {
+   "estado": "postergado",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": "2026-10-30T02:43:55.644Z",
+   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-4-argon: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "casas": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "autos": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "negocios": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "m2": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "materiales": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "noticias_vm": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:43:55.644Z",
+   "resumen": "📰 Noticias de Villa María\n\n• Realizan una cadena de oración para un menor accidentado en Villa Nueva (Facebook)\n  https://news.google.com/rss/articles/CBMi1AFBVV95cUxPa1J2cEZRWlotal9Hb3luN0I2ZnhqRDk2Rmx5T09ZZzc3cHFmZ1dP",
+   "informe": "data/informes/noticias_vm/2026-10-29-2343.md",
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "realizan una cadena de oración para un menor accidentado en villa nueva",
+     "turismo. córdoba lanzó su temporada de verano con la nueva \"ruta 100\" como producto a ofre",
+     "villa maría será sede del aat challenger ieb+ en su cierre de temporada argentina de tenis",
+     "presentan un libro sobre industrias kaiser",
+     "clima en villa maria del rio seco hoy: cuál es el pronóstico del tiempo para el 30 de octu",
+     "llegaron a villa huidobro 50 árboles para forestar distintos espacios verdes |",
+     "presentaron el challenger de villa maría con entrada gratuita hasta el jueves",
+     "grupo ecipsa entregó una nueva etapa del megaproyecto residencial en villa devoto | 29 de "
+    ],
+    "ultimoChequeo": "2026-10-30T02:43:55.644Z"
+   }
+  },
+  "noticias_ar": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:43:55.644Z",
+   "resumen": "📰 Economía y obra pública\n\n• Patagones: la filial de la Federación Agraria Argentina avanza en la construcción de su sede (La Nueva Provincia)\n  https://news.google.com/rss/articles/CBMi1gFBVV95cUxONGt6REhEZF9uTlIteGF6b",
+   "informe": "data/informes/noticias_ar/2026-10-29-2343.md",
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "patagones: la filial de la federación agraria argentina avanza en la construcción de su se",
+     "melconian cuestionó el rumbo económico: “no nos pegamos un tiro porque está vaca muerta”",
+     "qué se sabe de los barrios gremiales del megaplan de casas",
+     "cuatro medidas. el fmi reconoce caída de la actividad pero \"aconseja\" a milei profundizar ",
+     "vaca muerta y la minería pueden impulsar las exportaciones, pero en rdeco advierten: “el d",
+     "rdeco: qué necesitan la industria y la construcción para recuperar competitividad y activi",
+     "ciudad de córdoba: así avanza la limpieza y desmalezado del canal maestro sur",
+     "horacio berra resaltó las oportunidades para la construcción",
+     "el gas llega a barrio san cayetano: “el objetivo es que en tres años la ciudad completa te",
+     "ante la recesión, caputo se anima a una herejía"
+    ],
+    "ultimoChequeo": "2026-10-30T02:43:55.644Z"
+   }
+  },
+  "mundo": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:43:55.644Z",
+   "resumen": "🌎 Noticias del mundo\n\n• Noticieros en Europa se unen ante prácticas depredadoras de Mark Zuckerberg, CEO de META (DobleFilo MX)\n  https://news.google.com/rss/articles/CBMisgFBVV95cUxNVkNsR2MyWEhwYVpPc0lsU0VHX3VhczJRU0ln",
+   "informe": "data/informes/mundo/2026-10-29-2343.md",
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "noticieros en europa se unen ante prácticas depredadoras de mark zuckerberg, ceo de meta",
+     "brasil podría superar a italia y rusia en 2027: el crecimiento que cambiaría el mapa econó",
+     "china dispara sus exportaciones de tecnología limpia: qué significa para la economía mundi",
+     "rodrigo huescas vuelve a sonreír en europa: asistencia y 90 minutos para clasificar al cop",
+     "la economía estadounidense está creciendo con fuerza gracias al auge del gasto y la invers",
+     "se acelera la inflación en estados unidos; suben los precios y golpean la economía",
+     "el niño podría recortar el crecimiento de la economía peruana a 2% en 2027",
+     "horizonte europa abre nuevas oportunidades de financiación para la química sostenible y la"
+    ],
+    "ultimoChequeo": "2026-10-30T02:43:55.644Z"
+   }
+  },
+  "ideas_redes": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": 9,
+   "historial": [
+    {
+     "f": "2026-10-30T02:43:55.644Z",
+     "p": 9,
+     "orden": false
+    }
+   ],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:43:55.644Z",
+   "resumen": "POST 1: Dólar vs. Ladrillo (Reel Humor + Inversión)\n* Idea: Comparar la inestabilidad financiera con la seguridad de construir en Córdoba.\n* Guion: (Joni mirando el celular con cara de preocupación) \"Yo viendo cómo varía",
+   "informe": "data/informes/ideas_redes/2026-10-29-2343.md",
+   "pausado": false,
+   "memoria": {},
+   "modelo": "Google Gemini · gemini-3.6-flash"
+  },
+  "celular_bot": {
+   "estado": "sin conectar",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "vuelos": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "comida": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "entrenamiento": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "imagen": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "clima": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:43:55.644Z",
+   "resumen": "🌤️ Clima en Villa María, Córdoba\n• Hoy 29/10: 15° a 29° · lluvia 43% · viento 13 km/h\n• Mañana 30/10: 16° a 28° · lluvia 75% · viento 15 km/h\n• Pasado 31/10: 15° a 29° · lluvia 65% · viento 15 km/h\n\n⚠️ Para la obra:\nMañ",
+   "informe": "data/informes/clima/2026-10-29-2343.md",
+   "pausado": false,
+   "memoria": {
+    "ultimoChequeo": "2026-10-30T02:43:55.644Z"
+   }
+  },
+  "vencimientos": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "tarifas": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:43:55.644Z",
+   "resumen": "🧾 Servicios y tarifas de la casa\n\n• Reporte sobre el incremento en el precio del pescado por el fenómeno El Niño en Villa María del Triunfo (Infobae)\n  https://news.google.com/rss/articles/CBMi6gFBVV95cUxNT0FGYlJ3V2pmOE",
+   "informe": "data/informes/tarifas/2026-10-29-2343.md",
+   "pausado": false,
+   "memoria": {
+    "vistos": [
+     "reporte sobre el incremento en el precio del pescado por el fenómeno el niño en villa marí",
+     "los aumentos que llegan en noviembre 2026: transporte público, servicios, alquileres, prep",
+     "bruselas no espera un problema de suministro energético pero le preocupa el alza de los pr",
+     "pollo llega a 50 pesos por kilo en el mercado revolución de córdoba",
+     "golpe al bolsillo: aprueban fuerte aumento en los combustibles",
+     "todo aumenta en noviembre: colectivos, prepagas, alquileres, colegios y servicios, uno por"
+    ],
+    "ultimoChequeo": "2026-10-30T02:43:55.644Z"
+   }
+  },
+  "ofertas": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "ideas_apps": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "ideas_videos": {
+   "estado": "esperando",
+   "corridas": 0,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": null,
+   "resumen": "",
+   "informe": null,
+   "pausado": false,
+   "memoria": {}
+  },
+  "paginas": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": null,
+   "ultimaCorrida": "2026-10-30T02:43:55.644Z",
+   "resumen": "❌ Se cayó: https://bosio-central.uwuubuntu83.workers.dev/ (403)",
+   "informe": "data/informes/paginas/2026-10-29-2343.md",
+   "pausado": false,
+   "memoria": {
+    "caidas": {
+     "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": false,
+     "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
+     "https://bosio-central.uwuubuntu83.workers.dev/": true
+    },
+    "ultimoChequeo": "2026-10-30T02:43:55.644Z"
+   }
+  },
+  "salud_oficina": {
+   "estado": "listo",
+   "corridas": 1,
+   "fallas": 0,
+   "fallasSeguidas": 0,
+   "puntaje": null,
+   "historial": [],
+   "likes": 0,
+   "dislikes": 0,
+   "nivel": 1,
+   "ultimaFecha": "2026-10-29",
+   "ultimaCorrida": "2026-10-30T02:43:55.644Z",
+   "resumen": "🛠️ Salud de la oficina · 2026-10-29\nBots: 28 · trabajaron hoy: 9\n❌ Fallaron: Escapadas de finde (Gemini no respondió: gemini-3.6-flash: 429 You exceeded your)\n📱 Celular bot (Instagram): todavía no está conectado (ver r",
+   "informe": "data/informes/salud_oficina/2026-10-29-2343.md",
+   "pausado": false,
+   "memoria": {
+    "ultimoChequeo": "2026-10-30T02:43:55.644Z"
+   }
   }
  },
  "log": [
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Monitor de salud",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Estado de mis páginas",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Servicios y tarifas de la casa",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Clima para la obra",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Ideas de posteos",
+   "que": "entregó (9/10 · Google Gemini · gemini-3.6-flash)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Control de calidad",
+   "que": "Ideas de posteos: 9/10"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Ideas de posteos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Noticias del mundo",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Economía y obra pública",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Noticias de Villa María",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Clientes y licitaciones",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-4-argon: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "IA",
+   "que": "Google Gemini gemini-4-argon: cupo diario agotado, sigo con otra"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Dólar",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-30T02:43:55.644Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github"
+  },
   {
    "t": "2026-10-30T02:15:30.038Z",
    "quien": "Gerente general",
@@ -196,14 +777,39 @@
  },
  "consumo": {
   "fecha": "2026-10-29",
-  "consultas": 32
+  "consultas": 43,
+  "por": {
+   "gemini": 7,
+   "github": 4
+  }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-30T02:15:30.038Z",
+ "actualizado": "2026-10-30T02:43:55.644Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
   "gemini": true,
-  "dueno": false
+  "dueno": false,
+  "ias": [
+   "Google Gemini",
+   "GitHub Models"
+  ]
+ },
+ "ia": {
+  "fecha": "2026-10-29",
+  "agotado": {
+   "gemini:gemini-3.8-flash": 1793328997714,
+   "gemini:gemini-3.7-flash": 1793329117713,
+   "gemini:gemini-4-argon": true,
+   "github:openai/gpt-4.1-mini": 1793328853880,
+   "github:openai/gpt-4o-mini": 1793328856366,
+   "github:meta/Llama-3.3-70B-Instruct": 1793328858873,
+   "github:mistral-ai/mistral-small-2503": 1793328877713
+  },
+  "ultimo": {
+   "prov": "Google Gemini",
+   "modelo": "gemini-3.6-flash",
+   "t": "2026-10-30T02:43:55.644Z"
+  }
  }
 }
