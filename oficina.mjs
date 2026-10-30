@@ -208,11 +208,22 @@ function textoCelu(e) {
   const x = E.estado || {}, rh = x.redes_hoy || {}, min = Math.round((Date.now() - E.t) / 60000);
   return `📱 Celu bot · ${min <= 10 ? "🟢 andando" : "🔴 no responde hace " + min + " min (revisá la depuración inalámbrica)"}\nBot de Instagram: ${x.pausa ? "⏸ en pausa" : x.bot_vivo ? "trabajando" : "parado"}${x.bateria != null ? " · batería " + (typeof x.bateria === "object" ? (x.bateria.porcentaje ?? x.bateria.percentage ?? JSON.stringify(x.bateria)) : x.bateria) + "%" : ""}${x.calor ? " · 🔥 pausado por calor" : ""}\n\nHoy: ${rh.publicaciones || 0} publicaciones · ${rh.historias || 0} historias · ${rh.reels || 0} reels/reposts · ${rh.seguidos || 0} seguidos · ${rh.gringo || 0} dejados de seguir (gringo) · ${rh.errores || 0} errores · ${rh.reinicios || 0} reinicios${(rh.ultimas || []).length ? "\n\nÚltimo que hizo:\n" + rh.ultimas.slice(-6).map(l => "• " + l).join("\n") : ""}`;
 }
+const TAREAS_IG = { historia: "📸 Historia de Instagram", repost: "🔁 Repost", publicar: "🖼️ Publicación", reel: "🎬 Reel", reel_ia: "🤖 Reel hecho con IA", seguir: "➕ Seguir cuentas", fb_compartir: "📘 Compartir en Facebook", fb_historia: "📘 Historia de Facebook", fb_seguir: "📘 Seguir en Facebook", ofertas: "🏷️ Oferta", grin_unfollow: "➖ Gringo: dejar de seguir", obra_seguir: "🧱 Obra: seguir cuentas", obra_publicar: "🧱 Obra: publicación", obra_historia: "🧱 Obra: historia", memes: "😂 Meme" };
+const nombreTarea = t => TAREAS_IG[t] || ("• " + t.replace(/_/g, " "));
+function textoPlan(e) {
+  const pl = e && e.estado && e.estado.estado && e.estado.estado.plan_hoy;
+  if (!pl || !pl.tareas) return "📅 El celu todavía no manda su plan a la oficina. Falta pegar en Termux el comando del parche (te lo pasé por el chat con Claude).";
+  if (pl.fecha !== fechaAR()) return `📅 El plan que tiene el celu es del ${pl.fecha}: todavía no armó el de hoy (lo arma cuando arranca el día o al reiniciar).`;
+  const hh = horaAR(); const quedan = pl.tareas.filter(t => t[0] >= hh), hechas = pl.tareas.length - quedan.length;
+  const por = {}; for (const t of quedan) por[t[1]] = (por[t[1]] || 0) + 1;
+  return `📅 Programa de hoy del celu bot (Instagram y Facebook)\nTotal: ${pl.tareas.length} tareas · ya pasaron ${hechas} · quedan ${quedan.length}\n\n${Object.entries(por).sort((a, z) => z[1] - a[1]).map(([k, v]) => `${nombreTarea(k)}: ${v}`).join("\n") || "No le quedan tareas por hoy."}${quedan.length ? "\n\n⏭️ Próximas:\n" + quedan.slice(0, 15).map(t => `${t[0]}  ${nombreTarea(t[1])}${t[2] ? " ×" + t[2] : ""}`).join("\n") + (quedan.length > 15 ? `\n… y ${quedan.length - 15} más` : "") : ""}`;
+}
 const RX_CELU = /^\/?celu(?:\s*bot)?\b[\s:,.-]*(.*)$/is;
 const RX_CELU_AUTO = /^(programa de hoy|(sub[ií]|public[aá]|compart[ií]|hac[eé]|mand[aá])(?=\s).{0,40}\b(historia|reel|publicaci[oó]n|posteo|repost)|paus[aá] (el )?(instagram|celu)|reinici[aá] (el )?(instagram|celu|bot de instagram))/i;
 async function ordenCelu(t) {
   const q = t.trim(); const low = q.toLowerCase();
   if (!q || /^(estado|c[oó]mo (est[aá]|and[aá])|anda\??)$/.test(low)) { await enviar(textoCelu(await buzon("/oficina/celu"))); return; }
+  if (/^(programa|plan|agenda|tareas|qu[eé] (tiene|hace|le toca))/.test(low)) { await enviar(textoPlan(await buzon("/oficina/celu"))); return; }
   if (/^(informe|reporte|resumen)/.test(low)) { await enviar("🧾 Informe del celu de hoy\n\n" + textoCelu(await buzon("/oficina/celu"))); return; }
   let o;
   const QUE = "(\\s+(con\\s+)?(el\\s+|los\\s+)?(instagram|celu|bot|bots|todo|redes))?\\s*[.!]*$";
@@ -340,7 +351,7 @@ const RECETAS = {
     return { texto: lineas.join("\n"), enviar: cambios.length > 0, alerta: cambios.join("\n") };
   },
   async celu_informe(b, sb) {
-    const e = await buzon("/oficina/celu"); return { texto: "🧾 Informe del día del celu bot\n\n" + textoCelu(e), enviar: true };
+    const e = await buzon("/oficina/celu"); return { texto: "🧾 Informe del día del celu bot\n\n" + textoCelu(e) + "\n\n" + textoPlan(e), enviar: true };
   },
   async recordatorio(b) { return { texto: `⏰ ${b.receta.texto || b.mision}`, enviar: true }; },
   // pregunta: te pregunta a horario fijo (sin IA). Lo que respondas se anota en su registro privado.
