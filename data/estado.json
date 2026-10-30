@@ -200,8 +200,8 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-30T20:27:43.252Z",
-   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)",
+   "ultimaCorrida": "2026-10-30T20:29:55.916Z",
+   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-2.5-pro: 404 This model models/gemini-2.5-pro is no longer available to new users. Please update your c | Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
    "memoria": {}
@@ -920,7 +920,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
    "ultimaCorrida": "2026-10-30T19:12:45.080Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 75 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 77 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -2442,6 +2442,36 @@
  },
  "log": [
   {
+   "t": "2026-10-30T20:29:55.916Z",
+   "quien": "Gerente general",
+   "que": "hace la orden él mismo"
+  },
+  {
+   "t": "2026-10-30T20:29:55.916Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-2.5-pro: 404 This model models/gemini-2.5-pro is no longer available to new users. Please update your c | Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T20:29:55.916Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T20:29:55.916Z",
+   "quien": "Jonathan",
+   "que": "mandó una orden por Telegram"
+  },
+  {
+   "t": "2026-10-30T20:29:55.916Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 mensajes de Telegram"
+  },
+  {
+   "t": "2026-10-30T20:29:55.916Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
+  {
    "t": "2026-10-30T20:27:43.252Z",
    "quien": "Terrenos baratos",
    "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)"
@@ -3633,7 +3663,7 @@
   "118": "vencimientos",
   "119": "tarifas"
  },
- "tgOffset": 196508494,
+ "tgOffset": 196508495,
  "hechos": {
   "parte": "2026-10-29",
   "entrenamiento": "2026-10-29",
@@ -3641,16 +3671,18 @@
  },
  "consumo": {
   "fecha": "2026-10-30",
-  "consultas": 107,
+  "consultas": 122,
   "busquedas": 0,
   "por": {
-   "gemini": 91,
-   "github": 12,
-   "groq": 4
+   "gemini": 94,
+   "github": 18,
+   "groq": 5,
+   "llm7": 1,
+   "cfai": 4
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-30T20:27:43.252Z",
+ "actualizado": "2026-10-30T20:29:55.916Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -3678,10 +3710,27 @@
   "agotado": {
    "gemini:gemini-2.5-flash": true,
    "gemini:gemini-2.5-flash-lite": true,
-   "gemini:gemini-flash-latest": 1793392107735,
-   "groq:groq/compound": true
+   "gemini:gemini-flash-latest": 1793392227075,
+   "groq:groq/compound": true,
+   "gemini:gemini-2.5-pro": true,
+   "gemini:gemini-3.8-flash": 1793392240109,
+   "cfai:@cf/meta/llama-3.3-70b-instruct-fp8-fast": 1793392288552,
+   "cfai:@cf/meta/llama-4-scout-17b-16e-instruct": 1793392290945,
+   "cfai:@cf/mistralai/mistral-small-3.1-24b-instruct": 1793392293450,
+   "cfai:@cf/qwen/qwen2.5-coder-32b-instruct": 1793392295963,
+   "github:openai/gpt-4.1-mini": 1793392866158,
+   "github:openai/gpt-4o-mini": 1793392868596,
+   "github:meta/Llama-3.3-70B-Instruct": 1793392871123,
+   "github:deepseek/DeepSeek-V3-0324": 1793392873615,
+   "github:openai/gpt-4.1": 1793392876137,
+   "github:openai/gpt-4o": 1793392878595
   },
-  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
+  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
+  "ultimo": {
+   "prov": "Groq",
+   "modelo": "openai/gpt-oss-120b",
+   "t": "2026-10-30T20:29:55.916Z"
+  }
  },
  "dueno": 1237559052,
  "pendientesCant": 1
