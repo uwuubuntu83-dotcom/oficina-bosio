@@ -212,7 +212,7 @@ const RECETAS = {
     if (alertas.length) { const k = alertas.join("|"); if (sb.memoria.ultimaAlerta === k) return { texto, enviar: false }; sb.memoria.ultimaAlerta = k; return { texto: `🚨 Movimiento fuerte del dólar\n${alertas.join("\n")}\n\n${texto}`, enviar: true }; }
     return { texto, enviar: false };
   },
-  async rss(b, sb) {
+  async rss(b, sb, { resumen } = {}) {
     const vistos = new Set(sb.memoria.vistos || []); const items = [];
     for (const q of b.receta.busquedas || []) {
       const url = `${URLS.rss}?q=${encodeURIComponent(q + " when:3d")}&hl=es-419&gl=AR&ceid=AR:es-419`;
@@ -230,17 +230,30 @@ const RECETAS = {
       } catch (e) { log(b.nombre, `no pude leer «${q}»: ${e.message}`); }
     }
     items.sort((a, z) => (z.fecha || 0) - (a.fecha || 0));
-    const nuevos = items.slice(0, b.receta.max || 8);
-    sb.memoria.vistos = [...nuevos.map(x => x.clave), ...(sb.memoria.vistos || [])].slice(0, 400);
+    let nuevos = items.slice(0, b.receta.max || 8);
+    sb.memoria.vistos = [...nuevos.map(x => x.clave), ...(sb.memoria.vistos || [])].slice(0, 600);
+    const entrega = b.receta.entrega; // horarios fijos para mandar lo juntado (si no hay, avisa al instante)
+    if (entrega && entrega.length && !resumen) {
+      sb.memoria.bandeja = [...(sb.memoria.bandeja || []), ...nuevos.map(x => ({ titulo: x.titulo, link: x.link, fuente: x.fuente }))].slice(-30);
+      const ent = sb.memoria.entregas && sb.memoria.entregas.fecha === fechaAR() ? sb.memoria.entregas : (sb.memoria.entregas = { fecha: fechaAR(), hechas: [] });
+      const toca = entrega.filter(h => horaAR() >= h && !ent.hechas.includes(h));
+      if (!toca.length) return { texto: `Guardé ${sb.memoria.bandeja.length} novedades para la próxima entrega (${entrega.find(h => h > horaAR()) || entrega[0]}).`, enviar: false };
+      ent.hechas.push(...toca);
+      nuevos = sb.memoria.bandeja.slice(-(b.receta.max || 8)); sb.memoria.bandeja = [];
+    } else if (resumen && sb.memoria.bandeja && sb.memoria.bandeja.length) { nuevos = [...sb.memoria.bandeja, ...nuevos].slice(-(b.receta.max || 8)); sb.memoria.bandeja = []; }
     if (!nuevos.length) return { texto: "Sin novedades desde la última vez.", enviar: false };
     return { texto: `${areaDe(b).icono} ${b.nombre}\n\n` + nuevos.map(x => `• ${x.titulo}${x.fuente ? " (" + x.fuente + ")" : ""}\n  ${x.link}`).join("\n"), html: `<b>${escHTML(areaDe(b).icono + " " + b.nombre)}</b>\n\n` + nuevos.map(x => `• <a href="${escHTML(x.link)}">${escHTML(x.titulo)}</a>${x.fuente ? " <i>(" + escHTML(x.fuente) + ")</i>" : ""}`).join("\n\n"), enviar: true };
   },
-  async clima(b) {
+  async clima(b, sb, { resumen } = {}) {
     const u = CFG.ubicacion; const url = `${URLS.clima}?latitude=${u.lat}&longitude=${u.lon}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum,wind_speed_10m_max&timezone=America%2FArgentina%2FCordoba&forecast_days=3`;
     const r = await traer(url); if (!r.ok) throw new Error("open-meteo respondió " + r.status); const d = (await r.json()).daily;
     const nom = ["Hoy", "Mañana", "Pasado"]; const avisos = [];
     const lineas = d.time.map((t, i) => { const ll = d.precipitation_probability_max[i]; const v = d.wind_speed_10m_max[i]; if (ll >= 60 && d.precipitation_sum[i] >= 2) avisos.push(`${nom[i]}: ${ll}% de lluvia (${d.precipitation_sum[i]} mm)`); if (v >= 40) avisos.push(`${nom[i]}: viento fuerte (${Math.round(v)} km/h)`); return `• ${nom[i]} ${t.slice(8, 10)}/${t.slice(5, 7)}: ${Math.round(d.temperature_2m_min[i])}° a ${Math.round(d.temperature_2m_max[i])}° · lluvia ${ll}% · viento ${Math.round(v)} km/h`; });
-    return { texto: `🌤️ Clima en ${u.lugar}\n${lineas.join("\n")}${avisos.length ? "\n\n⚠️ Para la obra:\n" + avisos.join("\n") : "\n\n✅ Sin lluvias fuertes ni viento para la obra."}\n\nFuente: open-meteo.com`, enviar: true };
+    const texto = `🌤️ Clima en ${u.lugar}\n${lineas.join("\n")}${avisos.length ? "\n\n⚠️ Para la obra:\n" + avisos.join("\n") : "\n\n✅ Sin lluvias fuertes ni viento para la obra."}\n\nFuente: open-meteo.com`;
+    const clave = avisos.join("|");
+    if (resumen) { sb.memoria.ultimoAviso = clave; return { texto, enviar: true }; }
+    if (clave && clave !== sb.memoria.ultimoAviso) { sb.memoria.ultimoAviso = clave; return { texto: "⚠️ Cambió el pronóstico para la obra\n\n" + texto, enviar: true }; }
+    return { texto, enviar: false };
   },
   async web_estado(b, sb) {
     const antes = sb.memoria.caidas || {}; const ahora = {}; const cambios = []; const lineas = [];

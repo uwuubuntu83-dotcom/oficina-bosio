@@ -122,19 +122,13 @@
         "alertaPorcentaje": 2
       },
       "horario": {
-        "dias": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "cada": 60,
-        "desde": "10:00",
-        "hasta": "18:00",
+        "dias": "todos",
+        "cada": 30,
+        "desde": "00:00",
+        "hasta": "23:59",
         "resumen": "10:30"
       },
-      "mision": "Cotización del dólar oficial, blue, MEP, CCL, tarjeta y cripto. Resumen cada mañana y alerta si alguno se mueve más de 2% en el día."
+      "mision": "Vigila el dólar oficial, blue, MEP, CCL, tarjeta y cripto cada 30 minutos, todo el día. Te manda el resumen a las 10:30 y te avisa al instante si alguno se mueve más de 2%."
     },
     {
       "id": "terrenos",
@@ -245,16 +239,12 @@
         ]
       },
       "horario": {
-        "dias": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "hora": "08:30"
+        "dias": "todos",
+        "cada": 60,
+        "desde": "00:00",
+        "hasta": "23:59"
       },
-      "mision": "Avisar licitaciones y concursos de obra nuevos en Córdoba y Villa María, con link a la fuente. Solo manda lo que no avisó antes."
+      "mision": "Revisa cada hora, todo el día, si salieron licitaciones o concursos de obra nuevos en Córdoba y Villa María, y te avisa al instante con el link."
     },
     {
       "id": "m2",
@@ -331,13 +321,20 @@
         "excluir": [
           "rio seco",
           "río seco"
+        ],
+        "entrega": [
+          "07:30",
+          "13:00",
+          "20:00"
         ]
       },
       "horario": {
         "dias": "todos",
-        "hora": "07:30"
+        "cada": 60,
+        "desde": "00:00",
+        "hasta": "23:59"
       },
-      "mision": "Titulares nuevos de Villa María y Villa Nueva con link, todas las mañanas."
+      "mision": "Junta todo el día las noticias nuevas de Villa María y Villa Nueva y te las manda a las 7:30, 13:00 y 20:00."
     },
     {
       "id": "noticias_ar",
@@ -352,13 +349,20 @@
           "obra pública Córdoba",
           "créditos hipotecarios Argentina"
         ],
-        "max": 10
+        "max": 10,
+        "entrega": [
+          "07:30",
+          "13:00",
+          "20:00"
+        ]
       },
       "horario": {
         "dias": "todos",
-        "hora": "08:00"
+        "cada": 60,
+        "desde": "00:00",
+        "hasta": "23:59"
       },
-      "mision": "Titulares nuevos de economía, construcción, obra pública y créditos, con link."
+      "mision": "Junta todo el día las noticias nuevas de economía, construcción, obra pública y créditos y te las manda a las 7:30, 13:00 y 20:00."
     },
     {
       "id": "mundo",
@@ -372,13 +376,19 @@
           "Europa noticias",
           "Estados Unidos economía"
         ],
-        "max": 8
+        "max": 8,
+        "entrega": [
+          "08:00",
+          "20:00"
+        ]
       },
       "horario": {
         "dias": "todos",
-        "hora": "12:00"
+        "cada": 60,
+        "desde": "00:00",
+        "hasta": "23:59"
       },
-      "mision": "Titulares nuevos del mundo que pueden afectar a la Argentina, con link."
+      "mision": "Junta todo el día las noticias del mundo que pueden afectar a la Argentina y te las manda a las 8:00 y 20:00."
     },
     {
       "id": "ideas_redes",
@@ -519,9 +529,12 @@
       },
       "horario": {
         "dias": "todos",
-        "hora": "06:45"
+        "cada": 120,
+        "desde": "00:00",
+        "hasta": "23:59",
+        "resumen": "06:45"
       },
-      "mision": "Pronóstico de Villa María para hoy y los próximos 2 días, con aviso si va a llover o hay viento fuerte que afecte la obra."
+      "mision": "Pronóstico de Villa María a las 6:45 todos los días, y vigila cada 2 horas: si aparece lluvia fuerte o viento que frene la obra, te avisa al instante."
     },
     {
       "id": "vencimientos",
@@ -538,12 +551,12 @@
         "max": 6
       },
       "horario": {
-        "dias": [
-          1
-        ],
-        "hora": "09:15"
+        "dias": "todos",
+        "cada": 180,
+        "desde": "00:00",
+        "hasta": "23:59"
       },
-      "mision": "Novedades de vencimientos de ARCA, monotributo e Ingresos Brutos de Córdoba, con link."
+      "mision": "Revisa cada 3 horas novedades de vencimientos de ARCA, monotributo e Ingresos Brutos de Córdoba y te avisa cuando aparece algo nuevo."
     },
     {
       "id": "tarifas",
@@ -561,13 +574,12 @@
         "max": 6
       },
       "horario": {
-        "dias": [
-          1,
-          4
-        ],
-        "hora": "09:30"
+        "dias": "todos",
+        "cada": 180,
+        "desde": "00:00",
+        "hasta": "23:59"
       },
-      "mision": "Aumentos de luz, gas, agua y prepagas que afectan los gastos de la casa, con link."
+      "mision": "Revisa cada 3 horas aumentos de luz, gas, agua, prepagas y alquileres, y te avisa cuando aparece algo nuevo."
     },
     {
       "id": "ofertas",
@@ -644,11 +656,11 @@
       },
       "horario": {
         "dias": "todos",
-        "cada": 60,
+        "cada": 30,
         "desde": "00:00",
         "hasta": "23:59"
       },
-      "mision": "Revisar cada hora que tus páginas estén funcionando y avisar si alguna se cae o vuelve."
+      "mision": "Revisa cada 30 minutos, todo el día, que tus páginas funcionen, y te avisa al instante si alguna se cae o vuelve."
     },
     {
       "id": "ia_gratis",
@@ -682,7 +694,7 @@
         "dias": "todos",
         "hora": "21:00"
       },
-      "mision": "Revisar cada noche qué bots fallaron, cuáles están en pausa, si el celu da señales y cuánta IA se usó, y avisar si hay algo para arreglar."
+      "mision": "Parte de salud de la oficina todas las noches a las 21:00. Además, en cada vuelta (cada 30 minutos) vigila que el celular bot dé señales y te avisa si se corta."
     }
   ]
 }
