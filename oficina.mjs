@@ -351,7 +351,8 @@ async function informeGastos(periodo = "mes") {
   const png = pngTorta(filas.map(([, v], i) => ({ v, rgb: COLORES_TORTA[i][1] })));
   const dias = Math.max(1, Math.round((new Date(hasta) - new Date(desde)) / 86400e3) + 1), mayor = d.todos.reduce((a, x) => x.monto > a.monto ? x : a, d.todos[0]);
   const vs = p.total ? Math.round((d.total - p.total) / p.total * 100) : null;
-  const txt = `📊 ${titulo}\n💰 Total: ${pesos(d.total)}${vs != null ? ` (${vs >= 0 ? "+" : ""}${vs}% contra el mismo período anterior)` : ""}\n\n` + filas.map(([k, v], i) => `${COLORES_TORTA[i][0]} ${k}: ${pesos(v)} · ${Math.round(v / d.total * 100)}%${p.por[k] ? (v > p.por[k] * 1.2 ? " ⬆️" : v < p.por[k] * 0.8 ? " ⬇️" : "") : ""}`).join("\n") + `\n\n📌 Gasto más grande: ${pesos(mayor.monto)} · ${mayor.texto || "-"} (${mayor.f.slice(8, 10)}/${mayor.f.slice(5, 7)})\n📅 Promedio por día: ${pesos(d.total / dias)} · ${d.todos.length} gastos anotados`;
+  let txt = `📊 ${titulo}\n💰 Total: ${pesos(d.total)}${vs != null ? ` (${vs >= 0 ? "+" : ""}${vs}% contra el mismo período anterior)` : ""}\n\n` + filas.map(([k, v], i) => `${COLORES_TORTA[i][0]} ${k}: ${pesos(v)} · ${Math.round(v / d.total * 100)}%${p.por[k] ? (v > p.por[k] * 1.2 ? " ⬆️" : v < p.por[k] * 0.8 ? " ⬇️" : "") : ""}`).join("\n") + `\n\n📌 Gasto más grande: ${pesos(mayor.monto)} · ${mayor.texto || "-"} (${mayor.f.slice(8, 10)}/${mayor.f.slice(5, 7)})\n📅 Promedio por día: ${pesos(d.total / dias)} · ${d.todos.length} gastos anotados`;
+  const [cat1, v1] = filas[0]; if (v1 / d.total >= 0.3 && cat1 !== "Otras categorías") txt += `\n\n⚠️ ${cat1} se lleva el ${Math.round(v1 / d.total * 100)}% de lo que gastás. Escribí «consejo» y el contador te dice dónde cortar.`;
   await enviarFoto(png, `📊 ${titulo} · ${pesos(d.total)}`);
   await enviar(txt);
   log("Contaduría", "mandó el informe de gastos con gráfico (privado)");
@@ -465,6 +466,64 @@ const RECETAS = {
     if (diaAR() === 0) { await informeGastos("semana"); return { texto: "Informe de la semana con gráfico enviado.", enviar: false }; }
     return { texto: resumenGastos(hoy.slice(0, 8) + "01", hoy, "Gastos del mes hasta hoy"), enviar: false };
   },
+  // ---- Contador y consejero financiero (SIN IA): cuentas y reglas fijas sobre tus gastos reales
+  async consejero(b, sb) {
+    const hoy = fechaAR(), Y = Number(hoy.slice(0, 4)), M = Number(hoy.slice(5, 7)) - 1, dia = Number(hoy.slice(8, 10));
+    const m0 = hoy.slice(0, 8) + "01", diasMes = new Date(Date.UTC(Y, M + 1, 0)).getUTCDate();
+    const pm0 = new Date(Date.UTC(Y, M - 1, 1)).toISOString().slice(0, 10), pmMismo = pm0.slice(0, 8) + String(Math.min(dia, 28)).padStart(2, "0"), pmFin = new Date(Date.UTC(Y, M, 0)).toISOString().slice(0, 10);
+    const d = datosGastos(m0, hoy), p = datosGastos(pm0, pmMismo), pFull = datosGastos(pm0, pmFin);
+    if (!d.total) return { texto: "🧮 Contador: todavía no anotaste gastos este mes. Escribime como te salga («gasté 5000 en nafta», «compré pan 1200 y carne 8000») y te digo cómo venís.", enviar: true };
+    const prom = d.total / dia, proy = prom * diasMes, vs = p.total ? Math.round((d.total - p.total) / p.total * 100) : null;
+    const filas = Object.entries(d.por).sort((a, z) => z[1] - a[1]);
+    const RX_DELI = /(delivery|rotiser|pedidos ?ya|rappi|pizza|empanada|hamburgues|burger|mc ?donald|sushi|lomito|sandwich)/i;
+    const deli = d.todos.filter(x => RX_DELI.test(x.texto || "")), deliT = deli.reduce((a, x) => a + x.monto, 0);
+    const cuts = [];
+    if (deliT) cuts.push([deliT * 0.5, `Delivery y comida hecha: ${deli.length} veces este mes (${pesos(deliT)}). Cocinando la mitad de esas veces ahorrás ~${pesos(deliT * 0.5)} por mes.`]);
+    const reglas = { "Comidas y bebidas": [0.15, "Compras de comida: armá la lista semanal y comprá en mayorista o feria. Bajás ~15%"], "Entretenimiento": [0.3, "Salidas y entretenimiento: poné un tope semanal. Recortando un 30%"], "Shopping": [0.3, "Compras (ropa, tecnología, regalos): esperá 48 horas antes de comprar. Un 30% menos"], "Transporte": [0.1, "Nafta y movilidad: agrupá viajes y controlá la presión de las gomas. Un 10% menos"], "Cuentas y servicios": [0.1, "Servicios: revisá planes de internet, celular y suscripciones que no usás. Un 10% menos"], "Cuidado personal": [0.2, "Cuidado personal: un 20% menos"], "Créditos y financiación": [0, "Créditos: no tomes cuotas nuevas y cancelá primero la de interés más alto"] };
+    for (const [k, v] of filas) { const r = reglas[k]; if (!r) continue; const base = k === "Comidas y bebidas" ? v - deliT : v; if (r[0] && base > 0) cuts.push([base * r[0], `${r[1]}: ahorrás ~${pesos(base * r[0])} por mes.`]); else if (!r[0]) cuts.push([0, r[1] + "."]); }
+    cuts.sort((a, z) => z[0] - a[0]);
+    const ahorro = Math.round(cuts.slice(0, 3).reduce((a, [v]) => a + v, 0) / 1000) * 1000;
+    // salud: comidas pesadas para el colesterol (de lo que anotaste en «¿Qué comiste?» y en los gastos)
+    const perfil = leerPrivSeguro("perfil", []).map(x => x.texto).join(" ");
+    const RX_PESADA = /(frit|milanes|pizza|hamburgues|asado|chorizo|morcilla|salame|fiambre|embutid|panceta|manteca|factura|medialuna|torta|helado|queso|papas fritas|empanada|choripan|achuras|mayonesa)/i;
+    const com = leerPrivSeguro("comidas", []).filter(x => x.t >= hace(7));
+    const pesadas = [...com.map(x => x.texto), ...d.todos.filter(x => x.t >= hace(7) && x.cat === "Comidas y bebidas").map(x => x.texto)].filter(t => RX_PESADA.test(t || ""));
+    const colesterol = /colesterol|trigli|coraz[oó]n|cardio/i.test(perfil);
+    const dl = (est.bots.dolar && est.bots.dolar.memoria && est.bots.dolar.memoria.dolar) || {}, mep = dl.bolsa || dl.mep || dl.oficial;
+    escribirPriv("ahorro_estimado", { t: NOW.toISOString(), ahorro, gastoMes: Math.round(pFull.total || proy) });
+    const l = [`🧮 Contador · cómo venís en ${MESES[M]} (día ${dia} de ${diasMes})`,
+      `💰 Gastaste ${pesos(d.total)} · ${pesos(prom)} por día${dia < diasMes ? ` · si seguís así cerrás el mes en ~${pesos(proy)}` : ""}`,
+      vs != null ? `${vs > 0 ? "📈" : "📉"} Contra el mismo día del mes pasado: ${vs >= 0 ? "+" : ""}${vs}%` : "",
+      "", "🔎 Dónde se va la plata:", ...filas.slice(0, 5).map(([k, v]) => `• ${k}: ${pesos(v)} (${Math.round(v / d.total * 100)}%)${p.por[k] && v > p.por[k] * 1.2 ? " ⬆️ subió" : ""}`),
+      "", "✂️ Dónde cortar sin sufrir:", ...cuts.slice(0, 3).map(([, t], i) => `${i + 1}. ${t}`),
+      ahorro ? `\n💡 Con esos cambios podés ahorrar ~${pesos(ahorro)} por mes${mep ? ` = US$ ${Math.floor(ahorro / mep)} (dólar MEP $${mep}) · en un año ~US$ ${Math.floor(ahorro * 12 / mep)}` : ""}.` : "",
+      pesadas.length ? `\n❤️ Salud${colesterol ? " (colesterol)" : ""}: esta semana anotaste ${pesadas.length} comida(s) pesadas (${[...new Set(pesadas.map(t => (String(t).match(new RegExp("[a-záéíóúñ]*" + RX_PESADA.source + "[a-záéíóúñ]*", "i")) || [""])[0].toLowerCase()))].slice(0, 4).join(", ")}). Cambiá 2 o 3 por pollo o pescado a la plancha, legumbres, avena o verduras: ${colesterol ? "te cuida el colesterol" : "te cuida la salud"} y gastás menos.` : (colesterol ? "\n❤️ Para el colesterol: anotá lo que comés («almorcé ...») y te marco qué conviene cambiar." : ""),
+      ahorro ? "\n➡️ Escribí «inversiones» y te digo dónde poner esa plata." : "",
+      "\n(Cuentas automáticas con tus gastos anotados. No soy contador matriculado: es información general.)"];
+    return { texto: l.join("\n").replace(/\n{3,}/g, "\n\n"), enviar: true };
+  },
+  // ---- Asesor de inversiones (SIN IA): reglas fijas + tasas e inflación reales (ArgentinaDatos, gratis)
+  async inversor(b, sb) {
+    const a = leerPrivSeguro("ahorro_estimado", null); const gm = (a && a.gastoMes) || datosGastos(fechaAR().slice(0, 8) + "01", fechaAR()).total;
+    const ahorro = (a && a.ahorro) || Math.round(gm * 0.1 / 1000) * 1000;
+    const dl = (est.bots.dolar && est.bots.dolar.memoria && est.bots.dolar.memoria.dolar) || {}, mep = dl.bolsa || dl.mep;
+    let tasas = [], infl = null;
+    try { const r = await traer("https://api.argentinadatos.com/v1/finanzas/tasas/plazoFijo", {}, 15000); if (r.ok) tasas = (await r.json()).filter(x => x.tnaClientes).sort((x, z) => z.tnaClientes - x.tnaClientes); } catch {}
+    try { const r = await traer("https://api.argentinadatos.com/v1/finanzas/indices/inflacion", {}, 15000); if (r.ok) { const j = await r.json(); infl = j[j.length - 1]; } } catch {}
+    const tna = tasas[0] ? tasas[0].tnaClientes * (tasas[0].tnaClientes < 1 ? 100 : 1) : null, tem = tna ? tna / 12 : null;
+    const fondo = gm ? gm * 3 : null;
+    const l = ["📈 Asesor de inversiones · con datos de hoy",
+      ahorro ? `Lo que podés ahorrar por mes (según el contador): ~${pesos(ahorro)}` : "Todavía no sé cuánto podés ahorrar: anotá tus gastos y pedí «consejo» primero.",
+      "", "1️⃣ Primero, un fondo de emergencia" + (fondo ? `: 3 meses de gastos = ~${pesos(fondo)}.` : "."), "   Dejalo en una cuenta remunerada o un fondo «money market» (Mercado Pago, Ualá, tu banco): rinde todos los días y lo sacás cuando quieras.",
+      "", "2️⃣ Cuando tengas el fondo, repartí lo que ahorrás cada mes:",
+      `   • 50% en dólar MEP (desde la app de tu banco, es legal)${mep && ahorro ? `: ~US$ ${Math.floor(ahorro * 0.5 / mep)} por mes a $${mep}` : ""}. Te cubre si el peso se devalúa.`,
+      `   • 50% en plazo fijo o money market${tna ? `: hoy la mejor tasa es ${tasas[0].entidad} con ${tna.toFixed(1)}% anual (~${tem.toFixed(2)}% por mes)` : ""}.`,
+      ...(tasas.length > 1 ? ["   Otras tasas de plazo fijo hoy: " + tasas.slice(1, 4).map(x => `${x.entidad} ${(x.tnaClientes * (x.tnaClientes < 1 ? 100 : 1)).toFixed(1)}%`).join(" · ")] : []),
+      infl && tem ? `\n📊 Inflación del último mes (${String(infl.fecha).slice(0, 7)}): ${infl.valor}%. El plazo fijo rinde ~${tem.toFixed(2)}% por mes: ${tem > infl.valor ? "le gana a la inflación ✅" : "NO le gana a la inflación ⚠️ (conviene más dólar MEP o money market)"}.` : "",
+      "\n🚫 Evitá: dólar blue de dudosa procedencia, «inversiones» que prometen ganancias fijas altas, y pedir préstamos para invertir.",
+      "(Reglas generales automáticas, no es asesoramiento financiero profesional.)"];
+    return { texto: l.filter(x => x !== "").join("\n"), enviar: true };
+  },
   async salud() {
     const l = []; const fallaron = bots().filter(x => est.bots[x.id]?.estado === "falló"); const pausados = bots().filter(x => est.bots[x.id]?.pausado);
     const ext = bots().filter(x => x.tipo === "externo").map(x => ({ b: x, hb: leer(path.join(DATA, "externos", x.id + ".json"), null) }));
@@ -487,7 +546,15 @@ const leerFeed = b => b.privado ? leerPrivSeguro("feed_" + b.id, []) : leer(FFEE
 const guardarFeed = (b, v) => b.privado ? escribirPriv("feed_" + b.id, v) : escribir(FFEED(b.id), v);
 const leerLecc = b => b.privado ? leerPrivSeguro("lecc_" + b.id, "") : (fs.existsSync(FLECC(b.id)) ? fs.readFileSync(FLECC(b.id), "utf8") : "");
 const guardarLecc = (b, t) => b.privado ? escribirPriv("lecc_" + b.id, t) : escribir(FLECC(b.id), t);
-function registrosDe(b) { return (b.registros || []).map(id => { const r = leerPrivSeguro(id, []).filter(x => x.t >= hace(14)); return r.length ? `${id.toUpperCase()} (últimos 14 días):\n` + r.slice(-80).map(x => `${x.f} ${x.h} ${x.momento ? x.momento + ": " : ""}${x.texto}${x.monto ? " " + pesos(x.monto) : ""}`).join("\n") : `${id.toUpperCase()}: todavía no hay nada anotado.`; }).join("\n\n"); }
+function registrosDe(b) {
+  const dias = b.diasRegistro || 14;
+  const partes = (b.registros || []).map(id => { const r = leerPrivSeguro(id, []).filter(x => x.t >= hace(dias)); return r.length ? `${id.toUpperCase()} (últimos ${dias} días):\n` + r.slice(-150).map(x => `${x.f} ${x.h || ""} ${x.momento ? x.momento + ": " : ""}${x.texto || x.servicio || ""}${x.cat ? " [" + x.cat + "]" : ""}${x.monto ? " " + pesos(x.monto) : ""}`).join("\n") : `${id.toUpperCase()}: todavía no hay nada anotado.`; });
+  if (b.registros && b.registros.some(r => r === "gastos" || r === "pagos_casa")) { const hoy = fechaAR(), m0 = hoy.slice(0, 8) + "01"; const d = datosGastos(m0, hoy); if (d.total) partes.unshift(`RESUMEN DEL MES (${m0} a ${hoy}): total ${pesos(d.total)} · ` + Object.entries(d.por).sort((a, z) => z[1] - a[1]).map(([k, v]) => `${k} ${pesos(v)} (${Math.round(v / d.total * 100)}%)`).join(" · ")); }
+  if (b.conDolar) { const dl = (est.bots.dolar && est.bots.dolar.memoria && est.bots.dolar.memoria.dolar) || {}; if (Object.keys(dl).length) partes.push("DÓLAR HOY (venta): " + Object.entries(dl).map(([k, v]) => `${k} $${v}`).join(" · ")); }
+  for (const id of b.lee || []) { const u = leerPrivSeguro("ultimo_" + id, null); if (u && u.texto) partes.push(`LO ÚLTIMO QUE DIJO ${(botPorId(id) || {}).nombre || id} (${String(u.t).slice(0, 10)}):\n${u.texto.slice(0, 2500)}`); }
+  if (b.privado) { const pf = leerPrivSeguro("perfil", []); if (pf.length) partes.unshift("LO QUE SABÉS DE TU JEFE (privado, tenelo SIEMPRE en cuenta):\n" + pf.map(x => "- " + x.texto).join("\n")); }
+  return partes.join("\n\n");
+}
 function promptBot(b, orden, critica) {
   const lecc = leerLecc(b).trim(); const reg = registrosDe(b);
   return `Sos "${b.nombre}", empleado de la ${CFG.oficina} (área ${areaDe(b).nombre}). Tu ÚNICA tarea es esta y tenés que hacerla muy bien.
@@ -496,7 +563,7 @@ HOY ES: ${DIAS[diaAR()]} ${fechaAR()}, ${horaAR()} hs (Argentina).
 TU MISIÓN: ${b.mision}
 QUÉ ENTREGAR: ${b.entregable || "Un resultado concreto y listo para usar."}
 CÓMO TE EVALÚAN: ${(b.criterios || ["Concreto", "Útil", "Sin relleno"]).join("; ")}.
-${orden ? `\nORDEN ESPECIAL DE TU JEFE (tiene prioridad): ${orden}\n` : ""}${reg ? `\nLO QUE TU JEFE FUE ANOTANDO (usalo, es real):\n${reg.slice(0, 7000)}\n` : ""}${lecc ? `\nLO QUE APRENDISTE (aplicalo siempre):\n${lecc}\n` : ""}${critica ? `\nEL CONTROL DE CALIDAD RECHAZÓ TU VERSIÓN ANTERIOR POR ESTO, CORREGILO:\n${critica}\n` : ""}
+${orden ? `\nORDEN ESPECIAL DE TU JEFE (tiene prioridad): ${orden}\n` : ""}${reg ? `\nDATOS REALES DE TU JEFE (usalos, son reales):\n${reg.slice(0, 12000)}\n` : ""}${lecc ? `\nLO QUE APRENDISTE (aplicalo siempre):\n${lecc}\n` : ""}${critica ? `\nEL CONTROL DE CALIDAD RECHAZÓ TU VERSIÓN ANTERIOR POR ESTO, CORREGILO:\n${critica}\n` : ""}
 REGLAS:
 ${b.buscar ? "- Buscá en internet información ACTUAL y usá solo datos que encontraste, con su fuente (sitio y link).\n- Si un dato no lo encontraste, decilo en vez de inventarlo." : "- No inventes datos concretos como precios, fechas o nombres de lugares que no puedas saber; si hace falta, dalos como orientativos."}
 - Español rioplatense, directo, sin saludos ni relleno. Empezá con el entregable. Máximo 2500 caracteres.`;
@@ -547,6 +614,7 @@ async function trabajar(b, { orden = "", origen = "agenda", resumen = false, hor
       critica = [...ev.problemas, ev.mejorar].filter(Boolean).join("\n- ");
       if (intento === 1) log(b.nombre, "lo mandaron a rehacer");
     }
+    if (b.privado) escribirPriv("ultimo_" + b.id, { t: NOW.toISOString(), texto: mejor.texto });
     const rel = b.privado ? null : guardarInforme(b, mejor.texto, `\n---\n**Control de calidad:** ${mejor.ev.puntaje}/10${mejor.ev.problemas.length ? "\n- " + mejor.ev.problemas.join("\n- ") : ""}\n\n**IA usada:** ${mejor.modelo}\n${b.buscar ? "\n**Fuentes verificadas:**\n" + (mejor.fuentes.length ? mejor.fuentes.slice(0, 10).map(f => `- [${f.titulo}](${f.url})`).join("\n") : "- (el buscador no devolvió fuentes)") : ""}\n`, orden);
     const feed = leerFeed(b); feed.push({ t: NOW.toISOString(), tipo: "calidad", puntaje: mejor.ev.puntaje, problemas: mejor.ev.problemas, mejorar: mejor.ev.mejorar }); guardarFeed(b, feed.slice(-40));
     Object.assign(sb, { estado: "listo", corridas: sb.corridas + 1, fallasSeguidas: 0, puntaje: mejor.ev.puntaje, resumen: b.privado ? "🔒 Privado: te lo mandó por Telegram." : limpiar(mejor.texto).slice(0, 220), informe: rel, modelo: mejor.modelo });
@@ -596,6 +664,8 @@ const AYUDA = () => `Soy el Gerente general de la ${CFG.oficina}. Escribime:
 • «caminé 40 minutos», «hice pesas», «no entrené» — tu actividad.
 • «gasté 5000 en nafta» — gasto personal. «pagué luz 34800» — servicio de la casa.
 • «servicio luz vence 10 35000» — te aviso antes de cada vencimiento.
+• consejo — el contador te dice cómo venís y dónde cortar · inversiones — qué hacer con lo que ahorrás
+• perfil: me tengo que cuidar del colesterol — lo tienen en cuenta los bots de salud y plata (privado)
 • torta (gráfico e informe de gastos del mes) · torta semana · torta mes pasado · servicios · comidas · ejercicio · borrar último gasto
 • 📸 Foto de un ticket con la palabra «comprobante»: lo leo y lo anoto. Otra foto tuya: el asesor de imagen te da su opinión.
 Oficina visual: https://uwuubuntu83-dotcom.github.io/oficina-bosio/`;
@@ -664,6 +734,11 @@ async function registrar(txt, desdeBot) {
   const reg = desdeBot && desdeBot.receta && desdeBot.receta.registro; let mm;
   if (reg === "comidas" || (!desdeBot && RX_COMIDA.test(txt))) { const mo = (txt.match(/^(desayun|almorc|almuerzo|merend|merienda|cen)/i) || [])[1]; const momento = mo ? { desayun: "desayuno", almorc: "almuerzo", almuerzo: "almuerzo", merend: "merienda", merienda: "merienda", cen: "cena" }[mo.toLowerCase()] : MOMENTO(); anotar("comidas", { texto: txt.slice(0, 400), momento }); await enviar(`🍽️ Anotado (${momento}). El nutricionista lo usa cuando le pidas consejo.`); return true; }
   if (reg === "ejercicio" || (!desdeBot && RX_EJER.test(txt))) { const hizo = !/^(no\b|nada|hoy no|ni\b)/i.test(txt); anotar("ejercicio", { texto: txt.slice(0, 400), hizo }); const sem = new Set(leerPriv("ejercicio", []).filter(x => x.hizo && x.t >= hace(7)).map(x => x.f)).size; await enviar(hizo ? `💪 ¡Bien! Anotado. Esta semana llevás ${sem} día(s) activo(s).` : `📝 Anotado. Mañana arrancamos: aunque sea 20 minutos de caminata.`); return true; }
+  if (/^(consejo|consejero|contador|c[oó]mo vengo|c[oó]mo voy)(\s+(con\s+)?(los\s+|mis\s+)?(gastos|la plata|plata))?\s*[?!.]*$/i.test(txt) && botPorId("consejero")) { est.pendientes.push({ bot: "consejero", orden: "", t: NOW.toISOString(), origen: "orden" }); return true; }
+  if (/^(inversiones|invertir|inversor|asesor|d[oó]nde invierto|qu[eé] hago con (mis |los |el )?(ahorros?|plata))\s*[?!.]*$/i.test(txt) && botPorId("inversor")) { est.pendientes.push({ bot: "inversor", orden: "", t: NOW.toISOString(), origen: "orden" }); return true; }
+  if ((mm = txt.match(/^(?:mi\s+)?perfil\s*:\s*(.{3,})$/is))) { const pf = leerPriv("perfil", []); pf.push({ t: NOW.toISOString(), texto: mm[1].trim().slice(0, 400) }); escribirPriv("perfil", pf.slice(-40)); await enviar(`🔒 Anotado en tu perfil privado: «${mm[1].trim().slice(0, 120)}». El nutricionista, el trainer y el consejero financiero lo van a tener en cuenta siempre.`); return true; }
+  if (/^(ver\s+)?(mi\s+)?perfil$/i.test(txt)) { const pf = leerPriv("perfil", []); await enviar(pf.length ? "🔒 Tu perfil privado:\n" + pf.map((x, i) => `${i + 1}. ${x.texto}`).join("\n") + "\n\nPara sumar algo: «perfil: ...». Para borrar todo: «borrar perfil»." : "Tu perfil está vacío. Contame algo así: «perfil: me tengo que cuidar del colesterol»."); return true; }
+  if (/^borrar\s+(mi\s+)?perfil$/i.test(txt)) { escribirPriv("perfil", []); await enviar("🗑️ Borré tu perfil privado."); return true; }
   if ((mm = txt.match(/^servicio\s+(.+?)\s+vence\s+(?:el\s+)?(?:d[ií]a\s+)?(\d{1,2})\b\s*(.*)$/i))) { const lista = leerPriv("servicios", []); const nombre = mm[1].trim().slice(0, 30); const ant = lista.find(x => slug(x.nombre) === slug(nombre)); const monto = leerMonto(mm[3]); if (ant) Object.assign(ant, { dia: Number(mm[2]), monto: monto || ant.monto }); else lista.push({ nombre, dia: Number(mm[2]), monto, pagos: {} }); escribirPriv("servicios", lista); await enviar(`🏠 ${ant ? "Actualicé" : "Agregué"} ${nombre}: vence el ${mm[2]} de cada mes${monto ? ", aprox. " + pesos(monto) : ""}. Te aviso 3 días antes.`); return true; }
   if ((mm = txt.match(/^(?:borrar|quitar|sacar)\s+servicio\s+(.+)$/i))) { const lista = leerPriv("servicios", []); const n = lista.length; const q = slug(mm[1]); escribirPriv("servicios", lista.filter(x => slug(x.nombre) !== q)); await enviar(n !== lista.filter(x => slug(x.nombre) !== q).length ? "🗑️ Listo, lo saqué." : "No encontré ese servicio. Escribí «servicios»."); return true; }
   if (/^(mis\s+)?servicios$/i.test(txt)) { const r = await RECETAS.servicios(botPorId("gastos_casa") || {}, { memoria: {} }); await enviar(r.texto); return true; }

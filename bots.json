@@ -193,6 +193,20 @@
       ]
     },
     {
+      "id": "inversor",
+      "nombre": "Asesor de inversiones",
+      "area": "inversiones",
+      "tipo": "codigo",
+      "privado": true,
+      "receta": {
+        "tipo": "inversor"
+      },
+      "horario": {
+        "apedido": true
+      },
+      "mision": "Sin IA. Trabaja con el contador: toma lo que podés ahorrar por mes y te dice qué hacer con eso (fondo de emergencia, dólar MEP, plazo fijo o money market), con las mejores tasas de plazo fijo de hoy y la inflación real, para que tu plata no pierda. Le escribís «inversiones»."
+    },
+    {
       "id": "licitaciones",
       "nombre": "Clientes y licitaciones",
       "area": "constructora",
@@ -759,6 +773,25 @@
         ]
       },
       "mision": "Anota tus gastos cuando le escribís como sea («ayer gasté 5000 en nafta», «compré pan 1200 y carne 8000», «le pagué al plomero 25000») o le mandás la foto del comprobante. Los separa por categoría como tu banco y, cuando le pedís «torta», te manda el gráfico de torta con el informe. Solo, los domingos (semana) y el día 1 (mes anterior)."
+    },
+    {
+      "id": "consejero",
+      "nombre": "Contador y consejero financiero",
+      "area": "contaduria",
+      "tipo": "codigo",
+      "privado": true,
+      "receta": {
+        "tipo": "consejero"
+      },
+      "horario": {
+        "dias": [
+          0
+        ],
+        "horas": [
+          "10:00"
+        ]
+      },
+      "mision": "Sin IA. Mira tus gastos reales, te dice cómo venís en el mes, cuánto vas a cerrar, dónde se va la plata y dónde cortar sin sufrir; calcula cuánto podés ahorrar (en pesos y dólares) y te marca las comidas pesadas que no te convienen para la salud. Te escribe los domingos a las 10:00 y cuando le pedís «consejo»."
     },
     {
       "id": "vencimientos",
