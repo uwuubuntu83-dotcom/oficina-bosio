@@ -53,6 +53,13 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          LLM7_API_KEY: ${{ secrets.LLM7_API_KEY }}
+          CODESTRAL_API_KEY: ${{ secrets.CODESTRAL_API_KEY }}
+          AI21_API_KEY: ${{ secrets.AI21_API_KEY }}
+          UPSTAGE_API_KEY: ${{ secrets.UPSTAGE_API_KEY }}
+          HYPERBOLIC_API_KEY: ${{ secrets.HYPERBOLIC_API_KEY }}
+          NOVITA_API_KEY: ${{ secrets.NOVITA_API_KEY }}
+          FIREWORKS_API_KEY: ${{ secrets.FIREWORKS_API_KEY }}
           LLM_EXTRA_BASE: ${{ secrets.LLM_EXTRA_BASE }}
           LLM_EXTRA_KEY: ${{ secrets.LLM_EXTRA_KEY }}
           LLM_EXTRA_MODELS: ${{ secrets.LLM_EXTRA_MODELS }}
