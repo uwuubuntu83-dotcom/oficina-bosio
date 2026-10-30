@@ -198,7 +198,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-30T14:31:54.437Z",
+   "ultimaCorrida": "2026-10-30T14:46:54.534Z",
    "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
@@ -615,13 +615,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-10-30T14:30:02.717Z",
-   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
+   "ultimaCorrida": "2026-10-30T14:45:57.506Z",
+   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: ⏸ en pausa · ",
    "informe": null,
    "pausado": false,
    "memoria": {
     "celu": {
-     "t": 1793370602717,
+     "t": 1793371557506,
      "redes_hoy": {
       "publicaciones": 5,
       "historias": 13,
@@ -631,16 +631,16 @@
       "errores": 15,
       "reinicios": 52,
       "ultimas": [
-       "11:23 ✔ Facebook: compartido en la Página (historia)",
-       "11:25 adb connect 127.0.0.1:33119: failed to connect to '127.0.0.1:33119': Connection refused",
-       "11:25 Buscando el puerto Wi-Fi del celular en 127.0.0.1...",
-       "11:25 Celular conectado: SM-A515F | pantalla 1080x2400",
        "11:25 Reinicio: retomo el plan de hoy con los MISMOS horarios (113 tareas pendientes)",
        "11:25 PLAN DE HOY:",
        "11:27 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
        "11:28 Claude: no dejó arreglo nuevo (todo bien)",
        "11:29 Chat: no encontré el chat con gringobosio / Jonathan Bosio en la bandeja (sigo buscando reels como siempre)",
-       "11:29 Guardado debug/pantalla_112939.png y .xml"
+       "11:29 Guardado debug/pantalla_112939.png y .xml",
+       "11:30 Memes: en la pestaña Reels algo falló (No encontré ninguno de: ['Reels']). Sigo con hashtags.",
+       "11:30 Memes: pruebo abriendo reels de hashtags de humor",
+       "11:33 ⏸ Paré «obra_reel» porque estás usando el celu. La retomo cuando lo dejes.",
+       "11:33 📱 Estás usando el celu: el bot espera y sigue cuando lo dejes (2 min sin tocarlo)."
       ]
      }
     }
@@ -1585,6 +1585,36 @@
  },
  "log": [
   {
+   "t": "2026-10-30T14:46:54.534Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T14:46:54.534Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T14:46:54.534Z",
+   "quien": "Redes sociales",
+   "que": "le pasó una orden al celu bot"
+  },
+  {
+   "t": "2026-10-30T14:46:54.534Z",
+   "quien": "Redes sociales",
+   "que": "le pasó una orden al celu bot"
+  },
+  {
+   "t": "2026-10-30T14:46:54.534Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 2 mensajes de Telegram"
+  },
+  {
+   "t": "2026-10-30T14:46:54.534Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github"
+  },
+  {
    "t": "2026-10-30T14:31:54.437Z",
    "quien": "Clientes y licitaciones",
    "que": "entregó (sin IA)"
@@ -2206,7 +2236,7 @@
   "46": "noticias_tec",
   "70": "licitaciones"
  },
- "tgOffset": 196508490,
+ "tgOffset": 196508492,
  "hechos": {
   "parte": "2026-10-29",
   "entrenamiento": "2026-10-29",
@@ -2214,15 +2244,15 @@
  },
  "consumo": {
   "fecha": "2026-10-30",
-  "consultas": 39,
+  "consultas": 42,
   "busquedas": 0,
   "por": {
-   "gemini": 31,
+   "gemini": 34,
    "github": 8
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-30T14:31:54.437Z",
+ "actualizado": "2026-10-30T14:46:54.534Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -2238,14 +2268,14 @@
   "agotado": {
    "gemini:gemini-2.5-flash": true,
    "gemini:gemini-2.5-flash-lite": true,
-   "gemini:gemini-flash-latest": 1793370746532,
+   "gemini:gemini-flash-latest": 1793371646352,
    "github:openai/gpt-4.1-mini": 1793367969259,
    "github:openai/gpt-4o-mini": 1793367971751,
    "github:meta/Llama-3.3-70B-Instruct": 1793367974259,
    "github:mistral-ai/mistral-small-2503": 1793368094541,
-   "gemini:gemini-3.8-flash": 1793370752990,
+   "gemini:gemini-3.8-flash": 1793371652857,
    "gemini:gemini-2.5-pro": true,
-   "gemini:gemini-3.7-flash": 1793370759517
+   "gemini:gemini-3.7-flash": 1793371659360
   },
   "huella": "bYGgaac9",
   "ultimo": {
