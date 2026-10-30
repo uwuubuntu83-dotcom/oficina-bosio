@@ -44,7 +44,7 @@ const FEST = path.join(DATA, "estado.json");
 const est = leer(FEST, {});
 est.version = 2; est.bots ||= {}; est.log ||= []; est.pendientes ||= []; est.mensajes ||= {}; est.tgOffset ||= 0; est.hechos ||= {}; est.ia ||= {};
 if (!est.consumo || est.consumo.fecha !== fechaAR()) est.consumo = { fecha: fechaAR(), consultas: 0, busquedas: 0, por: {} };
-est.consumo.por ||= {};
+est.consumo.por ||= {}; est.consumo.busquedas ||= 0;
 const huellaClaves = ["GEMINI_API_KEY", "GROQ_API_KEY", "OPENROUTER_API_KEY", "MISTRAL_API_KEY", "SAMBANOVA_API_KEY", "NVIDIA_API_KEY", "CEREBRAS_API_KEY", "CLOUDFLARE_API_TOKEN", "COHERE_API_KEY", "HF_TOKEN"].map(k => (ENV[k] || "").slice(-4)).join("");
 if (est.ia.fecha !== fechaAR() || est.ia.huella !== huellaClaves) est.ia = { fecha: fechaAR(), agotado: {}, huella: huellaClaves }; // clave nueva = cupo nuevo
 const nuevoBot = () => ({ estado: "esperando", corridas: 0, fallas: 0, fallasSeguidas: 0, puntaje: null, historial: [], likes: 0, dislikes: 0, nivel: 1, ultimaFecha: null, ultimaCorrida: null, resumen: "", informe: null, pausado: false, memoria: {} });
@@ -181,13 +181,14 @@ async function tg(metodo, datos) {
   try { const r = await traer(`${URLS.tg}/bot${TG_TOKEN}/${metodo}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(datos || {}) }, 30000); const j = await r.json(); if (!j.ok) { console.log("Telegram:", metodo, j.description); tg.error = `${metodo}: ${j.description}`; } return j.ok ? j.result : null; }
   catch (e) { console.log("Telegram sin conexión:", e.message); tg.error = `${metodo}: sin conexión (${e.message})`; return null; }
 }
-async function enviar(texto, botId) {
+const escHTML = s => String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+async function enviar(texto, botId, opt = {}) {
   if (!est.dueno) return null;
-  const partes = []; let t = limpiar(texto);
+  const partes = []; let t = opt.html ? String(texto) : limpiar(texto);
   while (t.length > 3900) { let c = t.lastIndexOf("\n", 3900); if (c < 1000) c = 3900; partes.push(t.slice(0, c)); t = t.slice(c).trim(); }
   partes.push(t);
   let ult = null;
-  for (const p of partes) { ult = await tg("sendMessage", { chat_id: est.dueno, text: p, disable_web_page_preview: true }); if (ult && botId) est.mensajes[ult.message_id] = botId; }
+  for (const p of partes) { ult = await tg("sendMessage", { chat_id: est.dueno, text: p, disable_web_page_preview: true, ...(opt.html ? { parse_mode: "HTML" } : {}) }); if (!ult && opt.html) ult = await tg("sendMessage", { chat_id: est.dueno, text: p.replace(/<[^>]+>/g, ""), disable_web_page_preview: true }); if (ult && botId) est.mensajes[ult.message_id] = botId; }
   const ks = Object.keys(est.mensajes); if (ks.length > 500) for (const k of ks.slice(0, ks.length - 500)) delete est.mensajes[k];
   return ult;
 }
@@ -195,13 +196,15 @@ async function enviar(texto, botId) {
 /* ==========================================================================================
    BOTS SIN IA (recetas de código)
    ========================================================================================== */
+const MEDIOS_FUERA = /(diario c[oó]rdoba|el d[ií]a de c[oó]rdoba|cord[oó]polis|abc c[oó]rdoba|c[oó]rdoba buenas noticias|europa press|20minutos|el pa[ií]s\b|el mundo\b|la vanguardia|eldiario\.es|cadena ser|andaluc|sevilla|espa[ñn]a)/i;
+const TITULOS_FUERA = /(guadalc[aá]zar|montilla|lucena|priego|andaluc|junta de andaluc|euros\b|€)/i;
 const decode = s => String(s || "").replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/<[^>]+>/g, "").trim();
 const RECETAS = {
   async dolar(b, sb, { resumen }) {
     const r = await traer(URLS.dolar); if (!r.ok) throw new Error("dolarapi respondió " + r.status);
     const lista = await r.json(); if (!Array.isArray(lista) || !lista.length) throw new Error("dolarapi sin datos");
     const ant = sb.memoria.dolar || {}; const alertas = []; const hoy = {};
-    const lineas = lista.map(d => { const k = d.casa || d.nombre; hoy[k] = d.venta; const prev = ant[k]; let var_ = ""; if (prev && d.venta) { const pc = (d.venta - prev) / prev * 100; var_ = ` (${pc >= 0 ? "+" : ""}${pc.toFixed(1)}%)`; if (Math.abs(pc) >= (b.receta.alertaPorcentaje || 2)) alertas.push(`${d.nombre}: ${pc >= 0 ? "subió" : "bajó"} ${Math.abs(pc).toFixed(1)}% → $${d.venta}`); } return `• ${d.nombre}: compra $${d.compra ?? "-"} · venta $${d.venta ?? "-"}${var_}`; });
+    const lineas = lista.map(d => { const k = d.casa || d.nombre; hoy[k] = d.venta; const prev = ant[k]; let var_ = ""; if (prev && d.venta) { const pc = (d.venta - prev) / prev * 100; var_ = Math.abs(pc) >= 0.05 ? ` (${pc >= 0 ? "+" : ""}${pc.toFixed(1)}%)` : ""; if (Math.abs(pc) >= (b.receta.alertaPorcentaje || 2)) alertas.push(`${d.nombre}: ${pc >= 0 ? "subió" : "bajó"} ${Math.abs(pc).toFixed(1)}% → $${d.venta}`); } return `• ${d.nombre}: compra $${d.compra ?? "-"} · venta $${d.venta ?? "-"}${var_}`; });
     if (resumen || !sb.memoria.dolarBase || sb.memoria.dolarFecha !== fechaAR()) { sb.memoria.dolarBase = hoy; sb.memoria.dolarFecha = fechaAR(); }
     sb.memoria.dolar = sb.memoria.dolarBase;
     const texto = `💵 Dólar hoy (${horaAR()} hs)\n${lineas.join("\n")}\n\nFuente: dolarapi.com`;
@@ -219,6 +222,9 @@ const RECETAS = {
           const it = m[1]; const titulo = decode((it.match(/<title>([\s\S]*?)<\/title>/) || [])[1]); const link = decode((it.match(/<link>([\s\S]*?)<\/link>/) || [])[1]); const fuente = decode((it.match(/<source[^>]*>([\s\S]*?)<\/source>/) || [])[1]); const fecha = decode((it.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1]);
           const clave = titulo.toLowerCase().replace(/\s+-\s+[^-]+$/, "").slice(0, 90);
           if (!titulo || !link || vistos.has(clave) || items.some(x => x.clave === clave)) continue;
+          if (MEDIOS_FUERA.test(fuente) || TITULOS_FUERA.test(titulo)) continue;
+          if (b.receta.requiere && !b.receta.requiere.some(w => titulo.toLowerCase().includes(w))) continue;
+          if (b.receta.excluir && b.receta.excluir.some(w => (titulo + " " + fuente).toLowerCase().includes(w))) continue;
           items.push({ titulo: titulo.replace(/\s+-\s+[^-]+$/, ""), link, fuente, fecha: fecha ? new Date(fecha) : null, clave });
         }
       } catch (e) { log(b.nombre, `no pude leer «${q}»: ${e.message}`); }
@@ -227,13 +233,13 @@ const RECETAS = {
     const nuevos = items.slice(0, b.receta.max || 8);
     sb.memoria.vistos = [...nuevos.map(x => x.clave), ...(sb.memoria.vistos || [])].slice(0, 400);
     if (!nuevos.length) return { texto: "Sin novedades desde la última vez.", enviar: false };
-    return { texto: `${areaDe(b).icono} ${b.nombre}\n\n` + nuevos.map(x => `• ${x.titulo}${x.fuente ? " (" + x.fuente + ")" : ""}\n  ${x.link}`).join("\n"), enviar: true };
+    return { texto: `${areaDe(b).icono} ${b.nombre}\n\n` + nuevos.map(x => `• ${x.titulo}${x.fuente ? " (" + x.fuente + ")" : ""}\n  ${x.link}`).join("\n"), html: `<b>${escHTML(areaDe(b).icono + " " + b.nombre)}</b>\n\n` + nuevos.map(x => `• <a href="${escHTML(x.link)}">${escHTML(x.titulo)}</a>${x.fuente ? " <i>(" + escHTML(x.fuente) + ")</i>" : ""}`).join("\n\n"), enviar: true };
   },
   async clima(b) {
     const u = CFG.ubicacion; const url = `${URLS.clima}?latitude=${u.lat}&longitude=${u.lon}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum,wind_speed_10m_max&timezone=America%2FArgentina%2FCordoba&forecast_days=3`;
     const r = await traer(url); if (!r.ok) throw new Error("open-meteo respondió " + r.status); const d = (await r.json()).daily;
     const nom = ["Hoy", "Mañana", "Pasado"]; const avisos = [];
-    const lineas = d.time.map((t, i) => { const ll = d.precipitation_probability_max[i]; const v = d.wind_speed_10m_max[i]; if (ll >= 60) avisos.push(`${nom[i]}: ${ll}% de lluvia (${d.precipitation_sum[i]} mm)`); if (v >= 40) avisos.push(`${nom[i]}: viento fuerte (${Math.round(v)} km/h)`); return `• ${nom[i]} ${t.slice(8, 10)}/${t.slice(5, 7)}: ${Math.round(d.temperature_2m_min[i])}° a ${Math.round(d.temperature_2m_max[i])}° · lluvia ${ll}% · viento ${Math.round(v)} km/h`; });
+    const lineas = d.time.map((t, i) => { const ll = d.precipitation_probability_max[i]; const v = d.wind_speed_10m_max[i]; if (ll >= 60 && d.precipitation_sum[i] >= 2) avisos.push(`${nom[i]}: ${ll}% de lluvia (${d.precipitation_sum[i]} mm)`); if (v >= 40) avisos.push(`${nom[i]}: viento fuerte (${Math.round(v)} km/h)`); return `• ${nom[i]} ${t.slice(8, 10)}/${t.slice(5, 7)}: ${Math.round(d.temperature_2m_min[i])}° a ${Math.round(d.temperature_2m_max[i])}° · lluvia ${ll}% · viento ${Math.round(v)} km/h`; });
     return { texto: `🌤️ Clima en ${u.lugar}\n${lineas.join("\n")}${avisos.length ? "\n\n⚠️ Para la obra:\n" + avisos.join("\n") : "\n\n✅ Sin lluvias fuertes ni viento para la obra."}\n\nFuente: open-meteo.com`, enviar: true };
   },
   async web_estado(b, sb) {
@@ -302,7 +308,7 @@ async function trabajar(b, { orden = "", origen = "agenda", resumen = false } = 
       const r = await fn(b, sb, { resumen: resumen || origen !== "agenda" || !b.horario.cada });
       sb.memoria.ultimoChequeo = NOW.toISOString();
       const mandar = r.enviar || origen !== "agenda";
-      if (mandar) { const rel = guardarInforme(b, r.alerta ? r.alerta + "\n\n" + r.texto : r.texto, "\n---\n_Bot sin IA (código): no gasta cupo._\n", orden); sb.informe = rel; sb.resumen = limpiar(r.alerta || r.texto).slice(0, 220); await enviar(r.alerta ? `${r.alerta}\n\n${r.texto}` : r.texto, b.id); log(b.nombre, "entregó (sin IA)"); }
+      if (mandar) { const rel = guardarInforme(b, r.alerta ? r.alerta + "\n\n" + r.texto : r.texto, "\n---\n_Bot sin IA (código): no gasta cupo._\n", orden); sb.informe = rel; sb.resumen = limpiar(r.alerta || r.texto).slice(0, 220); if (r.html) await enviar(r.html, b.id, { html: true }); else await enviar(r.alerta ? `${r.alerta}\n\n${r.texto}` : r.texto, b.id); log(b.nombre, "entregó (sin IA)"); }
       else { sb.resumen = sb.resumen || limpiar(r.texto).slice(0, 220); }
       Object.assign(sb, { estado: "listo", corridas: sb.corridas + 1, fallasSeguidas: 0, puntaje: null });
       if (!b.horario.cada || resumen) sb.ultimaFecha = fechaAR();
