@@ -201,7 +201,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-30T20:54:54.620Z",
+   "ultimaCorrida": "2026-10-30T20:57:54.313Z",
    "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
@@ -940,32 +940,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-10-30T20:50:30.071Z",
+   "ultimaCorrida": "2026-10-30T20:55:31.333Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": false,
    "memoria": {
     "celu": {
-     "t": 1793393430071,
+     "t": 1793393731333,
      "redes_hoy": {
       "publicaciones": 9,
       "historias": 22,
       "reels": 13,
-      "seguidos": 28,
+      "seguidos": 31,
       "gringo": 1,
       "errores": 24,
       "reinicios": 62,
       "ultimas": [
-       "17:40 Instagram: ahora en @gringobosio",
-       "17:40 Gringo: captura de tu perfil (antes)",
-       "17:40 Gringo: no pude dejar de seguir a @trucco_abril",
-       "17:40 Guardado debug/pantalla_174026.png y .xml",
        "17:40 ✔ Gringo: dejé de seguir a @danalucia.s (aprobada por vos)",
        "17:41 Gringo: corto acá, sigo entre las próximas tareas",
        "17:43 Instagram: ahora en @maestromayordeobrasjb",
        "17:45 ✔ Historia compartida (avioncito)",
        "17:46 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
-       "17:46 Instagram: ahora en @maestromayordeobrasjb"
+       "17:46 Instagram: ahora en @maestromayordeobrasjb",
+       "17:52 Instagram: ahora en @soycordobes.jpg",
+       "17:53 ✔ Memes: seguido (1/5) seguidores de @memesdealesito",
+       "17:54 ✔ Memes: seguido (2/5) seguidores de @memesdealesito",
+       "17:55 ✔ Memes: seguido (3/5) seguidores de @memesdealesito"
       ]
      }
     },
@@ -2504,6 +2504,36 @@
  },
  "log": [
   {
+   "t": "2026-10-30T20:57:54.313Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-30T20:57:54.313Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-30T20:57:54.313Z",
+   "quien": "Contaduría",
+   "que": "anotó 1 gastos (privado)"
+  },
+  {
+   "t": "2026-10-30T20:57:54.313Z",
+   "quien": "Contaduría",
+   "que": "anotó 1 gastos (privado)"
+  },
+  {
+   "t": "2026-10-30T20:57:54.313Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 2 mensajes de Telegram"
+  },
+  {
+   "t": "2026-10-30T20:57:54.313Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
+  {
    "t": "2026-10-30T20:54:54.620Z",
    "quien": "Gerente general",
    "que": "hace la orden él mismo"
@@ -3879,7 +3909,7 @@
   "132": "noticias_tec",
   "133": "noticias_tec"
  },
- "tgOffset": 196508496,
+ "tgOffset": 196508498,
  "hechos": {
   "parte": "2026-10-29",
   "entrenamiento": "2026-10-29",
@@ -3887,10 +3917,10 @@
  },
  "consumo": {
   "fecha": "2026-10-30",
-  "consultas": 214,
+  "consultas": 217,
   "busquedas": 0,
   "por": {
-   "gemini": 106,
+   "gemini": 109,
    "github": 36,
    "groq": 14,
    "llm7": 1,
@@ -3903,7 +3933,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-30T20:54:54.620Z",
+ "actualizado": "2026-10-30T20:57:54.313Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -3931,10 +3961,10 @@
   "agotado": {
    "gemini:gemini-2.5-flash": true,
    "gemini:gemini-2.5-flash-lite": true,
-   "gemini:gemini-flash-latest": 1793393725897,
+   "gemini:gemini-flash-latest": 1793393906706,
    "groq:groq/compound": true,
    "gemini:gemini-2.5-pro": true,
-   "gemini:gemini-3.8-flash": 1793393732385,
+   "gemini:gemini-3.8-flash": 1793393913242,
    "cfai:@cf/meta/llama-3.3-70b-instruct-fp8-fast": 1793392898439,
    "cfai:@cf/meta/llama-4-scout-17b-16e-instruct": 1793392900867,
    "cfai:@cf/mistralai/mistral-small-3.1-24b-instruct": 1793392903457,
@@ -3945,7 +3975,7 @@
    "github:deepseek/DeepSeek-V3-0324": 1793394188584,
    "github:openai/gpt-4.1": 1793394191093,
    "github:openai/gpt-4o": 1793394193599,
-   "gemini:gemini-3.7-flash": 1793393738865,
+   "gemini:gemini-3.7-flash": 1793393919742,
    "groq:openai/gpt-oss-120b": 1793393623669,
    "groq:llama-3.3-70b-versatile": true,
    "groq:qwen/qwen3-32b": true,
