@@ -75,14 +75,14 @@ claves("ZAI_API_KEY").forEach(k => PROV.push({ id: "zai", nombre: "Z.ai (GLM)", 
 claves("DASHSCOPE_API_KEY").forEach(k => PROV.push({ id: "qwen", nombre: "Alibaba Qwen", tipo: "openai", base: "https://dashscope-intl.aliyuncs.com/compatible-mode/v1", key: k, modelos: ["qwen-plus", "qwen-flash", "qwen-turbo", "qwen-max"] }));
 // Más IA: gratis siempre (llm7, codestral) y de crédito de prueba sin tarjeta (van al final para estirarlas)
 for (const [env, id, nombre, base, modelos, ultimo] of [
-  ["LLM7_API_KEY", "llm7", "LLM7", "https://api.llm7.io/v1", ["gpt-oss:20b", "mistral-Nemo-Instruct-2407", "deepseek-v4-pro", "glm-5.2", "gemma4:31b"], false],
+  ["LLM7_API_KEY", "llm7", "LLM7", "https://api.llm7.io/v1", ["default", "fast", "gpt-oss:20b", "gemma4:31b", "mistral-Nemo-Instruct-2407", "glm-5.2", "deepseek-v4-pro"], false],
   ["CODESTRAL_API_KEY", "codestral", "Mistral Codestral", "https://codestral.mistral.ai/v1", ["codestral-latest"], false],
   ["AI21_API_KEY", "ai21", "AI21", "https://api.ai21.com/studio/v1", ["jamba-mini", "jamba-large"], true],
   ["UPSTAGE_API_KEY", "upstage", "Upstage", "https://api.upstage.ai/v1", ["solar-pro2", "solar-mini"], true],
   ["HYPERBOLIC_API_KEY", "hyperbolic", "Hyperbolic", "https://api.hyperbolic.xyz/v1", ["meta-llama/Llama-3.3-70B-Instruct", "deepseek-ai/DeepSeek-V3"], true],
   ["NOVITA_API_KEY", "novita", "Novita", "https://api.novita.ai/openai", ["meta-llama/llama-3.3-70b-instruct", "deepseek/deepseek-v3-0324"], true],
   ["FIREWORKS_API_KEY", "fireworks", "Fireworks", "https://api.fireworks.ai/inference/v1", ["accounts/fireworks/models/llama-v3p3-70b-instruct", "accounts/fireworks/models/deepseek-v3"], true]
-]) claves(env).forEach(k => PROV.push({ id, nombre, tipo: "openai", base, key: k, modelos, ultimo }));
+]) claves(env).forEach(k => PROV.push({ id, nombre, tipo: "openai", base, key: k, modelos, ultimo, maxFallas: modelos.length }));
 if (ENV.SIN_POLLINATIONS !== "1") PROV.push({ id: "pollinations", nombre: "Pollinations", tipo: "openai", url: "https://text.pollinations.ai/openai", key: "", modelos: ["openai", "mistral"], ultimo: true }); // gratis y sin clave: último respaldo
 if ((ENV.BUZON_URL || BASE.buzon) && (ENV.OFICINA_PIN || TG_TOKEN)) PROV.push({ id: "cfai", nombre: "Cloudflare Workers AI", tipo: "buzon", key: "-", modelos: ["@cf/meta/llama-3.3-70b-instruct-fp8-fast", "@cf/meta/llama-4-scout-17b-16e-instruct", "@cf/mistralai/mistral-small-3.1-24b-instruct", "@cf/qwen/qwen2.5-coder-32b-instruct"], maxFallas: 4 });
 if (ENV.MOCK_PROVIDERS) for (const id of ENV.MOCK_PROVIDERS.split(",")) PROV.push({ id, nombre: id, tipo: "openai", base: ENV.MOCK_OPENAI_BASE, key: "x", modelos: ["m1", "m2"] });
