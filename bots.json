@@ -15,7 +15,7 @@
   "gerente": {
     "id": "gerente",
     "nombre": "Gerente general",
-    "mision": "Mesa de entrada y dirección: recibe las órdenes de Jonathan, se las pasa al área y al bot que corresponde, controla que cumplan y le trae el resumen de toda la oficina.",
+    "mision": "Mesa de entrada y dirección: recibe tus órdenes y se las pasa al área que corresponde. Todos los días a las 20:00 te manda el parte del día en 10 renglones, con lo que hay que revisar.",
     "parteDiario": "20:00",
     "entrenamiento": "23:00"
   },
@@ -555,6 +555,23 @@
         ]
       },
       "mision": "Todas las noches a las 22:00 te pasa qué hizo hoy el celu bot en Instagram y Facebook: publicaciones, historias, reels, seguidos, errores y si sigue andando. Sin IA."
+    },
+    {
+      "id": "lista_gringo",
+      "nombre": "Lista del Gringo",
+      "area": "redes",
+      "tipo": "codigo",
+      "receta": {
+        "tipo": "celu_orden",
+        "texto": "lista"
+      },
+      "horario": {
+        "dias": "todos",
+        "horas": [
+          "10:00"
+        ]
+      },
+      "mision": "Sin IA. Todos los días a las 10:00 le pide al celu la lista de cuentas para dejar de seguir en @gringobosio y te la manda. Contestás «celu 1-50», «celu todas las mujeres» o «celu ninguna»."
     },
     {
       "id": "escapadas",

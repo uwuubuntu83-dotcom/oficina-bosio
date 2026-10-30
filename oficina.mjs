@@ -437,6 +437,7 @@ const RECETAS = {
     sb.memoria.caidas = ahora;
     return { texto: lineas.join("\n"), enviar: cambios.length > 0, alerta: cambios.join("\n") };
   },
+  async celu_orden(b, sb) { await alCelu({ tipo: "chat", texto: b.receta.texto }); return { texto: `Le pedí al celu: «${b.receta.texto}». Te contesta en un minuto.`, enviar: false }; },
   async celu_informe(b, sb) {
     const e = await buzon("/oficina/celu"); return { texto: "🧾 Informe del día del celu bot\n\n" + textoCelu(e) + "\n\n" + textoPlan(e), enviar: true };
   },
@@ -647,6 +648,7 @@ function tablero() {
 }
 const AYUDA = () => `Soy el Gerente general de la ${CFG.oficina}. Escribime:
 • Una orden normal: «averiguá el precio del cemento en Villa María». Se la paso al bot que corresponde.
+• parte — el resumen del día en 10 renglones · parte redes / parte contaduría / … — el detalle de un área.
 • estado — cómo está cada bot.  • bots — organigrama con horarios.
 • correr ID — que un bot trabaje ahora (ej: correr dolar).
 • pausar ID / activar ID.
@@ -805,6 +807,8 @@ async function procesarMensajes() {
     if ((mm = txt.match(RX_CELU)) || RX_CELU_AUTO.test(txt)) { try { await ordenCelu(mm ? mm[1] : txt); } catch (e) { await enviar("📱 No pude hablar con el celu: " + e.message); } continue; }
     if (/^(start|ayuda|help|hola|menu|menú)$/.test(low)) { await enviar(AYUDA()); continue; }
     if (/^(estado|tablero|novedades)$/.test(low)) { await enviar(tablero()); continue; }
+    if ((mm = low.match(/^parte(?:\s+(?:de|del|de la))?\s+(.+)$/))) { const q = slug(mm[1]); const a = CFG.areas.find(x => x.id === q || slug(x.nombre).includes(q) || q.includes(x.id)); await enviar(a ? parteArea(a) : "No encontré esa área. Probá: «parte redes», «parte contaduría», «parte constructora»…"); continue; }
+    if (/^parte$/.test(low)) { await parteDiario(); continue; }
     if (/^(bots|organigrama)$/.test(low)) { await enviar(`👑 ${CFG.dueno} (dueño)\n🎯 ${CFG.gerente.nombre}: ${CFG.gerente.mision}\n\n` + CFG.areas.map(a => { const bs = bots().filter(b => b.area === a.id); return `${a.icono} Gerente de ${a.nombre}\n` + (bs.length ? bs.map(b => `  • ${b.nombre} (${b.id}) · ${tipoTxt(b)} · ${horarioTxt(b)}`).join("\n") : "  (sin empleados)"); }).join("\n\n")); continue; }
     if ((mm = txt.match(/^\/?crear\s+(?:area|área|oficina)\s+(.+)/i))) { const nombre = mm[1].trim().slice(0, 40); const id = slug(nombre); if (CFG.areas.some(a => a.id === id)) { await enviar("Esa área ya existe."); continue; } const a = { id, nombre, icono: "📁", color: COLORES[extra.areas.length % COLORES.length] }; extra.areas.push(a); CFG.areas.push(a); guardarExtra(); log("Jonathan", `abrió el área ${nombre}`); await enviar(`🏢 Abrí el área «${nombre}». Ahora contratale bots: «contratar: ...».`); continue; }
     if ((mm = txt.match(/^\/?contrat(?:ar|á|a)\s*(en pausa|pausado)?\s*:?\s*(.+)/is))) { est.pendientes.push({ tipo: "contratar", orden: mm[2].trim().slice(0, 600), pausa: !!mm[1] || /\ben pausa\b/i.test(mm[2]), t: NOW.toISOString() }); log("Jonathan", "pidió contratar: " + mm[2].slice(0, 100)); continue; }
@@ -857,12 +861,54 @@ Respondé SOLO un JSON: {"bot":"id o gerente","instruccion":"la orden clara para
   }
   g.estado = "listo";
 }
+/* ---------- Gerente general: parte diario en 10 renglones, SIN IA, con recomendaciones ---------- */
+function recomendaciones() {
+  const r = [];
+  for (const b of bots()) { const sb = est.bots[b.id]; if (!sb) continue;
+    if (sb.pausado && sb.fallasSeguidas >= 3) r.push(`${b.nombre} está pausado porque falló 3 veces (${String(sb.resumen || "").replace(/^Falló: /, "").slice(0, 50)}). «activar ${b.id}» para reintentar o «eliminar ${b.id}».`);
+    else if (sb.estado === "falló") r.push(`${b.nombre} falló hoy: ${String(sb.resumen || "").replace(/^Falló: /, "").slice(0, 60)}.`);
+  }
+  const celu = est.bots.celular_bot && est.bots.celular_bot.memoria && est.bots.celular_bot.memoria.celu;
+  if (celu && Date.now() - celu.t > 2 * 3600e3) r.push(`El celu no da señales hace ${Math.round((Date.now() - celu.t) / 3600e3)} h: revisá Termux y el Wi-Fi.`);
+  const malas = Object.keys(est.ia.agotado || {}).filter(k => !k.includes(":") && est.ia.agotado[k] === true);
+  if (malas.length) r.push(`IA con clave que no anda: ${malas.join(", ")}. Hay que renovar esa clave.`);
+  if (est.consumo.consultas > CFG.limites.consultasPorDia * 0.8) r.push(`Se usó el ${Math.round(est.consumo.consultas / CFG.limites.consultasPorDia * 100)}% del tope diario de IA.`);
+  return r;
+}
 async function parteDiario() {
-  const hoy = bots().filter(b => est.bots[b.id]?.ultimaFecha === fechaAR()); const fallas = bots().filter(b => est.bots[b.id]?.estado === "falló");
-  const textos = hoy.filter(b => b.tipo === "ia").map(b => { try { return `${b.nombre}: ` + fs.readFileSync(path.join(ROOT, est.bots[b.id].informe), "utf8").slice(0, 1000); } catch { return ""; } }).filter(Boolean).join("\n\n");
-  let destacado = ""; if (textos) { try { destacado = (await ia(`Sos el Gerente general. Con estos informes de hoy escribí las 3 a 5 cosas MÁS importantes o accionables para tu jefe, una línea cada una, sin inventar nada:\n\n${textos.slice(0, 9000)}`)).texto; } catch {} }
-  est.bots.gerente.resumen = "Mandó el parte diario"; log("Gerente general", "mandó el parte diario");
-  await enviar(`🧾 Parte diario · ${DIAS[diaAR()]} ${fechaAR()}\n\n✅ Trabajaron hoy (${hoy.length}): ${hoy.map(b => b.nombre + (est.bots[b.id].puntaje ? ` ${est.bots[b.id].puntaje}/10` : "")).join(", ") || "nadie"}\n${fallas.length ? "❌ Con problemas: " + fallas.map(b => b.nombre).join(", ") + "\n" : ""}🤖 IA usada: ${est.consumo.consultas} consultas entre ${Object.keys(est.consumo.por).length} IA\n${destacado ? "\n⭐ Lo más importante:\n" + destacado : ""}`);
+  const hoy = fechaAR(), trabajaron = bots().filter(b => est.bots[b.id]?.ultimaFecha === hoy || (est.bots[b.id]?.ultimaCorrida || "").slice(0, 10) === NOW.toISOString().slice(0, 10));
+  const celu = est.bots.celular_bot && est.bots.celular_bot.memoria && est.bots.celular_bot.memoria.celu, rh = (celu && celu.redes_hoy) || {};
+  const dl = (est.bots.dolar && est.bots.dolar.memoria && est.bots.dolar.memoria.dolar) || {};
+  let g = null; try { const d = datosGastos(hoy.slice(0, 8) + "01", hoy); if (d.total) g = d; } catch {}
+  const recs = recomendaciones();
+  const l = [`🧾 Parte del día · ${DIAS[diaAR()]} ${hoy.slice(8, 10)}/${hoy.slice(5, 7)}`,
+    `🏢 Trabajaron ${trabajaron.length} bots${recs.length ? ` · ⚠️ ${recs.length} cosa(s) para revisar` : " · todo en orden ✅"} · IA: ${est.consumo.consultas} consultas`,
+    celu ? `📱 Celu: ${Date.now() - celu.t < 15 * 60e3 ? "🟢" : "🔴"} ${rh.publicaciones || 0} publicaciones · ${rh.historias || 0} historias · ${rh.reels || 0} reels · ${rh.seguidos || 0} seguidos · ${rh.errores || 0} errores` : "📱 Celu: sin datos hoy",
+    dl.bolsa || dl.blue ? `💵 Dólar: MEP $${dl.bolsa || "-"} · blue $${dl.blue || "-"} · oficial $${dl.oficial || "-"}` : "",
+    g ? `💸 Gastos del mes: ${pesos(g.total)} · lo que más pesa: ${Object.entries(g.por).sort((a, z) => z[1] - a[1])[0][0]}` : "",
+    ...recs.slice(0, 4).map(x => "🔧 " + x),
+    "Para más detalle: «parte redes», «parte contaduría», etc."].filter(Boolean).slice(0, 10);
+  est.bots.gerente.resumen = "Mandó el parte del día"; log("Gerente general", "mandó el parte del día (sin IA)");
+  await enviar(l.join("\n"));
+}
+// Parte de un área: lo que hizo cada bot, qué falló y qué recomienda (sin IA)
+function parteArea(a) {
+  const bs = bots().filter(b => b.area === a.id); if (!bs.length) return `${a.icono} ${a.nombre}: no tiene bots.`;
+  const l = [`${a.icono} Parte de ${a.nombre} · ${fechaAR().slice(8, 10)}/${fechaAR().slice(5, 7)}`];
+  for (const b of bs) { const sb = est.bots[b.id] || {}; const ic = sb.pausado ? "⏸" : sb.estado === "falló" ? "❌" : sb.ultimaCorrida ? "✅" : "💤";
+    l.push(`${ic} ${b.nombre}: ${sb.ultimaCorrida ? "último trabajo " + new Date(sb.ultimaCorrida).toLocaleString("es-AR", { timeZone: "America/Argentina/Cordoba", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }) : (b.horario && b.horario.apedido ? "a pedido, todavía no se lo pediste" : "todavía no trabajó")}${sb.resumen && !b.privado ? " · " + limpiar(sb.resumen).replace(/\n/g, " ").slice(0, 90) : ""}`); }
+  const recs = recomendaciones().filter(r => bs.some(b => r.includes(b.nombre)));
+  if (recs.length) l.push("", "🔧 Para revisar:", ...recs.map(x => "• " + x));
+  return l.join("\n");
+}
+// Auto-arreglo nocturno (Mantenimiento/Software, sin IA): reintenta una vez los bots pausados por fallas
+function autoArreglo() {
+  const hechos = [];
+  for (const b of bots()) { const sb = est.bots[b.id]; if (!sb || !sb.pausado || sb.fallasSeguidas < 3 || sb.memoria.autoReintento === fechaAR()) continue;
+    if (sb.memoria.autoReintentos >= 3) continue;
+    Object.assign(sb, { pausado: false, fallasSeguidas: 2, estado: "esperando" }); sb.memoria.autoReintento = fechaAR(); sb.memoria.autoReintentos = (sb.memoria.autoReintentos || 0) + 1; hechos.push(b.nombre); }
+  if (hechos.length) log("Mantenimiento", "reactivó para reintentar: " + hechos.join(", "));
+  return hechos;
 }
 async function entrenar() {
   const aprendieron = [];
@@ -912,6 +958,7 @@ async function main() {
   { const viejas = est.pendientes.filter(p => p.t && NOW - new Date(p.t) > 6 * 3600e3); if (viejas.length) { est.pendientes = est.pendientes.filter(p => !viejas.includes(p)); log("Gerente general", `descartó ${viejas.length} órdenes viejas que esperaban IA`); await enviar(`🗑️ Descarté ${viejas.length} orden(es) de hace más de 6 horas que no se pudieron hacer por falta de IA: ${viejas.map(p => "«" + String(p.orden || p.bot || p.tipo).slice(0, 40) + "»").join(", ")}. Si todavía las necesitás, pedímelas de nuevo.`); } }
   await procesarMensajes();
   await avisarBuzonListo();
+  if (BUZON && PIN && est.dueno && !est.hechos.celuAvisosOficina) { try { await alCelu({ tipo: "ajuste", telegram: false }); est.hechos.celuAvisosOficina = NOW.toISOString(); log("Redes sociales", "el celu ahora te avisa todo por la oficina"); } catch {} }
   await revisarExternos();
   if (MODO.startsWith("correr:")) est.pendientes.push({ bot: MODO.slice(7), orden: "", origen: "manual" });
   const quedan = [];
@@ -932,7 +979,7 @@ async function main() {
     }
   }
   if ((MODO === "auto" && horaAR() >= CFG.gerente.parteDiario && est.hechos.parte !== fechaAR()) || MODO === "parte") { est.hechos.parte = fechaAR(); try { await parteDiario(); } catch (e) { log("Gerente general", "parte: " + e.message); } }
-  if ((MODO === "auto" && horaAR() >= CFG.gerente.entrenamiento && est.hechos.entrenamiento !== fechaAR()) || MODO === "entrenar") { est.hechos.entrenamiento = fechaAR(); await entrenar(); }
+  if ((MODO === "auto" && horaAR() >= CFG.gerente.entrenamiento && est.hechos.entrenamiento !== fechaAR()) || MODO === "entrenar") { est.hechos.entrenamiento = fechaAR(); const ar = autoArreglo(); if (ar.length) await enviar(`🔧 Mantenimiento: reactivé para que reintenten mañana: ${ar.join(", ")}.`); await entrenar(); }
   est.bots.gerente.estado = est.pendientes.length ? "trabajando" : "esperando";
   est.actualizado = NOW.toISOString();
   await guardarConv();
