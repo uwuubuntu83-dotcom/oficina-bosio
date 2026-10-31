@@ -391,7 +391,7 @@
   },
   "gerente": {
    "estado": "trabajando",
-   "resumen": "Mandó el parte del día",
+   "resumen": "Respondió una orden tuya",
    "ultimaCorrida": null
   },
   "terrenos": {
@@ -405,7 +405,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T18:38:53.885Z",
+   "ultimaCorrida": "2026-10-31T18:40:53.296Z",
    "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
@@ -1798,7 +1798,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "sin señal",
+   "estado": "falló",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -1807,33 +1807,33 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-10-31T01:55:56.980Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 1003 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "ultimaFecha": "2026-10-31",
+   "ultimaCorrida": "2026-10-31T18:39:31.349Z",
+   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": false,
    "memoria": {
     "celu": {
-     "t": 1793411756980,
+     "t": 1793471971349,
      "redes_hoy": {
-      "publicaciones": 21,
-      "historias": 39,
-      "reels": 30,
-      "seguidos": 81,
-      "gringo": 1,
-      "errores": 24,
-      "reinicios": 73,
+      "publicaciones": 0,
+      "historias": 0,
+      "reels": 0,
+      "seguidos": 0,
+      "gringo": 0,
+      "errores": 9,
+      "reinicios": 21,
       "ultimas": [
-       "22:43 ✔ Historia compartida (avioncito)",
-       "22:45 Instagram: ahora en @maestromayordeobrasjb",
-       "22:46 ✔ Facebook: compartido en la Página (historia)",
-       "22:51 Foto IA lista (Gemini, gratis) – 1/18 hoy",
-       "22:53 Facebook: sin álbum BotObra, uso lo más reciente de la galería",
-       "22:54 Guardado debug/pantalla_225400.png y .xml",
-       "22:54 Guardado debug/pantalla_225413.png y .xml",
-       "22:54 Guardado debug/pantalla_225418.png y .xml",
-       "22:55 ✔ Publicado también en la Página de Facebook",
-       "22:55 ✔ Publicado: tip_20261030_225042.jpg"
+       "05:33 Error en memes_historia: No quedó en la cuenta soycordobes.jpg (está en desconocida)",
+       "05:33 Guardado debug/pantalla_053318.png y .xml",
+       "05:33 Conectado por cable USB (emulator-5554)",
+       "05:33 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "05:41 Error en memes_historia: device 'emulator-5554' not found",
+       "05:41 adb connect 127.0.0.1:5555: failed to connect to '127.0.0.1:5555': Connection refused",
+       "05:41 Buscando el puerto Wi-Fi del celular en 127.0.0.1...",
+       "05:42 Sin conexión con el celular (No encuentro el celular (ni por cable ni por Wi-Fi)). Reintento en 1 minuto...",
+       "05:43 adb connect 127.0.0.1:5555: failed to connect to '127.0.0.1:5555': Connection refused",
+       "05:43 Buscando el puerto Wi-Fi del celular en 127.0.0.1..."
       ]
      }
     },
@@ -1858,6 +1858,27 @@
        "22:54 Guardado debug/pantalla_225418.png y .xml",
        "22:55 ✔ Publicado también en la Página de Facebook",
        "22:55 ✔ Publicado: tip_20261030_225042.jpg"
+      ]
+     },
+     "2026-10-31": {
+      "publicaciones": 0,
+      "historias": 0,
+      "reels": 0,
+      "seguidos": 0,
+      "gringo": 0,
+      "errores": 9,
+      "reinicios": 21,
+      "ultimas": [
+       "05:33 Error en memes_historia: No quedó en la cuenta soycordobes.jpg (está en desconocida)",
+       "05:33 Guardado debug/pantalla_053318.png y .xml",
+       "05:33 Conectado por cable USB (emulator-5554)",
+       "05:33 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "05:41 Error en memes_historia: device 'emulator-5554' not found",
+       "05:41 adb connect 127.0.0.1:5555: failed to connect to '127.0.0.1:5555': Connection refused",
+       "05:41 Buscando el puerto Wi-Fi del celular en 127.0.0.1...",
+       "05:42 Sin conexión con el celular (No encuentro el celular (ni por cable ni por Wi-Fi)). Reintento en 1 minuto...",
+       "05:43 adb connect 127.0.0.1:5555: failed to connect to '127.0.0.1:5555': Connection refused",
+       "05:43 Buscando el puerto Wi-Fi del celular en 127.0.0.1..."
       ]
      }
     }
@@ -5674,6 +5695,36 @@
  },
  "log": [
   {
+   "t": "2026-10-31T18:40:53.296Z",
+   "quien": "Gerente general",
+   "que": "hace la orden él mismo"
+  },
+  {
+   "t": "2026-10-31T18:40:53.296Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-31T18:40:53.296Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-31T18:40:53.296Z",
+   "quien": "Jonathan",
+   "que": "mandó una orden por Telegram"
+  },
+  {
+   "t": "2026-10-31T18:40:53.296Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 mensajes de Telegram"
+  },
+  {
+   "t": "2026-10-31T18:40:53.296Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
+  {
    "t": "2026-10-31T18:38:53.885Z",
    "quien": "Lista del Gringo",
    "que": "entregó (sin IA)"
@@ -7142,36 +7193,6 @@
    "t": "2026-10-30T19:46:53.434Z",
    "quien": "Clima para la obra",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-30T19:46:53.434Z",
-   "quien": "Valor m² del Colegio de MMO",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-30T19:46:53.434Z",
-   "quien": "Terrenos baratos",
-   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)"
-  },
-  {
-   "t": "2026-10-30T19:46:53.434Z",
-   "quien": "Terrenos baratos",
-   "que": "empezó su tarea"
-  },
-  {
-   "t": "2026-10-30T19:46:53.434Z",
-   "quien": "Mantenimiento",
-   "que": "Celular bot (Instagram) no da señales hace 34 min"
-  },
-  {
-   "t": "2026-10-30T19:46:53.434Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-10-30T19:46:53.434Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, cfai"
   }
  ],
  "pendientes": [],
@@ -7314,7 +7335,7 @@
   "226": "tarifas",
   "230": "lista_gringo"
  },
- "tgOffset": 196508499,
+ "tgOffset": 196508500,
  "hechos": {
   "parte": "2026-10-30",
   "entrenamiento": "2026-10-30",
@@ -7323,16 +7344,20 @@
  },
  "consumo": {
   "fecha": "2026-10-31",
-  "consultas": 98,
+  "consultas": 114,
   "busquedas": 0,
   "por": {
-   "gemini": 96,
+   "gemini": 99,
    "groq": 1,
-   "zai": 1
+   "zai": 1,
+   "cerebras": 3,
+   "sambanova": 4,
+   "nvidia": 4,
+   "cohere": 2
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-31T18:38:53.885Z",
+ "actualizado": "2026-10-31T18:40:53.296Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -7360,17 +7385,28 @@
   "agotado": {
    "gemini:gemini-2.5-flash": true,
    "gemini:gemini-2.5-flash-lite": true,
-   "gemini:gemini-flash-latest": 1793471964772,
+   "gemini:gemini-flash-latest": 1793472084513,
    "groq:groq/compound": true,
    "gemini:gemini-2.5-pro": true,
-   "gemini:gemini-3.8-flash": 1793471971265,
-   "gemini:gemini-3.7-flash": 1793471977761
+   "gemini:gemini-3.8-flash": 1793472091033,
+   "gemini:gemini-3.7-flash": 1793472097529,
+   "cerebras:gpt-oss-120b": 1793472667683,
+   "cerebras:zai-glm-4.7": true,
+   "cerebras:llama-3.3-70b": true,
+   "sambanova:Meta-Llama-3.3-70B-Instruct": 1793472102993,
+   "sambanova:DeepSeek-V3.1": 1793472105638,
+   "sambanova:gpt-oss-120b": 1793472107827,
+   "nvidia:meta/llama-3.3-70b-instruct": 1793472677994,
+   "nvidia:openai/gpt-oss-120b": 1793472680395,
+   "nvidia:qwen/qwen3-next-80b-a3b-instruct": 1793472682896,
+   "sambanova:Llama-4-Maverick-17B-128E-Instruct": true,
+   "nvidia:mistralai/mistral-small-3.1-24b-instruct-2503": true
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
   "ultimo": {
-   "prov": "Z.ai (GLM)",
-   "modelo": "glm-4.5-flash",
-   "t": "2026-10-31T18:38:53.885Z"
+   "prov": "Cohere",
+   "modelo": "command-a-03-2025",
+   "t": "2026-10-31T18:40:53.296Z"
   }
  },
  "dueno": 1237559052,
