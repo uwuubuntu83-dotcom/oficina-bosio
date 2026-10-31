@@ -765,6 +765,89 @@ async function trabajar(b, { orden = "", origen = "agenda", resumen = false, hor
 }
 
 /* ==========================================================================================
+   SALA DE INVERSIONES: 7 asesores debaten tu decisión, votan y un moderador da el veredicto
+   (idea de «Roast Room / Founder Council», adaptada a Villa María y a la Argentina). Privado.
+   ========================================================================================== */
+const ASESORES = [
+  { id: "valor", nombre: "🧓 Inversor de valor", peso: 2, foco: "Dinero y capital", mira: "¿Qué pasa con el capital a 5 o 10 años? Solo pone plata en lo que entiende, con margen de seguridad. Odia las deudas caras y las modas.", pregunta: "¿Qué efecto tiene sobre el capital, el riesgo y el valor a largo plazo?" },
+  { id: "inmo", nombre: "🏘️ Inmobiliario de Villa María", peso: 2, foco: "Ladrillo y terrenos", mira: "Conoce precios por m² de Villa María y Villa Nueva, qué barrios crecen, escrituras, loteos, servicios y liquidez real de cada propiedad.", pregunta: "¿Es buen precio para la zona? ¿Se vende o se alquila fácil?" },
+  { id: "eco", nombre: "📉 Economista argentino", peso: 2, foco: "Dólar, inflación y tasas", mira: "Piensa en dólar MEP/blue, brecha, inflación, tasas de plazo fijo, cepo, devaluaciones y ciclos argentinos.", pregunta: "¿Le gana a la inflación y al dólar en el escenario probable y en el malo?" },
+  { id: "conta", nombre: "🧾 Contador conservador", peso: 1, foco: "Flujo de caja e impuestos", mira: "Mira el flujo de caja mensual del jefe, el fondo de emergencia, impuestos (ganancias, bienes personales, sellos, escritura, monotributo) y costos ocultos.", pregunta: "¿Le alcanza la caja? ¿Qué costos e impuestos no está viendo?" },
+  { id: "emprende", nombre: "🚀 Emprendedor", peso: 1, foco: "Oportunidad y crecimiento", mira: "Busca hacer crecer la plata: apalancar su oficio de maestro mayor de obras, comprar para refaccionar y vender, construir y alquilar.", pregunta: "¿Cuál es la jugada que más multiplica, aprovechando lo que ya sabe hacer?" },
+  { id: "legal", nombre: "⚖️ Escribano / abogado", peso: 1, foco: "Riesgos legales", mira: "Revisa títulos, sucesiones, embargos, boletos, contratos, préstamos a terceros, garantías y lo que puede salir mal en lo legal.", pregunta: "¿Qué papel o cláusula lo protege y qué lo puede hundir?" },
+  { id: "diablo", nombre: "😈 Abogado del diablo", peso: 1, foco: "Lo que nadie quiere ver", mira: "Siempre defiende la alternativa contraria a la que parece obvia y busca el peor escenario realista.", pregunta: "¿Por qué esto podría ser un error?" }
+];
+async function datosMercado() {
+  const l = []; const dl = (est.bots.dolar && est.bots.dolar.memoria && est.bots.dolar.memoria.dolar) || {};
+  if (Object.keys(dl).length) l.push("Dólar hoy (venta): " + Object.entries(dl).map(([k, v]) => `${k} $${v}`).join(" · "));
+  try { const r = await traer("https://api.argentinadatos.com/v1/finanzas/tasas/plazoFijo", {}, 15000); if (r.ok) { const t = (await r.json()).filter(x => x.tnaClientes).sort((a, z) => z.tnaClientes - a.tnaClientes).slice(0, 3); if (t.length) l.push("Plazo fijo (TNA): " + t.map(x => `${x.entidad} ${(x.tnaClientes * (x.tnaClientes < 1 ? 100 : 1)).toFixed(1)}%`).join(" · ")); } } catch {}
+  try { const r = await traer("https://api.argentinadatos.com/v1/finanzas/indices/inflacion", {}, 15000); if (r.ok) { const j = await r.json(); const x = j[j.length - 1]; if (x) l.push(`Inflación último mes (${String(x.fecha).slice(0, 7)}): ${x.valor}%`); } } catch {}
+  const hoy = fechaAR(), m0 = hoy.slice(0, 8) + "01"; try { const d = datosGastos(m0, hoy); if (d.total) l.push(`Gastos del jefe este mes: ${pesos(d.total)}`); } catch {}
+  const pf = leerPrivSeguro("perfil", []); if (pf.length) l.push("Lo que se sabe del jefe: " + pf.map(x => x.texto).join("; "));
+  return l.join("\n");
+}
+async function salaInversiones(pregunta) {
+  await enviar(`🏛️ Sala de inversiones: abro la mesa con 7 asesores para «${pregunta.slice(0, 200)}». Debaten, votan y te traigo el veredicto en unos minutos.`);
+  const mercado = await datosMercado();
+  // 1) el moderador ordena la pregunta en opciones
+  const o = parsearJSON((await ia(`Sos el MODERADOR de un consejo de inversiones. El jefe (${CFG.contexto}) pregunta: "${pregunta}"
+Armá de 2 a 3 opciones concretas y distintas para decidir (si él ya las dio, usá esas). Respondé SOLO JSON: {"tema":"la decisión en una frase","opciones":{"A":"...","B":"...","C":"... (opcional)"}}`, { json: true })).texto) || {};
+  const ops = o.opciones && Object.keys(o.opciones).length >= 2 ? o.opciones : { A: "Hacerlo", B: "No hacerlo / esperar" };
+  const opTxt = Object.entries(ops).filter(([, v]) => v).map(([k, v]) => `${k}) ${v}`).join("\n");
+  // 2) ronda de apertura: cada asesor opina y puntúa
+  const votos = [];
+  for (const a of ASESORES) {
+    try {
+      const r = await ia(`Sos "${a.nombre}" en un consejo de 7 asesores que ayuda a ${CFG.dueno} (${CFG.contexto}) a decidir. Tu especialidad: ${a.foco}. ${a.mira}
+Tu pregunta clave: ${a.pregunta}
+DECISIÓN: ${o.tema || pregunta}
+OPCIONES:\n${opTxt}
+DATOS REALES DE HOY:\n${mercado || "(sin datos)"}
+Opiná desde TU mirada, con números concretos cuando puedas. No inventes precios exactos que no sepas: dalos como orientativos.
+Respondé SOLO JSON: {"puntajes":{"A":0 a 10,"B":0 a 10,"C":0 a 10 si existe},"voto":"A, B o C","condicion":"si votás con condiciones, cuál; si no, vacío","argumento":"tu postura en 2 o 3 frases, en rioplatense","riesgo":"el riesgo principal que ves"}`, { json: true });
+      const j = parsearJSON(r.texto); if (j && j.puntajes) votos.push({ a, ...j });
+    } catch (e) { if (e.cupo && votos.length >= 3) break; if (e.cupo) throw e; }
+  }
+  if (votos.length < 3) throw Object.assign(new Error("no hubo suficientes asesores con IA disponible"), { cupo: true });
+  // 3) tabla ponderada (sin IA)
+  const letras = Object.keys(ops).filter(k => ops[k]); const tot = {}; let pesoT = 0;
+  for (const v of votos) { pesoT += v.a.peso; for (const k of letras) tot[k] = (tot[k] || 0) + v.a.peso * (Number(v.puntajes[k]) || 0); }
+  for (const k of letras) tot[k] = +(tot[k] / pesoT).toFixed(1);
+  const gana = letras.slice().sort((x, z) => tot[z] - tot[x])[0];
+  // 4) réplica y veredicto del moderador
+  const mesa = votos.map(v => `${v.a.nombre} (peso ${v.a.peso}) votó ${v.voto}${v.condicion ? " con condición: " + v.condicion : ""}. ${v.argumento} Riesgo: ${v.riesgo}`).join("\n");
+  const fin = parsearJSON((await ia(`Sos el MODERADOR del consejo de inversiones de ${CFG.dueno}. Decisión: ${o.tema || pregunta}
+OPCIONES:\n${opTxt}
+LO QUE DIJO CADA ASESOR:\n${mesa}
+PUNTAJE PONDERADO: ${letras.map(k => `${k} ${tot[k]}`).join(" · ")}
+DATOS DE HOY:\n${mercado}
+Hacé que los dos asesores más enfrentados se respondan entre sí y cerrá con el veredicto. Respondé SOLO JSON:
+{"debate":"2 a 4 renglones: quién se peleó con quién y por qué","veredicto":"VA / NO VA / VA CON CONDICIONES / ESPERAR","decision":"la opción recomendada y cómo hacerla en 1 o 2 frases","condiciones":["..."],"pasos":["primer paso concreto esta semana","..."],"objecion":"la objeción más fuerte que queda","prueba":"la forma más barata de probar antes de jugarse todo","confianza":"1 a 10"}`, { json: true })).texto) || {};
+  const txt = `🏛️ SALA DE INVERSIONES · ${o.tema || pregunta}
+
+${opTxt}
+
+🗳️ VEREDICTO: ${fin.veredicto || "—"} (confianza ${fin.confianza || "?"}/10)
+${fin.decision || ""}
+${(fin.condiciones || []).length ? "\nCondiciones:\n" + fin.condiciones.map(x => "• " + x).join("\n") : ""}
+
+📊 Puntaje ponderado: ${letras.map(k => `${k} ${tot[k]}${k === gana ? " ⭐" : ""}`).join(" · ")}
+${votos.map(v => `${v.a.nombre}: ${v.voto}${v.condicion ? " (con condición)" : ""} — ${String(v.argumento).slice(0, 220)}`).join("\n")}
+
+🔥 El debate: ${fin.debate || "-"}
+⚠️ Objeción más fuerte: ${fin.objecion || "-"}
+🧪 Prueba barata: ${fin.prueba || "-"}
+👣 Próximos pasos:\n${(fin.pasos || []).map(x => "• " + x).join("\n") || "-"}
+
+(Son asesores simulados con IA: usalo para pensar, no como asesoramiento profesional. Antes de firmar, consultá con tu contador o escribano.)`;
+  const h = leerPrivSeguro("sala_inversiones", []); h.push({ t: NOW.toISOString(), pregunta, tema: o.tema, veredicto: fin.veredicto, decision: fin.decision, tot }); escribirPriv("sala_inversiones", h.slice(-50));
+  escribirPriv("ultimo_sala", { t: NOW.toISOString(), texto: txt });
+  log("Inversiones", `la sala de inversiones dio su veredicto (privado)`);
+  await enviar(txt, "inversor");
+  return true;
+}
+
+/* ==========================================================================================
    EQUIPO DE DESARROLLO (área software): Analista → Arquitecto → Programador → QA → corrección
    Hace apps completas de un solo archivo y las publica en data/apps/<nombre>/ (GitHub Pages).
    ========================================================================================== */
@@ -884,6 +967,7 @@ const AYUDA = () => `Soy el Gerente general de la ${CFG.oficina}. Escribime:
 • «gasté 5000 en nafta» — gasto personal. «pagué luz 34800» — servicio de la casa.
 • «servicio luz vence 10 35000» — te aviso antes de cada vencimiento.
 • recordame mañana a las 9 pagar el monotributo · recordatorios · cumple de mamá 15/11 · fechas
+• sala: tu decisión de plata — 7 asesores (inversor de valor, inmobiliario de VM, economista, contador, emprendedor, escribano y abogado del diablo) debaten, votan y te dan el veredicto. «sala» = historial.
 • consejo — el contador te dice cómo venís y dónde cortar · inversiones — qué hacer con lo que ahorrás
 • 🎤 Mandame audios: los paso a texto y los entiendo igual que si escribieras.
 • memoria — lo que el Gerente se acuerda de vos (aprende solo de la charla) · olvidá N — borra un dato
@@ -1094,8 +1178,10 @@ async function atender(u) {
       else { const destino = rb && rb.tipo === "ia" ? rb : /(comida|plato|com[ií]|almuerzo|cena|desayuno|merienda|dieta)/i.test(txt) ? botPorId("nutricionista") : botPorId("asesor_imagen"); if (!destino) { await enviar("No tengo un bot para fotos ahora."); return; } est.pendientes.push({ bot: destino.id, orden: txt.slice(0, 300) || "Mirá esta foto y decime qué mejorar.", foto, t: NOW.toISOString(), origen: "orden" }); await enviar(`📸 Le paso la foto a ${destino.nombre}. Te contesta en la próxima vuelta.`); }
       log("Mesa de entrada", "llegó una foto (no se guarda)"); return;
     }
+    let mm;
+    if ((mm = txt.match(/^\/?(?:sala|mesa|sala de inversi[oó]n(?:es)?|consejo de inversi[oó]n(?:es)?|asesores)\s*:\s*([\s\S]{5,})/i))) { est.pendientes.push({ tipo: "sala", orden: mm[1].trim().slice(0, 1000), t: NOW.toISOString() }); log("Jonathan", "abrió la sala de inversiones (privado)"); await enviar("🏛️ Junto a los 7 asesores. Arrancan en esta vuelta."); return; }
     if (resp && botPorId(resp) && botPorId(resp).receta?.registro) { try { if (await registrar(txt, botPorId(resp))) return; } catch (e) { await enviar("⚠️ No pude anotarlo: " + e.message); return; } }
-    if (RX_GASTO_EN.test(txt) && /\d/.test(txt) && !/^((mis|los)\s+)?(gastos|informe|torta|gr[aá]fico|resumen)\b[^\d]*$/i.test(txt) && botPorId("gastos_personales")) { try { const n = await registrarLote(txt, botPorId("gastos_personales")); if (n) { log("Contaduría", `anotó ${n} gastos (privado)`); return; } } catch {} }
+    if (RX_GASTO_EN.test(txt) && /\d/.test(txt) && !/[¿?]/.test(txt) && !/^\/?(app|apps|programador|software)\b/i.test(txt) && !/^((mis|los)\s+)?(gastos|informe|torta|gr[aá]fico|resumen)\b[^\d]*$/i.test(txt) && botPorId("gastos_personales")) { try { const n = await registrarLote(txt, botPorId("gastos_personales")); if (n) { log("Contaduría", `anotó ${n} gastos (privado)`); return; } } catch {} }
     try { if (await registrar(txt, null)) { log("Asistente personal", "anotó algo (privado)"); return; } } catch (e) { await enviar("⚠️ No pude anotarlo: " + e.message); return; }
     if (resp && botPorId(resp)) {
       const b = botPorId(resp); const sb = est.bots[b.id];
@@ -1105,8 +1191,9 @@ async function atender(u) {
       const feed = leerFeed(b); feed.push({ t: NOW.toISOString(), tipo: "jefe", texto: txt.slice(0, 500), valor: pos ? 1 : neg ? -1 : 0 }); guardarFeed(b, feed.slice(-40));
       log("Jonathan", `opinó sobre ${b.nombre}: ${txt.slice(0, 80)}`); await enviar(`📝 Anotado para ${b.nombre}. Lo aplica desde el entrenamiento de esta noche.`); return;
     }
-    const low = txt.toLowerCase().replace(/^\//, "").trim(); let mm;
+    const low = txt.toLowerCase().replace(/^\//, "").trim();
     if ((mm = txt.match(/^\/?(?:app|apps|software|programa(?:r|me|ción)?|desarroll(?:o|ar|ame))\s*:\s*([\s\S]{4,})/i) || txt.match(/^\/?app\s+((?:arregl|cambi|mejor|correg)\w*\s[\s\S]+)/i) || txt.match(/^(?:hac[eé](?:me)?|arm[aá](?:me)?|cre[aá](?:me)?|program[aá](?:me)?)\s+(una\s+(?:app|aplicaci[oó]n|p[aá]gina\s+web|calculadora|planilla\s+web|herramienta)\b[\s\S]*)/i))) { est.pendientes.push({ tipo: "app", orden: mm[1].trim().slice(0, 1500), t: NOW.toISOString() }); log("Jonathan", "le pidió una app al equipo de desarrollo"); await enviar("👷 Se la paso al equipo de desarrollo. Arrancan en esta vuelta."); return; }
+    if (/^\/?(sala|salas|historial de la sala)$/i.test(txt)) { const h = leerPrivSeguro("sala_inversiones", []); await enviar(h.length ? "🏛️ Últimas decisiones de la sala:\n" + h.slice(-10).reverse().map(x => `• ${x.t.slice(0, 10)} · ${x.tema || x.pregunta} → ${x.veredicto || "?"}: ${String(x.decision || "").slice(0, 120)}`).join("\n") : "🏛️ La sala todavía no debatió nada. Probá: «sala: ¿compro un lote en Villa Nueva a USD 15.000 o pongo la plata en plazo fijo?»"); return; }
     try { if (await ordenProgramador(txt)) return; } catch (e) { await enviar("🛠️ No pude hablar con el programador: " + e.message); return; }
     if (/^\/?apps$/i.test(txt)) { const l = appsLista(); await enviar(l.length ? "📱 Apps del equipo de desarrollo:\n" + l.slice(0, 20).map(x => `• ${x.nombre} (${x.puntaje}/10) — ${x.url}`).join("\n") + "\n\nPara cambiar una: «app arreglar NOMBRE: qué cambiar»." : "Todavía no hay apps. Pedí una: «app: una calculadora de materiales para una losa»."); return; }
     if ((mm = txt.match(RX_CELU)) || RX_CELU_AUTO.test(txt)) { try { await ordenCelu(mm ? mm[1] : txt); } catch (e) { await enviar("📱 No pude hablar con el celu: " + e.message); } return; }
@@ -1319,6 +1406,7 @@ async function main() {
     try {
       if (p.tipo === "comprobante") await leerComprobante(p);
       else if (p.tipo === "app") await equipoDesarrollo(p.orden);
+      else if (p.tipo === "sala") await salaInversiones(p.orden);
       else if (p.tipo === "contratar") { const nb = await contratar(p.orden); if (p.pausa && nb) { est.bots[nb.id].pausado = true; await enviar(`⏸ «${nb.nombre}» queda en pausa hasta que escribas «activar ${nb.id}».`); } }
       else if (p.bot) { const b = botPorId(p.bot); if (b) { const ok = await trabajar(b, { orden: p.orden, origen: p.origen || "orden", foto: p.foto }); if (!ok && est.bots[b.id].estado === "postergado") quedan.push({ ...p, reintentar: b.buscar ? new Date(NOW.getTime() + 120 * 60e3).toISOString() : p.origen === "orden" ? null : new Date(NOW.getTime() + 90 * 60e3).toISOString() }); } }
       else await repartir(p);
