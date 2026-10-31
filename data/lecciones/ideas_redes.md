@@ -1,0 +1,8 @@
+- Prioriza Reels sobre fotos estáticas para maximizar el alcance orgánico.
+- Usa audios en tendencia pero adapta el contexto visual a tu humor personal.
+- Crea contenido que destaque la cultura local de Córdoba (comida, lugares, clima).
+- No dejes la primera viñeta sin un gancho visual o auditivo fuerte (menos de 3 segundos).
+- Responde a todos los comentarios inmediatamente para activar la algoritmo.
+- Evita textos largos y aburridos; usa preguntas directas para fomentar la interacción.
+- No te tomes demasiado en serio; la autenticidad y la vulnerabilidad venden más.
+- Incluye elementos visuales de la ciudad (Cerro, Centro, Av. del Libertador) en tus sketches.
