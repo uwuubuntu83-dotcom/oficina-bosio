@@ -133,7 +133,7 @@ async function modelosVivos(p) {
 async function modelosDe(p, { imagen } = {}) {
   const base = imagen ? (VISION[p.id.replace(/\d+$/, "")] || []) : (p.modelos || []);
   const vivos = await modelosVivos(p); if (!vivos) return base;
-  const set = new Set(vivos); const fijos = base.filter(m => set.has(m));
+  const set = new Set(vivos); const fijos = [...base.filter(m => set.has(m)), ...base.filter(m => !set.has(m))];
   const rank = id => { const i = BUENOS.findIndex(r => r.test(id)); return i < 0 ? 99 : i; };
   const extra = vivos.filter(id => !fijos.includes(id) && (!p.gratis || /:free$/.test(id)) && (imagen ? VISTA.test(id) : rank(id) < 99 && !/(-vl|vision)/i.test(id))).sort((a, z) => rank(a) - rank(z));
   const lista = [...fijos, ...extra].slice(0, imagen ? 4 : 6);
@@ -172,7 +172,7 @@ async function llamarOpenAI(p, modelo, prompt, { json, imagen, largo }) {
   if (p.id.startsWith("openrouter")) { headers["X-Title"] = "Oficina Bosio"; headers["HTTP-Referer"] = "https://uwuubuntu83-dotcom.github.io/oficina-bosio/"; }
   const body = { model: modelo, messages: [{ role: "user", content: imagen ? [{ type: "text", text: prompt }, { type: "image_url", image_url: { url: `data:${imagen.mime};base64,${imagen.b64}` } }] : prompt }], temperature: json ? 0.2 : 0.5, max_tokens: largo ? 8192 : 4096, stream: false };
   const r = await traer(p.url || (p.base + "/chat/completions"), { method: "POST", headers, body: JSON.stringify(body) }, largo ? 240000 : 120000);
-  const j = await r.json().catch(() => ({}));
+  const crudo = await r.text().catch(() => ""); let j = {}; try { j = JSON.parse(crudo); } catch { const sse = crudo.split("\n").filter(l => l.startsWith("data:") && !/\[DONE\]/.test(l)).map(l => { try { return JSON.parse(l.slice(5)); } catch { return null; } }).filter(Boolean); if (sse.length) j = { choices: [{ message: { content: sse.map(x => ((x.choices || [])[0] || {}).delta?.content || "").join("") } }] }; else if (r.ok) return { error: true, status: 200, msg: "no devolvió JSON: " + crudo.replace(/\s+/g, " ").slice(0, 90) }; }
   if (!r.ok) return { error: true, status: r.status, j, msg: (j.error && (j.error.message || j.error)) || j.message || String(r.status) };
   const ch = (j.choices || [])[0] || {}; const m = ch.message || {};
   const cont = Array.isArray(m.content) ? m.content.map(x => x.text || "").join("") : m.content;
@@ -215,6 +215,7 @@ async function ia(prompt, { buscar = false, json = false, imagen = null, largo =
       }
       if (!r.error) { if (buscar) est.consumo.busquedas++; est.ia.ultimo = { prov: p.nombre, modelo, t: NOW.toISOString() }; return { ...r, modelo: `${p.nombre} · ${modelo}` }; }
       errores.push(`${p.nombre}/${modelo}: ${r.status} ${String(r.msg).slice(0, 90)}`);
+      if (/insufficient balance|recharge|payment required|no remaining credits/i.test(String(r.msg))) { marcar(clave, 24 * 3600e3); if (++fallasProv >= (p.maxFallas || 3)) break; continue; }
       if (r.status === 429) { const rd = retryDe(r.j); marcar(clave, rd.porDia ? 0 : Math.min(Math.max(rd.segundos, 30), 3600) * 1000); if (rd.porDia) log("IA", `${p.nombre} ${modelo}: cupo diario agotado, sigo con otra`); }
       else if (r.status === 402) { marcar(p.id, 24 * 3600e3); log("IA", `${p.nombre}: se quedó sin créditos gratis, la salteo por hoy`); break; }
       else if (r.status === 401 || r.status === 403) { marcar(p.id, 0); log("IA", `${p.nombre}: la clave no es válida o no tiene permiso`); break; }
@@ -1252,7 +1253,7 @@ async function atender(u) {
       else { est.pendientes.push({ bot: b.id, orden: "", t: NOW.toISOString(), origen: "orden" }); await enviar(`🏃 ${b.nombre} arranca ahora.`); }
       log("Jonathan", `${mm[1]} ${b.nombre}`); return;
     }
-    if (u.interno) { await enviar("No entendí ese comando: «" + txt.slice(0, 80) + "»."); return; }
+    if (u.interno) { log("Gerente general", "intentó un comando que no existe: " + txt.slice(0, 60)); return; }
     est.pendientes.push({ bot: null, orden: txt.slice(0, 600), t: NOW.toISOString(), origen: "orden" });
     log("Jonathan", "mandó una orden por Telegram");
 }
