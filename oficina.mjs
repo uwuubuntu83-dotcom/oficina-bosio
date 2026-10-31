@@ -116,10 +116,28 @@ async function modelosOpenRouter(p) {
     const j = await (await traer("https://openrouter.ai/api/v1/models")).json();
     const ids = (j.data || []).map(m => m.id).filter(id => /:free$/.test(id));
     const pref = [/gpt-oss-120b/, /deepseek/, /qwen.*(coder|235|80b)/, /kimi|moonshot/, /glm/, /llama-?4|llama-3\.3-70b/, /gemma/, /mistral/];
-    const rank = id => { const i = pref.findIndex(r => r.test(id)); return i < 0 ? 99 : i; };
+    const conocida = /^(openai|deepseek|qwen|meta-llama|google|mistralai|z-ai|moonshotai|nvidia|microsoft|thudm)\//; const rank = id => { const i = pref.findIndex(r => r.test(id)); return (i < 0 ? 50 : i) + (conocida.test(id) ? 0 : 100); };
     p.modelos = ids.sort((a, b) => rank(a) - rank(b)).slice(0, 8);
   } catch { p.modelos = []; }
   return p.modelos;
+}
+// cada proveedor dice qué modelos tiene HOY: así no quedan nombres viejos (404/410) cuando los cambian
+const BUENOS = [/gpt-oss-120b/i, /deepseek-(v3|v4|r1|chat)/i, /qwen-?3.*(235|480|80b|coder|32b)/i, /llama-?4/i, /llama-3\.3-70b/i, /glm-4\.[5-9]|glm-[5-9]/i, /kimi|moonshot/i, /mistral-(small|medium|large)/i, /command-a/i, /gemma-?3/i, /solar-pro/i, /gpt-oss-20b/i, /qwen/i, /llama/i];
+const NO_CHAT = /(embed|whisper|tts|guard|rerank|moderation|audio|speech|transcri|image-gen|flux|stable-diffusion|sdxl|ocr|safety|reward|clip|bge|e5-|nomic|parakeet|canary|nemoretriever|-vl-embed)/i;
+const VISTA = /(vision|-vl|vl-|scout|maverick|gemma-?3|llama-4|pixtral|gpt-4o|gpt-4\.1|phi-4-multimodal|mistral-small-3|qwen2\.5-vl|qwen3-vl|kimi-vl|glm-4\.\dv)/i;
+async function modelosVivos(p) {
+  if (!p.base || p.tipo !== "openai") return null;
+  const c = (est.ia.vivos ||= {})[p.id]; if (c && c.fecha === fechaAR()) return c.ids;
+  try { const r = await traer(p.base + "/models", { headers: p.key ? { authorization: "Bearer " + p.key } : {} }, 15000); if (!r.ok) return null; const j = await r.json(); const ids = (j.data || j.models || []).map(m => m.id || m.name).filter(Boolean).filter(id => !NO_CHAT.test(id)); if (!ids.length) return null; est.ia.vivos[p.id] = { fecha: fechaAR(), ids: ids.slice(0, 400) }; return est.ia.vivos[p.id].ids; } catch { return null; }
+}
+async function modelosDe(p, { imagen } = {}) {
+  const base = imagen ? (VISION[p.id.replace(/\d+$/, "")] || []) : (p.modelos || []);
+  const vivos = await modelosVivos(p); if (!vivos) return base;
+  const set = new Set(vivos); const fijos = base.filter(m => set.has(m));
+  const rank = id => { const i = BUENOS.findIndex(r => r.test(id)); return i < 0 ? 99 : i; };
+  const extra = vivos.filter(id => !fijos.includes(id) && (!p.gratis || /:free$/.test(id)) && (imagen ? VISTA.test(id) : rank(id) < 99 && !/(-vl|vision)/i.test(id))).sort((a, z) => rank(a) - rank(z));
+  const lista = [...fijos, ...extra].slice(0, imagen ? 4 : 6);
+  return lista.length ? lista : base;
 }
 function retryDe(j) { const d = ((j && j.error && j.error.details) || []); const ri = d.find(x => /RetryInfo/.test(x["@type"] || "")); const s = ri && parseFloat(ri.retryDelay); const qf = d.find(x => /QuotaFailure/.test(x["@type"] || "")); const porDia = qf && (qf.violations || []).some(v => /PerDay/i.test(v.quotaId || "")); return { segundos: s || 0, porDia: !!porDia }; }
 
@@ -152,15 +170,17 @@ async function llamarOpenAI(p, modelo, prompt, { json, imagen, largo }) {
   await pausa(p); usar(p.id);
   const headers = { "content-type": "application/json", ...(p.key ? { authorization: "Bearer " + p.key } : {}) };
   if (p.id.startsWith("openrouter")) { headers["X-Title"] = "Oficina Bosio"; headers["HTTP-Referer"] = "https://uwuubuntu83-dotcom.github.io/oficina-bosio/"; }
-  const body = { model: modelo, messages: [{ role: "user", content: imagen ? [{ type: "text", text: prompt }, { type: "image_url", image_url: { url: `data:${imagen.mime};base64,${imagen.b64}` } }] : prompt }], temperature: json ? 0.2 : 0.5, max_tokens: largo ? 8192 : 4096 };
+  const body = { model: modelo, messages: [{ role: "user", content: imagen ? [{ type: "text", text: prompt }, { type: "image_url", image_url: { url: `data:${imagen.mime};base64,${imagen.b64}` } }] : prompt }], temperature: json ? 0.2 : 0.5, max_tokens: largo ? 8192 : 4096, stream: false };
   const r = await traer(p.url || (p.base + "/chat/completions"), { method: "POST", headers, body: JSON.stringify(body) }, largo ? 240000 : 120000);
   const j = await r.json().catch(() => ({}));
   if (!r.ok) return { error: true, status: r.status, j, msg: (j.error && (j.error.message || j.error)) || j.message || String(r.status) };
-  const m = ((j.choices || [])[0] || {}).message || {};
-  let texto = String(m.content || "").replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+  const ch = (j.choices || [])[0] || {}; const m = ch.message || {};
+  const cont = Array.isArray(m.content) ? m.content.map(x => x.text || "").join("") : m.content;
+  let texto = String(cont || "").replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+  if (!texto && j.choices === undefined && j.text) texto = String(j.text).trim();
   const fuentes = [];
   for (const t of m.executed_tools || []) for (const x of ((t.search_results && t.search_results.results) || [])) if (x.url) fuentes.push({ titulo: x.title || x.url, url: x.url });
-  if (!texto) return { error: true, status: 200, msg: "respuesta vacía" };
+  if (!texto) return { error: true, status: 200, msg: `respuesta vacía (fin: ${ch.finish_reason || "?"}; ${Object.keys(j).slice(0, 6).join(",") || "sin JSON"}${ch.finish_reason === "content_filter" ? "; filtro de contenido" : ""})` };
   return { texto, fuentes: fuentes.slice(0, 10) };
 }
 // ia(): buscar=true → solo proveedores que buscan en internet (Gemini, y Groq compound de respaldo).
@@ -178,10 +198,9 @@ async function ia(prompt, { buscar = false, json = false, imagen = null, largo =
     if (agotado(p.id)) continue;
     let modelos;
     if (buscar && p.buscarModelo) modelos = [p.buscarModelo];
-    else if (p.tipo === "gemini") { modelos = await modelosGemini(p); if (buscar || imagen) { const todos = p.todos || modelos; const pref = [/^gemini-2\.5-flash$/, /^gemini-2\.5-flash-lite$/, /^gemini-2\.0-flash$/, /^gemini-flash-latest$/, /^gemini-2\.5-pro$/]; const prim = pref.flatMap(r => todos.filter(m => r.test(m))); modelos = [...new Set([...prim, "gemini-2.5-flash", "gemini-2.5-flash-lite", ...modelos])].slice(0, 7); } }
-    else if (p.gratis) modelos = await modelosOpenRouter(p);
-    else if (imagen && VISION[p.id.replace(/\d+$/, "")]) modelos = VISION[p.id.replace(/\d+$/, "")];
-    else modelos = p.modelos || [];
+    else if (p.tipo === "gemini") { modelos = await modelosGemini(p); if (buscar || imagen) { const todos = p.todos || modelos; const fl = todos.filter(m => /^gemini-[\d.]+-flash$/.test(m)), fll = todos.filter(m => /^gemini-[\d.]+-flash-lite$/.test(m)); modelos = [...new Set([...fl, ...fll, ...todos.filter(m => /flash-latest/.test(m)), ...modelos])].slice(0, 6); if (!modelos.length) modelos = ["gemini-flash-latest"]; } }
+    else if (p.gratis && !imagen) modelos = await modelosOpenRouter(p);
+    else modelos = await modelosDe(p, { imagen: !!imagen });
     let fallasProv = 0;
     for (const modelo of modelos) {
       const clave = p.id + ":" + modelo;
@@ -197,6 +216,7 @@ async function ia(prompt, { buscar = false, json = false, imagen = null, largo =
       if (!r.error) { if (buscar) est.consumo.busquedas++; est.ia.ultimo = { prov: p.nombre, modelo, t: NOW.toISOString() }; return { ...r, modelo: `${p.nombre} · ${modelo}` }; }
       errores.push(`${p.nombre}/${modelo}: ${r.status} ${String(r.msg).slice(0, 90)}`);
       if (r.status === 429) { const rd = retryDe(r.j); marcar(clave, rd.porDia ? 0 : Math.min(Math.max(rd.segundos, 30), 3600) * 1000); if (rd.porDia) log("IA", `${p.nombre} ${modelo}: cupo diario agotado, sigo con otra`); }
+      else if (r.status === 402) { marcar(p.id, 24 * 3600e3); log("IA", `${p.nombre}: se quedó sin créditos gratis, la salteo por hoy`); break; }
       else if (r.status === 401 || r.status === 403) { marcar(p.id, 0); log("IA", `${p.nombre}: la clave no es válida o no tiene permiso`); break; }
       else if (r.status === 404 || r.status === 400 || r.status === 422) marcar(clave, largo && r.status !== 404 ? 3600e3 : 0);
       else marcar(clave, 10 * 60e3);
@@ -1313,7 +1333,7 @@ async function autoprueba() {
   const vistos = new Set();
   for (const p of PROV) {
     if (vistos.has(p.id)) continue; vistos.add(p.id);
-    let modelos = p.tipo === "gemini" ? await modelosGemini(p).catch(() => []) : p.gratis ? await modelosOpenRouter(p).catch(() => []) : (p.modelos || []);
+    let modelos = p.tipo === "gemini" ? await modelosGemini(p).catch(() => []) : p.gratis ? await modelosOpenRouter(p).catch(() => []) : await modelosDe(p);
     const fila = { prov: p.nombre, id: p.id, ok: false, modelo: "", ms: 0, error: "" };
     for (const modelo of modelos.slice(0, 3)) {
       const t0 = Date.now(); let r;
@@ -1328,7 +1348,7 @@ async function autoprueba() {
   // fotos: una imagen chica generada acá (torta de 2 colores)
   const png = pngTorta([{ v: 70, rgb: [220, 40, 40] }, { v: 30, rgb: [40, 90, 220] }], 160); const imagen = { mime: "image/png", b64: png.toString("base64") };
   for (const p of PROV.filter(p => p.tipo === "gemini" || VISION[p.id.replace(/\d+$/, "")])) {
-    const modelos = p.tipo === "gemini" ? ["gemini-2.5-flash", "gemini-2.5-flash-lite"] : VISION[p.id.replace(/\d+$/, "")];
+    const modelos = p.tipo === "gemini" ? (await modelosGemini(p).catch(() => [])).filter(m => /flash/.test(m)) : await modelosDe(p, { imagen: true });
     const fila = { prov: p.nombre, ok: false, modelo: "", error: "" };
     for (const modelo of modelos.slice(0, 2)) {
       let r; try { r = p.tipo === "gemini" ? await llamarGemini(p, modelo, "¿Qué ves en la imagen? Una frase.", { imagen }) : await llamarOpenAI(p, modelo, "¿Qué ves en la imagen? Una frase.", { imagen }); } catch (e) { r = { error: true, status: 0, msg: e.message }; }
