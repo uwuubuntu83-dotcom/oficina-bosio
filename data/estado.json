@@ -377,7 +377,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T05:37:38.462Z",
+   "ultimaCorrida": "2026-10-31T05:59:54.456Z",
    "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
@@ -1395,7 +1395,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
    "ultimaCorrida": "2026-10-31T01:55:56.980Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 222 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 244 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -4216,6 +4216,26 @@
  },
  "log": [
   {
+   "t": "2026-10-31T05:59:54.456Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-31T05:59:54.456Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-31T05:59:54.456Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-31T05:59:54.456Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
+  {
    "t": "2026-10-31T05:37:38.462Z",
    "quien": "Clientes y licitaciones",
    "que": "entregó (sin IA)"
@@ -5694,26 +5714,6 @@
    "t": "2026-10-30T13:35:53.482Z",
    "quien": "Redes sociales",
    "que": "le pasó una orden al celu bot"
-  },
-  {
-   "t": "2026-10-30T13:35:53.482Z",
-   "quien": "Mesa de entrada",
-   "que": "llegaron 1 mensajes de Telegram"
-  },
-  {
-   "t": "2026-10-30T13:35:53.482Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github"
-  },
-  {
-   "t": "2026-10-30T08:34:35.545Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-30T08:34:35.545Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
@@ -5822,15 +5822,15 @@
  },
  "consumo": {
   "fecha": "2026-10-31",
-  "consultas": 16,
+  "consultas": 19,
   "busquedas": 0,
   "por": {
-   "gemini": 15,
+   "gemini": 18,
    "groq": 1
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-31T05:37:38.462Z",
+ "actualizado": "2026-10-31T05:59:54.456Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -5858,11 +5858,11 @@
   "agotado": {
    "gemini:gemini-2.5-flash": true,
    "gemini:gemini-2.5-flash-lite": true,
-   "gemini:gemini-flash-latest": 1793425089480,
+   "gemini:gemini-flash-latest": 1793426425591,
    "groq:groq/compound": true,
    "gemini:gemini-2.5-pro": true,
-   "gemini:gemini-3.8-flash": 1793425096031,
-   "gemini:gemini-3.7-flash": 1793425102600
+   "gemini:gemini-3.8-flash": 1793426432107,
+   "gemini:gemini-3.7-flash": 1793426438578
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
  },
