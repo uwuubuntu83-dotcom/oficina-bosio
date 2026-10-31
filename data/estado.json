@@ -2032,13 +2032,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-31",
-   "ultimaCorrida": "2026-10-31T21:36:46.025Z",
+   "ultimaCorrida": "2026-10-31T21:58:12.906Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": false,
    "memoria": {
     "celu": {
-     "t": 1793482606025,
+     "t": 1793483892906,
      "redes_hoy": {
       "publicaciones": 0,
       "historias": 0,
@@ -6365,6 +6365,21 @@
  },
  "log": [
   {
+   "t": "2026-10-31T21:59:27.397Z",
+   "quien": "Gerente general",
+   "que": "autoprueba: 7/14 IA de texto y 2/7 de fotos andan"
+  },
+  {
+   "t": "2026-10-31T21:59:27.397Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-31T21:59:27.397Z",
+   "quien": "Oficina",
+   "que": "abre (prueba) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
+  {
    "t": "2026-10-31T21:37:20.661Z",
    "quien": "Gerente general",
    "que": "autoprueba: 7/14 IA de texto y 3/7 de fotos andan"
@@ -7848,21 +7863,6 @@
    "t": "2026-10-30T20:54:54.620Z",
    "quien": "Jonathan",
    "que": "mandó una orden por Telegram"
-  },
-  {
-   "t": "2026-10-30T20:54:54.620Z",
-   "quien": "Mesa de entrada",
-   "que": "llegaron 2 mensajes de Telegram"
-  },
-  {
-   "t": "2026-10-30T20:54:54.620Z",
-   "quien": "Mesa de entrada",
-   "que": "llegaron 2 órdenes desde la página"
-  },
-  {
-   "t": "2026-10-30T20:54:54.620Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
   }
  ],
  "pendientes": [],
@@ -8022,27 +8022,27 @@
  },
  "consumo": {
   "fecha": "2026-10-31",
-  "consultas": 151,
+  "consultas": 155,
   "busquedas": 0,
   "por": {
-   "gemini": 121,
-   "groq": 9,
-   "zai": 5,
-   "cerebras": 8,
-   "sambanova": 12,
-   "nvidia": 13,
-   "cohere": 6,
-   "github": 22,
-   "openrouter": 12,
-   "huggingface": 9,
-   "llm7": 6,
-   "upstage": 3,
-   "pollinations": 2,
-   "cfai": 6
+   "gemini": 124,
+   "groq": 12,
+   "zai": 6,
+   "cerebras": 11,
+   "sambanova": 16,
+   "nvidia": 20,
+   "cohere": 8,
+   "github": 27,
+   "openrouter": 17,
+   "huggingface": 14,
+   "llm7": 9,
+   "upstage": 6,
+   "pollinations": 3,
+   "cfai": 9
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-31T21:37:20.661Z",
+ "actualizado": "2026-10-31T21:59:27.397Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -8081,9 +8081,9 @@
    "sambanova:Meta-Llama-3.3-70B-Instruct": 1793472102993,
    "sambanova:DeepSeek-V3.1": 1793472105638,
    "sambanova:gpt-oss-120b": 1793472107827,
-   "nvidia:meta/llama-3.3-70b-instruct": 1793472677994,
-   "nvidia:openai/gpt-oss-120b": 1793472680395,
-   "nvidia:qwen/qwen3-next-80b-a3b-instruct": 1793472682896,
+   "nvidia:meta/llama-3.3-70b-instruct": 1793484932918,
+   "nvidia:openai/gpt-oss-120b": 1793484935419,
+   "nvidia:qwen/qwen3-next-80b-a3b-instruct": 1793484937920,
    "sambanova:Llama-4-Maverick-17B-128E-Instruct": true,
    "nvidia:mistralai/mistral-small-3.1-24b-instruct-2503": true,
    "gemini:gemini-4-argon": true,
@@ -8102,7 +8102,7 @@
   "ultimo": {
    "prov": "Cohere",
    "modelo": "command-a-03-2025",
-   "t": "2026-10-31T21:37:20.661Z"
+   "t": "2026-10-31T21:59:27.397Z"
   },
   "vivos": {
    "groq": {
