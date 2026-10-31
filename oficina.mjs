@@ -266,9 +266,12 @@ async function ordenCelu(t) {
 }
 const escHTML = s => String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const CONV = []; // un solo chat: todo lo que la oficina te dice va también al chat de la página (en el buzón, privado con PIN)
+const CHARLA = [];
+function guardarCharla() { if (!CHARLA.length) return; try { const h = leerPrivSeguro("charla", []); escribirPriv("charla", [...h, ...CHARLA.splice(0)].slice(-60)); } catch (e) { console.log("charla:", e.message); } }
 async function guardarConv() { if (!CONV.length || !BUZON || !PIN) return; try { await buzon("/oficina/chat", { mensajes: CONV.splice(0) }); } catch (e) { console.log("chat del buzón:", e.message); } }
 async function enviar(texto, botId, opt = {}) {
   if (!est.dueno) return null;
+  { const b0 = botId && botPorId(botId); CHARLA.push({ de: b0 ? b0.nombre : "Gerente (vos)", t: NOW.toISOString(), texto: String(texto).replace(/<[^>]+>/g, "").slice(0, 700) }); }
   { const b = botId && botPorId(botId); CONV.push({ de: b ? b.nombre : "Gerente general", texto: String(opt.html ? String(texto).replace(/<a href="([^"]+)">([^<]*)<\/a>/g, "$2 ($1)").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"') : texto).slice(0, 4000) }); }
   const partes = []; let t = opt.html ? String(texto) : limpiar(texto);
   while (t.length > 3900) { let c = t.lastIndexOf("\n", 3900); if (c < 1000) c = 3900; partes.push(t.slice(0, c)); t = t.slice(c).trim(); }
@@ -857,7 +860,7 @@ function tablero() {
   return l.join("\n");
 }
 const AYUDA = () => `Soy el Gerente general de la ${CFG.oficina}. Escribime:
-• Una orden normal: «averiguá el precio del cemento en Villa María». Se la paso al bot que corresponde.
+• Hablame normal, como a una persona: entiendo la charla, te contesto y muevo a los bots que hagan falta.
 • parte — el resumen del día en 10 renglones · parte redes / parte contaduría / … — el detalle de un área.
 • estado — cómo está cada bot.  • bots — organigrama con horarios.
 • correr ID — que un bot trabaje ahora (ej: correr dolar).
@@ -1049,6 +1052,67 @@ async function ordenProgramador(txt) {
   return false;
 }
 const linkOficina = () => `🔑 Tu oficina, ya con tu PIN adentro (abrilo una vez en cada celu o compu y queda guardado para siempre):\nhttps://uwuubuntu83-dotcom.github.io/oficina-bosio/#pin=${PIN}\n\nNo lo reenvíes: con ese link se manda a la oficina. Si lo perdés, escribí «link».`;
+async function atender(u) {
+    if (u.update_id != null) est.tgOffset = u.update_id + 1;
+    const m = u.message || u.edited_message; if (!m || (!m.text && !m.photo)) return;
+    const chat = m.chat.id; const txt = (m.text || m.caption || "").trim();
+    if (!est.dueno) { if (m.chat.type === "private") { est.dueno = chat; log("Gerente general", `quedó vinculado el Telegram de ${m.from && m.from.first_name || "el dueño"}`); await enviar(`✅ Listo, ${m.from && m.from.first_name || "jefe"}: quedaste como dueño de la oficina. Solo te obedezco a vos.\n\n${AYUDA()}`); } return; }
+    if (chat !== est.dueno) return;
+    if (!u.web && !u.interno) CONV.push({ de: "vos (Telegram)", texto: m.photo ? "📸 " + (txt || "foto") : txt });
+    if (!u.interno) CHARLA.push({ de: "Jonathan", t: NOW.toISOString(), texto: (m.photo ? "[mandó una foto] " : "") + txt.slice(0, 800) });
+    const resp = m.reply_to_message && est.mensajes[m.reply_to_message.message_id];
+    if (m.photo) {
+      const foto = m.photo[m.photo.length - 1].file_id; const rb = resp && botPorId(resp);
+      if ((rb && /gastos|casa/.test(rb.receta?.registro || "")) || /(comprobante|ticket|factura|recibo|gast|pagu|compr|transferencia|movimiento|banco|rojo|egreso|resumen de cuenta|mercado ?pago|ual[aá]|naranja)/i.test(txt)) { est.pendientes.push({ tipo: "comprobante", foto, orden: txt.slice(0, 300), t: NOW.toISOString() }); await enviar("🧾 Recibí el comprobante. Lo leo y lo anoto en la próxima vuelta (usa 1 consulta de IA)."); }
+      else { const destino = rb && rb.tipo === "ia" ? rb : /(comida|plato|com[ií]|almuerzo|cena|desayuno|merienda|dieta)/i.test(txt) ? botPorId("nutricionista") : botPorId("asesor_imagen"); if (!destino) { await enviar("No tengo un bot para fotos ahora."); return; } est.pendientes.push({ bot: destino.id, orden: txt.slice(0, 300) || "Mirá esta foto y decime qué mejorar.", foto, t: NOW.toISOString(), origen: "orden" }); await enviar(`📸 Le paso la foto a ${destino.nombre}. Te contesta en la próxima vuelta.`); }
+      log("Mesa de entrada", "llegó una foto (no se guarda)"); return;
+    }
+    if (resp && botPorId(resp) && botPorId(resp).receta?.registro) { try { if (await registrar(txt, botPorId(resp))) return; } catch (e) { await enviar("⚠️ No pude anotarlo: " + e.message); return; } }
+    if (RX_GASTO_EN.test(txt) && /\d/.test(txt) && !/^((mis|los)\s+)?(gastos|informe|torta|gr[aá]fico|resumen)\b[^\d]*$/i.test(txt) && botPorId("gastos_personales")) { try { const n = await registrarLote(txt, botPorId("gastos_personales")); if (n) { log("Contaduría", `anotó ${n} gastos (privado)`); return; } } catch {} }
+    try { if (await registrar(txt, null)) { log("Asistente personal", "anotó algo (privado)"); return; } } catch (e) { await enviar("⚠️ No pude anotarlo: " + e.message); return; }
+    if (resp && botPorId(resp)) {
+      const b = botPorId(resp); const sb = est.bots[b.id];
+      const pos = /👍|bien|genial|excelente|perfecto|buenísimo|sirve|me gusta/i.test(txt), neg = /👎|mal|no sirve|inventad|viejo|equivocad|no me gusta/i.test(txt);
+      if (pos) sb.likes++; if (neg) sb.dislikes++;
+      const feed = leerFeed(b); feed.push({ t: NOW.toISOString(), tipo: "jefe", texto: txt.slice(0, 500), valor: pos ? 1 : neg ? -1 : 0 }); guardarFeed(b, feed.slice(-40));
+      log("Jonathan", `opinó sobre ${b.nombre}: ${txt.slice(0, 80)}`); await enviar(`📝 Anotado para ${b.nombre}. Lo aplica desde el entrenamiento de esta noche.`); return;
+    }
+    const low = txt.toLowerCase().replace(/^\//, "").trim(); let mm;
+    if ((mm = txt.match(/^\/?(?:app|apps|software|programa(?:r|me|ción)?|desarroll(?:o|ar|ame))\s*:\s*([\s\S]{4,})/i) || txt.match(/^\/?app\s+((?:arregl|cambi|mejor|correg)\w*\s[\s\S]+)/i) || txt.match(/^(?:hac[eé](?:me)?|arm[aá](?:me)?|cre[aá](?:me)?|program[aá](?:me)?)\s+(una\s+(?:app|aplicaci[oó]n|p[aá]gina\s+web|calculadora|planilla\s+web|herramienta)\b[\s\S]*)/i))) { est.pendientes.push({ tipo: "app", orden: mm[1].trim().slice(0, 1500), t: NOW.toISOString() }); log("Jonathan", "le pidió una app al equipo de desarrollo"); await enviar("👷 Se la paso al equipo de desarrollo. Arrancan en esta vuelta."); return; }
+    try { if (await ordenProgramador(txt)) return; } catch (e) { await enviar("🛠️ No pude hablar con el programador: " + e.message); return; }
+    if (/^\/?apps$/i.test(txt)) { const l = appsLista(); await enviar(l.length ? "📱 Apps del equipo de desarrollo:\n" + l.slice(0, 20).map(x => `• ${x.nombre} (${x.puntaje}/10) — ${x.url}`).join("\n") + "\n\nPara cambiar una: «app arreglar NOMBRE: qué cambiar»." : "Todavía no hay apps. Pedí una: «app: una calculadora de materiales para una losa»."); return; }
+    if ((mm = txt.match(RX_CELU)) || RX_CELU_AUTO.test(txt)) { try { await ordenCelu(mm ? mm[1] : txt); } catch (e) { await enviar("📱 No pude hablar con el celu: " + e.message); } return; }
+    if (/^(link|pin|oficina|abrir oficina|link de la oficina)$/.test(low)) { await enviar(linkOficina()); return; }
+    if (/^(start|ayuda|help|hola|menu|menú)$/.test(low)) { await enviar(AYUDA()); return; }
+    if (/^(estado|tablero|novedades)$/.test(low)) { await enviar(tablero()); return; }
+    if ((mm = low.match(/^parte(?:\s+(?:de|del|de la))?\s+(.+)$/))) { const q = slug(mm[1]); const a = CFG.areas.find(x => x.id === q || slug(x.nombre).includes(q) || q.includes(x.id)); await enviar(a ? parteArea(a) : "No encontré esa área. Probá: «parte redes», «parte contaduría», «parte constructora»…"); return; }
+    if (/^parte$/.test(low)) { await parteDiario(); return; }
+    if (/^(bots|organigrama)$/.test(low)) { await enviar(`👑 ${CFG.dueno} (dueño)\n🎯 ${CFG.gerente.nombre}: ${CFG.gerente.mision}\n\n` + CFG.areas.map(a => { const bs = bots().filter(b => b.area === a.id); return `${a.icono} Gerente de ${a.nombre}\n` + (bs.length ? bs.map(b => `  • ${b.nombre} (${b.id}) · ${tipoTxt(b)} · ${horarioTxt(b)}`).join("\n") : "  (sin empleados)"); }).join("\n\n")); return; }
+    if ((mm = txt.match(/^\/?crear\s+(?:area|área|oficina)\s+(.+)/i))) { const nombre = mm[1].trim().slice(0, 40); const id = slug(nombre); if (CFG.areas.some(a => a.id === id)) { await enviar("Esa área ya existe."); return; } const a = { id, nombre, icono: "📁", color: COLORES[extra.areas.length % COLORES.length] }; extra.areas.push(a); CFG.areas.push(a); guardarExtra(); log("Jonathan", `abrió el área ${nombre}`); await enviar(`🏢 Abrí el área «${nombre}». Ahora contratale bots: «contratar: ...».`); return; }
+    if ((mm = txt.match(/^\/?contrat(?:ar|á|a)\s*(en pausa|pausado)?\s*:?\s*(.+)/is))) { est.pendientes.push({ tipo: "contratar", orden: mm[2].trim().slice(0, 600), pausa: !!mm[1] || /\ben pausa\b/i.test(mm[2]), t: NOW.toISOString() }); log("Jonathan", "pidió contratar: " + mm[2].slice(0, 100)); return; }
+    if ((mm = txt.match(/^\/?(pausar|activar|eliminar|borrar)\s+(?:el\s+)?(?:area|área|oficina)\s+(.+)/i))) {
+      const q = slug(mm[2]); const a = CFG.areas.find(x => x.id === q || slug(x.nombre) === q || slug(x.nombre).includes(q));
+      if (!a) { await enviar("No encontré esa área. Escribí «bots» para ver las áreas."); return; }
+      const acc = mm[1].toLowerCase();
+      if (acc === "pausar") { if (!extra.areasPausadas.includes(a.id)) extra.areasPausadas.push(a.id); await enviar(`⏸ Área ${a.nombre} en pausa: sus bots no trabajan ni gastan hasta que escribas «activar area ${a.nombre}».`); }
+      else if (acc === "activar") { extra.areasPausadas = extra.areasPausadas.filter(x => x !== a.id); await enviar(`▶️ Área ${a.nombre} activa otra vez.`); }
+      else { extra.areasQuitadas.push(a.id); extra.bots = extra.bots.filter(b => b.area !== a.id); CFG.areas = CFG.areas.filter(x => x.id !== a.id); CFG.bots = CFG.bots.filter(b => b.area !== a.id); await enviar(`🗑️ Eliminé el área ${a.nombre} con sus bots.`); }
+      guardarExtra(); log("Jonathan", `${acc} el área ${a.nombre}`); return;
+    }
+    if ((mm = low.match(/^(despedir|echar|eliminar|borrar)\s+(\S+)/))) { const b = botPorId(mm[2]); if (!b) { await enviar("No encontré ese bot. Escribí «bots» para ver los ID."); return; } if (extra.bots.some(x => x.id === b.id)) extra.bots = extra.bots.filter(x => x.id !== b.id); else extra.quitados.push(b.id); guardarExtra(); CFG.bots = CFG.bots.filter(x => x.id !== b.id); log("Jonathan", `despidió a ${b.nombre}`); await enviar(`👋 ${b.nombre} ya no trabaja en la oficina.`); return; }
+    if ((mm = low.match(/^horario\s+(\S+)\s+(\d{1,2}:\d{2})\s*(.*)$/))) { const b = botPorId(mm[1]); if (!b) { await enviar("No encontré ese bot."); return; } const hora = mm[2].padStart(5, "0"); const ds = mm[3].trim(); let dias = "todos"; if (ds && !/todos/.test(ds)) dias = ds.split(/[ ,]+/).map(x => DIAS3.indexOf(x.slice(0, 3).replace("mié", "mie").replace("sáb", "sab"))).filter(x => x >= 0); extra.cambios[b.id] = { ...(extra.cambios[b.id] || {}), horario: { dias, hora } }; b.horario = { dias, hora }; guardarExtra(); await enviar(`🕘 ${b.nombre}: ${horarioTxt(b)}.`); return; }
+    if ((mm = low.match(/^(correr|pausar|activar)\s+(\S+)/))) {
+      const b = botPorId(mm[2]) || bots().find(x => x.nombre.toLowerCase().includes(mm[2]));
+      if (!b) { await enviar("No encontré ese bot. Escribí «bots» para ver los ID."); return; }
+      if (mm[1] === "pausar") { est.bots[b.id].pausado = true; await enviar(`⏸ ${b.nombre} en pausa.`); }
+      else if (mm[1] === "activar") { Object.assign(est.bots[b.id], { pausado: false, fallasSeguidas: 0, estado: "esperando" }); await enviar(`▶️ ${b.nombre} vuelve a trabajar.`); }
+      else { est.pendientes.push({ bot: b.id, orden: "", t: NOW.toISOString(), origen: "orden" }); await enviar(`🏃 ${b.nombre} arranca ahora.`); }
+      log("Jonathan", `${mm[1]} ${b.nombre}`); return;
+    }
+    if (u.interno) { await enviar("No entendí ese comando: «" + txt.slice(0, 80) + "»."); return; }
+    est.pendientes.push({ bot: null, orden: txt.slice(0, 600), t: NOW.toISOString(), origen: "orden" });
+    log("Jonathan", "mandó una orden por Telegram");
+}
 async function procesarMensajes() {
   if (!TG_TOKEN) return;
   let ups = await tg("getUpdates", { offset: est.tgOffset, timeout: 0, allowed_updates: ["message", "edited_message"] });
@@ -1060,95 +1124,62 @@ async function procesarMensajes() {
   ups = ups || []; const reales = ups.length;
   if (BUZON && PIN) { try { const w = await buzon("/oficina/gerente?sacar=1"); for (const o of w.ordenes || []) ups.push({ update_id: null, web: true, message: { chat: { id: est.dueno, type: "private" }, text: o.texto } }); if ((w.ordenes || []).length) log("Mesa de entrada", `llegaron ${w.ordenes.length} órdenes desde la página`); } catch (e) { if (!/no está instalado/.test(e.message)) log("Mesa de entrada", "no pude leer el buzón: " + e.message); } }
   log("Mesa de entrada", ups.length ? `llegaron ${ups.length} mensajes de Telegram` : `sin mensajes nuevos${est.dueno ? "" : " (todavía no hay dueño vinculado: mandale cualquier mensaje al bot)"}`);
-  for (const u of ups) {
-    if (u.update_id != null) est.tgOffset = u.update_id + 1;
-    const m = u.message || u.edited_message; if (!m || (!m.text && !m.photo)) continue;
-    const chat = m.chat.id; const txt = (m.text || m.caption || "").trim();
-    if (!est.dueno) { if (m.chat.type === "private") { est.dueno = chat; log("Gerente general", `quedó vinculado el Telegram de ${m.from && m.from.first_name || "el dueño"}`); await enviar(`✅ Listo, ${m.from && m.from.first_name || "jefe"}: quedaste como dueño de la oficina. Solo te obedezco a vos.\n\n${AYUDA()}`); } continue; }
-    if (chat !== est.dueno) continue;
-    if (!u.web) CONV.push({ de: "vos (Telegram)", texto: m.photo ? "📸 " + (txt || "foto") : txt });
-    const resp = m.reply_to_message && est.mensajes[m.reply_to_message.message_id];
-    if (m.photo) {
-      const foto = m.photo[m.photo.length - 1].file_id; const rb = resp && botPorId(resp);
-      if ((rb && /gastos|casa/.test(rb.receta?.registro || "")) || /(comprobante|ticket|factura|recibo|gast|pagu|compr|transferencia|movimiento|banco|rojo|egreso|resumen de cuenta|mercado ?pago|ual[aá]|naranja)/i.test(txt)) { est.pendientes.push({ tipo: "comprobante", foto, orden: txt.slice(0, 300), t: NOW.toISOString() }); await enviar("🧾 Recibí el comprobante. Lo leo y lo anoto en la próxima vuelta (usa 1 consulta de IA)."); }
-      else { const destino = rb && rb.tipo === "ia" ? rb : /(comida|plato|com[ií]|almuerzo|cena|desayuno|merienda|dieta)/i.test(txt) ? botPorId("nutricionista") : botPorId("asesor_imagen"); if (!destino) { await enviar("No tengo un bot para fotos ahora."); continue; } est.pendientes.push({ bot: destino.id, orden: txt.slice(0, 300) || "Mirá esta foto y decime qué mejorar.", foto, t: NOW.toISOString(), origen: "orden" }); await enviar(`📸 Le paso la foto a ${destino.nombre}. Te contesta en la próxima vuelta.`); }
-      log("Mesa de entrada", "llegó una foto (no se guarda)"); continue;
-    }
-    if (resp && botPorId(resp) && botPorId(resp).receta?.registro) { try { if (await registrar(txt, botPorId(resp))) continue; } catch (e) { await enviar("⚠️ No pude anotarlo: " + e.message); continue; } }
-    if (RX_GASTO_EN.test(txt) && /\d/.test(txt) && !/^((mis|los)\s+)?(gastos|informe|torta|gr[aá]fico|resumen)\b[^\d]*$/i.test(txt) && botPorId("gastos_personales")) { try { const n = await registrarLote(txt, botPorId("gastos_personales")); if (n) { log("Contaduría", `anotó ${n} gastos (privado)`); continue; } } catch {} }
-    try { if (await registrar(txt, null)) { log("Asistente personal", "anotó algo (privado)"); continue; } } catch (e) { await enviar("⚠️ No pude anotarlo: " + e.message); continue; }
-    if (resp && botPorId(resp)) {
-      const b = botPorId(resp); const sb = est.bots[b.id];
-      const pos = /👍|bien|genial|excelente|perfecto|buenísimo|sirve|me gusta/i.test(txt), neg = /👎|mal|no sirve|inventad|viejo|equivocad|no me gusta/i.test(txt);
-      if (pos) sb.likes++; if (neg) sb.dislikes++;
-      const feed = leerFeed(b); feed.push({ t: NOW.toISOString(), tipo: "jefe", texto: txt.slice(0, 500), valor: pos ? 1 : neg ? -1 : 0 }); guardarFeed(b, feed.slice(-40));
-      log("Jonathan", `opinó sobre ${b.nombre}: ${txt.slice(0, 80)}`); await enviar(`📝 Anotado para ${b.nombre}. Lo aplica desde el entrenamiento de esta noche.`); continue;
-    }
-    const low = txt.toLowerCase().replace(/^\//, "").trim(); let mm;
-    if ((mm = txt.match(/^\/?(?:app|apps|software|programa(?:r|me|ción)?|desarroll(?:o|ar|ame))\s*:\s*([\s\S]{4,})/i) || txt.match(/^\/?app\s+((?:arregl|cambi|mejor|correg)\w*\s[\s\S]+)/i) || txt.match(/^(?:hac[eé](?:me)?|arm[aá](?:me)?|cre[aá](?:me)?|program[aá](?:me)?)\s+(una\s+(?:app|aplicaci[oó]n|p[aá]gina\s+web|calculadora|planilla\s+web|herramienta)\b[\s\S]*)/i))) { est.pendientes.push({ tipo: "app", orden: mm[1].trim().slice(0, 1500), t: NOW.toISOString() }); log("Jonathan", "le pidió una app al equipo de desarrollo"); await enviar("👷 Se la paso al equipo de desarrollo. Arrancan en esta vuelta."); continue; }
-    try { if (await ordenProgramador(txt)) continue; } catch (e) { await enviar("🛠️ No pude hablar con el programador: " + e.message); continue; }
-    if (/^\/?apps$/i.test(txt)) { const l = appsLista(); await enviar(l.length ? "📱 Apps del equipo de desarrollo:\n" + l.slice(0, 20).map(x => `• ${x.nombre} (${x.puntaje}/10) — ${x.url}`).join("\n") + "\n\nPara cambiar una: «app arreglar NOMBRE: qué cambiar»." : "Todavía no hay apps. Pedí una: «app: una calculadora de materiales para una losa»."); continue; }
-    if ((mm = txt.match(RX_CELU)) || RX_CELU_AUTO.test(txt)) { try { await ordenCelu(mm ? mm[1] : txt); } catch (e) { await enviar("📱 No pude hablar con el celu: " + e.message); } continue; }
-    if (/^(link|pin|oficina|abrir oficina|link de la oficina)$/.test(low)) { await enviar(linkOficina()); continue; }
-    if (/^(start|ayuda|help|hola|menu|menú)$/.test(low)) { await enviar(AYUDA()); continue; }
-    if (/^(estado|tablero|novedades)$/.test(low)) { await enviar(tablero()); continue; }
-    if ((mm = low.match(/^parte(?:\s+(?:de|del|de la))?\s+(.+)$/))) { const q = slug(mm[1]); const a = CFG.areas.find(x => x.id === q || slug(x.nombre).includes(q) || q.includes(x.id)); await enviar(a ? parteArea(a) : "No encontré esa área. Probá: «parte redes», «parte contaduría», «parte constructora»…"); continue; }
-    if (/^parte$/.test(low)) { await parteDiario(); continue; }
-    if (/^(bots|organigrama)$/.test(low)) { await enviar(`👑 ${CFG.dueno} (dueño)\n🎯 ${CFG.gerente.nombre}: ${CFG.gerente.mision}\n\n` + CFG.areas.map(a => { const bs = bots().filter(b => b.area === a.id); return `${a.icono} Gerente de ${a.nombre}\n` + (bs.length ? bs.map(b => `  • ${b.nombre} (${b.id}) · ${tipoTxt(b)} · ${horarioTxt(b)}`).join("\n") : "  (sin empleados)"); }).join("\n\n")); continue; }
-    if ((mm = txt.match(/^\/?crear\s+(?:area|área|oficina)\s+(.+)/i))) { const nombre = mm[1].trim().slice(0, 40); const id = slug(nombre); if (CFG.areas.some(a => a.id === id)) { await enviar("Esa área ya existe."); continue; } const a = { id, nombre, icono: "📁", color: COLORES[extra.areas.length % COLORES.length] }; extra.areas.push(a); CFG.areas.push(a); guardarExtra(); log("Jonathan", `abrió el área ${nombre}`); await enviar(`🏢 Abrí el área «${nombre}». Ahora contratale bots: «contratar: ...».`); continue; }
-    if ((mm = txt.match(/^\/?contrat(?:ar|á|a)\s*(en pausa|pausado)?\s*:?\s*(.+)/is))) { est.pendientes.push({ tipo: "contratar", orden: mm[2].trim().slice(0, 600), pausa: !!mm[1] || /\ben pausa\b/i.test(mm[2]), t: NOW.toISOString() }); log("Jonathan", "pidió contratar: " + mm[2].slice(0, 100)); continue; }
-    if ((mm = txt.match(/^\/?(pausar|activar|eliminar|borrar)\s+(?:el\s+)?(?:area|área|oficina)\s+(.+)/i))) {
-      const q = slug(mm[2]); const a = CFG.areas.find(x => x.id === q || slug(x.nombre) === q || slug(x.nombre).includes(q));
-      if (!a) { await enviar("No encontré esa área. Escribí «bots» para ver las áreas."); continue; }
-      const acc = mm[1].toLowerCase();
-      if (acc === "pausar") { if (!extra.areasPausadas.includes(a.id)) extra.areasPausadas.push(a.id); await enviar(`⏸ Área ${a.nombre} en pausa: sus bots no trabajan ni gastan hasta que escribas «activar area ${a.nombre}».`); }
-      else if (acc === "activar") { extra.areasPausadas = extra.areasPausadas.filter(x => x !== a.id); await enviar(`▶️ Área ${a.nombre} activa otra vez.`); }
-      else { extra.areasQuitadas.push(a.id); extra.bots = extra.bots.filter(b => b.area !== a.id); CFG.areas = CFG.areas.filter(x => x.id !== a.id); CFG.bots = CFG.bots.filter(b => b.area !== a.id); await enviar(`🗑️ Eliminé el área ${a.nombre} con sus bots.`); }
-      guardarExtra(); log("Jonathan", `${acc} el área ${a.nombre}`); continue;
-    }
-    if ((mm = low.match(/^(despedir|echar|eliminar|borrar)\s+(\S+)/))) { const b = botPorId(mm[2]); if (!b) { await enviar("No encontré ese bot. Escribí «bots» para ver los ID."); continue; } if (extra.bots.some(x => x.id === b.id)) extra.bots = extra.bots.filter(x => x.id !== b.id); else extra.quitados.push(b.id); guardarExtra(); CFG.bots = CFG.bots.filter(x => x.id !== b.id); log("Jonathan", `despidió a ${b.nombre}`); await enviar(`👋 ${b.nombre} ya no trabaja en la oficina.`); continue; }
-    if ((mm = low.match(/^horario\s+(\S+)\s+(\d{1,2}:\d{2})\s*(.*)$/))) { const b = botPorId(mm[1]); if (!b) { await enviar("No encontré ese bot."); continue; } const hora = mm[2].padStart(5, "0"); const ds = mm[3].trim(); let dias = "todos"; if (ds && !/todos/.test(ds)) dias = ds.split(/[ ,]+/).map(x => DIAS3.indexOf(x.slice(0, 3).replace("mié", "mie").replace("sáb", "sab"))).filter(x => x >= 0); extra.cambios[b.id] = { ...(extra.cambios[b.id] || {}), horario: { dias, hora } }; b.horario = { dias, hora }; guardarExtra(); await enviar(`🕘 ${b.nombre}: ${horarioTxt(b)}.`); continue; }
-    if ((mm = low.match(/^(correr|pausar|activar)\s+(\S+)/))) {
-      const b = botPorId(mm[2]) || bots().find(x => x.nombre.toLowerCase().includes(mm[2]));
-      if (!b) { await enviar("No encontré ese bot. Escribí «bots» para ver los ID."); continue; }
-      if (mm[1] === "pausar") { est.bots[b.id].pausado = true; await enviar(`⏸ ${b.nombre} en pausa.`); }
-      else if (mm[1] === "activar") { Object.assign(est.bots[b.id], { pausado: false, fallasSeguidas: 0, estado: "esperando" }); await enviar(`▶️ ${b.nombre} vuelve a trabajar.`); }
-      else { est.pendientes.push({ bot: b.id, orden: "", t: NOW.toISOString(), origen: "orden" }); await enviar(`🏃 ${b.nombre} arranca ahora.`); }
-      log("Jonathan", `${mm[1]} ${b.nombre}`); continue;
-    }
-    est.pendientes.push({ bot: null, orden: txt.slice(0, 600), t: NOW.toISOString(), origen: "orden" });
-    log("Jonathan", "mandó una orden por Telegram");
-  }
+  for (const u of ups) await atender(u);
   // le confirmo a Telegram que ya los leí (si no, el despertador cree que siguen sin atender)
   if (reales) await tg("getUpdates", { offset: est.tgOffset, limit: 1, timeout: 0 });
 }
+// El Gerente general ES el bot de Telegram: entiende la charla, conoce la oficina y hace que las cosas pasen.
 async function repartir(p) {
   const g = est.bots.gerente; g.estado = "trabajando";
-  const lista = bots().filter(b => b.tipo !== "externo" || (b.id === "celular_bot" && BUZON && PIN)).map(b => `- ${b.id}: ${b.nombre} (${areaDe(b).nombre}, ${tipoTxt(b)}) — ${b.mision}`).join("\n");
-  const r = await ia(`Sos el Gerente general de una oficina de bots. Tu jefe ordenó: "${p.orden}"
-Empleados:\n${lista}
-Elegí el empleado que mejor la cumple. Si ninguno encaja, elegí "gerente" (la hacés vos).
-Respondé SOLO un JSON: {"bot":"id o gerente","instruccion":"la orden clara para ese empleado","aviso":"frase corta para el jefe diciendo a quién se la pasaste","buscar":true si hace falta buscar en internet}`, { json: true });
-  const j = parsearJSON(r.texto) || {}; const b = botPorId(j.bot);
-  if (b && b.equipo === "dev") { await equipoDesarrollo(j.instruccion || p.orden); g.estado = "listo"; return; }
-  if (b && b.id === "celular_bot") { await ordenCelu(j.instruccion || p.orden); g.estado = "listo"; return; }
-  if (b && b.tipo === "codigo" && b.receta && b.receta.registro) { const n = await registrarLote(p.orden, b); if (n) { log("Gerente general", `le pasó ${n} anotaciones a ${b.nombre}`); g.estado = "listo"; return; } }
-  if (b && b.tipo !== "externo") {
-    log("Gerente general", `le pasó la orden a ${b.nombre}`); await enviar(`📥 ${j.aviso || `Se la paso a ${b.nombre}.`}`);
-    // los bots sin IA hacen su tarea tal cual (gratis); los de IA reciben la orden concreta
-    await trabajar(b, { orden: b.tipo === "codigo" ? "" : (j.instruccion || p.orden), origen: "orden" });
-  } else {
-    log("Gerente general", "hace la orden él mismo");
-    const sobreOficina = /\b(oficina|bot|bots|celu|celular|lista|gringo|conect|anda|funciona|instagram|telegram|buz[oó]n|ia|ias)\b/i.test(p.orden) || /^(por\s?qu[eé]|porque|qu[eé] pasa|no (me )?(anda|llega|funciona))/i.test(p.orden.trim());
-    let real = "";
-    if (sobreOficina) { let ce = ""; try { if (BUZON && PIN) ce = textoCelu(await buzon("/oficina/celu")); } catch {} real = `\nESTADO REAL DE LA OFICINA AHORA (usalo para responder, es la verdad):\n${ce ? "CELU BOT (Samsung A51 con Termux):\n" + ce + "\n" : ""}ÚLTIMOS MOVIMIENTOS:\n${est.log.slice(0, 25).map(x => `${x.t.slice(11, 16)} [${x.quien}] ${x.que}`).join("\n")}\nCÓMO FUNCIONA: la oficina corre gratis en GitHub Actions cada 30 min; el buzón de Cloudflare la despierta al instante cuando escribís. El celu bot es un Samsung A51 con Termux que maneja Instagram y Facebook por ADB inalámbrico; se comunica con el buzón cada 15 segundos. Si el celu cambia de red wifi, pierde el ADB y hay que volver a activarlo; la lista de Gringo la arma el celu cuando no está haciendo otra tarea. Órdenes útiles: «celu», «celu programa de hoy», «celu seguí», «celu reiniciar», «celu lista».\n`; }
-    const gen = { id: "gerente", nombre: "Gerente general", area: "direccion", buscar: !sobreOficina && j.buscar !== false, mision: sobreOficina ? "Responder la pregunta del jefe sobre SU oficina de bots, en base al estado real: qué pasa, por qué, y qué hacer (con la orden exacta para escribir)." : "Cumplir la orden del jefe con información real y actual.", entregable: sobreOficina ? "Respuesta corta (máximo 8 renglones): qué pasa, por qué, y el paso concreto." : "La respuesta completa y lista para usar.", criterios: ["Responde exactamente lo pedido", sobreOficina ? "Usa el estado real" : "Datos reales con fuente", "Claro y breve"], evitar: ["Recomendar herramientas pagas o servicios externos (Zapier, Make, etc.) salvo que lo pida", "Planes de desarrollo genéricos", "Inventar costos"] };
-    const res = await ia(promptBot(gen, (j.instruccion || p.orden) + real), { buscar: gen.buscar });
-    const f = (res.fuentes || []).slice(0, 5).map(x => "• " + x.url).join("\n");
-    await enviar(`🎯 Gerente general\n📌 Tu orden: ${p.orden}\n\n${res.texto}${f ? "\n\nFuentes:\n" + f : ""}`);
-    g.resumen = "Respondió una orden tuya";
+  const charla = [...leerPrivSeguro("charla", []), ...CHARLA].slice(-24).map(x => `[${String(x.t || "").slice(11, 16)}] ${x.de}: ${String(x.texto).slice(0, 500)}`).join("\n");
+  let celu = ""; try { if (BUZON && PIN) celu = textoCelu(await buzon("/oficina/celu")); } catch {}
+  const lista = bots().map(b => `- ${b.id}: ${b.nombre} (${areaDe(b).nombre}, ${tipoTxt(b)}) — ${String(b.mision).slice(0, 140)}`).join("\n");
+  const estados = bots().filter(b => est.bots[b.id] && est.bots[b.id].estado !== "esperando" && est.bots[b.id].estado !== "listo").map(b => `${b.nombre}: ${est.bots[b.id].estado}`).join(", ");
+  const r = await ia(`Sos el GERENTE GENERAL de la ${CFG.oficina} y hablás por Telegram con tu jefe, ${CFG.dueno}. Para él vos SOS la oficina: te habla como a una persona de confianza y vos entendés lo que quiere aunque lo escriba rápido, con errores o sin contexto (miralo en la charla reciente).
+SOBRE TU JEFE: ${CFG.contexto}
+HOY: ${DIAS[diaAR()]} ${fechaAR()} ${horaAR()} hs.
+
+CÓMO FUNCIONA LA OFICINA (la verdad, usala para explicar): corre gratis en GitHub Actions; el buzón de Cloudflare la despierta apenas él escribe (responde en 1 o 2 minutos). Los bots sin IA trabajan solos todo el día; los de IA trabajan cuando él los pide. El celu bot es un Samsung A51 con Termux que maneja Instagram y Facebook (cuentas JB y Gringobosio) y se comunica con el buzón; si el A51 cambia de wifi pierde la depuración inalámbrica (ADB) y alguien tiene que reactivarla en el A51; la lista de unfollow de Gringo la arma el celu cuando no está con otra tarea. La página de la oficina: ${PAGES} (con «link» le mandás el link que entra sin PIN).
+
+ESTADO REAL AHORA:
+${celu ? "CELU:\n" + celu.slice(0, 1500) + "\n" : "CELU: no pude leerlo ahora.\n"}${estados ? "Bots ocupados o con problemas: " + estados + "\n" : ""}Últimos movimientos:
+${est.log.slice(0, 18).map(x => `${x.t.slice(11, 16)} [${x.quien}] ${x.que}`).join("\n")}
+
+EMPLEADOS:
+${lista}
+
+COMANDOS QUE LA OFICINA YA ENTIENDE (los podés ejecutar vos por él):
+${AYUDA().slice(0, 3500)}
+
+CHARLA RECIENTE (lo último es lo que acaba de escribir):
+${charla}
+
+LO QUE ACABA DE ESCRIBIR: "${p.orden}"
+
+Decidí y respondé SOLO un JSON:
+{"respuesta": "lo que le contestás, como una persona: corto (1 a 6 renglones), directo, en rioplatense, sin saludos ni relleno. Si te hace una pregunta, contestala con el estado real. Si te pide algo, decile qué vas a hacer y quién.",
+ "acciones": [ {"tipo":"comando","texto":"un comando de la lista tal cual, ej: celu lista, torta, parte, gasté 5000 en nafta, app: ..., programador: ..."} o {"tipo":"bot","id":"id del empleado","orden":"instrucción clara y completa"} ],
+ "buscar": true solo si para responder VOS necesitás buscar algo actual en internet}
+Reglas: no repitas como loro lo que dijo; no recomiendes herramientas pagas ni servicios externos; no inventes estados; si no sabés algo, decilo y proponé cómo averiguarlo. Si ya respondiste algo en la charla y él insiste, buscá otra forma de resolverlo. Acciones vacías si solo hay que contestar.`, { json: true });
+  const j = parsearJSON(r.texto) || {};
+  let respuesta = String(j.respuesta || "").trim();
+  const acciones = Array.isArray(j.acciones) ? j.acciones.slice(0, 4) : [];
+  if (j.buscar && !acciones.length) {
+    const gen = { id: "gerente", nombre: "Gerente general", area: "direccion", buscar: true, mision: "Responder lo que pide el jefe con información real y actual.", entregable: "Respuesta completa, corta y lista para usar.", criterios: ["Responde exactamente lo pedido", "Datos reales con fuente", "Claro y breve"], evitar: ["Recomendar herramientas pagas", "Inventar"] };
+    const res = await ia(promptBot(gen, `${p.orden}\n\nCHARLA RECIENTE (para entender el contexto):\n${charla.slice(-2500)}`), { buscar: true });
+    const f = (res.fuentes || []).slice(0, 4).map(x => "• " + x.url).join("\n");
+    respuesta = res.texto + (f ? "\n\nFuentes:\n" + f : "");
   }
-  g.estado = "listo";
+  if (respuesta) await enviar(respuesta);
+  for (const a of acciones) {
+    try {
+      if (a.tipo === "comando" && a.texto) await atender({ update_id: null, web: true, interno: true, message: { chat: { id: est.dueno, type: "private" }, text: String(a.texto).slice(0, 1500) } });
+      else if (a.tipo === "bot") { const b = botPorId(a.id); if (!b) continue; if (b.equipo === "dev") await equipoDesarrollo(a.orden || p.orden); else if (b.id === "celular_bot") await ordenCelu(a.orden || p.orden); else if (b.tipo === "codigo" && b.receta && b.receta.registro) await registrarLote(a.orden || p.orden, b); else if (b.tipo !== "externo") await trabajar(b, { orden: b.tipo === "codigo" ? "" : (a.orden || p.orden), origen: "orden" }); }
+    } catch (e) { if (e.cupo) throw e; log("Gerente general", "no pude hacer una acción: " + e.message); await enviar("⚠️ Quise hacerlo pero falló: " + e.message); }
+  }
+  if (!respuesta && !acciones.length) await enviar("No te entendí bien. ¿Me lo decís con otras palabras?");
+  log("Gerente general", `respondió${acciones.length ? " y movió " + acciones.map(a => a.texto || a.id).join(", ").slice(0, 120) : ""}`);
+  g.resumen = "Habló con vos"; g.estado = "listo";
 }
 /* ---------- Gerente general: parte diario en 10 renglones, SIN IA, con recomendaciones ---------- */
 function recomendaciones() {
@@ -1273,7 +1304,7 @@ async function main() {
   if ((MODO === "auto" && horaAR() >= CFG.gerente.entrenamiento && est.hechos.entrenamiento !== fechaAR()) || MODO === "entrenar") { est.hechos.entrenamiento = fechaAR(); const ar = autoArreglo(); if (ar.length) await enviar(`🔧 Mantenimiento: reactivé para que reintenten mañana: ${ar.join(", ")}.`); await entrenar(); }
   est.bots.gerente.estado = est.pendientes.length ? "trabajando" : "esperando";
   est.actualizado = NOW.toISOString();
-  await guardarConv();
+  await guardarConv(); guardarCharla();
   escribirPriv("pendientes", est.pendientes); const pendPublicos = est.pendientes.length; est.pendientes = []; est.pendientesCant = pendPublicos;
   est.config = { telegram: !!TG_TOKEN, gemini: PROV.some(p => p.tipo === "gemini"), dueno: !!est.dueno, ias: [...new Set(PROV.map(p => p.nombre))] };
   escribir(FEST, est);
