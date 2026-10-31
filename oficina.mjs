@@ -89,6 +89,8 @@ if (ENV.SIN_POLLINATIONS !== "1") PROV.push({ id: "pollinations", nombre: "Polli
 if ((ENV.BUZON_URL || BASE.buzon) && (ENV.OFICINA_PIN || TG_TOKEN)) PROV.push({ id: "cfai", nombre: "Cloudflare Workers AI", tipo: "buzon", key: "-", modelos: ["@cf/meta/llama-3.3-70b-instruct-fp8-fast", "@cf/meta/llama-4-scout-17b-16e-instruct", "@cf/mistralai/mistral-small-3.1-24b-instruct", "@cf/qwen/qwen2.5-coder-32b-instruct"], maxFallas: 4 });
 if (ENV.MOCK_PROVIDERS) for (const id of ENV.MOCK_PROVIDERS.split(",")) PROV.push({ id, nombre: id, tipo: "openai", base: ENV.MOCK_OPENAI_BASE, key: "x", modelos: ["m1", "m2"] });
 
+// modelos gratis que pueden leer fotos (tickets, capturas del banco, fotos tuyas)
+const VISION = { groq: ["meta-llama/llama-4-scout-17b-16e-instruct", "meta-llama/llama-4-maverick-17b-128e-instruct"], openrouter: ["qwen/qwen2.5-vl-72b-instruct:free", "meta-llama/llama-4-maverick:free", "google/gemma-3-27b-it:free", "mistralai/mistral-small-3.2-24b-instruct:free"], nvidia: ["meta/llama-4-maverick-17b-128e-instruct", "meta/llama-3.2-90b-vision-instruct", "microsoft/phi-4-multimodal-instruct"], github: ["openai/gpt-4.1-mini", "openai/gpt-4o", "openai/gpt-4o-mini", "meta/Llama-4-Scout-17B-16E-Instruct"], sambanova: ["Llama-4-Maverick-17B-128E-Instruct"], huggingface: ["meta-llama/Llama-4-Scout-17B-16E-Instruct"] };
 const agotado = clave => est.ia.agotado[clave] === true || (typeof est.ia.agotado[clave] === "number" && est.ia.agotado[clave] > Date.now());
 const marcar = (clave, hastaMs) => { est.ia.agotado[clave] = hastaMs ? Date.now() + hastaMs : true; };
 const usar = id => { est.consumo.por[id] = (est.consumo.por[id] || 0) + 1; };
@@ -167,18 +169,18 @@ async function ia(prompt, { buscar = false, json = false, imagen = null, largo =
   if (est.consumo.consultas >= CFG.limites.consultasPorDia || consultasCorrida >= CFG.limites.consultasPorCorrida) throw Object.assign(new Error("se llegó al tope de consultas de hoy"), { cupo: true });
   if (buscar && est.consumo.busquedas >= CFG.limites.busquedasPorDia) throw Object.assign(new Error("se llegó al tope de búsquedas de hoy"), { cupo: true });
   let lista;
-  if (imagen) lista = [...PROV.filter(p => p.tipo === "gemini"), ...PROV.filter(p => p.id === "github")]; // las que pueden ver fotos
+  if (imagen) lista = [...PROV.filter(p => p.tipo === "gemini"), ...PROV.filter(p => VISION[p.id.replace(/\d+$/, "")])]; // las que pueden ver fotos
   else if (buscar) lista = [...PROV.filter(p => p.buscar), ...PROV.filter(p => p.buscarModelo)];
   else { const otros = PROV.filter(p => p.tipo !== "gemini" && !p.ultimo); const gem = PROV.filter(p => p.tipo === "gemini"); rueda++; const rot = [...otros.slice(rueda % (otros.length || 1)), ...otros.slice(0, rueda % (otros.length || 1))]; lista = largo ? [...gem, ...rot, ...PROV.filter(p => p.ultimo)] : [...rot, ...gem, ...PROV.filter(p => p.ultimo)]; }
   if (!lista.length) throw Object.assign(new Error(imagen ? "no hay ninguna IA que pueda ver fotos conectada" : buscar ? "no hay ninguna IA con búsqueda conectada (falta GEMINI_API_KEY)" : "no hay ninguna IA conectada"), { cupo: true });
-  const errores = [];
+  const errores = []; if (imagen) consultasCorrida = Math.min(consultasCorrida, CFG.limites.consultasPorCorrida - 12);
   for (const p of lista) {
     if (agotado(p.id)) continue;
     let modelos;
     if (buscar && p.buscarModelo) modelos = [p.buscarModelo];
     else if (p.tipo === "gemini") { modelos = await modelosGemini(p); if (buscar || imagen) { const todos = p.todos || modelos; const pref = [/^gemini-2\.5-flash$/, /^gemini-2\.5-flash-lite$/, /^gemini-2\.0-flash$/, /^gemini-flash-latest$/, /^gemini-2\.5-pro$/]; const prim = pref.flatMap(r => todos.filter(m => r.test(m))); modelos = [...new Set([...prim, "gemini-2.5-flash", "gemini-2.5-flash-lite", ...modelos])].slice(0, 7); } }
     else if (p.gratis) modelos = await modelosOpenRouter(p);
-    else if (imagen && p.id === "github") modelos = ["openai/gpt-4o-mini", "openai/gpt-4.1-mini"];
+    else if (imagen && VISION[p.id.replace(/\d+$/, "")]) modelos = VISION[p.id.replace(/\d+$/, "")];
     else modelos = p.modelos || [];
     let fallasProv = 0;
     for (const modelo of modelos) {
@@ -683,14 +685,14 @@ function registrosDe(b) {
   return partes.join("\n\n");
 }
 function promptBot(b, orden, critica) {
-  const lecc = leerLecc(b).trim(); const reg = registrosDe(b);
+  const lecc = leerLecc(b).trim(); const reg = registrosDe(b); const trucos = leerPrivSeguro("trucos_" + b.id, []);
   return `Sos "${b.nombre}", empleado de la ${CFG.oficina} (área ${areaDe(b).nombre}). Tu ÚNICA tarea es esta y tenés que hacerla muy bien.
 SOBRE TU JEFE: ${CFG.contexto}
 HOY ES: ${DIAS[diaAR()]} ${fechaAR()}, ${horaAR()} hs (Argentina).
 TU MISIÓN: ${b.mision}
 ${b.personalidad ? `TU PERFIL: ${b.personalidad}\n` : ""}${b.proceso ? `CÓMO TRABAJÁS (seguí estos pasos en orden):\n${b.proceso.map((x, i) => `${i + 1}. ${x}`).join("\n")}\n` : ""}QUÉ ENTREGAR: ${b.entregable || "Un resultado concreto y listo para usar."}
 CÓMO TE EVALÚAN: ${(b.criterios || ["Concreto", "Útil", "Sin relleno"]).join("; ")}.
-${b.evitar ? `NUNCA: ${b.evitar.join("; ")}.\n` : ""}${orden ? `\nORDEN ESPECIAL DE TU JEFE (tiene prioridad): ${orden}\n` : ""}${reg ? `\nDATOS REALES DE TU JEFE (usalos, son reales):\n${reg.slice(0, 12000)}\n` : ""}${lecc ? `\nLO QUE APRENDISTE (aplicalo siempre):\n${lecc}\n` : ""}${critica ? `\nEL CONTROL DE CALIDAD RECHAZÓ TU VERSIÓN ANTERIOR POR ESTO, CORREGILO:\n${critica}\n` : ""}
+${b.evitar ? `NUNCA: ${b.evitar.join("; ")}.\n` : ""}${orden ? `\nORDEN ESPECIAL DE TU JEFE (tiene prioridad): ${orden}\n` : ""}${reg ? `\nDATOS REALES DE TU JEFE (usalos, son reales):\n${reg.slice(0, 12000)}\n` : ""}${lecc ? `\nLO QUE APRENDISTE (aplicalo siempre):\n${lecc}\n` : ""}${trucos.length ? `\nTRABAJOS TUYOS QUE A TU JEFE LE ENCANTARON (imitá ese estilo, formato y nivel de detalle, con datos nuevos):\n${trucos.slice(-2).map((x, i) => `--- ejemplo ${i + 1} ---\n${x.ejemplo.slice(0, 1500)}`).join("\n")}\n` : ""}${critica ? `\nEL CONTROL DE CALIDAD RECHAZÓ TU VERSIÓN ANTERIOR POR ESTO, CORREGILO:\n${critica}\n` : ""}
 REGLAS:
 ${b.buscar ? "- Buscá en internet información ACTUAL y usá solo datos que encontraste, con su fuente (sitio y link).\n- Si un dato no lo encontraste, decilo en vez de inventarlo." : "- No inventes datos concretos como precios, fechas o nombres de lugares que no puedas saber; si hace falta, dalos como orientativos."}
 - Español rioplatense, directo, sin saludos ni relleno. Empezá con el entregable.${b.sinLimite ? "" : " Máximo 2500 caracteres."}`;
@@ -883,6 +885,8 @@ const AYUDA = () => `Soy el Gerente general de la ${CFG.oficina}. Escribime:
 • «servicio luz vence 10 35000» — te aviso antes de cada vencimiento.
 • recordame mañana a las 9 pagar el monotributo · recordatorios · cumple de mamá 15/11 · fechas
 • consejo — el contador te dice cómo venís y dónde cortar · inversiones — qué hacer con lo que ahorrás
+• 🎤 Mandame audios: los paso a texto y los entiendo igual que si escribieras.
+• memoria — lo que el Gerente se acuerda de vos (aprende solo de la charla) · olvidá N — borra un dato
 • perfil: me tengo que cuidar del colesterol — lo tienen en cuenta los bots de salud y plata (privado)
 • torta (gráfico e informe de gastos del mes) · torta semana · torta mes pasado · servicios · comidas · ejercicio · borrar último gasto
 • 📸 Foto de un ticket con la palabra «comprobante»: lo leo y lo anoto. Otra foto tuya: el asesor de imagen te da su opinión.
@@ -922,6 +926,22 @@ async function bajarFoto(fileId) {
   const f = await tg("getFile", { file_id: fileId }); if (!f || !f.file_path) throw new Error("no pude bajar la foto de Telegram");
   const r = await traer(`${URLS.tg}/file/bot${TG_TOKEN}/${f.file_path}`, {}, 60000); if (!r.ok) throw new Error("Telegram no dio la foto (" + r.status + ")");
   const b64 = Buffer.from(await r.arrayBuffer()).toString("base64"); return { mime: /\.png$/i.test(f.file_path) ? "image/png" : "image/jpeg", b64 }; // la foto NO se guarda en ningún lado
+}
+// audios de Telegram → texto (Whisper gratis en Groq; si no, Cloudflare por el buzón). El audio no se guarda.
+async function transcribir(fileId) {
+  const f = await tg("getFile", { file_id: fileId }); if (!f || !f.file_path) throw new Error("no pude bajar el audio de Telegram");
+  const r0 = await traer(`${URLS.tg}/file/bot${TG_TOKEN}/${f.file_path}`, {}, 60000); if (!r0.ok) throw new Error("Telegram no dio el audio");
+  const buf = Buffer.from(await r0.arrayBuffer()); const nombre = (f.file_path.split("/").pop() || "audio.ogg").replace(/\.oga$/i, ".ogg");
+  const errores = [];
+  for (const k of claves("GROQ_API_KEY")) for (const modelo of ["whisper-large-v3-turbo", "whisper-large-v3"]) {
+    try {
+      const fd = new FormData(); fd.append("file", new Blob([buf]), nombre); fd.append("model", modelo); fd.append("language", "es"); fd.append("response_format", "json");
+      const r = await traer((ENV.GROQ_BASE || "https://api.groq.com/openai/v1") + "/audio/transcriptions", { method: "POST", headers: { authorization: "Bearer " + k }, body: fd }, 90000);
+      const j = await r.json().catch(() => ({})); if (r.ok && j.text) { usar("groq"); return String(j.text).trim(); }
+      errores.push(`${modelo}: ${r.status} ${(j.error && j.error.message) || ""}`.slice(0, 120));
+    } catch (e) { errores.push(modelo + ": " + e.message); }
+  }
+  throw new Error(errores.length ? "no pude pasar el audio a texto (" + errores.slice(-1)[0] + ")" : "para entender audios falta la clave de Groq (GROQ_API_KEY)");
 }
 function pagarServicio(nombre, monto, detalle) {
   const lista = leerPriv("servicios", []); const q = slug(nombre); const mes = fechaAR().slice(0, 7);
@@ -992,6 +1012,8 @@ async function registrar(txt, desdeBot) {
   if (/^(mis\s+)?(fechas|cumplea[ñn]os|cumples)$/i.test(txt)) { const f = leerPriv("fechas", []).sort((a, z) => a.mm - z.mm || a.dd - z.dd); await enviar(f.length ? "🎂 Tus fechas:\n" + f.map(x => `• ${String(x.dd).padStart(2, "0")}/${String(x.mm).padStart(2, "0")} · ${x.tipo} de ${x.quien}`).join("\n") : "No tenés fechas. Ej: «cumple de mamá 15/11»."); return true; }
   if ((mm = txt.match(/^(?:mi\s+)?perfil\s*:\s*(.{3,})$/is))) { const pf = leerPriv("perfil", []); pf.push({ t: NOW.toISOString(), texto: mm[1].trim().slice(0, 400) }); escribirPriv("perfil", pf.slice(-40)); await enviar(`🔒 Anotado en tu perfil privado: «${mm[1].trim().slice(0, 120)}». El nutricionista, el trainer y el consejero financiero lo van a tener en cuenta siempre.`); return true; }
   if (/^(ver\s+)?(mi\s+)?perfil$/i.test(txt)) { const pf = leerPriv("perfil", []); await enviar(pf.length ? "🔒 Tu perfil privado:\n" + pf.map((x, i) => `${i + 1}. ${x.texto}`).join("\n") + "\n\nPara sumar algo: «perfil: ...». Para borrar todo: «borrar perfil»." : "Tu perfil está vacío. Contame algo así: «perfil: me tengo que cuidar del colesterol»."); return true; }
+  if (/^(memoria|qu[eé] sab[eé]s de m[ií]|qu[eé] te acord[aá]s)\??$/i.test(txt)) { const pf = leerPriv("perfil", []); await enviar(pf.length ? "🧠 Lo que me acuerdo de vos (privado, encriptado):\n" + pf.map((x, i) => `${i + 1}. ${x.texto}`).join("\n") + "\n\nSi algo está mal: «olvidá N»." : "🧠 Todavía no me acuerdo de nada tuyo. Contame cosas y las voy anotando solo."); return true; }
+  { const mo = txt.match(/^olvid[aá](?:te)?\s+(?:el\s+)?(\d+)$/i); if (mo) { const pf = leerPriv("perfil", []); const k = +mo[1] - 1; if (!pf[k]) { await enviar("No tengo ese número. Escribí «memoria» para ver la lista."); return true; } const [x] = pf.splice(k, 1); escribirPriv("perfil", pf); await enviar(`🗑️ Me olvidé: «${x.texto}».`); return true; } }
   if (/^borrar\s+(mi\s+)?perfil$/i.test(txt)) { escribirPriv("perfil", []); await enviar("🗑️ Borré tu perfil privado."); return true; }
   if ((mm = txt.match(/^servicio\s+(.+?)\s+vence\s+(?:el\s+)?(?:d[ií]a\s+)?(\d{1,2})\b\s*(.*)$/i))) { const lista = leerPriv("servicios", []); const nombre = mm[1].trim().slice(0, 30); const ant = lista.find(x => slug(x.nombre) === slug(nombre)); const monto = leerMonto(mm[3]); if (ant) Object.assign(ant, { dia: Number(mm[2]), monto: monto || ant.monto }); else lista.push({ nombre, dia: Number(mm[2]), monto, pagos: {} }); escribirPriv("servicios", lista); await enviar(`🏠 ${ant ? "Actualicé" : "Agregué"} ${nombre}: vence el ${mm[2]} de cada mes${monto ? ", aprox. " + pesos(monto) : ""}. Te aviso 3 días antes.`); return true; }
   if ((mm = txt.match(/^(?:borrar|quitar|sacar)\s+servicio\s+(.+)$/i))) { const lista = leerPriv("servicios", []); const n = lista.length; const q = slug(mm[1]); escribirPriv("servicios", lista.filter(x => slug(x.nombre) !== q)); await enviar(n !== lista.filter(x => slug(x.nombre) !== q).length ? "🗑️ Listo, lo saqué." : "No encontré ese servicio. Escribí «servicios»."); return true; }
@@ -1054,7 +1076,12 @@ async function ordenProgramador(txt) {
 const linkOficina = () => `🔑 Tu oficina, ya con tu PIN adentro (abrilo una vez en cada celu o compu y queda guardado para siempre):\nhttps://uwuubuntu83-dotcom.github.io/oficina-bosio/#pin=${PIN}\n\nNo lo reenvíes: con ese link se manda a la oficina. Si lo perdés, escribí «link».`;
 async function atender(u) {
     if (u.update_id != null) est.tgOffset = u.update_id + 1;
-    const m = u.message || u.edited_message; if (!m || (!m.text && !m.photo)) return;
+    const m = u.message || u.edited_message; if (!m) return;
+    if (!m.text && (m.voice || m.audio || m.video_note) && m.chat.id === est.dueno) {
+      try { const t = await transcribir((m.voice || m.audio || m.video_note).file_id); if (!t) return; m.text = t; CONV.push({ de: "vos (audio)", texto: "🎤 " + t }); log("Mesa de entrada", "entendió un audio (no se guarda)"); if (t.length > 250) await enviar("🎤 Te entendí: «" + t.slice(0, 300) + (t.length > 300 ? "…" : "") + "»"); u.web = true; }
+      catch (e) { await enviar("🎤 " + e.message + ". Mandámelo escrito."); return; }
+    }
+    if (!m.text && !m.photo) return;
     const chat = m.chat.id; const txt = (m.text || m.caption || "").trim();
     if (!est.dueno) { if (m.chat.type === "private") { est.dueno = chat; log("Gerente general", `quedó vinculado el Telegram de ${m.from && m.from.first_name || "el dueño"}`); await enviar(`✅ Listo, ${m.from && m.from.first_name || "jefe"}: quedaste como dueño de la oficina. Solo te obedezco a vos.\n\n${AYUDA()}`); } return; }
     if (chat !== est.dueno) return;
@@ -1074,6 +1101,7 @@ async function atender(u) {
       const b = botPorId(resp); const sb = est.bots[b.id];
       const pos = /👍|bien|genial|excelente|perfecto|buenísimo|sirve|me gusta/i.test(txt), neg = /👎|mal|no sirve|inventad|viejo|equivocad|no me gusta/i.test(txt);
       if (pos) sb.likes++; if (neg) sb.dislikes++;
+      if (pos && m.reply_to_message && m.reply_to_message.text && b.tipo === "ia") { const tr = leerPrivSeguro("trucos_" + b.id, []); tr.push({ t: NOW.toISOString(), ejemplo: m.reply_to_message.text.slice(0, 1800) }); escribirPriv("trucos_" + b.id, tr.slice(-3)); }
       const feed = leerFeed(b); feed.push({ t: NOW.toISOString(), tipo: "jefe", texto: txt.slice(0, 500), valor: pos ? 1 : neg ? -1 : 0 }); guardarFeed(b, feed.slice(-40));
       log("Jonathan", `opinó sobre ${b.nombre}: ${txt.slice(0, 80)}`); await enviar(`📝 Anotado para ${b.nombre}. Lo aplica desde el entrenamiento de esta noche.`); return;
     }
@@ -1137,7 +1165,7 @@ async function repartir(p) {
   const estados = bots().filter(b => est.bots[b.id] && est.bots[b.id].estado !== "esperando" && est.bots[b.id].estado !== "listo").map(b => `${b.nombre}: ${est.bots[b.id].estado}`).join(", ");
   const r = await ia(`Sos el GERENTE GENERAL de la ${CFG.oficina} y hablás por Telegram con tu jefe, ${CFG.dueno}. Para él vos SOS la oficina: te habla como a una persona de confianza y vos entendés lo que quiere aunque lo escriba rápido, con errores o sin contexto (miralo en la charla reciente).
 SOBRE TU JEFE: ${CFG.contexto}
-HOY: ${DIAS[diaAR()]} ${fechaAR()} ${horaAR()} hs.
+${(() => { const pf = leerPrivSeguro("perfil", []); return pf.length ? "LO QUE TE ACORDÁS DE ÉL (tenelo siempre en cuenta):\n" + pf.map(x => "- " + x.texto).join("\n") + "\n" : ""; })()}HOY: ${DIAS[diaAR()]} ${fechaAR()} ${horaAR()} hs.
 
 CÓMO FUNCIONA LA OFICINA (la verdad, usala para explicar): corre gratis en GitHub Actions; el buzón de Cloudflare la despierta apenas él escribe (responde en 1 o 2 minutos). Los bots sin IA trabajan solos todo el día; los de IA trabajan cuando él los pide. El celu bot es un Samsung A51 con Termux que maneja Instagram y Facebook (cuentas JB y Gringobosio) y se comunica con el buzón; si el A51 cambia de wifi pierde la depuración inalámbrica (ADB) y alguien tiene que reactivarla en el A51; la lista de unfollow de Gringo la arma el celu cuando no está con otra tarea. La página de la oficina: ${PAGES} (con «link» le mandás el link que entra sin PIN).
 
@@ -1159,10 +1187,13 @@ LO QUE ACABA DE ESCRIBIR: "${p.orden}"
 Decidí y respondé SOLO un JSON:
 {"respuesta": "lo que le contestás, como una persona: corto (1 a 6 renglones), directo, en rioplatense, sin saludos ni relleno. Si te hace una pregunta, contestala con el estado real. Si te pide algo, decile qué vas a hacer y quién.",
  "acciones": [ {"tipo":"comando","texto":"un comando de la lista tal cual, ej: celu lista, torta, parte, gasté 5000 en nafta, app: ..., programador: ..."} o {"tipo":"bot","id":"id del empleado","orden":"instrucción clara y completa"} ],
- "buscar": true solo si para responder VOS necesitás buscar algo actual en internet}
+ "buscar": true solo si para responder VOS necesitás buscar algo actual en internet,
+ "recordar": ["SOLO si en lo que escribió aparece un dato NUEVO y DURADERO sobre él que conviene no olvidar (gustos, horarios, salud, metas, familia, trabajo, cómo quiere que le hablen). Frase corta en tercera persona. Si no hay nada nuevo, lista vacía. Nunca guardes claves, números de tarjeta ni contraseñas."]}
 Reglas: no repitas como loro lo que dijo; no recomiendes herramientas pagas ni servicios externos; no inventes estados; si no sabés algo, decilo y proponé cómo averiguarlo. Si ya respondiste algo en la charla y él insiste, buscá otra forma de resolverlo. Acciones vacías si solo hay que contestar.`, { json: true });
   const j = parsearJSON(r.texto) || {};
   let respuesta = String(j.respuesta || "").trim();
+  { const nuevos = (Array.isArray(j.recordar) ? j.recordar : []).map(x => String(x).trim()).filter(x => x.length > 6 && x.length < 300 && !/(clave|contrase|token|tarjeta|cvv|\b\d{12,}\b)/i.test(x));
+    if (nuevos.length) { const pf = leerPrivSeguro("perfil", []); const ya = new Set(pf.map(x => x.texto.toLowerCase())); const add = nuevos.filter(x => { const k = x.toLowerCase(); if (ya.has(k)) return false; ya.add(k); return true; }).slice(0, 3); if (add.length) { escribirPriv("perfil", [...pf, ...add.map(texto => ({ t: NOW.toISOString(), texto, auto: true }))].slice(-60)); log("Gerente general", `se acordó de ${add.length} cosa(s) tuya(s) (privado)`); } } }
   const acciones = Array.isArray(j.acciones) ? j.acciones.slice(0, 4) : [];
   if (j.buscar && !acciones.length) {
     const gen = { id: "gerente", nombre: "Gerente general", area: "direccion", buscar: true, mision: "Responder lo que pide el jefe con información real y actual.", entregable: "Respuesta completa, corta y lista para usar.", criterios: ["Responde exactamente lo pedido", "Datos reales con fuente", "Claro y breve"], evitar: ["Recomendar herramientas pagas", "Inventar"] };
@@ -1284,11 +1315,12 @@ async function main() {
   if (MODO.startsWith("correr:")) est.pendientes.push({ bot: MODO.slice(7), orden: "", origen: "manual" });
   const quedan = [];
   for (const p of est.pendientes) {
+    if (p.reintentar && Date.parse(p.reintentar) > NOW.getTime()) { quedan.push(p); continue; }
     try {
       if (p.tipo === "comprobante") await leerComprobante(p);
       else if (p.tipo === "app") await equipoDesarrollo(p.orden);
       else if (p.tipo === "contratar") { const nb = await contratar(p.orden); if (p.pausa && nb) { est.bots[nb.id].pausado = true; await enviar(`⏸ «${nb.nombre}» queda en pausa hasta que escribas «activar ${nb.id}».`); } }
-      else if (p.bot) { const b = botPorId(p.bot); if (b) { const ok = await trabajar(b, { orden: p.orden, origen: p.origen || "orden", foto: p.foto }); if (!ok && est.bots[b.id].estado === "postergado") quedan.push(p); } }
+      else if (p.bot) { const b = botPorId(p.bot); if (b) { const ok = await trabajar(b, { orden: p.orden, origen: p.origen || "orden", foto: p.foto }); if (!ok && est.bots[b.id].estado === "postergado") quedan.push({ ...p, reintentar: b.buscar ? new Date(NOW.getTime() + 120 * 60e3).toISOString() : p.origen === "orden" ? null : new Date(NOW.getTime() + 90 * 60e3).toISOString() }); } }
       else await repartir(p);
     } catch (e) { if (e.cupo) { quedan.push(p); log("Gerente general", "orden en espera por cupo: " + e.message); } else { log("Gerente general", "no pude con la orden: " + e.message); await enviar(`⚠️ No pude cumplir «${String(p.orden || p.bot).slice(0, 80)}»: ${e.message}`); } }
   }
