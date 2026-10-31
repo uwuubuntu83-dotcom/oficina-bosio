@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 32,
+   "corridas": 33,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-10-31T04:26:54.893Z",
+   "ultimaCorrida": "2026-10-31T04:56:52.149Z",
    "resumen": "💵 Dólar hoy (10:35 hs)\n• Oficial: compra $1510 · venta $1560\n• Blue: compra $1545 · venta $1565\n• Bolsa: compra $1557.8 · venta $1568.8\n• Contado con liquidación: compra $1649.8 · venta $1650.3\n• Mayorista: compra $1530",
    "informe": "data/informes/dolar/2026-10-30-1035.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1653.91,
      "tarjeta": 2028
     },
-    "ultimoChequeo": "2026-10-31T04:26:54.893Z",
+    "ultimoChequeo": "2026-10-31T04:56:52.149Z",
     "resumenFecha": "2026-10-30",
     "hist": {
      "2026-10-30": {
@@ -370,7 +370,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T04:26:54.893Z",
+   "ultimaCorrida": "2026-10-31T04:56:52.149Z",
    "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
@@ -1368,7 +1368,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
    "ultimaCorrida": "2026-10-31T01:55:56.980Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 151 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 181 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -1513,7 +1513,7 @@
   },
   "vencimientos": {
    "estado": "listo",
-   "corridas": 7,
+   "corridas": 8,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1522,12 +1522,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-31T01:58:53.057Z",
-   "resumen": "🧾 Vencimientos e impuestos\n\n• ARCA prorrogó el vencimiento de Ganancias: hasta cuándo se podrá presentar la declaración jurada (NEA HOY)\n  https://news.google.com/rss/articles/CBMixAFBVV95cUxQWlVBZ1d3T2NSSGpYaG80a3ZuTmh",
-   "informe": "data/informes/vencimientos/2026-10-30-2258.md",
+   "ultimaCorrida": "2026-10-31T04:56:52.149Z",
+   "resumen": "🧾 Vencimientos e impuestos\n\n• Argentina al l&#237;mite de los d&#243;lares: pagar intereses y volver a empezar, la trampa que amenaza a Caputo (Perico Noticias)\n  https://periconoticias.com.ar/argentina-al-limite-de-los",
+   "informe": "data/informes/vencimientos/2026-10-31-0156.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "argentina al l&#237;mite de los d&#243;lares: pagar intereses y volver a empezar, la tramp",
+     "arca prorrog&#243; el plazo para entrar al plan especial de pago para pymes hasta el 30 de",
+     "los contribuyentes pueden regularizar los pagos atrasados mediante un plan de facilidades ",
+     "arca extendi&#243; el vencimiento de ganancias: cu&#225;nto tiempo queda para presentar la",
+     "arca modifica la emisi&#243;n de facturas del monotributo social desde noviembre",
+     "bancos cerrados en noviembre: qu&#233; d&#237;as no abrir&#225;n y cu&#225;ndo vuelven a a",
      "arca prorrogó el vencimiento de ganancias: hasta cuándo se podrá presentar la declaración ",
      "arca extendi&#243; los vencimientos de ganancias y de los planes de pago para sectores esp",
      "arca extiende hasta noviembre el plazo de ganancias 2025",
@@ -1564,7 +1570,7 @@
      "arca modifica la emisión de facturas del monotributo social desde noviembre",
      "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
     ],
-    "ultimoChequeo": "2026-10-31T01:58:53.057Z",
+    "ultimoChequeo": "2026-10-31T04:56:52.149Z",
     "semana": [
      {
       "titulo": "ARCA prorrogó vencimientos de Ganancias y facilidades",
@@ -1637,13 +1643,49 @@
       "link": "https://www.infozona.com.ar/pagas-el-monotributo-desde-el-celular-la-nueva-opcion-rapida-que-habilito-arca-para-el-proximo-vencimiento/",
       "fuente": "INFOZONA",
       "t": 1793411950433
+     },
+     {
+      "titulo": "Argentina al l&#237;mite de los d&#243;lares: pagar intereses y volver a empezar, la trampa que amenaza a Caputo",
+      "link": "https://periconoticias.com.ar/argentina-al-limite-de-los-dolares-pagar-intereses-y-volver-a-empezar-la-trampa-que-amenaza-a-caputo/",
+      "fuente": "Perico Noticias",
+      "t": 1793422631052
+     },
+     {
+      "titulo": "ARCA prorrog&#243; el plazo para entrar al plan especial de pago para pymes hasta el 30 de diciembre",
+      "link": "https://www.ambito.com/economia/arca-prorrogo-el-plazo-entrar-al-plan-especial-pago-pymes-el-30-diciembre-n6339655",
+      "fuente": "&#193;mbito Financiero",
+      "t": 1793422631052
+     },
+     {
+      "titulo": "Los contribuyentes pueden regularizar los pagos atrasados mediante un plan de facilidades sin anticipo.",
+      "link": "https://www.eldestapeweb.com/sociedad/deuda-arca-pagar-20-cuotas-atrasos-monotributo-20261029133913",
+      "fuente": "El Destape",
+      "t": 1793422631052
+     },
+     {
+      "titulo": "ARCA extendi&#243; el vencimiento de Ganancias: cu&#225;nto tiempo queda para presentar la declaraci&#243;n jurada",
+      "link": "https://www.cronista.com/economia-politica/arca-extendio-el-vencimiento-de-ganancias-cual-es-la-nueva-fecha/",
+      "fuente": "El Cronista",
+      "t": 1793422631052
+     },
+     {
+      "titulo": "ARCA modifica la emisi&#243;n de facturas del Monotributo Social desde noviembre",
+      "link": "https://www.elonce.com/sociedad/arca-modifica-la-emision-de-facturas-del-monotributo-social-desde-noviembre.htm",
+      "fuente": "Elonce.com",
+      "t": 1793422631052
+     },
+     {
+      "titulo": "Bancos cerrados en noviembre: qu&#233; d&#237;as no abrir&#225;n y cu&#225;ndo vuelven a atender",
+      "link": "https://www.newsdigitales.com/nota/348715/bancos-cerrados-en-noviembre-que-dias-no-abriran-y-cuando-vuelven-a-atender/",
+      "fuente": "newsdigitales",
+      "t": 1793422631052
      }
     ]
    }
   },
   "tarifas": {
    "estado": "listo",
-   "corridas": 8,
+   "corridas": 9,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1652,12 +1694,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-31T01:58:53.057Z",
-   "resumen": "🧾 Aumentos de servicios\n\n• 'Peque&#241;a': Max Henr&#237;quez, experto en meteorolog&#237;a, entrega esperanzador pron&#243;stico del clima en Bogot&#225; para los pr&#243;ximos d&#237;as (Red+ Noticias)\n  https://redma",
-   "informe": "data/informes/tarifas/2026-10-30-2258.md",
+   "ultimaCorrida": "2026-10-31T04:56:52.149Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• La tuberculosis avanza en Argentina y alertan que algunos indicadores retrocedieron 45 a&#241;os: “Est&#225; muriendo m&#225;s gente” (elDiarioAR.com)\n  https://www.eldiarioar.com/sociedad/tub",
+   "informe": "data/informes/tarifas/2026-10-31-0156.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "la tuberculosis avanza en argentina y alertan que algunos indicadores retrocedieron 45 a&#",
+     "guido sandleris: &#171;sin el equilibrio fiscal y sin el orden monetario, hoy estar&#237;a",
+     "el ilustre cementerio de madrid con monumentales panteones: all&#237; reposan primo de riv",
+     "otro tarifazo: la luz y el gas suben casi el doble que la inflaci&#243;n y milei recorta e",
+     "pescado m&#225;s caro por fen&#243;meno el ni&#241;o: la escasez de especies altera los pr",
+     "aumento de servicios en noviembre: nuevos valores para la luz y el gas",
      "'peque&#241;a': max henr&#237;quez, experto en meteorolog&#237;a, entrega esperanzador pro",
      "el riesgo pa&#237;s aument&#243; un 6,6% este viernes y alcanz&#243; su mayor marca desde ",
      "corte de agua hoy, viernes 30 de octubre, en distritos de lima: zonas y horarios, según re",
@@ -1707,7 +1755,7 @@
      "golpe al bolsillo: aprueban fuerte aumento en los combustibles",
      "todo aumenta en noviembre: colectivos, prepagas, alquileres, colegios y servicios, uno por"
     ],
-    "ultimoChequeo": "2026-10-31T01:58:53.057Z",
+    "ultimoChequeo": "2026-10-31T04:56:52.149Z",
     "semana": [
      {
       "titulo": "Cortes de luz en C&#243;rdoba para este s&#225;bado: zonas afectadas por mantenimiento, poda y obras",
@@ -1780,6 +1828,42 @@
       "link": "https://www.perfil.com/economia/aumentan-la-luz-y-el-gas-en-noviembre-cuanto-subiran-las-tarifas-anbVp2c6aL0M",
       "fuente": "Perfil",
       "t": 1793411952639
+     },
+     {
+      "titulo": "La tuberculosis avanza en Argentina y alertan que algunos indicadores retrocedieron 45 a&#241;os: “Est&#225; muriendo m&#225;s gente”",
+      "link": "https://www.eldiarioar.com/sociedad/tuberculosis-avanza-argentina-alertan-indicadores-retrocedieron-45-anos-muriendo-gente_1_13625037.html",
+      "fuente": "elDiarioAR.com",
+      "t": 1793422633155
+     },
+     {
+      "titulo": "Guido Sandleris: &#171;sin el equilibrio fiscal y sin el orden monetario, hoy estar&#237;amos en una crisis cambiaria&#187;",
+      "link": "https://puntoapunto.com.ar/guido-sandleris-sin-el-equilibrio-fiscal-y-sin-el-orden-monetario-hoy-estariamos-en-una-crisis-cambiaria",
+      "fuente": "Punto a Punto",
+      "t": 1793422633155
+     },
+     {
+      "titulo": "El ilustre cementerio de Madrid con monumentales panteones: all&#237; reposan Primo de Rivera, Concha Piquer, Frascuelo y una superviviente del Titanic",
+      "link": "https://www.elconfidencial.com/alma-corazon-vida/2026-10-31/cementerio-madrid-panteones-primo-rivera-concha-piquer-frascuelo-titanic_4455889/",
+      "fuente": "El Confidencial",
+      "t": 1793422633155
+     },
+     {
+      "titulo": "Otro tarifazo: la luz y el gas suben casi el doble que la inflaci&#243;n y Milei recorta el subsidio de Zona Fr&#237;a",
+      "link": "https://elargentinodiario.com.ar/zona-destacada/30/10/2026/otro-tarifazo-la-luz-y-el-gas-suben-casi-el-doble-que-la-inflacion-y-milei-recorta-el-subsidio-de-zona-fria/",
+      "fuente": "El Argentino Diario",
+      "t": 1793422633155
+     },
+     {
+      "titulo": "Pescado m&#225;s caro por fen&#243;meno El Ni&#241;o: La escasez de especies altera los precios en el terminal pesquero de Lima",
+      "link": "https://www.infobae.com/peru/2026/10/30/pescado-mas-caro-por-fenomeno-el-nino-la-escasez-de-especies-altera-los-precios-en-el-terminal-pesquero-de-lima/",
+      "fuente": "Infobae",
+      "t": 1793422633155
+     },
+     {
+      "titulo": "Aumento de servicios en noviembre: Nuevos valores para la luz y el gas",
+      "link": "https://urgente24.com/dinero/aumento-servicios-noviembre-nuevos-valores-la-luz-y-el-gas-n635785",
+      "fuente": "Urgente24",
+      "t": 1793422633155
      }
     ]
    }
@@ -1837,7 +1921,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 32,
+   "corridas": 33,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1846,7 +1930,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-31T04:26:54.893Z",
+   "ultimaCorrida": "2026-10-31T04:56:52.149Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -1856,7 +1940,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-10-31T04:26:54.893Z",
+    "ultimoChequeo": "2026-10-31T04:56:52.149Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -1875,16 +1959,16 @@
      },
      "2026-10-31": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       3,
-       3
+       4,
+       4
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       3,
-       3
+       4,
+       4
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       3,
-       3
+       4,
+       4
       ]
      }
     }
@@ -1911,7 +1995,7 @@
   },
   "precio_mmo": {
    "estado": "listo",
-   "corridas": 6,
+   "corridas": 7,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1920,7 +2004,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T01:58:53.057Z",
+   "ultimaCorrida": "2026-10-31T04:56:52.149Z",
    "resumen": "🧱 Valor m² del Colegio de MMO\n\n• Casas prefabricadas: cu&#225;nto cuestan las de 40, 60 y 80 m2 (iProfesional)\n  https://www.iprofesional.com/actualidad/467258-casas-prefabricadas-cuanto-cuestan-las-de-40-60-y-80-m2\n• D",
    "informe": "data/informes/precio_mmo/2026-10-30-1955.md",
    "pausado": false,
@@ -1951,7 +2035,7 @@
      "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
      "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
     ],
-    "ultimoChequeo": "2026-10-31T01:58:53.057Z",
+    "ultimoChequeo": "2026-10-31T04:56:52.149Z",
     "semana": [
      {
       "titulo": "Casas prefabricadas: cu&#225;nto cuestan las de 40, 60 y 80 m2",
@@ -3976,7 +4060,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 14,
+   "corridas": 15,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -3985,13 +4069,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T04:26:54.893Z",
+   "ultimaCorrida": "2026-10-31T04:56:52.149Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-10-30",
-    "ultimoChequeo": "2026-10-31T04:26:54.893Z"
+    "ultimoChequeo": "2026-10-31T04:56:52.149Z"
    }
   },
   "feriados": {
@@ -4064,6 +4148,36 @@
   }
  },
  "log": [
+  {
+   "t": "2026-10-31T04:56:52.149Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-31T04:56:52.149Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-31T04:56:52.149Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-31T04:56:52.149Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-31T04:56:52.149Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-31T04:56:52.149Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-10-31T04:26:54.893Z",
    "quien": "Terrenos baratos",
@@ -5533,36 +5647,6 @@
    "t": "2026-10-30T08:34:35.545Z",
    "quien": "IA",
    "que": "Google Gemini gemini-4-argon: cupo diario agotado, sigo con otra"
-  },
-  {
-   "t": "2026-10-30T08:34:35.545Z",
-   "quien": "Gerente general",
-   "que": "hace la orden él mismo"
-  },
-  {
-   "t": "2026-10-30T08:34:35.545Z",
-   "quien": "Terrenos baratos",
-   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-2.5-flash-lite: 404 This model models/gemini-2.5-flash-lite is no longer available to new users. Please update | Google Gemini/gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-  },
-  {
-   "t": "2026-10-30T08:34:35.545Z",
-   "quien": "Terrenos baratos",
-   "que": "empezó su tarea"
-  },
-  {
-   "t": "2026-10-30T08:34:35.545Z",
-   "quien": "Jonathan",
-   "que": "mandó una orden por Telegram"
-  },
-  {
-   "t": "2026-10-30T08:34:35.545Z",
-   "quien": "Mesa de entrada",
-   "que": "llegaron 1 mensajes de Telegram"
-  },
-  {
-   "t": "2026-10-30T08:34:35.545Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github"
   }
  ],
  "pendientes": [],
@@ -5657,7 +5741,9 @@
   "171": "tarifas",
   "173": "licitaciones",
   "174": "clima",
-  "176": "licitaciones"
+  "176": "licitaciones",
+  "177": "vencimientos",
+  "178": "tarifas"
  },
  "tgOffset": 196508498,
  "hechos": {
@@ -5668,15 +5754,15 @@
  },
  "consumo": {
   "fecha": "2026-10-31",
-  "consultas": 10,
+  "consultas": 13,
   "busquedas": 0,
   "por": {
-   "gemini": 9,
+   "gemini": 12,
    "groq": 1
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-31T04:26:54.893Z",
+ "actualizado": "2026-10-31T04:56:52.149Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -5704,11 +5790,11 @@
   "agotado": {
    "gemini:gemini-2.5-flash": true,
    "gemini:gemini-2.5-flash-lite": true,
-   "gemini:gemini-flash-latest": 1793420845657,
+   "gemini:gemini-flash-latest": 1793422642931,
    "groq:groq/compound": true,
    "gemini:gemini-2.5-pro": true,
-   "gemini:gemini-3.8-flash": 1793420852168,
-   "gemini:gemini-3.7-flash": 1793420858678
+   "gemini:gemini-3.8-flash": 1793422649440,
+   "gemini:gemini-3.7-flash": 1793422655931
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
  },
