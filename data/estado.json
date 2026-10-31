@@ -2032,13 +2032,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-31",
-   "ultimaCorrida": "2026-10-31T21:58:12.906Z",
+   "ultimaCorrida": "2026-10-31T22:23:35.653Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": false,
    "memoria": {
     "celu": {
-     "t": 1793483892906,
+     "t": 1793485415653,
      "redes_hoy": {
       "publicaciones": 0,
       "historias": 0,
@@ -6365,6 +6365,21 @@
  },
  "log": [
   {
+   "t": "2026-10-31T22:24:14.832Z",
+   "quien": "Gerente general",
+   "que": "autoprueba: 9/14 IA de texto y 4/7 de fotos andan"
+  },
+  {
+   "t": "2026-10-31T22:24:14.832Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-31T22:24:14.832Z",
+   "quien": "Oficina",
+   "que": "abre (prueba) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
+  {
    "t": "2026-10-31T21:59:27.397Z",
    "quien": "Gerente general",
    "que": "autoprueba: 7/14 IA de texto y 2/7 de fotos andan"
@@ -7848,21 +7863,6 @@
    "t": "2026-10-30T20:54:54.620Z",
    "quien": "Terrenos baratos",
    "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-  },
-  {
-   "t": "2026-10-30T20:54:54.620Z",
-   "quien": "Terrenos baratos",
-   "que": "empezó su tarea"
-  },
-  {
-   "t": "2026-10-30T20:54:54.620Z",
-   "quien": "Jonathan",
-   "que": "mandó una orden por Telegram"
-  },
-  {
-   "t": "2026-10-30T20:54:54.620Z",
-   "quien": "Jonathan",
-   "que": "mandó una orden por Telegram"
   }
  ],
  "pendientes": [],
@@ -8022,27 +8022,27 @@
  },
  "consumo": {
   "fecha": "2026-10-31",
-  "consultas": 155,
+  "consultas": 156,
   "busquedas": 0,
   "por": {
-   "gemini": 124,
-   "groq": 12,
-   "zai": 6,
-   "cerebras": 11,
-   "sambanova": 16,
-   "nvidia": 20,
-   "cohere": 8,
-   "github": 27,
-   "openrouter": 17,
-   "huggingface": 14,
-   "llm7": 9,
-   "upstage": 6,
-   "pollinations": 3,
-   "cfai": 9
+   "gemini": 127,
+   "groq": 18,
+   "zai": 7,
+   "cerebras": 14,
+   "sambanova": 20,
+   "nvidia": 22,
+   "cohere": 9,
+   "github": 29,
+   "openrouter": 21,
+   "huggingface": 19,
+   "llm7": 12,
+   "upstage": 7,
+   "pollinations": 4,
+   "cfai": 12
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-31T21:59:27.397Z",
+ "actualizado": "2026-10-31T22:24:14.832Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -8100,9 +8100,9 @@
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
   "ultimo": {
-   "prov": "Cohere",
-   "modelo": "command-a-03-2025",
-   "t": "2026-10-31T21:59:27.397Z"
+   "prov": "Groq",
+   "modelo": "openai/gpt-oss-120b",
+   "t": "2026-10-31T22:24:14.832Z"
   },
   "vivos": {
    "groq": {

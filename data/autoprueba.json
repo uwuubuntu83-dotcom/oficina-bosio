@@ -1,28 +1,28 @@
 {
- "t": "2026-10-31T21:59:27.397Z",
+ "t": "2026-10-31T22:24:14.832Z",
  "texto": [
   {
    "prov": "Google Gemini",
    "id": "gemini",
    "ok": true,
-   "modelo": "gemini-3.8-flash",
-   "ms": 103030,
+   "modelo": "gemini-3.7-flash",
+   "ms": 75373,
    "error": ""
   },
   {
    "prov": "GitHub Models",
    "id": "github",
-   "ok": false,
-   "modelo": "meta/Llama-3.3-70B-Instruct",
-   "ms": 2533,
-   "error": "200 no devolvió JSON: OK "
+   "ok": true,
+   "modelo": "openai/gpt-4.1-mini",
+   "ms": 195,
+   "error": ""
   },
   {
    "prov": "Groq",
    "id": "groq",
    "ok": true,
-   "modelo": "openai/gpt-oss-120b",
-   "ms": 439,
+   "modelo": "qwen/qwen3.8-27b",
+   "ms": 2530,
    "error": ""
   },
   {
@@ -30,39 +30,39 @@
    "id": "openrouter",
    "ok": true,
    "modelo": "nvidia/nemotron-3.5-super-vl:free",
-   "ms": 3180,
+   "ms": 2858,
    "error": ""
   },
   {
    "prov": "Cerebras",
    "id": "cerebras",
    "ok": false,
-   "modelo": "llama-3.3-70b",
-   "ms": 2500,
-   "error": "404 Model does not exist or you do not have access to it."
+   "modelo": "zai-glm-4.7",
+   "ms": 2537,
+   "error": "404 Model zai-glm-4.7 is archived and unavailable for the organization."
   },
   {
    "prov": "SambaNova",
    "id": "sambanova",
    "ok": false,
    "modelo": "gpt-oss-120b",
-   "ms": 122036,
+   "ms": 122007,
    "error": "0 This operation was aborted"
   },
   {
    "prov": "NVIDIA",
    "id": "nvidia",
-   "ok": false,
-   "modelo": "qwen/qwen3-next-80b-a3b-instruct",
-   "ms": 2501,
-   "error": "410 410"
+   "ok": true,
+   "modelo": "deepseek-ai/deepseek-v4.1-flash",
+   "ms": 2129,
+   "error": ""
   },
   {
    "prov": "Cohere",
    "id": "cohere",
    "ok": true,
    "modelo": "command-a-03-2025",
-   "ms": 1123,
+   "ms": 3709,
    "error": ""
   },
   {
@@ -70,7 +70,7 @@
    "id": "huggingface",
    "ok": false,
    "modelo": "Qwen/Qwen3-32B",
-   "ms": 2497,
+   "ms": 2478,
    "error": "402 You have no remaining credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get month"
   },
   {
@@ -78,7 +78,7 @@
    "id": "zai",
    "ok": true,
    "modelo": "glm-4.5-flash",
-   "ms": 6908,
+   "ms": 3155,
    "error": ""
   },
   {
@@ -86,7 +86,7 @@
    "id": "llm7",
    "ok": false,
    "modelo": "mistral-Nemo-Instruct-2407",
-   "ms": 2493,
+   "ms": 2255,
    "error": "429 Daily token quota exceeded. Retry after 56 seconds."
   },
   {
@@ -94,7 +94,7 @@
    "id": "upstage",
    "ok": true,
    "modelo": "solar-pro4",
-   "ms": 2731,
+   "ms": 842,
    "error": ""
   },
   {
@@ -102,7 +102,7 @@
    "id": "pollinations",
    "ok": true,
    "modelo": "openai",
-   "ms": 620,
+   "ms": 290,
    "error": ""
   },
   {
@@ -110,7 +110,7 @@
    "id": "cfai",
    "ok": false,
    "modelo": "@cf/mistralai/mistral-small-3.1-24b-instruct",
-   "ms": 2393,
+   "ms": 2568,
    "error": "429 4006: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to c"
   }
  ],
@@ -118,15 +118,16 @@
   {
    "prov": "Google Gemini",
    "ok": true,
-   "modelo": "gemini-3.7-flash",
+   "modelo": "gemini-3.8-flash",
    "error": "",
-   "dijo": "Veo un gráfico de anillo sobre fondo oscuro dividido en dos secciones, una roja "
+   "dijo": "Veo un gráfico de dona dividido en dos secciones, una mayoritaria de color rojo "
   },
   {
    "prov": "GitHub Models",
-   "ok": false,
-   "modelo": "openai/gpt-4o",
-   "error": "200 no devolvió JSON: OK "
+   "ok": true,
+   "modelo": "openai/gpt-4.1-mini",
+   "error": "",
+   "dijo": "OK"
   },
   {
    "prov": "Groq",
@@ -136,9 +137,10 @@
   },
   {
    "prov": "OpenRouter",
-   "ok": false,
-   "modelo": "meta-llama/llama-4-maverick:free",
-   "error": "404 This model is unavailable for free. The paid version is available now - use this slug instead: meta-llama/llama-4-maverick"
+   "ok": true,
+   "modelo": "nvidia/nemotron-3.5-super-vl:free",
+   "error": "",
+   "dijo": "Un gráfico de donut dividido en una sección roja mayor y una sección azul menor."
   },
   {
    "prov": "SambaNova",
@@ -151,7 +153,7 @@
    "ok": true,
    "modelo": "meta/llama-3.2-90b-vision-instruct",
    "error": "",
-   "dijo": "Una imagen de un gráfico circular, con dos secciones de colores diferentes."
+   "dijo": "El gráfico muestra una distribución de datos en forma de dona. El círculo está d"
   },
   {
    "prov": "Hugging Face",
@@ -162,11 +164,15 @@
  ],
  "gerente": {
   "ok": true,
-  "modelo": "Cohere · command-a-03-2025",
+  "modelo": "Groq · openai/gpt-oss-120b",
   "acciones": [
    {
     "tipo": "comando",
-    "texto": "generar_resumen_gastos"
+    "texto": "registrar_gasto 5000 nafta"
+   },
+   {
+    "tipo": "comando",
+    "texto": "consultar_ubicacion"
    }
   ]
  },
