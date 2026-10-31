@@ -5,6 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import zlib from "node:zlib";
+import { spawnSync } from "node:child_process";
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const DATA = path.join(ROOT, "data");
@@ -120,8 +121,8 @@ async function modelosOpenRouter(p) {
 }
 function retryDe(j) { const d = ((j && j.error && j.error.details) || []); const ri = d.find(x => /RetryInfo/.test(x["@type"] || "")); const s = ri && parseFloat(ri.retryDelay); const qf = d.find(x => /QuotaFailure/.test(x["@type"] || "")); const porDia = qf && (qf.violations || []).some(v => /PerDay/i.test(v.quotaId || "")); return { segundos: s || 0, porDia: !!porDia }; }
 
-async function llamarGemini(p, modelo, prompt, { buscar, json, imagen }) {
-  const body = { contents: [{ role: "user", parts: [{ text: prompt }, ...(imagen ? [{ inline_data: { mime_type: imagen.mime, data: imagen.b64 } }] : [])] }], generationConfig: { temperature: json ? 0.2 : 0.5, maxOutputTokens: 8192 } };
+async function llamarGemini(p, modelo, prompt, { buscar, json, imagen, largo }) {
+  const body = { contents: [{ role: "user", parts: [{ text: prompt }, ...(imagen ? [{ inline_data: { mime_type: imagen.mime, data: imagen.b64 } }] : [])] }], generationConfig: { temperature: json ? 0.2 : 0.5, maxOutputTokens: largo ? 32768 : 8192 } };
   if (buscar) body.tools = [{ google_search: {} }]; else if (json) body.generationConfig.responseMimeType = "application/json";
   await pausa(p); usar(p.id);
   const r = await traer(`${URLS.gemini}/models/${encodeURIComponent(modelo)}:generateContent?key=${encodeURIComponent(p.key)}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }, 120000);
@@ -134,22 +135,23 @@ async function llamarGemini(p, modelo, prompt, { buscar, json, imagen }) {
   if (!texto) return { error: true, status: 200, msg: "respuesta vacía" };
   return { texto, fuentes };
 }
-async function llamarBuzon(p, modelo, prompt, { json }) {
+async function llamarBuzon(p, modelo, prompt, { json, largo }) {
   await pausa(p); usar(p.id);
   const base = (ENV.BUZON_URL || BASE.buzon || "").replace(/\/+$/, "");
   const pin = ENV.OFICINA_PIN || (TG_TOKEN ? String(parseInt(crypto.createHash("sha256").update("pin:" + TG_TOKEN).digest("hex").slice(0, 12), 16) % 1e8).padStart(8, "0") : "");
-  const r = await traer(base + "/oficina/ia", { method: "POST", headers: { "content-type": "application/json", "x-pin": pin }, body: JSON.stringify({ modelo, prompt, json }) }, 120000);
+  const r = await traer(base + "/oficina/ia", { method: "POST", headers: { "content-type": "application/json", "x-pin": pin }, body: JSON.stringify({ modelo, prompt, json, ...(largo ? { max_tokens: 8192 } : {}) }) }, largo ? 240000 : 120000);
   const j = await r.json().catch(() => ({}));
   if (!r.ok) return { error: true, status: r.status, j, msg: j.error || String(r.status) };
   if (j.error) return { error: true, status: j.status || 500, j: {}, msg: j.msg || "error" };
+  if (!j.texto) return { error: true, status: 200, msg: "respuesta vacía" };
   return { texto: j.texto, fuentes: [] };
 }
-async function llamarOpenAI(p, modelo, prompt, { json, imagen }) {
+async function llamarOpenAI(p, modelo, prompt, { json, imagen, largo }) {
   await pausa(p); usar(p.id);
   const headers = { "content-type": "application/json", ...(p.key ? { authorization: "Bearer " + p.key } : {}) };
   if (p.id.startsWith("openrouter")) { headers["X-Title"] = "Oficina Bosio"; headers["HTTP-Referer"] = "https://uwuubuntu83-dotcom.github.io/oficina-bosio/"; }
-  const body = { model: modelo, messages: [{ role: "user", content: imagen ? [{ type: "text", text: prompt }, { type: "image_url", image_url: { url: `data:${imagen.mime};base64,${imagen.b64}` } }] : prompt }], temperature: json ? 0.2 : 0.5, max_tokens: 4096 };
-  const r = await traer(p.url || (p.base + "/chat/completions"), { method: "POST", headers, body: JSON.stringify(body) }, 120000);
+  const body = { model: modelo, messages: [{ role: "user", content: imagen ? [{ type: "text", text: prompt }, { type: "image_url", image_url: { url: `data:${imagen.mime};base64,${imagen.b64}` } }] : prompt }], temperature: json ? 0.2 : 0.5, max_tokens: largo ? 8192 : 4096 };
+  const r = await traer(p.url || (p.base + "/chat/completions"), { method: "POST", headers, body: JSON.stringify(body) }, largo ? 240000 : 120000);
   const j = await r.json().catch(() => ({}));
   if (!r.ok) return { error: true, status: r.status, j, msg: (j.error && (j.error.message || j.error)) || j.message || String(r.status) };
   const m = ((j.choices || [])[0] || {}).message || {};
@@ -161,13 +163,13 @@ async function llamarOpenAI(p, modelo, prompt, { json, imagen }) {
 }
 // ia(): buscar=true → solo proveedores que buscan en internet (Gemini, y Groq compound de respaldo).
 // buscar=false → rota primero entre los que NO son Gemini, para guardar Gemini para las búsquedas.
-async function ia(prompt, { buscar = false, json = false, imagen = null } = {}) {
+async function ia(prompt, { buscar = false, json = false, imagen = null, largo = false } = {}) {
   if (est.consumo.consultas >= CFG.limites.consultasPorDia || consultasCorrida >= CFG.limites.consultasPorCorrida) throw Object.assign(new Error("se llegó al tope de consultas de hoy"), { cupo: true });
   if (buscar && est.consumo.busquedas >= CFG.limites.busquedasPorDia) throw Object.assign(new Error("se llegó al tope de búsquedas de hoy"), { cupo: true });
   let lista;
   if (imagen) lista = [...PROV.filter(p => p.tipo === "gemini"), ...PROV.filter(p => p.id === "github")]; // las que pueden ver fotos
   else if (buscar) lista = [...PROV.filter(p => p.buscar), ...PROV.filter(p => p.buscarModelo)];
-  else { const otros = PROV.filter(p => p.tipo !== "gemini" && !p.ultimo); const gem = PROV.filter(p => p.tipo === "gemini"); rueda++; lista = [...otros.slice(rueda % (otros.length || 1)), ...otros.slice(0, rueda % (otros.length || 1)), ...gem, ...PROV.filter(p => p.ultimo)]; }
+  else { const otros = PROV.filter(p => p.tipo !== "gemini" && !p.ultimo); const gem = PROV.filter(p => p.tipo === "gemini"); rueda++; const rot = [...otros.slice(rueda % (otros.length || 1)), ...otros.slice(0, rueda % (otros.length || 1))]; lista = largo ? [...gem, ...rot, ...PROV.filter(p => p.ultimo)] : [...rot, ...gem, ...PROV.filter(p => p.ultimo)]; }
   if (!lista.length) throw Object.assign(new Error(imagen ? "no hay ninguna IA que pueda ver fotos conectada" : buscar ? "no hay ninguna IA con búsqueda conectada (falta GEMINI_API_KEY)" : "no hay ninguna IA conectada"), { cupo: true });
   const errores = [];
   for (const p of lista) {
@@ -185,7 +187,7 @@ async function ia(prompt, { buscar = false, json = false, imagen = null } = {}) 
       let r;
       for (let reintento = 0; reintento < 2; reintento++) {
         consultasCorrida++; est.consumo.consultas++;
-        try { r = p.tipo === "gemini" ? await llamarGemini(p, modelo, prompt, { buscar, json, imagen }) : p.tipo === "buzon" ? await llamarBuzon(p, modelo, prompt, { json }) : await llamarOpenAI(p, modelo, prompt, { json, imagen }); }
+        try { r = p.tipo === "gemini" ? await llamarGemini(p, modelo, prompt, { buscar, json, imagen, largo }) : p.tipo === "buzon" ? await llamarBuzon(p, modelo, prompt, { json, largo }) : await llamarOpenAI(p, modelo, prompt, { json, imagen, largo }); }
         catch (e) { r = { error: true, status: 0, msg: e.name === "AbortError" ? "tardó demasiado" : "sin conexión" }; }
         if (r.error && r.status === 429 && reintento === 0) { const rd = retryDe(r.j); if (!rd.porDia && rd.segundos > 0 && rd.segundos <= 45) { await sleep(rd.segundos * 1000 + 800); continue; } }
         break;
@@ -194,7 +196,7 @@ async function ia(prompt, { buscar = false, json = false, imagen = null } = {}) 
       errores.push(`${p.nombre}/${modelo}: ${r.status} ${String(r.msg).slice(0, 90)}`);
       if (r.status === 429) { const rd = retryDe(r.j); marcar(clave, rd.porDia ? 0 : Math.min(Math.max(rd.segundos, 30), 3600) * 1000); if (rd.porDia) log("IA", `${p.nombre} ${modelo}: cupo diario agotado, sigo con otra`); }
       else if (r.status === 401 || r.status === 403) { marcar(p.id, 0); log("IA", `${p.nombre}: la clave no es válida o no tiene permiso`); break; }
-      else if (r.status === 404 || r.status === 400 || r.status === 422) marcar(clave, 0);
+      else if (r.status === 404 || r.status === 400 || r.status === 422) marcar(clave, largo && r.status !== 404 ? 3600e3 : 0);
       else marcar(clave, 10 * 60e3);
       if (++fallasProv >= (p.maxFallas || 3)) break;
     }
@@ -681,18 +683,18 @@ function promptBot(b, orden, critica) {
 SOBRE TU JEFE: ${CFG.contexto}
 HOY ES: ${DIAS[diaAR()]} ${fechaAR()}, ${horaAR()} hs (Argentina).
 TU MISIÓN: ${b.mision}
-QUÉ ENTREGAR: ${b.entregable || "Un resultado concreto y listo para usar."}
+${b.personalidad ? `TU PERFIL: ${b.personalidad}\n` : ""}${b.proceso ? `CÓMO TRABAJÁS (seguí estos pasos en orden):\n${b.proceso.map((x, i) => `${i + 1}. ${x}`).join("\n")}\n` : ""}QUÉ ENTREGAR: ${b.entregable || "Un resultado concreto y listo para usar."}
 CÓMO TE EVALÚAN: ${(b.criterios || ["Concreto", "Útil", "Sin relleno"]).join("; ")}.
-${orden ? `\nORDEN ESPECIAL DE TU JEFE (tiene prioridad): ${orden}\n` : ""}${reg ? `\nDATOS REALES DE TU JEFE (usalos, son reales):\n${reg.slice(0, 12000)}\n` : ""}${lecc ? `\nLO QUE APRENDISTE (aplicalo siempre):\n${lecc}\n` : ""}${critica ? `\nEL CONTROL DE CALIDAD RECHAZÓ TU VERSIÓN ANTERIOR POR ESTO, CORREGILO:\n${critica}\n` : ""}
+${b.evitar ? `NUNCA: ${b.evitar.join("; ")}.\n` : ""}${orden ? `\nORDEN ESPECIAL DE TU JEFE (tiene prioridad): ${orden}\n` : ""}${reg ? `\nDATOS REALES DE TU JEFE (usalos, son reales):\n${reg.slice(0, 12000)}\n` : ""}${lecc ? `\nLO QUE APRENDISTE (aplicalo siempre):\n${lecc}\n` : ""}${critica ? `\nEL CONTROL DE CALIDAD RECHAZÓ TU VERSIÓN ANTERIOR POR ESTO, CORREGILO:\n${critica}\n` : ""}
 REGLAS:
 ${b.buscar ? "- Buscá en internet información ACTUAL y usá solo datos que encontraste, con su fuente (sitio y link).\n- Si un dato no lo encontraste, decilo en vez de inventarlo." : "- No inventes datos concretos como precios, fechas o nombres de lugares que no puedas saber; si hace falta, dalos como orientativos."}
-- Español rioplatense, directo, sin saludos ni relleno. Empezá con el entregable. Máximo 2500 caracteres.`;
+- Español rioplatense, directo, sin saludos ni relleno. Empezá con el entregable.${b.sinLimite ? "" : " Máximo 2500 caracteres."}`;
 }
 async function evaluar(b, texto, fuentes) {
   const r = await ia(`Sos el CONTROL DE CALIDAD de una oficina. Evaluá con rigor este trabajo.
 TAREA: ${b.mision}
 ENTREGABLE: ${b.entregable || "-"}
-CRITERIOS: ${(b.criterios || []).join("; ")}; concreto; sin relleno; sin inventar.
+CRITERIOS: ${(b.criterios || []).join("; ")}; concreto; sin relleno; sin inventar.${b.evitar ? "\nNO DEBE: " + b.evitar.join("; ") + "." : ""}
 FECHA: ${fechaAR()}.
 ${b.buscar ? `FUENTES REALES QUE USÓ (verificadas por el buscador): ${fuentes.length ? fuentes.map(f => f.url).slice(0, 10).join(" , ") : "NINGUNA"}` : "Este bot no necesita fuentes de internet."}
 TRABAJO:
@@ -756,6 +758,93 @@ async function trabajar(b, { orden = "", origen = "agenda", resumen = false, hor
 }
 
 /* ==========================================================================================
+   EQUIPO DE DESARROLLO (área software): Analista → Arquitecto → Programador → QA → corrección
+   Hace apps completas de un solo archivo y las publica en data/apps/<nombre>/ (GitHub Pages).
+   ========================================================================================== */
+const PAGES = "https://uwuubuntu83-dotcom.github.io/oficina-bosio/";
+function sacarHTML(t) {
+  const s = String(t || ""); const m = s.match(/```(?:html)?\s*\n([\s\S]*?)```/i) || s.match(/```(?:html)?\s*\n([\s\S]*)$/i);
+  let h = (m ? m[1] : s).trim(); const a = h.search(/<!doctype html|<html/i); if (a > 0) h = h.slice(a);
+  return h;
+}
+function revisarCodigo(html) {
+  const err = [];
+  if (!/<html[\s>]/i.test(html) || !/<\/html>/i.test(html)) err.push("El archivo está incompleto: falta <html> o </html> (se cortó).");
+  if (!/<body[\s>]/i.test(html)) err.push("Falta <body>.");
+  if (/\/\/\s*(TODO|\.\.\.)|<!--\s*\.\.\.|\/\*\s*\.\.\.|\.\.\.\s*(resto|rest of|el resto)/i.test(html)) err.push("Dejó partes sin escribir (TODO o «...»). Tiene que estar el código completo.");
+  const rx = /<script\b([^>]*)>([\s\S]*?)<\/script>/gi; let m, n = 0;
+  while ((m = rx.exec(html))) {
+    const attrs = m[1]; n++;
+    if (/\bsrc\s*=/.test(attrs) || (/\btype\s*=/.test(attrs) && !/type\s*=\s*["']?(text\/javascript|module)/i.test(attrs))) continue;
+    let js = m[2]; if (/module/i.test(attrs)) js = js.replace(/^\s*import\s[^;]+;?/gm, "").replace(/^\s*export\s+(default\s+)?/gm, "");
+    try { new Function(js); } catch (e) { err.push(`Error de sintaxis en el script ${n}: ${e.message}`); }
+  }
+  for (const u of html.match(/<script[^>]+src=["']([^"']+)/gi) || []) { const url = u.replace(/.*src=["']/i, ""); if (!/^https:\/\/(cdnjs\.cloudflare\.com|cdn\.jsdelivr\.net|unpkg\.com|cdn\.tailwindcss\.com|code\.jquery\.com)\//.test(url)) err.push(`Usa un script que no va a existir: ${url} (tiene que estar todo en el archivo o venir de un CDN conocido).`); }
+  return err;
+}
+// prueba real en un Chrome sin pantalla (los servidores de GitHub lo traen instalado); si no hay, se saltea
+function probarEnNavegador(archivo) {
+  const cands = [ENV.CHROME, "/usr/bin/google-chrome", "/usr/bin/google-chrome-stable", "/usr/bin/chromium", "/usr/bin/chromium-browser"].filter(Boolean);
+  const bin = cands.find(f => { try { return fs.existsSync(f); } catch { return false; } }); if (!bin) return null;
+  try {
+    const r = spawnSync(bin, ["--headless=new", "--no-sandbox", "--disable-gpu", "--enable-logging=stderr", "--v=0", "--virtual-time-budget=4000", "--dump-dom", "file://" + archivo], { encoding: "utf8", timeout: 40000 });
+    const errs = String(r.stderr || "").split("\n").filter(l => /CONSOLE/.test(l) && /(Uncaught|Error|is not defined|Cannot read)/i.test(l)).map(l => l.replace(/^.*?CONSOLE[^"]*"?/, "").slice(0, 200));
+    const dom = String(r.stdout || ""); if (dom && !/<body[\s>][\s\S]*\S[\s\S]*<\/body>/i.test(dom)) errs.push("La página carga en blanco.");
+    return [...new Set(errs)].slice(0, 6);
+  } catch { return null; }
+}
+function appsLista() { return leer(path.join(DATA, "apps", "apps.json"), []); }
+async function equipoDesarrollo(pedido) {
+  const A = botPorId("dev_analista"), R = botPorId("dev_arquitecto"), P = botPorId("dev_programador"), Q = botPorId("dev_qa");
+  if (!A || !R || !P || !Q) throw new Error("falta el equipo de desarrollo en bots.json");
+  const marcarB = (b, estado, resumen) => { const sb = est.bots[b.id] ||= nuevoBot(); Object.assign(sb, { estado, ultimaCorrida: NOW.toISOString() }); if (resumen) sb.resumen = resumen; if (estado === "listo") sb.corridas++; };
+  const lista = appsLista(); let previo = null, nombre, sl;
+  const mm = pedido.match(/^(?:arregl\w*|cambi\w*|mejor\w*|correg\w*|agreg\w*\s+a)\s+(?:la\s+app\s+)?([\w-]+)\s*:?\s*([\s\S]+)/i);
+  if (mm && lista.some(x => x.slug === mm[1].toLowerCase())) { sl = mm[1].toLowerCase(); const ap = lista.find(x => x.slug === sl); nombre = ap.nombre; try { previo = fs.readFileSync(path.join(DATA, "apps", sl, "index.html"), "utf8"); } catch { previo = ""; } pedido = mm[2].trim(); }
+  log("Equipo de desarrollo", (previo ? `arregla la app ${sl}: ` : "empieza una app: ") + pedido.slice(0, 120));
+  await enviar(`👷 Equipo de desarrollo: ${previo ? `arreglo «${nombre}»` : "arranco tu app"}. Analista → Arquitecto → Programador → Control de calidad. Te mando el link cuando esté (unos minutos).`);
+  // 1) Analista
+  marcarB(A, "trabajando");
+  const spec = String((await ia(promptBot(A, (previo ? `CAMBIO PEDIDO SOBRE UNA APP QUE YA EXISTE («${nombre}»): ` : "") + pedido + (previo ? "" : "\nEmpezá tu respuesta con una línea «NOMBRE: <nombre corto de la app, 1 a 3 palabras>»."), ""))).texto);
+  marcarB(A, "listo", "Especificó: " + pedido.slice(0, 150));
+  if (!previo) { nombre = ((spec.match(/NOMBRE:\s*(.+)/i) || [])[1] || pedido.split(/\s+/).slice(0, 4).join(" ")).replace(/[*_`"«»]/g, "").trim().slice(0, 40); sl = slug(nombre).replace(/_/g, "-").slice(0, 28) || "app"; let k = 2; const base = sl; while (lista.some(x => x.slug === sl)) sl = `${base}-${k++}`; }
+  // 2) Arquitecto
+  marcarB(R, "trabajando");
+  const plan = String((await ia(promptBot(R, `PEDIDO: ${pedido}\n\nESPECIFICACIÓN DEL ANALISTA:\n${spec}${previo ? "\n\nYA EXISTE UNA VERSIÓN: el plan tiene que decir qué cambiar sin romper lo que anda." : ""}`, ""))).texto);
+  marcarB(R, "listo", "Planificó «" + nombre + "»");
+  // 3) Programador + 4) QA, con hasta 2 correcciones
+  const dir = path.join(DATA, "apps", sl); const archivo = path.join(dir, "index.html");
+  let html = "", errores = [], qa = { puntaje: 0, problemas: [] }, mejor = null, critica = "";
+  for (let vuelta = 1; vuelta <= 3; vuelta++) {
+    marcarB(P, "trabajando");
+    const base = previo && vuelta === 1 ? `\n\nCÓDIGO ACTUAL DE LA APP (modificalo y devolvé el archivo COMPLETO):\n\`\`\`html\n${previo.slice(0, 60000)}\n\`\`\`` : html && vuelta > 1 ? `\n\nTU VERSIÓN ANTERIOR (corregila y devolvé el archivo COMPLETO):\n\`\`\`html\n${html.slice(0, 60000)}\n\`\`\`` : "";
+    const r = await ia(promptBot(P, `APP: «${nombre}». PEDIDO: ${pedido}\n\nESPECIFICACIÓN:\n${spec}\n\nPLAN TÉCNICO:\n${plan}${base}\n\nRequisitos fijos: un solo index.html con <!DOCTYPE html>, <meta name="viewport">, diseño prolijo que se vea bien en el celular, textos en español, datos guardados en localStorage con try/catch, sin claves ni datos privados en el código. Librerías solo de cdnjs.cloudflare.com o cdn.jsdelivr.net con versión fija.`, critica), { largo: true });
+    html = sacarHTML(r.texto); fs.mkdirSync(dir, { recursive: true }); fs.writeFileSync(archivo, html);
+    errores = revisarCodigo(html); const nav = errores.length ? null : probarEnNavegador(archivo); if (nav) errores.push(...nav.map(x => "En el navegador: " + x));
+    marcarB(P, "listo", `Programó «${nombre}» (versión ${vuelta}, ${Math.round(html.length / 1024)} KB)`);
+    marcarB(Q, "trabajando");
+    try {
+      const q = await ia(promptBot(Q, `ESPECIFICACIÓN CON CRITERIOS DE ACEPTACIÓN:\n${spec}\n\nERRORES QUE ENCONTRÓ LA PRUEBA AUTOMÁTICA: ${errores.length ? errores.join(" | ") : "ninguno"}\n\nCÓDIGO:\n\`\`\`html\n${html.slice(0, 50000)}\n\`\`\`\n\nRespondé SOLO un JSON: {"puntaje": 1 a 10, "problemas": ["problema concreto y cómo arreglarlo"]}. Con errores de la prueba automática: máximo 5.`, ""), { json: true });
+      const j = parsearJSON(q.texto) || {}; qa = { puntaje: Math.round(Number(j.puntaje) || 6), problemas: (Array.isArray(j.problemas) ? j.problemas : []).map(String).slice(0, 8) };
+    } catch (e) { if (e.cupo && mejor) break; qa = { puntaje: errores.length ? 4 : 7, problemas: [] }; }
+    if (errores.length) qa.puntaje = Math.min(qa.puntaje, 5);
+    marcarB(Q, "listo", `«${nombre}» v${vuelta}: ${qa.puntaje}/10`);
+    log("Control de calidad", `app ${nombre} v${vuelta}: ${qa.puntaje}/10${errores[0] ? " · " + errores[0] : ""}`);
+    if (!mejor || qa.puntaje > mejor.qa.puntaje) mejor = { html, errores, qa, vuelta };
+    if (qa.puntaje >= 8 && !errores.length) break;
+    critica = [...errores, ...qa.problemas].join("\n- ");
+  }
+  fs.writeFileSync(archivo, mejor.html);
+  escribir(path.join(dir, "ficha.md"), `# ${nombre}\n\n**Pedido:** ${pedido}\n**Fecha:** ${fechaAR()} ${horaAR()}\n**Calidad:** ${mejor.qa.puntaje}/10 (versión ${mejor.vuelta})\n\n## Especificación\n${spec}\n\n## Plan técnico\n${plan}\n\n## Control de calidad\n${mejor.errores.concat(mejor.qa.problemas).map(x => "- " + x).join("\n") || "- Sin problemas detectados."}\n`);
+  const nueva = { slug: sl, nombre, pedido: pedido.slice(0, 300), f: NOW.toISOString(), puntaje: mejor.qa.puntaje, url: `${PAGES}data/apps/${sl}/` };
+  escribir(path.join(DATA, "apps", "apps.json"), [nueva, ...lista.filter(x => x.slug !== sl)].slice(0, 200));
+  const sbP = est.bots[P.id]; sbP.informe = `data/apps/${sl}/ficha.md`; sbP.puntaje = mejor.qa.puntaje;
+  log("Equipo de desarrollo", `publicó «${nombre}» (${mejor.qa.puntaje}/10)`);
+  await enviar(`✅ App «${nombre}» lista · calidad ${mejor.qa.puntaje}/10\n🔗 ${nueva.url}\n(tarda 1 o 2 minutos en aparecer en la página)\n${mejor.errores.length || mejor.qa.problemas.length ? "\nPendiente de mejorar:\n" + mejor.errores.concat(mejor.qa.problemas).slice(0, 4).map(x => "• " + x.slice(0, 160)).join("\n") + "\n" : ""}\nPara cambiarla: «app arreglar ${sl}: lo que quieras cambiar». Ver todas: «apps».\n⚠️ Las apps quedan públicas: no le pongas datos privados.`, P.id);
+  return true;
+}
+
+/* ==========================================================================================
    EL GERENTE
    ========================================================================================== */
 const horarioTxt = b => { const h = b.horario || {}; if (b.tipo === "externo") return "trabaja en el celular"; if (h.apedido) return "a pedido (solo cuando se lo pedís)"; const d = !h.dias || h.dias === "todos" ? "todos los días" : h.dias.map(x => DIAS3[x]).join(", "); return h.diaMes ? `el ${h.diaMes.join(" y ")} de cada mes a las ${(h.horas || [h.hora]).join(", ")}` : h.horas ? `${d} a las ${h.horas.join(", ")}` : h.cada ? `${d}, cada ${h.cada} min de ${h.desde} a ${h.hasta}${h.resumen ? ` (resumen ${h.resumen})` : ""}` : `${d} ${h.hora}`; };
@@ -777,6 +866,7 @@ const AYUDA = () => `Soy el Gerente general de la ${CFG.oficina}. Escribime:
 • pausar area Nombre / activar area Nombre / eliminar area Nombre.
 • eliminar ID (o despedir ID) — lo saco de la oficina.
 • horario ID 09:00 lun,jue — le cambio el horario.
+• app: lo que necesitás — el equipo de desarrollo te programa una app y te pasa el link (ej: «app: calculadora de ladrillos por m²»). «app arreglar NOMBRE: …» la mejora. «apps» las lista.
 • celu ... — órdenes al celu bot: «celu programa de hoy», «celu subí una historia», «celu pausa», «celu seguí», «celu reiniciar», «celu informe», «celu» (cómo anda).
 • Respondé un informe con 👍, 👎 o un comentario: ese bot se entrena con eso esa noche.
 
@@ -952,6 +1042,8 @@ async function procesarMensajes() {
       log("Jonathan", `opinó sobre ${b.nombre}: ${txt.slice(0, 80)}`); await enviar(`📝 Anotado para ${b.nombre}. Lo aplica desde el entrenamiento de esta noche.`); continue;
     }
     const low = txt.toLowerCase().replace(/^\//, "").trim(); let mm;
+    if ((mm = txt.match(/^\/?(?:app|apps|software|programa(?:r|me|ción)?|desarroll(?:o|ar|ame))\s*:\s*([\s\S]{4,})/i) || txt.match(/^\/?app\s+((?:arregl|cambi|mejor|correg)\w*\s[\s\S]+)/i) || txt.match(/^(?:hac[eé](?:me)?|arm[aá](?:me)?|cre[aá](?:me)?|program[aá](?:me)?)\s+(una\s+(?:app|aplicaci[oó]n|p[aá]gina\s+web|calculadora|planilla\s+web|herramienta)\b[\s\S]*)/i))) { est.pendientes.push({ tipo: "app", orden: mm[1].trim().slice(0, 1500), t: NOW.toISOString() }); log("Jonathan", "le pidió una app al equipo de desarrollo"); await enviar("👷 Se la paso al equipo de desarrollo. Arrancan en esta vuelta."); continue; }
+    if (/^\/?apps$/i.test(txt)) { const l = appsLista(); await enviar(l.length ? "📱 Apps del equipo de desarrollo:\n" + l.slice(0, 20).map(x => `• ${x.nombre} (${x.puntaje}/10) — ${x.url}`).join("\n") + "\n\nPara cambiar una: «app arreglar NOMBRE: qué cambiar»." : "Todavía no hay apps. Pedí una: «app: una calculadora de materiales para una losa»."); continue; }
     if ((mm = txt.match(RX_CELU)) || RX_CELU_AUTO.test(txt)) { try { await ordenCelu(mm ? mm[1] : txt); } catch (e) { await enviar("📱 No pude hablar con el celu: " + e.message); } continue; }
     if (/^(start|ayuda|help|hola|menu|menú)$/.test(low)) { await enviar(AYUDA()); continue; }
     if (/^(estado|tablero|novedades)$/.test(low)) { await enviar(tablero()); continue; }
@@ -993,6 +1085,7 @@ Empleados:\n${lista}
 Elegí el empleado que mejor la cumple. Si ninguno encaja, elegí "gerente" (la hacés vos).
 Respondé SOLO un JSON: {"bot":"id o gerente","instruccion":"la orden clara para ese empleado","aviso":"frase corta para el jefe diciendo a quién se la pasaste","buscar":true si hace falta buscar en internet}`, { json: true });
   const j = parsearJSON(r.texto) || {}; const b = botPorId(j.bot);
+  if (b && b.equipo === "dev") { await equipoDesarrollo(j.instruccion || p.orden); g.estado = "listo"; return; }
   if (b && b.id === "celular_bot") { await ordenCelu(j.instruccion || p.orden); g.estado = "listo"; return; }
   if (b && b.tipo === "codigo" && b.receta && b.receta.registro) { const n = await registrarLote(p.orden, b); if (n) { log("Gerente general", `le pasó ${n} anotaciones a ${b.nombre}`); g.estado = "listo"; return; } }
   if (b && b.tipo !== "externo") {
@@ -1113,6 +1206,7 @@ async function main() {
   for (const p of est.pendientes) {
     try {
       if (p.tipo === "comprobante") await leerComprobante(p);
+      else if (p.tipo === "app") await equipoDesarrollo(p.orden);
       else if (p.tipo === "contratar") { const nb = await contratar(p.orden); if (p.pausa && nb) { est.bots[nb.id].pausado = true; await enviar(`⏸ «${nb.nombre}» queda en pausa hasta que escribas «activar ${nb.id}».`); } }
       else if (p.bot) { const b = botPorId(p.bot); if (b) { const ok = await trabajar(b, { orden: p.orden, origen: p.origen || "orden", foto: p.foto }); if (!ok && est.bots[b.id].estado === "postergado") quedan.push(p); } }
       else await repartir(p);

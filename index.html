@@ -268,7 +268,7 @@ function pintarChat(){
   box.scrollTop=keep;pintarQuick()}
 function pintarQuick(){
   const q=$("#quick");q.innerHTML="";
-  for(const [lbl,cmd] of [["📋 Estado","estado"],["📱 Celu","celu"],["📅 Programa del celu","celu programa de hoy"],["📊 Torta de gastos","torta"],["👥 Organigrama","bots"],["➕ Contratar bot","contratar: "],["🏢 Crear área","crear area "],["💵 Dólar ya","correr dolar"],["🌤️ Clima","correr clima"]])q.append(h("button",{onclick:()=>{$("#orden").value=cmd;$("#orden").focus()}},lbl));
+  for(const [lbl,cmd] of [["📋 Estado","estado"],["📱 Celu","celu"],["📅 Programa del celu","celu programa de hoy"],["📊 Torta de gastos","torta"],["👷 Pedir una app","app: "],["📱 Mis apps","apps"],["👥 Organigrama","bots"],["➕ Contratar bot","contratar: "],["🏢 Crear área","crear area "],["💵 Dólar ya","correr dolar"],["🌤️ Clima","correr clima"]])q.append(h("button",{onclick:()=>{$("#orden").value=cmd;$("#orden").focus()}},lbl));
   $("#note").textContent="Es el mismo chat que Telegram y que el panel del celu: escribas donde escribas, se ve en los tres. Lo del celu contesta al instante; lo demás en 1 o 2 minutos.";
 }
 $("#compose").addEventListener("submit",async ev=>{ev.preventDefault();const t=$("#orden").value.trim();if(!t)return;
