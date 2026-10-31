@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 62,
+   "corridas": 63,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-31",
-   "ultimaCorrida": "2026-10-31T22:53:53.998Z",
+   "ultimaCorrida": "2026-10-31T23:22:57.886Z",
    "resumen": "💵 Dólar hoy (10:41 hs)\n• Oficial: compra $1510 · venta $1560\n• Blue: compra $1545 · venta $1565\n• Bolsa: compra $1565.4 · venta $1575\n• Contado con liquidación: compra $1655.3 · venta $1658.5\n• Mayorista: compra $1525 ·",
    "informe": "data/informes/dolar/2026-10-31-1041.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1656.28,
      "tarjeta": 2028
     },
-    "ultimoChequeo": "2026-10-31T22:53:53.998Z",
+    "ultimoChequeo": "2026-10-31T23:22:57.886Z",
     "resumenFecha": "2026-10-31",
     "hist": {
      "2026-10-30": {
@@ -475,7 +475,7 @@
   },
   "gerente": {
    "estado": "trabajando",
-   "resumen": "Respondió una orden tuya",
+   "resumen": "Mandó el parte del día",
    "ultimaCorrida": null
   },
   "terrenos": {
@@ -2052,13 +2052,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-31",
-   "ultimaCorrida": "2026-10-31T22:49:26.304Z",
+   "ultimaCorrida": "2026-10-31T23:21:27.916Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": false,
    "memoria": {
     "celu": {
-     "t": 1793486966304,
+     "t": 1793488887916,
      "redes_hoy": {
       "publicaciones": 0,
       "historias": 0,
@@ -2219,7 +2219,7 @@
   },
   "vencimientos": {
    "estado": "listo",
-   "corridas": 13,
+   "corridas": 14,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -2228,12 +2228,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-31T20:25:25.960Z",
-   "resumen": "🧾 Vencimientos e impuestos\n\n• Argentina al límite de los dólares: pagar intereses y volver a empezar, la trampa que amenaza a Caputo (Perico Noticias)\n  https://periconoticias.com.ar/argentina-al-limite-de-los-dolares-p",
-   "informe": "data/informes/vencimientos/2026-10-31-1725.md",
+   "ultimaCorrida": "2026-10-31T23:22:57.886Z",
+   "resumen": "🧾 Vencimientos e impuestos\n\n• Blanqueo de capitales en Argentina: “Entre 65 y 100 millones de dólares ingresan diariamente al sistema” (BDO pasó por Córdoba) (InfoNegocios)\n  https://infonegocios.info/nota-principal/bla",
+   "informe": "data/informes/vencimientos/2026-10-31-2022.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "blanqueo de capitales en argentina: “entre 65 y 100 millones de dólares ingresan diariamen",
+     "embargos de arca: una de cada siete pymes industriales enfrenta ejecuciones fiscales",
+     "arca prorroga la presentación de ganancias: cuál es la nueva fecha",
+     "arca permite pagar deudas del monotributo en hasta 20 cuotas: cómo acceder",
+     "monotributo: cómo regularizar las deudas con arca pagando en hasta 20 cuotas",
+     "arca: cuánto cuesta adherir a la declaración simplificada de ganancias después del vencimi",
      "argentina al límite de los dólares: pagar intereses y volver a empezar, la trampa que amen",
      "arca volvió a prorrogar ganancias 2025: cuándo vence la declaración jurada",
      "arca prorrogó el vencimiento de ganancias para personas humanas hasta el 16 de noviembre y",
@@ -2306,7 +2312,7 @@
      "arca modifica la emisión de facturas del monotributo social desde noviembre",
      "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
     ],
-    "ultimoChequeo": "2026-10-31T20:25:25.960Z",
+    "ultimoChequeo": "2026-10-31T23:22:57.886Z",
     "semana": [
      {
       "titulo": "ARCA prorrogó vencimientos de Ganancias y facilidades",
@@ -2595,13 +2601,49 @@
       "link": "https://fortunaweb.com.ar/blog/cuantos-anos-puede-reclamar-arca-una-deuda-la-prescripcion-de-impuestos",
       "fuente": "fortunaweb.com.ar",
       "t": 1793478348368
+     },
+     {
+      "titulo": "Blanqueo de capitales en Argentina: “Entre 65 y 100 millones de dólares ingresan diariamente al sistema” (BDO pasó por Córdoba)",
+      "link": "https://infonegocios.info/nota-principal/blanqueo-de-capitales-en-argentina-entre-65-y-100-millones-de-dolares-ingresan-diariamente-al-sistema-bdo-paso-por-cordoba",
+      "fuente": "InfoNegocios",
+      "t": 1793488982969
+     },
+     {
+      "titulo": "Embargos de ARCA: una de cada siete pymes industriales enfrenta ejecuciones fiscales",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1HeFZ2WFpzc3dxZUFrRmgwUkZTVEN0Z0hORUoybDRLSDBoMzZ6cWFSZ0J4SE4yZUZMODJ3M2Uyd19Pdlpnd0pIU0VBdmowNjRSaDJzUXlSdFNCMUZfX1pMdTU1Qi1jb0thRmVXSXdSVHF4T2NkbDd5UExrRlpWZVU?oc=5",
+      "fuente": "Blog del Contador",
+      "t": 1793488982969
+     },
+     {
+      "titulo": "ARCA prorroga la presentación de Ganancias: cuál es la nueva fecha",
+      "link": "https://www.perfil.com/economia/arca-prorroga-la-presentacion-de-ganancias-cual-es-la-nueva-fecha-akVSs1d4utvx",
+      "fuente": "Perfil",
+      "t": 1793488982969
+     },
+     {
+      "titulo": "ARCA permite pagar deudas del monotributo en hasta 20 cuotas: cómo acceder",
+      "link": "https://www.mdzol.com/economia/2026/10/28/arca-permite-pagar-deudas-del-monotributo-en-hasta-20-cuotas-como-acceder-1991315.html",
+      "fuente": "MDZ Online",
+      "t": 1793488982969
+     },
+     {
+      "titulo": "Monotributo: cómo regularizar las deudas con ARCA pagando en hasta 20 cuotas",
+      "link": "https://www.iprofesional.com/impuestos/467393-monotributo-como-regularizar-deudas-con-arca-y-evitar-baja-regimen-noviembre-2026",
+      "fuente": "iProfesional",
+      "t": 1793488982969
+     },
+     {
+      "titulo": "ARCA: cuánto cuesta adherir a la declaración simplificada de Ganancias después del vencimiento y qué beneficios se pierden",
+      "link": "https://www.cronista.com/economia-politica/arca-cuanto-cuesta-adherir-a-la-declaracion-simplificada-de-ganancias-despues-del-vencimiento-y-que-beneficios-se-pierden/",
+      "fuente": "El Cronista",
+      "t": 1793488982969
      }
     ]
    }
   },
   "tarifas": {
    "estado": "listo",
-   "corridas": 14,
+   "corridas": 15,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -2610,12 +2652,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-31T20:25:25.960Z",
-   "resumen": "🧾 Aumentos de servicios\n\n• Resumen: Noviembre marcado por los aumentos - Reapareció Bolsonaro - Descendió Aldosivi (Filo News)\n  https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWUxnM1E2WVJodFFvTmVubW1uSER1bWMydlQtd",
-   "informe": "data/informes/tarifas/2026-10-31-1725.md",
+   "ultimaCorrida": "2026-10-31T23:22:57.886Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• UEPC exigió la reapertura \"inmediata\" de la paritaria y advirtieron por futuras medidas de fuerza (Cadena 3 Argentina)\n  https://news.google.com/rss/articles/CBMi8gFBVV95cUxPdWEwX2RXdGNyS2lRVE",
+   "informe": "data/informes/tarifas/2026-10-31-2022.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "uepc exigió la reapertura \"inmediata\" de la paritaria y advirtieron por futuras medidas de",
+     "el gas envasado vuelve a subir: la garrafa de 10 kilos pasará de $27.000 a $30.000",
+     "aumento a jubilados anses en noviembre: ¿quiénes cobran $514.158 y cuál es el calendario d",
+     "resumen: noviembre marcado por los aumentos - reapareció bolsonaro",
+     "pensiones y jubilaciones anses: de cuánto serán en noviembre 2026",
+     "uepc exigió a la provincia la reapertura de la paritaria",
      "resumen: noviembre marcado por los aumentos - reapareció bolsonaro - descendió aldosivi",
      "alquileres, transporte, colegios y prepagas: todos los aumentos que se vienen en noviembre",
      "la unión de educadores de córdoba exigió a llaryora adelantar la paritaria docente: “el sa",
@@ -2701,7 +2749,7 @@
      "golpe al bolsillo: aprueban fuerte aumento en los combustibles",
      "todo aumenta en noviembre: colectivos, prepagas, alquileres, colegios y servicios, uno por"
     ],
-    "ultimoChequeo": "2026-10-31T20:25:25.960Z",
+    "ultimoChequeo": "2026-10-31T23:22:57.886Z",
     "semana": [
      {
       "titulo": "Cortes de luz en C&#243;rdoba para este s&#225;bado: zonas afectadas por mantenimiento, poda y obras",
@@ -2990,6 +3038,42 @@
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOanBOaW0zcGdUTEU2eGlYWVZxZ2pMUERlWGNCWTV4aXV3ZU95dGhjVUF4U3Y4UlJnczdHQXJjZlV6RjVOWFZtSGx3UExOR0RNZ1Y2dl9XQV9KeFhMOHZTdDVEOElKUWNqbHBRRWV6bTltaGtxVndTd1pkMTA0UlRORmFQb2ttNkJxVTFEZjV2REdLZDV4VWtzYmxnT2owLU9oWkFfTmsyM1p5aVo5SzNnNkRCdlRfdw?oc=5",
       "fuente": "ENREDACCIÓN",
       "t": 1793478350896
+     },
+     {
+      "titulo": "UEPC exigió la reapertura \"inmediata\" de la paritaria y advirtieron por futuras medidas de fuerza",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPdWEwX2RXdGNyS2lRVEJOck1aSEF0RnVSeUxaS3UwTWNqOEQ3d3hqX09TR1djUE85R2pNY3RSWmxQVlBCN0l1X0p2ZHBMT0E0aTI1Vl9mM08tZE5FeEt4cnQxaWllbUxsbWIzTlRPczFwZjVXS0hWd3c2QUJ1d1l3QzdGaDVheXEyZFVad2xZejVNUWdiQzdDNFZpdlpqeDJPVzJiV1NIOWRwNlNzeDU3R1AzeFY2MC1lNU85ZjY5LTFxQWdwcElQa2gya2kxcC1XVy1QUjZfXzJZSVo2ZnR1T3FtYTRfZHdIOVpIVDJxX1p5UdIB8gFBVV95cUxPdWEwX2RXdGNyS2lRVEJOck1aSEF0RnVSeUxaS3UwTWNqOEQ3d3hqX09TR1djUE85R2pNY3RSWmxQVlBCN0l1X0p2ZHBMT0E0aTI1Vl9mM08tZE5FeEt4cnQxaWllbUxsbWIzTlRPczFwZjVXS0hWd3c2QUJ1d1l3QzdGaDVheXEyZFVad2xZejVNUWdiQzdDNFZpdlpqeDJPVzJiV1NIOWRwNlNzeDU3R1AzeFY2MC1lNU85ZjY5LTFxQWdwcElQa2gya2kxcC1XVy1QUjZfXzJZSVo2ZnR1T3FtYTRfZHdIOVpIVDJxX1p5UQ?oc=5",
+      "fuente": "Cadena 3 Argentina",
+      "t": 1793488986041
+     },
+     {
+      "titulo": "El gas envasado vuelve a subir: la garrafa de 10 kilos pasará de $27.000 a $30.000",
+      "link": "https://www.losprimeros.tv/actualidad/el-gas-envasado-vuelve-a-subir--la-garrafa-de-10-kilos-pasara-de--27-000-a--30-000-_a6ae6576f09dee0a0b9b1ee45",
+      "fuente": "Los Primeros TV",
+      "t": 1793488986041
+     },
+     {
+      "titulo": "Aumento a jubilados ANSES en noviembre: ¿Quiénes cobran $514.158 y cuál es el calendario de pago?",
+      "link": "https://www.ambito.com/informacion-general/aumento-jubilados-anses-noviembre-quienes-cobran-514158-y-cual-es-el-calendario-pago-n6339696",
+      "fuente": "Ámbito Financiero",
+      "t": 1793488986041
+     },
+     {
+      "titulo": "Resumen: Noviembre marcado por los aumentos - Reapareció Bolsonaro",
+      "link": "https://www.filo.news/noticia/2026/10/31/resumen-noviembre-marcado-por-los-aumentos-reaparecio-bolsonaro-descendio-aldosivi",
+      "fuente": "Filo News",
+      "t": 1793488986041
+     },
+     {
+      "titulo": "Pensiones y jubilaciones ANSES: de cuánto serán en noviembre 2026",
+      "link": "https://www.cronista.com/economia-politica/pensiones-y-jubilaciones-anses-de-cuanto-seran-en-noviembre-2026/",
+      "fuente": "El Cronista",
+      "t": 1793488986041
+     },
+     {
+      "titulo": "Uepc exigió a la Provincia la reapertura de la paritaria",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOLWF1TktRd3Jsdi1wS0lvS1g0ODhOaWY5QWlvZ3VfaFBMRktpR0t5S0Y2eVdvSzliV1hZTXBJRnVUdG0wa0p3eUZCVUpxcm5qT3UzUkNyczVUV29GWlpOTVlGdFc0Z1hQdFg0R1VRZmJtRm0zUUpMbmFQZy16UTRnNGNBVWhxNmlzR3RUYkowVnd2TzJiMlpySnNwONIBrwFBVV95cUxOOGVTNVVrWkF4SXBzeGdtSEtWaldzUEltY2E5TjN0WkxkY0VDZXFZNUFCT3lzYlBmekl0Vl9CSVhUVnBpR1M0aFdHWC1Mamlua0t1a3BZZ1V4c1VwMmZUUGRTby11NTZnX3N1bUd4eFlUc2lvanUwNndXalBHTmxOUl96RXgxTDA4Q21xcHRCRWc2N0Z3VEs1NTgxalI5UHZoY3I5dnF0dTlRWTI1ZHlj?oc=5",
+      "fuente": "eldoce",
+      "t": 1793488986041
      }
     ]
    }
@@ -3047,7 +3131,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 62,
+   "corridas": 63,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -3056,7 +3140,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-31T22:53:53.998Z",
+   "ultimaCorrida": "2026-10-31T23:22:57.886Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -3066,7 +3150,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-10-31T22:53:53.998Z",
+    "ultimoChequeo": "2026-10-31T23:22:57.886Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -3085,16 +3169,16 @@
      },
      "2026-10-31": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       33,
-       33
+       34,
+       34
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       33,
-       33
+       34,
+       34
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       33,
-       33
+       34,
+       34
       ]
      }
     }
@@ -3121,7 +3205,7 @@
   },
   "precio_mmo": {
    "estado": "listo",
-   "corridas": 12,
+   "corridas": 13,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -3130,7 +3214,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T20:25:25.960Z",
+   "ultimaCorrida": "2026-10-31T23:22:57.886Z",
    "resumen": "🧱 Valor m² del Colegio de MMO\n\n• Casas prefabricadas: cuánto cuestan las de 40, 60 y 80 m2 (iProfesional)\n  https://www.iprofesional.com/actualidad/467258-casas-prefabricadas-cuanto-cuestan-las-de-40-60-y-80-m2\n• Durloc",
    "informe": "data/informes/precio_mmo/2026-10-31-1725.md",
    "pausado": false,
@@ -3165,7 +3249,7 @@
      "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
      "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
     ],
-    "ultimoChequeo": "2026-10-31T20:25:25.960Z",
+    "ultimoChequeo": "2026-10-31T23:22:57.886Z",
     "semana": [
      {
       "titulo": "Casas prefabricadas: cu&#225;nto cuestan las de 40, 60 y 80 m2",
@@ -6319,7 +6403,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 44,
+   "corridas": 45,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -6328,13 +6412,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T22:53:53.998Z",
+   "ultimaCorrida": "2026-10-31T23:22:57.886Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-10-31",
-    "ultimoChequeo": "2026-10-31T22:53:53.998Z"
+    "ultimoChequeo": "2026-10-31T23:22:57.886Z"
    }
   },
   "feriados": {
@@ -6475,6 +6559,31 @@
   }
  },
  "log": [
+  {
+   "t": "2026-10-31T23:22:57.886Z",
+   "quien": "Gerente general",
+   "que": "mandó el parte del día (sin IA)"
+  },
+  {
+   "t": "2026-10-31T23:22:57.886Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-31T23:22:57.886Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-31T23:22:57.886Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-31T23:22:57.886Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-10-31T22:53:53.998Z",
    "quien": "Clima para la obra",
@@ -7949,31 +8058,6 @@
    "t": "2026-10-30T21:27:53.966Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-10-30T21:27:53.966Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-10-30T20:57:54.313Z",
-   "quien": "Terrenos baratos",
-   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-  },
-  {
-   "t": "2026-10-30T20:57:54.313Z",
-   "quien": "Terrenos baratos",
-   "que": "empezó su tarea"
-  },
-  {
-   "t": "2026-10-30T20:57:54.313Z",
-   "quien": "Contaduría",
-   "que": "anotó 1 gastos (privado)"
-  },
-  {
-   "t": "2026-10-30T20:57:54.313Z",
-   "quien": "Contaduría",
-   "que": "anotó 1 gastos (privado)"
   }
  ],
  "pendientes": [],
@@ -8122,11 +8206,13 @@
   "242": "licitaciones",
   "243": "comidas",
   "244": "noticias_tec",
-  "250": "clima"
+  "250": "clima",
+  "251": "vencimientos",
+  "252": "tarifas"
  },
  "tgOffset": 196508501,
  "hechos": {
-  "parte": "2026-10-30",
+  "parte": "2026-10-31",
   "entrenamiento": "2026-10-30",
   "buzonAvisado": "2026-10-30T13:35:53.482Z",
   "celuAvisosOficina": "2026-10-30T21:27:53.966Z",
@@ -8154,7 +8240,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-31T22:53:53.998Z",
+ "actualizado": "2026-10-31T23:22:57.886Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
