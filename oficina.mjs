@@ -970,6 +970,7 @@ const AYUDA = () => `Soy el Gerente general de la ${CFG.oficina}. Escribime:
 • sala: tu decisión de plata — 7 asesores (inversor de valor, inmobiliario de VM, economista, contador, emprendedor, escribano y abogado del diablo) debaten, votan y te dan el veredicto. «sala» = historial.
 • consejo — el contador te dice cómo venís y dónde cortar · inversiones — qué hacer con lo que ahorrás
 • 🎤 Mandame audios: los paso a texto y los entiendo igual que si escribieras.
+• buen día — el resumen de hoy (te llega solo a las 07:30) · ias — qué IA andan y cuáles se quedaron sin cupo
 • memoria — lo que el Gerente se acuerda de vos (aprende solo de la charla) · olvidá N — borra un dato
 • perfil: me tengo que cuidar del colesterol — lo tienen en cuenta los bots de salud y plata (privado)
 • torta (gráfico e informe de gastos del mes) · torta semana · torta mes pasado · servicios · comidas · ejercicio · borrar último gasto
@@ -1037,11 +1038,15 @@ function pagarServicio(nombre, monto, detalle) {
 }
 async function leerComprobante(p) {
   const imagen = await bajarFoto(p.foto);
-  const r = await ia(`Es una foto de Argentina: puede ser UN comprobante (ticket, factura, transferencia, recibo) o una CAPTURA DEL HOME BANKING / BILLETERA con VARIOS movimientos.${p.orden ? " Nota del dueño: " + p.orden : ""}
+  let r, j, movs = [];
+  for (let intento = 0; intento < 2 && !movs.length; intento++) {
+  if (intento) { const ult = est.ia.ultimo; if (ult) for (const p of PROV) if (p.nombre === ult.prov) marcar(p.id + ":" + ult.modelo, 3600e3); log("Contaduría", `la IA ${ult ? ult.prov : ""} no entendió la foto, pruebo con otra`); }
+  r = await ia(`Es una foto de Argentina: puede ser UN comprobante (ticket, factura, transferencia, recibo) o una CAPTURA DEL HOME BANKING / BILLETERA con VARIOS movimientos.${p.orden ? " Nota del dueño: " + p.orden : ""}
 HOY ES ${fechaAR()} (ayer fue ${fechaAR(new Date(NOW - 864e5))}). Si la captura dice "Hoy" o "Ayer", convertilo a esas fechas.
 Listá SOLO los GASTOS (plata que salió: montos en rojo, con signo menos, débitos, pagos, compras, transferencias enviadas). NO incluyas ingresos, sueldos ni transferencias recibidas.
 Respondé SOLO un JSON: {"movimientos": [{"monto": número en pesos sin símbolos ni puntos de miles, "comercio": "nombre", "fecha": "AAAA-MM-DD o vacío", "detalle": "qué fue en pocas palabras", "servicio": "si es un servicio de la casa (luz, gas, agua, internet, alquiler, expensas, tasas, seguro, prepaga), cuál; si no, vacío"}]}`, { json: true, imagen });
-  const j = parsearJSON(r.texto) || {}; const movs = (Array.isArray(j.movimientos) ? j.movimientos : j.monto ? [j] : []).map(m => ({ ...m, monto: Math.abs(typeof m.monto === "number" ? m.monto : leerMonto(String(m.monto || "")) || 0) })).filter(m => m.monto > 0).slice(0, 40);
+  j = parsearJSON(r.texto) || {}; movs = (Array.isArray(j.movimientos) ? j.movimientos : j.monto ? [j] : []).map(m => ({ ...m, monto: Math.abs(typeof m.monto === "number" ? m.monto : leerMonto(String(m.monto || "")) || 0) })).filter(m => m.monto > 0).slice(0, 40);
+  }
   if (!movs.length) { await enviar("🧾 No pude leer ningún gasto en la foto. Mandámelos escritos, así: «gasté 5000 en nafta»."); return; }
   const previos = leerPrivSeguro("gastos", []); const lineas = []; let dup = 0, total = 0;
   for (const m of movs) {
@@ -1199,6 +1204,8 @@ async function atender(u) {
     if ((mm = txt.match(RX_CELU)) || RX_CELU_AUTO.test(txt)) { try { await ordenCelu(mm ? mm[1] : txt); } catch (e) { await enviar("📱 No pude hablar con el celu: " + e.message); } return; }
     if (/^(link|pin|oficina|abrir oficina|link de la oficina)$/.test(low)) { await enviar(linkOficina()); return; }
     if (/^(start|ayuda|help|hola|menu|menú)$/.test(low)) { await enviar(AYUDA()); return; }
+    if (/^(ias?|las ias|estado de las ias|cupo)$/.test(low)) { await enviar(textoIAs()); return; }
+    if (/^(buen d[ií]a|buenos d[ií]as|resumen de hoy|hoy)$/.test(low)) { await buenDia(); return; }
     if (/^(estado|tablero|novedades)$/.test(low)) { await enviar(tablero()); return; }
     if ((mm = low.match(/^parte(?:\s+(?:de|del|de la))?\s+(.+)$/))) { const q = slug(mm[1]); const a = CFG.areas.find(x => x.id === q || slug(x.nombre).includes(q) || q.includes(x.id)); await enviar(a ? parteArea(a) : "No encontré esa área. Probá: «parte redes», «parte contaduría», «parte constructora»…"); return; }
     if (/^parte$/.test(low)) { await parteDiario(); return; }
@@ -1298,6 +1305,27 @@ Reglas: no repitas como loro lo que dijo; no recomiendes herramientas pagas ni s
   if (!respuesta && !acciones.length) await enviar("No te entendí bien. ¿Me lo decís con otras palabras?");
   log("Gerente general", `respondió${acciones.length ? " y movió " + acciones.map(a => a.texto || a.id).join(", ").slice(0, 120) : ""}`);
   g.resumen = "Habló con vos"; g.estado = "listo";
+}
+/* ---------- ☀️ Buen día (SIN IA): todo lo de hoy en un solo mensaje, a las 07:30 ---------- */
+async function buenDia() {
+  const l = [`☀️ Buen día, ${CFG.dueno.split(" ")[0]}. ${DIAS[diaAR()][0].toUpperCase() + DIAS[diaAR()].slice(1)} ${fechaAR().slice(8, 10)}/${fechaAR().slice(5, 7)}`];
+  try { const u = CFG.ubicacion; const r = await traer(`${URLS.clima}?latitude=${u.lat}&longitude=${u.lon}&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_speed_10m_max&timezone=America%2FArgentina%2FCordoba&forecast_days=1`); const d = (await r.json()).daily; l.push(`🌤️ ${Math.round(d.temperature_2m_min[0])}° a ${Math.round(d.temperature_2m_max[0])}°, lluvia ${d.precipitation_probability_max[0]}%${d.precipitation_probability_max[0] >= 60 ? " ⚠️ ojo la obra" : ""}${d.wind_speed_10m_max[0] >= 40 ? `, viento ${Math.round(d.wind_speed_10m_max[0])} km/h ⚠️` : ""}`); } catch {}
+  const dl = (est.bots.dolar && est.bots.dolar.memoria && est.bots.dolar.memoria.dolar) || {}; if (dl.blue || dl.oficial) l.push(`💵 Blue $${dl.blue || "?"} · Oficial $${dl.oficial || "?"}${dl.bolsa ? " · MEP $" + dl.bolsa : ""}`);
+  const hoy = fechaAR(); const rec = leerPrivSeguro("recordatorios", []).filter(x => x.fecha === hoy); if (rec.length) l.push("⏰ Hoy: " + rec.map(x => `${x.hora} ${x.texto}`).join(" · "));
+  const dd = Number(hoy.slice(8, 10)), mm = Number(hoy.slice(5, 7)); const cum = leerPrivSeguro("fechas", []).filter(x => x.dd === dd && x.mm === mm); if (cum.length) l.push("🎂 " + cum.map(x => `${x.tipo} de ${x.quien}`).join(", "));
+  const mes = hoy.slice(0, 7); const serv = leerPrivSeguro("servicios", []).filter(x => !(x.pagos || {})[mes] && x.dia - dd <= 3); if (serv.length) l.push("🏠 Por vencer o vencidos: " + serv.map(x => `${x.nombre} (${x.dia})`).join(", "));
+  const ayer = fechaAR(new Date(NOW - 864e5)); const ga = leerPrivSeguro("gastos", []).filter(x => x.f === ayer).reduce((a, x) => a + (x.monto || 0), 0); if (ga) l.push(`💸 Ayer gastaste ${pesos(ga)}`);
+  try { if (BUZON && PIN) { const pl = textoPlan(await buzon("/oficina/celu")).split("\n").filter(Boolean).slice(0, 4).join("\n"); if (pl) l.push("📱 " + pl); } } catch {}
+  if (est.pendientesCant) l.push(`📥 Tenés ${est.pendientesCant} pedido(s) esperando IA.`);
+  l.push("\nEscribime o mandame un audio cuando quieras.");
+  await enviar(l.join("\n"));
+}
+/* ---------- estado de las IA (SIN IA) ---------- */
+function textoIAs() {
+  const por = est.consumo.por || {}; const ult = est.ia.ultimo;
+  const fila = p => { const ks = Object.keys(est.ia.agotado).filter(k => k === p.id || k.startsWith(p.id + ":")); const bloq = ks.filter(k => agotado(k)).length; const tot = (p.modelos || []).length || 0; const muerta = agotado(p.id) || (tot ? bloq >= tot : bloq >= 4); return `${muerta ? "🔴" : bloq ? "🟡" : "🟢"} ${p.nombre}${por[p.id] ? ` · ${por[p.id]} usos hoy` : ""}${bloq ? ` · ${bloq} modelo(s) sin cupo` : ""}`; };
+  const vistos = new Set(); const filas = PROV.filter(p => !vistos.has(p.id) && vistos.add(p.id)).map(fila);
+  return `🧠 IA de la oficina hoy (${est.consumo.consultas}/${CFG.limites.consultasPorDia} consultas, ${est.consumo.busquedas} búsquedas)\n${filas.join("\n")}${ult ? `\n\nÚltima que respondió: ${ult.prov} · ${ult.modelo} (${String(ult.t).slice(11, 16)} UTC)` : ""}\n🟢 anda · 🟡 algunos modelos sin cupo · 🔴 sin cupo hasta mañana`;
 }
 /* ---------- Gerente general: parte diario en 10 renglones, SIN IA, con recomendaciones ---------- */
 function recomendaciones() {
@@ -1420,6 +1448,7 @@ async function main() {
       await trabajar(b, { origen: "agenda", resumen: t.resumen, hora: t.hora });
     }
   }
+  if (MODO === "auto" && horaAR() >= (CFG.gerente.buenDia || "07:30") && horaAR() < "12:00" && est.hechos.buenDia !== fechaAR() && est.dueno) { est.hechos.buenDia = fechaAR(); try { await buenDia(); } catch (e) { log("Gerente general", "buen día: " + e.message); } }
   if ((MODO === "auto" && horaAR() >= CFG.gerente.parteDiario && est.hechos.parte !== fechaAR()) || MODO === "parte") { est.hechos.parte = fechaAR(); try { await parteDiario(); } catch (e) { log("Gerente general", "parte: " + e.message); } }
   if ((MODO === "auto" && horaAR() >= CFG.gerente.entrenamiento && est.hechos.entrenamiento !== fechaAR()) || MODO === "entrenar") { est.hechos.entrenamiento = fechaAR(); const ar = autoArreglo(); if (ar.length) await enviar(`🔧 Mantenimiento: reactivé para que reintenten mañana: ${ar.join(", ")}.`); await entrenar(); }
   est.bots.gerente.estado = est.pendientes.length ? "trabajando" : "esperando";
