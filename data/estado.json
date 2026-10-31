@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 29,
+   "corridas": 30,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-10-31T02:58:00.659Z",
+   "ultimaCorrida": "2026-10-31T03:26:53.560Z",
    "resumen": "💵 Dólar hoy (10:35 hs)\n• Oficial: compra $1510 · venta $1560\n• Blue: compra $1545 · venta $1565\n• Bolsa: compra $1557.8 · venta $1568.8\n• Contado con liquidación: compra $1649.8 · venta $1650.3\n• Mayorista: compra $1530",
    "informe": "data/informes/dolar/2026-10-30-1035.md",
    "pausado": false,
@@ -20,26 +20,35 @@
     "dolarBase": {
      "oficial": 1560,
      "blue": 1565,
-     "bolsa": 1568.8,
-     "contadoconliqui": 1650.3,
-     "mayorista": 1539,
-     "cripto": 1645.46,
+     "bolsa": 1575,
+     "contadoconliqui": 1658.5,
+     "mayorista": 1534,
+     "cripto": 1653.91,
      "tarjeta": 2028
     },
-    "dolarFecha": "2026-10-30",
+    "dolarFecha": "2026-10-31",
     "dolar": {
      "oficial": 1560,
      "blue": 1565,
-     "bolsa": 1568.8,
-     "contadoconliqui": 1650.3,
-     "mayorista": 1539,
-     "cripto": 1645.46,
+     "bolsa": 1575,
+     "contadoconliqui": 1658.5,
+     "mayorista": 1534,
+     "cripto": 1653.91,
      "tarjeta": 2028
     },
-    "ultimoChequeo": "2026-10-31T02:58:00.659Z",
+    "ultimoChequeo": "2026-10-31T03:26:53.560Z",
     "resumenFecha": "2026-10-30",
     "hist": {
      "2026-10-30": {
+      "oficial": 1560,
+      "blue": 1565,
+      "bolsa": 1575,
+      "contadoconliqui": 1658.5,
+      "mayorista": 1534,
+      "cripto": 1653.91,
+      "tarjeta": 2028
+     },
+     "2026-10-31": {
       "oficial": 1560,
       "blue": 1565,
       "bolsa": 1575,
@@ -85,7 +94,7 @@
   },
   "licitaciones": {
    "estado": "listo",
-   "corridas": 16,
+   "corridas": 17,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -94,12 +103,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-31T02:27:56.217Z",
-   "resumen": "🧱 Clientes y licitaciones\n\n• El Grupo Joven de la Pur&#237;sima presentar&#225; el pr&#243;ximo domingo el Cartel del D&#237;a de la Virgen 2026, obra de Ra&#250;l Mu&#241;oz Gallardo (puentegenilok)\n  https://puentegen",
-   "informe": "data/informes/licitaciones/2026-10-30-2327.md",
+   "ultimaCorrida": "2026-10-31T03:26:53.560Z",
+   "resumen": "🧱 Clientes y licitaciones\n\n• La Barrancosa: el Gobierno licita el control de las obras y su conexi&#243;n el&#233;ctrica (iProfesional)\n  https://www.iprofesional.com/negocios/467895-el-gobierno-licita-la-inspeccion-de-",
+   "informe": "data/informes/licitaciones/2026-10-31-0026.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "la barrancosa: el gobierno licita el control de las obras y su conexi&#243;n el&#233;ctric",
      "el grupo joven de la pur&#237;sima presentar&#225; el pr&#243;ximo domingo el cartel del d",
      "naci&#243;n llam&#243; a licitaci&#243;n para inspeccionar la obra de las represas",
      "apertura de sobres de la licitaci&#243;n p&#250;blica n&#176; 25/2026 para la adquisici&#2",
@@ -146,7 +156,7 @@
      "el banco nación ya prestó los $32.000 millones de anses para hipotecarios: cuántos crédito",
      "pp acusa al gobierno de \"negar información de obra del museo arqueológico que tiene desde "
     ],
-    "ultimoChequeo": "2026-10-31T02:27:56.217Z",
+    "ultimoChequeo": "2026-10-31T03:26:53.560Z",
     "semana": [
      {
       "titulo": "El Gobierno activa un control externo sobre las represas en Santa Cruz con una licitaci&#243;n de $39.624 millones",
@@ -267,6 +277,12 @@
       "link": "https://puentegenilok.es/2026/10/27/el-grupo-joven-de-la-purisima-presentara-el-proximo-domingo-el-cartel-del-dia-de-la-virgen-2026-obra-de-raul-munoz-gallardo/",
       "fuente": "puentegenilok",
       "t": 1793413692628
+     },
+     {
+      "titulo": "La Barrancosa: el Gobierno licita el control de las obras y su conexi&#243;n el&#233;ctrica",
+      "link": "https://www.iprofesional.com/negocios/467895-el-gobierno-licita-la-inspeccion-de-obras-en-la-represa-la-barrancosa",
+      "fuente": "iProfesional",
+      "t": 1793417229130
      }
     ]
    }
@@ -354,8 +370,8 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T02:58:00.659Z",
-   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
+   "ultimaCorrida": "2026-10-31T03:26:53.560Z",
+   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)",
    "informe": null,
    "pausado": false,
    "memoria": {}
@@ -447,7 +463,7 @@
   },
   "noticias_vm": {
    "estado": "listo",
-   "corridas": 16,
+   "corridas": 17,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -456,12 +472,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-31T02:27:56.217Z",
+   "ultimaCorrida": "2026-10-31T03:26:53.560Z",
    "resumen": "📰 Noticias de Villa María\n\n• Un motociclista murió tras chocar con un camión cisterna (Villa María VIVO)\n  https://news.google.com/rss/articles/CBMilgFBVV95cUxOYXlCU1VHa1hwZ2FSRmYwNGx2eFFzdDBkOWp2Mm1zYkRUTnh6dFZwT2QzdzA",
    "informe": "data/informes/noticias_vm/2026-10-30-2106.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "conferencia de coaching en beneficio de un merendero del barrio las playas",
+     "el tenis internacional llega con el challenger a villa maría y crece el sueño de la copa d",
+     "motociclista trasadado al pasteur luego de una caída sobre el bv. sarmiento",
+     "una joven y una menor con traumatismos de cráneo luego de un choque de moto",
+     "el tenis internacional llega con el challenger a villa mar&#237;a y crece el sue&#241;o de",
+     "16 estudiantes de brasil llegan a villa mar&#237;a para estudiar en la unvm",
+     "el coro del colegio domingo zípoli se prepara para cantarle al papa león xiv en córdoba",
+     "tarde de shopping m&#225;s all&#225; del clima",
+     "el ejército avanzó con nuevas pruebas para sus cañones citer de 155 mm, con cargas propuls",
+     "entry list atp challenger villa maría 2026",
      "necrol&#243;gicas de viernes 30 de octubre de 2026",
      "refuerzan los controles nocturnos para evitar siniestros y el consumo al volante",
      "no pag&#243; el taxi y termin&#243; en el patrullero",
@@ -619,7 +645,7 @@
      "presentaron el challenger de villa maría con entrada gratuita hasta el jueves",
      "grupo ecipsa entregó una nueva etapa del megaproyecto residencial en villa devoto | 29 de "
     ],
-    "ultimoChequeo": "2026-10-31T02:27:56.217Z",
+    "ultimoChequeo": "2026-10-31T03:26:53.560Z",
     "bandeja": [
      {
       "titulo": "Efemérides de hoy miércoles 28 de octubre de 2026",
@@ -720,15 +746,61 @@
       "titulo": "Río Segundo: policías salvaron a un bebé de un año que tenía dificultades para respirar",
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNVmhfQTVYelBfLVp1SVN1b3UwTUx2WHAwT05qQndJWDFnRTZrb0VrRlJNT0lmcnlwMENUTW5ybVN5cTR4dmxBUno0UjgtcER4VV8tZ3gzTXBSRVMxWmI3RFFKMDZVU1R4UldnUmNUXzAzOEFQMlBkcjVCWVFHbFdYZWxELXhRYmJnbXhqSTh3ay1HV2xwOHNBcVhpcnZjZGoxQmxURUZaRHA1OXN6TG01NGcwOG02aGJKX0lyWFVqMzVERVk3TFRIQW53QUc3WWc?oc=5",
       "fuente": "Telefe Córdoba"
+     },
+     {
+      "titulo": "Conferencia de coaching en beneficio de un merendero del barrio Las Playas",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNa3A0bzc5RVNhZ01pNG1QNzVXbDhGWnVFREt6OUtfanY4QWhRd0gxbTJhYUpVSV9TaEZZaVFVRU1GdU5OcVZkeDQ0QTRtRmVFMnVqN2pvNi12MWNpeTFiWEo0OGNnN0JEWU1IUXhMVXJhWHg1b2hlaE95TVVkYjFzZ0xGQVpxWW5ZS011VmFpU1hsVUlWaDFRUVhiZlpMdldhdWNxdG1LWjBKOTNBLTRHT1NSR01WaTFCTDhr?oc=5",
+      "fuente": "villamariaya.com"
+     },
+     {
+      "titulo": "El tenis internacional llega con el Challenger a Villa María y crece el sueño de la Copa Davis",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQNjIzMlFZcGZYU2lsdFljQjczX3ZFaTR3UHFDWnIwMUtCTTlWa1Z6MDlsT0VLVmQ5Nm9VelBRTDhOanBadWk4YThPRzF1R2xEOEhrMnpVZTZzRk5fNkJNZlJDdGZzQ0Z5SlgwcGE1Q1JpN0dFVzRkdk9KV09BQWF1c2MxeXJpanRzalVpNVk2R3JNVGNHN2lCRm5WMWxiN05qQlZ5MXJxLUhXYWF1RVF6TEhUZXg1THYtZmo0dFRZOGtIZHFVRUUtVDRZNGVpd1I5eU91REZn?oc=5",
+      "fuente": "villamariaya.com"
+     },
+     {
+      "titulo": "Motociclista trasadado al Pasteur luego de una caída sobre el Bv. Sarmiento",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPRm5XSnJQVmpSQXl1czhQYjZMbTVnMEdvWm5INVRyS0FQTzBRbnV4c2JlVGlwSEo2SVlrUmhDd013X1BJcVFUcGVQTmp4RUlmQ1MwZ3otSXl6SFFfZENsRUpuUnQwOEh6Um9KMkM1VVUyWDVZTW44R2JEMmVuN3d0a0NDS0dQN1hNZnZnWXpzTHZ2Vnc3Y21ENmtneEtFR1BOMzA3ZVllcUcyMmRyR0t5MW5TeEFpWVpCRmlwMXZR?oc=5",
+      "fuente": "villamariaya.com"
+     },
+     {
+      "titulo": "Una joven y una menor con traumatismos de cráneo luego de un choque de moto",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQT0xwdTlwdi1LLV91LUd3QVhMdm5VLWE5b0M3WjF3YVNxUDhEUVVHRzhXOVJ1OHQ4WExZWERqeVZHSHFySnp5MlZoVDZnY3RoT3M1YjRVSUJzNzN0LWdZcEZDdUJxYTVMblR2anhHZWZBNGJlak52ZWk1X2lnUVYyNGNsdVpNXzE0Rm9iajZ3aXpwUGFjem8wZGE1SFFFMkFkVnVrbmFjWno2MmZTdWVuZEw1NlIxdWlEcENJM0ZHOA?oc=5",
+      "fuente": "villamariaya.com"
+     },
+     {
+      "titulo": "El tenis internacional llega con el Challenger a Villa Mar&#237;a y crece el sue&#241;o de la Copa Davis",
+      "link": "https://villamariaya.com/deportes/el-tenis-internacional-llega-con-el-challenger-a-villa-maria-y-crece-el-sueno-de-la-copa-davis_1793386679",
+      "fuente": "Villa Mar&#237;a Ya"
+     },
+     {
+      "titulo": "16 estudiantes de Brasil llegan a Villa Mar&#237;a para estudiar en la UNVM",
+      "link": "https://villamariavivo.com/estudiantes-brasil-villa-maria-unvm/",
+      "fuente": "villamariavivo"
+     },
+     {
+      "titulo": "El coro del Colegio Domingo Zípoli se prepara para cantarle al papa León XIV en Córdoba",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPQ0dicXNCWHFtVFZFTjlqZElOcnUzalV3ZXhfdHM1b3lBQzVlQURJSjE0X09SRk5qQU9Iam5PVmhOVjZnWnRYc1pSX1VpNlZ0aTRVV0Q4VDE0M1VtUXRZaFAxX1hfMEZMdTlFZFd5Q0RjRFZpTEdIa3o1cTFMZWRXQ25mQkVJZkkyd0dmZWlXOWRKSWNqVloxRDFiNU1tdmEyZ1dpbHdmZHR4XzBfRzRaUHUzaktvMnZDQ2RVWlZsNTVxQnlmdExWUkx6UHNCVGhz?oc=5",
+      "fuente": "Telefe Córdoba"
+     },
+     {
+      "titulo": "Tarde de shopping m&#225;s all&#225; del clima",
+      "link": "https://www.lacapital.com.ar/es-social/tarde-shopping-mas-alla-del-clima-n10288803.html",
+      "fuente": "La Capital"
+     },
+     {
+      "titulo": "El Ejército avanzó con nuevas pruebas para sus cañones CITER de 155 mm, con cargas propulsoras asociadas a disparos de mayor alcance",
+      "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOOXVfLUl1bElHMjdEcVdSNE1vU3NsNEpuN05PZHNTbk4xU2JVX2h5UVlSeXl0M0N4U1hvMzFITF9HNWx1QnZ1bDY2MFpkWlowQk1TajhuY01PT21nUnZ6c3M3VmtjOVFfQjlWdURFUnhuT1Q1bjJtcFB1Q2tTX3dzS25UU1dzRWNfcGFxc0VCVHVJSW1wRmZSVUJjTXQxLWxBY19fdmo2enFHcXVJV2xEZDdXMDZ5WHVDdlZZTHU5Z3NCQzVjVVF5S0lBd1hQVTdoaDQ2THZaX2w3NFJpQnkyR3RqYW5pcmtoWTd5Z0p2Wmw2TXZuWEoyNWdiQnVnQmREN3VtdFZpWnJ6WW1uWDFnVndkeEJpanNzcVBMeXdfZ9IBnwJBVV95cUxOOXVfLUl1bElHMjdEcVdSNE1vU3NsNEpuN05PZHNTbk4xU2JVX2h5UVlSeXl0M0N4U1hvMzFITF9HNWx1QnZ1bDY2MFpkWlowQk1TajhuY01PT21nUnZ6c3M3VmtjOVFfQjlWdURFUnhuT1Q1bjJtcFB1Q2tTX3dzS25UU1dzRWNfcGFxc0VCVHVJSW1wRmZSVUJjTXQxLWxBY19fdmo2enFHcXVJV2xEZDdXMDZ5WHVDdlZZTHU5Z3NCQzVjVVF5S0lBd1hQVTdoaDQ2THZaX2w3NFJpQnkyR3RqYW5pcmtoWTd5Z0p2Wmw2TXZuWEoyNWdiQnVnQmREN3VtdFZpWnJ6WW1uWDFnVndkeEJpanNzcVBMeXdfZw?oc=5",
+      "fuente": "El Cronista"
+     },
+     {
+      "titulo": "Entry List ATP Challenger Villa María 2026",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5vdUtwVXQ0Rm5rcW9EUmFHZkdtYTVUSkZ4ZUl2SEJIeEhWRDYyVXJDUHgzb0ZvbjJaOWVyay0tOGpwYm1SdkJjUkJScTh1MWs5Wm5XQnJoYlp1UDNFaGlGODIzWmdRRUllRmcyVnpkWnRPU2N3?oc=5",
+      "fuente": "Canal Tenis"
      }
     ],
     "entregas": {
-     "fecha": "2026-10-30",
-     "hechas": [
-      "07:30",
-      "13:00",
-      "20:00"
-     ]
+     "fecha": "2026-10-31",
+     "hechas": []
     },
     "semana": [
      {
@@ -796,7 +868,7 @@
   },
   "noticias_ar": {
    "estado": "listo",
-   "corridas": 16,
+   "corridas": 17,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -805,12 +877,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-31T02:27:56.217Z",
+   "ultimaCorrida": "2026-10-31T03:26:53.560Z",
    "resumen": "📰 Argentina: economía y obra pública\n\n• RDEco: qué diferencia el rumbo industrial de Argentina de las estrategias de las principales potencias (Perfil)\n  https://news.google.com/rss/articles/CBMi4gFBVV95cUxNOXYwY2I0TFoy",
    "informe": "data/informes/noticias_ar/2026-10-30-2106.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "sin crédito no hay transición productiva",
+     "ganadores y perdedores del efecto brasil: los tres sectores argentinos más amenazados y lo",
+     "en 1979, marta minujín construyó un obelisco de 32 metros con 10.000 pan dulces: la obra t",
+     "obra pública, créditos para pymes y reindustrialización",
+     "la polémica compra millonaria en la patagonia para la construcción de tres hidroeléctricas",
+     "aprobaron la adjudicación de la obra de agua corriente para sauce grande",
+     "avanzan las obras en la peatonal san martín",
+     "mart&#237;n llaryora cruz&#243; a la naci&#243;n: \"el estado nacional hoy no inaugura ni u",
+     "la venta de supermercados dia entra en la recta final: quién es el principal candidato par",
+     "qu&#233; provincias tienen las cuentas m&#225;s s&#243;lidas y cu&#225;les enfrentan dific",
      "políticas económicas de milei dividen a argentina en dos",
      "la uocra sumó un aporte empresario del 2% para financiar beneficios sociales y culturales ",
      "saramalacara en obras",
@@ -972,7 +1054,7 @@
      "el gas llega a barrio san cayetano: “el objetivo es que en tres años la ciudad completa te",
      "ante la recesión, caputo se anima a una herejía"
     ],
-    "ultimoChequeo": "2026-10-31T02:27:56.217Z",
+    "ultimoChequeo": "2026-10-31T03:26:53.560Z",
     "bandeja": [
      {
       "titulo": "Passerini remarcó que la recaudación municipal interanual bajó un 20% y volvió a cruzar a Nación por los subsidios",
@@ -1073,15 +1155,61 @@
       "titulo": "La Ronda Norte, las infraestructuras sanitarias, la vivienda y las depuradoras centran las inversiones de la Junta en Córdoba para 2027",
       "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPOUpMekVWXzRYLUJTVThCSE5FVnBOQUtxd0dLRUNXaGxWak10MHY4RHdxdlF4ZmRxa3ZDOGtrZFBqUjZhbHI3VU9xV0ozRWk1eHQ5TldyVjBxVi1YckRqSUp5bEVfa3NMMmpfZWg4MGVramZKRmNFbzU2UFowSGlNaFRVbnUyOHd5SzJreVZnM0V4Uml5YTdTRnBlajhSTjRJa19JQU53d2VQT0szc1h5Zzh4WEo4X2FVaWlMSHVhbEJvdVY0dVgxcUh1RWV1R3RvQnRFdk1Fd1JCSld3Sm50SU9jMEN3U1VaODJuQg?oc=5",
       "fuente": "https://cancionero.es/"
+     },
+     {
+      "titulo": "Sin crédito no hay transición productiva",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPV2JCM2J5V2ZLNklYQmF6R1dzRjF2ek9IYlAtUVVHZjFRSWIzejV2dVV6enFEYlhSb1JxU21zbnl2VW1JSzRZYmozMDV1M3FBOFlla0ZOWmR5QlpUa2o4ejRfaUxISnBDN1hSSmlPMWFjdjQ2YXdtNXZYQlZTdEJLTUlVbjZMM2NTNENieNIBpwFBVV95cUxOcXR4bUFtSkhKWXR2TXQ4YjRRYnNzbmNUdm10T3JXMGY5bHJudGhvUDJZaTZaeEpyYXhWVUpiZ1czTUpaeU9xOEd0YXNobmx5TElqb3BES0dmbDZGYlNNUjkxcHpPRzR4TFd4QmxRQUdhaUR0dVhCT01HdWdFOUlKeVVBeF9MamhOWUd1U0ZtRklFa1hTUW5ZYmNVQW11a1JGNm1VSHZtYw?oc=5",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "Ganadores y perdedores del efecto Brasil: los tres sectores argentinos más amenazados y los que podrían salir favorecidos",
+      "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPdVJqVjZtQjFTZnBDbHpkVm0ycjdrdDZLMC1IUS1OaTZoX1k5NS1aUjV0UHY5U2hpZ1hldzJoVWVlWm9hMjY3OWJyeWtGT0E4MkdzdEQ5cE1Ed09hMFM3eTM0bEhzbDJLeUVUZWZuRHRzOHg0SW4zT3MxeUFnWjJQRThJMG9JOTNiN0M0LWVnd0F3STZZMUN1Q3NHZk1aR2Zxc0E0UFBwdF9WaHhqQkhmdnBPT2xWNDN4WGExUEpvdEh2aF9JUk1UdmlBRjZLc3hEeWFTWXZQeWJNbTJIQVp0OVFEblhweVpnX2JQckplaXg0QjBxczNlb9IBkwJBVV95cUxQMEtkVGx5dkFSVkJnRTVhMXZLaWttWlBhMHpWUkdsRXVFaEJPS05GWXY5ckt0TjJ3Y3VrTlU5em51aHZSNDJPTEVROUszbmNkQzlLSkI3YnJCQUZuVHNCSG54RlZQWm5ZeWdQX2xLZHE4SHBkNGFaMi1tblB2SnJtRGZKUkhLZVVBczI3cnM1UXdaLTNlUjAyTzg5TWpSTFFDZ0VaTFA3UW5mRURBZGxaUWZ4NVo5amQ3dmVkSGthLWctdDhWMzdBT3E5ZUtkRXJEX1k1cDdZTEVEX2VObzJqUUtMd2F1VlVZRTlMVW9VQzRHbU53dGJidHJJOVBuQzJ3WkhvQ00yUE1VN2Rkd0I4UUFHdw?oc=5",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "En 1979, Marta Minujín construyó un Obelisco de 32 metros con 10.000 pan dulces: la obra tuvo un final digno de película",
+      "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOM2JwYy1lQUQ2S204M0ZkMXBxMC0xbEFRcHAtZEozYnF5RkYxU1hPejRNcGhtanZtUFM2RC0zMnQ2QWdYcm9Gb2x2aDVnYzJweUhaeVZpMjNpNWNEZmJRc0NackF0ckQtTUlpUEhza0xNek1BWDhiS2dhaUhXaVdoN1phNFF2bHRYelFhVllrM0VJT3lVVndUY1MtTTFsWk1vSUJHaWNjd0JxTUhMZzM5T2pmS21sajVyNTNRbWZ3Y1dBUklva3lmOEtYOGRiT2VJZVNHUzFFMC13eG9fQXhKZW9aYkU5eUxMcFFQcXNlR0RXX25r?oc=5",
+      "fuente": "Canal26"
+     },
+     {
+      "titulo": "Obra pública, créditos para pymes y reindustrialización",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQR19JVm80V3NReExhSUNKNzdUS0U3eFJWZGxpLVdLSlZGNVlhMXVKR0VSWUl2Wk1rRV9YMzZMR3dyVVFEdmRlcjVCalJhcXF6QWNuWVZHcE1NaFc0bDVZYno5ckRRb3FiTE14QVc2bG55Mm94bkNtcFZ5TmJHa3lCZWxxNHYxTUczS2swenEyWWlIdGhESWVLQQ?oc=5",
+      "fuente": "Prensa Mercosur"
+     },
+     {
+      "titulo": "La polémica compra millonaria en la Patagonia para la construcción de tres hidroeléctricas y una casa de lujo en 10.000 hectáreas",
+      "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQV2lobkQ5Sk9aY3VPUzdxQlpRSXNJX1h0d0NJeEQ0eWsyTDZEaE92MENnaEszbFZNZHlaTmM5M2lYNTFpbFdBTUx3aWs3ZDM1eFFDcWI4ZlU4akFOckVWR0dydnBnWUU2RWlVVDZKcFp6VGhiYjNSYlFzZHk2UHhNQVFhTW5DWGc4Z0dyQ2pKYmFjY1RKbjZCa0I1cEk0M0RmeENack1tUmRRNmhnV29IaVkwN1ZHX3I4M2lyNldkWGVWcnFvOGg1c3UxTm8zMjFsSjUwTUJ5Q29vc1lGSDU0V1c4TDNqMmFRczQtaVZXVmp2ZERUU1U1enVVVnZobXlRbl9PcjdiTnZkOFnSAYsCQVVfeXFMUFdpaG5EOUpPWmN1T1M3cUJaUUlzSV9YdHdDSXhENHlrMkw2RGhPdjBDZ2hLM2xWTWR5Wk5jOTNpWDUxaWxXQU1Md2lrN2QzNXhRQ3FiOGZVOGpBTnJFVkdHcnZwZ1lFNkVpVVQ2SnBaelRoYmIzUmJRc2R5NlB4TUFRYU1uQ1hnOGdHckNqSmJhY2NUSm42QmtCNXBJNDNEZnhDWnJNbVJkUTZoZ1dvSGlZMDdWR19yODNpcjZXZFhlVnJxbzhoNXN1MU5vMzIxbEo1ME1CeUNvb3NZRkg1NFdXOEwzajJhUXM0LWlWV1ZqdmREVFNVNXp1VVZ2aG15UW5fT3I3Yk52ZDhZ?oc=5",
+      "fuente": "La República"
+     },
+     {
+      "titulo": "Aprobaron la adjudicación de la obra de agua corriente para Sauce Grande",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVjFpb0QtWG5YNm1neTc1Y1F1MEVQY2NUVnliUG4ycF9leFZGRUVEUE5MUlF6Ukh1alJQSTZOR2drZ21NQTYwd0pYcW9rNDJ4MHRzaFVjVEpIOWI2YVJjakN2SDJ4Y1VORW1SSGdMODh1NG40U2RsY2pKQUxPVENWSlo4YTA0VTVCTEVmX2xXY0lISms1X2FXX09VaU50S2pQWktxQk5qQTUySEV6ZnBfdFl2S29LYWtMU1pqNlFpLUPSAcQBQVVfeXFMUG9KWllFWTUwZFBjTkJUQjVCeDhhYmc0cVBic1l6OGR6cXE2WEpXU05lUVQzekctaTJuOGFMVUlQbEJYTENmV2NncThCSFlFbDQtNG5LWXVBT1BmMUc2MHlrS2lxRmdoOGFUTlE5UkpJT2xfNmIzTFIyamlxRS1NRmVZZzdJSmVBUUFPbTFwWW9ycTNSaWE4b0dfbUh3V2dzbkpxbDJodXZSTXNkd3JZQmltYkUtaG1fZ3JveFVHQ01ELTRmbQ?oc=5",
+      "fuente": "Codigo Baires"
+     },
+     {
+      "titulo": "Avanzan las obras en la Peatonal San Martín",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNNm9MdTh0S3VKRXN6Tkp4cXZlcjRLT3E1NGxKRWtZZ20tZkhVdi1ZN1kySHdGWUg2QTBqUkM2c3BFak5lSjhWajlJaTcwNVpBdnU5dmY1V1R1ZTJLSDJQaU9DUE9YRm9lVVcyYmVwREVYVzR2QTRjTnVmWkhKQ1Z1eXF6aEh1dHd1X25CaEQtSzJnX2R1bkE?oc=5",
+      "fuente": "0223.com.ar"
+     },
+     {
+      "titulo": "Mart&#237;n Llaryora cruz&#243; a la Naci&#243;n: \"El Estado nacional hoy no inaugura ni un bicicletero\"",
+      "link": "https://canalc.com.ar/llaryora-criticas-gobierno-nacional-obras-cordoba/",
+      "fuente": "Canal C"
+     },
+     {
+      "titulo": "La venta de Supermercados DIA entra en la recta final: quién es el principal candidato para quedarse con la cadena",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNSmg3SmZIY193TkstRmpZM0E1cmhSRXN1ZGtrX2FBcFZxTDJObWxRM05mOVh5MGVFczI0cXZPSVg2UnRuXzF3SHY0T3dwU01oX2VxVlZ0WmxWcWhHa2M0SmtIaUx5dndaR0FNVXQ4ZnVBRGVPVWdGSWlaNnIzMGhCZF9wSFF1TFVzUDc5SmxjeFBuVElUcVFuaWg0STB5R3VnQ3BDZ1pBZWNzV1lHMVpzaU5BTGEtSlotZHlpUEFrNDhpWDlOX2dmZFAyODQ4RUdCWS1INkxwNE9BTHNtem4xSWl0WkdvU01YN2tIa3pONNIBigJBVV95cUxQQWJfSjVWRWxYM1Q2VmVlUWM4TE1kVTZJZnlEamtfUFR0QzN1NGg4WkR5TURHN1JZOUUyeHdOekF4M2NfZnhTVWU0MEd5UWdHWFVTbjMzQy1SN3hDMjBqcVd6OEpOMnNRNlk3LTJOaUlmMnpRWENmOHJlLTdOOEI1NjdlU1lTck1fNEExdDlWd3UzVDFXS2F4eTZvRDN3anpYMzJRVERBTFR2aWRpaXo5V01helBwdVdrVnN2ODRHWkIyNjEwMEFDdEt3bjVUMnpZRjVBZV81OGtzTDAyc1pRVlBmNlFmaGlyRGxIT1dDN1N6TlhNX1V3Zko2aUF4SU5odVExYl9jYVhHQQ?oc=5",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "Qu&#233; provincias tienen las cuentas m&#225;s s&#243;lidas y cu&#225;les enfrentan dificultades fiscales, Tierra del Fuego ultima del ranking.",
+      "link": "https://www.lalicuadoratdf.com.ar/2026/10/que-provincias-tienen-las-cuentas-mas-solidas-y-cuales-enfrentan-dificultades-fiscales-tierra-del-fuego-ultima-del-ranking/",
+      "fuente": "La Licuadora"
      }
     ],
     "entregas": {
-     "fecha": "2026-10-30",
-     "hechas": [
-      "07:30",
-      "13:00",
-      "20:00"
-     ]
+     "fecha": "2026-10-31",
+     "hechas": []
     },
     "semana": [
      {
@@ -1220,7 +1348,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
    "ultimaCorrida": "2026-10-31T01:55:56.980Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 62 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 91 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -1689,7 +1817,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 29,
+   "corridas": 30,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1698,7 +1826,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-31T02:58:00.659Z",
+   "ultimaCorrida": "2026-10-31T03:26:53.560Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -1708,7 +1836,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-10-31T02:58:00.659Z",
+    "ultimoChequeo": "2026-10-31T03:26:53.560Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -1723,6 +1851,20 @@
       "https://bosio-central.uwuubuntu83.workers.dev/": [
        11,
        11
+      ]
+     },
+     "2026-10-31": {
+      "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
+       1,
+       1
+      ],
+      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
+       1,
+       1
+      ],
+      "https://bosio-central.uwuubuntu83.workers.dev/": [
+       1,
+       1
       ]
      }
     }
@@ -1820,7 +1962,7 @@
   },
   "mundo_economia": {
    "estado": "listo",
-   "corridas": 14,
+   "corridas": 15,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1829,12 +1971,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T02:27:56.217Z",
+   "ultimaCorrida": "2026-10-31T03:26:53.560Z",
    "resumen": "🌎 Mundo: economía\n\n• Alerta por el impacto de El Niño en la mortalidad mundial: qué se prevé en Argentina (Plaza Web)\n  https://news.google.com/rss/articles/CBMirAFBVV95cUxObGU1bUw1Rnk5c2VjSEMwZzVmTjNOTHdsWnNnYkxWYWZTRG",
    "informe": "data/informes/mundo_economia/2026-10-30-2106.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "ucrania cambia de estrategia y vuelve a atacar uno de los sectores más importantes de rusi",
+     "china desmiente haber espiado a jefe de nvidia, jensen huang",
+     "tras 18 años, china regresa a costa rica con una gran feria comercial",
+     "ganadores y perdedores del efecto brasil: los tres sectores argentinos m&#225;s amenazados",
+     "el banco de japón mantiene los tipos en el 1,25%",
+     "el papa le&#243;n xiv vota por correo en las elecciones de medio mandato de estados unidos",
+     "aviso de la cancillería: eviten reclutamientos engañosos para la guerra entre rusia y ucra",
+     "polonia supera a japón en renta per cápita ppa y se acerca al nivel de españa",
+     "la economía europea generó 765 millones de toneladas de residuos en 2024, casi un 2% menos",
+     "japón financia con us$ 12,4 millones nueva planta de agua potable en villa hayes",
      "méxico y canadá deben colaborar con estados unidos contra china: ustr",
      "china creó un chip de ia capaz de superar en pruebas reales al h200 de nvidia",
      "china acusa al embajador de estados unidos en m&#233;xico de difamaci&#243;n por el ataque",
@@ -2076,17 +2228,63 @@
       "titulo": "Cómo el comunismo convirtió a China en una superpotencia capitalista",
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOZGJwRUpwX3drNTE1d0J5YWRRcEY3WlRaS0ZBMU9IYnRPQ0hNSFM4RlZJSHN2MjhHSEVHZ3UyelFWT3B0c0NFVDFMSkxxU0I0WllNYm5VRUw5ME00bkttNWZHdjBQNm90c3dVZ0RPNG1kMHBDRFVpMjg0azlBMlRUTkZDTFRaOHZWMEM0Q0dZRmx2b3ZhaU5oZFUzanA0UTZvaUlQei1Ldw?oc=5",
       "fuente": "Le Grand Continent"
+     },
+     {
+      "titulo": "Ucrania cambia de estrategia y vuelve a atacar uno de los sectores más importantes de Rusia",
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQa1ljNzVKUzdheTVCeTJXVW9fd2pUTVBVNVMwYjd4cHlWYVhuYmVYbGRlVm1yZEFGcEpaYzU5M0VIZ1c2d1B6dDJhUWxaakhDWHhGR0pMd08zc1FPYnNKcUx1SE1Ic3otR1JGWlI1ejdoTW9mMkNIRG5hSkE3Tk5ZMjJwQUVpb1VMWEZveW5BRkJxcTdYWFBKSU82ajhjOUtJRmM0R0JhdkZqWkJMZW56cHZTODlxTTdYQk9IczZYMHoxOENvM20wN2xwOTFjVHFDSGxTVTF4c9IB3AFBVV95cUxOdUQ4cF9xaVJ6NFlSdHdZZW5VVzc2MUk1QkYzWU9YTVNjcDk1TEVlcXloeVhIUDhaWVZrd2FDdHBvWEwyQVRBbjVRSVZxZDhOclh3STJUSUVJVmQ1aWVIdDRWNkg0YW1UTlJveHpGenRfbDNTdjFXRlMtcDgxVlNVRDVvVDRiWTdCcVdoQksxcnp5cjRnU3htVElKbXV2dmc5ZHZRMjMwemE0Mzd5U2s1TzVGYmk4dFZMVXNwOFlqbmtsRmpvRDJuMFhNOHlsY3hxY0ZjVkxZVHhkUDZT?oc=5",
+      "fuente": "MUNDIARIO"
+     },
+     {
+      "titulo": "China desmiente haber espiado a jefe de Nvidia, Jensen Huang",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOd2R6VVdZMVg1WXBEZ0Jzcmd5bFNXUFUwY0QzaFNvOFpzb1BEMUpsRVdNczNPWGdnUFNsNXlHaTRKcmdKQzlRdEVHcFgyQlpuZHVpMGpnYldrWnFVU253Z2hpREpvRTFEYzI1QmxiR3ktLXkzWUJra3pZbFVycHFoV2JpV2hlY3J5SEdZaG13NGtTUFRUUWZSYkMzTmNwOGdtS051Tl9vWHZ0U0xXZnYyaXhLelFHRExRZXVZNVNUUk1oZUVGNUJJZWxPS0tmWVJ5dldnVGZWcVo?oc=5",
+      "fuente": "Tenemos Noticias"
+     },
+     {
+      "titulo": "Tras 18 años, China regresa a Costa Rica con una gran feria comercial",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNnBLTmwyRS1QZ25VY0FnR29uUkRCNGlsTjFVQUVaNS1JY1JkN05yUjFsenBkWE1TWTE0cDBxVE1ERFpSclU2VHFtSlA4S3dXMl92Wkk3eDJXdHlrRkt6bV9ZVThwUllDdEVEb19KMXN3MHo4bEpyaTUwYXJiSUpYcVZDU0JZcTQ1TndFWDNLY3dsOUZnQjROMG8yS3NrR1ZNLVVnZmNKbG0wVnhF?oc=5",
+      "fuente": "CRC 891"
+     },
+     {
+      "titulo": "Ganadores y perdedores del efecto Brasil: los tres sectores argentinos m&#225;s amenazados y los que podr&#237;an salir favorecidos",
+      "link": "https://www.infobae.com/economia/2026/10/31/ganadores-y-perdedores-del-efecto-brasil-los-tres-sectores-argentinos-mas-amenazados-y-los-que-podrian-salir-favorecidos/",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "El Banco de Japón mantiene los tipos en el 1,25%",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAwTnRKQ1E3RGEwV2d4SmJUMUoyT0pXenRHVzRXYWtUcmprUzIxbGwwUkp3dnlMS0hTa0FDUFlNNllxNE5FandrNTBWejJKUjFNbzV3czlIVnZxdFAzNldHYTJ5S2dCZGxNZzYxNTNxSEJESG5vTW1XR29EZHAzZ9IBgwFBVV95cUxPMm5JWHBsU3U3ajVmbWczWHlVb0VsRDBJM0dWcXEyalc0cjd3UVllMG9sNHl2a1hUc0RQNUxDekg2Y0sxTExBXzhEZjRiRGZyN19GQ2I3RXBKbTZlbWF1UHIwdEdJcUJxS1pKVF94Yko3VzNmdlVaek5FZDM5aFREZHd4QQ?oc=5",
+      "fuente": "El Boletín"
+     },
+     {
+      "titulo": "El papa Le&#243;n XIV vota por correo en las elecciones de medio mandato de Estados Unidos en unos comicios marcados por la guerra",
+      "link": "https://larepublica.pe/mundo/2026/10/30/el-papa-leon-xiv-vota-por-correo-en-las-elecciones-de-medio-mandato-de-estados-unidos-en-unos-comicios-macados-por-la-guerra-1388040",
+      "fuente": "La Rep&#250;blica"
+     },
+     {
+      "titulo": "Aviso de la Cancillería: Eviten reclutamientos engañosos para la guerra entre Rusia y Ucrania",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPMXdPVUtGM3dJalByekQ2MXltZmhFSExpa1U2eXAzZUJ1QVV2TnZHSUtxSVZNZXU4NHVBbDhKdjJmczdPYW9hckxOZEpTSzluN0cxQ182YThObGNlNHE4Y2ZscjdQcW9IbkZnbW5OTkJWZVQyNWhXV3RTd1JVLTZvRER5VEwxYTJxZlRpcFJ6aHViekstVzNQVm1Wbw?oc=5",
+      "fuente": "Head Topics"
+     },
+     {
+      "titulo": "Polonia supera a Japón en renta per cápita PPA y se acerca al nivel de España",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWFoyaUpaTXNoN3JpN1poQzB3eGlVUXRaa0drVFVTcFJGTVAwcEVuTDZUTWxHQUdnRmNlV0dELWlpWHJJODh0UU1TTWtLRG85THlJeW54MWRKNkt5UldBbWx3UlpLNnc4WF9iUzV2dl9fMTBNWEt5MThVeDFKNzV2VWx4T2tpbHdmRTA3aEMxOE15TkRhbnc?oc=5",
+      "fuente": "Traders Union"
+     },
+     {
+      "titulo": "La economía europea generó 765 millones de toneladas de residuos en 2024, casi un 2% menos",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1wX2lKTnplZ21DV0RjbWQ4d3o3QmI2bTRLVklHSE96VW5HMnU5dTc3RUlmTGFMNGthZExscGpMRm1fOWZyY1dmYm9MV2xrM2hMcFI0b0RYYUc5dk5NSFlYUjE4T3lsWWR6N3ZLVk90WTh6RnJZV3c?oc=5",
+      "fuente": "Residuos Profesional"
+     },
+     {
+      "titulo": "Japón financia con US$ 12,4 millones nueva planta de agua potable en Villa Hayes",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNbllMbWhfME9xYmNyZnN2a2QyWllQb21oa2tTWTRsbll4bGFHc2taM3h5cnAxTkhncHROS0tMeXlCWHJnYmlnaXNua2hGMmp5QmxCcE5yUjNSUkJ4N0xxZU1mVWRaUFJqYTV6akYxRnFXYjh3SkF0bGVTX09YSmFtcW0wRGZjeGZyQlZRd1RHS1NUbHFlVkI5bG9MaXpqdUk3S0dUR1U4OWtGdlhiZ2dTR1NEdGpINFIw?oc=5",
+      "fuente": "Prensa Mercosur"
      }
     ],
     "entregas": {
-     "fecha": "2026-10-30",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-10-31",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-10-31T02:27:56.217Z",
+    "ultimoChequeo": "2026-10-31T03:26:53.560Z",
     "semana": [
      {
       "titulo": "Alerta por el impacto de El Niño en la mortalidad mundial: qué se prevé en Argentina",
@@ -2153,7 +2351,7 @@
   },
   "mundo_tecnologia": {
    "estado": "listo",
-   "corridas": 14,
+   "corridas": 15,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -2162,12 +2360,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T02:27:56.217Z",
+   "ultimaCorrida": "2026-10-31T03:26:53.560Z",
    "resumen": "🌎 Mundo: tecnología\n\n• RODMENA: infraestructura soberana contra la IA de EEUU (El Ecosistema Startup)\n  https://news.google.com/rss/articles/CBMijAFBVV95cUxQNWdaUFBXRUs3RXVfVDEtNWhreXNYOTNFdUVjVDFBZHJob2JtTnlCZkotWGRkUm",
    "informe": "data/informes/mundo_tecnologia/2026-10-30-2106.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "valle verde & serkan semillas apuestan a tecnologías premiadas en europa para una producci",
+     "rusia superada: el caza más avanzado de la familia su-27 es chino",
+     "estos son los equipos, aeronaves y tecnología con los que llegaron las tropas de ee. uu. a",
+     "descubren una sorprendente historia tras los terremotos y tsunamis que golpearon japón hac",
+     "china debuta con pabellón en expo construcción de ecuador para impulsar innovación y tecno",
+     "américa latina entre la guerra tecnológica silenciosa y el despojo estratégico global",
+     "la ue está construyendo dos centros de tecnología de vehículos aéreos no tripulados, aprov",
+     "biodiversa+ traza una hoja de ruta para incorporar nuevas tecnologías en el estudio de la ",
+     "mistral, el competidor europeo de openai y anthropic, ya permite descargar su ia m&#225;s ",
+     "expertos cripto apuntan a corea del norte como la responsable del hackeo a binance",
      "wall street tiene su peor día desde junio por venta de acciones tecnológicas",
      "canadá y la ue sellan una alianza estratégica sobre minerales críticos, ia y ucrania",
      "resoluciones rivales de eeuu y rusia sobre el sahara occidental fracasan en la onu",
@@ -2409,17 +2617,63 @@
       "titulo": "Seán Clancy, presidente del Comité Militar de la UE: «Las contribuciones de España, desde las capacidades de despliegue rápido hasta la colaboración industrial en defensa, son indispensables para la seguridad europea»",
       "link": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxQQXZvUklmb0VDVGhDQkQ2M1JReHhiMnFZT3Mtc1F4akx4V2pQazhzYXJCRWtZTE92YUdLd2tGNENZclV2d2NFNVRRVklRMldEcElvcURfdm5JUHk4VFd0WWFkZFBOQmhZUnZ4ckE4YVoxWEo4S1g3dE9iT2J0Tnd3aHFlYzM4R1VncC1aTVdjRUdxbW9RYkJjZXI5QjVGV1lPMWVGbHhuQXNHcFhiX2VtSlMxdGlFamhDdDZtdjE4YXFVVk1teTRoZEoxSnFuYzV0NHhWZWlVRnJPV1RxVHlaMG1udmRrSnNsODlRNzZRTWs5MGhrRk1IWXVGUmhZMFEyQ01hbFphcExhOXVxTF8zZ2pqR0Y4Y0c3LTZKT2tVN0M0VUtmd0R4VlE2dGNUcElPN01ZalNlSmRsNFVOdzJKNHRVekRWd1dmeHhYSnlGSzVNUktLNFczZkhIQXA5QQ?oc=5",
       "fuente": "La Razón"
+     },
+     {
+      "titulo": "Valle Verde & Serkan Semillas apuestan a tecnologías premiadas en Europa para una producción más resiliente.",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0tX241VUtRQnp2OUZqaGpQV2hpdWgwS0VIX2VFNWhsWE5UN0pnM1NpZzVMT0l3bE0xLVExSWFSNU9INXdmVEltYXc5YUFrbjZvSGNn?oc=5",
+      "fuente": "Todo El Campo Uy"
+     },
+     {
+      "titulo": "Rusia superada: el caza más avanzado de la familia Su-27 es chino",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMURXN0xaUDluTkdpV3FqTllTZEprMzlzS1pJOFh4Uk1oNm9YSWNVbnkwdFpCaUlFSFRtYVN5amdCdnZkX3l0YkluNWxGck5RU3I1c2QyNDR1SjRQSmx3NkQxQkxNUFZOcjlKamdCZUZ6UU1RMzAzXzlCc25LcUF1T0NvNWNtMkJrMTl6c08tdmRyRm93OGFGc3hIcjF2c1A2eUE?oc=5",
+      "fuente": "Noticias de Israel"
+     },
+     {
+      "titulo": "Estos son los equipos, aeronaves y tecnología con los que llegaron las tropas de EE. UU. a Colombia",
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPVTZPUG12eUFsN3E0UmRYNkpWZEFBTzRWWmtXRmRHWVhWNVlwVnhMOEtkcHg4WEJuRnUzSE9XbU9WRmEwVWMwb196SnpDLXBVOEdSQlJzSHRVVEN1Qzgwd3NjR2tjNnJWckZyNjhMcDlRckpaekJJalFIOUIwUGY3TGM0OVZGcUs1STA5WG1SaG04Y0ZtbmlFZEdoUTRkNkRfZE4wcjNXQ3pyY3ZsTlVpNHQ5ejNTdVBlSk8xNW80ME9zaXFaM0JVbWJ6Z20yQUVZT3dNRjhwSUZOZVktcnfSAd4BQVVfeXFMTVFCVFlkOFRzMVVfa0xzRm1wdGhaQk9pSndVb3c1TEw4Y3A4bFJ4Sk1INEpkenR5RkVDMVFYLWJfZ2RvdEd0ZU5RbUpMQl9QQ2t6ak1hakd6dU55X3Z1ZWwwelZJZ1Izb2dPbDYwdUpTSDFfNWFHcmoyWUdEQU9QdTRncEpmOHVKSzFoN01Ka21zV1lQS2xrLVFyRkx2X0lYR0E3NUtQdnlTY0o1b19iRkRpR19ENGYyNXBwd2lmdnlBRTZLaVRYUm81djBNZXhEOURnNmlOb3VMUld6bXZR?oc=5",
+      "fuente": "NTN24"
+     },
+     {
+      "titulo": "Descubren una sorprendente historia tras los terremotos y tsunamis que golpearon Japón hace 7.300 años",
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPazM1UUE0bHFNTlRFaE9odlNRa2RJVEVQTHEweHE1SFVrNi11elNCd003dlZhdURqNkw5TkdBQ3FUeE4yNTd0M3dZaHA0VTROeFdfSFdzZnlSZmowRnppQnVkTXJaQ2JaQ1AyRVVOSWxVaG50YmRrLUJ2OFJJWmFLX0QycjJvUFdSSGhvemFQUUUyd0w2UGt1dVFDNDdqenNHVWc4aDlNMDlTTWNxOHVBa05Qb3U0Vk5kSXhod09lUEItVGFFNElURWwycnlOVGhUUlFjMDA3MA?oc=5",
+      "fuente": "El Nacional.cat"
+     },
+     {
+      "titulo": "China debuta con pabellón en Expo Construcción de Ecuador para impulsar innovación y tecnología",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRFp0TXJJLVp2ZkRLczVwNjVYQnpEeHNGamJob0UxZzVlV3hOVnJJam5PYkNhVjFOaXN2Q3BmamRNVDRZeE10T2V0NVdMc1pmZUVZXzJHbF82cUh2YS1vVWh5S0hVSURKM3hVYl9BenJKVTljSzJ5SWRGZnFXSFdsSkp0Sm1McXoyMDNRTVJzQkR2N3VyLTcwVmNnRTV2WHlFdkFxOTJpMmZUR3NORjBJei1Uc0NQdXVkbDdN?oc=5",
+      "fuente": "Confirmado.net"
+     },
+     {
+      "titulo": "América Latina entre la guerra tecnológica silenciosa y el despojo estratégico global",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQLUhacHpaSXdyWGpCU0lSRlZGNVAyWElnLVlaRm5id1hzdTB2dkY2TXI3WkN4Z3BiLWVGRW5FNGtLVXprNEdaNVY5RVBGWFBvTFdDbnFTYzBrMG9uVHZMenFaakxXc2Y1amwxdjJmb1E0TGpnQi0yMkdjSVh4b0ViR1BkSk4wSnBvX3RjZkZzbmNLbDJRSFZDcnd1enU2QjhTSWdSdndRYUo2SzNyaUFwTnJRbDB3UlhYUEg3cjRKSQ?oc=5",
+      "fuente": "Misión Verdad"
+     },
+     {
+      "titulo": "La UE está construyendo dos centros de tecnología de vehículos aéreos no tripulados, aprovechando la experiencia de Ucrania.",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNSkQ1aWlZdmVOS2pOY1o0eWUtcDJuXzZ4MFJZYTBMTnVBVEQ5dW1sUEtyZ0RzYjVYNTNRWHhwVWlBcFY0UEJrNmpjQ0N0N2JxLWRpYUJzY0NfaHd0MVpQY2h6QmRwVkRFdl91TlllSEMyVEZBcjQ2N1VHcVFma1M3amNhOURXQkV1MVpuSXIyVXZzeVY0OGxod1Nrc1ZXUQ?oc=5",
+      "fuente": "Vietnam.vn"
+     },
+     {
+      "titulo": "Biodiversa+ traza una hoja de ruta para incorporar nuevas tecnologías en el estudio de la biodiversidad",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPajczWmxCc2ttX2lMaTZUVmVIMmJhaGdEUmdFUHd4enRETHg5OXlFX1hSWDc5dFRjVjU5aEZJSU9OUWZhUWN5WDQ1bkV3NUdHbmZMZVhXT05wOFBYUktPb3B2YVJxV0U3U3FJaW9TY1BSN3B0ZV9kVmE4UEF0ck9wTll6TEVFODFOcHhCeER6SVJ4Sk5JVHN0MGxna0dZamlIOU9QNXpKSzdOZmxYWmFrenlwRHdFc0dfMFV3LUJweGhaZTNPMGJORkRKZ3ZKel9xVVhJ?oc=5",
+      "fuente": "CREAF"
+     },
+     {
+      "titulo": "Mistral, el competidor europeo de OpenAI y Anthropic, ya permite descargar su IA m&#225;s potente en servidores propios",
+      "link": "https://www.20minutos.es/tecnologia/inteligencia-artificial/mistral-large-4-ia-europea-descargar-servidores-propios-soberania-digital_7055457_0.html",
+      "fuente": "20 minutos"
+     },
+     {
+      "titulo": "Expertos cripto apuntan a Corea del Norte como la responsable del hackeo a Binance",
+      "link": "https://www.lanacion.com.ar/tecnologia/empresas-de-inteligencia-blockchain-apuntan-a-que-detras-del-hackeo-a-binance-estuvo-corea-del-norte-nid30102026/",
+      "fuente": "LA NACION"
      }
     ],
     "entregas": {
-     "fecha": "2026-10-30",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-10-31",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-10-31T02:27:56.217Z",
+    "ultimoChequeo": "2026-10-31T03:26:53.560Z",
     "semana": [
      {
       "titulo": "RODMENA: infraestructura soberana contra la IA de EEUU",
@@ -2486,7 +2740,7 @@
   },
   "mundo_salud": {
    "estado": "listo",
-   "corridas": 14,
+   "corridas": 15,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -2495,12 +2749,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T02:27:56.217Z",
+   "ultimaCorrida": "2026-10-31T03:26:53.560Z",
    "resumen": "🌎 Mundo: salud y ciencia\n\n• Qué es la ansiedad por inteligencia artificial y por qué preocupa a los expertos (Infobae)\n  https://news.google.com/rss/articles/CBMi2gFBVV95cUxOVFB5V0tQRnhwRmN6c05QTUdxay1MMkxldHpwaHlpVXN5a",
    "informe": "data/informes/mundo_salud/2026-10-30-2106.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "rusia insiste en que zelenski debe viajar a moscú si quiere reunirse con putin",
+     "hondureños engañados en rusia: 13 siguen desaparecidos",
+     "finalizadas las 69 autopsias de la tragedia ferroviaria de urda: 36 v&#237;ctimas identifi",
+     "trabajadoras de proempleo mejoran espacios hospitalarios y elaboran confecciones para apoy",
+     "vladimir putin afirma que rusia está lista para una guerra con europa, pero advierte que «",
+     "día mundial de la psoriasis: “no es una enfermedad contagiosa”.",
+     "avanza la atenci&#243;n de la salud de las y los capitalinos, aseguran legisladores",
+     "gobierno y colegio médico avanzan en revisión del 46 % de casos de interinos",
+     "colombia reporta 256 muertos y 973 desaparecidos en la guerra rusia-ucrania",
+     "mayo clinic inaugura nueva era de la medicina con precure research | newswise",
      "la coalición por los derechos humanos y la democracia alertó este viernes sobre el grave e",
      "familiares esperan que abogados contratados por cancillería ayuden a traer a los dominican",
      "“depresión y autolesiones”: meta resuelve caso por efectos de instagram en salud mental",
@@ -2742,17 +3006,63 @@
       "titulo": "La FDA lanza un nuevo programa para impulsar el desarrollo de productos médicos en neurociencia",
       "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOQzNYalhLbEFtUURqYl9FeEZxR2wzblhJczl5emdOWFpkNG9XbmtRejFFbk9ZVUcxYmt3T0xoQUhRM3FCQjF0ZTBrR3FNQmFYb0dqR21rSHU4b1RpNlhYdjFVNlRWOUhObkpTRUFhd0dPZVJ0Q3l6MU9yd21MeFJ6YWh6QWlIWUY2UGE1VXJmSmNfYVpSOWJKN2QzRjRqSjNZR1g4elhEZ0hCQUt4cloyb1Nac01DN3VZMkQzZzNEVEMtWDRfdzdLMlRHZUtnNXV2ZXlFdkZZRmUtOG1jd0kw?oc=5",
       "fuente": "ConSalud"
+     },
+     {
+      "titulo": "Rusia insiste en que Zelenski debe viajar a Moscú si quiere reunirse con Putin",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQblJCOV9IcjZweFFwNU9LbDFZdEdVdlRZX0dSQklnYk9fbWpXQTRWc3lWUDJrajFaRFZtNTZrR2FYUXJXWkwyY0FhczZNanluZGZhNHVEWTd6OElfOHNBQXNqeE9ZY1Y3T0VLaGQ5bEx4LUl2U0ViTC1mRFVOTGF3ejdJeUExaC0ydTVoenE5WEw4Z3YwOXRtLXJ6VC1oLTA1V0N0ekh2bzVGLTdXdEF3WNIBsAFBVV95cUxQblJCOV9IcjZweFFwNU9LbDFZdEdVdlRZX0dSQklnYk9fbWpXQTRWc3lWUDJrajFaRFZtNTZrR2FYUXJXWkwyY0FhczZNanluZGZhNHVEWTd6OElfOHNBQXNqeE9ZY1Y3T0VLaGQ5bEx4LUl2U0ViTC1mRFVOTGF3ejdJeUExaC0ydTVoenE5WEw4Z3YwOXRtLXJ6VC1oLTA1V0N0ekh2bzVGLTdXdEF3WA?oc=5",
+      "fuente": "Noticias SIN"
+     },
+     {
+      "titulo": "Hondureños engañados en Rusia: 13 siguen desaparecidos",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE16ZENDaExiSXpmdU4wVTFiWjEzdFdxMmF3MzB0Q1hKS3hzNXpfNVZialRyajZNb3ZTcGJDMFdSRVJSbFBLcno5VkctRXFvcWNBSjZPSHY5aEk?oc=5",
+      "fuente": "HCH"
+     },
+     {
+      "titulo": "Finalizadas las 69 autopsias de la tragedia ferroviaria de Urda: 36 v&#237;ctimas identificadas y 67 desaparecidos",
+      "link": "https://www.lavozdelsur.es/actualidad/sociedad/finalizadas-las-69-autopsias-de-la-tragedia-ferroviaria-de-urda-36-victimas-identificadas-y-67-desaparecidos.html",
+      "fuente": "lavozdelsur.es"
+     },
+     {
+      "titulo": "Trabajadoras de ProEmpleo mejoran espacios hospitalarios y elaboran confecciones para apoyar la atención de salud en la provincia de Arauco",
+      "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPdHRrWXJwOEs2Tl9aYUNyZGg3VmFUX1pabWdqN083VU5oZTNmODRzT3NMaW9qU04zQ2tsRmNoeG1RWUxveFFrc3o5T2FVUkpWVE5RTkhkazlQV25kcWs1S195NW1yLXlzMzVCNldKaVhUSWJzYk50azlfNmdiT2toZjRJY0VGZ1BINXlNemN5SmVzQjBxMDZILU9xQk5sZ3VYdnl6aFRNcGRfR0V3dXRYT3FCNzQ0S3hyclhGVEFlXy1IQTJ1akVEZG8tUGdqd2tMbjVYVEp0S1pyMU45b01tc0hlRWpQb1licDZ3WFU4SkNjcm54V29kckNDTkd2QzI0aWhkRDVDUnA?oc=5",
+      "fuente": "Portal Red Salud"
+     },
+     {
+      "titulo": "Vladimir Putin afirma que Rusia está lista para una guerra con Europa, pero advierte que «no habrá vencedores»",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOM3dGM2QwMlh5QkJ5T0g0Z1B0Tko4TmViZ2R1Y0Rpc2FNMXRVQklpYWpMekF1OVFzaUNEc3pad1ZQMnZuVkZLZjlvckVXc2RTYnYzdThoaF96X1FiY2hFOTNwM0RKcUozVlJhQ3BZb2psNm1wZ0xmQ1NQOFRRQ2dZVk44Y3lNWkN0QmRpazNfYVYxYkNZaHJWSll4ZnZ1X1dp?oc=5",
+      "fuente": "Informat.ro"
+     },
+     {
+      "titulo": "Día Mundial de la Psoriasis: “No es una enfermedad contagiosa”.",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNN3Y4Q0haempDOVpUS0d1UE02N3NvQW5uNEtGcmt6WVNvaEdoeS1ZZ2F0WUpUM05fVVdZcl9EWlNsa25fTW1UMmxFbFExVENjZEpxWGM1ODF0ZVBmOUxvQmVMek5peWJUdzk0ZjA3ckFGeU9tOGptWE40Y29CdWx2d2pwSlBNeVJOYVBkeE8yZTVCZXpPNlpVMVFkR2FJQQ?oc=5",
+      "fuente": "Portal Red Salud"
+     },
+     {
+      "titulo": "Avanza la atenci&#243;n de la salud de las y los capitalinos, aseguran Legisladores",
+      "link": "https://elcapitalino.mx/capital/avanza-la-atencion-de-la-salud-de-las-y-los-capitalinos-aseguran-legisladores/",
+      "fuente": "El Capitalino"
+     },
+     {
+      "titulo": "Gobierno y Colegio Médico avanzan en revisión del 46 % de casos de interinos",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPa2d6NFBQenAwSWlVUExKSlFFMTFKZXdjV0c5M1l0M29HNWZxWnpJRDZWbVp6Y3hsOWNucGltUVhGSTJyOTNjU1BlbDlPRGVVOEpNUTlPaUs2NGNSTFIzcE1lcGp5d1ZqcGloUVRoT0lRNTF3Y3NwcDRrYlNBeTNxMTBDVGROb0ZsSE5oNm9VSzlaSVhPS0pnVExuVHZHcWRUQTRDQw?oc=5",
+      "fuente": "Noticias 24/7"
+     },
+     {
+      "titulo": "Colombia reporta 256 muertos y 973 desaparecidos en la guerra Rusia-Ucrania",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNbTRqVEVlZkpLMENmNWtuRndwbm9YbzFFaDYzdUZjdEtEeHpFalR1Z3ZUUnlGYzFwaGNBeGM5MndSS3pNd3YyQjc3bFhKSnFsWHhYV0tfcWlvalhmcEpCazliRTVxSU1xeUxyVEt0RS1uU0ozZm9HbElSTWZVZmVsVUhWaDQ3em5kODhIT3J6RlQ3TlFBUG1vNEhPUjJESWc1M3ppVkgtQllNSU9jakV6Yk1hWUZKemZVMEHSAc4BQVVfeXFMUERRbXlZOVB5eG92TkdIVWNFVXhlckcyakloY3pLenFEOElLSDNlSEhMYXU2T3l4SUlCdHNLWWVZYjdxd3EwemtPX1hPLXpHNkYxdFFHa2ZKSUZpQldpdTQ4SWEyY3NtZmJ5NVZoTFJSTnhNVVEtbDVGVGhYQkZNT1B3bTkxbjhmOThDbXI1cnQtNmVTQzhQcTZTNHR0N0VvdG94emgyQkF2N1dTbnEtVlRkbGNyRWFheWJETS1lTnlielFJVEdfVVRjdEh4SFE?oc=5",
+      "fuente": "El Espectador"
+     },
+     {
+      "titulo": "Mayo Clinic inaugura nueva era de la medicina con Precure Research | Newswise",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYkJFOHlZYXJXV1lzalQ0TFVGSS0xTGhyVDdEeTA2Y3Jva2tNSkJzOVg2OVZZcHpFY2duckxBOEZFU01Ta3BLLXRGNl9tSDZSdFJSaHN0TUFqYW9OU3FSS1Rna0E4NG13Qkg1NXNnRURCbzF2MjdUSS1hU0lIejJMb0d5N1ctLXJ6a1VmOGpaYmNBT2ktbDJ5NDhyUnYzNGh1YVHSAaIBQVVfeXFMUGJCRTh5WWFyV1dZc2pUNExVRkktMUxoclQ3RHkwNmNyb2trTUpCczlYNjlWWXB6RWNnbnJMQThGRVNNU2twSy10RjZfbUg2UnRSUmhzdE1BamFvTlNxUktUZ2tBODRtd0JINTVzZ0VEQm8xdjI3VEktYVNJSHoyTG9HeTdXLS1yemtVZjhqWmJjQU9pLWwyeTQ4clJ2MzRodWFR?oc=5",
+      "fuente": "Newswise"
      }
     ],
     "entregas": {
-     "fecha": "2026-10-30",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-10-31",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-10-31T02:27:56.217Z",
+    "ultimoChequeo": "2026-10-31T03:26:53.560Z",
     "semana": [
      {
       "titulo": "Qué es la ansiedad por inteligencia artificial y por qué preocupa a los expertos",
@@ -2834,13 +3144,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-10-30",
-     "hechas": [
-      "08:30",
-      "13:00",
-      "17:30",
-      "21:30"
-     ]
+     "fecha": "2026-10-31",
+     "hechas": []
     },
     "ultimoChequeo": "2026-10-31T00:30:53.884Z"
    }
@@ -2862,10 +3167,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-10-30",
-     "hechas": [
-      "20:30"
-     ]
+     "fecha": "2026-10-31",
+     "hechas": []
     },
     "ultimoChequeo": "2026-10-31T00:06:46.665Z"
    }
@@ -2972,10 +3275,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-10-30",
-     "hechas": [
-      "09:00"
-     ]
+     "fecha": "2026-10-31",
+     "hechas": []
     },
     "instruido": true,
     "ultimoChequeo": "2026-10-30T13:35:53.482Z"
@@ -2998,17 +3299,15 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-10-30",
-     "hechas": [
-      "21:45"
-     ]
+     "fecha": "2026-10-31",
+     "hechas": []
     },
     "ultimoChequeo": "2026-10-31T00:59:55.083Z"
    }
   },
   "noticias_tec": {
    "estado": "listo",
-   "corridas": 14,
+   "corridas": 15,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -3017,12 +3316,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T02:27:56.217Z",
+   "ultimaCorrida": "2026-10-31T03:26:53.560Z",
    "resumen": "💻 Lo último en tecnología\n\n• iPhone 15 Pro Max de 512GB cae a $13,593 pesos en Amazon; tiene 61% de descuento e incluye envío gratis (El Universal)\n  https://news.google.com/rss/articles/CBMi4wFBVV95cUxNdXQ2SFNiNW1mMTBV",
    "informe": "data/informes/noticias_tec/2026-10-30-2106.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "canva lanzó brush, el nuevo modelo con ia que permite editar diseños ya creados",
+     "openai recortó usd 10.000 millones la ronda de inversión que busca, en plena caída de las ",
+     "honor 600 elite: el teléfono que promete cambiar la forma de usar la ia en méxico",
+     "de chaco al mundo: la historia de iván, el joven que creó con un amigo el \"spotify de las ",
+     "canva lanz&#243; brush, el nuevo modelo con ia que permite editar dise&#241;os ya creados",
+     "gemini 4 carbon el modelo de ia más potente de google enfocado en ciberseguridad",
+     "conalep q. roo analiza nuevas carreras para atender proyectos estrat&#233;gicos",
+     "gemini 4 carbon está bloqueado. el acceso pasa por google cloud",
+     "samsung w27: as&#237; es su nuevo celular plegable de lujo",
+     "la rae presenta una nueva edici&#243;n del diccionario, m&#225;s panhisp&#225;nica y sin i",
      "alkilados se une a yubeili y alka produce en ‘¿qué me pasa?’",
      "asunción estrena portal asu y permite gestionar servicios municipales desde el celular",
      "openai, google y anthropic han creado un bot&#243;n &#250;nico para evitar que usen tu web",
@@ -3264,18 +3573,63 @@
       "titulo": "Tu casa tiene m&#225;s dispositivos conectados de los que cre&#233;s: la gu&#237;a pr&#225;ctica para proteger el ecosistema de tu hogar",
       "link": "https://www.eldestapeweb.com/tecnologia/casa-tiene-dispositivos-conectados-crees-guia-practica-proteger-ecosistema-hogar-20261030122715",
       "fuente": "El Destape"
+     },
+     {
+      "titulo": "Canva lanzó Brush, el nuevo modelo con IA que permite editar diseños ya creados",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNE1XTW5vTkFSMzNkcDRqd2VPVWpYZGdOZUd0ZFhMZUtOYm9kaUJNZ1hfNTdaNWthVXl6SEtSa2hBdHN5cFl2TjN0MFNKM2JOMnl3REtsS2lKQTN2ajA1Y0RBWjNhb21NRVFuaC1MV1dyTDVTOEhQc3pXYkJ1ZmFKTmZwNkozM3BISzgtek12MFZ1d2xpRFFDS3pFeWFYckV4S1JqZUdfM1NsNHlPbkNxRDJSYUQ5VHhpQXM4?oc=5",
+      "fuente": "La 100"
+     },
+     {
+      "titulo": "OpenAI recortó USD 10.000 millones la ronda de inversión que busca, en plena caída de las tecnológicas",
+      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxObzFQeVVCZXdzVTZLUkpKdE5qSzlsbm5YbmI3N1FyRVJKMDI5TEdLYWU3SWJlZ2tjNUV6aUZOa2tseVZmRllLY0VKSmRuaW9xdjkyRzV3U2NTNkJWNGxpS1BqSkZ0a1NBd1JtOFBiRDRHUmtzQVVBUXJlUzMxb1hYN01CMHVuYm1rY3E3V1VfTGNHZW5kYzBUeEJPMXA4SXVLX292UC1MSzc5UkhtdURQS3U2U2Q3VEh3RGxkZEJXakdTazZMRXJfOHIxUXAxTjdMVU42ak5wOVIwd9IB9AFBVV95cUxPVDMwLU5kazZtMHhvS3NObER5eUtzZGl0Z0RtZWt2RjJyTlBTd0o0dGp6MFFSZmVlZ3oxS09uRnhzNEk3NThNcjdtU3hRNWsybndVVUdrTU00R3B5cUtudnB6bHoyY0hqNEx0NUE1Q1VjZC04VFQzenIwbU9tTWRaUldIblU5QWhLQ2EyMGtEd0ZaOXZaOGcxek02cGI2anh5ellETE1tVWFPek5kUTBiX2xfSVV6ZlhxOU56STlSZl9MY0twdFk4WW9QbDNGeVc1UnROSHF4U04tdWxDTWZjampoRlpWaGJGWUNRSkc2NW5lOXFN?oc=5",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "HONOR 600 Elite: el teléfono que promete cambiar la forma de usar la IA en México",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPU2QyNXJoOWxMOUxsdEVYUG9tRkd5aFBINnowdGluMVFqVFp6eGpxWmU4d09mQjhuOFdReVVpTHI5Q1VLd1oyMFBlemFEc1VUajdsWVJkUnlDbEF3cVg1Y0EzS0lVWWZpSUFUTE9lYnVFWE95cFJoc29CQS1FS2dlcGtsZ3M3a194dEVjMlRXZFExY0ktNFNmTUhUYVEwbWNIb010NzkzQQ?oc=5",
+      "fuente": "geekzilla.tech"
+     },
+     {
+      "titulo": "De Chaco al mundo: la historia de Iván, el joven que creó con un amigo el \"Spotify de las noticias\"",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02NHhZTy1oMnE0ZEJiSzRPeHhJSWhsbUVkMnI0RUwxWG5NNDZoSmEzWVVPdHhGWl9wTDVKU2U1YlNlanBtRmVnQlVDbzFWdjd3V1QzOVAtRE0?oc=5",
+      "fuente": "examedia.com.ar"
+     },
+     {
+      "titulo": "Canva lanz&#243; Brush, el nuevo modelo con IA que permite editar dise&#241;os ya creados",
+      "link": "https://la100.cienradios.com/tecnologia/canva-lanzo-brush-el-nuevo-modelo-con-ia-que-permite-editar-disenos-ya-creados/",
+      "fuente": "La 100"
+     },
+     {
+      "titulo": "Gemini 4 Carbon el modelo de IA más potente de Google enfocado en ciberseguridad",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQ2pIY0xkWmNYc2VmYzhzQUtoRVUwcFNwUVd6M2ZPWVFGWm9FVGxCMU02ZklnRl9TQVZjdHZyTUdoS25pUXNkaEdQRURXVkZzMkVZWTVtWXlMWFB2VjF3aHc2Y2tONmE2aEJFWmMyN0RiRHlaZllCQ1NBUk10cEQ0eHBDdkpsTDZyQW1GRGx2R1d5UFpzQ0JzMFdhTUNGb2VORTF2amhJZXFBV1d1aklYS2RxcWc?oc=5",
+      "fuente": "OneDigital"
+     },
+     {
+      "titulo": "Conalep Q. Roo analiza nuevas carreras para atender proyectos estrat&#233;gicos",
+      "link": "https://sipse.com/novedades/conalep-q-roo-analiza-nuevas-carreras-para-atender-proyectos-estrategicos-517033.html",
+      "fuente": "Grupo SIPSE"
+     },
+     {
+      "titulo": "Gemini 4 Carbon está bloqueado. El acceso pasa por Google Cloud",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPaUNaU2hHYzREdU5XaHFGZWFkSFo5c3FVYlZjd3NodHQzTVBnS0o1SlVIbE5wUWstLVhERS1tUUMzN0g3bXhWaUdicjdXdllYRGpJR01OWEFTazVydEdXbEMzdVFtVnlXd1JPSHhIaWZpdVc3WDdCU2VJZ1RlbXl6UU5kSzNUSVdoZHRYQg?oc=5",
+      "fuente": "Business Model Analyst"
+     },
+     {
+      "titulo": "Samsung W27: as&#237; es su nuevo celular plegable de lujo",
+      "link": "https://www.msn.com/es-mx/noticias/otras/samsung-w27-as%C3%AD-es-su-nuevo-celular-plegable-de-lujo/ar-AA2gqlgS",
+      "fuente": "La Verdad Noticias on MSN"
+     },
+     {
+      "titulo": "La RAE presenta una nueva edici&#243;n del diccionario, m&#225;s panhisp&#225;nica y sin IA",
+      "link": "https://www.msn.com/es-co/entretenimiento/other/la-rae-presenta-una-nueva-edici%C3%B3n-del-diccionario-m%C3%A1s-panhisp%C3%A1nica-y-sin-ia/ar-AA2gqlqj",
+      "fuente": "El Espectador on MSN"
      }
     ],
     "entregas": {
-     "fecha": "2026-10-30",
-     "hechas": [
-      "09:00",
-      "13:00",
-      "17:00",
-      "21:00"
-     ]
+     "fecha": "2026-10-31",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-10-31T02:27:56.217Z",
+    "ultimoChequeo": "2026-10-31T03:26:53.560Z",
     "semana": [
      {
       "titulo": "iPhone 15 Pro Max de 512GB cae a $13,593 pesos en Amazon; tiene 61% de descuento e incluye envío gratis",
@@ -3357,10 +3711,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-10-30",
-     "hechas": [
-      "22:00"
-     ]
+     "fecha": "2026-10-31",
+     "hechas": []
     },
     "ultimoChequeo": "2026-10-31T01:28:55.205Z"
    }
@@ -3484,10 +3836,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-10-30",
-     "hechas": [
-      "06:50"
-     ]
+     "fecha": "2026-10-31",
+     "hechas": []
     }
    }
   },
@@ -3525,10 +3875,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-10-30",
-     "hechas": [
-      "10:00"
-     ]
+     "fecha": "2026-10-31",
+     "hechas": []
     }
    }
   },
@@ -3568,7 +3916,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 11,
+   "corridas": 12,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -3577,13 +3925,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T02:58:00.659Z",
+   "ultimaCorrida": "2026-10-31T03:26:53.560Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-10-30",
-    "ultimoChequeo": "2026-10-31T02:58:00.659Z"
+    "ultimoChequeo": "2026-10-31T03:26:53.560Z"
    }
   },
   "feriados": {
@@ -3656,6 +4004,31 @@
   }
  },
  "log": [
+  {
+   "t": "2026-10-31T03:26:53.560Z",
+   "quien": "Clientes y licitaciones",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-10-31T03:26:53.560Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-flash-latest: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)"
+  },
+  {
+   "t": "2026-10-31T03:26:53.560Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-31T03:26:53.560Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-31T03:26:53.560Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-10-31T02:58:00.659Z",
    "quien": "Terrenos baratos",
@@ -5130,31 +5503,6 @@
    "t": "2026-10-30T02:53:21.717Z",
    "quien": "Servicios y tarifas de la casa",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-30T02:53:21.717Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-30T02:53:21.717Z",
-   "quien": "Clima para la obra",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-30T02:53:21.717Z",
-   "quien": "Noticias del mundo",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-30T02:53:21.717Z",
-   "quien": "Economía y obra pública",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-30T02:53:21.717Z",
-   "quien": "Noticias de Villa María",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
@@ -5248,7 +5596,8 @@
   "170": "vencimientos",
   "171": "tarifas",
   "173": "licitaciones",
-  "174": "clima"
+  "174": "clima",
+  "176": "licitaciones"
  },
  "tgOffset": 196508498,
  "hechos": {
@@ -5258,25 +5607,16 @@
   "celuAvisosOficina": "2026-10-30T21:27:53.966Z"
  },
  "consumo": {
-  "fecha": "2026-10-30",
-  "consultas": 255,
+  "fecha": "2026-10-31",
+  "consultas": 4,
   "busquedas": 0,
   "por": {
-   "gemini": 145,
-   "github": 36,
-   "groq": 14,
-   "llm7": 1,
-   "cfai": 8,
-   "openrouter": 15,
-   "cerebras": 5,
-   "sambanova": 13,
-   "nvidia": 7,
-   "cohere": 9,
-   "zai": 2
+   "gemini": 3,
+   "groq": 1
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-31T02:58:00.659Z",
+ "actualizado": "2026-10-31T03:26:53.560Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -5300,64 +5640,14 @@
   ]
  },
  "ia": {
-  "fecha": "2026-10-30",
+  "fecha": "2026-10-31",
   "agotado": {
    "gemini:gemini-2.5-flash": true,
    "gemini:gemini-2.5-flash-lite": true,
-   "gemini:gemini-flash-latest": 1793415511751,
-   "groq:groq/compound": true,
-   "gemini:gemini-2.5-pro": true,
-   "gemini:gemini-3.8-flash": 1793415518262,
-   "cfai:@cf/meta/llama-3.3-70b-instruct-fp8-fast": 1793392898439,
-   "cfai:@cf/meta/llama-4-scout-17b-16e-instruct": 1793392900867,
-   "cfai:@cf/mistralai/mistral-small-3.1-24b-instruct": 1793392903457,
-   "cfai:@cf/qwen/qwen2.5-coder-32b-instruct": 1793392905930,
-   "github:openai/gpt-4.1-mini": 1793394181105,
-   "github:openai/gpt-4o-mini": 1793394183600,
-   "github:meta/Llama-3.3-70B-Instruct": 1793394186079,
-   "github:deepseek/DeepSeek-V3-0324": 1793394188584,
-   "github:openai/gpt-4.1": 1793394191093,
-   "github:openai/gpt-4o": 1793394193599,
-   "gemini:gemini-3.7-flash": 1793415524788,
-   "groq:openai/gpt-oss-120b": 1793393623669,
-   "groq:llama-3.3-70b-versatile": true,
-   "groq:qwen/qwen3-32b": true,
-   "openrouter:google/gemma-4-26b-a4b-it:free": 1793393739233,
-   "openrouter:google/gemma-4-31b-it:free": 1793393741646,
-   "openrouter:recursive/flint-v1.0:free": 1793393744256,
-   "cerebras:gpt-oss-120b": 1793394203839,
-   "cerebras:zai-glm-4.7": true,
-   "cerebras:llama-3.3-70b": true,
-   "sambanova:Meta-Llama-3.3-70B-Instruct": 1793393776639,
-   "sambanova:DeepSeek-V3.1": 1793393746952,
-   "sambanova:gpt-oss-120b": 1793393749336,
-   "nvidia:meta/llama-3.3-70b-instruct": 1793394209123,
-   "nvidia:openai/gpt-oss-120b": 1793394211520,
-   "nvidia:qwen/qwen3-next-80b-a3b-instruct": 1793394214022,
-   "github:mistral-ai/mistral-small-2503": 1793393521851,
-   "github:xai/grok-3-mini": 1793393524341,
-   "github:meta/Llama-4-Scout-17B-16E-Instruct": 1793393526843,
-   "github:cohere/cohere-command-a": 1793393529340,
-   "github:microsoft/Phi-4": 1793393531857,
-   "github:openai/gpt-4.1-nano": 1793393534345,
-   "groq:openai/gpt-oss-20b": 1793393626138,
-   "groq:meta-llama/llama-4-scout-17b-16e-instruct": true,
-   "cerebras:qwen-3-32b": true,
-   "nvidia:mistralai/mistral-small-3.1-24b-instruct-2503": true,
-   "cohere:command-a-03-2025": 1793393787259,
-   "groq:llama-3.1-8b-instant": true,
-   "sambanova:Llama-4-Maverick-17B-128E-Instruct": true,
-   "openrouter:xingchen-agi/xing4.0-29b-a4b:free": 1793393648949,
-   "openrouter:nvidia/nemotron-3.5-super-vl:free": 1793393650884,
-   "openrouter:dots-studio/dots-3-note-preview:free": 1793393653397,
-   "zai:glm-4.5-flash": 1793414435738
+   "gemini:gemini-flash-latest": 1793417257386,
+   "groq:groq/compound": true
   },
-  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
-  "ultimo": {
-   "prov": "Z.ai (GLM)",
-   "modelo": "glm-4.7-flash",
-   "t": "2026-10-31T02:27:56.217Z"
-  }
+  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
  },
  "dueno": 1237559052,
  "pendientesCant": 1
