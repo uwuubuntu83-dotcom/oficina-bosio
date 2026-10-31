@@ -44,3 +44,11 @@ En el celu, `~/celu_solo/nube.json` queda así (sin la clave de Cloudflare):
 { "url": "https://oficina-buzon.uwuubuntu83.workers.dev", "celu_key": "LA_MISMA_QUE_CELU_KEY", "mudado": "si" }
 ```
 Por Telegram: `celu programa de hoy`, `celu subí una historia`, `celu pausa`, `celu seguí`, `celu reiniciar`, `celu informe`, `celu`.
+
+## Programador (OpenHands)
+
+Arregla o mejora el código de la oficina con [OpenHands](https://github.com/OpenHands/software-agent-sdk) y las IA gratis de los secretos (Gemini, Cerebras, Groq, SambaNova, NVIDIA, OpenRouter, Z.ai, rotando si una se queda sin cupo). Nunca aplica nada solo: deja una propuesta (pull request).
+
+- Telegram / oficina: `programador: lo que hay que arreglar` · `propuestas` · `aprobar N` · `descartar N`
+- GitHub: etiqueta `arreglar` en un issue, o comentario que empiece con `@programador` (solo el dueño).
+- Archivos: `.github/workflows/programador.yml` y `.github/openhands/programador.py`.

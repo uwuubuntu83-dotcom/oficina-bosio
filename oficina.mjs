@@ -867,6 +867,7 @@ const AYUDA = () => `Soy el Gerente general de la ${CFG.oficina}. Escribime:
 • eliminar ID (o despedir ID) — lo saco de la oficina.
 • horario ID 09:00 lun,jue — le cambio el horario.
 • app: lo que necesitás — el equipo de desarrollo te programa una app y te pasa el link (ej: «app: calculadora de ladrillos por m²»). «app arreglar NOMBRE: …» la mejora. «apps» las lista.
+• programador: lo que hay que arreglar o mejorar de la oficina — OpenHands lo programa y te deja una propuesta. «propuestas» las lista · «aprobar N» la aplica · «descartar N» la tira.
 • celu ... — órdenes al celu bot: «celu programa de hoy», «celu subí una historia», «celu pausa», «celu seguí», «celu reiniciar», «celu informe», «celu» (cómo anda).
 • Respondé un informe con 👍, 👎 o un comentario: ese bot se entrena con eso esa noche.
 
@@ -1006,6 +1007,37 @@ async function registrarLote(txt, b) {
   let n = 0; for (const s of partes) { try { if (await registrar(s, b)) n++; } catch (e) { log(b.nombre, "no pude anotar: " + e.message); } }
   return n;
 }
+/* ---------- Programador (OpenHands): arregla el código y deja una propuesta para aprobar ---------- */
+const REPO = ENV.GITHUB_REPOSITORY || "uwuubuntu83-dotcom/oficina-bosio";
+async function gh(metodo, ruta, cuerpo) {
+  const tok = ENV.GITHUB_TOKEN; if (!tok) throw new Error("falta GITHUB_TOKEN");
+  const r = await traer(`${ENV.GH_API || "https://api.github.com"}/repos/${REPO}${ruta}`, { method: metodo, headers: { authorization: "Bearer " + tok, accept: "application/vnd.github+json", "content-type": "application/json" }, body: cuerpo ? JSON.stringify(cuerpo) : undefined });
+  const j = r.status === 204 ? {} : await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(j.message || "GitHub " + r.status);
+  return j;
+}
+async function ordenProgramador(txt) {
+  let mm;
+  if ((mm = txt.match(/^\/?(?:programador|arregl[aá](?:\s+la)?\s+oficina|mejor[aá](?:\s+la)?\s+oficina)\s*:?\s*([\s\S]{5,})/i))) {
+    await gh("POST", "/actions/workflows/programador.yml/dispatches", { ref: "main", inputs: { pedido: mm[1].trim().slice(0, 2000) } });
+    log("Programador", "recibió un pedido: " + mm[1].slice(0, 100));
+    await enviar("🛠️ Se lo pasé al programador (OpenHands). Tarda entre 5 y 30 minutos. Cuando termine te mando la propuesta para que la apruebes: no cambia nada sin tu OK.");
+    return true;
+  }
+  if ((mm = txt.match(/^\/?(aprobar|aprob[aá]|aplicar|descartar|rechazar)\s+#?(\d+)\s*$/i))) {
+    const n = mm[2]; const pr = await gh("GET", `/pulls/${n}`);
+    if (pr.state !== "open") { await enviar(`La propuesta ${n} ya está ${pr.merged ? "aplicada" : "cerrada"}.`); return true; }
+    if (/^(descartar|rechazar)/i.test(mm[1])) { await gh("PATCH", `/pulls/${n}`, { state: "closed" }); await enviar(`🗑️ Descarté la propuesta ${n}.`); log("Programador", `descartó la propuesta ${n}`); return true; }
+    await gh("PUT", `/pulls/${n}/merge`, { merge_method: "squash", commit_title: pr.title });
+    log("Programador", `aplicó la propuesta ${n}`); await enviar(`✅ Apliqué la propuesta ${n}: «${pr.title}». Entra en funcionamiento en la próxima vuelta de la oficina.`);
+    return true;
+  }
+  if (/^\/?(propuestas|programador)$/i.test(txt)) {
+    const l = await gh("GET", "/pulls?state=open&per_page=20");
+    await enviar(l.length ? "🛠️ Propuestas del programador esperando tu OK:\n" + l.map(p => `• ${p.number}: ${p.title}\n  ${p.html_url}`).join("\n") + "\n\n«aprobar N» la aplica · «descartar N» la tira." : "🛠️ No hay propuestas pendientes. Pedile algo: «programador: que el parte diario muestre también el clima»."); return true;
+  }
+  return false;
+}
 async function procesarMensajes() {
   if (!TG_TOKEN) return;
   let ups = await tg("getUpdates", { offset: est.tgOffset, timeout: 0, allowed_updates: ["message", "edited_message"] });
@@ -1043,6 +1075,7 @@ async function procesarMensajes() {
     }
     const low = txt.toLowerCase().replace(/^\//, "").trim(); let mm;
     if ((mm = txt.match(/^\/?(?:app|apps|software|programa(?:r|me|ción)?|desarroll(?:o|ar|ame))\s*:\s*([\s\S]{4,})/i) || txt.match(/^\/?app\s+((?:arregl|cambi|mejor|correg)\w*\s[\s\S]+)/i) || txt.match(/^(?:hac[eé](?:me)?|arm[aá](?:me)?|cre[aá](?:me)?|program[aá](?:me)?)\s+(una\s+(?:app|aplicaci[oó]n|p[aá]gina\s+web|calculadora|planilla\s+web|herramienta)\b[\s\S]*)/i))) { est.pendientes.push({ tipo: "app", orden: mm[1].trim().slice(0, 1500), t: NOW.toISOString() }); log("Jonathan", "le pidió una app al equipo de desarrollo"); await enviar("👷 Se la paso al equipo de desarrollo. Arrancan en esta vuelta."); continue; }
+    try { if (await ordenProgramador(txt)) continue; } catch (e) { await enviar("🛠️ No pude hablar con el programador: " + e.message); continue; }
     if (/^\/?apps$/i.test(txt)) { const l = appsLista(); await enviar(l.length ? "📱 Apps del equipo de desarrollo:\n" + l.slice(0, 20).map(x => `• ${x.nombre} (${x.puntaje}/10) — ${x.url}`).join("\n") + "\n\nPara cambiar una: «app arreglar NOMBRE: qué cambiar»." : "Todavía no hay apps. Pedí una: «app: una calculadora de materiales para una losa»."); continue; }
     if ((mm = txt.match(RX_CELU)) || RX_CELU_AUTO.test(txt)) { try { await ordenCelu(mm ? mm[1] : txt); } catch (e) { await enviar("📱 No pude hablar con el celu: " + e.message); } continue; }
     if (/^(start|ayuda|help|hola|menu|menú)$/.test(low)) { await enviar(AYUDA()); continue; }

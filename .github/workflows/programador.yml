@@ -1,0 +1,134 @@
+name: Programador (OpenHands)
+
+# El programador de la oficina arregla o mejora el código y deja una PROPUESTA (pull request).
+# Nada se aplica solo: Jonathan la aprueba con «aprobar N» en Telegram o en la página de GitHub.
+# Se activa:
+#  - desde Telegram / la oficina: «programador: lo que hay que arreglar»
+#  - a mano: pestaña Actions → Programador → Run workflow
+#  - en GitHub: etiqueta «arreglar» en un issue, o un comentario que empiece con «@programador»
+on:
+  workflow_dispatch:
+    inputs:
+      pedido:
+        description: "Qué tiene que arreglar o mejorar"
+        required: true
+  issues:
+    types: [labeled]
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: programador
+  cancel-in-progress: false
+
+jobs:
+  programar:
+    # solo obedece al dueño del repo (el repo es público: cualquiera puede abrir issues)
+    if: >-
+      (github.event_name == 'workflow_dispatch') ||
+      (github.event_name == 'issues' && github.event.label.name == 'arreglar' && github.actor == github.repository_owner) ||
+      (github.event_name == 'issue_comment' && github.event.comment.user.login == github.repository_owner && startsWith(github.event.comment.body, '@programador') && github.event.issue.pull_request == null)
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar OpenHands
+        run: pip install -q "openhands-sdk==1.58.2" "openhands-tools==1.58.2"
+
+      - name: Armar el pedido
+        env:
+          P_INPUT: ${{ github.event.inputs.pedido }}
+          P_TITULO: ${{ github.event.issue.title }}
+          P_CUERPO: ${{ github.event.issue.body }}
+          P_COMENTARIO: ${{ github.event.comment.body }}
+          P_ISSUE: ${{ github.event.issue.number }}
+        run: |
+          if [ -n "$P_INPUT" ]; then printf '%s' "$P_INPUT" > /tmp/pedido.txt
+          else
+            { printf 'Issue #%s: %s\n\n%s\n' "$P_ISSUE" "$P_TITULO" "$P_CUERPO"; [ -n "$P_COMENTARIO" ] && printf '\nIndicación extra: %s\n' "${P_COMENTARIO#@programador}"; } > /tmp/pedido.txt
+          fi
+          echo "Pedido:"; cat /tmp/pedido.txt
+
+      - name: Programar
+        env:
+          OPENHANDS_SUPPRESS_BANNER: "1"
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+        run: |
+          export PEDIDO="$(cat /tmp/pedido.txt)"
+          python .github/openhands/programador.py 2>&1 | tee /tmp/programador.log | tail -200
+
+      - name: Armar la propuesta
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAT: ${{ secrets.DESPERTADOR_TOKEN }}
+          P_ISSUE: ${{ github.event.issue.number }}
+        run: |
+          # lo que no le corresponde tocar se descarta
+          git checkout -- data .github 2>/dev/null || true
+          git clean -fdq -- data .github 2>/dev/null || true
+          if node --check oficina.mjs && node --check buzon/worker.js && node -e "JSON.parse(require('fs').readFileSync('bots.json','utf8'))"; then echo "Chequeo OK"; else echo "roto=1" >> $GITHUB_OUTPUT; fi
+          if [ -z "$(git status --porcelain)" ]; then echo "nada=1" >> $GITHUB_OUTPUT; exit 0; fi
+          RAMA="programador/${GITHUB_RUN_ID}"
+          git config user.name "Programador de la oficina"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$RAMA"
+          git add -A
+          TITULO="Programador: $(head -c 70 /tmp/pedido.txt | tr '\n' ' ')"
+          git commit -qm "$TITULO"
+          git push -q origin "$RAMA"
+          { echo "## Pedido"; cat /tmp/pedido.txt; echo; echo "## Qué cambió"; cat /tmp/resumen.md 2>/dev/null || echo "(sin resumen)"; [ -n "$P_ISSUE" ] && echo && echo "Closes #$P_ISSUE"; echo; echo "_Hecho por el programador de la oficina (OpenHands). Revisalo y aprobalo con «aprobar N» en Telegram._"; } > /tmp/cuerpo.md
+          URL=$(gh pr create --head "$RAMA" --title "$TITULO" --body-file /tmp/cuerpo.md 2>/tmp/err.txt) || { [ -n "$PAT" ] && URL=$(GH_TOKEN="$PAT" gh pr create --head "$RAMA" --title "$TITULO" --body-file /tmp/cuerpo.md 2>>/tmp/err.txt); } || true
+          cat /tmp/err.txt || true
+          [ -z "$URL" ] && URL="https://github.com/${GITHUB_REPOSITORY}/compare/main...${RAMA}?expand=1"
+          echo "url=$URL" >> $GITHUB_OUTPUT
+
+      - name: Avisar a Jonathan
+        if: always()
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          P_ISSUE: ${{ github.event.issue.number }}
+          URL: ${{ steps.pr.outputs.url }}
+          NADA: ${{ steps.pr.outputs.nada }}
+          ROTO: ${{ steps.pr.outputs.roto }}
+          ESTADO: ${{ job.status }}
+        run: |
+          RES="$(head -c 1500 /tmp/resumen.md 2>/dev/null)"
+          PED="$(head -c 200 /tmp/pedido.txt 2>/dev/null)"
+          if [ -n "$URL" ]; then
+            N="${URL##*/pull/}"; case "$N" in *[!0-9]*) N="";; esac
+            MSG="🛠️ Programador: terminé «${PED}».
+          ${RES}
+          ${ROTO:+⚠️ Ojo: el chequeo automático encontró un error, revisalo antes de aprobar.
+          }
+          👉 Propuesta: ${URL}
+          ${N:+Para aplicarla escribí «aprobar ${N}». Para descartarla: «descartar ${N}».}"
+          elif [ -n "$NADA" ]; then MSG="🛠️ Programador: revisé «${PED}» pero no hizo falta cambiar nada (o no supe cómo). Contame más detalle y lo intento de nuevo."
+          else MSG="⚠️ Programador: no pude terminar «${PED}» (${ESTADO}). Detalle: https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"; fi
+          DUENO=$(node -e 'try{const e=require(process.cwd()+"/data/estado.json");console.log(e.dueno||"")}catch{console.log("")}')
+          if [ -n "$TELEGRAM_TOKEN" ] && [ -n "$DUENO" ]; then curl -s -o /dev/null "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" --data-urlencode "chat_id=${DUENO}" --data-urlencode "text=${MSG}" --data-urlencode "disable_web_page_preview=true"; fi
+          if [ -n "$P_ISSUE" ]; then gh issue comment "$P_ISSUE" --body "$MSG" || true; fi

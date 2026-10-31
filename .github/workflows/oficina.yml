@@ -13,6 +13,8 @@ on:
 permissions:
   contents: write
   models: read
+  actions: write        # para despertar al programador (OpenHands)
+  pull-requests: write  # para aprobar o descartar sus propuestas
 
 concurrency:
   group: oficina
