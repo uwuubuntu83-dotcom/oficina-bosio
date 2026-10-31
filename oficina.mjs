@@ -295,7 +295,7 @@ function leerPriv(id, def) {
 }
 const leerPrivSeguro = (id, def) => { try { return leerPriv(id, def); } catch { return def; } };
 function escribirPriv(id, v) { const iv = crypto.randomBytes(12); const c = crypto.createCipheriv("aes-256-gcm", CLAVE_PRIV, iv); const data = Buffer.concat([c.update(JSON.stringify(v), "utf8"), c.final()]); escribir(FPRIV(id), Buffer.concat([iv, c.getAuthTag(), data]).toString("base64")); }
-function anotar(id, e) { const r = leerPriv(id, []); r.push({ t: NOW.toISOString(), f: fechaAR(), h: horaAR(), ...e }); escribirPriv(id, r.slice(-4000)); return r; }
+function anotar(id, e) { const r = leerPriv(id, []); r.push({ t: e.f && e.f !== fechaAR() ? new Date(e.f + "T15:00:00Z").toISOString() : NOW.toISOString(), f: fechaAR(), h: horaAR(), ...e }); escribirPriv(id, r.slice(-4000)); return r; }
 const pesos = n => "$" + Math.round(n).toLocaleString("es-AR");
 function leerMonto(s) { let t = String(s); let a; do { a = t; t = t.replace(/(\d)\.(\d{3})(?!\d)/, "$1$2"); } while (t !== a); const m = t.match(/\$?\s*(\d+(?:,\d+)?)\s*(k\b|mil\b|lucas\b|luca\b)?/i); if (!m) return null; let v = parseFloat(m[1].replace(",", ".")); if (m[2]) v *= 1000; return v > 0 ? v : null; }
 const CATS = [
@@ -374,7 +374,9 @@ function parseItems(xml) {
   for (const m of xml.matchAll(/<entry\b[^>]*>([\s\S]*?)<\/entry>/g)) { const it = m[1]; out.push({ titulo: decode((it.match(/<title[^>]*>([\s\S]*?)<\/title>/) || [])[1]), link: ((it.match(/<link[^>]*href="([^"]+)"/) || [])[1] || ""), fuente: "", fecha: decode((it.match(/<(?:updated|published)>([\s\S]*?)<\/(?:updated|published)>/) || [])[1]) }); }
   return out;
 }
-const decode = s => String(s || "").replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/<[^>]+>/g, "").trim();
+const ENT = { aacute: "á", eacute: "é", iacute: "í", oacute: "ó", uacute: "ú", ntilde: "ñ", Aacute: "Á", Eacute: "É", Iacute: "Í", Oacute: "Ó", Uacute: "Ú", Ntilde: "Ñ", uuml: "ü", nbsp: " ", laquo: "«", raquo: "»", iquest: "¿", iexcl: "¡", ldquo: "“", rdquo: "”", lsquo: "‘", rsquo: "’", ndash: "–", mdash: "—", hellip: "…", deg: "°" };
+const entidades = s => { let t = String(s || ""), a; do { a = t; t = t.replace(/&amp;/g, "&"); } while (t !== a); return t.replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n)).replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16))).replace(/&([a-z]+);/gi, (m, n) => ENT[n] || m); };
+const decode = s => entidades(String(s || "").replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").replace(/&lt;/g, "<").replace(/&gt;/g, ">")).replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/<[^>]+>/g, "").replace(/&lt;/g, "<").replace(/&gt;/g, ">").trim();
 const RECETAS = {
   async dolar(b, sb, { resumen }) {
     const r = await traer(URLS.dolar); if (!r.ok) throw new Error("dolarapi respondió " + r.status);
@@ -881,7 +883,7 @@ const AYUDA = () => `Soy el Gerente general de la ${CFG.oficina}. Escribime:
 • perfil: me tengo que cuidar del colesterol — lo tienen en cuenta los bots de salud y plata (privado)
 • torta (gráfico e informe de gastos del mes) · torta semana · torta mes pasado · servicios · comidas · ejercicio · borrar último gasto
 • 📸 Foto de un ticket con la palabra «comprobante»: lo leo y lo anoto. Otra foto tuya: el asesor de imagen te da su opinión.
-Oficina visual: https://uwuubuntu83-dotcom.github.io/oficina-bosio/`;
+Oficina visual: escribí «link» y te paso el link que entra solo, sin pedir PIN.`;
 const COLORES = ["#c2417a", "#2f7d4f", "#b5651d", "#2f5fa8", "#7a4fa8", "#0e8a8a", "#a0522d", "#4a5bbf", "#8a6d2f", "#5f5f5f"];
 function guardarExtra() { escribir(FEXTRA, extra); }
 async function contratar(pedido) {
@@ -928,14 +930,22 @@ function pagarServicio(nombre, monto, detalle) {
 }
 async function leerComprobante(p) {
   const imagen = await bajarFoto(p.foto);
-  const r = await ia(`Es la foto de un comprobante de gasto de Argentina (ticket, factura, transferencia o recibo).${p.orden ? " Nota del dueño: " + p.orden : ""}
-Respondé SOLO un JSON: {"monto": total en pesos como número sin símbolos ni puntos de miles, "comercio": "nombre del comercio o empresa", "fecha": "AAAA-MM-DD o vacío", "detalle": "qué se pagó o compró en pocas palabras", "servicio": "si es una factura de un servicio de la casa (luz, gas, agua, internet, alquiler, expensas, tasas, seguro, prepaga), cuál; si no, vacío"}`, { json: true, imagen });
-  const j = parsearJSON(r.texto) || {}; const monto = typeof j.monto === "number" ? j.monto : leerMonto(String(j.monto || ""));
-  if (!(monto > 0)) { await enviar("🧾 No pude leer el monto del comprobante. Mandámelo escrito, así: «gasté 5000 en nafta»."); return; }
-  const det = [j.detalle, j.comercio].filter(Boolean).join(" · ") || "comprobante";
-  if (j.servicio) { const { nom } = pagarServicio(String(j.servicio), monto, det); await enviar(`🏠 Leí la factura y la anoté como pago de ${nom}: ${pesos(monto)} (${det}).\nSi está mal, escribí «borrar último gasto».`); }
-  else { const cat = categoria(det + " " + (p.orden || "")); anotar("gastos", { texto: det, monto, cat, origen: "comprobante" }); await enviar(`🧾 Leí el comprobante y lo anoté: ${pesos(monto)} · ${det} · ${cat}.\nSi está mal, escribí «borrar último gasto».`); }
-  log("Contaduría", "anotó un comprobante (privado)");
+  const r = await ia(`Es una foto de Argentina: puede ser UN comprobante (ticket, factura, transferencia, recibo) o una CAPTURA DEL HOME BANKING / BILLETERA con VARIOS movimientos.${p.orden ? " Nota del dueño: " + p.orden : ""}
+HOY ES ${fechaAR()} (ayer fue ${fechaAR(new Date(NOW - 864e5))}). Si la captura dice "Hoy" o "Ayer", convertilo a esas fechas.
+Listá SOLO los GASTOS (plata que salió: montos en rojo, con signo menos, débitos, pagos, compras, transferencias enviadas). NO incluyas ingresos, sueldos ni transferencias recibidas.
+Respondé SOLO un JSON: {"movimientos": [{"monto": número en pesos sin símbolos ni puntos de miles, "comercio": "nombre", "fecha": "AAAA-MM-DD o vacío", "detalle": "qué fue en pocas palabras", "servicio": "si es un servicio de la casa (luz, gas, agua, internet, alquiler, expensas, tasas, seguro, prepaga), cuál; si no, vacío"}]}`, { json: true, imagen });
+  const j = parsearJSON(r.texto) || {}; const movs = (Array.isArray(j.movimientos) ? j.movimientos : j.monto ? [j] : []).map(m => ({ ...m, monto: Math.abs(typeof m.monto === "number" ? m.monto : leerMonto(String(m.monto || "")) || 0) })).filter(m => m.monto > 0).slice(0, 40);
+  if (!movs.length) { await enviar("🧾 No pude leer ningún gasto en la foto. Mandámelos escritos, así: «gasté 5000 en nafta»."); return; }
+  const previos = leerPrivSeguro("gastos", []); const lineas = []; let dup = 0, total = 0;
+  for (const m of movs) {
+    const det = [m.detalle, m.comercio].filter(Boolean).join(" · ") || "comprobante"; const f = /^\d{4}-\d{2}-\d{2}$/.test(m.fecha || "") ? m.fecha : fechaAR();
+    if (previos.some(x => x.f === f && Math.round(x.monto) === Math.round(m.monto))) { dup++; continue; }
+    if (m.servicio) { const { nom } = pagarServicio(String(m.servicio), m.monto, det); lineas.push(`🏠 ${f.slice(8, 10)}/${f.slice(5, 7)} ${pesos(m.monto)} · ${nom}`); }
+    else { const cat = categoria(det + " " + (p.orden || "")); const e = { texto: det, monto: m.monto, cat, origen: "comprobante" }; if (f !== fechaAR()) Object.assign(e, { f, h: "" }); anotar("gastos", e); lineas.push(`• ${f.slice(8, 10)}/${f.slice(5, 7)} ${pesos(m.monto)} · ${det} · ${cat}`); }
+    total += m.monto;
+  }
+  await enviar(lineas.length ? `🧾 Anoté ${lineas.length} gasto${lineas.length > 1 ? "s" : ""} (total ${pesos(total)}):\n${lineas.join("\n")}${dup ? `\n(${dup} ya estaba${dup > 1 ? "n" : ""} anotado${dup > 1 ? "s" : ""}, no los repetí)` : ""}\n\nSi alguno está mal: «borrar último gasto». Para ver la torta: «torta».` : `🧾 Esos ${dup} gastos ya estaban anotados, no los repetí.`);
+  log("Contaduría", `anotó ${lineas.length} gastos de una foto (privado)`);
 }
 /* ---------- recordatorios y fechas (sin IA) ---------- */
 const MESES_N = { enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, julio: 7, agosto: 8, septiembre: 9, setiembre: 9, octubre: 10, noviembre: 11, diciembre: 12 };
@@ -1038,6 +1048,7 @@ async function ordenProgramador(txt) {
   }
   return false;
 }
+const linkOficina = () => `🔑 Tu oficina, ya con tu PIN adentro (abrilo una vez en cada celu o compu y queda guardado para siempre):\nhttps://uwuubuntu83-dotcom.github.io/oficina-bosio/#pin=${PIN}\n\nNo lo reenvíes: con ese link se manda a la oficina. Si lo perdés, escribí «link».`;
 async function procesarMensajes() {
   if (!TG_TOKEN) return;
   let ups = await tg("getUpdates", { offset: est.tgOffset, timeout: 0, allowed_updates: ["message", "edited_message"] });
@@ -1059,7 +1070,7 @@ async function procesarMensajes() {
     const resp = m.reply_to_message && est.mensajes[m.reply_to_message.message_id];
     if (m.photo) {
       const foto = m.photo[m.photo.length - 1].file_id; const rb = resp && botPorId(resp);
-      if ((rb && /gastos|casa/.test(rb.receta?.registro || "")) || /(comprobante|ticket|factura|recibo|gast|pagu|compr|transferencia)/i.test(txt)) { est.pendientes.push({ tipo: "comprobante", foto, orden: txt.slice(0, 300), t: NOW.toISOString() }); await enviar("🧾 Recibí el comprobante. Lo leo y lo anoto en la próxima vuelta (usa 1 consulta de IA)."); }
+      if ((rb && /gastos|casa/.test(rb.receta?.registro || "")) || /(comprobante|ticket|factura|recibo|gast|pagu|compr|transferencia|movimiento|banco|rojo|egreso|resumen de cuenta|mercado ?pago|ual[aá]|naranja)/i.test(txt)) { est.pendientes.push({ tipo: "comprobante", foto, orden: txt.slice(0, 300), t: NOW.toISOString() }); await enviar("🧾 Recibí el comprobante. Lo leo y lo anoto en la próxima vuelta (usa 1 consulta de IA)."); }
       else { const destino = rb && rb.tipo === "ia" ? rb : /(comida|plato|com[ií]|almuerzo|cena|desayuno|merienda|dieta)/i.test(txt) ? botPorId("nutricionista") : botPorId("asesor_imagen"); if (!destino) { await enviar("No tengo un bot para fotos ahora."); continue; } est.pendientes.push({ bot: destino.id, orden: txt.slice(0, 300) || "Mirá esta foto y decime qué mejorar.", foto, t: NOW.toISOString(), origen: "orden" }); await enviar(`📸 Le paso la foto a ${destino.nombre}. Te contesta en la próxima vuelta.`); }
       log("Mesa de entrada", "llegó una foto (no se guarda)"); continue;
     }
@@ -1078,6 +1089,7 @@ async function procesarMensajes() {
     try { if (await ordenProgramador(txt)) continue; } catch (e) { await enviar("🛠️ No pude hablar con el programador: " + e.message); continue; }
     if (/^\/?apps$/i.test(txt)) { const l = appsLista(); await enviar(l.length ? "📱 Apps del equipo de desarrollo:\n" + l.slice(0, 20).map(x => `• ${x.nombre} (${x.puntaje}/10) — ${x.url}`).join("\n") + "\n\nPara cambiar una: «app arreglar NOMBRE: qué cambiar»." : "Todavía no hay apps. Pedí una: «app: una calculadora de materiales para una losa»."); continue; }
     if ((mm = txt.match(RX_CELU)) || RX_CELU_AUTO.test(txt)) { try { await ordenCelu(mm ? mm[1] : txt); } catch (e) { await enviar("📱 No pude hablar con el celu: " + e.message); } continue; }
+    if (/^(link|pin|oficina|abrir oficina|link de la oficina)$/.test(low)) { await enviar(linkOficina()); continue; }
     if (/^(start|ayuda|help|hola|menu|menú)$/.test(low)) { await enviar(AYUDA()); continue; }
     if (/^(estado|tablero|novedades)$/.test(low)) { await enviar(tablero()); continue; }
     if ((mm = low.match(/^parte(?:\s+(?:de|del|de la))?\s+(.+)$/))) { const q = slug(mm[1]); const a = CFG.areas.find(x => x.id === q || slug(x.nombre).includes(q) || q.includes(x.id)); await enviar(a ? parteArea(a) : "No encontré esa área. Probá: «parte redes», «parte contaduría», «parte constructora»…"); continue; }
@@ -1127,8 +1139,11 @@ Respondé SOLO un JSON: {"bot":"id o gerente","instruccion":"la orden clara para
     await trabajar(b, { orden: b.tipo === "codigo" ? "" : (j.instruccion || p.orden), origen: "orden" });
   } else {
     log("Gerente general", "hace la orden él mismo");
-    const gen = { id: "gerente", nombre: "Gerente general", area: "direccion", buscar: j.buscar !== false, mision: "Cumplir la orden del jefe con información real y actual.", entregable: "La respuesta completa y lista para usar.", criterios: ["Responde exactamente lo pedido", "Datos reales con fuente", "Claro y breve"] };
-    const res = await ia(promptBot(gen, j.instruccion || p.orden), { buscar: gen.buscar });
+    const sobreOficina = /\b(oficina|bot|bots|celu|celular|lista|gringo|conect|anda|funciona|instagram|telegram|buz[oó]n|ia|ias)\b/i.test(p.orden) || /^(por\s?qu[eé]|porque|qu[eé] pasa|no (me )?(anda|llega|funciona))/i.test(p.orden.trim());
+    let real = "";
+    if (sobreOficina) { let ce = ""; try { if (BUZON && PIN) ce = textoCelu(await buzon("/oficina/celu")); } catch {} real = `\nESTADO REAL DE LA OFICINA AHORA (usalo para responder, es la verdad):\n${ce ? "CELU BOT (Samsung A51 con Termux):\n" + ce + "\n" : ""}ÚLTIMOS MOVIMIENTOS:\n${est.log.slice(0, 25).map(x => `${x.t.slice(11, 16)} [${x.quien}] ${x.que}`).join("\n")}\nCÓMO FUNCIONA: la oficina corre gratis en GitHub Actions cada 30 min; el buzón de Cloudflare la despierta al instante cuando escribís. El celu bot es un Samsung A51 con Termux que maneja Instagram y Facebook por ADB inalámbrico; se comunica con el buzón cada 15 segundos. Si el celu cambia de red wifi, pierde el ADB y hay que volver a activarlo; la lista de Gringo la arma el celu cuando no está haciendo otra tarea. Órdenes útiles: «celu», «celu programa de hoy», «celu seguí», «celu reiniciar», «celu lista».\n`; }
+    const gen = { id: "gerente", nombre: "Gerente general", area: "direccion", buscar: !sobreOficina && j.buscar !== false, mision: sobreOficina ? "Responder la pregunta del jefe sobre SU oficina de bots, en base al estado real: qué pasa, por qué, y qué hacer (con la orden exacta para escribir)." : "Cumplir la orden del jefe con información real y actual.", entregable: sobreOficina ? "Respuesta corta (máximo 8 renglones): qué pasa, por qué, y el paso concreto." : "La respuesta completa y lista para usar.", criterios: ["Responde exactamente lo pedido", sobreOficina ? "Usa el estado real" : "Datos reales con fuente", "Claro y breve"], evitar: ["Recomendar herramientas pagas o servicios externos (Zapier, Make, etc.) salvo que lo pida", "Planes de desarrollo genéricos", "Inventar costos"] };
+    const res = await ia(promptBot(gen, (j.instruccion || p.orden) + real), { buscar: gen.buscar });
     const f = (res.fuentes || []).slice(0, 5).map(x => "• " + x.url).join("\n");
     await enviar(`🎯 Gerente general\n📌 Tu orden: ${p.orden}\n\n${res.texto}${f ? "\n\nFuentes:\n" + f : ""}`);
     g.resumen = "Respondió una orden tuya";
@@ -1232,6 +1247,7 @@ async function main() {
   { const viejas = est.pendientes.filter(p => p.t && NOW - new Date(p.t) > 6 * 3600e3); if (viejas.length) { est.pendientes = est.pendientes.filter(p => !viejas.includes(p)); log("Gerente general", `descartó ${viejas.length} órdenes viejas que esperaban IA`); await enviar(`🗑️ Descarté ${viejas.length} orden(es) de hace más de 6 horas que no se pudieron hacer por falta de IA: ${viejas.map(p => "«" + String(p.orden || p.bot || p.tipo).slice(0, 40) + "»").join(", ")}. Si todavía las necesitás, pedímelas de nuevo.`); } }
   await procesarMensajes();
   await avisarBuzonListo();
+  if (est.dueno && PIN && !est.hechos.linkPin) { est.hechos.linkPin = NOW.toISOString(); await enviar(linkOficina()); }
   if (BUZON && PIN && est.dueno && !est.hechos.celuAvisosOficina) { try { await alCelu({ tipo: "ajuste", telegram: false }); est.hechos.celuAvisosOficina = NOW.toISOString(); log("Redes sociales", "el celu ahora te avisa todo por la oficina"); } catch {} }
   await revisarExternos();
   if (MODO.startsWith("correr:")) est.pendientes.push({ bot: MODO.slice(7), orden: "", origen: "manual" });

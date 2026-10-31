@@ -281,8 +281,10 @@ function pedirPin(despues){$("#dT").textContent="🔒 Tu PIN de la oficina";cons
   $("#dlg").open||$("#dlg").showModal();setTimeout(()=>inp.focus(),50)}
 /* ---------- buzón (Cloudflare): celu bot y órdenes directas, con PIN guardado solo en este navegador ---------- */
 const BUZON_URL=()=>((OF.ORG&&OF.ORG.buzon)||"https://oficina-buzon.uwuubuntu83.workers.dev");
-function getPin(){try{return localStorage.getItem("of-pin")||""}catch(e){return OF.pin||""}}
-function setPin(v){OF.pin=v;try{v?localStorage.setItem("of-pin",v):localStorage.removeItem("of-pin")}catch(e){}}
+function getPin(){let v="";try{v=localStorage.getItem("of-pin")||""}catch(e){}if(!v){const m=document.cookie.match(/(?:^|; )ofpin=(\d+)/);if(m){v=m[1];try{localStorage.setItem("of-pin",v)}catch(e){}}}return v||OF.pin||""}
+function setPin(v){OF.pin=v;try{v?localStorage.setItem("of-pin",v):localStorage.removeItem("of-pin")}catch(e){}document.cookie="ofpin="+(v||"")+";path=/;max-age="+(v?60*60*24*3650:0)+";SameSite=Strict;Secure"}
+/* link con llave: .../#pin=XXXXXXXX entra solo y queda guardado para siempre en ese navegador (el # no viaja a ningún servidor) */
+(function(){const m=location.hash.match(/pin=(\d{4,12})/);if(m){setPin(m[1]);history.replaceState(null,"",location.pathname+location.search)}else if(getPin())setPin(getPin())})();
 async function buzon(ruta,cuerpo){const pin=getPin();if(!pin)throw new Error("Falta tu PIN");
   const r=await fetch(BUZON_URL()+ruta,cuerpo?{method:"POST",headers:{"content-type":"application/json","x-pin":pin},body:JSON.stringify(cuerpo)}:{headers:{"x-pin":pin}});
   if(r.status===401){setPin("");throw new Error("PIN incorrecto")}if(!r.ok)throw new Error("El buzón respondió "+r.status);return r.json()}
