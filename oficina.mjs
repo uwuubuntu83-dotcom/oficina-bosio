@@ -73,7 +73,7 @@ if (ENV.CLOUDFLARE_API_TOKEN && ENV.CLOUDFLARE_ACCOUNT_ID) PROV.push({ id: "clou
 claves("COHERE_API_KEY").forEach(k => PROV.push({ id: "cohere", nombre: "Cohere", tipo: "openai", base: "https://api.cohere.ai/compatibility/v1", key: k, modelos: ["command-a-03-2025", "command-r-plus-08-2024"], tope: 30 }));
 claves("HF_TOKEN").forEach(k => PROV.push({ id: "huggingface", nombre: "Hugging Face", tipo: "openai", base: "https://router.huggingface.co/v1", key: k, modelos: ["openai/gpt-oss-120b", "meta-llama/Llama-3.3-70B-Instruct", "Qwen/Qwen3-32B"], tope: 30 }));
 if (ENV.LLM_EXTRA_BASE && ENV.LLM_EXTRA_KEY) PROV.push({ id: "extra", nombre: "IA extra", tipo: "openai", base: ENV.LLM_EXTRA_BASE.replace(/\/+$/, ""), key: ENV.LLM_EXTRA_KEY, modelos: (ENV.LLM_EXTRA_MODELS || "").split(",").map(s => s.trim()).filter(Boolean) });
-claves("ZAI_API_KEY").forEach(k => PROV.push({ id: "zai", nombre: "Z.ai (GLM)", tipo: "openai", base: "https://api.z.ai/api/paas/v4", key: k, modelos: ["glm-4.5-flash", "glm-4.7-flash", "glm-4-flash-250414"] }));
+claves("ZAI_API_KEY").forEach(k => PROV.push({ id: "zai", nombre: "Z.ai (GLM)", tipo: "openai", base: "https://api.z.ai/api/paas/v4", key: k, modelos: ["glm-4.5-flash", "glm-4.7-flash", "glm-4-flash-250414"], soloFijos: true }));
 claves("DASHSCOPE_API_KEY").forEach(k => PROV.push({ id: "qwen", nombre: "Alibaba Qwen", tipo: "openai", base: "https://dashscope-intl.aliyuncs.com/compatible-mode/v1", key: k, modelos: ["qwen-plus", "qwen-flash", "qwen-turbo", "qwen-max"] }));
 // Más IA: gratis siempre (llm7, codestral) y de crédito de prueba sin tarjeta (van al final para estirarlas)
 for (const [env, id, nombre, base, modelos, ultimo] of [
@@ -133,10 +133,10 @@ async function modelosVivos(p) {
 async function modelosDe(p, { imagen } = {}) {
   const base = imagen ? (VISION[p.id.replace(/\d+$/, "")] || []) : (p.modelos || []);
   const vivos = await modelosVivos(p); if (!vivos) return base;
-  const set = new Set(vivos); const fijos = [...base.filter(m => set.has(m)), ...base.filter(m => !set.has(m))];
+  const set = new Set(vivos); const fijos = base.filter(m => set.has(m)); const ausentes = base.filter(m => !set.has(m));
   const rank = id => { const i = BUENOS.findIndex(r => r.test(id)); return i < 0 ? 99 : i; };
-  const extra = vivos.filter(id => !fijos.includes(id) && (!p.gratis || /:free$/.test(id)) && (imagen ? VISTA.test(id) : rank(id) < 99 && !/(-vl|vision)/i.test(id))).sort((a, z) => rank(a) - rank(z));
-  const lista = [...fijos, ...extra].slice(0, imagen ? 4 : 6);
+  const extra = vivos.filter(id => !base.includes(id) && (!p.gratis || /:free$/.test(id)) && (imagen ? VISTA.test(id) : rank(id) < 99 && !/(-vl|vision)/i.test(id))).sort((a, z) => rank(a) - rank(z));
+  const lista = p.soloFijos ? base : [...fijos, ...extra.slice(0, imagen ? 3 : 4), ...ausentes].slice(0, imagen ? 5 : 7);
   return lista.length ? lista : base;
 }
 function retryDe(j) { const d = ((j && j.error && j.error.details) || []); const ri = d.find(x => /RetryInfo/.test(x["@type"] || "")); const s = ri && parseFloat(ri.retryDelay); const qf = d.find(x => /QuotaFailure/.test(x["@type"] || "")); const porDia = qf && (qf.violations || []).some(v => /PerDay/i.test(v.quotaId || "")); return { segundos: s || 0, porDia: !!porDia }; }
@@ -172,7 +172,7 @@ async function llamarOpenAI(p, modelo, prompt, { json, imagen, largo }) {
   if (p.id.startsWith("openrouter")) { headers["X-Title"] = "Oficina Bosio"; headers["HTTP-Referer"] = "https://uwuubuntu83-dotcom.github.io/oficina-bosio/"; }
   const body = { model: modelo, messages: [{ role: "user", content: imagen ? [{ type: "text", text: prompt }, { type: "image_url", image_url: { url: `data:${imagen.mime};base64,${imagen.b64}` } }] : prompt }], temperature: json ? 0.2 : 0.5, max_tokens: largo ? 8192 : 4096, stream: false };
   const r = await traer(p.url || (p.base + "/chat/completions"), { method: "POST", headers, body: JSON.stringify(body) }, largo ? 240000 : 120000);
-  const crudo = await r.text().catch(() => ""); let j = {}; try { j = JSON.parse(crudo); } catch { const sse = crudo.split("\n").filter(l => l.startsWith("data:") && !/\[DONE\]/.test(l)).map(l => { try { return JSON.parse(l.slice(5)); } catch { return null; } }).filter(Boolean); if (sse.length) j = { choices: [{ message: { content: sse.map(x => ((x.choices || [])[0] || {}).delta?.content || "").join("") } }] }; else if (r.ok) return { error: true, status: 200, msg: "no devolvió JSON: " + crudo.replace(/\s+/g, " ").slice(0, 90) }; }
+  const crudo = await r.text().catch(() => ""); let j = {}; try { j = JSON.parse(crudo); } catch { const sse = crudo.split("\n").filter(l => l.startsWith("data:") && !/\[DONE\]/.test(l)).map(l => { try { return JSON.parse(l.slice(5)); } catch { return null; } }).filter(Boolean); if (sse.length) j = { choices: [{ message: { content: sse.map(x => ((x.choices || [])[0] || {}).delta?.content || "").join("") } }] }; else if (r.ok && crudo.trim() && !/^\s*</.test(crudo)) j = { choices: [{ message: { content: crudo.trim() } }] }; else if (r.ok) return { error: true, status: 200, msg: "no devolvió JSON: " + crudo.replace(/\s+/g, " ").slice(0, 90) }; }
   if (!r.ok) return { error: true, status: r.status, j, msg: (j.error && (j.error.message || j.error)) || j.message || String(r.status) };
   const ch = (j.choices || [])[0] || {}; const m = ch.message || {};
   const cont = Array.isArray(m.content) ? m.content.map(x => x.text || "").join("") : m.content;
@@ -219,6 +219,7 @@ async function ia(prompt, { buscar = false, json = false, imagen = null, largo =
       if (r.status === 429) { const rd = retryDe(r.j); marcar(clave, rd.porDia ? 0 : Math.min(Math.max(rd.segundos, 30), 3600) * 1000); if (rd.porDia) log("IA", `${p.nombre} ${modelo}: cupo diario agotado, sigo con otra`); }
       else if (r.status === 402) { marcar(p.id, 24 * 3600e3); log("IA", `${p.nombre}: se quedó sin créditos gratis, la salteo por hoy`); break; }
       else if (r.status === 401 || r.status === 403) { marcar(p.id, 0); log("IA", `${p.nombre}: la clave no es válida o no tiene permiso`); break; }
+      else if (r.status === 410) marcar(clave, 0);
       else if (r.status === 404 || r.status === 400 || r.status === 422) marcar(clave, largo && r.status !== 404 ? 3600e3 : 0);
       else marcar(clave, 10 * 60e3);
       if (++fallasProv >= (p.maxFallas || 3)) break;
