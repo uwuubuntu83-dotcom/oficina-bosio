@@ -9,6 +9,8 @@ on:
         description: "auto, todos, sinIA, parte, entrenar o correr:ID_DEL_BOT"
         required: false
         default: "auto"
+  push:
+    paths: ["pruebas/pedido.txt"]   # autoprueba con las IA reales (las claves nunca salen de GitHub)
 
 permissions:
   contents: write
@@ -31,7 +33,7 @@ jobs:
           node-version: 20
       - name: Abrir la oficina
         env:
-          MODO: ${{ github.event.inputs.modo || 'auto' }}
+          MODO: ${{ github.event.inputs.modo || (github.event_name == 'push' && 'prueba') || 'auto' }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           OFICINA_PIN: ${{ secrets.OFICINA_PIN }}   # para hablar con el buzón del celu (Cloudflare)
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

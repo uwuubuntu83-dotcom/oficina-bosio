@@ -1204,6 +1204,7 @@ async function atender(u) {
     if ((mm = txt.match(RX_CELU)) || RX_CELU_AUTO.test(txt)) { try { await ordenCelu(mm ? mm[1] : txt); } catch (e) { await enviar("📱 No pude hablar con el celu: " + e.message); } return; }
     if (/^(link|pin|oficina|abrir oficina|link de la oficina)$/.test(low)) { await enviar(linkOficina()); return; }
     if (/^(start|ayuda|help|hola|menu|menú)$/.test(low)) { await enviar(AYUDA()); return; }
+    if (/^(autoprueba|probar ias|prob[aá] las ias)$/.test(low)) { await autoprueba(); return; }
     if (/^(ias?|las ias|estado de las ias|cupo)$/.test(low)) { await enviar(textoIAs()); return; }
     if (/^(buen d[ií]a|buenos d[ií]as|resumen de hoy|hoy)$/.test(low)) { await buenDia(); return; }
     if (/^(estado|tablero|novedades)$/.test(low)) { await enviar(tablero()); return; }
@@ -1305,6 +1306,45 @@ Reglas: no repitas como loro lo que dijo; no recomiendes herramientas pagas ni s
   if (!respuesta && !acciones.length) await enviar("No te entendí bien. ¿Me lo decís con otras palabras?");
   log("Gerente general", `respondió${acciones.length ? " y movió " + acciones.map(a => a.texto || a.id).join(", ").slice(0, 120) : ""}`);
   g.resumen = "Habló con vos"; g.estado = "listo";
+}
+/* ---------- 🧪 AUTOPRUEBA con las IA reales: prueba cada proveedor de verdad y deja el resultado en data/autoprueba.json ---------- */
+async function autoprueba() {
+  const res = { t: NOW.toISOString(), texto: [], fotos: [], gerente: null, audio: null };
+  const vistos = new Set();
+  for (const p of PROV) {
+    if (vistos.has(p.id)) continue; vistos.add(p.id);
+    let modelos = p.tipo === "gemini" ? await modelosGemini(p).catch(() => []) : p.gratis ? await modelosOpenRouter(p).catch(() => []) : (p.modelos || []);
+    const fila = { prov: p.nombre, id: p.id, ok: false, modelo: "", ms: 0, error: "" };
+    for (const modelo of modelos.slice(0, 3)) {
+      const t0 = Date.now(); let r;
+      try { r = p.tipo === "gemini" ? await llamarGemini(p, modelo, "Respondé solo la palabra OK.", {}) : p.tipo === "buzon" ? await llamarBuzon(p, modelo, "Respondé solo la palabra OK.", {}) : await llamarOpenAI(p, modelo, "Respondé solo la palabra OK.", {}); } catch (e) { r = { error: true, status: 0, msg: e.message }; }
+      fila.ms = Date.now() - t0; fila.modelo = modelo;
+      if (!r.error) { fila.ok = true; fila.error = ""; break; }
+      fila.error = `${r.status} ${String(r.msg).slice(0, 140)}`;
+    }
+    if (!modelos.length) fila.error = "no encontró modelos";
+    res.texto.push(fila);
+  }
+  // fotos: una imagen chica generada acá (torta de 2 colores)
+  const png = pngTorta([{ v: 70, rgb: [220, 40, 40] }, { v: 30, rgb: [40, 90, 220] }], 160); const imagen = { mime: "image/png", b64: png.toString("base64") };
+  for (const p of PROV.filter(p => p.tipo === "gemini" || VISION[p.id.replace(/\d+$/, "")])) {
+    const modelos = p.tipo === "gemini" ? ["gemini-2.5-flash", "gemini-2.5-flash-lite"] : VISION[p.id.replace(/\d+$/, "")];
+    const fila = { prov: p.nombre, ok: false, modelo: "", error: "" };
+    for (const modelo of modelos.slice(0, 2)) {
+      let r; try { r = p.tipo === "gemini" ? await llamarGemini(p, modelo, "¿Qué ves en la imagen? Una frase.", { imagen }) : await llamarOpenAI(p, modelo, "¿Qué ves en la imagen? Una frase.", { imagen }); } catch (e) { r = { error: true, status: 0, msg: e.message }; }
+      fila.modelo = modelo; if (!r.error) { fila.ok = true; fila.error = ""; fila.dijo = String(r.texto).slice(0, 80); break; } fila.error = `${r.status} ${String(r.msg).slice(0, 140)}`;
+    }
+    res.fotos.push(fila);
+  }
+  // el Gerente de punta a punta (sin mandarte nada)
+  try { const r = await ia(`Sos el Gerente de una oficina. El jefe escribió: "anotame 5000 de nafta y decime cómo vengo". Respondé SOLO JSON {"respuesta":"...","acciones":[{"tipo":"comando","texto":"..."}]}`, { json: true }); const j = parsearJSON(r.texto); res.gerente = { ok: !!(j && j.respuesta), modelo: r.modelo, acciones: j && j.acciones }; } catch (e) { res.gerente = { ok: false, error: e.message }; }
+  // audios: que Groq tenga Whisper
+  try { const k = claves("GROQ_API_KEY")[0]; if (k) { const r = await traer("https://api.groq.com/openai/v1/models", { headers: { authorization: "Bearer " + k } }); const j = await r.json(); res.audio = { ok: (j.data || []).some(m => /whisper/.test(m.id)) }; } else res.audio = { ok: false, error: "sin clave de Groq" }; } catch (e) { res.audio = { ok: false, error: e.message }; }
+  escribir(path.join(DATA, "autoprueba.json"), res);
+  const okT = res.texto.filter(x => x.ok).length, okF = res.fotos.filter(x => x.ok).length;
+  const msg = `🧪 Autoprueba con las IA reales\n💬 Texto: ${okT}/${res.texto.length} andan\n${res.texto.map(x => `${x.ok ? "✅" : "❌"} ${x.prov}${x.ok ? ` (${(x.ms / 1000).toFixed(1)} s)` : " — " + x.error.slice(0, 60)}`).join("\n")}\n\n📸 Fotos: ${okF}/${res.fotos.length} andan\n${res.fotos.map(x => `${x.ok ? "✅" : "❌"} ${x.prov}${x.ok ? "" : " — " + x.error.slice(0, 60)}`).join("\n")}\n\n🎯 Gerente: ${res.gerente && res.gerente.ok ? "✅ " + res.gerente.modelo : "❌ " + (res.gerente && res.gerente.error || "no devolvió respuesta")}\n🎤 Audios: ${res.audio && res.audio.ok ? "✅" : "❌ " + (res.audio && res.audio.error || "Groq sin Whisper")}`;
+  log("Gerente general", `autoprueba: ${okT}/${res.texto.length} IA de texto y ${okF}/${res.fotos.length} de fotos andan`);
+  await enviar(msg);
 }
 /* ---------- ☀️ Buen día (SIN IA): todo lo de hoy en un solo mensaje, a las 07:30 ---------- */
 async function buenDia() {
@@ -1427,6 +1467,7 @@ async function main() {
   if (est.dueno && PIN && !est.hechos.linkPin) { est.hechos.linkPin = NOW.toISOString(); await enviar(linkOficina()); }
   if (BUZON && PIN && est.dueno && !est.hechos.celuAvisosOficina) { try { await alCelu({ tipo: "ajuste", telegram: false }); est.hechos.celuAvisosOficina = NOW.toISOString(); log("Redes sociales", "el celu ahora te avisa todo por la oficina"); } catch {} }
   await revisarExternos();
+  if (MODO === "prueba") { try { await autoprueba(); } catch (e) { log("Gerente general", "autoprueba: " + e.message); } }
   if (MODO.startsWith("correr:")) est.pendientes.push({ bot: MODO.slice(7), orden: "", origen: "manual" });
   const quedan = [];
   for (const p of est.pendientes) {
