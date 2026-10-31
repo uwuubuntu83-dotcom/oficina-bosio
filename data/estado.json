@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 28,
+   "corridas": 29,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-10-31T02:27:56.217Z",
+   "ultimaCorrida": "2026-10-31T02:58:00.659Z",
    "resumen": "💵 Dólar hoy (10:35 hs)\n• Oficial: compra $1510 · venta $1560\n• Blue: compra $1545 · venta $1565\n• Bolsa: compra $1557.8 · venta $1568.8\n• Contado con liquidación: compra $1649.8 · venta $1650.3\n• Mayorista: compra $1530",
    "informe": "data/informes/dolar/2026-10-30-1035.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1645.46,
      "tarjeta": 2028
     },
-    "ultimoChequeo": "2026-10-31T02:27:56.217Z",
+    "ultimoChequeo": "2026-10-31T02:58:00.659Z",
     "resumenFecha": "2026-10-30",
     "hist": {
      "2026-10-30": {
@@ -354,8 +354,8 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T02:27:56.217Z",
-   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 503 The service is currently unavailable. | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
+   "ultimaCorrida": "2026-10-31T02:58:00.659Z",
+   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
    "memoria": {}
@@ -1220,7 +1220,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
    "ultimaCorrida": "2026-10-31T01:55:56.980Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 32 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 62 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -1689,7 +1689,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 28,
+   "corridas": 29,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1698,7 +1698,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-10-31T02:27:56.217Z",
+   "ultimaCorrida": "2026-10-31T02:58:00.659Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -1708,21 +1708,21 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-10-31T02:27:56.217Z",
+    "ultimoChequeo": "2026-10-31T02:58:00.659Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       10,
-       10
+       11,
+       11
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       10,
-       10
+       11,
+       11
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       10,
-       10
+       11,
+       11
       ]
      }
     }
@@ -3568,7 +3568,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 10,
+   "corridas": 11,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -3577,13 +3577,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-10-31T02:27:56.217Z",
+   "ultimaCorrida": "2026-10-31T02:58:00.659Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-10-30",
-    "ultimoChequeo": "2026-10-31T02:27:56.217Z"
+    "ultimoChequeo": "2026-10-31T02:58:00.659Z"
    }
   },
   "feriados": {
@@ -3656,6 +3656,26 @@
   }
  },
  "log": [
+  {
+   "t": "2026-10-31T02:58:00.659Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-10-31T02:58:00.659Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-10-31T02:58:00.659Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-10-31T02:58:00.659Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-10-31T02:27:56.217Z",
    "quien": "Entrenador",
@@ -5135,26 +5155,6 @@
    "t": "2026-10-30T02:53:21.717Z",
    "quien": "Noticias de Villa María",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-30T02:53:21.717Z",
-   "quien": "Clientes y licitaciones",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-30T02:53:21.717Z",
-   "quien": "Dólar",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-30T02:53:21.717Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-10-30T02:53:21.717Z",
-   "quien": "Oficina",
-   "que": "abre (sinIA) · IA conectadas: gemini, github"
   }
  ],
  "pendientes": [],
@@ -5259,10 +5259,10 @@
  },
  "consumo": {
   "fecha": "2026-10-30",
-  "consultas": 252,
+  "consultas": 255,
   "busquedas": 0,
   "por": {
-   "gemini": 142,
+   "gemini": 145,
    "github": 36,
    "groq": 14,
    "llm7": 1,
@@ -5276,7 +5276,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-10-31T02:27:56.217Z",
+ "actualizado": "2026-10-31T02:58:00.659Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -5304,10 +5304,10 @@
   "agotado": {
    "gemini:gemini-2.5-flash": true,
    "gemini:gemini-2.5-flash-lite": true,
-   "gemini:gemini-flash-latest": 1793413707795,
+   "gemini:gemini-flash-latest": 1793415511751,
    "groq:groq/compound": true,
    "gemini:gemini-2.5-pro": true,
-   "gemini:gemini-3.8-flash": 1793414284208,
+   "gemini:gemini-3.8-flash": 1793415518262,
    "cfai:@cf/meta/llama-3.3-70b-instruct-fp8-fast": 1793392898439,
    "cfai:@cf/meta/llama-4-scout-17b-16e-instruct": 1793392900867,
    "cfai:@cf/mistralai/mistral-small-3.1-24b-instruct": 1793392903457,
@@ -5318,7 +5318,7 @@
    "github:deepseek/DeepSeek-V3-0324": 1793394188584,
    "github:openai/gpt-4.1": 1793394191093,
    "github:openai/gpt-4o": 1793394193599,
-   "gemini:gemini-3.7-flash": 1793413720712,
+   "gemini:gemini-3.7-flash": 1793415524788,
    "groq:openai/gpt-oss-120b": 1793393623669,
    "groq:llama-3.3-70b-versatile": true,
    "groq:qwen/qwen3-32b": true,
