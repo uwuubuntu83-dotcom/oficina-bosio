@@ -526,7 +526,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-01T10:52:53.087Z",
+   "ultimaCorrida": "2026-11-01T13:13:32.917Z",
    "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
@@ -2347,7 +2347,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-10-31",
    "ultimaCorrida": "2026-10-31T23:31:37.543Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 800 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 822 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -7476,7 +7476,7 @@
   },
   "lista_gringo": {
    "estado": "listo",
-   "corridas": 2,
+   "corridas": 3,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7484,17 +7484,19 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-10-31",
-   "ultimaCorrida": "2026-10-31T18:38:53.885Z",
+   "ultimaFecha": "2026-11-01",
+   "ultimaCorrida": "2026-11-01T13:13:32.917Z",
    "resumen": "Le pedí al celu: «lista». Te contesta en un minuto.",
    "informe": "data/informes/lista_gringo/2026-10-31-1538.md",
    "pausado": false,
    "memoria": {
     "horas": {
      "fecha": "2026-11-01",
-     "hechas": []
+     "hechas": [
+      "10:00"
+     ]
     },
-    "ultimoChequeo": "2026-10-31T18:38:53.885Z"
+    "ultimoChequeo": "2026-11-01T13:13:32.917Z"
    }
   },
   "community": {
@@ -7574,8 +7576,8 @@
    "memoria": {}
   },
   "consejero": {
-   "estado": "esperando",
-   "corridas": 0,
+   "estado": "listo",
+   "corridas": 1,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7583,16 +7585,19 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": null,
-   "ultimaCorrida": null,
-   "resumen": "",
+   "ultimaFecha": "2026-11-01",
+   "ultimaCorrida": "2026-11-01T13:13:32.917Z",
+   "resumen": "🔒 Privado: te lo mandó por Telegram.",
    "informe": null,
    "pausado": false,
    "memoria": {
     "horas": {
      "fecha": "2026-11-01",
-     "hechas": []
-    }
+     "hechas": [
+      "10:00"
+     ]
+    },
+    "ultimoChequeo": "2026-11-01T13:13:32.917Z"
    }
   },
   "monotributo": {
@@ -7699,6 +7704,31 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-01T13:13:32.917Z",
+   "quien": "Contador y consejero financiero",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-01T13:13:32.917Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-11-01T13:13:32.917Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-11-01T13:13:32.917Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-01T13:13:32.917Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-11-01T12:51:53.701Z",
    "quien": "Lo último en tecnología",
@@ -9173,31 +9203,6 @@
    "t": "2026-10-31T06:29:52.512Z",
    "quien": "Terrenos baratos",
    "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-  },
-  {
-   "t": "2026-10-31T06:29:52.512Z",
-   "quien": "Terrenos baratos",
-   "que": "empezó su tarea"
-  },
-  {
-   "t": "2026-10-31T06:29:52.512Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-10-31T06:29:52.512Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-10-31T05:59:54.456Z",
-   "quien": "Terrenos baratos",
-   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-  },
-  {
-   "t": "2026-10-31T05:59:54.456Z",
-   "quien": "Terrenos baratos",
-   "que": "empezó su tarea"
   }
  ],
  "pendientes": [],
@@ -9392,7 +9397,8 @@
   "296": "precio_mmo",
   "297": "tarifas",
   "298": "noticias_tec",
-  "299": "noticias_tec"
+  "299": "noticias_tec",
+  "300": "consejero"
  },
  "tgOffset": 196508501,
  "hechos": {
@@ -9405,15 +9411,15 @@
  },
  "consumo": {
   "fecha": "2026-11-01",
-  "consultas": 13,
+  "consultas": 16,
   "busquedas": 0,
   "por": {
-   "gemini": 12,
+   "gemini": 15,
    "groq": 1
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-01T12:51:53.701Z",
+ "actualizado": "2026-11-01T13:13:32.917Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -9439,9 +9445,9 @@
  "ia": {
   "fecha": "2026-11-01",
   "agotado": {
-   "gemini:gemini-3.8-flash": 1793530404043,
-   "gemini:gemini-3.7-flash": 1793530410604,
-   "gemini:gemini-3.6-flash": 1793530417040,
+   "gemini:gemini-3.8-flash": 1793538843758,
+   "gemini:gemini-3.7-flash": 1793538850303,
+   "gemini:gemini-3.6-flash": 1793538856770,
    "groq:groq/compound": true
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
