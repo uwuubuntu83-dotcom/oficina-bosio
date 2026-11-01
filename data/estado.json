@@ -505,8 +505,8 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-01T03:39:53.093Z",
-   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)",
+   "ultimaCorrida": "2026-11-01T05:54:59.320Z",
+   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
    "memoria": {}
@@ -2302,7 +2302,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-10-31",
    "ultimaCorrida": "2026-10-31T23:31:37.543Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 366 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 383 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -7530,6 +7530,26 @@
  },
  "log": [
   {
+   "t": "2026-11-01T05:54:59.320Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-11-01T05:54:59.320Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-11-01T05:54:59.320Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-01T05:54:59.320Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
+  {
    "t": "2026-11-01T05:37:53.235Z",
    "quien": "Aumentos de servicios",
    "que": "entregó (sin IA)"
@@ -9008,26 +9028,6 @@
    "t": "2026-10-31T01:58:53.057Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-10-31T01:28:55.205Z",
-   "quien": "Informe del celu",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-31T01:28:55.205Z",
-   "quien": "Clientes y licitaciones",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-31T01:28:55.205Z",
-   "quien": "Terrenos baratos",
-   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-  },
-  {
-   "t": "2026-10-31T01:28:55.205Z",
-   "quien": "Terrenos baratos",
-   "que": "empezó su tarea"
   }
  ],
  "pendientes": [],
@@ -9213,15 +9213,15 @@
  },
  "consumo": {
   "fecha": "2026-11-01",
-  "consultas": 4,
+  "consultas": 7,
   "busquedas": 0,
   "por": {
-   "gemini": 3,
+   "gemini": 6,
    "groq": 1
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-01T05:37:53.235Z",
+ "actualizado": "2026-11-01T05:54:59.320Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -9247,9 +9247,9 @@
  "ia": {
   "fecha": "2026-11-01",
   "agotado": {
-   "gemini:gemini-3.8-flash": 1793504424212,
-   "gemini:gemini-3.7-flash": 1793504430768,
-   "gemini:gemini-3.6-flash": 1793504437284,
+   "gemini:gemini-3.8-flash": 1793512530281,
+   "gemini:gemini-3.7-flash": 1793512536898,
+   "gemini:gemini-3.6-flash": 1793512543392,
    "groq:groq/compound": true
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
