@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 74,
+   "corridas": 75,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-31",
-   "ultimaCorrida": "2026-11-01T05:07:56.060Z",
+   "ultimaCorrida": "2026-11-01T05:37:53.235Z",
    "resumen": "💵 Dólar hoy (10:41 hs)\n• Oficial: compra $1510 · venta $1560\n• Blue: compra $1545 · venta $1565\n• Bolsa: compra $1565.4 · venta $1575\n• Contado con liquidación: compra $1655.3 · venta $1658.5\n• Mayorista: compra $1525 ·",
    "informe": "data/informes/dolar/2026-10-31-1041.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1643.33,
      "tarjeta": 2028
     },
-    "ultimoChequeo": "2026-11-01T05:07:56.060Z",
+    "ultimoChequeo": "2026-11-01T05:37:53.235Z",
     "resumenFecha": "2026-10-31",
     "hist": {
      "2026-10-30": {
@@ -2302,7 +2302,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-10-31",
    "ultimaCorrida": "2026-10-31T23:31:37.543Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 336 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 366 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -2468,7 +2468,7 @@
   },
   "vencimientos": {
    "estado": "listo",
-   "corridas": 15,
+   "corridas": 16,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -2477,12 +2477,14 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-01T02:39:54.941Z",
-   "resumen": "🧾 Vencimientos e impuestos\n\n• Monotributo: cómo pagar las deudas con ARCA y financiar los pagos en hasta 20 cuotas (Los Andes)\n  https://www.losandes.com.ar/economia/monotributo-como-pagar-las-deudas-arca-y-financiar-lo",
-   "informe": "data/informes/vencimientos/2026-10-31-2339.md",
+   "ultimaCorrida": "2026-11-01T05:37:53.235Z",
+   "resumen": "🧾 Vencimientos e impuestos\n\n• Ya es oficial la prórroga de la declaración jurada de Ganancias: cuál es la fecha límite (iProfesional)\n  https://www.iprofesional.com/impuestos/467821-arca-prorroga-nuevamente-la-declaraci",
+   "informe": "data/informes/vencimientos/2026-11-01-0237.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "ya es oficial la prórroga de la declaración jurada de ganancias: cuál es la fecha límite",
+     "economía aprobó dos modificaciones al código tributario",
      "monotributo: cómo pagar las deudas con arca y financiar los pagos en hasta 20 cuotas",
      "ya está disponible el plan de pagos de arba para cancelar deudas: cómo acceder al 40% de d",
      "llaryora reclamó un “rigi pyme” y urgió a prorrogar la ley de autopartes",
@@ -2565,7 +2567,7 @@
      "arca modifica la emisión de facturas del monotributo social desde noviembre",
      "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
     ],
-    "ultimoChequeo": "2026-11-01T02:39:54.941Z",
+    "ultimoChequeo": "2026-11-01T05:37:53.235Z",
     "semana": [
      {
       "titulo": "ARCA prorrogó vencimientos de Ganancias y facilidades",
@@ -2914,13 +2916,25 @@
       "link": "https://www.minutouno.com/economia/obligaciones-fiscales-arca-cual-es-la-fecha-limite-vencimiento-la-recategorizacion-del-monotributo-y-como-se-realiza-n6337427",
       "fuente": "minutouno.com",
       "t": 1793500801347
+     },
+     {
+      "titulo": "Ya es oficial la prórroga de la declaración jurada de Ganancias: cuál es la fecha límite",
+      "link": "https://www.iprofesional.com/impuestos/467821-arca-prorroga-nuevamente-la-declaracion-jurada-de-ganancias-cual-es-la-fecha-limite",
+      "fuente": "iProfesional",
+      "t": 1793511481406
+     },
+     {
+      "titulo": "Economía aprobó dos modificaciones al Código Tributario",
+      "link": "https://cdcordoba.gob.ar/economia-aprobo-dos-modificaciones-al-codigo-tributario/",
+      "fuente": "cdcordoba.gob",
+      "t": 1793511481406
      }
     ]
    }
   },
   "tarifas": {
    "estado": "listo",
-   "corridas": 16,
+   "corridas": 17,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -2929,12 +2943,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-01T02:39:54.941Z",
-   "resumen": "🧾 Aumentos de servicios\n\n• Economía: Noviembre llega con aumentos en alquileres, prepagas y servicios (.: VillaOcampoSF :.)\n  https://news.google.com/rss/articles/CBMivwFBVV95cUxNWUM0QWl0d1F1WktzQ3FuUUxtTXlxdmNPZDgtZE9u",
-   "informe": "data/informes/tarifas/2026-10-31-2339.md",
+   "ultimaCorrida": "2026-11-01T05:37:53.235Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• \"No hay una sola Argentina\": Sica y Malamud analizan cómo llega la economía a 2027, el impacto de Brasil y la \"apuesta\" de Milei (LA NACION)\n  https://www.lanacion.com.ar/economia/no-hay-una-s",
+   "informe": "data/informes/tarifas/2026-11-01-0237.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "\"no hay una sola argentina\": sica y malamud analizan cómo llega la economía a 2027, el imp",
+     "colombia, con las horas contadas para evitar una crisis de energía y de gas",
+     "milei bajo presión: entre el corset de trump y la negociación clave con los gobernadores",
+     "barranquilla, la apuesta de latam por la conectividad y el desarrollo del caribe",
+     "los cortes de energía programados para este domingo 1 de noviembre en honduras",
+     "el origen de halloween en el perú: así se vivía cada 31 de octubre a mediados del siglo xx",
      "economía: noviembre llega con aumentos en alquileres, prepagas y servicios",
      "alquileres, micros, peajes y servicios: uno por uno, los aumentos de noviembre",
      "atacando bastante mejor de lo que defiende, gimnasia ganó en córdoba 2 a 1 y está en los p",
@@ -3032,7 +3052,7 @@
      "golpe al bolsillo: aprueban fuerte aumento en los combustibles",
      "todo aumenta en noviembre: colectivos, prepagas, alquileres, colegios y servicios, uno por"
     ],
-    "ultimoChequeo": "2026-11-01T02:39:54.941Z",
+    "ultimoChequeo": "2026-11-01T05:37:53.235Z",
     "semana": [
      {
       "titulo": "Cortes de luz en C&#243;rdoba para este s&#225;bado: zonas afectadas por mantenimiento, poda y obras",
@@ -3393,6 +3413,42 @@
       "link": "https://viapais.com.ar/politica/paso-inflacion-octubre-dicen-consultoras-hizo-milei_0_saDbScGueQ.html",
       "fuente": "Vía País",
       "t": 1793500803813
+     },
+     {
+      "titulo": "\"No hay una sola Argentina\": Sica y Malamud analizan cómo llega la economía a 2027, el impacto de Brasil y la \"apuesta\" de Milei",
+      "link": "https://www.lanacion.com.ar/economia/no-hay-una-sola-argentina-sica-y-malamud-analizan-como-llega-la-economia-a-2027-el-impacto-de-brasil-nid01112026/",
+      "fuente": "LA NACION",
+      "t": 1793511483794
+     },
+     {
+      "titulo": "Colombia, con las horas contadas para evitar una crisis de energía y de gas",
+      "link": "https://www.elheraldo.co/atlantico/2026/11/01/colombia-con-las-horas-contadas-para-evitar-una-crisis-de-energia-y-de-gas/",
+      "fuente": "El Heraldo",
+      "t": 1793511483794
+     },
+     {
+      "titulo": "Milei bajo presión: entre el corset de Trump y la negociación clave con los gobernadores",
+      "link": "https://www.infobae.com/politica/2026/11/01/milei-bajo-presion-entre-el-corset-de-trump-y-la-negociacion-clave-con-los-gobernadores/",
+      "fuente": "Infobae",
+      "t": 1793511483794
+     },
+     {
+      "titulo": "Barranquilla, la apuesta de LATAM por la conectividad y el desarrollo del Caribe",
+      "link": "https://www.elheraldo.co/atlantico/barranquilla/2026/11/01/barranquilla-la-apuesta-de-latam-por-la-conectividad-y-el-desarrollo-del-caribe/",
+      "fuente": "El Heraldo",
+      "t": 1793511483794
+     },
+     {
+      "titulo": "Los cortes de energía programados para este domingo 1 de noviembre en Honduras",
+      "link": "https://www.elheraldo.hn/honduras/cortes-energia-programados-para-este-domingo-1-noviembre-honduras-DE32503176",
+      "fuente": "El Heraldo",
+      "t": 1793511483794
+     },
+     {
+      "titulo": "El origen de Halloween en el Perú: así se vivía cada 31 de octubre a mediados del siglo XX",
+      "link": "https://elcomercio.pe/archivo-elcomercio/el-origen-de-halloween-en-el-peru-asi-se-vivia-cada-31-de-octubre-a-mediados-del-siglo-xx-nnsp-noticia/",
+      "fuente": "El Comercio",
+      "t": 1793511483794
      }
     ]
    }
@@ -3450,7 +3506,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 74,
+   "corridas": 75,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -3459,7 +3515,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-01T05:07:56.060Z",
+   "ultimaCorrida": "2026-11-01T05:37:53.235Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -3469,7 +3525,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-01T05:07:56.060Z",
+    "ultimoChequeo": "2026-11-01T05:37:53.235Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -3502,16 +3558,16 @@
      },
      "2026-11-01": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       5,
-       5
+       6,
+       6
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       5,
-       5
+       6,
+       6
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       5,
-       5
+       6,
+       6
       ]
      }
     }
@@ -3538,7 +3594,7 @@
   },
   "precio_mmo": {
    "estado": "listo",
-   "corridas": 14,
+   "corridas": 15,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -3547,7 +3603,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-01T02:39:54.941Z",
+   "ultimaCorrida": "2026-11-01T05:37:53.235Z",
    "resumen": "🧱 Valor m² del Colegio de MMO\n\n• Federalización de la UPC: el Gobierno confirmó la construcción de una sede regional en Arroyito (Perfil)\n  https://news.google.com/rss/articles/CBMi1wFBVV95cUxPUENlTEs4T1lPNFZ4djVqMUVmNT",
    "informe": "data/informes/precio_mmo/2026-10-31-2339.md",
    "pausado": false,
@@ -3583,7 +3639,7 @@
      "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
      "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
     ],
-    "ultimoChequeo": "2026-11-01T02:39:54.941Z",
+    "ultimoChequeo": "2026-11-01T05:37:53.235Z",
     "semana": [
      {
       "titulo": "Casas prefabricadas: cu&#225;nto cuestan las de 40, 60 y 80 m2",
@@ -7312,7 +7368,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 56,
+   "corridas": 57,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7321,13 +7377,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-01T05:07:56.060Z",
+   "ultimaCorrida": "2026-11-01T05:37:53.235Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-10-31",
-    "ultimoChequeo": "2026-11-01T05:07:56.060Z"
+    "ultimoChequeo": "2026-11-01T05:37:53.235Z"
    }
   },
   "feriados": {
@@ -7473,6 +7529,26 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-01T05:37:53.235Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-01T05:37:53.235Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-01T05:37:53.235Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-01T05:37:53.235Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-11-01T05:07:56.060Z",
    "quien": "Clima para la obra",
@@ -8952,26 +9028,6 @@
    "t": "2026-10-31T01:28:55.205Z",
    "quien": "Terrenos baratos",
    "que": "empezó su tarea"
-  },
-  {
-   "t": "2026-10-31T01:28:55.205Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-10-31T01:28:55.205Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-10-31T00:59:55.083Z",
-   "quien": "Terrenos baratos",
-   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.8-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-  },
-  {
-   "t": "2026-10-31T00:59:55.083Z",
-   "quien": "Terrenos baratos",
-   "que": "empezó su tarea"
   }
  ],
  "pendientes": [],
@@ -9143,7 +9199,9 @@
   "272": "vencimientos",
   "273": "tarifas",
   "274": "clima",
-  "275": "clima"
+  "275": "clima",
+  "276": "vencimientos",
+  "277": "tarifas"
  },
  "tgOffset": 196508501,
  "hechos": {
@@ -9163,7 +9221,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-01T05:07:56.060Z",
+ "actualizado": "2026-11-01T05:37:53.235Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
