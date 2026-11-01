@@ -2758,7 +2758,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-10-31",
    "ultimaCorrida": "2026-10-31T23:31:37.543Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 1348 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 1373 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -8868,8 +8868,8 @@
    }
   },
   "editor": {
-   "estado": "esperando",
-   "corridas": 0,
+   "estado": "listo",
+   "corridas": 1,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -8877,16 +8877,19 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": null,
-   "ultimaCorrida": null,
-   "resumen": "",
-   "informe": null,
+   "ultimaFecha": "2026-11-01",
+   "ultimaCorrida": "2026-11-01T22:24:24.520Z",
+   "resumen": "📰 Lo más importante de la semana · 01/11\n\n🏙️ Villa María\n• ¡Alerta por tormentas y granizo en Córdoba! El calor llega a los 30°C y advierten por inestabilidad este viernes (Vía País)\n  https://news.google.com/rss/artic",
+   "informe": "data/informes/editor/2026-11-01-1924.md",
    "pausado": false,
    "memoria": {
     "horas": {
      "fecha": "2026-11-01",
-     "hechas": []
-    }
+     "hechas": [
+      "19:00"
+     ]
+    },
+    "ultimoChequeo": "2026-11-01T22:24:24.520Z"
    }
   },
   "lista_gringo": {
@@ -9119,6 +9122,21 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-01T22:24:24.520Z",
+   "quien": "Editor de la semana",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-01T22:24:24.520Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-01T22:24:24.520Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-11-01T21:59:53.539Z",
    "quien": "Mesa de entrada",
@@ -10603,21 +10621,6 @@
    "t": "2026-10-31T12:41:52.772Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-10-31T12:11:54.235Z",
-   "quien": "Lo último en tecnología",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-31T12:11:54.235Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-10-31T12:11:54.235Z",
-   "quien": "Mundo: tecnología",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
@@ -10837,7 +10840,9 @@
   "321": "tarifas",
   "322": "comidas",
   "323": "noticias_tec",
-  "324": "noticias_tec"
+  "324": "noticias_tec",
+  "325": "editor",
+  "326": "editor"
  },
  "tgOffset": 196508501,
  "hechos": {
@@ -10858,7 +10863,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-01T21:59:53.539Z",
+ "actualizado": "2026-11-01T22:24:24.520Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
