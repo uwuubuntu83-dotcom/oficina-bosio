@@ -1329,6 +1329,7 @@ Reglas: no repitas como loro lo que dijo; no recomiendes herramientas pagas ni s
   if (respuesta) await enviar(respuesta);
   for (const a of acciones) {
     try {
+      if (a.tipo === "comando" && /celu\s+(reinici|pausa|par[aá])/i.test(String(a.texto)) && !/(reinici|paus|par[aá])/i.test(p.orden)) { log("Gerente general", "no reinicio ni pauso el celu sin que vos lo pidas"); continue; }
       if (a.tipo === "comando" && a.texto) await atender({ update_id: null, web: true, interno: true, message: { chat: { id: est.dueno, type: "private" }, text: String(a.texto).slice(0, 1500) } });
       else if (a.tipo === "bot") { const b = botPorId(a.id); if (!b) continue; if (b.equipo === "dev") await equipoDesarrollo(a.orden || p.orden); else if (b.id === "celular_bot") await ordenCelu(a.orden || p.orden); else if (b.tipo === "codigo" && b.receta && b.receta.registro) await registrarLote(a.orden || p.orden, b); else if (b.tipo !== "externo") await trabajar(b, { orden: b.tipo === "codigo" ? "" : (a.orden || p.orden), origen: "orden" }); }
     } catch (e) { if (e.cupo) throw e; log("Gerente general", "no pude hacer una acción: " + e.message); await enviar("⚠️ Quise hacerlo pero falló: " + e.message); }
