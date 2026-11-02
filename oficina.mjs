@@ -979,6 +979,7 @@ const AYUDA = () => `Soy el Gerente general de la ${CFG.oficina}. Escribime:
 • eliminar ID (o despedir ID) — lo saco de la oficina.
 • horario ID 09:00 lun,jue — le cambio el horario.
 • app: lo que necesitás — el equipo de desarrollo te programa una app y te pasa el link (ej: «app: calculadora de ladrillos por m²»). «app arreglar NOMBRE: …» la mejora. «apps» las lista.
+• video: tema — arma un video vertical solo (guion, clips, voz argentina, subtítulos y música) y te lo manda. Con «video: tema, usá el guion» usa lo último del guionista.
 • programador: lo que hay que arreglar o mejorar de la oficina — OpenHands lo programa y te deja una propuesta. «propuestas» las lista · «aprobar N» la aplica · «descartar N» la tira.
 • celu ... — órdenes al celu bot: «celu programa de hoy», «celu subí una historia», «celu pausa», «celu seguí», «celu reiniciar», «celu informe», «celu» (cómo anda).
 • Respondé un informe con 👍, 👎 o un comentario: ese bot se entrena con eso esa noche.
@@ -1164,6 +1165,13 @@ async function gh(metodo, ruta, cuerpo) {
 }
 async function ordenProgramador(txt) {
   let mm;
+  if ((mm = txt.match(/^\/?(?:video|reel|short|hac[eé](?:me)? un video)\s*(?:de|sobre)?\s*:?\s*([\s\S]{4,})/i)) && !/^\/?video\s*$/i.test(txt)) {
+    const tema = mm[1].trim().slice(0, 300); const u = leerPrivSeguro("ultimo_yt_guion", null); const guion = /us[aá] el guion|con el guion/i.test(tema) && u ? String(u.texto).slice(0, 3000) : "";
+    await gh("POST", "/actions/workflows/video.yml/dispatches", { ref: "main", inputs: { tema: tema.replace(/\s*(us[aá]|con) el guion.*/i, "") || tema, guion } });
+    log("Audiovisual", "pidió un video corto: " + tema.slice(0, 80));
+    await enviar(`🎬 Armando el video «${tema}»: guion, clips, voz argentina, subtítulos y música. Tarda 10 a 20 minutos y te llega acá.`);
+    return true;
+  }
   if ((mm = txt.match(/^\/?(?:programador|arregl[aá](?:\s+la)?\s+oficina|mejor[aá](?:\s+la)?\s+oficina)\s*:?\s*([\s\S]{5,})/i))) {
     await gh("POST", "/actions/workflows/programador.yml/dispatches", { ref: "main", inputs: { pedido: mm[1].trim().slice(0, 2000) } });
     log("Programador", "recibió un pedido: " + mm[1].slice(0, 100));

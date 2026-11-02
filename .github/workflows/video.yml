@@ -1,0 +1,116 @@
+name: Videos cortos (MoneyPrinterTurbo)
+
+# Arma un video vertical solo: guion con IA (Groq), clips de Pexels, voz argentina, subtítulos y música.
+# Te lo manda por Telegram. Desde la oficina: «video: cómo elegir un buen terreno en Villa María».
+on:
+  workflow_dispatch:
+    inputs:
+      tema:
+        description: "Tema del video"
+        required: true
+      guion:
+        description: "Guion ya escrito (opcional; si está, no lo inventa la IA)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: video
+  cancel-in-progress: false
+
+jobs:
+  video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Revisar claves
+        env:
+          PEXELS: ${{ secrets.PEXELS_API_KEY }}
+          GROQ: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          [ -n "$PEXELS" ] || { echo "falta=pexels" >> $GITHUB_ENV; echo "::error::Falta el secreto PEXELS_API_KEY (gratis en pexels.com/api)"; }
+          [ -n "$GROQ" ] || { echo "falta=groq" >> $GITHUB_ENV; echo "::error::Falta GROQ_API_KEY"; }
+
+      - name: Bajar MoneyPrinterTurbo v1.3.9
+        if: env.falta == ''
+        run: |
+          git clone -q --depth 1 --branch v1.3.9 https://github.com/harry0703/MoneyPrinterTurbo /tmp/mpt
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg imagemagick fonts-dejavu >/dev/null
+
+      - uses: astral-sh/setup-uv@v6
+        if: env.falta == ''
+
+      - name: Instalar
+        if: env.falta == ''
+        working-directory: /tmp/mpt
+        run: uv sync --frozen -q || uv sync -q
+
+      - name: Configurar (las claves quedan solo en esta máquina temporal)
+        if: env.falta == ''
+        working-directory: /tmp/mpt
+        env:
+          PEXELS: ${{ secrets.PEXELS_API_KEY }}
+          GROQ: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          python3 - <<'EOF'
+          import os, re
+          s = open("config.example.toml", encoding="utf-8").read()
+          def put(k, v):
+              global s
+              s = re.sub(rf'(?m)^{k}\s*=.*$', f'{k} = {v}', s, count=1)
+          put("llm_provider", '"groq"')
+          put("groq_api_key", '"%s"' % os.environ["GROQ"])
+          put("groq_model_name", '"openai/gpt-oss-120b"')
+          put("pexels_api_keys", '["%s"]' % os.environ["PEXELS"])
+          put("video_source", '"pexels"')
+          put("subtitle_provider", '"edge"')
+          open("config.toml", "w", encoding="utf-8").write(s)
+          EOF
+
+      - name: Hacer el video
+        if: env.falta == ''
+        working-directory: /tmp/mpt
+        env:
+          TEMA: ${{ github.event.inputs.tema }}
+          GUION: ${{ github.event.inputs.guion }}
+        run: |
+          ARGS=(--video-subject "$TEMA" --video-language es-AR --voice-name "es-AR-TomasNeural-Male" --video-aspect portrait --paragraph-number 1 --video-count 1
+                --video-script-prompt "Escribí en español rioplatense (Argentina), con voseo, tono cercano y directo, para un video corto de 30 a 50 segundos. Arrancá con un gancho fuerte en la primera frase.")
+          [ -n "$GUION" ] && ARGS+=(--video-script "$GUION")
+          uv run python cli.py "${ARGS[@]}" > /tmp/resultado.json
+          cat /tmp/resultado.json | head -c 1500
+          F=$(ls -t storage/tasks/*/final-*.mp4 2>/dev/null | head -1)
+          [ -n "$F" ] && cp "$F" /tmp/video.mp4 && ls -la /tmp/video.mp4
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: video
+          path: /tmp/video.mp4
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Mandar por Telegram
+        if: always()
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TEMA: ${{ github.event.inputs.tema }}
+        run: |
+          DUENO=$(node -e 'try{console.log(require(process.cwd()+"/data/estado.json").dueno||"")}catch{console.log("")}')
+          [ -n "$TELEGRAM_TOKEN" ] && [ -n "$DUENO" ] || exit 0
+          RUN="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          if [ "$falta" = "pexels" ]; then
+            MSG="🎬 Para hacer videos me falta una clave gratis de Pexels (los clips). Sacala en pexels.com/api y cargala en GitHub como secreto PEXELS_API_KEY."
+            curl -s -o /dev/null "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" --data-urlencode "chat_id=${DUENO}" --data-urlencode "text=${MSG}"; exit 0
+          fi
+          if [ -f /tmp/video.mp4 ] && [ $(stat -c%s /tmp/video.mp4) -lt 49000000 ]; then
+            curl -s -o /dev/null -F chat_id="$DUENO" -F video=@/tmp/video.mp4 -F supports_streaming=true -F caption="🎬 Video listo: ${TEMA}. Revisalo antes de subirlo." "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendVideo"
+          elif [ -f /tmp/video.mp4 ]; then
+            curl -s -o /dev/null "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" --data-urlencode "chat_id=${DUENO}" --data-urlencode "text=🎬 El video de «${TEMA}» quedó muy pesado para Telegram. Bajalo de acá (Artifacts → video): ${RUN}"
+          else
+            curl -s -o /dev/null "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" --data-urlencode "chat_id=${DUENO}" --data-urlencode "text=⚠️ No pude armar el video de «${TEMA}». Detalle: ${RUN}"
+          fi
