@@ -10854,6 +10854,31 @@
  },
  "log": [
   {
+   "t": "2026-11-02T15:46:55.015Z",
+   "quien": "Gerente general",
+   "que": "respondió y movió celular_bot"
+  },
+  {
+   "t": "2026-11-02T15:46:55.015Z",
+   "quien": "Redes sociales",
+   "que": "le pasó una orden al celu bot"
+  },
+  {
+   "t": "2026-11-02T15:46:55.015Z",
+   "quien": "Jonathan",
+   "que": "mandó una orden por Telegram"
+  },
+  {
+   "t": "2026-11-02T15:46:55.015Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 mensajes de Telegram"
+  },
+  {
+   "t": "2026-11-02T15:46:55.015Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
+  {
    "t": "2026-11-02T15:45:53.362Z",
    "quien": "Gerente general",
    "que": "respondió"
@@ -12327,31 +12352,6 @@
    "t": "2026-11-01T05:37:53.235Z",
    "quien": "Vencimientos e impuestos",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-01T05:37:53.235Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-01T05:37:53.235Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-01T05:07:56.060Z",
-   "quien": "Clima para la obra",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-01T05:07:56.060Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-01T05:07:56.060Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
   }
  ],
  "pendientes": [],
@@ -12629,7 +12629,7 @@
   "421": "tarifas",
   "422": "clima"
  },
- "tgOffset": 196508511,
+ "tgOffset": 196508512,
  "hechos": {
   "parte": "2026-11-01",
   "entrenamiento": "2026-11-01",
@@ -12640,7 +12640,7 @@
  },
  "consumo": {
   "fecha": "2026-11-02",
-  "consultas": 45,
+  "consultas": 49,
   "busquedas": 0,
   "por": {
    "gemini": 18,
@@ -12651,12 +12651,12 @@
    "cfai": 4,
    "github": 2,
    "sambanova": 3,
-   "nvidia": 6,
-   "cohere": 2
+   "nvidia": 9,
+   "cohere": 3
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-02T15:45:53.362Z",
+ "actualizado": "2026-11-02T15:46:55.015Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -12695,16 +12695,17 @@
    "sambanova:Meta-Llama-3.3-70B-Instruct": 1793624788872,
    "sambanova:DeepSeek-V3.1": 1793624791625,
    "sambanova:gpt-oss-120b": 1793624793788,
-   "nvidia:deepseek-ai/deepseek-v4.1-flash": 1793628899495,
-   "nvidia:z-ai/glm-5.3-flash": 1793629019497,
+   "nvidia:deepseek-ai/deepseek-v4.1-flash": 1793635136559,
+   "nvidia:z-ai/glm-5.3-flash": 1793635256561,
    "nvidia:moonshotai/kimi-k2.6": true,
-   "nvidia:mistralai/mistral-large": true
+   "nvidia:mistralai/mistral-large": true,
+   "nvidia:meta/llama-3.3-70b-instruct": true
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
   "ultimo": {
-   "prov": "GitHub Models",
-   "modelo": "openai/gpt-4.1-mini",
-   "t": "2026-11-02T15:45:53.362Z"
+   "prov": "Cohere",
+   "modelo": "command-a-03-2025",
+   "t": "2026-11-02T15:46:55.015Z"
   },
   "vivos": {
    "zai": {
