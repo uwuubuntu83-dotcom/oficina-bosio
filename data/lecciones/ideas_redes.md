@@ -1,8 +1,8 @@
-- **Usa solo Reels con audios en tendencia**, vinculándolos a situaciones locales de Córdoba.
-- **Gancho en 3 segundos**: visual o auditivo impactante, sin excepciones.
-- **Muestra Córdoba siempre**: cerro, centro, Av. del Libertador, comida y clima en cada sketch.
-- **Texto corto y pregunta directa**: evita párrafos largos y aburridos.
-- **Autenticidad ante todo**: no te tomes en serio, muestra vulnerabilidad.
-- **Responde comentarios al instante** para activar el algoritmo.
-- **Evita audios genéricos**: asegúrate de que el sonido tenga contexto local.
-- **Horario clave**: publica entre las 19:00 y 21:00, cuando tu audiencia está más activa.
+- Publica solo Reels; las fotos estáticas no llegan orgánicamente hoy.
+- Usa audios en tendencia, pero adapta el visual a tu humor y a la cultura cordobesa.
+- Coloca un gancho visual o auditivo fuerte en los primeros 3 segundos, sin excepciones.
+- Muestra lugares icónicos de Córdoba (Cerro, Centro, Av. del Libertador) y su comida, clima y vida cotidiana.
+- Escribe textos cortos y pregunta directa; evita párrafos aburridos.
+- Sé auténtico y vulnerable; la falta de perfección vende más que la perfección.
+- Responde comentarios al instante para activar el algoritmo.
+- Evita audios genéricos sin contexto; vincula siempre el sonido a una situación local y sugiere audios en tendencia o estilos de música recomendados para maximizar alcance.
