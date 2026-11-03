@@ -3571,7 +3571,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-03",
    "ultimaCorrida": "2026-11-03T08:59:19.171Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 43 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 63 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -11941,7 +11941,7 @@
   },
   "jefe_obra": {
    "estado": "listo",
-   "corridas": 2,
+   "corridas": 3,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -11949,17 +11949,19 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-02",
-   "ultimaCorrida": "2026-11-02T09:52:55.553Z",
-   "resumen": "🧱 Jefe de obra · lunes 02/11\n🟢 Día apto para trabajar afuera (16° a 28°).\n   Mañana: 17° a 23° · lluvia 92% (30.7 mm) · viento 16 km/h.\n📋 Licitaciones y concursos de obra en los últimos 7 días: 46\n   • La Municipalida",
-   "informe": "data/informes/jefe_obra/2026-11-02-0652.md",
+   "ultimaFecha": "2026-11-03",
+   "ultimaCorrida": "2026-11-03T10:01:58.611Z",
+   "resumen": "🧱 Jefe de obra · martes 03/11\n🟡 Se puede trabajar, pero ojo entre las 07–17 h (lluvia o viento). Programá hormigón y pintura exterior fuera de ese horario.\n   Mañana: 14° a 23° · lluvia 18% (0 mm) · viento 30 km/h.\n📋 ",
+   "informe": "data/informes/jefe_obra/2026-11-03-0701.md",
    "pausado": false,
    "memoria": {
     "horas": {
      "fecha": "2026-11-03",
-     "hechas": []
+     "hechas": [
+      "06:50"
+     ]
     },
-    "ultimoChequeo": "2026-11-02T09:52:55.553Z"
+    "ultimoChequeo": "2026-11-03T10:01:58.611Z"
    }
   },
   "editor": {
@@ -12242,6 +12244,21 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-03T10:01:58.611Z",
+   "quien": "Jefe de obra",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-03T10:01:58.611Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-03T10:01:58.611Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-11-03T09:41:57.065Z",
    "quien": "Clientes y licitaciones",
@@ -13726,21 +13743,6 @@
    "t": "2026-11-02T00:52:54.880Z",
    "quien": "Clima para la obra",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-02T00:52:54.880Z",
-   "quien": "Clientes y licitaciones",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-02T00:52:54.880Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-02T00:52:54.880Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
   }
  ],
  "pendientes": [],
@@ -14069,7 +14071,8 @@
   "512": "tarifas",
   "514": "clima",
   "515": "tarifas",
-  "517": "licitaciones"
+  "517": "licitaciones",
+  "518": "jefe_obra"
  },
  "tgOffset": 196508514,
  "hechos": {
@@ -14090,7 +14093,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-03T09:41:57.065Z",
+ "actualizado": "2026-11-03T10:01:58.611Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
