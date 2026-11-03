@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 197,
+   "corridas": 198,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-03",
-   "ultimaCorrida": "2026-11-03T22:14:58.567Z",
+   "ultimaCorrida": "2026-11-03T22:44:54.690Z",
    "resumen": "💵 Dólar hoy (10:59 hs)\n• Oficial: compra $1515 · venta $1565\n• Blue: compra $1545 · venta $1565\n• Bolsa: compra $1556.2 · venta $1579.9\n• Contado con liquidación: compra $1663.2 · venta $1670\n• Mayorista: compra $1536.5",
    "informe": "data/informes/dolar/2026-11-03-1059.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1652.7,
      "tarjeta": 2034.5
     },
-    "ultimoChequeo": "2026-11-03T22:14:58.567Z",
+    "ultimoChequeo": "2026-11-03T22:44:54.690Z",
     "resumenFecha": "2026-11-03",
     "hist": {
      "2026-10-30": {
@@ -3821,7 +3821,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "sin señal",
+   "estado": "listo",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -3831,32 +3831,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-03",
-   "ultimaCorrida": "2026-11-03T17:11:15.632Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 304 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "ultimaCorrida": "2026-11-03T22:41:30.982Z",
+   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": false,
    "memoria": {
     "celu": {
-     "t": 1793725875632,
+     "t": 1793745690982,
      "redes_hoy": {
       "publicaciones": 3,
       "historias": 12,
       "reels": 11,
       "seguidos": 30,
       "gringo": 0,
-      "errores": 1,
-      "reinicios": 5,
+      "errores": 69,
+      "reinicios": 212,
       "ultimas": [
-       "13:52 Memes: reel descargado (9224 KB)",
-       "13:52 Memes: descripción lista (5 hashtags)",
-       "13:54 Memes: no encontré el '+'. Subo el video por el menú Compartir (plan B).",
-       "13:56 ✔ Memes: reel descargado y resubido en @soycordobes.jpg",
-       "13:56 Memes: video borrado del celular (ya estaba subido)",
-       "13:58 Instagram: ahora en @maestromayordeobrasjb",
-       "14:00 ✔ Historia compartida (avioncito)",
-       "14:01 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
-       "14:01 Instagram: ahora en @maestromayordeobrasjb",
-       "14:03 Instagram: ahora en @soycordobes.jpg"
+       "19:28 Conectado por cable USB (emulator-5554)",
+       "19:28 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "19:34 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "19:35 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
+       "19:35 No leo en qué cuenta está Instagram (intento 3/3). Reinicio Instagram.",
+       "19:36 Guardado debug/pantalla_193640.png y .xml",
+       "19:36 Error en obra_historia: No quedó en la cuenta maestromayordeobrasjb (está en desconocida)",
+       "19:36 Guardado debug/pantalla_193641.png y .xml",
+       "19:36 Conectado por cable USB (emulator-5554)",
+       "19:36 Celular conectado: SM-A515F | pantalla 1080x2400"
       ]
      }
     },
@@ -3931,19 +3931,19 @@
       "reels": 11,
       "seguidos": 30,
       "gringo": 0,
-      "errores": 1,
-      "reinicios": 5,
+      "errores": 69,
+      "reinicios": 212,
       "ultimas": [
-       "13:52 Memes: reel descargado (9224 KB)",
-       "13:52 Memes: descripción lista (5 hashtags)",
-       "13:54 Memes: no encontré el '+'. Subo el video por el menú Compartir (plan B).",
-       "13:56 ✔ Memes: reel descargado y resubido en @soycordobes.jpg",
-       "13:56 Memes: video borrado del celular (ya estaba subido)",
-       "13:58 Instagram: ahora en @maestromayordeobrasjb",
-       "14:00 ✔ Historia compartida (avioncito)",
-       "14:01 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
-       "14:01 Instagram: ahora en @maestromayordeobrasjb",
-       "14:03 Instagram: ahora en @soycordobes.jpg"
+       "19:28 Conectado por cable USB (emulator-5554)",
+       "19:28 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "19:34 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "19:35 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
+       "19:35 No leo en qué cuenta está Instagram (intento 3/3). Reinicio Instagram.",
+       "19:36 Guardado debug/pantalla_193640.png y .xml",
+       "19:36 Error en obra_historia: No quedó en la cuenta maestromayordeobrasjb (está en desconocida)",
+       "19:36 Guardado debug/pantalla_193641.png y .xml",
+       "19:36 Conectado por cable USB (emulator-5554)",
+       "19:36 Celular conectado: SM-A515F | pantalla 1080x2400"
       ]
      }
     }
@@ -6247,7 +6247,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 197,
+   "corridas": 198,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -6256,7 +6256,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-03T22:14:58.567Z",
+   "ultimaCorrida": "2026-11-03T22:44:54.690Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -6266,7 +6266,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-03T22:14:58.567Z",
+    "ultimoChequeo": "2026-11-03T22:44:54.690Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -6327,16 +6327,16 @@
      },
      "2026-11-03": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       38,
-       38
+       39,
+       39
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       38,
-       38
+       39,
+       39
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       38,
-       38
+       39,
+       39
       ]
      }
     }
@@ -13080,7 +13080,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 179,
+   "corridas": 180,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -13089,13 +13089,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-03T22:14:58.567Z",
+   "ultimaCorrida": "2026-11-03T22:44:54.690Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-03",
-    "ultimoChequeo": "2026-11-03T22:14:58.567Z"
+    "ultimoChequeo": "2026-11-03T22:44:54.690Z"
    }
   },
   "feriados": {
@@ -13260,6 +13260,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-03T22:44:54.690Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-03T22:44:54.690Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-11-03T22:14:58.567Z",
    "quien": "Mesa de entrada",
@@ -14749,16 +14759,6 @@
    "t": "2026-11-02T12:53:54.931Z",
    "quien": "Mesa de entrada",
    "que": "entendió un audio (no se guarda)"
-  },
-  {
-   "t": "2026-11-02T12:53:54.931Z",
-   "quien": "Jonathan",
-   "que": "mandó una orden por Telegram"
-  },
-  {
-   "t": "2026-11-02T12:53:54.931Z",
-   "quien": "Mesa de entrada",
-   "que": "entendió un audio (no se guarda)"
   }
  ],
  "pendientes": [],
@@ -15154,7 +15154,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-03T22:14:58.567Z",
+ "actualizado": "2026-11-03T22:44:54.690Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
