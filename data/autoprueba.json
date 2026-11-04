@@ -1,20 +1,20 @@
 {
- "t": "2026-11-04T04:29:38.053Z",
+ "t": "2026-11-04T04:56:53.858Z",
  "texto": [
   {
    "prov": "Google Gemini",
    "id": "gemini",
-   "ok": false,
-   "modelo": "gemini-4-argon",
-   "ms": 4528,
-   "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
+   "ok": true,
+   "modelo": "gemini-3.7-flash",
+   "ms": 95023,
+   "error": ""
   },
   {
    "prov": "GitHub Models",
    "id": "github",
    "ok": true,
    "modelo": "openai/gpt-4.1-mini",
-   "ms": 203,
+   "ms": 20,
    "error": ""
   },
   {
@@ -22,7 +22,7 @@
    "id": "groq",
    "ok": true,
    "modelo": "openai/gpt-oss-120b",
-   "ms": 267,
+   "ms": 225,
    "error": ""
   },
   {
@@ -30,7 +30,7 @@
    "id": "openrouter",
    "ok": true,
    "modelo": "nvidia/nemotron-3.5-super-vl:free",
-   "ms": 3020,
+   "ms": 3003,
    "error": ""
   },
   {
@@ -38,7 +38,7 @@
    "id": "cerebras",
    "ok": false,
    "modelo": "zai-glm-4.7",
-   "ms": 2498,
+   "ms": 2512,
    "error": "404 Model zai-glm-4.7 is archived and unavailable for the organization."
   },
   {
@@ -46,7 +46,7 @@
    "id": "sambanova",
    "ok": false,
    "modelo": "DeepSeek-V3.1",
-   "ms": 2480,
+   "ms": 2481,
    "error": "410 The requested model (DeepSeek-V3.1) is not available on SambaNova Cloud. For more information, please visit https://docs.sambanova.ai/cloud/"
   },
   {
@@ -54,7 +54,7 @@
    "id": "nvidia",
    "ok": false,
    "modelo": "moonshotai/kimi-k2.6",
-   "ms": 104,
+   "ms": 48,
    "error": "404 404"
   },
   {
@@ -62,7 +62,7 @@
    "id": "cohere",
    "ok": true,
    "modelo": "command-a-03-2025",
-   "ms": 5580,
+   "ms": 300,
    "error": ""
   },
   {
@@ -70,7 +70,7 @@
    "id": "huggingface",
    "ok": false,
    "modelo": "Qwen/Qwen3-32B",
-   "ms": 2501,
+   "ms": 2505,
    "error": "402 Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get monthly included credits."
   },
   {
@@ -78,7 +78,7 @@
    "id": "zai",
    "ok": true,
    "modelo": "glm-4.5-flash",
-   "ms": 1413,
+   "ms": 14783,
    "error": ""
   },
   {
@@ -86,7 +86,7 @@
    "id": "llm7",
    "ok": true,
    "modelo": "gpt-oss:20b",
-   "ms": 1529,
+   "ms": 862,
    "error": ""
   },
   {
@@ -94,7 +94,7 @@
    "id": "upstage",
    "ok": true,
    "modelo": "solar-pro4",
-   "ms": 718,
+   "ms": 858,
    "error": ""
   },
   {
@@ -102,7 +102,7 @@
    "id": "pollinations",
    "ok": true,
    "modelo": "openai",
-   "ms": 477,
+   "ms": 336,
    "error": ""
   },
   {
@@ -110,7 +110,7 @@
    "id": "cfai",
    "ok": false,
    "modelo": "@cf/mistralai/mistral-small-3.1-24b-instruct",
-   "ms": 2552,
+   "ms": 2501,
    "error": "429 4006: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to c"
   }
  ],
@@ -139,7 +139,7 @@
    "ok": true,
    "modelo": "nvidia/nemotron-3.5-super-vl:free",
    "error": "",
-   "dijo": "Un gráfico de dona con una sección roja grande y una sección azul pequeña sobre "
+   "dijo": "A donut chart with red and blue segments on a black background."
   },
   {
    "prov": "SambaNova",
@@ -152,7 +152,7 @@
    "ok": true,
    "modelo": "meta/llama-3.2-90b-vision-instruct",
    "error": "",
-   "dijo": "Una imagen de un gráfico circular que muestra dos secciones, una azul y otra roj"
+   "dijo": "La imagen muestra un gráfico de dona con tres secciones. La sección más grande, "
   },
   {
    "prov": "Hugging Face",
@@ -167,7 +167,11 @@
   "acciones": [
    {
     "tipo": "comando",
-    "texto": "registrar_gasto_nafta 5000"
+    "texto": "registrar_gasto 5000 nafta"
+   },
+   {
+    "tipo": "comando",
+    "texto": "generar_reporte_presupuesto"
    }
   ]
  },
@@ -178,12 +182,7 @@
   {
    "prov": "NVIDIA FLUX Kontext",
    "ok": false,
-   "error": "NVIDIA: 422 {\"detail\":\"Image has been provided in the invalid form\"}"
-  },
-  {
-   "prov": "Gemini imagen",
-   "ok": false,
-   "error": "Gemini: gemini-2.5-flash-image: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to | gemini-3-pro-image-preview: 429 You exceeded your current quota, please check your plan and billing details. For more information on this err"
+   "error": "This operation was aborted"
   }
  ]
 }
