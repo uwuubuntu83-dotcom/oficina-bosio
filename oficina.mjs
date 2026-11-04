@@ -1371,11 +1371,54 @@ async function autoprueba() {
   try { const r = await ia(`Sos el Gerente de una oficina. El jefe escribió: "anotame 5000 de nafta y decime cómo vengo". Respondé SOLO JSON {"respuesta":"...","acciones":[{"tipo":"comando","texto":"..."}]}`, { json: true }); const j = parsearJSON(r.texto); res.gerente = { ok: !!(j && j.respuesta), modelo: r.modelo, acciones: j && j.acciones }; } catch (e) { res.gerente = { ok: false, error: e.message }; }
   // audios: que Groq tenga Whisper
   try { const k = claves("GROQ_API_KEY")[0]; if (k) { const r = await traer("https://api.groq.com/openai/v1/models", { headers: { authorization: "Bearer " + k } }); const j = await r.json(); res.audio = { ok: (j.data || []).some(m => /whisper/.test(m.id)) }; } else res.audio = { ok: false, error: "sin clave de Groq" }; } catch (e) { res.audio = { ok: false, error: e.message }; }
+  if (fs.existsSync(path.join(ROOT, "pruebas", "render.txt"))) { try { res.render = await pruebaRender(); } catch (e) { res.render = [{ ok: false, error: e.message }]; } }
   escribir(path.join(DATA, "autoprueba.json"), res);
   const okT = res.texto.filter(x => x.ok).length, okF = res.fotos.filter(x => x.ok).length;
   const msg = `🧪 Autoprueba con las IA reales\n💬 Texto: ${okT}/${res.texto.length} andan\n${res.texto.map(x => `${x.ok ? "✅" : "❌"} ${x.prov}${x.ok ? ` (${(x.ms / 1000).toFixed(1)} s)` : " — " + x.error.slice(0, 60)}`).join("\n")}\n\n📸 Fotos: ${okF}/${res.fotos.length} andan\n${res.fotos.map(x => `${x.ok ? "✅" : "❌"} ${x.prov}${x.ok ? "" : " — " + x.error.slice(0, 60)}`).join("\n")}\n\n🎯 Gerente: ${res.gerente && res.gerente.ok ? "✅ " + res.gerente.modelo : "❌ " + (res.gerente && res.gerente.error || "no devolvió respuesta")}\n🎤 Audios: ${res.audio && res.audio.ok ? "✅" : "❌ " + (res.audio && res.audio.error || "Groq sin Whisper")}`;
   log("Gerente general", `autoprueba: ${okT}/${res.texto.length} IA de texto y ${okF}/${res.fotos.length} de fotos andan`);
   await enviar(msg);
+}
+/* ---------- 🏠 RENDER DE PLANOS: plano 2D → render 3D isométrico (IA de imágenes con tus claves) ---------- */
+const PROMPT_RENDER = "Transform this 2D architectural floor plan into an ultra-detailed 3D architectural floor plan render. Keep EXACTLY the same walls, rooms, doors, windows and proportions of the uploaded plan. Isometric top-down 3D cutaway view, modern luxury residence, realistic interior visualization with furniture in every room (sofas, dining table, kitchen island, beds, bathroom fixtures), cinematic ambient lighting, warm wood floors, premium contemporary furniture, soft glowing LED strip lights, photorealistic, octane render, vray style, high detail, 8K quality, professional architectural visualization.";
+async function renderNvidia(img, extra = "") {
+  const k = claves("NVIDIA_API_KEY")[0]; if (!k) throw new Error("falta NVIDIA_API_KEY");
+  const url = (ENV.NVIDIA_IMG_BASE || "https://ai.api.nvidia.com/v1/genai") + "/black-forest-labs/flux.1-kontext-dev";
+  let ultimo = "";
+  for (const imagen of [`data:${img.mime};base64,${img.b64}`, img.b64]) {
+    const r = await traer(url, { method: "POST", headers: { authorization: "Bearer " + k, "content-type": "application/json", accept: "application/json" }, body: JSON.stringify({ prompt: PROMPT_RENDER + (extra ? " " + extra : ""), image: imagen, aspect_ratio: "match_input_image", steps: 30, cfg_scale: 3.5, seed: 0 }) }, 180000);
+    const t = await r.text(); let j = {}; try { j = JSON.parse(t); } catch {}
+    const b64 = (j.artifacts && j.artifacts[0] && j.artifacts[0].base64) || j.b64_json || j.image;
+    if (r.ok && b64) { usar("nvidia"); return Buffer.from(String(b64).replace(/^data:image\/\w+;base64,/, ""), "base64"); }
+    ultimo = `${r.status} ${t.slice(0, 200)}`;
+    if (r.status === 401 || r.status === 403 || r.status === 404 || r.status === 429) break;
+  }
+  throw new Error("NVIDIA: " + ultimo);
+}
+async function renderGemini(img, extra = "") {
+  const errores = [];
+  for (const p of PROV.filter(p => p.tipo === "gemini")) {
+    let ms = [];
+    try { const j = await (await traer(`${URLS.gemini}/models?pageSize=200&key=${encodeURIComponent(p.key)}`)).json(); ms = (j.models || []).map(m => m.name.replace(/^models\//, "")).filter(n => /image/.test(n) && !/imagen|embed/.test(n)); } catch {}
+    for (const modelo of ms.slice(0, 3)) {
+      const body = { contents: [{ role: "user", parts: [{ text: PROMPT_RENDER + (extra ? " " + extra : "") }, { inline_data: { mime_type: img.mime, data: img.b64 } }] }], generationConfig: { responseModalities: ["IMAGE", "TEXT"] } };
+      const r = await traer(`${URLS.gemini}/models/${modelo}:generateContent?key=${encodeURIComponent(p.key)}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }, 180000);
+      const j = await r.json().catch(() => ({})); const part = (((j.candidates || [])[0] || {}).content || {}).parts || [];
+      const d = part.find(x => x.inline_data || x.inlineData); if (r.ok && d) { usar(p.id); return Buffer.from((d.inline_data || d.inlineData).data, "base64"); }
+      errores.push(`${modelo}: ${r.status} ${((j.error || {}).message || "").slice(0, 120)}`);
+    }
+  }
+  throw new Error("Gemini: " + (errores.join(" | ") || "tu clave no tiene modelos de imagen"));
+}
+const RENDERERS = [["NVIDIA FLUX Kontext", renderNvidia], ["Gemini imagen", renderGemini]];
+async function pruebaRender() {
+  const f = path.join(ROOT, "pruebas", "plano_prueba.png"); if (!fs.existsSync(f)) return null;
+  const img = { mime: "image/png", b64: fs.readFileSync(f).toString("base64") }; const out = [];
+  for (const [nombre, fn] of RENDERERS) {
+    const t0 = Date.now();
+    try { const png = await fn(img); const rel = `data/pruebas/render_${slug(nombre)}.png`; fs.mkdirSync(path.join(DATA, "pruebas"), { recursive: true }); fs.writeFileSync(path.join(ROOT, rel), png); out.push({ prov: nombre, ok: true, archivo: rel, kb: Math.round(png.length / 1024), s: Math.round((Date.now() - t0) / 1000) }); }
+    catch (e) { out.push({ prov: nombre, ok: false, error: String(e.message).slice(0, 300) }); }
+  }
+  return out;
 }
 /* ---------- ☀️ Buen día (SIN IA): todo lo de hoy en un solo mensaje, a las 07:30 ---------- */
 async function buenDia() {

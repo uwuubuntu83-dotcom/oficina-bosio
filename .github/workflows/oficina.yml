@@ -10,7 +10,7 @@ on:
         required: false
         default: "auto"
   push:
-    paths: ["pruebas/pedido.txt"]   # autoprueba con las IA reales (las claves nunca salen de GitHub)
+    paths: ["pruebas/pedido.txt", "pruebas/render.txt"]   # autoprueba con las IA reales (las claves nunca salen de GitHub)
 
 permissions:
   contents: write
