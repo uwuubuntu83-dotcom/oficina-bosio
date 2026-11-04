@@ -3865,7 +3865,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-03",
    "ultimaCorrida": "2026-11-03T23:48:55.346Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 308 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 334 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -13672,6 +13672,21 @@
  },
  "log": [
   {
+   "t": "2026-11-04T05:23:10.805Z",
+   "quien": "Gerente general",
+   "que": "autoprueba: 8/14 IA de texto y 2/7 de fotos andan"
+  },
+  {
+   "t": "2026-11-04T05:23:10.805Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-04T05:23:10.805Z",
+   "quien": "Oficina",
+   "que": "abre (prueba) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
+  {
    "t": "2026-11-04T04:56:53.858Z",
    "quien": "Terrenos baratos",
    "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)"
@@ -15155,21 +15170,6 @@
    "t": "2026-11-02T15:46:55.015Z",
    "quien": "Mesa de entrada",
    "que": "llegaron 1 mensajes de Telegram"
-  },
-  {
-   "t": "2026-11-02T15:46:55.015Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-02T15:45:53.362Z",
-   "quien": "Gerente general",
-   "que": "respondió"
-  },
-  {
-   "t": "2026-11-02T15:45:53.362Z",
-   "quien": "Jonathan",
-   "que": "mandó una orden por Telegram"
   }
  ],
  "pendientes": [],
@@ -15581,27 +15581,27 @@
  },
  "consumo": {
   "fecha": "2026-11-04",
-  "consultas": 7,
+  "consultas": 17,
   "busquedas": 0,
   "por": {
-   "gemini": 12,
-   "github": 4,
-   "groq": 7,
-   "openrouter": 8,
-   "cerebras": 6,
-   "sambanova": 8,
-   "nvidia": 8,
-   "cohere": 2,
-   "huggingface": 11,
-   "zai": 4,
-   "llm7": 2,
-   "upstage": 2,
-   "pollinations": 2,
-   "cfai": 6
+   "gemini": 17,
+   "github": 6,
+   "groq": 10,
+   "openrouter": 12,
+   "cerebras": 12,
+   "sambanova": 15,
+   "nvidia": 16,
+   "cohere": 4,
+   "huggingface": 16,
+   "zai": 5,
+   "llm7": 3,
+   "upstage": 3,
+   "pollinations": 3,
+   "cfai": 9
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-04T04:56:53.858Z",
+ "actualizado": "2026-11-04T05:23:10.805Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -15631,7 +15631,16 @@
    "gemini:gemini-3.8-flash": 1793768931722,
    "gemini:gemini-3.7-flash": 1793768938228,
    "gemini:gemini-3.6-flash": 1793768944717,
-   "groq:groq/compound": true
+   "groq:groq/compound": true,
+   "cerebras:gpt-oss-120b": 1793856712921,
+   "cerebras:qwen-3.8-27b": 1793856715386,
+   "cerebras:zai-glm-4.7": true,
+   "sambanova:Meta-Llama-3.3-70B-Instruct": 1793770348318,
+   "sambanova:gpt-oss-120b": 1793770350592,
+   "sambanova:DeepSeek-V3.1": true,
+   "nvidia:deepseek-ai/deepseek-v4.1-flash": 1793771043073,
+   "nvidia:z-ai/glm-5.3-flash": 1793771163074,
+   "nvidia:moonshotai/kimi-k2.6": true
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
   "vivos": {
@@ -16398,9 +16407,9 @@
    }
   },
   "ultimo": {
-   "prov": "Z.ai (GLM)",
-   "modelo": "glm-4.5-flash",
-   "t": "2026-11-04T04:56:53.858Z"
+   "prov": "Cohere",
+   "modelo": "command-a-03-2025",
+   "t": "2026-11-04T05:23:10.805Z"
   }
  },
  "dueno": 1237559052,

@@ -1,20 +1,20 @@
 {
- "t": "2026-11-04T04:56:53.858Z",
+ "t": "2026-11-04T05:23:10.805Z",
  "texto": [
   {
    "prov": "Google Gemini",
    "id": "gemini",
-   "ok": true,
-   "modelo": "gemini-3.7-flash",
-   "ms": 95023,
-   "error": ""
+   "ok": false,
+   "modelo": "gemini-4-argon",
+   "ms": 6093,
+   "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google."
   },
   {
    "prov": "GitHub Models",
    "id": "github",
    "ok": true,
    "modelo": "openai/gpt-4.1-mini",
-   "ms": 20,
+   "ms": 112,
    "error": ""
   },
   {
@@ -22,7 +22,7 @@
    "id": "groq",
    "ok": true,
    "modelo": "openai/gpt-oss-120b",
-   "ms": 225,
+   "ms": 446,
    "error": ""
   },
   {
@@ -30,7 +30,7 @@
    "id": "openrouter",
    "ok": true,
    "modelo": "nvidia/nemotron-3.5-super-vl:free",
-   "ms": 3003,
+   "ms": 3351,
    "error": ""
   },
   {
@@ -38,7 +38,7 @@
    "id": "cerebras",
    "ok": false,
    "modelo": "zai-glm-4.7",
-   "ms": 2512,
+   "ms": 2501,
    "error": "404 Model zai-glm-4.7 is archived and unavailable for the organization."
   },
   {
@@ -54,7 +54,7 @@
    "id": "nvidia",
    "ok": false,
    "modelo": "moonshotai/kimi-k2.6",
-   "ms": 48,
+   "ms": 169,
    "error": "404 404"
   },
   {
@@ -62,7 +62,7 @@
    "id": "cohere",
    "ok": true,
    "modelo": "command-a-03-2025",
-   "ms": 300,
+   "ms": 296,
    "error": ""
   },
   {
@@ -70,7 +70,7 @@
    "id": "huggingface",
    "ok": false,
    "modelo": "Qwen/Qwen3-32B",
-   "ms": 2505,
+   "ms": 2503,
    "error": "402 Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get monthly included credits."
   },
   {
@@ -78,7 +78,7 @@
    "id": "zai",
    "ok": true,
    "modelo": "glm-4.5-flash",
-   "ms": 14783,
+   "ms": 5830,
    "error": ""
   },
   {
@@ -86,7 +86,7 @@
    "id": "llm7",
    "ok": true,
    "modelo": "gpt-oss:20b",
-   "ms": 862,
+   "ms": 2085,
    "error": ""
   },
   {
@@ -94,7 +94,7 @@
    "id": "upstage",
    "ok": true,
    "modelo": "solar-pro4",
-   "ms": 858,
+   "ms": 863,
    "error": ""
   },
   {
@@ -102,7 +102,7 @@
    "id": "pollinations",
    "ok": true,
    "modelo": "openai",
-   "ms": 336,
+   "ms": 413,
    "error": ""
   },
   {
@@ -110,7 +110,7 @@
    "id": "cfai",
    "ok": false,
    "modelo": "@cf/mistralai/mistral-small-3.1-24b-instruct",
-   "ms": 2501,
+   "ms": 2526,
    "error": "429 4006: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to c"
   }
  ],
@@ -139,7 +139,7 @@
    "ok": true,
    "modelo": "nvidia/nemotron-3.5-super-vl:free",
    "error": "",
-   "dijo": "A donut chart with red and blue segments on a black background."
+   "dijo": "Un gráfico de dona con una sección roja grande y una sección azul más pequeña."
   },
   {
    "prov": "SambaNova",
@@ -149,10 +149,9 @@
   },
   {
    "prov": "NVIDIA",
-   "ok": true,
-   "modelo": "meta/llama-3.2-90b-vision-instruct",
-   "error": "",
-   "dijo": "La imagen muestra un gráfico de dona con tres secciones. La sección más grande, "
+   "ok": false,
+   "modelo": "google/gemma-3-12b-it",
+   "error": "404 404"
   },
   {
    "prov": "Hugging Face",
@@ -163,26 +162,15 @@
  ],
  "gerente": {
   "ok": true,
-  "modelo": "Z.ai (GLM) · glm-4.5-flash",
+  "modelo": "Cohere · command-a-03-2025",
   "acciones": [
    {
     "tipo": "comando",
-    "texto": "registrar_gasto 5000 nafta"
-   },
-   {
-    "tipo": "comando",
-    "texto": "generar_reporte_presupuesto"
+    "texto": "generar_resumen_gastos"
    }
   ]
  },
  "audio": {
   "ok": true
- },
- "render": [
-  {
-   "prov": "NVIDIA FLUX Kontext",
-   "ok": false,
-   "error": "This operation was aborted"
-  }
- ]
+ }
 }
