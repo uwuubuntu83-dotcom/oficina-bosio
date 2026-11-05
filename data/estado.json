@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 274,
+   "corridas": 275,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-05",
-   "ultimaCorrida": "2026-11-05T15:18:00.791Z",
+   "ultimaCorrida": "2026-11-05T15:47:57.617Z",
    "resumen": "💵 Dólar hoy (10:48 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1540 · venta $1560\n• Bolsa: compra $1575.7 · venta $1588.6\n• Contado con liquidación: compra $1676.7 · venta $1680.4\n• Mayorista: compra $1537",
    "informe": "data/informes/dolar/2026-11-05-1048.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1665.97,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-05T15:18:00.791Z",
+    "ultimoChequeo": "2026-11-05T15:47:57.617Z",
     "resumenFecha": "2026-11-05",
     "hist": {
      "2026-10-30": {
@@ -4650,7 +4650,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-05",
    "ultimaCorrida": "2026-11-05T11:07:05.576Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 251 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 281 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -4878,7 +4878,7 @@
   },
   "vencimientos": {
    "estado": "listo",
-   "corridas": 49,
+   "corridas": 50,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -4887,12 +4887,16 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-05T12:49:59.203Z",
-   "resumen": "🧾 Vencimientos e impuestos\n\n• Alivio para las pymes: ARCA suspendió los embargos hasta junio de 2027 y extendió los planes para regularizar deudas (TN)\n  https://news.google.com/rss/articles/CBMigwJBVV95cUxQUVRpQzZWcGJu",
-   "informe": "data/informes/vencimientos/2026-11-05-0949.md",
+   "ultimaCorrida": "2026-11-05T15:47:57.617Z",
+   "resumen": "🧾 Vencimientos e impuestos\n\n• ARCA prorrogó la suspensión de juicios fiscales y amplió el plan de pagos: quiénes pueden acceder (Diario Mendoza)\n  https://www.diariomendoza.com.ar/sociedad/arca-prorrogo-suspension-juici",
+   "informe": "data/informes/vencimientos/2026-11-05-1247.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "arca prorrogó la suspensión de juicios fiscales y amplió el plan de pagos: quiénes pueden ",
+     "arca confirmó cuánto se puede facturar en diciembre para mantener el monotributo en 2027",
+     "el senado argentino dio dictamen a la nueva ley de discapacidad y el gobierno busca sancio",
+     "arca prorrogó hasta junio de 2027 el plazo para adherir al plan de facilidades de pago",
      "alivio para las pymes: arca suspendió los embargos hasta junio de 2027 y extendió los plan",
      "arca prorrogó hasta junio de 2027 el plan de pagos para pymes",
      "arca estira planes de pago y cuotas para pymes en crisis",
@@ -5057,7 +5061,7 @@
      "arca modifica la emisión de facturas del monotributo social desde noviembre",
      "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
     ],
-    "ultimoChequeo": "2026-11-05T12:49:59.203Z",
+    "ultimoChequeo": "2026-11-05T15:47:57.617Z",
     "semana": [
      {
       "titulo": "ARCA prorrogó vencimientos de Ganancias y facilidades",
@@ -5898,13 +5902,37 @@
       "link": "https://www.enteratenoticias.com.ar/politica/el-senado-dictamino-la-nueva-ley-de-discapacidad/",
       "fuente": "enteratenoticias",
       "t": 1793883003519
+     },
+     {
+      "titulo": "ARCA prorrogó la suspensión de juicios fiscales y amplió el plan de pagos: quiénes pueden acceder",
+      "link": "https://www.diariomendoza.com.ar/sociedad/arca-prorrogo-suspension-juicios-fiscales-amplio-plan-pagos-quienes-pueden-acceder-n184493",
+      "fuente": "Diario Mendoza",
+      "t": 1793893683572
+     },
+     {
+      "titulo": "ARCA confirmó cuánto se puede facturar en diciembre para mantener el Monotributo en 2027",
+      "link": "https://www.iprofesional.com/impuestos/468328-monotributo-cuanto-facturar-en-diciembre-para-no-subir-de-categoria",
+      "fuente": "iProfesional",
+      "t": 1793893683572
+     },
+     {
+      "titulo": "El Senado argentino dio dictamen a la nueva ley de discapacidad y el Gobierno busca sancionarla",
+      "link": "https://www.msn.com/es-co/noticias/otras/el-senado-argentino-dio-dictamen-a-la-nueva-ley-de-discapacidad-y-el-gobierno-busca-sancionarla/ar-AA2gOZWC",
+      "fuente": "La República on MSN",
+      "t": 1793893683572
+     },
+     {
+      "titulo": "ARCA prorrogó hasta junio de 2027 el plazo para adherir al plan de facilidades de pago",
+      "link": "https://www.cadenanueve.com/2026/11/05/arca-prorrogo-hasta-junio-de-2027-el-plazo-para-adherir-al-plan-de-facilidades-de-pago/",
+      "fuente": "Cadena Nueve",
+      "t": 1793893683572
      }
     ]
    }
   },
   "tarifas": {
    "estado": "listo",
-   "corridas": 50,
+   "corridas": 51,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -5913,12 +5941,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-05T12:49:59.203Z",
-   "resumen": "🧾 Aumentos de servicios\n\n• Intensa llovizna inunda distritos de Lima Sur (Gaceta Perú TV)\n  https://news.google.com/rss/articles/CBMiigFBVV95cUxQZlRNbm8tbU16NC1KQ3BVNzJnZnZoM0tGcFVFanI0b1M4dERvZ3RpV2g3LV9RQWVqV3B2MzNBc0",
-   "informe": "data/informes/tarifas/2026-11-05-0949.md",
+   "ultimaCorrida": "2026-11-05T15:47:57.617Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• Casi un millón de personas perdieron cobertura médica privada y crece la dependencia del sistema público (Fuego24)\n  https://news.google.com/rss/articles/CBMi6gFBVV95cUxNTGlvQW5FQUIxS0lsYkZyR0",
+   "informe": "data/informes/tarifas/2026-11-05-1247.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "casi un millón de personas perdieron cobertura médica privada y crece la dependencia del s",
+     "uepc capital reclama un aumento salarial del 30% y se moviliza en córdoba | 5 de noviembre",
+     "villa el salvador, vmt y sjm amanecen bajo el agua tras intensa llovizna en lima: inundaci",
+     "la visita del papa león xiv genera un estallido de reservas turísticas en argentina",
+     "🔴🔵villa el salvador: intensas lluvias provocan inundaciones y colapso del desagüe en más",
+     "clima en córdoba: cielo claro y temperatura cálida para este jueves 5 de noviembre",
      "intensa llovizna inunda distritos de lima sur",
      "lluvias en perú en vivo: precipitaciones por el fenómeno el niño en el sur de lima inundan",
      "la cobertura de obras sociales y prepagas cayó a su nivel más bajo desde 2016",
@@ -6206,7 +6240,7 @@
      "golpe al bolsillo: aprueban fuerte aumento en los combustibles",
      "todo aumenta en noviembre: colectivos, prepagas, alquileres, colegios y servicios, uno por"
     ],
-    "ultimoChequeo": "2026-11-05T12:49:59.203Z",
+    "ultimoChequeo": "2026-11-05T15:47:57.617Z",
     "semana": [
      {
       "titulo": "Cortes de luz en C&#243;rdoba para este s&#225;bado: zonas afectadas por mantenimiento, poda y obras",
@@ -7707,6 +7741,42 @@
       "link": "https://www.nvinoticias.com/nacional/presenta-sheinbaum-balance-del-plan-michoacan-hay-67-de-avance/195629",
       "fuente": "NVI Noticias",
       "t": 1793883005974
+     },
+     {
+      "titulo": "Casi un millón de personas perdieron cobertura médica privada y crece la dependencia del sistema público",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNTGlvQW5FQUIxS0lsYkZyR0QwNFZaa0FieTlZZXdqQ3dvN1hMZzVEZk1iRm1WVjJRM3RrSjIzemE4ZnRkeUdqY0pSYV9KOWdvRlkxaWY1UmVzWmluNDFwRW5wZ0xiWnNQWDhOUzFhdlVSc0NXcUF2Um9haGpIREQ0elIzck93VENWd0R2N1lVSUtHTTQ4dGFaOEd5MnAzRzZnQ01ySTlKdUptZER4djNhSERWcGVmUnR6VjMzM2xkZ2FBVVVhdDJmUEZmcUhaVU1DX28xVGRmNUJDbVVyVmIwMFBCYks1Z0kxTXc?oc=5",
+      "fuente": "Fuego24",
+      "t": 1793893685935
+     },
+     {
+      "titulo": "UEPC Capital reclama un aumento salarial del 30% y se moviliza en Córdoba | 5 de noviembre de 2026",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZHp0MDFIclprVTBaMXNJdHRYQXFBN1EyUjhVSEk3ZkxyU3pvaTFZazZYdWdLYzlES1hTTjZaRnFLQUNQT2ZIWGdWWWhxelczMXB5X2UwUlJvbk1FSXZSS0ZJdXFNVmgzcWZudUZRaEM3dlFfdEd5OFJiWE1zZHotSG0xSmFMeFY1S09JcjFlcFRkZ3NjeGppNURFWXp6aGVQQmg3ZjNJLW1sa1XSAbABQVVfeXFMT2dpa3BaWlU4OEJTNEtSSWw2cl9rMWpNUnJ1NUpGRHdsWXBrbVZpeWEza2FrVFdkWXVMRktXOHBwWnJMcUhKNVdLY2pxMFY0SEI4UzVSRm1IYmFTaTNSX25BTnpMdzhQVEU1d2cyemRWcTgxRm5lOG9SenpRZzhLUVZiZ29COElNaDdhS1BMUEdGQlNaNjA2YWdQMFNRbkdXVE5HMVA2S19DWmtXZmo5V3U?oc=5",
+      "fuente": "Hoy Día Córdoba",
+      "t": 1793893685935
+     },
+     {
+      "titulo": "Villa El Salvador, VMT y SJM amanecen bajo el agua tras intensa llovizna en Lima: inundaciones afectan viviendas y vías",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOVGtnTGVXTHUzazJVZHRTd0J1TmpETnZmdmprYjliVWJyMi1UMF9OVHFKV0VCb1NkWk93b1lTOE00dlAxX0d0XzRvcmJxWllfd2pwRjdGclRYUVZ6em9iX0hocTJPX1dhOUJESTBhbXd5TjhqMlhDRWVoQVptcXBpMFl1cE5EOEI1QzRaMmJqYlRwUmwwM3VmNFJOV1drOXJ6dUFldGlWTEs3SHZwS0xHVzdyV0xVb3N3MHgyUzBsTEV2cnR4RFl5cGlWX3lpd19pbHR4cHdmSEJqaVVJaXFMb0ZyZjBEUGJhQURmc0lRd0dLNGxESXd5NkcwMFdjSTIz0gGAAkFVX3lxTE5Ua2dMZVdMdTNrMlVkdFN3QnVOakROdmZ2amtiOWJVYnIyLVQwX05UcUpXRUJvU2RaT3dvWVM4TTR2UDFfR3RfNG9yYnFaWV93anBGN0ZyVFhRVnp6b2JfSGhxMk9fV2E5QkRJMGFtd3lOOGoyWENFZWhBWm1xcGkwWXVwTkQ4QjVDNFoyYmpiVHBSbDAzdWY0Uk5XV2s5cnp1QWV0aVZMSzdIdnBLTEdXN3JXTFVvc3cweDJTMGxMRXZydHhEWXlwaVZfeWl3X2lsdHhwd2ZIQmppVUlpcUxvRnJmMERQYmFBRGZzSVF3R0s0bERJd3k2RzAwV2NJMjM?oc=5",
+      "fuente": "La República",
+      "t": 1793893685935
+     },
+     {
+      "titulo": "La visita del papa León XIV genera un estallido de reservas turísticas en Argentina",
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNNnd6WkRDR1VNTUFVVDZRZURCYVVXNlk1UnJKT2xKeTVNSDYxcElVdEVFSlZicHRxdWRhVUsya1ZEWnNFSG00Y000Z2N5anJPQ0lZOUxLR2ZlMnpPZnE2bUxQNVhIai01Y0tlNUhFNjJKeFQwdTlTMDNWQXF1MFQwc1RmcjNBZjhxZ1hVM0lwdkhKQUFWLVRkUEt1VV91VElKbEE5UEpoUXcwMkpDTzNqZ1ZYa2h1OHQxcnhfaVNHRWlMMFRKdER1d1dndFlfSG5Dc3otVEtEdmlUSVnSAeABQVVfeXFMUGlSUjgtNjhZZUw5Z0l0elBRRnhlV1FpeElCQVl5UGswdlFOT0F4d05fb21xQVFxeE1EbVFiRzRVMTJRMUpzbDJkR2k3Y0JMNVhWSDV0MnRLbU4xcjRhNndTdkcwdll1VDNURG9kdDc3S2NiRjg1WWxubmRzY2R6UWdlR2tLWnFCSlZyZUNPQ0dFTkQ0bkJpUzI4X0RKeUlSZ0dkS2xqT2toQmlvaE9QTzhhWFFHenYwTGd4c3FMQlpaeENwWVZ4WlJocG5OTTRxRTZYZFE1ellzTTZ3LWxKQjA?oc=5",
+      "fuente": "Diario Crónica",
+      "t": 1793893685935
+     },
+     {
+      "titulo": "🔴🔵Villa El Salvador: intensas lluvias provocan inundaciones y colapso del desagüe en más de 70 viviendas",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQM1BoZG1tRnZQZ0Y0U2liVGdzazF1T25GSmFIaGlOR2hBY3hxemd5dUNLcDZhZC11QkVIYWpWam1vbnVlVFFEV01RRTFwalVrZVEzOVY4UUlqcHJ1ZGR2a0VvdXlsSmZuTFlQQUxJNHhfUzI3Y3FGX25OYjJiemY1WTRlSDVTT1hycXNjVURNQ2Q4TG1WQ29GdFVYbkMteDZMbkZNMVp6eW1PZThiX1JlMjBhM2M2TEt5Rk5UVmZTRl9qS1gtcFJHSlJNOTFNNlVVX3ZYdy1pN2JSRFVfRTlLaV9JZWk?oc=5",
+      "fuente": "Facebook",
+      "t": 1793893685935
+     },
+     {
+      "titulo": "Clima en Córdoba: cielo claro y temperatura cálida para este jueves 5 de noviembre",
+      "link": "https://tn.com.ar/clima/alertas/2026/11/05/clima-en-cordoba-hoy-jueves-5-de-noviembre-cielo-claro-y-temperatura-calida/",
+      "fuente": "Todo Noticias",
+      "t": 1793893685935
      }
     ]
    }
@@ -7764,7 +7834,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 274,
+   "corridas": 275,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7773,7 +7843,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-05T15:18:00.791Z",
+   "ultimaCorrida": "2026-11-05T15:47:57.617Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -7783,7 +7853,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-05T15:18:00.791Z",
+    "ultimoChequeo": "2026-11-05T15:47:57.617Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -7872,16 +7942,16 @@
      },
      "2026-11-05": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       25,
-       25
+       26,
+       26
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       25,
-       25
+       26,
+       26
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       25,
-       25
+       26,
+       26
       ]
      }
     }
@@ -7908,7 +7978,7 @@
   },
   "precio_mmo": {
    "estado": "listo",
-   "corridas": 48,
+   "corridas": 49,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7917,12 +7987,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-05T12:49:59.203Z",
-   "resumen": "🧱 Valor m² del Colegio de MMO\n\n• Carcarañá: ofrecen lotes industriales a USD 40 el m² en un desarrollo de 30 hectáreas junto a la autopista Rosario-Córdoba (El Occidental)\n  https://news.google.com/rss/articles/CBMihAJB",
-   "informe": "data/informes/precio_mmo/2026-11-04-1528.md",
+   "ultimaCorrida": "2026-11-05T15:47:57.617Z",
+   "resumen": "🧱 Valor m² del Colegio de MMO\n\n• Tiene 42 años, dejó Buenos Aires y construyó una casa de adobe de 30 m² en las sierras de Córdoba (Todo Noticias)\n  https://tn.com.ar/sociedad/2026/11/05/tiene-42-anos-dejo-buenos-aires-",
+   "informe": "data/informes/precio_mmo/2026-11-05-1247.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "tiene 42 años, dejó buenos aires y construyó una casa de adobe de 30 m² en las sierras de ",
      "carcarañá: ofrecen lotes industriales a usd 40 el m² en un desarrollo de 30 hectáreas junt",
      "reformaron un histórico bar en la patagonia para crear su propio estudio e innovan con la ",
      "empezaron con un bar histórico en la patagonia y hoy levantan edificios con construcción e",
@@ -7966,7 +8037,7 @@
      "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
      "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
     ],
-    "ultimoChequeo": "2026-11-05T12:49:59.203Z",
+    "ultimoChequeo": "2026-11-05T15:47:57.617Z",
     "semana": [
      {
       "titulo": "Casas prefabricadas: cu&#225;nto cuestan las de 40, 60 y 80 m2",
@@ -8099,6 +8170,12 @@
       "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQSmJRaUtzVVE4S0FQUjFsVHdRd0ZzWmQxUDdhak9PR0dCeEhtdWZyaENpTjFIMHNFQjRnX3BVeHhkR05EMVpfeEludV9EVmlZVTF1QTByT1AyM0hROVJhMTBQQW1ubTFqRHREOU1LbTkyVTk4YnNUV0phbThFWk5EbXNKaXBSbld2MjJBYjZvUGlKSDhDQmdIV0M0akFYSmllcmlvUnJLNklGN0dMTXpZeUM3UGQ2MHpmTmpBMXhWcDBRSmFNdE5PX1lXWUdycWFwekl2anNvYzZuSEhFYVdsckowT3hPbEVZS21TR3o5NWtRTUFLT2tvRmNPdUNfRFlmSFU4aQ?oc=5",
       "fuente": "El Occidental",
       "t": 1793816940190
+     },
+     {
+      "titulo": "Tiene 42 años, dejó Buenos Aires y construyó una casa de adobe de 30 m² en las sierras de Córdoba",
+      "link": "https://tn.com.ar/sociedad/2026/11/05/tiene-42-anos-dejo-buenos-aires-y-construyo-una-casa-de-adobe-de-30-m-en-las-sierras-de-cordoba/",
+      "fuente": "Todo Noticias",
+      "t": 1793893681910
      }
     ]
    }
@@ -16004,7 +16081,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 256,
+   "corridas": 257,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -16013,13 +16090,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-05T15:18:00.791Z",
+   "ultimaCorrida": "2026-11-05T15:47:57.617Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-05",
-    "ultimoChequeo": "2026-11-05T15:18:00.791Z"
+    "ultimoChequeo": "2026-11-05T15:47:57.617Z"
    }
   },
   "feriados": {
@@ -16184,6 +16261,31 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-05T15:47:57.617Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-05T15:47:57.617Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-05T15:47:57.617Z",
+   "quien": "Valor m² del Colegio de MMO",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-05T15:47:57.617Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-05T15:47:57.617Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-11-05T15:18:00.791Z",
    "quien": "Mesa de entrada",
@@ -17658,31 +17760,6 @@
    "t": "2026-11-04T00:44:54.154Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-04T00:14:55.344Z",
-   "quien": "Monitor de salud",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-04T00:14:55.344Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-04T00:14:55.344Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-04T00:14:55.344Z",
-   "quien": "Terrenos baratos",
-   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-  },
-  {
-   "t": "2026-11-04T00:14:55.344Z",
-   "quien": "Terrenos baratos",
-   "que": "empezó su tarea"
   }
  ],
  "pendientes": [],
@@ -18182,7 +18259,10 @@
   "736": "vencimientos",
   "737": "tarifas",
   "738": "licitaciones",
-  "739": "dolar"
+  "739": "dolar",
+  "740": "precio_mmo",
+  "741": "vencimientos",
+  "742": "tarifas"
  },
  "tgOffset": 196508515,
  "hechos": {
@@ -18203,7 +18283,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-05T15:18:00.791Z",
+ "actualizado": "2026-11-05T15:47:57.617Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
