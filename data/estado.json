@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 250,
+   "corridas": 251,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-04",
-   "ultimaCorrida": "2026-11-05T03:18:53.083Z",
+   "ultimaCorrida": "2026-11-05T03:47:55.073Z",
    "resumen": "💵 Dólar hoy (10:30 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1550 · venta $1570\n• Bolsa: compra $1575.3 · venta $1581.1\n• Contado con liquidación: compra $1667.2 · venta $1668.8\n• Mayorista: compra $1542",
    "informe": "data/informes/dolar/2026-11-04-1030.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1667.14,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-05T03:18:53.083Z",
+    "ultimoChequeo": "2026-11-05T03:47:55.073Z",
     "resumenFecha": "2026-11-04",
     "hist": {
      "2026-10-30": {
@@ -4402,13 +4402,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-05",
-   "ultimaCorrida": "2026-11-05T03:17:23.560Z",
+   "ultimaCorrida": "2026-11-05T03:43:33.846Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": false,
    "memoria": {
     "celu": {
-     "t": 1793848643560,
+     "t": 1793850213846,
      "redes_hoy": {
       "publicaciones": 0,
       "historias": 0,
@@ -4631,7 +4631,7 @@
   },
   "vencimientos": {
    "estado": "listo",
-   "corridas": 45,
+   "corridas": 46,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -4640,12 +4640,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-05T00:49:56.570Z",
-   "resumen": "🧾 Vencimientos e impuestos\n\n• Con amplio consenso, el Senado dictaminó el nuevo proyecto de Discapacidad y buscará convertirlo en ley en dos semanas (Rosario3)\n  https://www.rosario3.com/informaciongeneral/con-amplio-co",
-   "informe": "data/informes/vencimientos/2026-11-04-2149.md",
+   "ultimaCorrida": "2026-11-05T03:47:55.073Z",
+   "resumen": "🧾 Vencimientos e impuestos\n\n• Los impuestos de ARCA que vencen en noviembre de 2026 y cuáles cambian por los feriados (El Destape)\n  https://news.google.com/rss/articles/CBMimAFBVV95cUxOa1YxZ0U2V3QxWkNFeHpJbGpDMjNWRnJfV",
+   "informe": "data/informes/vencimientos/2026-11-05-0047.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "los impuestos de arca que vencen en noviembre de 2026 y cuáles cambian por los feriados",
      "con amplio consenso, el senado dictaminó el nuevo proyecto de discapacidad y buscará conve",
      "senado dio dictamen a la nueva ley de discapacidad: qué cambia para las pensiones y presta",
      "el senado avanzó con amplio respaldo en el proyecto de ley de discapacidad",
@@ -4801,7 +4802,7 @@
      "arca modifica la emisión de facturas del monotributo social desde noviembre",
      "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
     ],
-    "ultimoChequeo": "2026-11-05T00:49:56.570Z",
+    "ultimoChequeo": "2026-11-05T03:47:55.073Z",
     "semana": [
      {
       "titulo": "ARCA prorrogó vencimientos de Ganancias y facilidades",
@@ -5588,13 +5589,19 @@
       "link": "https://www.lanacion.com.ar/politica/senado-a-pesar-de-las-criticas-al-texto-y-al-gobierno-oficialismo-y-oposicion-apoyaron-el-dictamen-nid04112026/",
       "fuente": "LA NACION",
       "t": 1793839802339
+     },
+     {
+      "titulo": "Los impuestos de ARCA que vencen en noviembre de 2026 y cuáles cambian por los feriados",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOa1YxZ0U2V3QxWkNFeHpJbGpDMjNWRnJfVXhQcTQ4VmJKYk5vMWxaelFVajNuUEItVGhvZHFaWDdMbkhZQk5hVGVxT3l2RXFadU1GbFZDZDJ4Snl0M0VhMWNmbnppWS1oUjhsbzYwZlNiNGViR0w3eDRWczBjTWpOcGhiWFkxMHpwU0hWdFJFMVZQN29Fek5zdw?oc=5",
+      "fuente": "El Destape",
+      "t": 1793850479382
      }
     ]
    }
   },
   "tarifas": {
    "estado": "listo",
-   "corridas": 46,
+   "corridas": 47,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -5603,12 +5610,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-05T00:49:56.570Z",
-   "resumen": "🧾 Aumentos de servicios\n\n• Senamhi advierte que lloviznas pueden repetirse en el sur de Lima (Crónica Viva)\n  https://news.google.com/rss/articles/CBMingFBVV95cUxPUUZLQ0ZTSVlGY0tQSXUwY0d0TjYyejJSaXNfRVp1RDdiMFpXVVA5MmMw",
-   "informe": "data/informes/tarifas/2026-11-04-2149.md",
+   "ultimaCorrida": "2026-11-05T03:47:55.073Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• Casi un millón de personas perdió su cobertura de obras sociales y prepagas en un año (Elonce.com)\n  https://news.google.com/rss/articles/CBMivgFBVV95cUxNS2ZkRHZBNzR2YU5xRU55U3U2dFhwMGswOG4tNE",
+   "informe": "data/informes/tarifas/2026-11-05-0047.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "casi un millón de personas perdió su cobertura de obras sociales y prepagas en un año",
+     "siapa: lista de colonias que tendrán cortes de agua del 5 al 7 de noviembre",
+     "crisis de cobertura médica: los afiliados a obras sociales y prepagas caen a su nivel más ",
+     "la \"coalición\" que abandonó a trump: así se ha movido el voto entre 2024 y las 'midterms'",
+     "calendario anses noviembre 2026: cuándo se cobran las pensiones no contributivas con el bo",
+     "la obra social de amas de casa ya opera como prepaga: qué cambia para los afiliados",
      "senamhi advierte que lloviznas pueden repetirse en el sur de lima",
      "milei firmó el decreto 274/2024 y cambian las jubilaciones el 11 de noviembre",
      "cortes programados de luz en córdoba para este jueves: ocho localidades afectadas",
@@ -5872,7 +5885,7 @@
      "golpe al bolsillo: aprueban fuerte aumento en los combustibles",
      "todo aumenta en noviembre: colectivos, prepagas, alquileres, colegios y servicios, uno por"
     ],
-    "ultimoChequeo": "2026-11-05T00:49:56.570Z",
+    "ultimoChequeo": "2026-11-05T03:47:55.073Z",
     "semana": [
      {
       "titulo": "Cortes de luz en C&#243;rdoba para este s&#225;bado: zonas afectadas por mantenimiento, poda y obras",
@@ -7229,6 +7242,42 @@
       "link": "https://www.eldestapeweb.com/economia/pauperizacion-goteo-informe-indec-revela-perdida-masiva-cobertura-medica-servicios-basicos-2026114192223",
       "fuente": "El Destape",
       "t": 1793839804978
+     },
+     {
+      "titulo": "Casi un millón de personas perdió su cobertura de obras sociales y prepagas en un año",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNS2ZkRHZBNzR2YU5xRU55U3U2dFhwMGswOG4tNE9PSHJtT1FNYnBUX292aG5HOUt1LUxvZWFQSGRmY2lNUmJmNmtiVUhnb0VSOXJjc3Y5czZnMHY2VFNodDVhaXZJb251TF9BcEFRalNEUTRfSlhCOGZ5VmxnaF92dlhZRFJHZ3BUTnBrd2kyMnpPak9PQkgzNDB5aXNhWGR6b0tSOWt0NTZzN2t0MVhqZEhXUEN3MFdLQUR3bDZB0gG3AUFVX3lxTE5fcHFrVkR4OE15NllBdkRSUGhDeWZ5eUN6SkswalM3SzJ2OFR6ZkVaUm1mOHV4MW1hSFhoTnBFdzZZdUFVQnZEQ0ItbkFkZDZkNGpxYTVXODdFTlAxQWZLcXZZRlVMWGs4OHdwQW1WaWxUTW1WSm81Tm5tRi1IYWJaRk1FTXBEV2twQ0FmdEdfS2U0NERwVi02UTFuTkE5ZVdGaTNJcTRFRGhNTkdyQS11dk1LbG83dw?oc=5",
+      "fuente": "Elonce.com",
+      "t": 1793850481821
+     },
+     {
+      "titulo": "SIAPA: Lista de colonias que tendrán cortes de agua del 5 al 7 de noviembre",
+      "link": "https://www.informador.mx/jalisco/siapa-lista-de-colonias-que-tendran-cortes-de-agua-del-5-al-7-de-noviembre-20261104-0190.html",
+      "fuente": "El Informador",
+      "t": 1793850481821
+     },
+     {
+      "titulo": "Crisis de cobertura médica: los afiliados a obras sociales y prepagas caen a su nivel más bajo desde 2016",
+      "link": "https://www.ambito.com/economia/crisis-cobertura-medica-los-afiliados-obras-sociales-y-prepagas-caen-su-nivel-mas-2016-n6341593",
+      "fuente": "Ámbito Financiero",
+      "t": 1793850481821
+     },
+     {
+      "titulo": "La \"coalición\" que abandonó a Trump: así se ha movido el voto entre 2024 y las 'midterms'",
+      "link": "https://www.elconfidencial.com/mundo/2026-11-04/la-coalicion-abandono-a-trump-movido-el-voto-entre-2024-y-las-midterms_4459037/",
+      "fuente": "El Confidencial",
+      "t": 1793850481821
+     },
+     {
+      "titulo": "Calendario Anses noviembre 2026: cuándo se cobran las pensiones no contributivas con el bono y el aumento confirmado",
+      "link": "https://www.clarin.com/informacion-general/calendario-anses-noviembre-2026-cobran-pensiones-contributivas-bono-aumento-confirmado_0_S8cO2nINUV.html",
+      "fuente": "Clarín",
+      "t": 1793850481821
+     },
+     {
+      "titulo": "La Obra Social de Amas de Casa ya opera como prepaga: qué cambia para los afiliados",
+      "link": "https://calcularsueldo.com.ar/gobierno/16431/la-obra-social-de-amas-de-casa-ya-opera-como-prepaga-que-cambia-para-los-afiliados.html",
+      "fuente": "calcularsueldo",
+      "t": 1793850481821
      }
     ]
    }
@@ -7286,7 +7335,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 250,
+   "corridas": 251,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7295,7 +7344,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-05T03:18:53.083Z",
+   "ultimaCorrida": "2026-11-05T03:47:55.073Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -7305,7 +7354,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-05T03:18:53.083Z",
+    "ultimoChequeo": "2026-11-05T03:47:55.073Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -7394,16 +7443,16 @@
      },
      "2026-11-05": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       1,
-       1
+       2,
+       2
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       1,
-       1
+       2,
+       2
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       1,
-       1
+       2,
+       2
       ]
      }
     }
@@ -7430,7 +7479,7 @@
   },
   "precio_mmo": {
    "estado": "listo",
-   "corridas": 44,
+   "corridas": 45,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7439,7 +7488,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-05T00:49:56.570Z",
+   "ultimaCorrida": "2026-11-05T03:47:55.073Z",
    "resumen": "🧱 Valor m² del Colegio de MMO\n\n• Carcarañá: ofrecen lotes industriales a USD 40 el m² en un desarrollo de 30 hectáreas junto a la autopista Rosario-Córdoba (El Occidental)\n  https://news.google.com/rss/articles/CBMihAJB",
    "informe": "data/informes/precio_mmo/2026-11-04-1528.md",
    "pausado": false,
@@ -7488,7 +7537,7 @@
      "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
      "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
     ],
-    "ultimoChequeo": "2026-11-05T00:49:56.570Z",
+    "ultimoChequeo": "2026-11-05T03:47:55.073Z",
     "semana": [
      {
       "titulo": "Casas prefabricadas: cu&#225;nto cuestan las de 40, 60 y 80 m2",
@@ -15310,7 +15359,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 232,
+   "corridas": 233,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -15319,13 +15368,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-05T03:18:53.083Z",
+   "ultimaCorrida": "2026-11-05T03:47:55.073Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-04",
-    "ultimoChequeo": "2026-11-05T03:18:53.083Z"
+    "ultimoChequeo": "2026-11-05T03:47:55.073Z"
    }
   },
   "feriados": {
@@ -15490,6 +15539,26 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-05T03:47:55.073Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-05T03:47:55.073Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-05T03:47:55.073Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-05T03:47:55.073Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-11-05T03:18:53.083Z",
    "quien": "Mesa de entrada",
@@ -16969,26 +17038,6 @@
    "t": "2026-11-03T13:59:53.508Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-03T13:59:53.508Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-03T13:29:55.175Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-03T13:29:55.175Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-03T12:59:55.390Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
@@ -17460,7 +17509,9 @@
   "700": "vencimientos",
   "701": "tarifas",
   "702": "informe_redes",
-  "704": "clima"
+  "704": "clima",
+  "706": "vencimientos",
+  "707": "tarifas"
  },
  "tgOffset": 196508515,
  "hechos": {
@@ -17478,7 +17529,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-05T03:18:53.083Z",
+ "actualizado": "2026-11-05T03:47:55.073Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
