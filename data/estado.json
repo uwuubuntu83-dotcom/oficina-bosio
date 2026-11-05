@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 249,
+   "corridas": 250,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,31 +12,31 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-04",
-   "ultimaCorrida": "2026-11-05T02:48:55.856Z",
+   "ultimaCorrida": "2026-11-05T03:18:53.083Z",
    "resumen": "💵 Dólar hoy (10:30 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1550 · venta $1570\n• Bolsa: compra $1575.3 · venta $1581.1\n• Contado con liquidación: compra $1667.2 · venta $1668.8\n• Mayorista: compra $1542",
    "informe": "data/informes/dolar/2026-11-04-1030.md",
    "pausado": false,
    "memoria": {
     "dolarBase": {
      "oficial": 1570,
-     "blue": 1570,
-     "bolsa": 1581.1,
-     "contadoconliqui": 1668.8,
-     "mayorista": 1551,
-     "cripto": 1660.67,
+     "blue": 1560,
+     "bolsa": 1588.6,
+     "contadoconliqui": 1680.4,
+     "mayorista": 1546,
+     "cripto": 1667.14,
      "tarjeta": 2041
     },
-    "dolarFecha": "2026-11-04",
+    "dolarFecha": "2026-11-05",
     "dolar": {
      "oficial": 1570,
-     "blue": 1570,
-     "bolsa": 1581.1,
-     "contadoconliqui": 1668.8,
-     "mayorista": 1551,
-     "cripto": 1660.67,
+     "blue": 1560,
+     "bolsa": 1588.6,
+     "contadoconliqui": 1680.4,
+     "mayorista": 1546,
+     "cripto": 1667.14,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-05T02:48:55.856Z",
+    "ultimoChequeo": "2026-11-05T03:18:53.083Z",
     "resumenFecha": "2026-11-04",
     "hist": {
      "2026-10-30": {
@@ -92,6 +92,15 @@
       "mayorista": 1546,
       "cripto": 1667.14,
       "tarjeta": 2041
+     },
+     "2026-11-05": {
+      "oficial": 1570,
+      "blue": 1560,
+      "bolsa": 1588.6,
+      "contadoconliqui": 1680.4,
+      "mayorista": 1546,
+      "cripto": 1667.14,
+      "tarjeta": 2041
      }
     }
    }
@@ -130,7 +139,7 @@
   },
   "licitaciones": {
    "estado": "listo",
-   "corridas": 128,
+   "corridas": 129,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -139,7 +148,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-05T02:18:54.636Z",
+   "ultimaCorrida": "2026-11-05T03:18:53.083Z",
    "resumen": "🧱 Clientes y licitaciones\n\n• Licitaciones y concursos públicos de esta semana en el sector eléctrico (CdeComunicacion.es)\n  https://news.google.com/rss/articles/CBMitwFBVV95cUxPNFVtcjk5QzVBLUFneUdTWTNOa2YxV3N1YmxFSGJEZm",
    "informe": "data/informes/licitaciones/2026-11-04-2120.md",
    "pausado": false,
@@ -255,7 +264,7 @@
      "el banco nación ya prestó los $32.000 millones de anses para hipotecarios: cuántos crédito",
      "pp acusa al gobierno de \"negar información de obra del museo arqueológico que tiene desde "
     ],
-    "ultimoChequeo": "2026-11-05T02:18:54.636Z",
+    "ultimoChequeo": "2026-11-05T03:18:53.083Z",
     "semana": [
      {
       "titulo": "El Gobierno activa un control externo sobre las represas en Santa Cruz con una licitaci&#243;n de $39.624 millones",
@@ -940,7 +949,7 @@
   },
   "noticias_vm": {
    "estado": "listo",
-   "corridas": 128,
+   "corridas": 129,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -949,12 +958,14 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-05T02:18:54.636Z",
+   "ultimaCorrida": "2026-11-05T03:18:53.083Z",
    "resumen": "📰 Noticias de Villa María\n\n• Villa María suma inteligencia artificial a sus 432 cámaras de vigilancia (Perfil)\n  https://www.perfil.com/cordoba/villa-maria-suma-inteligencia-artificial-a-sus-432-camaras-de-vigilancia-aj",
    "informe": "data/informes/noticias_vm/2026-11-04-2020.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "hernando: detienen a un pibe que habría guiado una moto buscada en villa maría",
+     "la peña trashumante celebra 20 años con una nueva edición en unquillo",
      "usaban salón de belleza en medellín para captar mujeres y explotarlas sexualmente en españ",
      "operación lérida: cae en medellín una red que usaba un salón de belleza para captar mujere",
      "expoalfa 2026: conocé los detalles del evento mas grande de alfalfa en argentina",
@@ -1552,11 +1563,9 @@
      "violencia en el baby: suspenden partidos y convocan a una manifestaci&#243;n en plaza cent",
      "la ronda norte, las infraestructuras sanitarias, la vivienda y las depuradoras centran las",
      "la compositora marisa manchado es una de las v&#237;ctimas del accidente de urda: viajaba ",
-     "nuevas l&#237;neas y recorridos desde noviembre",
-     "s&#225;bado con tiempo inestable y h&#250;medo en c&#243;rdoba: prev&#233;n lluvias en gra",
-     "la perla: balean a trabajador de delivery de restaurante el corralito"
+     "nuevas l&#237;neas y recorridos desde noviembre"
     ],
-    "ultimoChequeo": "2026-11-05T02:18:54.636Z",
+    "ultimoChequeo": "2026-11-05T03:18:53.083Z",
     "bandeja": [
      {
       "titulo": "Una motociclista resultó con traumatismo de cráneo luego de un choque",
@@ -1602,15 +1611,21 @@
       "titulo": "Operación Lérida: cae en Medellín una red que usaba un salón de belleza para captar mujeres y explotarlas sexualmente en España",
       "link": "https://ifmnoticias.com/seguridad/operacion-lerida-cae-en-medellin-una-red-que-usaba-un-salon-de-belleza-para-capt/",
       "fuente": "ifmnoticias"
+     },
+     {
+      "titulo": "Hernando: detienen a un pibe que habría guiado una moto buscada en Villa María",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQUTB4R3kxa3Ayem15dTFLZVR2TUVPdDF2TzlQR0ItZmgtRGw4aTJOYktqQ0xUMXI0NWZjbkgtcHBlemNibjhfNmQ0bnVPd0dHZHNwZTZVMTBTNUVaaU5UV3NvTmhqWGxPaC1GU0F1Z1V2bU9LbTFld29NUHlia1JJN1hMUW9ud0VQRjhmQXFYdndWdkxydnB2Z2lPT2NEb2VUQlJadWdSNmk4b25DeW1zLTItbkxBQjVqV0h3X0FCbkNRZw?oc=5",
+      "fuente": "Villa Maria Ya"
+     },
+     {
+      "titulo": "La Peña Trashumante celebra 20 años con una nueva edición en Unquillo",
+      "link": "https://hoydia.com.ar/espectaculos/pena-trashumante-nueva-edicion-unquillo/",
+      "fuente": "Hoy Día Córdoba"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-04",
-     "hechas": [
-      "07:30",
-      "13:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-05",
+     "hechas": []
     },
     "semana": [
      {
@@ -2578,7 +2593,7 @@
   },
   "noticias_ar": {
    "estado": "listo",
-   "corridas": 128,
+   "corridas": 129,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -2587,12 +2602,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-05T02:18:54.636Z",
+   "ultimaCorrida": "2026-11-05T03:18:53.083Z",
    "resumen": "📰 Argentina: economía y obra pública\n\n• RDEco: empresarios y economistas cuestionaron los costos que encarecen la producción argentina (Perfil)\n  https://news.google.com/rss/articles/CBMi1wFBVV95cUxPeEZpZ1dzcDdWZDY5NEFh",
    "informe": "data/informes/noticias_ar/2026-11-04-2020.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "camila perochena, sobre la economía argentina: “no hay que desaprovechar otra histórica op",
+     "san andrés tuxtla avanza en el saneamiento del río tajalate con la construcción de colecto",
+     "la casita del millón de dólares del exvocal de la agencia córdoba deportes mariano schiare",
+     "argentina, el país donde el crédito sigue siendo un lujo",
+     "créditos hipotecarios: qué banco ofrece la tasa más baja y qué requisitos pide",
+     "créditos hipotecarios del ipv: cómo inscribirse si todavía no tenés un lote",
      "caputo confía en que el resultado electoral en estados unidos no alterará la economía arge",
      "impacto por la crisis bancaria en paraguay",
      "el magnate que protagoniza un escándalo financiero en eeuu vende su equipo de fórmula 1: c",
@@ -3186,46 +3207,10 @@
      "china envió a este país de américa latina un buque capaz de levantar 700 toneladas: busca ",
      "rdeco: qué necesitan la industria y la construcción para recuperar competitividad y activi",
      "patagones: la filial de la federación agraria argentina avanza en la construcción de su se",
-     "video el fmi libera 900 millones para argentina aunque alertan que la economía sigue estan",
-     "la industria argentina pierde producción y empleo: los límites de un modelo que todavía no",
-     "argentina 2026: consultoras recortan el pbi a menos de 1%",
-     "¿repunta la economía? cuáles son las primeras señales de la actividad tras un semestre en ",
-     "crecimiento 2026: consultoras y bancos recortan sus proyecciones para argentina",
-     "más de 600 jóvenes participaron del campamento provincial de la juventud radical en humber",
-     "¿a cuánto asciende la inversión que se necesita para ampliar el puente de la av. sarmiento"
+     "video el fmi libera 900 millones para argentina aunque alertan que la economía sigue estan"
     ],
-    "ultimoChequeo": "2026-11-05T02:18:54.636Z",
+    "ultimoChequeo": "2026-11-05T03:18:53.083Z",
     "bandeja": [
-     {
-      "titulo": "Bullrich respaldó el rumbo económico de Milei, pero pidió más apoyo para las pymes",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPMVJULVFxRnFONXprRFhGU1pfMjJLWmlHaFlPZmZpTmtVNFJHY1BZc2lXV01NQ2dhVWRsVjFvY0xxelRyTnN6dTVMR05oSFJnMDRhY3J3aUJrYi0zazJ2ZFc0QXhaS3RYNUJsN0NSXzBSdHhYOExGLVBSa1MyLWU0QkctOEV0WFY4UUQtZWZZa2RnUVFKUnNOcm05ekdkMnFBRDFVZ1FocjNueW92aHY5eUo1Q3M3a2RSUktWR1RGQ19FR3JJWGFmbkNibWlndms?oc=5",
-      "fuente": "Identidad Correntina"
-     },
-     {
-      "titulo": "La derrota de Trump suma dudas sobre la economía argentina",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPcW1GSDFCenlRZk16dlU2TDh1NHMtS1BNWWZTdmsyUVFFdjEybmRZaWpBeE41YUF3cnhrbEdxZlVBTmI4Q0ROenpCQk91V1pxSVZBOVVlbFRId1lsb2t4bGdoWmZRbnhVblVGQUdrS184SVpMWTI3OVppSDRkTmhZTW5PV0tVV0lWbjVTOGhKSFhYUVRDWVVIeA?oc=5",
-      "fuente": "TeleSol Diario"
-     },
-     {
-      "titulo": "(Video) Estudio destaca impacto positivo de plataforma china DiDi en economía, empleo y movilidad urbana en Argentina",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5CTEpHN19FVGNzRkFZOThucDJlM2ktcEtJWDk0VVBfbk5fZUFvZXJaMjlRODZ4UUlDRlJqWmdWX1dzdU00ZmVWUVpQclJnd0FqTzNLWXVJOUhiZjUyZnZWbUdrdkRTbWx2a0laZjJneFExM0FVNEFYY0tDWG8?oc=5",
-      "fuente": "新华网"
-     },
-     {
-      "titulo": "El Gobierno anunció un nuevo Argentina Week para 2027 en Estados Unidos: cuándo será y a qué sectores apuntará",
-      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNSmNZSi0yam9mcXhESnpkTDcxMWF6LVJGeU9QT2p2dUJ2cUpxbFBONmNfbTNkZm5MRzh2TEFkLTZzM2ctWFJOTnNtcFN2aUtZQVg4WWhEMDF2WVFwTHZUN3ExSDdDVFp4MnpiWDVyVEhzWWZxRlREek5qZTFVRU9BejFCTHFVeUJiTXpzZTlhMmZyU09RRTRYdjhtT0dWaHBDXzRLOEZ3MlZ3RUYta3B3bm9qNV9uQnBTM3puSWRLVDcyZWhCRW80QWFwYmV4ZlNiWmcwb1VoWFpHWUhBMm9VMnZ6MnU4NW9Hb0HSAYQCQVVfeXFMUHpuNW5OSkltTk5QTEtfeG9CcWtUZXBvQmV6RDZIT0w2TFV5dW1qNTNDTVNaWGNaZHFtUF8zU1pxUW9MM1lVQm1FTk1ZU3d5MjFJRkdfSnpKNkQ1UlRoRUtxUThOR1Y1LW1Qb1NCT2VpQndsWUY3Y25hdTZCRS1QWGVHZ1FaS3hqQ2NDUkt3VmZ2RVh6LXZRTi1UcEQydjNveE9aOXg5aE15SkhHQ1phcXN1by1ITWdqeHpuQWlRcS1ZMDJQeEYxM3BjLWFFaHhQSS1xM19EQW95cW05UFZZTHF0T2J4VC1IVm9sX2hmVjZ5X0VweFBGRDBtZ1Voc3RyVllmV1g?oc=5",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "Grasso, intendente de Río Gallegos cargó contra diputados: “Hablan de federalismo y no votan”",
-      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOaURMcTBYUjdEaXBxaEZLR2I5UGRCMWdNQ00ycWFZcFlDRVotRE5jSHFZQnB0NFRlcXdTZWZoOFFHLXliSmc1R21QQk5mX1JZLS16angtaUZGTUV0X3MtWlFkSk9vOWtZWnhpazFRNGdNWmh5dklfQ1ozWUtrOUdoN2stalFuWUQ5d0ZKc043cnN2dENuMDhVVGtqNFZVbk1rbGdOekNOTkxyU3BLSXlVM3lwUXJNSnV5YWpVVHgxQXZkeDNIWlFmejRQZlprZGVWSkZNZUdUNWs2aGVPTWg3SkJrbk5MaURjclE?oc=5",
-      "fuente": "Cadena 3 Argentina"
-     },
-     {
-      "titulo": "“Argentina no puede depender de Washington”: el mensaje empresario tras las elecciones en EE.UU.",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNNDB0ZUs2MjM0eU8weDBUdENmU2pLMDhRaXBINE9tTGI5a0V1TTRzLTJKZ2h3ai02SFdaSEFGY0dzRDAzaEItcWhIcWZUTUdRTWpKSVZqVkhQVGlzVFFwS3RRNDFaZG1TSVYyeTdpTWZ5dHBGYUh3bzQ5OGhKUWktVmRXNnVyMmFSejN6NjNVTFJiNHJvZ2VIamRlRzBXRmd4Mm5YVVpCVkdHc25reXV6TFZPWHJOd1dZWW82Uk1qcWpBd0VVUzh4NHBCV2R1Znc30gHrAUFVX3lxTE5ZTWNqWENjOFlHTHRhemI3VldjVVhLd2Z4dXZOc18wTlo3OGZpN0Nodi1SeVkzQlFxV2pPaTY2QV9EdHlwbFNoOG8wMXUwUHhzODdMeVh3SmI2Z3pPeWt4Y3RWZ2RkS3lzTVJ4b1BRc0NIWkVnOVQ1aVdlRzJiZHdVb0FwZkUtYjRDLXVzQnRSUy1YWWFJdm9GZExBcDFqMXM2TDBvQmhjSlVuSVhFbjM5czFJQ3Y0QjBnWklodVdLU0ZBTnlJaUtlcWZOWWxMUUpQV2x4dmVQUjY3TzBwNXNaNDZ4TlpyZHhSaW8?oc=5",
-      "fuente": "El Cronista"
-     },
      {
       "titulo": "Luis Caputo: “Estamos mejorando la competitividad bajando impuestos, regulaciones y los costos financieros y logísticos”",
       "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOQ1RkWm1NYkQtbmlYN2FTTGR6dFlEUjFMM2s3VTJucm9HWmtOdlROTXNLdXVyQnE4RDhfam9kVUNwWG12RFFjcGN4Wlo5UkdIRHFKVEQtdl9KU200Y25CR0ZILUFzY2pVeFBvckJ0akhhZlgwOC0zOG85R1Z4cE1HcFEzOG56aTE4SUVURVU3OGpKWS13S29rVEZxN3JyelY2YXc2Y2szZnFBdUdBM0NKZUZWMW1JTFZycmlyNm9zTk8zVW5INFo2Zg?oc=5",
@@ -3345,15 +3330,41 @@
       "titulo": "Por qué la economía argentina crecería solo 1% este año",
       "link": "https://www.infobae.com/economia/2026/11/01/por-que-la-economia-argentina-creceria-solo-1-este-ano/",
       "fuente": "Infobae"
+     },
+     {
+      "titulo": "Camila Perochena, sobre la economía argentina: “No hay que desaprovechar otra histórica oportunidad”",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQTm1SbThEd2JEWUhBeW0yX29LQkNYaWR3YW1laldVQTZiTkxKTW5lbW1jM3drWmtrVnNWa0xxNWx3TjAwQnZyMnRlcmtZaXlMRmpzemk5M1E4emx1NF84MlBhd0hJQ05mR3JmRFZmQUFuT2tkRkNLNExXUDJ2Q0tLSlBkY3NGNExfYmxBZklEczVMZUExZjJ1ZkhtanhFS3NfRlNJTE1iYTBMS3FyckZCMFVuNlpJTUpvSVZKUTVNOXJXZjNldk9SWXhrdUVFcG0zck1jckpnUkE3dmM20gHiAUFVX3lxTFBEVXJyZmRLZ2ZvS3lIYy1tVnktVk4wR2t6Z2JHU191RUJ2X1FWbDBqYnpTcFFLMXowVFNsckc0anNjd3IwbG9LYTloN1BIV2plclgyS3RpZUYwaFVrMTR2NmlwS18tY3F6WWRkZGdxWnhuSHNqTlNNLXpiN291bmVyT0lkb0toRVJjWXhFWmt1VC1NTDM5MmR2RjBMTXFhQ0RqTWtBcnl0UE5KRlZkdjBMU205eHFrT0ZxOUZ3YjBoaHNLWlk3anV6U0JLVXpxME43YWcyOEYtWkljVGUtLXZFMVE?oc=5",
+      "fuente": "La Gaceta"
+     },
+     {
+      "titulo": "San Andrés Tuxtla avanza en el saneamiento del río Tajalate con la construcción de colectores sanitarios",
+      "link": "https://e-veracruz.mx/municipios/san-andres-tuxtla-avanza-en-el-saneamiento-del-rio-tajalate-con-la-construccion-de-colectores-sanitarios",
+      "fuente": "e-veracruz"
+     },
+     {
+      "titulo": "La casita del millón de dólares del exvocal de la Agencia Córdoba Deportes Mariano Schiaretti, hijo de JUAN",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPdFJlTGZkek1BRHRfaVRpdHQ0d3QySEVQOXpfSmZfRjZSR3lyQmFRdnd3VUVFeDlhc0R6Tk5hOEJnbm5Db1Q2aHhpVzQ5NVJJSmxDck0xY09lYjBpZTllN1NFeURDQjQ0YjN2cVREZVZfX1NqVVluc0NQc3MxTE1qSU1yLXBpQVZfVGpsd0ZTSHFleTRKbzJhWEU4WjluVE9CM0NJVEpuZ0I4TDNGb1FZZ0xiZE5LaGNTT2J5TFB3WE8zQ2dMZTEyOWtJV0x1YmxOb3RBenVueGRBYVhITlN3?oc=5",
+      "fuente": "Striptease del Poder"
+     },
+     {
+      "titulo": "Argentina, el país donde el crédito sigue siendo un lujo",
+      "link": "https://www.clarin.com/economia/argentina-pais-credito-sigue-lujo_0_vDY1OTkvih.html",
+      "fuente": "Clarín"
+     },
+     {
+      "titulo": "Créditos hipotecarios: qué banco ofrece la tasa más baja y qué requisitos pide",
+      "link": "https://www.iprofesional.com/realestate/467594-creditos-hipotecarios-que-banco-ofrece-la-tasa-mas-baja-y-que-requisitos-pide",
+      "fuente": "iProfesional"
+     },
+     {
+      "titulo": "Créditos hipotecarios del IPV: cómo inscribirse si todavía no tenés un lote",
+      "link": "https://www.losandes.com.ar/economia/creditos-hipotecarios-del-ipv-como-inscribirse-si-todavia-no-tenes-un-lote-n6012411",
+      "fuente": "Los Andes"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-04",
-     "hechas": [
-      "07:30",
-      "13:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-05",
+     "hechas": []
     },
     "semana": [
      {
@@ -4390,34 +4401,23 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-04",
-   "ultimaCorrida": "2026-11-05T02:46:06.394Z",
+   "ultimaFecha": "2026-11-05",
+   "ultimaCorrida": "2026-11-05T03:17:23.560Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": false,
    "memoria": {
     "celu": {
-     "t": 1793846766394,
+     "t": 1793848643560,
      "redes_hoy": {
       "publicaciones": 0,
       "historias": 0,
       "reels": 0,
       "seguidos": 0,
       "gringo": 0,
-      "errores": 4,
-      "reinicios": 15,
-      "ultimas": [
-       "00:45 No leo en qué cuenta está Instagram (intento 3/3). Reinicio Instagram.",
-       "00:45 Guardado debug/pantalla_004554.png y .xml",
-       "00:45 Aviso por Telegram no salió: <urlopen error [Errno 7] No address associated with hostname>",
-       "00:45 Error en memes_historia: No quedó en la cuenta soycordobes.jpg (está en desconocida)",
-       "00:45 Guardado debug/pantalla_004555.png y .xml",
-       "00:45 Conectado por cable USB (emulator-5554)",
-       "00:45 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "00:49 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
-       "00:49 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
-       "00:50 No leo en qué cuenta está Instagram (intento 3/3). Reinicio Instagram."
-      ]
+      "errores": 0,
+      "reinicios": 0,
+      "ultimas": []
      }
     },
     "avisoSinSenal": "2026-11-04T18:56:38.538Z",
@@ -4526,6 +4526,16 @@
        "00:49 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
        "00:50 No leo en qué cuenta está Instagram (intento 3/3). Reinicio Instagram."
       ]
+     },
+     "2026-11-05": {
+      "publicaciones": 0,
+      "historias": 0,
+      "reels": 0,
+      "seguidos": 0,
+      "gringo": 0,
+      "errores": 0,
+      "reinicios": 0,
+      "ultimas": []
      }
     }
    }
@@ -7276,7 +7286,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 249,
+   "corridas": 250,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7285,7 +7295,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-05T02:48:55.856Z",
+   "ultimaCorrida": "2026-11-05T03:18:53.083Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -7295,7 +7305,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-05T02:48:55.856Z",
+    "ultimoChequeo": "2026-11-05T03:18:53.083Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -7380,6 +7390,20 @@
       "https://bosio-central.uwuubuntu83.workers.dev/": [
        44,
        44
+      ]
+     },
+     "2026-11-05": {
+      "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
+       1,
+       1
+      ],
+      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
+       1,
+       1
+      ],
+      "https://bosio-central.uwuubuntu83.workers.dev/": [
+       1,
+       1
       ]
      }
     }
@@ -7603,7 +7627,7 @@
   },
   "mundo_economia": {
    "estado": "listo",
-   "corridas": 126,
+   "corridas": 127,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7612,12 +7636,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-05T02:18:54.636Z",
+   "ultimaCorrida": "2026-11-05T03:18:53.083Z",
    "resumen": "🌎 Mundo: economía\n\n• ¿Cuánto le ha costado a EE. UU. la guerra contra Irán y quién está pagando la factura? (UnoTV)\n  https://news.google.com/rss/articles/CBMiwAFBVV95cUxQM0E5Y0VwUjJOQ2F6eEN0czRGeWdFbTg3dGRHbkdxYnFpekdt",
    "informe": "data/informes/mundo_economia/2026-11-04-2020.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "el gobierno de canadá presenta un presupuesto para reducir su dependencia de eeuu y reforz",
+     "ataques rusos asfixian lentamente la economía de ucrania - seattle post-intelligencer",
+     "ataques rusos asfixian lentamente la economía de ucrania",
+     "rusia: una fiesta rave en la biblioteca lenin de moscú escandaliza a los conservadores",
+     "nvidia ordena a sus clientes de centros de datos que reduzcan su exposición a china",
+     "colombia enfrenta una doble tensión: escalada de violencia guerrillera y controversia por ",
+     "el fmi inicia la revisión periódica de la economía paraguaya en una reunión con autoridade",
+     "japón pide desde hoy a su población guardar agua y comida para una semana: qué conviene te",
+     "apredeflación rebasa crecimiento",
+     "asia se rompe en dos: corea se dispara un 2,53% mientras japón cae",
      "un nuevo pilar en la cooperación entre vietnam y japón.",
      "canadá busca reducir dependencia económica de eu pese a resultados de elecciones",
      "tere jiménez y cónsul de estados unidos acuerdan fortalecer cooperación en seguridad, econ",
@@ -8207,69 +8241,9 @@
      "el cierre de la planta de nissan en morelos desploma la economía y las exportaciones - 24-",
      "el yen japonés se debilita ante un tono menos restrictivo del banco de japón, mientras los",
      "rreuse reclama a la ue un iva cero para impulsar la reutilización y la reparación en la ec",
-     "daca apuesta por japón para reactivar el crecimiento y las inversiones",
-     "la ia impulsa el crecimiento económico de ee.uu. hasta el 3,4%",
-     "china cambia de socios, crudo en tregua, wall street encarece el crédito y la ia exige bal",
-     "yolanda díaz y su homóloga china comparten su interés en regular la ia con el foco en los ",
-     "latinoamérica no debe elegir entre ee.uu. y china, sino diversificar, plantea la unctad",
-     "la economía creativa apunta al mercado chino, las exportaciones alcanzan los us$9,99 mil m",
-     "sir alexander wykeham ellis, embajador de reino unido en españa y andorra: \"reino unido co",
-     "los gestores de residuos reivindican una economía circular ambientalmente ambiciosa e indu",
-     "¿qué se juega wall street en las elecciones de medio término de estados unidos?",
-     "geely traerá sus proveedores a almussafes: «los costos en europa son hasta un 100% más que",
-     "claves de la nueva tasa al comercio chino"
+     "daca apuesta por japón para reactivar el crecimiento y las inversiones"
     ],
     "bandeja": [
-     {
-      "titulo": "El FMI sitúa a Japón en el sexto puesto entre las economías del mundo para 2027",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1PM09iN1B4VEoyNFRSZkJpRGlhY0pZSVJlLWl4SjZFNnVlQmlkUGtLRUZPWV9GU2VPMFFWa0QtREdvWDFyZkNlS0h4V1J0cDAwOG9aaQ?oc=5",
-      "fuente": "Nippon.com"
-     },
-     {
-      "titulo": "(Video) Estudio destaca impacto positivo de plataforma china DiDi en economía, empleo y movilidad urbana en Argentina",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5CTEpHN19FVGNzRkFZOThucDJlM2ktcEtJWDk0VVBfbk5fZUFvZXJaMjlRODZ4UUlDRlJqWmdWX1dzdU00ZmVWUVpQclJnd0FqTzNLWXVJOUhiZjUyZnZWbUdrdkRTbWx2a0laZjJneFExM0FVNEFYY0tDWG8?oc=5",
-      "fuente": "新华网"
-     },
-     {
-      "titulo": "México debe fortalecer relación económica con China pese a presiones de EU: expertos",
-      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQU3o0aUpUX1d4TUJXYU1JUnMwcFRPbXBXRHdZaXh0bzdJQVEzOGVfUkN2R0J4LVpfdTB4QldwOE90UzhObnhqSWp6Tld4aXp4a2dSRlU4dUY1cFRsVkNiVENyVUhkNENwckg4ZGdCQjRGQ2VEU1dMU3E3RWFQLUQtZkVfTUVockRGbzdqUGJwYlkxRlJzc0V3ZFBDUDI4aTJrTHR4M1NOdlJZaGY3S2I3NHdvdGhYUkl4OXplZmJ5X0c1V2lmMHNBaEU0bmJtSGNjamZibA?oc=5",
-      "fuente": "La Jornada"
-     },
-     {
-      "titulo": "El Gobierno anunció un nuevo Argentina Week para 2027 en Estados Unidos: cuándo será y a qué sectores apuntará",
-      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNSmNZSi0yam9mcXhESnpkTDcxMWF6LVJGeU9QT2p2dUJ2cUpxbFBONmNfbTNkZm5MRzh2TEFkLTZzM2ctWFJOTnNtcFN2aUtZQVg4WWhEMDF2WVFwTHZUN3ExSDdDVFp4MnpiWDVyVEhzWWZxRlREek5qZTFVRU9BejFCTHFVeUJiTXpzZTlhMmZyU09RRTRYdjhtT0dWaHBDXzRLOEZ3MlZ3RUYta3B3bm9qNV9uQnBTM3puSWRLVDcyZWhCRW80QWFwYmV4ZlNiWmcwb1VoWFpHWUhBMm9VMnZ6MnU4NW9Hb0HSAYQCQVVfeXFMUHpuNW5OSkltTk5QTEtfeG9CcWtUZXBvQmV6RDZIT0w2TFV5dW1qNTNDTVNaWGNaZHFtUF8zU1pxUW9MM1lVQm1FTk1ZU3d5MjFJRkdfSnpKNkQ1UlRoRUtxUThOR1Y1LW1Qb1NCT2VpQndsWUY3Y25hdTZCRS1QWGVHZ1FaS3hqQ2NDUkt3VmZ2RVh6LXZRTi1UcEQydjNveE9aOXg5aE15SkhHQ1phcXN1by1ITWdqeHpuQWlRcS1ZMDJQeEYxM3BjLWFFaHhQSS1xM19EQW95cW05UFZZTHF0T2J4VC1IVm9sX2hmVjZ5X0VweFBGRDBtZ1Voc3RyVllmV1g?oc=5",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "Alternancia política en EU modificará poco la relación arancelaria con México: Ebrard",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOcHZUVVdIQkxNNWItZ2g5a2JBcThFUUtsN0VwSWRnTkFaLUV6eWk5RkdCN3NkTFhZTHFtTlU4UTFaODJuRjlTTWZPLWhVaDJ5cEt2SDFFUEs3RTlhTjQ0bVpkM01XYlVQZTVodnVyckNDUHAxbXdVMFJic2R1VHNZdkFMUEtQZmlYNmx5SDloTk9RNDFPWUxBYVRfQ010WXVLdXFDT1ZySmNwSWR2bzZwVTgtQ0pHZ0hFYWRXRXA5d0pNaDlhTlhFcFJQNWtuclZWRVFvU3h3?oc=5",
-      "fuente": "La Jornada"
-     },
-     {
-      "titulo": "Las claves de la victoria histórica de los demócratas en EE.UU. y qué supone para Trump",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE00TVZZWVlGY0ZVdzRrSVdyUDd3ZGMtV1lubnhSY0xjeWxHYWdnRTZWVGlVOTBUeGxTcVhQbnVXTkY5ZWg3TEhocEJrMHBTZmFLek1sZUJWdTI?oc=5",
-      "fuente": "BBC"
-     },
-     {
-      "titulo": "Economía, inmigración y costo de vida: las claves del rechazo de los votantes hispanos a Trump",
-      "link": "https://n.com.do/2026/11/04/economia-inmigracion-y-costo-de-vida-las-claves-del-rechazo-de-los-votantes-hispanos-a-trump/",
-      "fuente": "N Digital"
-     },
-     {
-      "titulo": "Brasil ante una nueva etapa política: el impacto de la continuidad de Lula en el comercio regional",
-      "link": "https://www.infobae.com/revista-chacra/2026/11/04/brasil-ante-una-nueva-etapa-politica-el-impacto-de-la-continuidad-de-lula-en-el-comercio-regional/",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "Automotriz china Lynk & Co cumple un año en México",
-      "link": "https://www.eleconomista.com.mx/autos/automotriz-china-lynk-co-cumple-ano-mexico-20261104-842215.html",
-      "fuente": "El Economista"
-     },
-     {
-      "titulo": "¿Por qué los hombres viven menos que las mujeres? El patriarcado también los daña a ellos",
-      "link": "https://www.eldestapeweb.com/sociedad/hombres-viven-menos-mujeres-patriarcado-dana-ellos-2026114124953",
-      "fuente": "El Destape"
-     },
      {
       "titulo": "Piden incluir a Reino Unido en 'Made in Europe' para competirle a China • Economía",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQejRfdWp6ekNkTjhQV1ZlNUI1SnhWbVRpQ1YtR2VmUVEwNDl5LWxiMTFndW5VaTB1aFBwOF9kbE8yV0JiSW5XLThzVHF0eE9aeWJQeGFFekRfZ09yVVFxSUx0U2ZnVjdSQVJ0NmFFX09oeHVhZmZEUG5ZdTJJVS1SSU5qOTNTRUxxS2luZU9HX29tQksxUTg0?oc=5",
@@ -8369,17 +8343,63 @@
       "titulo": "Con ausencias notables, arranca en Madrid la XXX Cumbre Iberoamericana, una cita clave para Pedro Sánchez",
       "link": "https://www.clarin.com/mundo/ausencias-notables-arranca-madrid-xxx-cumbre-iberoamericana-cita-clave-pedro-sanchez_0_XYLKfmqgbR.html",
       "fuente": "Clarín"
+     },
+     {
+      "titulo": "El Gobierno de Canadá presenta un presupuesto para reducir su dependencia de EEUU y reforzar su autonomía económica y comercial",
+      "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNdFhyb1gwOUNqOGpWNGxCVnQ0djVtVVo3MnUxTkFNTUtXU2NHamRKdnhjM2tPd3Frb3BQZVR3UkVoSjdWdUxCcmlsaEtYY2h1TUZFWi1QWS1yUlY5b0pCeDVicU1KXzRwbk1uQlVVQTlXaHZFYkJSZjZJbkx6SUswU29hUVU4ek5kXzM0SU85MEk4LVEtbXZ6Y3pGbVlTY2tyOERGVk5sWXd4VTF2YkZUOS11QUMxQUlZV3g3TEZDSHZiXzRqN3RrT3VWZlFUWGJLR3RGZC1OWENEY1Jjdmx2V2s3VDFOQ3JaNFJja1NxRHB5QW1iLU5GU2g1M0dpTDJlUWhNSmhNbm7SAaMCQVVfeXFMTmUxVmF3VHhSMlM2Y0RGRDQ2OHdmTmJDYkp2eVJWM1pOUUpBQW9iRTJkYnBqWWNYRG1pRzNyS3pybXZZV1MxR0dleWF6bl9rb2U4cXJQZllyZGJjWjRYNXNHT3lJVk40RlFJdnFzamlmNGNzV0Q3dmVYWkVHeno1TjdZb0xCYnNXQVVENW5sV29tS1dEUmJ5SzBBazAwbzJrME1NMHp4Nlp3UEpjMDFsc1R1U2wxZDRqMjVKYUVUcTB3NXlfR0Q4dTVobnRfYk9nOVJMcEFoTllZLXVabG1BcWRBaXowakhQUm15X0Vub0VEY2x6dC1CM3B0RS1sSVlEXzFDSmdEVlp6WjdjTkY0UTA4X0Q1ejJiTzQzS1lpdzNRWU1J?oc=5",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "Ataques rusos asfixian lentamente la economía de Ucrania - Seattle Post-Intelligencer",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQR196dDRJMTZXZkNmNnYtQV9DQ2sybnB0akFWZThTOEhSdGxYVGJCcEM5d19MeGUwUXVIdHZ5MmI4Ri1sUkkxVlJrSkdiYU5pRnR2SGJwV05sRFBNbDBIZDJjeUZuWGt0VzJaMGZ4U3Rpc2puVDQxd2doY3J1Qi0yb01BMmZZY0hzUXBsY0NfQUUzOFZ2aXFpQWN1SQ?oc=5",
+      "fuente": "Seattle Post-Intelligencer"
+     },
+     {
+      "titulo": "Ataques rusos asfixian lentamente la economía de Ucrania",
+      "link": "https://www.msn.com/es-us/noticias/mundo/ataques-rusos-asfixian-lentamente-la-econom%C3%ADa-de-ucrania/ar-AA2gLXX0",
+      "fuente": "The Associated Press on MSN"
+     },
+     {
+      "titulo": "Rusia: una fiesta rave en la Biblioteca Lenin de Moscú escandaliza a los conservadores",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPc0hxT0EwY3lWY0lJZlctSmhfNEJDYkxScko2Njg0MUJDWUwxMWhkSGNqRDVLaUp3bk5wZkQyVUVUTkJyaENkQ013eUI2WmFGSWpmM0R0dEJpSTNMRjNzeXd3SUFOQ0ZIUzg3WjNua25uVjBzc3dCUlkwR0Y4cUUxN19vc1FhRHYweUlzUTE2QzZqQWVUTi1CSElzZDk0WFVUb014WnY4Qk9tdnoxT2hpU1J2QndXZjVnOGNZYzdEZF9MSU5oM3hz?oc=5",
+      "fuente": "RFI"
+     },
+     {
+      "titulo": "Nvidia ordena a sus clientes de centros de datos que reduzcan su exposición a China",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPMEVsRnl0RGtseGRNUWlFbHJkbHQtMU90QVp3b2pyTXNZWVpkWHhGU1o3YTM5SzVlN3hoUmh4VEwxb2dObVRTNTNTUWlhOGNJT0dDNmpmNmdTb3lGQm9uN2t3VVYzT2xjNGc1c1EzeG5EbWxGbzNoRTUtaTFndkh0eVliX2dMTGpERm45TlBYLWtkOVVoOEFzOFMwUVdpd3hybXNkTmd1MjhtdTltN3p1Z0NrRjRBc3FnOVlRZlRlcVpCTmQ3c2RwS9IByAFBVV95cUxNOFFqT1RTNjFyOTRYWkxubmtmMmVOZ1ZpUVNWS0FJQ1VqMHJ5dEkydU1uOGZVWkN0SmtRVFp4MWpyRm0wdjNTMVd4TzV3b3lWckpRQzdrQjE1c0w2ZE9fQWd5QUtqbFpOOVkxUGJSclZqX1psUWxoM1R5NGJBTlpzZmJCNUR1VGprcFZwSlhFRXB5Qk16VjdlU1NMWmhyX181S3ZGY0c1ZDRUZTBrR1d4dTBVbW9zOHEtcUxzYl8zN2U0VF9DMUI2WQ?oc=5",
+      "fuente": "Expansión"
+     },
+     {
+      "titulo": "Colombia enfrenta una doble tensión: escalada de violencia guerrillera y controversia por el IVA del 19 % en productos de la canasta familiar",
+      "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQZGRJdHVDclNFc2hQTlRTVFo2clcxbXdxanU5REhPUmRyRnU0djJueDRyN2I0N0QtaXItWk5UbTFDc3VIVjFXcFNYNXZjXzhIQjZwUGxLNkVBX3hwd1RsSkVJaHY2YXFxWURRSk9rY2ZwWGtEd2hTbGg5YlVVN2pQZGhXVEFmejNxQWhLOFN1Qi1aZENNZDhWLXA3NXRWXzZJb2lJT1J4TE9yZWMtYTlnd2JRMVFfU0FjRjBNWlNOMGhiTF9zN3o5UWhRTzd6YXhsUndMXzg3VjM1QUdVVFByM0hSSFBXdlJoNDlpTFNZaGVQUXJiVW1kZS1QeWxpRjQ?oc=5",
+      "fuente": "contrapunto.com.sv"
+     },
+     {
+      "titulo": "El FMI inicia la revisión periódica de la economía paraguaya en una reunión con autoridades",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQVmFWbVBVbUVuS2Fid293VlpDMWdwR1lWVllDQzBtQzhhR1NrS3JaYjlBVHA0ZXZacUlBZHRmbUR0Y2JneFVDTkZTQU9PX0t3anhwVG41NzIyTzJsc1psX2g1b1ZtNzVCalpEV3RYRFRGTEI1a0hVYXNzUFk0WXNQTUh2clh6OGhRa3JqZmJoN0VHVGR0bUE3VkpQanlOREdfRHAwNGxFX3pkZHBjc2JtSkc5QW5XZVYtVnA3Y2hobkhWN3VVU3dTLXRUTWZqWG5FWVpxTGlxZEd2dGls0gH3AUFVX3lxTE5tR3Z3TEFlSFR0WDFleDZQMEtDdUdBVk9xc1ZrMDJKaWVHU3BLSk1DNGZRd1k2QV9ueElOMjhjNXdoREhFdWtuZ09vZVd0ZE9EdERXREZrUUw3S3NqLWF5TllBMTRkRjFuZndhd1Bnbm1WS2lBd0xOVUhVMVBtczQ1R3dQWERfR2taNWpLUnNRN3JTekNnUERteU9mWDVTVy1JRzd6dW1VS09EamF3X20tSkxXMldsNVhENy1aY1FLYkJneHpOcVp1QTVQZ3c0amVoNTROc1hhQzZxWmdzVDl3Tk9CbDJ1RDZ3SkxWLU1NM015bW9Xd0E?oc=5",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "Japón pide desde hoy a su población guardar agua y comida para una semana: qué conviene tener en RD",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQTFBnb0dhTkkxV1lVZGZjT3NodUNPeHdaRUtNUkZ5VHNoWUF2eXp6R3lqeVhHU0JZckRTQWRBa1dvQ0ExU2xQMFpkREFpRHdRM2JsTlE1UGw5eldHNUdSd09MSDg5MkRPMG9vVlBLdnBzeXFFUE0xMi1aVVdkOUhQRDlJUmZfTHhzc1dlc2M3dTVBTkt3dGxLN2RfRzJLY2kwTTkwWC0tUQ?oc=5",
+      "fuente": "Revista Mercado"
+     },
+     {
+      "titulo": "Apredeflación rebasa crecimiento",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOSHpPMjlwOGl5WDJKcDhQRy1aSEU5bHAxMkU2WGpScmZiaFFmS2Nwa2VJUm43bjduM0RXcTBIY3NLUGlMX2x5cGZfNjBqSlo2RHlsNkl6azd3bE1OZVZZS01XWDVFN2RBVS1VWVZWajZRUjU2RWFxdkRFRUlXSDFuS2F3?oc=5",
+      "fuente": "El Heraldo de San Luis Potosí."
+     },
+     {
+      "titulo": "Asia se rompe en dos: Corea se dispara un 2,53% mientras Japón cae",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPcXN0Wkc1UDI2SG0ySFktTHV3WlUzTnQ3Q1c5Ml9nREVKT3loVm02ZGZVT3VfTDRzVHBncEpHY0NnSU9FNlJ2UTUtOHl1LVh3OEdPTE5RVXROdzgwemdZbGh0TnNsZm1GSmVsQVBnSy14SVBoOUpkWU5zUzNCeGh4NGhxS0VDWjhQdjlkOG85eTZyOEVKQXlBYzRlR3lHUWtVRFY2ZnQzYjNraGRpQUdLYdIBtgFBVV95cUxNMjYwalVNb3hpMk92RjBxa2FTcTE2YkY0c2U1cWhHV1hJVEJGSGt2bTRESmo4TnBVN0pLcElyV1hIeXJNREExckVTNVY4VGVTREVKVWhYS29iMnRaTzJEV3BFVEdTcHdQbENNNldKYmszUDBYMHR0c3BvSHpMUDVLVTlnTTE4RkJNYXhJZ3dmUkVnWVdsTzF0Q2tJdUllV0xIaGE2Vk0xZ2liUHY3RGpTZk1XMlAtZw?oc=5",
+      "fuente": "Negocios.com"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-04",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-05",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-05T02:18:54.636Z",
+    "ultimoChequeo": "2026-11-05T03:18:53.083Z",
     "semana": [
      {
       "titulo": "Alerta por el impacto de El Niño en la mortalidad mundial: qué se prevé en Argentina",
@@ -9346,7 +9366,7 @@
   },
   "mundo_tecnologia": {
    "estado": "listo",
-   "corridas": 126,
+   "corridas": 127,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9355,12 +9375,15 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-05T02:18:54.636Z",
+   "ultimaCorrida": "2026-11-05T03:18:53.083Z",
    "resumen": "🌎 Mundo: tecnología\n\n• Las elecciones estadounidenses y el optimismo tecnológico impulsan a Wall Street antes de la apertura; Asia presenta resultados mixtos, Europa registra ganancias. (Yahoo)\n  https://news.google.com",
    "informe": "data/informes/mundo_tecnologia/2026-11-04-2020.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "europa busca minerales críticos en asia central y los productores impulsan el procesado lo",
+     "rusia sufre un ciberataque masivo y desata el pánico por falsas alertas nucleares",
+     "el imperio solar de china: cómo conquistó el negocio de los paneles y dejó a europa a merc",
      "un nuevo pilar en la cooperación entre vietnam y japón.",
      "toyota fabricará en japón los bz4x autónomos de waymo para su despliegue internacional",
      "guatemala acoge la korean wave expo 2026 y pone en perspectiva sus vínculos con corea del ",
@@ -9957,10 +9980,7 @@
      "china destina us$44,5 millones a genética agrícola: el desafío para américa latina",
      "corea del sur anuncia inversiones récord en inteligencia artificial",
      "rusia reanuda los ataques contra la región ucraniana de jersón tras el fin de la tregua, s",
-     "el instituto de villamayor llevará su apuesta por la tecnología y la innovación educativa ",
-     "los inversores en renta variable estadounidenses seguirán de cerca el estado del comercio ",
-     "límites de la soberanía tecnológica en el rearme de la defensa europea",
-     "omán y china refuerzan su cooperación en comercio, inversión y tecnología"
+     "el instituto de villamayor llevará su apuesta por la tecnología y la innovación educativa "
     ],
     "bandeja": [
      {
@@ -10092,17 +10112,28 @@
       "titulo": "El FSD Tesla Europa se acerca: Italia respalda la homologación y esto es lo que podrá hacer el coche",
       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA3aWZUSVZjVWtJZG1sVE5EQWMyb2JPYlAySVlTdkpYc2NNb0czNDdNODM0SmZRbGN6S0I0UHNCa0ZMcUpLSnZOY1VKa0RQV0xNWUR6UUQxS0V0WGQtc1ZTSGJHaC03Zkd0eHpBQ1pGbVplaS1tNkE?oc=5",
       "fuente": "Motor16"
+     },
+     {
+      "titulo": "Europa busca minerales críticos en Asia Central y los productores impulsan el procesado local",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPLVVieGt4ejRtM1phVmlMMnFCU1pRREJLOHlyM1ZQSDB5RXZrd1duX0l6bkZ0N1BvMFdqODNrenNnSFBJYzBFaWUtYWNpdFFfeFFSR1RSUzNqSDR0U3MxNVU2TU1KV19xY0d6ZHNfeVV6V0dsNERsZm1KTkcyNHFrZzhfZm1QSFY5V21wUFFnbUhaTDllN1FqbTQtY3lENmRodk5lbkNGaVZ5OVlvMVRDcnY4REZKblZhTEVfWTNR?oc=5",
+      "fuente": "Euronews.com"
+     },
+     {
+      "titulo": "Rusia sufre un ciberataque masivo y desata el pánico por falsas alertas nucleares",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNamlZV0JoQkU1c292QXphaFVGeVhBYUdlODBEQnRKaTVXclQ2R2lvMW5wNl9uVmNEbUhqNDk2Tm1UMW1nWWRXY1JiQW1aTmNzWGhJRndVcWtfV2sxQjZxRFdmeDdhbUV0NGExS09kYmJIWFNseHFCOUpZUHhyM2RORkdNWHZxaFRidlRRV0IzR3FYZG1KbUFLRlF0WmZyRGxUVGFoTWM1aUFCc3VGTDlIUmwwUVpiYUtFQldlckRYZUVqNkRzNE5LWXRkYWdXbnNBQWJ2ZldyMnFwaFhaU3RR0gHkAUFVX3lxTFBLbHlLLWFaTGhOVUEwbl9zcjFOVTY3bmZtVmRVU3ZacG84X0V1RnQ1eDM5b1ZDS04xQnF3QmhyMTBXaTRjb3lBbXppQnJTWm83NE9XaWhicFBDODZjeXJIRjlYcWpmNWJVR0tFRmplT2liWDJtVDh3aEwyekRUZE1lUXV1Z1k5UmJLWnBXWHlXY2t1UVhRRGxWaUlrN2xLU1B6X1dualFhb3JFWFN3NHRUazNDRGtEN3BCNXBhb2s1aHBDc3UyeGRiX1BuRXdOT0xaRS1EOFFDOWktcnU3Zzd2MVJLcg?oc=5",
+      "fuente": "Negocios.com"
+     },
+     {
+      "titulo": "El imperio solar de China: cómo conquistó el negocio de los paneles y dejó a Europa a merced de Pekín",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNVFI3MkFvaVZmaHBybXhMbTZVc3NuMmVjNGZYeTFEek8ydnA1TERBTVRydVgzOE01ZjNHZW5IVGQ2QkFsbW84WXJTdlpPWWJPWFNiejFJbkdmem5Od25DRmdkakFHWV95QzJjandLU2RiUTBzVnJTWXdyR1VKMnlHUjVUNTVhYXhFNDZNSk5kSWhXMk9lSDQtdm5DVEFwaGZubGpJd2xiZS1yck5VUS1vTmwtLW0wb3BuZE82cms2ZV9jekE5aDFudFNha0pWN1pQNnh5c2dVTG5rbFl5di1BdTFva9IB4wFBVV95cUxNVFI3MkFvaVZmaHBybXhMbTZVc3NuMmVjNGZYeTFEek8ydnA1TERBTVRydVgzOE01ZjNHZW5IVGQ2QkFsbW84WXJTdlpPWWJPWFNiejFJbkdmem5Od25DRmdkakFHWV95QzJjandLU2RiUTBzVnJTWXdyR1VKMnlHUjVUNTVhYXhFNDZNSk5kSWhXMk9lSDQtdm5DVEFwaGZubGpJd2xiZS1yck5VUS1vTmwtLW0wb3BuZE82cms2ZV9jekE5aDFudFNha0pWN1pQNnh5c2dVTG5rbFl5di1BdTFvaw?oc=5",
+      "fuente": "Vozpopuli"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-04",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-05",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-05T02:18:54.636Z",
+    "ultimoChequeo": "2026-11-05T03:18:53.083Z",
     "semana": [
      {
       "titulo": "RODMENA: infraestructura soberana contra la IA de EEUU",
@@ -11069,7 +11100,7 @@
   },
   "mundo_salud": {
    "estado": "listo",
-   "corridas": 126,
+   "corridas": 127,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -11078,12 +11109,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-05T02:18:54.636Z",
+   "ultimaCorrida": "2026-11-05T03:18:53.083Z",
    "resumen": "🌎 Mundo: salud y ciencia\n\n• Voto latino impulsa triunfo demócrata y lleva a dos mexicoamericanos a gobernar Texas y California (La Opinión)\n  https://news.google.com/rss/articles/CBMizAFBVV95cUxQZmZGd2o5UTk3NTN3MmJsM0M4",
    "informe": "data/informes/mundo_salud/2026-11-04-2020.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "en el congreso de puebla, méxico y rusia fortalecen los vínculos culturales y académicos",
+     "el fmi sitúa a japón en el sexto puesto entre las economías del mundo para 2027",
+     "talla baja: el desafío de garantizar salud, autonomía e inclusión",
+     "abdul el-sayed hace historia como el primer senador musulmán de ee. uu.",
+     "en vivo: elecciones en estados unidos 2026 | así avanza la jornada electoral, el congreso ",
+     "tras un diagnóstico de cáncer, cuáles son los hábitos alimentarios vinculados a menor ries",
      "godzilla minus zero: godzilla regresa a japón para desatar una nueva catástrofe",
      "investigadores de incar² tendrán una amplia participación en el xii encuentro anual nenre ",
      "transporte subsidiado fortalece conectividad terrestre entre puerto williams y sectores ru",
@@ -11677,20 +11714,9 @@
      "\"me quedaban tres meses de vida\": la ciencia que ha transformado la salud en cataluña",
      "descubrieron un nuevo dinosaurio en neuquén y lo bautizaron en homenaje a una científica d",
      "maría neira presenta en copenhague su proyecto para liderar la oms arropada por mónica gar",
-     "científicos descubren los 'músculos' ocultos que permiten a los árboles enderezarse",
-     "¿cómo afecta el horario de verano a tu salud?",
-     "la mayoría de los médicos en estados unidos apoya un sistema de salud pública",
-     "la otra selección: los 12 científicos cordobeses que merecen salir a la cancha",
-     "leo messi echó raíces en perú: el curioso descubrimiento científico que homenajea al futbo",
-     "así es el descubrimiento científico que abre la puerta a un nuevo tipo de plástico más fác",
-     "bizkaia refuerza su alianza estratégica con la organización mundial de la salud para cambi"
+     "científicos descubren los 'músculos' ocultos que permiten a los árboles enderezarse"
     ],
     "bandeja": [
-     {
-      "titulo": "De una posible exoluna a la evolución de las galaxias: Concierto Cielos unirá astronomía y música en vivo",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOSFFDTmVWbzFSTFNMQXFJaHAzNkZQcmx4UjVSTENqVkE2MVc0ZWQ3YVhGNXQzbHhrVk41QzI0elkxbDBVOFVVV3d0UThRaEhaYTQ1emdSdmVRX3dqNUlWdzgzVzhEX3dDYXA4ZkktLWdMMVh6czMtNUh5YUdGTXVmX0xMT1Y5WGhzajJTYlFqVERMZVNXdllIbWpDcUN5Zw?oc=5",
-      "fuente": "Diario Usach"
-     },
      {
       "titulo": "La contaminación del aire en Nueva Delhi superó 30 veces el límite diario recomendado por la OMS",
       "link": "https://prensamercosur.org/2026/11/04/la-contaminacion-del-aire-en-nueva-delhi-supero-30-veces-el-limite-diario-recomendado-por-la-oms/",
@@ -11810,17 +11836,43 @@
       "titulo": "Etiopía y Rusia fortalecen asociación y van por más",
       "link": "https://www.prensa-latina.cu/2026/10/29/etiopia-y-rusia-fortalecen-asociacion-y-van-por-mas/",
       "fuente": "Prensa Latina"
+     },
+     {
+      "titulo": "En el Congreso de Puebla, México y Rusia fortalecen los vínculos culturales y académicos",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOdFJ6eDVqRjhYbkZJQ3RxbF9CVVIxR2tTZHB3OHV4b2JaYjV5aE12TUZoc0NpaDRwMXV4WjZvRHFtUzJkWTJtZmppUDBKemJfemxxSnpPbUVkVTRqVThuc2xXYVQzbW1SeWxCUkY4aDBtZEp6SW5xeHExQ1RqX0szdWdwNXFGWWNMWHM2dlExdjF4NEhLdXpHUnpXaEF5VEFnOGdNRzEzMnFmTjJ3REhlbTVoOXJubXNnX2V5emc1YkNCUFdKM25OOV9lVVpGQQ?oc=5",
+      "fuente": "La Jornada de Oriente – Puebla"
+     },
+     {
+      "titulo": "El FMI sitúa a Japón en el sexto puesto entre las economías del mundo para 2027",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1PM09iN1B4VEoyNFRSZkJpRGlhY0pZSVJlLWl4SjZFNnVlQmlkUGtLRUZPWV9GU2VPMFFWa0QtREdvWDFyZkNlS0h4V1J0cDAwOG9aaQ?oc=5",
+      "fuente": "Nippon.com"
+     },
+     {
+      "titulo": "Talla baja: el desafío de garantizar salud, autonomía e inclusión",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1nMUlRNGt6cFh0U0YxTUZPalBzRFBYc3FrVG8ySTlsUEk4ZG9Kaml0QmtzX3FNRmxOTzF3Nm5hYkw0eFJ2VjRBSjJ3Z0NsQlU4c3ZHYzBfNUdDTmxaeWJiTy1kcUhLZDBqY1A3WDZMOVVncTVlbXI1a2tObFo?oc=5",
+      "fuente": "Agencia NOVA"
+     },
+     {
+      "titulo": "Abdul El-Sayed hace historia como el primer senador musulmán de EE. UU.",
+      "link": "https://www.idnfinancials.com/es/news/71283/abdul-el-sayed-hace-historia-como-el-primer-senador-musulm%C3%A1n-de-ee-uu",
+      "fuente": "idnfinancials"
+     },
+     {
+      "titulo": "En vivo: Elecciones en Estados Unidos 2026 | Así avanza la jornada electoral, el Congreso y las gubernaturas hoy 3 de noviembre",
+      "link": "https://www.msn.com/es-mx/noticias/otras/elecciones-en-estados-unidos-2026-en-vivo-todo-sobre-las-midterm-donald-trump-y-gubernaturas-hoy-3-de-noviembre/ar-AA2gFa6R",
+      "fuente": "EL IMPARCIAL on MSN"
+     },
+     {
+      "titulo": "Tras un diagnóstico de cáncer, cuáles son los hábitos alimentarios vinculados a menor riesgo cardíaco y más longevidad",
+      "link": "https://www.infobae.com/salud/2026/11/03/tras-un-diagnostico-de-cancer-los-habitos-alimentarios-vinculados-a-menor-riesgo-cardiaco-y-mas-longevidad/",
+      "fuente": "Infobae"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-04",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-05",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-05T02:18:54.636Z",
+    "ultimoChequeo": "2026-11-05T03:18:53.083Z",
     "semana": [
      {
       "titulo": "Qué es la ansiedad por inteligencia artificial y por qué preocupa a los expertos",
@@ -12802,13 +12854,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-04",
-     "hechas": [
-      "08:30",
-      "13:00",
-      "17:30",
-      "21:30"
-     ]
+     "fecha": "2026-11-05",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-05T00:49:56.570Z"
    }
@@ -12830,10 +12877,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-04",
-     "hechas": [
-      "20:30"
-     ]
+     "fecha": "2026-11-05",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-04T23:49:53.578Z"
    }
@@ -12940,10 +12985,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-04",
-     "hechas": [
-      "09:00"
-     ]
+     "fecha": "2026-11-05",
+     "hechas": []
     },
     "instruido": true,
     "ultimoChequeo": "2026-11-04T12:01:54.698Z"
@@ -12966,17 +13009,15 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-04",
-     "hechas": [
-      "21:45"
-     ]
+     "fecha": "2026-11-05",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-05T00:49:56.570Z"
    }
   },
   "noticias_tec": {
    "estado": "listo",
-   "corridas": 126,
+   "corridas": 127,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12985,12 +13026,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-05T02:18:54.636Z",
+   "ultimaCorrida": "2026-11-05T03:18:53.083Z",
    "resumen": "💻 Lo último en tecnología\n\n• Lanzamiento de SWE-2 Flash: qué se ha lanzado y qué puedes llamar (OrcaRouter)\n  https://news.google.com/rss/articles/CBMiekFVX3lxTFBpV211RzhMaU9xTXBtaFJMcm5DcGVtdC16bm52SGxYdnRpaDFxam1NR3Bo",
    "informe": "data/informes/noticias_tec/2026-11-04-2120.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "gpt-image-2.6 vs gpt-image-2.5: el coste de un cambio de una línea",
+     "alerta de ciberfraude en la unvm: advierten por correos falsos que buscan robar contraseña",
+     "tienen batería extrema y potencia para juegos: los nuevos smartphones que acaban de desemb",
+     "más allá de los celulares, una apuesta por el hogar conectado",
+     "xiaomi se expande en argentina: lanzó los celulares redmi note 17 y sumó electrodomésticos",
+     "google, microsoft, openai y anthropic aceptarán una sola línea en robots.txt para decir «n",
+     "google se suma a openai y anthropic con una señal común contra el scraping para ia",
+     "spacex apunta a 80.000 sitios celulares y eleva la presión sobre las telefónicas de ee. uu",
+     "google prevé admitir un control compartido del entrenamiento de ia en robots.txt",
+     "valle tech incorporó una máquina que permite personalizar fundas y accesorios de celulares",
      "ia en retail: el 39% ya compra con ayuda de algoritmos",
      "aformic capta usd $6,95 millones para llevar robots autónomos a centros de datos de ia",
      "google desactivará por defecto la ia en cuentas escolares",
@@ -13580,17 +13631,7 @@
      "patinetes en tuvisa: qué permite el acuerdo vasco y qué falta por decidir",
      "una empresa de vitoria participa en un proyecto de ia contra el crimen en las cárceles",
      "cómo comunicar un incidente de ciberseguridad",
-     "air alert recupera funciones tras enviar falsas alertas de radiación en ucrania",
-     "adnoc firma un acuerdo plurianual con openai y g42 para implementar ia de vanguardia",
-     "claude: max 20x pasa a ultra y quita el límite de 5 horas",
-     "rtx remix lleva el trazado de rutas a minecraft",
-     "gitee, el github chino: 26.400 credenciales filtradas",
-     "el fbi liga robo de criptoactivos de binance a corea del norte",
-     "nvidia y meta amplían su colaboración en muse y su familia de modelos de inteligencia arti",
-     "apple presenta la mayor actualización del ipad mini de la historia con pantalla oled y chi",
-     "con sello cordobés: global think technology certifica la norma iso/iec 42001 para la gesti",
-     "agentes de ia en la empresa: cnbc alerta de pérdida de datos y responsabilidad legal",
-     "openai establece para diciembre un cupo de uso compartido de chatgpt y codex"
+     "air alert recupera funciones tras enviar falsas alertas de radiación en ucrania"
     ],
     "bandeja": [
      {
@@ -13692,18 +13733,63 @@
       "titulo": "Alerta en Europa: una ola de falsas amenazas de bomba en aviones obligó a aterrizajes de emergencia",
       "link": "https://www.clarin.com/mundo/alerta-europa-ola-falsas-amenazas-bomba-aviones-obligo-aterrizajes-emergencia_0_lxD7jJCuSB.html",
       "fuente": "Clarín"
+     },
+     {
+      "titulo": "GPT-Image-2.6 vs GPT-Image-2.5: El coste de un cambio de una línea",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE0zUGZGTE4tRF95MEd0eUVQSmRwMlhIeGFJMzV6VmpiQkpvM0JRamtzdlYteUFEWTdJdWh3c1FKNTJTb3dLdDFaUmxpemJpQld3dnZoX1N0Q2xacy0wVnVlZk8wc01CUmRvTHFqRi1BNEZ3QQ?oc=5",
+      "fuente": "OrcaRouter"
+     },
+     {
+      "titulo": "Alerta de ciberfraude en la UNVM: Advierten por correos falsos que buscan robar contraseñas",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdXR6TXNlRFR2OWM3SW40ZzNOakhHZkVINmcxZWJaN3RsSXlxcGRnWVFlVENJbkZrRUdBMjVKZGFfRTdSOWlQNzNlN0xrTUtlSnJSUHlHNDNTaDNBeDBMcUgwUTVoYlZVRVRpakRyaVE5RnRaYWxZblExYTk3LUVtVlc0d3JBZ0trcng5SDR1WnRobWNzQ2Rjc21xcUVMNW5OeTBJbjZaRVZldlZ3bmI3QnQzaW41ZlVQclE?oc=5",
+      "fuente": "Villa María VIVO"
+     },
+     {
+      "titulo": "Tienen batería extrema y potencia para juegos: los nuevos smartphones que acaban de desembarcar en Argentina",
+      "link": "https://www.eldestapeweb.com/tecnologia/tienen-bateria-extrema-potencia-juegos-nuevos-smartphones-acaban-desembarcar-argentina-2026114193245",
+      "fuente": "El Destape"
+     },
+     {
+      "titulo": "Más allá de los celulares, una apuesta por el hogar conectado",
+      "link": "https://www.laprensa.com.ar/Mas-alla-de-los-celulares-una-apuesta-por-el-hogar-conectado-577525.note.aspx",
+      "fuente": "La Prensa"
+     },
+     {
+      "titulo": "Xiaomi se expande en Argentina: lanzó los celulares REDMI Note 17 y sumó electrodomésticos",
+      "link": "https://www.msn.com/es-ar/noticias/otras/xiaomi-se-expande-en-argentina-lanz%C3%B3-los-celulares-redmi-note-17-y-sum%C3%B3-electrodom%C3%A9sticos/ar-AA2gFHCK",
+      "fuente": "El Cronista on MSN"
+     },
+     {
+      "titulo": "Google, Microsoft, OpenAI y Anthropic aceptarán una sola línea en robots.txt para decir «no entrenes con mi web»",
+      "link": "https://wwwhatsnew.com/2026/11/01/robots-txt-senal-comun-entrenamiento-ia-google-microsoft-openai-anthropic/",
+      "fuente": "WWWhat's new"
+     },
+     {
+      "titulo": "Google se suma a OpenAI y Anthropic con una señal común contra el scraping para IA",
+      "link": "https://www.diariobitcoin.com/tecnologia/google-se-suma-a-openai-y-anthropic-con-una-senal-comun-contra-el-scraping-para-ia/",
+      "fuente": "DiarioBitcoin"
+     },
+     {
+      "titulo": "SpaceX apunta a 80.000 sitios celulares y eleva la presión sobre las telefónicas de EE. UU.",
+      "link": "https://www.diariobitcoin.com/estados-unidos/spacex-apunta-a-80-000-sitios-celulares-y-eleva-la-presion-sobre-las-telefonicas-de-ee-uu/",
+      "fuente": "DiarioBitcoin"
+     },
+     {
+      "titulo": "Google prevé admitir un control compartido del entrenamiento de IA en robots.txt",
+      "link": "https://www.unite.ai/es/google-plans-support-for-shared-robots-txt-ai-training-control/",
+      "fuente": "Unite.AI"
+     },
+     {
+      "titulo": "Valle Tech incorporó una máquina que permite personalizar fundas y accesorios de celulares en Catamarca",
+      "link": "https://www.elesquiu.com/tecnologia/2026/10/31/valle-tech-incorporo-una-maquina-que-permite-personalizar-fundas-y-accesorios-de-celulares-en-catama-601710.html",
+      "fuente": "El Esquiu"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-04",
-     "hechas": [
-      "09:00",
-      "13:00",
-      "17:00",
-      "21:00"
-     ]
+     "fecha": "2026-11-05",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-05T02:18:54.636Z",
+    "ultimoChequeo": "2026-11-05T03:18:53.083Z",
     "semana": [
      {
       "titulo": "iPhone 15 Pro Max de 512GB cae a $13,593 pesos en Amazon; tiene 61% de descuento e incluye envío gratis",
@@ -14985,10 +15071,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-04",
-     "hechas": [
-      "22:00"
-     ]
+     "fecha": "2026-11-05",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-05T01:18:54.364Z"
    }
@@ -15120,10 +15204,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-04",
-     "hechas": [
-      "06:50"
-     ]
+     "fecha": "2026-11-05",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-04T09:50:58.313Z"
    }
@@ -15170,10 +15252,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-04",
-     "hechas": [
-      "10:00"
-     ]
+     "fecha": "2026-11-05",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-04T13:01:56.066Z"
    }
@@ -15230,7 +15310,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 231,
+   "corridas": 232,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -15239,13 +15319,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-05T02:48:55.856Z",
+   "ultimaCorrida": "2026-11-05T03:18:53.083Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-04",
-    "ultimoChequeo": "2026-11-05T02:48:55.856Z"
+    "ultimoChequeo": "2026-11-05T03:18:53.083Z"
    }
   },
   "feriados": {
@@ -15410,6 +15490,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-05T03:18:53.083Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-05T03:18:53.083Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-11-05T02:48:55.856Z",
    "quien": "Clima para la obra",
@@ -16899,16 +16989,6 @@
    "t": "2026-11-03T12:59:55.390Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-03T12:59:55.390Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-03T12:31:06.038Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
@@ -17392,28 +17472,13 @@
   "buenDia": "2026-11-04"
  },
  "consumo": {
-  "fecha": "2026-11-04",
-  "consultas": 45,
+  "fecha": "2026-11-05",
+  "consultas": 0,
   "busquedas": 0,
-  "por": {
-   "gemini": 44,
-   "github": 6,
-   "groq": 10,
-   "openrouter": 12,
-   "cerebras": 12,
-   "sambanova": 15,
-   "nvidia": 16,
-   "cohere": 5,
-   "huggingface": 16,
-   "zai": 5,
-   "llm7": 3,
-   "upstage": 3,
-   "pollinations": 3,
-   "cfai": 9
-  }
+  "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-05T02:48:55.856Z",
+ "actualizado": "2026-11-05T03:18:53.083Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -17437,792 +17502,9 @@
   ]
  },
  "ia": {
-  "fecha": "2026-11-04",
-  "agotado": {
-   "huggingface": 1793855065412,
-   "gemini:gemini-3.8-flash": 1793846967384,
-   "gemini:gemini-3.7-flash": 1793846973858,
-   "gemini:gemini-3.6-flash": 1793846980354,
-   "groq:groq/compound": true,
-   "cerebras:gpt-oss-120b": 1793856712921,
-   "cerebras:qwen-3.8-27b": 1793856715386,
-   "cerebras:zai-glm-4.7": true,
-   "sambanova:Meta-Llama-3.3-70B-Instruct": 1793770348318,
-   "sambanova:gpt-oss-120b": 1793770350592,
-   "sambanova:DeepSeek-V3.1": true,
-   "nvidia:deepseek-ai/deepseek-v4.1-flash": 1793771043073,
-   "nvidia:z-ai/glm-5.3-flash": 1793771163074,
-   "nvidia:moonshotai/kimi-k2.6": true
-  },
-  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
-  "vivos": {
-   "groq": {
-    "fecha": "2026-11-04",
-    "ids": [
-     "allam-2-7b",
-     "openai/gpt-oss-120b",
-     "canopylabs/orpheus-v1-english",
-     "qwen/qwen3.8-27b",
-     "canopylabs/orpheus-arabic-saudi",
-     "openai/gpt-oss-20b"
-    ]
-   },
-   "cerebras": {
-    "fecha": "2026-11-04",
-    "ids": [
-     "gpt-oss-120b",
-     "qwen-3.8-27b"
-    ]
-   },
-   "sambanova": {
-    "fecha": "2026-11-04",
-    "ids": [
-     "Meta-Llama-3.3-70B-Instruct",
-     "MiniMax-M3.1-Flash",
-     "gemma-4-31B-it",
-     "gpt-oss-120b"
-    ]
-   },
-   "nvidia": {
-    "fecha": "2026-11-04",
-    "ids": [
-     "01-ai/yi-large",
-     "adept/fuyu-8b",
-     "ai21labs/jamba-1.5-large-instruct",
-     "aisingapore/sea-lion-7b-instruct",
-     "bigcode/starcoder2-15b",
-     "databricks/dbrx-instruct",
-     "deepseek-ai/deepseek-coder-6.7b-instruct",
-     "deepseek-ai/deepseek-v4.1-flash",
-     "google/codegemma-1.1-7b",
-     "google/codegemma-7b",
-     "google/deplot",
-     "google/diffusiongemma-26b-a4b-it",
-     "google/gemma-2b",
-     "google/gemma-3-12b-it",
-     "google/gemma-3-4b-it",
-     "google/gemma-4-31b-it",
-     "google/recurrentgemma-2b",
-     "ibm/granite-3.0-3b-a800m-instruct",
-     "ibm/granite-3.0-8b-instruct",
-     "ibm/granite-34b-code-instruct",
-     "ibm/granite-8b-code-instruct",
-     "meta/codellama-70b",
-     "meta/llama-3.2-11b-vision-instruct",
-     "meta/llama-3.2-90b-vision-instruct",
-     "meta/llama2-70b",
-     "meta/muse-glimmer-30b",
-     "microsoft/kosmos-2",
-     "microsoft/phi-3-vision-128k-instruct",
-     "microsoft/phi-3.5-moe-instruct",
-     "minimaxai/minimax-m3.1-flash",
-     "mistralai/codestral-22b-instruct-v0.1",
-     "mistralai/mistral-7b-instruct-v0.3",
-     "mistralai/mistral-large",
-     "mistralai/mistral-large-2-instruct",
-     "mistralai/mistral-large-4-1t-a52b",
-     "mistralai/mixtral-8x22b-v0.1",
-     "moonshotai/kimi-k2.6",
-     "nv-mistralai/mistral-nemo-12b-instruct",
-     "nvidia/ai-synthetic-video-detector",
-     "nvidia/cosmos-reason2-8b",
-     "nvidia/ising-calibration-1.5-31b",
-     "nvidia/llama-3.1-nemotron-51b-instruct",
-     "nvidia/llama-3.1-nemotron-70b-instruct",
-     "nvidia/llama-3.1-nemotron-ultra-253b-v1",
-     "nvidia/llama3-chatqa-1.5-70b",
-     "nvidia/mistral-nemo-minitron-8b-8k-instruct",
-     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-     "nvidia/nemotron-3-super-120b-a12b",
-     "nvidia/nemotron-3-ultra-550b-a55b",
-     "nvidia/nemotron-3.5-bolt-e4b",
-     "nvidia/nemotron-3.5-lightning-30b-a3b",
-     "nvidia/nemotron-3.5-super-vl-120b-a12b",
-     "nvidia/nemotron-4-340b-instruct",
-     "nvidia/nemotron-nano-3-30b-a3b",
-     "nvidia/nemotron-parse",
-     "nvidia/nemotron-parse-2.0",
-     "nvidia/neva-22b",
-     "nvidia/riva-translate-4b-instruct",
-     "nvidia/riva-translate-4b-instruct-v2",
-     "nvidia/vila",
-     "openai/gpt-oss-20b",
-     "poolside/laguna-xs-2.1",
-     "stepfun-ai/step-5-preview",
-     "writer/palmyra-creative-122b",
-     "writer/palmyra-fin-70b-32k",
-     "writer/palmyra-med-70b",
-     "writer/palmyra-med-70b-32k",
-     "z-ai/glm-5.3-flash",
-     "zyphra/zamba2-7b-instruct"
-    ]
-   },
-   "cohere": {
-    "fecha": "2026-11-04",
-    "ids": [
-     "c4ai-aya-expanse-32b",
-     "c4ai-aya-vision-32b",
-     "command-a-03-2025",
-     "command-a-plus-05-2026",
-     "command-a-reasoning-08-2025",
-     "command-a-translate-08-2025",
-     "command-a-vision-07-2025",
-     "command-r-08-2024",
-     "command-r-plus-08-2024",
-     "command-r7b-12-2024",
-     "command-r7b-arabic-02-2025",
-     "north-mini-code-1.0",
-     "north-small-translate-1.0",
-     "parse-v5.0",
-     "tiny-aya-earth",
-     "tiny-aya-fire",
-     "tiny-aya-global",
-     "tiny-aya-water"
-    ]
-   },
-   "huggingface": {
-    "fecha": "2026-11-04",
-    "ids": [
-     "deepseek-ai/DeepSeek-V4.1-Flash-1017",
-     "Qwen/Qwen3.8-27B",
-     "deepseek-ai/DeepSeek-V4.1-Flash",
-     "MiniMaxAI/MiniMax-M3.1-Flash",
-     "meta-llama/Llama-3.1-8B-Instruct",
-     "zai-org/GLM-5.3-Flash",
-     "moonshotai/Kimi-K3",
-     "google/gemma-4-31B-it",
-     "zai-org/GLM-5.3",
-     "Qwen/Qwen3.5-9B",
-     "Qwen/Qwen3.6-35B-A3B",
-     "reflection/Beam-1.0-501B-A23B",
-     "openai/gpt-oss-120b",
-     "meta-models/Muse-Spark-Open-816B-A42B",
-     "openai/gpt-oss-20b",
-     "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
-     "meta-models/Muse-Glimmer-30B",
-     "Qwen/Qwen3.8-2.4T-A95B",
-     "google/gemma-4-26B-A4B-it",
-     "XiaomiMiMo/MiMo-V2.6-Pro-RL",
-     "deepseek-ai/DeepSeek-R1",
-     "deepseek-ai/DeepSeek-V4-Flash",
-     "tencent/Hy4-preview",
-     "ibm-granite/granite-4.2-3b",
-     "Qwen/Qwen3.8-Flash-Next-FP8",
-     "inclusionAI/Ling-3.1-flash",
-     "deepseek-ai/DeepSeek-V4-Pro",
-     "google/gemma-3-4b-it",
-     "google/gemma-3-12b-it",
-     "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-     "XiaomiMiMo/MiMo-V2.6-Flash-RL",
-     "CohereLabs/tiny-aya-global",
-     "zai-org/GLM-5.2",
-     "deepseek-ai/DeepSeek-V4-Flash-0731",
-     "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
-     "deepseek-ai/DeepSeek-V4-Pro-0813",
-     "Qwen/Qwen3.5-27B",
-     "zai-org/GLM-5.3-BF16",
-     "Qwen/Qwen2.5-72B-Instruct",
-     "MiniMaxAI/MiniMax-M3",
-     "Qwen/Qwen3-30B-A3B",
-     "google/gemma-3-27b-it",
-     "ibm-granite/granite-4.2-30b",
-     "thinkingmachines/Inkling",
-     "Qwen/Qwen3.6-27B",
-     "Sao10K/L3-8B-Stheno-v3.2",
-     "microsoft/phi-4",
-     "moonshotai/Kimi-K2.7-Code",
-     "Qwen/Qwen3-14B",
-     "thinkingmachines/Inkling-Small",
-     "XiaomiMiMo/MiMo-V2.5-Pro",
-     "speakleash/Bielik-11B-v3.0-Instruct",
-     "swiss-ai/Apertus-v1.5-70B",
-     "Qwen/Qwen3.5-122B-A10B",
-     "meta-llama/Llama-3.3-70B-Instruct",
-     "zai-org/GLM-4.7",
-     "zai-org/GLM-4.7-Flash",
-     "zai-org/GLM-5.3-Flash-BF16",
-     "inclusionAI/Ling-3.0-flash",
-     "CohereLabs/tiny-aya-earth",
-     "inclusionAI/Ling-3.0-flash-Fin",
-     "moonshotai/Kimi-K2.5",
-     "deepseek-ai/DeepSeek-V3.2",
-     "XiaomiMiMo/MiMo-V2.5",
-     "ibm-granite/granite-4.2-8b",
-     "deepseek-ai/DeepSeek-V3",
-     "Qwen/Qwen3.5-397B-A17B",
-     "Qwen/Qwen3-VL-30B-A3B-Instruct",
-     "tencent/Hy3",
-     "Qwen/Qwen3.5-35B-A3B",
-     "Qwen/Qwen3-VL-235B-A22B-Instruct",
-     "moonshotai/Kimi-K2.6",
-     "zai-org/GLM-5",
-     "swiss-ai/Apertus-8B-Instruct-2509",
-     "zai-org/GLM-4.6V-Flash",
-     "Qwen/Qwen3-32B",
-     "zai-org/GLM-4.5",
-     "CohereLabs/aya-vision-32b",
-     "aisingapore/Gemma-SEA-LION-v4-27B-IT",
-     "NousResearch/Hermes-3-Llama-3.1-70B",
-     "zai-org/GLM-4.5-Air",
-     "zai-org/GLM-4.5V-FP8",
-     "swiss-ai/Apertus-70B-Instruct-2509",
-     "deepseek-ai/DeepSeek-V3-0324",
-     "zai-org/GLM-4.6-FP8",
-     "zai-org/GLM-4.5V",
-     "aisingapore/Qwen-SEA-LION-v4-32B-IT",
-     "deepseek-ai/DeepSeek-R1-0528",
-     "zai-org/GLM-4.6",
-     "zai-org/GLM-4.6V",
-     "BSC-LT/ALIA-40b-instruct-2606",
-     "Qwen/Qwen3-235B-A22B-Instruct-2507",
-     "zai-org/GLM-4.7-FP8",
-     "zai-org/GLM-4.6V-FP8",
-     "aisingapore/Nemotron-SEA-LION-v4.8-120B-A12B",
-     "Qwen/Qwen3-235B-A22B-Thinking-2507",
-     "zai-org/GLM-5.1",
-     "stepfun-ai/Step-3.7-Flash",
-     "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-     "deepseek-ai/DeepSeek-V3.1",
-     "zai-org/GLM-5.1-FP8",
-     "inclusionAI/Ling-3.0-flash-VL",
-     "zai-org/AutoGLM-Phone-9B-Multilingual",
-     "Qwen/Qwen3-Next-80B-A3B-Instruct",
-     "Qwen/Qwen2.5-VL-72B-Instruct",
-     "zai-org/GLM-5.2-FP8",
-     "deepseek-ai/DeepSeek-V3.1-Terminus",
-     "aisingapore/Qwen-SEA-LION-v4.5-27B-IT",
-     "CohereLabs/c4ai-command-r-08-2024",
-     "alpindale/WizardLM-2-8x22B",
-     "stepfun-ai/Step-3.5-Flash",
-     "CohereLabs/aya-expanse-32b",
-     "MiniMaxAI/MiniMax-M1-80k",
-     "MiniMaxAI/MiniMax-M2.7",
-     "CohereLabs/c4ai-command-r7b-12-2024",
-     "moonshotai/Kimi-K2-Instruct",
-     "CohereLabs/c4ai-command-a-03-2025",
-     "moonshotai/Kimi-K2-Instruct-0905",
-     "CohereLabs/command-a-reasoning-08-2025",
-     "MiniMaxAI/MiniMax-M2.5",
-     "CohereLabs/command-a-translate-08-2025",
-     "CohereLabs/tiny-aya-water",
-     "CohereLabs/tiny-aya-fire"
-    ]
-   },
-   "zai": {
-    "fecha": "2026-11-04",
-    "ids": [
-     "glm-4.5",
-     "glm-4.5-air",
-     "glm-4.6",
-     "glm-4.7",
-     "glm-5",
-     "glm-5-turbo",
-     "glm-5.1",
-     "glm-5.2",
-     "glm-5.3",
-     "glm-5.3-flash",
-     "glm-5.3-flashx",
-     "glm-5.3-flashx-legal"
-    ]
-   },
-   "llm7": {
-    "fecha": "2026-11-04",
-    "ids": [
-     "DeepSeek-V4-Flash-0731",
-     "GLM-5.3-Flash",
-     "Inkling-Small",
-     "L3-8B-Lunaris-v1-Turbo",
-     "Voxtral-Mini-3B-2507",
-     "Voxtral-Small-24B-2507",
-     "anthropic/claude-opus-4-6",
-     "anthropic/claude-opus-4-7",
-     "anthropic/claude-opus-4-8",
-     "anthropic/claude-sonnet-4-6",
-     "anthropic/claude-sonnet-5",
-     "anthropic/claude-sonnet-5-5",
-     "chroma-v.46-flash",
-     "claude-fable-5",
-     "claude-fable-5-1",
-     "claude-haiku-4-5",
-     "claude-haiku-5-5",
-     "claude-opus-4-8",
-     "claude-opus-5",
-     "claude-opus-5-5",
-     "claude-sonnet-4-6",
-     "claude-sonnet-5",
-     "codestral-latest",
-     "dark-beast-krea2",
-     "deepseek-v4-flash:0731",
-     "deepseek-v4-pro",
-     "deepseek-v4.1-flash",
-     "gemini-3-flash",
-     "gemini-3.0-pro-image",
-     "gemini-3.1-flash-image",
-     "gemini-3.1-pro",
-     "gemini-3.6-flash-high",
-     "gemini-3.8-flash-high",
-     "gemini-4-argon",
-     "gemini-nano-banana-2.1",
-     "gemini-omni-flash",
-     "gemma4:31b",
-     "glm-5.2",
-     "glm-5.3",
-     "gpt-5.6-luna",
-     "gpt-5.6-sol",
-     "gpt-5.6-terra",
-     "gpt-6-astra",
-     "gpt-6-luna",
-     "gpt-6-sol",
-     "gpt-6.1-sol",
-     "gpt-image-2",
-     "gpt-image-2.5",
-     "gpt-oss:20b",
-     "grok-4.7",
-     "jev-latest",
-     "kimi-k2.6",
-     "kimi-k2.7-code",
-     "kimi-k3",
-     "kling-v3.0-pro",
-     "kling-v3.0-turbo",
-     "llama-4-maverick",
-     "minimax-m2.7",
-     "minimax-m3",
-     "mistral-Nemo-Instruct-2407",
-     "mistral-Small-24B-Instruct-2501",
-     "mistral-large-3:675b",
-     "muse-spark-1.3",
-     "nemotron-3-nano:30b",
-     "seed-2.0-mini",
-     "seedance-2.0",
-     "seedance-2.0-fast",
-     "seedance-2.0-mini"
-    ]
-   },
-   "upstage": {
-    "fecha": "2026-11-04",
-    "ids": [
-     "solar-pro4",
-     "solar-pro4-260806",
-     "solar-mini4",
-     "solar-mini4-260922",
-     "solar-jev",
-     "solar-decide",
-     "solar-decide-flash",
-     "syn-pro",
-     "syn-pro-251021"
-    ]
-   },
-   "openrouter": {
-    "fecha": "2026-11-04",
-    "ids": [
-     "tencent/hy4",
-     "stealth/crouton-alpha",
-     "z-ai/glm-5.3-flashx-legal",
-     "particle-ai/particle-1",
-     "openai/gpt-6.1-terra-pro",
-     "openai/gpt-6.1-terra-pro:batch",
-     "openai/gpt-6.1-terra",
-     "openai/gpt-6.1-terra:batch",
-     "moonshotai/kimi-k3.1-pro",
-     "recursive/flint-v1.0:free",
-     "minimax/minimax-m3.1-flash",
-     "deepseek/deepseek-v4.1-flash-1017",
-     "elorian/glimpse",
-     "xingchen-agi/xing4.0-29b-a4b:free",
-     "reflection/beam-1.0-501b-a23b",
-     "inception/mercury-3",
-     "prism-ml/ternary-bonsai-2-9b",
-     "moondream/moondream3-preview",
-     "moondream/moondream3.1-9b-a2b",
-     "meta/muse-spark-open",
-     "nvidia/nemotron-3.5-super-vl",
-     "nvidia/nemotron-3.5-super-vl:free",
-     "unbiased/pareto-26.10",
-     "~unbiased/pareto-latest",
-     "unbiased/pareto-26.9",
-     "liquid/lfm-2.5-24b-a2b",
-     "google/gemini-4-argon",
-     "google/gemini-4-argon:batch",
-     "scaledown/summarize",
-     "scaledown/extract",
-     "meta/muse-wonder",
-     "stepfun/step-5-preview",
-     "anthropic/claude-haiku-5.5",
-     "anthropic/claude-haiku-5.5:batch",
-     "google/gemini-nano-banana-2.1",
-     "mistralai/mistral-large-4-0",
-     "inclusionai/ling-3.1-flash",
-     "openai/gpt-6.1-sol-pro",
-     "openai/gpt-6.1-sol-pro:batch",
-     "openai/gpt-6.1-sol",
-     "openai/gpt-6.1-sol:batch",
-     "anthropic/claude-sonnet-5.5",
-     "anthropic/claude-sonnet-5.5:batch",
-     "perceptron/perceptron-mk1.5",
-     "fireworks/ember-1",
-     "z-ai/glm-5.3-prime",
-     "qwen/qwen3.8-max-prime",
-     "aion-labs/aion-3.5-mini",
-     "aion-labs/aion-3.5",
-     "upstage/solar-mini4",
-     "cohere/command-a-plus",
-     "openai/gpt-6-luna-pro",
-     "openai/gpt-6-luna-pro:batch",
-     "openai/gpt-6-luna",
-     "openai/gpt-6-luna:batch",
-     "openai/gpt-6-sol-pro",
-     "openai/gpt-6-sol-pro:batch",
-     "openai/gpt-6-sol",
-     "openai/gpt-6-sol:batch",
-     "anthropic/claude-opus-5.5",
-     "anthropic/claude-opus-5.5:batch",
-     "xiaomi/mimo-v2.6-pro-ultraspeed",
-     "xiaomi/mimo-v2.6-flash",
-     "xiaomi/mimo-v2.6-pro",
-     "x-ai/grok-4.7",
-     "x-ai/grok-4.7:batch",
-     "qwen/qwen3.8-omni-flash",
-     "prism-ml/ternary-bonsai-2-27b",
-     "z-ai/glm-5.3-flashx",
-     "~deepseek/deepseek-pro-latest",
-     "~deepseek/deepseek-flash-latest",
-     "inference-net/schematron-v2-turbo",
-     "inference-net/schematron-v2-small",
-     "~openai/gpt-astra-latest",
-     "~openai/gpt-sol-latest",
-     "~openai/gpt-terra-latest",
-     "~openai/gpt-luna-latest",
-     "sakana/fugu-ultra-v2",
-     "sakana/fugu-max",
-     "inclusionai/ling-3.0-flash-vl",
-     "deepseek/deepseek-v4.1-flash",
-     "deepseek/deepseek-v4.1-flash:batch",
-     "inception/mercury-2.5",
-     "nex-agi/nex-n2.5-mini",
-     "nex-agi/nex-n2.5-pro",
-     "openai/gpt-6-astra",
-     "openai/gpt-6-astra:batch",
-     "openai/gpt-6-astra-pro",
-     "openai/gpt-6-astra-pro:batch",
-     "qwen/qwen3.8-max-0902",
-     "meta/muse-spark-1.3",
-     "google/gemini-3.8-flash",
-     "google/gemini-3.8-flash:batch",
-     "anthropic/claude-fable-5.1",
-     "anthropic/claude-fable-5.1:batch",
-     "ibm-granite/granite-4.2-8b",
-     "tencent/hy4-preview",
-     "~z-ai/glm-flash-latest",
-     "qwen/qwen3.8-flash",
-     "z-ai/glm-5.3-flash",
-     "z-ai/glm-5.3-flash:batch",
-     "deepseek/deepseek-v4-flash-vision-exp",
-     "tencent/hy-mt2-1.8b",
-     "tencent/hy-mt2-30b-a3b",
-     "~z-ai/glm-latest",
-     "tencent/hy-mt2-7b",
-     "z-ai/glm-5.3",
-     "z-ai/glm-5.3:batch",
-     "qwen/qwen3.8-27b",
-     "dots-studio/dots-3-note-preview:free",
-     "google/gemini-3.7-flash",
-     "google/gemini-3.7-flash:batch",
-     "bytedance-seed/seed-2-1-turbo",
-     "qwen/qwen3.8-2.4t-a95b",
-     "bytedance-seed/seed-2.0-code",
-     "deepseek/deepseek-v4-pro-0813",
-     "x-ai/grok-4.6",
-     "x-ai/grok-4.6:batch",
-     "liquid/lfm-2.5-2.6b:free",
-     "nvidia/nemotron-3.5-lightning",
-     "nvidia/nemotron-3.5-lightning:free",
-     "upstage/solar-pro4",
-     "meta/muse-glimmer-30b",
-     "meta/muse-spark-1.2",
-     "~deepseek/deepseek-v4-flash-latest",
-     "deepseek/deepseek-v4-flash-0731",
-     "thinkingmachines/inkling-small",
-     "thinkingmachines/inkling-small:free",
-     "qwen/qwen3.7-flash",
-     "anthropic/claude-opus-5",
-     "anthropic/claude-opus-5:batch",
-     "inclusionai/ling-3.0-flash",
-     "google/gemini-3.6-flash",
-     "google/gemini-3.6-flash:batch",
-     "google/gemini-3.5-flash-lite",
-     "google/gemini-3.5-flash-lite:batch",
-     "meituan/longcat-2.0",
-     "thinkingmachines/inkling",
-     "thinkingmachines/inkling:free",
-     "moonshotai/kimi-k3",
-     "moonshotai/kimi-k3:batch",
-     "meta/muse-spark-1.1",
-     "openai/gpt-5.6-luna-pro",
-     "openai/gpt-5.6-luna-pro:batch",
-     "openai/gpt-5.6-luna",
-     "openai/gpt-5.6-luna:batch",
-     "openai/gpt-5.6-terra-pro",
-     "openai/gpt-5.6-terra-pro:batch",
-     "openai/gpt-5.6-terra",
-     "openai/gpt-5.6-terra:batch",
-     "openai/gpt-5.6-sol-pro",
-     "openai/gpt-5.6-sol-pro:batch",
-     "openai/gpt-5.6-sol",
-     "openai/gpt-5.6-sol:batch",
-     "x-ai/grok-4.5",
-     "~x-ai/grok-latest",
-     "aion-labs/aion-3.0-mini",
-     "aion-labs/aion-3.0",
-     "tencent/hy3",
-     "anthropic/claude-sonnet-5",
-     "google/gemini-3.1-flash-lite-image",
-     "sakana/fugu-ultra",
-     "google/gemini-3.1-flash-image",
-     "google/gemini-3-pro-image",
-     "cohere/north-mini-code:free",
-     "z-ai/glm-5.2",
-     "moonshotai/kimi-k2.7-code",
-     "~anthropic/claude-fable-latest",
-     "anthropic/claude-fable-5",
-     "nvidia/nemotron-3-ultra-550b-a55b",
-     "nvidia/nemotron-3-ultra-550b-a55b:free",
-     "qwen/qwen3.7-plus",
-     "qwen/qwen3.7-plus:batch",
-     "minimax/minimax-m3",
-     "stepfun/step-3.7-flash",
-     "anthropic/claude-opus-4.8",
-     "qwen/qwen3.7-max",
-     "x-ai/grok-build-0.1",
-     "google/gemini-3.5-flash",
-     "google/gemini-3.5-flash:batch",
-     "perceptron/perceptron-mk1",
-     "google/gemini-3.1-flash-lite",
-     "google/gemini-3.1-flash-lite:batch",
-     "openai/gpt-chat-latest",
-     "x-ai/grok-4.3",
-     "x-ai/grok-4.3:batch",
-     "mistralai/mistral-medium-3-5",
-     "mistralai/mistral-medium-3-5:batch",
-     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-     "~anthropic/claude-haiku-latest",
-     "~openai/gpt-mini-latest",
-     "~google/gemini-pro-latest",
-     "~moonshotai/kimi-latest",
-     "~google/gemini-flash-latest",
-     "~anthropic/claude-sonnet-latest",
-     "qwen/qwen3.5-plus-20260420",
-     "qwen/qwen3.6-flash",
-     "qwen/qwen3.6-35b-a3b",
-     "qwen/qwen3.6-27b",
-     "openai/gpt-5.5-pro",
-     "openai/gpt-5.5",
-     "deepseek/deepseek-v4-pro",
-     "deepseek/deepseek-v4-flash",
-     "tencent/hy3-preview",
-     "xiaomi/mimo-v2.5-pro",
-     "xiaomi/mimo-v2.5",
-     "openai/gpt-5.4-image-2",
-     "~anthropic/claude-opus-latest",
-     "moonshotai/kimi-k2.6",
-     "anthropic/claude-opus-4.7",
-     "z-ai/glm-5.1",
-     "google/gemma-4-26b-a4b-it",
-     "google/gemma-4-26b-a4b-it:free",
-     "google/gemma-4-31b-it",
-     "google/gemma-4-31b-it:free",
-     "qwen/qwen3.6-plus",
-     "z-ai/glm-5v-turbo",
-     "x-ai/grok-4.20-multi-agent",
-     "x-ai/grok-4.20",
-     "google/lyria-3-pro-preview",
-     "rekaai/reka-edge",
-     "minimax/minimax-m2.7",
-     "openai/gpt-5.4-nano",
-     "openai/gpt-5.4-mini",
-     "mistralai/mistral-small-2603",
-     "z-ai/glm-5-turbo",
-     "nvidia/nemotron-3-super-120b-a12b",
-     "bytedance-seed/seed-2.0-lite",
-     "qwen/qwen3.5-9b",
-     "openai/gpt-5.4-pro",
-     "openai/gpt-5.4",
-     "inception/mercury-2",
-     "google/gemini-3.1-flash-lite-preview",
-     "bytedance-seed/seed-2.0-mini",
-     "google/gemini-3.1-flash-image-preview",
-     "qwen/qwen3.5-35b-a3b",
-     "qwen/qwen3.5-27b",
-     "qwen/qwen3.5-122b-a10b",
-     "qwen/qwen3.5-flash-02-23",
-     "google/gemini-3.1-pro-preview-customtools",
-     "openai/gpt-5.3-codex",
-     "aion-labs/aion-2.0",
-     "google/gemini-3.1-pro-preview",
-     "google/gemini-3.1-pro-preview:batch",
-     "anthropic/claude-sonnet-4.6",
-     "qwen/qwen3.5-plus-02-15",
-     "qwen/qwen3.5-397b-a17b",
-     "minimax/minimax-m2.5",
-     "z-ai/glm-5",
-     "anthropic/claude-opus-4.6",
-     "qwen/qwen3-coder-next",
-     "stepfun/step-3.5-flash",
-     "moonshotai/kimi-k2.5",
-     "minimax/minimax-m2-her",
-     "writer/palmyra-x5",
-     "z-ai/glm-4.7-flash",
-     "openai/gpt-5.2-codex",
-     "bytedance-seed/seed-1.6-flash",
-     "bytedance-seed/seed-1.6",
-     "minimax/minimax-m2.1",
-     "z-ai/glm-4.7",
-     "google/gemini-3-flash-preview",
-     "google/gemini-3-flash-preview:batch",
-     "nvidia/nemotron-3-nano-30b-a3b",
-     "openai/gpt-5.2-pro",
-     "openai/gpt-5.2",
-     "mistralai/devstral-2512",
-     "relace/relace-search",
-     "z-ai/glm-4.6v",
-     "openai/gpt-5.1-codex-max",
-     "amazon/nova-2-lite-v1",
-     "mistralai/ministral-14b-2512",
-     "mistralai/ministral-8b-2512",
-     "mistralai/ministral-3b-2512",
-     "mistralai/mistral-large-2512",
-     "deepseek/deepseek-v3.2",
-     "anthropic/claude-opus-4.5",
-     "google/gemini-3-pro-image-preview",
-     "openai/gpt-5.1",
-     "openai/gpt-5.1-codex",
-     "openai/gpt-5.1-codex-mini",
-     "moonshotai/kimi-k2-thinking",
-     "amazon/nova-premier-v1",
-     "perplexity/sonar-pro-search",
-     "mistralai/voxtral-small-24b-2507",
-     "minimax/minimax-m2",
-     "openai/gpt-5-image-mini",
-     "anthropic/claude-haiku-4.5",
-     "qwen/qwen3-vl-8b-instruct",
-     "openai/gpt-5-image",
-     "google/gemini-2.5-flash-image",
-     "qwen/qwen3-vl-30b-a3b-thinking",
-     "qwen/qwen3-vl-30b-a3b-instruct",
-     "openai/gpt-5-pro",
-     "z-ai/glm-4.6",
-     "anthropic/claude-sonnet-4.5",
-     "deepseek/deepseek-v3.2-exp",
-     "thedrummer/cydonia-24b-v4.1",
-     "relace/relace-apply-3",
-     "qwen/qwen3-vl-235b-a22b-instruct",
-     "deepseek/deepseek-v3.1-terminus",
-     "qwen/qwen3-coder-flash",
-     "qwen/qwen3-next-80b-a3b-instruct",
-     "moonshotai/kimi-k2-0905",
-     "nousresearch/hermes-4-405b",
-     "deepseek/deepseek-chat-v3.1",
-     "mistralai/mistral-medium-3.1",
-     "z-ai/glm-4.5v",
-     "openai/gpt-5",
-     "openai/gpt-5-mini",
-     "openai/gpt-5-nano",
-     "openai/gpt-5-nano:batch",
-     "openai/gpt-oss-120b",
-     "openai/gpt-oss-120b:batch",
-     "openai/gpt-oss-20b",
-     "openai/gpt-oss-20b:batch",
-     "anthropic/claude-opus-4.1",
-     "mistralai/codestral-2508",
-     "qwen/qwen3-coder-30b-a3b-instruct",
-     "qwen/qwen3-30b-a3b-instruct-2507",
-     "z-ai/glm-4.5",
-     "z-ai/glm-4.5-air",
-     "qwen/qwen3-235b-a22b-thinking-2507",
-     "qwen/qwen3-coder",
-     "bytedance/ui-tars-1.5-7b",
-     "google/gemini-2.5-flash-lite",
-     "qwen/qwen3-235b-a22b-2507",
-     "moonshotai/kimi-k2",
-     "cognitivecomputations/dolphin-mistral-24b-venice-edition",
-     "tencent/hunyuan-a13b-instruct",
-     "morph/morph-v3-large",
-     "morph/morph-v3-fast",
-     "mistralai/mistral-small-3.2-24b-instruct",
-     "minimax/minimax-m1",
-     "google/gemini-2.5-flash",
-     "google/gemini-2.5-pro",
-     "openai/o3-pro",
-     "google/gemini-2.5-pro-preview",
-     "deepseek/deepseek-r1-0528",
-     "mistralai/mistral-medium-3",
-     "qwen/qwen3-30b-a3b",
-     "qwen/qwen3-14b",
-     "qwen/qwen3-32b",
-     "openai/o3",
-     "openai/gpt-4.1",
-     "openai/gpt-4.1-mini",
-     "openai/gpt-4.1-nano",
-     "meta-llama/llama-4-maverick",
-     "meta-llama/llama-4-scout",
-     "deepseek/deepseek-chat-v3-0324",
-     "mistralai/mistral-small-3.1-24b-instruct",
-     "google/gemma-3-4b-it",
-     "google/gemma-3-12b-it",
-     "cohere/command-a",
-     "rekaai/reka-flash-3",
-     "google/gemma-3-27b-it",
-     "thedrummer/skyfall-36b-v2",
-     "perplexity/sonar-reasoning-pro",
-     "perplexity/sonar-pro",
-     "perplexity/sonar-deep-research",
-     "mistralai/mistral-saba",
-     "aion-labs/aion-rp-llama-3.1-8b",
-     "qwen/qwen2.5-vl-72b-instruct",
-     "qwen/qwen-plus",
-     "mistralai/mistral-small-24b-instruct-2501",
-     "perplexity/sonar",
-     "minimax/minimax-01",
-     "microsoft/phi-4",
-     "deepseek/deepseek-chat",
-     "cohere/command-r7b-12-2024",
-     "meta-llama/llama-3.3-70b-instruct",
-     "amazon/nova-lite-v1",
-     "amazon/nova-micro-v1",
-     "amazon/nova-pro-v1",
-     "openai/gpt-4o-2024-11-20",
-     "mistralai/mistral-large-2407",
-     "qwen/qwen-2.5-coder-32b-instruct",
-     "thedrummer/unslopnemo-12b",
-     "anthracite-org/magnum-v4-72b",
-     "qwen/qwen-2.5-7b-instruct",
-     "meta-llama/llama-3.2-1b-instruct",
-     "meta-llama/llama-3.2-3b-instruct",
-     "qwen/qwen-2.5-72b-instruct",
-     "cohere/command-r-08-2024",
-     "cohere/command-r-plus-08-2024",
-     "sao10k/l3.1-euryale-70b",
-     "sao10k/l3-lunaris-8b",
-     "openai/gpt-4o-2024-08-06",
-     "meta-llama/llama-3.1-70b-instruct",
-     "meta-llama/llama-3.1-8b-instruct",
-     "mistralai/mistral-nemo",
-     "openai/gpt-4o-mini",
-     "openai/gpt-4o-mini-2024-07-18",
-     "google/gemma-2-27b-it",
-     "openai/gpt-4o",
-     "openai/gpt-4o-2024-05-13",
-     "mistralai/mixtral-8x22b-instruct",
-     "mistralai/mistral-large",
-     "openai/gpt-3.5-turbo-0613",
-     "openai/gpt-3.5-turbo-16k"
-    ]
-   }
-  },
-  "ultimo": {
-   "prov": "Cohere",
-   "modelo": "command-a-03-2025",
-   "t": "2026-11-05T02:18:54.636Z"
-  }
+  "fecha": "2026-11-05",
+  "agotado": {},
+  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
  },
  "dueno": 1237559052,
  "pendientesCant": 1
