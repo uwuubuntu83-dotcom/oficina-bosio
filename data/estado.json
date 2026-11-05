@@ -856,8 +856,8 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-05T05:17:55.204Z",
-   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)",
+   "ultimaCorrida": "2026-11-05T07:22:20.438Z",
+   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
    "informe": null,
    "pausado": false,
    "memoria": {}
@@ -4462,13 +4462,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-05",
-   "ultimaCorrida": "2026-11-05T07:14:23.228Z",
+   "ultimaCorrida": "2026-11-05T07:19:34.177Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": false,
    "memoria": {
     "celu": {
-     "t": 1793862863228,
+     "t": 1793863174177,
      "redes_hoy": {
       "publicaciones": 0,
       "historias": 0,
@@ -15654,6 +15654,26 @@
  },
  "log": [
   {
+   "t": "2026-11-05T07:22:20.438Z",
+   "quien": "Terrenos baratos",
+   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
+  },
+  {
+   "t": "2026-11-05T07:22:20.438Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-11-05T07:22:20.438Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-05T07:22:20.438Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
+  {
    "t": "2026-11-05T07:17:55.133Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
@@ -17132,26 +17152,6 @@
    "t": "2026-11-03T16:57:58.074Z",
    "quien": "Terrenos baratos",
    "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-  },
-  {
-   "t": "2026-11-03T16:57:58.074Z",
-   "quien": "Terrenos baratos",
-   "que": "empezó su tarea"
-  },
-  {
-   "t": "2026-11-03T16:57:58.074Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-03T16:57:58.074Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-03T16:27:57.245Z",
-   "quien": "¿Qué comiste?",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
@@ -17641,15 +17641,15 @@
  },
  "consumo": {
   "fecha": "2026-11-05",
-  "consultas": 4,
+  "consultas": 7,
   "busquedas": 0,
   "por": {
-   "gemini": 3,
+   "gemini": 6,
    "groq": 1
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-05T07:17:55.133Z",
+ "actualizado": "2026-11-05T07:22:20.438Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -17675,9 +17675,9 @@
  "ia": {
   "fecha": "2026-11-05",
   "agotado": {
-   "gemini:gemini-3.8-flash": 1793855906224,
-   "gemini:gemini-3.7-flash": 1793855912761,
-   "gemini:gemini-3.6-flash": 1793855919249,
+   "gemini:gemini-3.8-flash": 1793863371675,
+   "gemini:gemini-3.7-flash": 1793863378169,
+   "gemini:gemini-3.6-flash": 1793863384642,
    "groq:groq/compound": true
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
