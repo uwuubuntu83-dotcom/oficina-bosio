@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 322,
+   "corridas": 323,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-06",
-   "ultimaCorrida": "2026-11-06T16:22:51.831Z",
+   "ultimaCorrida": "2026-11-06T16:52:48.677Z",
    "resumen": "💵 Dólar hoy (10:48 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1535 · venta $1555\n• Bolsa: compra $1573.8 · venta $1588\n• Contado con liquidación: compra $1658.4 · venta $1664.9\n• Mayorista: compra $1536.5",
    "informe": "data/informes/dolar/2026-11-06-1048.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1662.5,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-06T16:22:51.831Z",
+    "ultimoChequeo": "2026-11-06T16:52:48.677Z",
     "resumenFecha": "2026-11-06",
     "hist": {
      "2026-10-30": {
@@ -969,16 +969,16 @@
    "memoria": {}
   },
   "gerente": {
-   "estado": "trabajando",
+   "estado": "esperando",
    "resumen": "Habló con vos",
    "ultimaCorrida": null
   },
   "terrenos": {
    "estado": "listo",
-   "corridas": 2,
+   "corridas": 3,
    "fallas": 0,
    "fallasSeguidas": 0,
-   "puntaje": 8,
+   "puntaje": 7,
    "historial": [
     {
      "f": "2026-11-06T14:54:25.625Z",
@@ -989,15 +989,20 @@
      "f": "2026-11-06T15:23:59.446Z",
      "p": 8,
      "orden": false
+    },
+    {
+     "f": "2026-11-06T16:52:48.677Z",
+     "p": 7,
+     "orden": false
     }
    ],
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-06",
-   "ultimaCorrida": "2026-11-06T15:23:59.446Z",
-   "resumen": "Terrenos baratos en Villa María y Villa Nueva (ordenados por mejor oportunidad):\n\n1. USD 26.000 - 232 m² - USD 112/m²  \n   Barrio Ramón Carrillo, Villa María.  \n   [Link](https://urquiaga.com.ar/venta/lotes-y-terrenos-en",
-   "informe": "data/informes/terrenos/2026-11-06-1223.md",
+   "ultimaCorrida": "2026-11-06T16:52:48.677Z",
+   "resumen": "Terrenos baratos en Villa María y Villa Nueva (ordenados por mejor oportunidad):\n\n1. USD 26.000 - 232 m² - USD 112/m²  \n   Barrio Ramon Carrillo, Villa María.  \n   [Link](https://urquiaga.com.ar/venta/lotes-y-terrenos-en",
+   "informe": "data/informes/terrenos/2026-11-06-1352.md",
    "pausado": false,
    "memoria": {},
    "modelo": "Cohere · command-a-03-2025"
@@ -4941,32 +4946,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-06",
-   "ultimaCorrida": "2026-11-06T16:18:41.160Z",
+   "ultimaCorrida": "2026-11-06T16:49:48.032Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1793981921160,
+     "t": 1793983788032,
      "redes_hoy": {
       "publicaciones": 4,
       "historias": 3,
       "reels": 6,
       "seguidos": 14,
-      "gringo": 6,
+      "gringo": 9,
       "errores": 1,
       "reinicios": 5,
       "ultimas": [
-       "13:10 Instagram: ahora en @maestromayordeobrasjb",
-       "13:11 LOTE: ENSAYO del lote (no publica nada)",
-       "13:14 LOTE: grupos de venta en la zona: ['TRATO HECHO VILLA MARIA', 'TRATO HECHO VILLA NUEVA', 'Trato Hecho Villa Maria 1', 'TRATO HECHO VILLA MARIA 3', '",
-       "13:15 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «entrar al grupo «VENDO TODO VILLA MARÍA »: {'numero': None, 'listo': True, 'por_que': 'Ya nos enc",
-       "13:15 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «entrar al grupo «VENDO TODO VILLA MARÍA »: {'numero': 12, 'listo': False, 'por_que': 'Ya nos e",
-       "13:16 LOTE: IA guía (nvidia:google/gemma-4-31b-it) para «entrar al grupo «VENDO TODO VILLA MARÍA »: {'numero': None, 'listo': True, 'por_que': \"El usuario",
-       "13:17 LOTE: Facebook vuelve a quedar en la Página",
-       "13:17 LOTE: ensayo: no pude entrar al grupo VENDO TODO VILLA MARÍA Y ZONA",
-       "13:17 LOTE capturas: subidas 4 a GitHub (capturas/20261106_1317)",
-       "13:17 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea"
+       "13:35 ✔ Gringo: dejé de seguir a @juampigardonio (aprobada por vos)",
+       "13:36 ✔ Gringo: dejé de seguir a @ella.tiene.el.poder (aprobada por vos)",
+       "13:38 Gringo: no pude dejar de seguir a @solterosenespera",
+       "13:38 Guardado debug/pantalla_133804.png y .xml",
+       "13:38 ✔ Gringo: dejé de seguir a @julietanaircalvo (aprobada por vos)",
+       "13:39 Gringo: corto acá, sigo entre las próximas tareas",
+       "13:40 Instagram: ahora en @maestromayordeobrasjb",
+       "13:41 LOTE: ENSAYO del lote (no publica nada)",
+       "13:42 LOTE: en el perfil personal de Jonathan",
+       "13:45 LOTE: grupos de venta en la zona: ['TRATO HECHO VILLA MARIA', 'TRATO HECHO VILLA NUEVA', 'Trato Hecho Villa Maria 1', 'TRATO HECHO VILLA MARIA 3', '"
       ]
      }
     },
@@ -5092,20 +5097,20 @@
       "historias": 3,
       "reels": 6,
       "seguidos": 14,
-      "gringo": 6,
+      "gringo": 9,
       "errores": 1,
       "reinicios": 5,
       "ultimas": [
-       "13:10 Instagram: ahora en @maestromayordeobrasjb",
-       "13:11 LOTE: ENSAYO del lote (no publica nada)",
-       "13:14 LOTE: grupos de venta en la zona: ['TRATO HECHO VILLA MARIA', 'TRATO HECHO VILLA NUEVA', 'Trato Hecho Villa Maria 1', 'TRATO HECHO VILLA MARIA 3', '",
-       "13:15 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «entrar al grupo «VENDO TODO VILLA MARÍA »: {'numero': None, 'listo': True, 'por_que': 'Ya nos enc",
-       "13:15 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «entrar al grupo «VENDO TODO VILLA MARÍA »: {'numero': 12, 'listo': False, 'por_que': 'Ya nos e",
-       "13:16 LOTE: IA guía (nvidia:google/gemma-4-31b-it) para «entrar al grupo «VENDO TODO VILLA MARÍA »: {'numero': None, 'listo': True, 'por_que': \"El usuario",
-       "13:17 LOTE: Facebook vuelve a quedar en la Página",
-       "13:17 LOTE: ensayo: no pude entrar al grupo VENDO TODO VILLA MARÍA Y ZONA",
-       "13:17 LOTE capturas: subidas 4 a GitHub (capturas/20261106_1317)",
-       "13:17 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea"
+       "13:35 ✔ Gringo: dejé de seguir a @juampigardonio (aprobada por vos)",
+       "13:36 ✔ Gringo: dejé de seguir a @ella.tiene.el.poder (aprobada por vos)",
+       "13:38 Gringo: no pude dejar de seguir a @solterosenespera",
+       "13:38 Guardado debug/pantalla_133804.png y .xml",
+       "13:38 ✔ Gringo: dejé de seguir a @julietanaircalvo (aprobada por vos)",
+       "13:39 Gringo: corto acá, sigo entre las próximas tareas",
+       "13:40 Instagram: ahora en @maestromayordeobrasjb",
+       "13:41 LOTE: ENSAYO del lote (no publica nada)",
+       "13:42 LOTE: en el perfil personal de Jonathan",
+       "13:45 LOTE: grupos de venta en la zona: ['TRATO HECHO VILLA MARIA', 'TRATO HECHO VILLA NUEVA', 'Trato Hecho Villa Maria 1', 'TRATO HECHO VILLA MARIA 3', '"
       ]
      }
     }
@@ -8494,7 +8499,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 322,
+   "corridas": 323,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -8503,7 +8508,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-06T16:22:51.831Z",
+   "ultimaCorrida": "2026-11-06T16:52:48.677Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -8513,7 +8518,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-06T16:22:51.831Z",
+    "ultimoChequeo": "2026-11-06T16:52:48.677Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -8616,16 +8621,16 @@
      },
      "2026-11-06": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       26,
-       26
+       27,
+       27
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       26,
-       26
+       27,
+       27
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       26,
-       26
+       27,
+       27
       ]
      }
     }
@@ -17512,7 +17517,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 304,
+   "corridas": 305,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -17521,13 +17526,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-06T16:22:51.831Z",
+   "ultimaCorrida": "2026-11-06T16:52:48.677Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-06",
-    "ultimoChequeo": "2026-11-06T16:22:51.831Z"
+    "ultimoChequeo": "2026-11-06T16:52:48.677Z"
    }
   },
   "feriados": {
@@ -17701,14 +17706,49 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-06",
-   "ultimaCorrida": "2026-11-06T16:17:00.000Z",
-   "resumen": "Apagado (espera medidas y precio) · ensayo con error: no pude entrar al grupo VENDO TODO VILLA MARÍA Y ZONA",
+   "ultimaCorrida": "2026-11-06T16:28:00.000Z",
+   "resumen": "Apagado (espera medidas y precio) · ensayo con error: no pude abrir el menú de Facebook",
    "informe": null,
    "pausado": false,
    "memoria": {}
   }
  },
  "log": [
+  {
+   "t": "2026-11-06T16:52:48.677Z",
+   "quien": "Terrenos baratos",
+   "que": "entregó (7/10 · Cohere · command-a-03-2025)"
+  },
+  {
+   "t": "2026-11-06T16:52:48.677Z",
+   "quien": "Control de calidad",
+   "que": "Terrenos baratos: 7/10 · Error grave en el terreno 6: 240.000 m² es inviable (posible error de tipeo, debería ser 240 m²)."
+  },
+  {
+   "t": "2026-11-06T16:52:48.677Z",
+   "quien": "Buscador",
+   "que": "«Buscar los terrenos más baratos publicados en Villa María y »: leí 4 páginas"
+  },
+  {
+   "t": "2026-11-06T16:52:48.677Z",
+   "quien": "Buscador",
+   "que": "ddg: 30 resultados (HTTP 200)"
+  },
+  {
+   "t": "2026-11-06T16:52:48.677Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-11-06T16:52:48.677Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-06T16:52:48.677Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-06T16:22:51.831Z",
    "quien": "Lo último en tecnología",
@@ -19173,46 +19213,10 @@
    "t": "2026-11-05T05:47:53.233Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-05T05:17:55.204Z",
-   "quien": "Terrenos baratos",
-   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Groq/groq/compound: 404 The model `groq/compound` does not exist or you do not have access to it.)"
-  },
-  {
-   "t": "2026-11-05T05:17:55.204Z",
-   "quien": "Terrenos baratos",
-   "que": "empezó su tarea"
-  },
-  {
-   "t": "2026-11-05T05:17:55.204Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-05T05:17:55.204Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-05T04:48:53.267Z",
-   "quien": "Clima para la obra",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-05T04:48:53.267Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-05T04:48:53.267Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "160": "mundo_economia",
   "161": "mundo_tecnologia",
   "162": "mundo_salud",
   "163": "mundo_salud",
@@ -19711,7 +19715,8 @@
   "867": "vencimientos",
   "868": "tarifas",
   "869": "noticias_tec",
-  "870": "noticias_tec"
+  "870": "noticias_tec",
+  "876": "terrenos"
  },
  "tgOffset": 196508516,
  "hechos": {
@@ -19724,7 +19729,7 @@
  },
  "consumo": {
   "fecha": "2026-11-06",
-  "consultas": 48,
+  "consultas": 58,
   "busquedas": 0,
   "por": {
    "gemini": 18,
@@ -19733,14 +19738,14 @@
    "huggingface": 1,
    "zai": 1,
    "openrouter": 3,
-   "cerebras": 3,
-   "sambanova": 6,
-   "nvidia": 9,
-   "cohere": 4
+   "cerebras": 5,
+   "sambanova": 10,
+   "nvidia": 11,
+   "cohere": 6
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-06T16:22:51.831Z",
+ "actualizado": "2026-11-06T16:52:48.677Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -19777,17 +19782,19 @@
    "cerebras:gpt-oss-120b": 1794063299609,
    "cerebras:qwen-3.8-27b": 1794063302077,
    "cerebras:zai-glm-4.7": true,
-   "sambanova:Meta-Llama-3.3-70B-Instruct": 1793977236659,
-   "sambanova:gpt-oss-120b": 1793977239084,
+   "sambanova:Meta-Llama-3.3-70B-Instruct": 1793984316625,
+   "sambanova:gpt-oss-120b": 1793984318936,
    "sambanova:DeepSeek-V3.1": true,
-   "nvidia:deepseek-ai/deepseek-v4.1-flash": 1793979364344,
-   "nvidia:z-ai/glm-5.3-flash": 1793979484345,
+   "nvidia:deepseek-ai/deepseek-v4.1-flash": 1793984698859,
+   "nvidia:z-ai/glm-5.3-flash": 1793984818861,
    "nvidia:moonshotai/kimi-k2.6": true,
    "sambanova:Llama-4-Maverick-17B-128E-Instruct": true,
    "nvidia:mistralai/mistral-large": true,
    "nvidia:meta/llama-3.3-70b-instruct": true,
    "nvidia:openai/gpt-oss-120b": true,
-   "nvidia:qwen/qwen3-next-80b-a3b-instruct": true
+   "nvidia:qwen/qwen3-next-80b-a3b-instruct": true,
+   "cerebras:llama-3.3-70b": true,
+   "cerebras:qwen-3-32b": true
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
   "vivos": {
@@ -20138,9 +20145,9 @@
   "ultimo": {
    "prov": "Cohere",
    "modelo": "command-a-03-2025",
-   "t": "2026-11-06T15:23:59.446Z"
+   "t": "2026-11-06T16:52:48.677Z"
   }
  },
  "dueno": 1237559052,
- "pendientesCant": 1
+ "pendientesCant": 0
 }

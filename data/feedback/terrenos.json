@@ -20,5 +20,17 @@
    "No se especificó el criterio de ordenamiento (ej: ¿precio por m² ascendente o descendente?)."
   ],
   "mejorar": "Excluir terrenos no urbanos o indicar claramente su naturaleza. Verificar la fecha de las publicaciones para asegurar actualidad. Especificar el criterio de ordenamiento en la introducción."
+ },
+ {
+  "t": "2026-11-06T16:52:48.677Z",
+  "tipo": "calidad",
+  "puntaje": 7,
+  "problemas": [
+   "Error grave en el terreno 6: 240.000 m² es inviable (posible error de tipeo, debería ser 240 m²).",
+   "Falta de verificación de fechas en las publicaciones para asegurar que no sean viejas.",
+   "No se especifican las fuentes exactas para cada terreno (solo se mencionan fuentes generales).",
+   "La mejor oportunidad justificada (Ramon Carrillo) no es la de menor precio por m² (Padre Mujica o el terreno 6 si fuera corregido)."
+  ],
+  "mejorar": "Verificar superficies y precios con capturas de pantalla o detalles específicos de cada publicación. Corregir errores numéricos. Priorizar la oportunidad con menor precio por m² y justificar excepciones con datos concretos (ej: servicios, ubicación). Incluir fecha de revisión de cada link."
  }
 ]
