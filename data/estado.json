@@ -17091,7 +17091,7 @@
   },
   "jefe_obra": {
    "estado": "listo",
-   "corridas": 5,
+   "corridas": 6,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -17099,17 +17099,19 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-05",
-   "ultimaCorrida": "2026-11-05T09:50:55.176Z",
-   "resumen": "🧱 Jefe de obra · jueves 05/11\n🟢 Día apto para trabajar afuera (10° a 26°).\n   Mañana: 15° a 24° · lluvia 85% (5.6 mm) · viento 24 km/h.\n📋 Licitaciones y concursos de obra en los últimos 7 días: 84\n   • Adjudicaron el ",
-   "informe": "data/informes/jefe_obra/2026-11-05-0650.md",
+   "ultimaFecha": "2026-11-06",
+   "ultimaCorrida": "2026-11-06T09:50:31.244Z",
+   "resumen": "🧱 Jefe de obra · viernes 06/11\n🟡 Se puede trabajar, pero ojo entre las 18–19 h (lluvia o viento). Programá hormigón y pintura exterior fuera de ese horario.\n   Mañana: 11° a 20° · lluvia 76% (1 mm) · viento 28 km/h.\n📋",
+   "informe": "data/informes/jefe_obra/2026-11-06-0650.md",
    "pausado": false,
    "memoria": {
     "horas": {
      "fecha": "2026-11-06",
-     "hechas": []
+     "hechas": [
+      "06:50"
+     ]
     },
-    "ultimoChequeo": "2026-11-05T09:50:55.176Z"
+    "ultimoChequeo": "2026-11-06T09:50:31.244Z"
    }
   },
   "editor": {
@@ -17392,6 +17394,21 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-06T09:50:31.244Z",
+   "quien": "Jefe de obra",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-06T09:50:31.244Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-06T09:50:31.244Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-11-06T09:49:54.119Z",
    "quien": "Mesa de entrada",
@@ -18876,26 +18893,10 @@
    "t": "2026-11-04T18:51:57.055Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-04T18:28:56.690Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-04T18:28:56.690Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-04T18:28:56.690Z",
-   "quien": "Valor m² del Colegio de MMO",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "102": "tarifas",
   "103": "noticias_tec",
   "104": "noticias_tec",
   "108": "clima",
@@ -19394,7 +19395,8 @@
   "794": "clima",
   "795": "vencimientos",
   "796": "tarifas",
-  "797": "licitaciones"
+  "797": "licitaciones",
+  "798": "jefe_obra"
  },
  "tgOffset": 196508515,
  "hechos": {
@@ -19415,7 +19417,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-06T09:49:54.119Z",
+ "actualizado": "2026-11-06T09:50:31.244Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
