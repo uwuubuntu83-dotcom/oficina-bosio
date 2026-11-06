@@ -9,5 +9,16 @@
    "No se verificó si los links apuntan directamente al aviso específico (solo se confirmó la fuente general)."
   ],
   "mejorar": "Filtrar datos inviables antes de incluirlos en el listado, incluso si se descartan. Verificar que cada link lleve al aviso exacto, no solo a la plataforma general. Priorizar ordenar por precio/m² de menor a mayor en el listado principal."
+ },
+ {
+  "t": "2026-11-06T15:23:59.446Z",
+  "tipo": "calidad",
+  "puntaje": 8,
+  "problemas": [
+   "El terreno 8 (USD 17.000 - 240.000 m²) es rural y no comparable con los demás, pero se incluyó en la lista. Debió excluirse o mencionarse como nota al margen.",
+   "Falta verificación de la fecha de las publicaciones para asegurar que no sean viejas.",
+   "No se especificó el criterio de ordenamiento (ej: ¿precio por m² ascendente o descendente?)."
+  ],
+  "mejorar": "Excluir terrenos no urbanos o indicar claramente su naturaleza. Verificar la fecha de las publicaciones para asegurar actualidad. Especificar el criterio de ordenamiento en la introducción."
  }
 ]
