@@ -1,8 +1,8 @@
-- **Usa Reels con audios en tendencia**, adaptando el visual al humor cordobés y vinculando el sonido a situaciones locales.
-- **Incluye lugares icónicos de Córdoba** (Cerro, Centro, Av. del Libertador) y su cultura (comida, clima, vida cotidiana).
-- **Crea un gancho visual o auditivo en los primeros 3 segundos** para captar atención inmediatamente.
-- **Escribe textos cortos y directos**, con preguntas que inviten a la interacción.
-- **Sé auténtico y vulnerable**, muestra imperfección para conectar con la audiencia.
-- **Responde comentarios al instante** para activar el algoritmo y fomentar el engagement.
-- **Evita audios genéricos sin contexto** y prioriza estilos musicales o tendencias que maximicen el alcance.
-- **Publica en horarios pico** (12:00 a 14:00 y 19:00 a 21:00) para mayor visibilidad.
+- Usa audios en tendencia que encajen con el humor cordobés y combínalos con visuales locales.
+- Muestra lugares icónicos (Cerro, Centro, Av. del Libertador) y la cultura de Córdoba (comida, clima, vida diaria).
+- Crea un gancho visual o auditivo en los primeros 3 segundos para captar la atención de inmediato.
+- Escribe textos cortos y directos, terminando cada caption con una pregunta que invite a comentar.
+- Sé auténtico y muestra imperfecciones; la vulnerabilidad genera conexión.
+- Responde a los comentarios en los primeros minutos para activar el algoritmo y fomentar el engagement.
+- Evita audios genéricos sin contexto; prioriza estilos que maximicen el alcance (ej.: cumbia pop, reggaetón remix, beats de TikTok).
+- Publica en horarios pico: 12:00‑14:00 y 19:00‑21:00 para mayor visibilidad.
