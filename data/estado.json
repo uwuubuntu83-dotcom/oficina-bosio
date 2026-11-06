@@ -4998,7 +4998,7 @@
    "ultimaCorrida": "2026-11-06T13:52:40.814Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
-   "pausado": false,
+   "pausado": true,
    "memoria": {
     "celu": {
      "t": 1793973160814,
@@ -17483,6 +17483,36 @@
  },
  "log": [
   {
+   "t": "2026-11-06T13:55:54.216Z",
+   "quien": "Gerente general",
+   "que": "respondió y movió pausar celular_bot"
+  },
+  {
+   "t": "2026-11-06T13:55:54.216Z",
+   "quien": "Jonathan",
+   "que": "pausar Celular bot (Instagram)"
+  },
+  {
+   "t": "2026-11-06T13:55:54.216Z",
+   "quien": "IA",
+   "que": "Hugging Face: se quedó sin créditos gratis, la salteo por hoy"
+  },
+  {
+   "t": "2026-11-06T13:55:54.216Z",
+   "quien": "Jonathan",
+   "que": "mandó una orden por Telegram"
+  },
+  {
+   "t": "2026-11-06T13:55:54.216Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 mensajes de Telegram"
+  },
+  {
+   "t": "2026-11-06T13:55:54.216Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
+  {
    "t": "2026-11-06T13:55:06.536Z",
    "quien": "Gerente general",
    "que": "respondió"
@@ -18951,36 +18981,6 @@
    "t": "2026-11-04T23:49:53.578Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-04T23:49:53.578Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-04T23:20:54.777Z",
-   "quien": "Gerente general",
-   "que": "mandó el parte del día (sin IA)"
-  },
-  {
-   "t": "2026-11-04T23:20:54.777Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-04T23:20:54.777Z",
-   "quien": "Mundo: tecnología",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-04T23:20:54.777Z",
-   "quien": "Mundo: economía",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-04T23:20:54.777Z",
-   "quien": "Argentina: economía y obra pública",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
@@ -19486,7 +19486,7 @@
   "816": "tarifas",
   "817": "dolar"
  },
- "tgOffset": 196508515,
+ "tgOffset": 196508516,
  "hechos": {
   "parte": "2026-11-05",
   "entrenamiento": "2026-11-05",
@@ -19497,16 +19497,18 @@
  },
  "consumo": {
   "fecha": "2026-11-06",
-  "consultas": 17,
+  "consultas": 19,
   "busquedas": 0,
   "por": {
    "gemini": 15,
    "groq": 1,
-   "llm7": 1
+   "llm7": 1,
+   "huggingface": 1,
+   "zai": 1
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-06T13:55:06.536Z",
+ "actualizado": "2026-11-06T13:55:54.216Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -19535,7 +19537,8 @@
    "gemini:gemini-3.8-flash": 1793971169522,
    "gemini:gemini-3.7-flash": 1793971175948,
    "gemini:gemini-3.6-flash": 1793971182473,
-   "groq:groq/compound": true
+   "groq:groq/compound": true,
+   "huggingface": 1794059755825
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
   "vivos": {
@@ -19611,12 +19614,159 @@
      "seedance-2.0-fast",
      "seedance-2.0-mini"
     ]
+   },
+   "huggingface": {
+    "fecha": "2026-11-06",
+    "ids": [
+     "Qwen/Qwen3.8-27B",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "deepseek-ai/DeepSeek-V4.1-Flash",
+     "zai-org/GLM-5.3-Flash",
+     "meta-llama/Llama-3.1-8B-Instruct",
+     "moonshotai/Kimi-K3",
+     "google/gemma-4-31B-it",
+     "Qwen/Qwen3.5-9B",
+     "zai-org/GLM-5.3",
+     "Qwen/Qwen3.6-35B-A3B",
+     "meta-models/Muse-Glimmer-30B",
+     "tencent/Hy4-preview",
+     "openai/gpt-oss-20b",
+     "Qwen/Qwen3.8-2.4T-A95B",
+     "meta-models/Muse-Spark-Open-816B-A42B",
+     "openai/gpt-oss-120b",
+     "MiniMaxAI/MiniMax-M3.1-Flash",
+     "reflection/Beam-1.0-501B-A23B",
+     "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+     "XiaomiMiMo/MiMo-V2.6-Pro-RL",
+     "google/gemma-4-26B-A4B-it",
+     "deepseek-ai/DeepSeek-V4-Flash",
+     "google/gemma-3-4b-it",
+     "CohereLabs/tiny-aya-global",
+     "ibm-granite/granite-4.2-3b",
+     "deepseek-ai/DeepSeek-R1",
+     "inclusionAI/Ling-3.1-flash",
+     "thinkingmachines/Inkling-Small",
+     "deepseek-ai/DeepSeek-V4-Pro",
+     "zai-org/GLM-5.2",
+     "XiaomiMiMo/MiMo-V2.6-Flash-RL",
+     "Qwen/Qwen3.8-Flash-Next-FP8",
+     "Qwen/Qwen3.5-27B",
+     "deepseek-ai/DeepSeek-V4-Pro-0813",
+     "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+     "meta-llama/Llama-3.3-70B-Instruct",
+     "deepseek-ai/DeepSeek-V4-Flash-0731",
+     "zai-org/GLM-4.7-Flash",
+     "google/gemma-3-27b-it",
+     "Qwen/Qwen3.5-122B-A10B",
+     "Qwen/Qwen3-30B-A3B",
+     "google/gemma-3-12b-it",
+     "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+     "microsoft/phi-4",
+     "MiniMaxAI/MiniMax-M3",
+     "zai-org/GLM-5.3-Flash-BF16",
+     "moonshotai/Kimi-K2.7-Code",
+     "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+     "thinkingmachines/Inkling",
+     "Qwen/Qwen3.6-27B",
+     "CohereLabs/tiny-aya-earth",
+     "swiss-ai/Apertus-v1.5-70B",
+     "speakleash/Bielik-11B-v3.0-Instruct",
+     "Qwen/Qwen2.5-72B-Instruct",
+     "inclusionAI/Ling-3.0-flash-Fin",
+     "Qwen/Qwen3.5-35B-A3B",
+     "Qwen/Qwen3-14B",
+     "zai-org/GLM-5.3-BF16",
+     "deepseek-ai/DeepSeek-V3.2",
+     "ibm-granite/granite-4.2-8b",
+     "deepseek-ai/DeepSeek-V3",
+     "zai-org/AutoGLM-Phone-9B-Multilingual",
+     "aisingapore/Qwen-SEA-LION-v4.5-27B-IT",
+     "Qwen/Qwen3-32B",
+     "moonshotai/Kimi-K2.5",
+     "zai-org/GLM-4.6V-Flash",
+     "zai-org/GLM-4.7",
+     "moonshotai/Kimi-K2.6",
+     "zai-org/GLM-4.5",
+     "Qwen/Qwen3.5-397B-A17B",
+     "zai-org/GLM-5",
+     "inclusionAI/Ling-3.0-flash-VL",
+     "Qwen/Qwen3-VL-235B-A22B-Instruct",
+     "XiaomiMiMo/MiMo-V2.5-Pro",
+     "Sao10K/L3-8B-Stheno-v3.2",
+     "swiss-ai/Apertus-8B-Instruct-2509",
+     "XiaomiMiMo/MiMo-V2.5",
+     "inclusionAI/Ling-3.0-flash",
+     "ibm-granite/granite-4.2-30b",
+     "CohereLabs/aya-vision-32b",
+     "zai-org/GLM-4.5V-FP8",
+     "alpindale/WizardLM-2-8x22B",
+     "NousResearch/Hermes-3-Llama-3.1-70B",
+     "Qwen/Qwen3-VL-30B-A3B-Instruct",
+     "zai-org/GLM-4.5V",
+     "deepseek-ai/DeepSeek-R1-0528",
+     "deepseek-ai/DeepSeek-V3-0324",
+     "stepfun-ai/Step-3.7-Flash",
+     "zai-org/GLM-4.6V",
+     "MiniMaxAI/MiniMax-M1-80k",
+     "Qwen/Qwen3-235B-A22B-Instruct-2507",
+     "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+     "zai-org/GLM-4.6V-FP8",
+     "moonshotai/Kimi-K2-Instruct",
+     "CohereLabs/c4ai-command-r-08-2024",
+     "Qwen/Qwen3-235B-A22B-Thinking-2507",
+     "moonshotai/Kimi-K2-Instruct-0905",
+     "CohereLabs/aya-expanse-32b",
+     "deepseek-ai/DeepSeek-V3.1",
+     "zai-org/GLM-4.6",
+     "CohereLabs/c4ai-command-r7b-12-2024",
+     "Qwen/Qwen3-Next-80B-A3B-Instruct",
+     "MiniMaxAI/MiniMax-M2.5",
+     "CohereLabs/c4ai-command-r7b-arabic-02-2025",
+     "deepseek-ai/DeepSeek-V3.1-Terminus",
+     "MiniMaxAI/MiniMax-M2.7",
+     "CohereLabs/c4ai-command-a-03-2025",
+     "stepfun-ai/Step-3.5-Flash",
+     "aisingapore/Gemma-SEA-LION-v4-27B-IT",
+     "CohereLabs/command-a-reasoning-08-2025",
+     "zai-org/GLM-5.1",
+     "swiss-ai/Apertus-70B-Instruct-2509",
+     "CohereLabs/command-a-translate-08-2025",
+     "tencent/Hy3",
+     "aisingapore/Qwen-SEA-LION-v4-32B-IT",
+     "CohereLabs/tiny-aya-water",
+     "Qwen/Qwen2.5-VL-72B-Instruct",
+     "BSC-LT/ALIA-40b-instruct-2606",
+     "zai-org/GLM-4.5-Air",
+     "CohereLabs/tiny-aya-fire",
+     "aisingapore/Nemotron-SEA-LION-v4.8-120B-A12B",
+     "zai-org/GLM-4.6-FP8",
+     "zai-org/GLM-4.7-FP8",
+     "zai-org/GLM-5.1-FP8",
+     "zai-org/GLM-5.2-FP8"
+    ]
+   },
+   "zai": {
+    "fecha": "2026-11-06",
+    "ids": [
+     "glm-4.5",
+     "glm-4.5-air",
+     "glm-4.6",
+     "glm-4.7",
+     "glm-5",
+     "glm-5-turbo",
+     "glm-5.1",
+     "glm-5.2",
+     "glm-5.3",
+     "glm-5.3-flash",
+     "glm-5.3-flashx",
+     "glm-5.3-flashx-legal"
+    ]
    }
   },
   "ultimo": {
-   "prov": "LLM7",
-   "modelo": "gpt-oss:20b",
-   "t": "2026-11-06T13:55:06.536Z"
+   "prov": "Z.ai (GLM)",
+   "modelo": "glm-4.5-flash",
+   "t": "2026-11-06T13:55:54.216Z"
   }
  },
  "dueno": 1237559052,
