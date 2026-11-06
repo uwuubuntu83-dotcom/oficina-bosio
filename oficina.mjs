@@ -190,26 +190,37 @@ async function llamarOpenAI(p, modelo, prompt, { json, imagen, largo }) {
 // el cupo de búsqueda de Gemini. Con lo que leen, piensa cualquiera de las IA gratis (o la IA propia de GitHub).
 const sinTags = h => String(h || "").replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<noscript[\s\S]*?<\/noscript>/gi, " ").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/\s+/g, " ").trim();
 async function buscarWeb(consulta, max = 5) {
-  const nav = { "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36", "accept-language": "es-AR,es;q=0.9" };
+  const nav = { "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36", "accept-language": "es-AR,es;q=0.9", accept: "text/html,application/xhtml+xml" };
+  const q = encodeURIComponent(consulta);
+  const motores = [
+    ["ddg", "https://html.duckduckgo.com/html/?q=" + q + "&kl=ar-es", /duckduckgo\./],
+    ["ddg-lite", "https://lite.duckduckgo.com/lite/?q=" + q + "&kl=ar-es", /duckduckgo\./],
+    ["mojeek", "https://www.mojeek.com/search?q=" + q, /mojeek\./],
+    ["bing", "https://www.bing.com/search?setlang=es&cc=AR&q=" + q, /bing\.|microsoft\.|msn\.|live\.com/],
+  ];
+  const basura = /(\.css|\.js|\.png|\.jpg|\.svg|\.ico|\.woff)(\?|$)|w3\.org|schema\.org|google\.|gstatic|facebook\.com\/sharer|twitter\.com\/intent|apple\.com|privacy|javascript:/i;
   let links = [];
-  try {
-    const r = await traer("https://html.duckduckgo.com/html/", { method: "POST", headers: { ...nav, "content-type": "application/x-www-form-urlencoded" }, body: "q=" + encodeURIComponent(consulta) + "&kl=ar-es" }, 20000);
-    const h = await r.text();
-    for (const m of h.matchAll(/class="result__a"[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
-      let u = m[1]; const q = u.match(/uddg=([^&]+)/); if (q) u = decodeURIComponent(q[1]); if (u.startsWith("//")) u = "https:" + u;
-      if (/^https?:/.test(u) && !/duckduckgo\.com\/y\.js|bing\.com\/aclick/.test(u)) links.push({ url: u, titulo: sinTags(m[2]) });
-    }
-  } catch (e) { console.log("ddg:", e.message); }
-  if (links.length < 2) try {
-    const r = await traer("https://www.bing.com/search?setlang=es&cc=AR&q=" + encodeURIComponent(consulta), { headers: nav }, 20000);
-    const h = await r.text();
-    for (const m of h.matchAll(/<li class="b_algo"[\s\S]*?<h2[^>]*><a[^>]*href="(https?:[^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) links.push({ url: m[1].replace(/&amp;/g, "&"), titulo: sinTags(m[2]) });
-  } catch (e) { console.log("bing:", e.message); }
-  links = links.filter((x, i, a) => a.findIndex(y => y.url === x.url) === i).slice(0, max);
+  for (const [nombre, url, propio] of motores) {
+    try {
+      const r = await traer(url, { headers: nav }, 20000); const h = await r.text(); const antes = links.length;
+      for (const m of h.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]{0,300}?)<\/a>/g)) {
+        let u = m[1].replace(/&amp;/g, "&"); const dd = u.match(/uddg=([^&]+)/); if (dd) u = decodeURIComponent(dd[1]); if (u.startsWith("//")) u = "https:" + u;
+        const tit = sinTags(m[2]);
+        if (!/^https?:\/\//.test(u) || propio.test(new URL(u).hostname) || basura.test(u) || tit.length < 8) continue;
+        links.push({ url: u, titulo: tit.slice(0, 120) });
+      }
+      log("Buscador", `${nombre}: ${links.length - antes} resultados (HTTP ${r.status})`);
+    } catch (e) { log("Buscador", `${nombre}: ${e.message}`); }
+    links = links.filter((x, i, a) => a.findIndex(y => y.url.split("#")[0] === x.url.split("#")[0]) === i);
+    if (links.length >= max) break;
+  }
+  links = links.slice(0, max + 2);
   const partes = []; const fuentes = [];
   for (const l of links) {
+    if (fuentes.length >= max) break;
     try { const r = await traer(l.url, { headers: nav }, 15000); const t = sinTags(await r.text()).slice(0, 3000); if (t.length > 200) { partes.push(`### ${l.titulo}\n${l.url}\n${t}`); fuentes.push(l); } } catch (e) { /* página caída: sigue */ }
   }
+  log("Buscador", `«${consulta.slice(0, 60)}»: leí ${fuentes.length} páginas`);
   return { texto: partes.join("\n\n"), fuentes };
 }
 async function iaConInternet(prompt, consulta, opts = {}) {
