@@ -271,7 +271,7 @@ function textoPlan(e) {
   return `📅 Programa de hoy del celu bot (Instagram y Facebook)\nTotal: ${pl.tareas.length} tareas · ya pasaron ${hechas} · quedan ${quedan.length}\n\n${Object.entries(por).sort((a, z) => z[1] - a[1]).map(([k, v]) => `${nombreTarea(k)}: ${v}`).join("\n") || "No le quedan tareas por hoy."}${quedan.length ? "\n\n⏭️ Próximas:\n" + quedan.slice(0, 15).map(t => `${t[0]}  ${nombreTarea(t[1])}${t[2] ? " ×" + t[2] : ""}`).join("\n") + (quedan.length > 15 ? `\n… y ${quedan.length - 15} más` : "") : ""}`;
 }
 const RX_CELU = /^\/?celu(?:\s*bot)?\b[\s:,.-]*(.*)$/is;
-const RX_CELU_AUTO = /^(programa de hoy|(sub[ií]|public[aá]|compart[ií]|hac[eé]|mand[aá])(?=\s).{0,40}\b(historia|reel|publicaci[oó]n|posteo|repost)|paus[aá] (el )?(instagram|celu)|reinici[aá] (el )?(instagram|celu|bot de instagram))/i;
+const RX_CELU_AUTO = /^((paus[aá]|fren[aá]|par[aá]|segu[ií]|sigue|continu[aá])[.!]*$|programa de hoy|(sub[ií]|public[aá]|compart[ií]|hac[eé]|mand[aá])(?=\s).{0,40}\b(historia|reel|publicaci[oó]n|posteo|repost)|paus[aá] (el )?(instagram|celu)|reinici[aá] (el )?(instagram|celu|bot de instagram))/i;
 async function ordenCelu(t) {
   const q = t.trim(); const low = q.toLowerCase();
   if (!q || /^(estado|c[oó]mo (est[aá]|and[aá])|anda\??)$/.test(low)) { await enviar(textoCelu(await buzon("/oficina/celu"))); return; }
@@ -1507,6 +1507,7 @@ async function revisarExternos() {
   for (const b of bots().filter(x => x.tipo === "externo")) {
     const sb = est.bots[b.id]; let hb = leer(path.join(DATA, "externos", b.id + ".json"), null);
     if (b.id === "celular_bot" && BUZON && PIN) { try { const e = await buzon("/oficina/celu"); if (e.estado) { hb = { t: new Date(e.estado.t).toISOString(), estado: e.estado.estado && e.estado.estado.bot_vivo === false && !e.estado.estado.pausa ? "error" : "ok", detalle: textoCelu(e).split("\n").slice(0, 3).join(" · ").slice(0, 200) }; sb.memoria.celu = { t: e.estado.t, redes_hoy: (e.estado.estado || {}).redes_hoy || {} }; { const dd = sb.memoria.diario ||= {}; dd[fechaAR(new Date(e.estado.t))] = sb.memoria.celu.redes_hoy; for (const k of Object.keys(dd).sort().slice(0, -60)) delete dd[k]; } } } catch (e) { log("Redes sociales", "no pude leer el buzón del celu: " + e.message); } }
+    if (b.id === "lote_fb" && BUZON && PIN) { try { const e = await buzon("/oficina/celu"); const l = e.estado && e.estado.estado && e.estado.estado.lote; if (l && l.t) hb = { t: new Date(l.t.replace(" ", "T") + ":00-03:00").toISOString(), estado: /error/i.test(l.ultimo || "") ? "error" : "ok", detalle: (l.activo ? `Publicando · hoy: ${l.publicaciones_hoy || 0}` : "Apagado (espera medidas y precio)") + (l.ultimo ? " · " + l.ultimo : "") + (l.grupos && l.grupos.length ? ` · grupos: ${l.grupos.slice(0, 4).join(", ")}` : "") }; } catch (e) { log("Redes sociales", "no pude leer el lote: " + e.message); } }
     if (!hb) { sb.estado = "sin conectar"; continue; }
     const min = (Date.now() - new Date(hb.t).getTime()) / 60000;
     sb.ultimaCorrida = hb.t; sb.resumen = hb.detalle || hb.estado; sb.estado = min > (b.alertaMin || 90) ? "sin señal" : hb.estado === "error" ? "falló" : "listo";
