@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 317,
+   "corridas": 318,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -11,10 +11,10 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-05",
-   "ultimaCorrida": "2026-11-06T13:18:58.275Z",
-   "resumen": "💵 Dólar hoy (10:48 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1540 · venta $1560\n• Bolsa: compra $1575.7 · venta $1588.6\n• Contado con liquidación: compra $1676.7 · venta $1680.4\n• Mayorista: compra $1537",
-   "informe": "data/informes/dolar/2026-11-05-1048.md",
+   "ultimaFecha": "2026-11-06",
+   "ultimaCorrida": "2026-11-06T13:48:53.249Z",
+   "resumen": "💵 Dólar hoy (10:48 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1535 · venta $1555\n• Bolsa: compra $1573.8 · venta $1588\n• Contado con liquidación: compra $1658.4 · venta $1664.9\n• Mayorista: compra $1536.5",
+   "informe": "data/informes/dolar/2026-11-06-1048.md",
    "pausado": false,
    "memoria": {
     "dolarBase": {
@@ -23,7 +23,7 @@
      "bolsa": 1588,
      "contadoconliqui": 1664.9,
      "mayorista": 1545.5,
-     "cripto": 1654.95,
+     "cripto": 1662.5,
      "tarjeta": 2041
     },
     "dolarFecha": "2026-11-06",
@@ -33,11 +33,11 @@
      "bolsa": 1588,
      "contadoconliqui": 1664.9,
      "mayorista": 1545.5,
-     "cripto": 1654.95,
+     "cripto": 1662.5,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-06T13:18:58.275Z",
-    "resumenFecha": "2026-11-05",
+    "ultimoChequeo": "2026-11-06T13:48:53.249Z",
+    "resumenFecha": "2026-11-06",
     "hist": {
      "2026-10-30": {
       "oficial": 1560,
@@ -4995,30 +4995,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-06",
-   "ultimaCorrida": "2026-11-06T13:16:54.983Z",
+   "ultimaCorrida": "2026-11-06T13:47:39.987Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": false,
    "memoria": {
     "celu": {
-     "t": 1793971014983,
+     "t": 1793972859987,
      "redes_hoy": {
       "publicaciones": 0,
-      "historias": 0,
+      "historias": 1,
       "reels": 0,
-      "seguidos": 0,
-      "gringo": 0,
-      "errores": 0,
+      "seguidos": 6,
+      "gringo": 2,
+      "errores": 1,
       "reinicios": 0,
       "ultimas": [
-       "10:14 adb connect 127.0.0.1:5555: failed to connect to '127.0.0.1:5555': Connection refused",
-       "10:14 Buscando el puerto Wi-Fi del celular en 127.0.0.1...",
-       "10:14 Sin conexión con el celular (No encuentro el celular (ni por cable ni por Wi-Fi)). Reintento en 1 minuto...",
-       "10:15 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "10:15 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "10:15 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
-       "10:15 PLAN DE HOY:",
-       "10:16 Claude: no encontré el chat de Claude para bajar el arreglo"
+       "10:32 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "10:32 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "10:33 Post elegido de #albañileriaargentina",
+       "10:33 ✔ Historia compartida (avioncito)",
+       "10:35 ✔ Seguido (1/6): @lucholuquez (Lucho Luquez), seguidor de @alianzadeportes (#villanuevacordoba)",
+       "10:37 ✔ Seguido (2/6): @clari2802 (Clarisa Fernandez), seguidor de @alianzadeportes (#villanuevacordoba)",
+       "10:38 ✔ Seguido (3/6): @ruthbiasuzzi (Ruth Biasuzzi), seguidor de @alianzadeportes (#villanuevacordoba)",
+       "10:40 ✔ Seguido (4/6): @paulocesar000ok (Paulo Ocampo), seguidor de @vallesafondo.oficial (#jesusmaria)",
+       "10:42 ✔ Seguido (5/6): @chicharito_jhe_22 (Javier Espeche), seguidor de @vallesafondo.oficial (#jesusmaria)",
+       "10:43 ✔ Seguido (6/6): @cristianwaltergomez (Cristian Walter Gomez), seguidor de @vallesafondo.oficial (#jesusmaria)"
       ]
      }
     },
@@ -5141,21 +5143,23 @@
      },
      "2026-11-06": {
       "publicaciones": 0,
-      "historias": 0,
+      "historias": 1,
       "reels": 0,
-      "seguidos": 0,
-      "gringo": 0,
-      "errores": 0,
+      "seguidos": 6,
+      "gringo": 2,
+      "errores": 1,
       "reinicios": 0,
       "ultimas": [
-       "10:14 adb connect 127.0.0.1:5555: failed to connect to '127.0.0.1:5555': Connection refused",
-       "10:14 Buscando el puerto Wi-Fi del celular en 127.0.0.1...",
-       "10:14 Sin conexión con el celular (No encuentro el celular (ni por cable ni por Wi-Fi)). Reintento en 1 minuto...",
-       "10:15 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "10:15 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "10:15 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
-       "10:15 PLAN DE HOY:",
-       "10:16 Claude: no encontré el chat de Claude para bajar el arreglo"
+       "10:32 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "10:32 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "10:33 Post elegido de #albañileriaargentina",
+       "10:33 ✔ Historia compartida (avioncito)",
+       "10:35 ✔ Seguido (1/6): @lucholuquez (Lucho Luquez), seguidor de @alianzadeportes (#villanuevacordoba)",
+       "10:37 ✔ Seguido (2/6): @clari2802 (Clarisa Fernandez), seguidor de @alianzadeportes (#villanuevacordoba)",
+       "10:38 ✔ Seguido (3/6): @ruthbiasuzzi (Ruth Biasuzzi), seguidor de @alianzadeportes (#villanuevacordoba)",
+       "10:40 ✔ Seguido (4/6): @paulocesar000ok (Paulo Ocampo), seguidor de @vallesafondo.oficial (#jesusmaria)",
+       "10:42 ✔ Seguido (5/6): @chicharito_jhe_22 (Javier Espeche), seguidor de @vallesafondo.oficial (#jesusmaria)",
+       "10:43 ✔ Seguido (6/6): @cristianwaltergomez (Cristian Walter Gomez), seguidor de @vallesafondo.oficial (#jesusmaria)"
       ]
      }
     }
@@ -8481,7 +8485,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 317,
+   "corridas": 318,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -8490,7 +8494,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-06T13:18:58.275Z",
+   "ultimaCorrida": "2026-11-06T13:48:53.249Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -8500,7 +8504,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-06T13:18:58.275Z",
+    "ultimoChequeo": "2026-11-06T13:48:53.249Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -8603,16 +8607,16 @@
      },
      "2026-11-06": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       21,
-       21
+       22,
+       22
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       21,
-       21
+       22,
+       22
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       21,
-       21
+       22,
+       22
       ]
      }
     }
@@ -17298,7 +17302,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 299,
+   "corridas": 300,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -17307,13 +17311,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-06T13:18:58.275Z",
+   "ultimaCorrida": "2026-11-06T13:48:53.249Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-06",
-    "ultimoChequeo": "2026-11-06T13:18:58.275Z"
+    "ultimoChequeo": "2026-11-06T13:48:53.249Z"
    }
   },
   "feriados": {
@@ -17478,6 +17482,21 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-06T13:48:53.249Z",
+   "quien": "Dólar",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-06T13:48:53.249Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-06T13:48:53.249Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
+  },
   {
    "t": "2026-11-06T13:18:58.275Z",
    "quien": "Aumentos de servicios",
@@ -18962,26 +18981,10 @@
    "t": "2026-11-04T22:50:54.327Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-04T22:50:54.327Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-04T22:20:55.664Z",
-   "quien": "Clientes y licitaciones",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-04T22:20:55.664Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "124": "comidas",
   "131": "licitaciones",
   "132": "noticias_tec",
   "133": "noticias_tec",
@@ -19480,7 +19483,8 @@
   "809": "comidas",
   "810": "noticias_tec",
   "814": "clima",
-  "816": "tarifas"
+  "816": "tarifas",
+  "817": "dolar"
  },
  "tgOffset": 196508515,
  "hechos": {
@@ -19501,7 +19505,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-06T13:18:58.275Z",
+ "actualizado": "2026-11-06T13:48:53.249Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
