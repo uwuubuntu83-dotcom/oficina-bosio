@@ -1,0 +1,13 @@
+[
+ {
+  "t": "2026-11-06T14:54:25.625Z",
+  "tipo": "calidad",
+  "puntaje": 8,
+  "problemas": [
+   "Incluyó un terreno con dato inviable (1 m² a USD 80.000/m²) aunque lo descartó correctamente. Debió omitirlo por completo.",
+   "El terreno de 240.000 m² a USD 0,07/m² también se descartó, pero su inclusión sugiere falta de filtro inicial en fuentes.",
+   "No se verificó si los links apuntan directamente al aviso específico (solo se confirmó la fuente general)."
+  ],
+  "mejorar": "Filtrar datos inviables antes de incluirlos en el listado, incluso si se descartan. Verificar que cada link lleve al aviso exacto, no solo a la plataforma general. Priorizar ordenar por precio/m² de menor a mayor en el listado principal."
+ }
+]

@@ -967,21 +967,28 @@
    "ultimaCorrida": null
   },
   "terrenos": {
-   "estado": "postergado",
-   "corridas": 0,
+   "estado": "listo",
+   "corridas": 1,
    "fallas": 0,
    "fallasSeguidas": 0,
-   "puntaje": null,
-   "historial": [],
+   "puntaje": 8,
+   "historial": [
+    {
+     "f": "2026-11-06T14:54:25.625Z",
+     "p": 8,
+     "orden": false
+    }
+   ],
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-06T14:51:19.075Z",
-   "resumen": "Esperando cupo de IA: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)",
-   "informe": null,
+   "ultimaFecha": "2026-11-06",
+   "ultimaCorrida": "2026-11-06T14:54:25.625Z",
+   "resumen": "Terrenos baratos en Villa María y Villa Nueva (actualizado al 2026-11-06)  \n\n1. USD 26.000 – 232 m² – USD 112,07/m²  \n   *Barrio Ramon Carrillo, Villa María*  \n   [Link al aviso](https://urquiaga.com.ar/venta/lotes-y-ter",
+   "informe": "data/informes/terrenos/2026-11-06-1154.md",
    "pausado": false,
-   "memoria": {}
+   "memoria": {},
+   "modelo": "Cohere · command-a-03-2025"
   },
   "casas": {
    "estado": "esperando",
@@ -17787,6 +17794,61 @@
  },
  "log": [
   {
+   "t": "2026-11-06T14:54:25.625Z",
+   "quien": "Terrenos baratos",
+   "que": "entregó (8/10 · Cohere · command-a-03-2025)"
+  },
+  {
+   "t": "2026-11-06T14:54:25.625Z",
+   "quien": "Control de calidad",
+   "que": "Terrenos baratos: 8/10 · Incluyó un terreno con dato inviable (1 m² a USD 80.000/m²) aunque lo descartó correctamente. Debió omitirlo por completo."
+  },
+  {
+   "t": "2026-11-06T14:54:25.625Z",
+   "quien": "Buscador",
+   "que": "«Buscar los terrenos más baratos publicados en Villa María y »: leí 3 páginas"
+  },
+  {
+   "t": "2026-11-06T14:54:25.625Z",
+   "quien": "Buscador",
+   "que": "ddg: 30 resultados (HTTP 200)"
+  },
+  {
+   "t": "2026-11-06T14:54:25.625Z",
+   "quien": "Terrenos baratos",
+   "que": "lo mandaron a rehacer"
+  },
+  {
+   "t": "2026-11-06T14:54:25.625Z",
+   "quien": "Control de calidad",
+   "que": "Terrenos baratos: 3/10 · Los links no apuntan a publicaciones específicas, sino a listados generales o categorías (no se puede verificar el precio, la superficie ni la vigencia de cada aviso)."
+  },
+  {
+   "t": "2026-11-06T14:54:25.625Z",
+   "quien": "Buscador",
+   "que": "«Buscar los terrenos más baratos publicados en Villa María y »: leí 4 páginas"
+  },
+  {
+   "t": "2026-11-06T14:54:25.625Z",
+   "quien": "Buscador",
+   "que": "ddg: 30 resultados (HTTP 200)"
+  },
+  {
+   "t": "2026-11-06T14:54:25.625Z",
+   "quien": "Terrenos baratos",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-11-06T14:54:25.625Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-06T14:54:25.625Z",
+   "quien": "Oficina",
+   "que": "abre (correr:terrenos) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
+  {
    "t": "2026-11-06T14:51:19.075Z",
    "quien": "Terrenos baratos",
    "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
@@ -19230,66 +19292,10 @@
    "t": "2026-11-05T01:48:54.964Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-05T01:18:54.364Z",
-   "quien": "Informe del celu",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-05T01:18:54.364Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-05T01:18:54.364Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-05T00:49:56.570Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-05T00:49:56.570Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-05T00:49:56.570Z",
-   "quien": "¿Qué comiste?",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-05T00:49:56.570Z",
-   "quien": "Clima para la obra",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-05T00:49:56.570Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-05T00:49:56.570Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-05T00:20:44.365Z",
-   "quien": "Monitor de salud",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-05T00:20:44.365Z",
-   "quien": "Lo último en tecnología",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "132": "noticias_tec",
   "133": "noticias_tec",
   "140": "licitaciones",
   "141": "licitaciones",
@@ -19788,7 +19794,8 @@
   "814": "clima",
   "816": "tarifas",
   "817": "dolar",
-  "840": "licitaciones"
+  "840": "licitaciones",
+  "845": "terrenos"
  },
  "tgOffset": 196508516,
  "hechos": {
@@ -19801,18 +19808,23 @@
  },
  "consumo": {
   "fecha": "2026-11-06",
-  "consultas": 22,
+  "consultas": 43,
   "busquedas": 0,
   "por": {
    "gemini": 18,
-   "groq": 1,
+   "groq": 2,
    "llm7": 1,
    "huggingface": 1,
-   "zai": 1
+   "zai": 1,
+   "openrouter": 3,
+   "cerebras": 3,
+   "sambanova": 6,
+   "nvidia": 6,
+   "cohere": 2
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-06T14:51:19.075Z",
+ "actualizado": "2026-11-06T14:54:25.625Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -19843,7 +19855,22 @@
    "gemini:gemini-3.7-flash": 1793976718054,
    "gemini:gemini-3.6-flash": 1793976724558,
    "groq:groq/compound": true,
-   "huggingface": 1794059755825
+   "huggingface": 1794059755825,
+   "openrouter:google/gemma-4-26b-a4b-it:free": 1793976907469,
+   "openrouter:google/gemma-4-31b-it:free": 1793976909898,
+   "cerebras:gpt-oss-120b": 1794063299609,
+   "cerebras:qwen-3.8-27b": 1794063302077,
+   "cerebras:zai-glm-4.7": true,
+   "sambanova:Meta-Llama-3.3-70B-Instruct": 1793977236659,
+   "sambanova:gpt-oss-120b": 1793977239084,
+   "sambanova:DeepSeek-V3.1": true,
+   "nvidia:deepseek-ai/deepseek-v4.1-flash": 1793977629829,
+   "nvidia:z-ai/glm-5.3-flash": 1793977749829,
+   "nvidia:moonshotai/kimi-k2.6": true,
+   "sambanova:Llama-4-Maverick-17B-128E-Instruct": true,
+   "nvidia:mistralai/mistral-large": true,
+   "nvidia:meta/llama-3.3-70b-instruct": true,
+   "nvidia:openai/gpt-oss-120b": true
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
   "vivos": {
@@ -20066,12 +20093,135 @@
      "glm-5.3-flashx",
      "glm-5.3-flashx-legal"
     ]
+   },
+   "groq": {
+    "fecha": "2026-11-06",
+    "ids": [
+     "allam-2-7b",
+     "canopylabs/orpheus-arabic-saudi",
+     "qwen/qwen3.8-27b",
+     "openai/gpt-oss-20b",
+     "canopylabs/orpheus-v1-english",
+     "openai/gpt-oss-120b"
+    ]
+   },
+   "cerebras": {
+    "fecha": "2026-11-06",
+    "ids": [
+     "gpt-oss-120b",
+     "qwen-3.8-27b"
+    ]
+   },
+   "sambanova": {
+    "fecha": "2026-11-06",
+    "ids": [
+     "Meta-Llama-3.3-70B-Instruct",
+     "MiniMax-M3.1-Flash",
+     "gemma-4-31B-it",
+     "gpt-oss-120b"
+    ]
+   },
+   "nvidia": {
+    "fecha": "2026-11-06",
+    "ids": [
+     "01-ai/yi-large",
+     "adept/fuyu-8b",
+     "ai21labs/jamba-1.5-large-instruct",
+     "aisingapore/sea-lion-7b-instruct",
+     "bigcode/starcoder2-15b",
+     "databricks/dbrx-instruct",
+     "deepseek-ai/deepseek-coder-6.7b-instruct",
+     "deepseek-ai/deepseek-v4.1-flash",
+     "google/codegemma-1.1-7b",
+     "google/codegemma-7b",
+     "google/deplot",
+     "google/diffusiongemma-26b-a4b-it",
+     "google/gemma-2b",
+     "google/gemma-3-12b-it",
+     "google/gemma-3-4b-it",
+     "google/gemma-4-31b-it",
+     "google/recurrentgemma-2b",
+     "ibm/granite-3.0-3b-a800m-instruct",
+     "ibm/granite-3.0-8b-instruct",
+     "ibm/granite-34b-code-instruct",
+     "ibm/granite-8b-code-instruct",
+     "meta/codellama-70b",
+     "meta/llama-3.2-90b-vision-instruct",
+     "meta/llama2-70b",
+     "meta/muse-glimmer-30b",
+     "microsoft/kosmos-2",
+     "microsoft/phi-3-vision-128k-instruct",
+     "microsoft/phi-3.5-moe-instruct",
+     "minimaxai/minimax-m3.1-flash",
+     "mistralai/codestral-22b-instruct-v0.1",
+     "mistralai/mistral-7b-instruct-v0.3",
+     "mistralai/mistral-large",
+     "mistralai/mistral-large-2-instruct",
+     "mistralai/mistral-large-4-1t-a52b",
+     "mistralai/mixtral-8x22b-v0.1",
+     "moonshotai/kimi-k2.6",
+     "nv-mistralai/mistral-nemo-12b-instruct",
+     "nvidia/ai-synthetic-video-detector",
+     "nvidia/cosmos-reason2-8b",
+     "nvidia/ising-calibration-1.5-31b",
+     "nvidia/llama-3.1-nemotron-51b-instruct",
+     "nvidia/llama-3.1-nemotron-70b-instruct",
+     "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+     "nvidia/llama3-chatqa-1.5-70b",
+     "nvidia/mistral-nemo-minitron-8b-8k-instruct",
+     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+     "nvidia/nemotron-3-super-120b-a12b",
+     "nvidia/nemotron-3-ultra-550b-a55b",
+     "nvidia/nemotron-3.5-bolt-e4b",
+     "nvidia/nemotron-3.5-lightning-30b-a3b",
+     "nvidia/nemotron-3.5-super-vl-120b-a12b",
+     "nvidia/nemotron-4-340b-instruct",
+     "nvidia/nemotron-nano-3-30b-a3b",
+     "nvidia/nemotron-parse",
+     "nvidia/nemotron-parse-2.0",
+     "nvidia/neva-22b",
+     "nvidia/riva-translate-4b-instruct",
+     "nvidia/riva-translate-4b-instruct-v2",
+     "nvidia/vila",
+     "openai/gpt-oss-20b",
+     "poolside/laguna-xs-2.1",
+     "stepfun-ai/step-5-preview",
+     "writer/palmyra-creative-122b",
+     "writer/palmyra-fin-70b-32k",
+     "writer/palmyra-med-70b",
+     "writer/palmyra-med-70b-32k",
+     "z-ai/glm-5.3-flash",
+     "zyphra/zamba2-7b-instruct"
+    ]
+   },
+   "cohere": {
+    "fecha": "2026-11-06",
+    "ids": [
+     "c4ai-aya-expanse-32b",
+     "c4ai-aya-vision-32b",
+     "command-a-03-2025",
+     "command-a-plus-05-2026",
+     "command-a-reasoning-08-2025",
+     "command-a-translate-08-2025",
+     "command-a-vision-07-2025",
+     "command-r-08-2024",
+     "command-r-plus-08-2024",
+     "command-r7b-12-2024",
+     "command-r7b-arabic-02-2025",
+     "north-mini-code-1.0",
+     "north-small-translate-1.0",
+     "parse-v5.0",
+     "tiny-aya-earth",
+     "tiny-aya-fire",
+     "tiny-aya-global",
+     "tiny-aya-water"
+    ]
    }
   },
   "ultimo": {
-   "prov": "Z.ai (GLM)",
-   "modelo": "glm-4.5-flash",
-   "t": "2026-11-06T13:55:54.216Z"
+   "prov": "Cohere",
+   "modelo": "command-a-03-2025",
+   "t": "2026-11-06T14:54:25.625Z"
   }
  },
  "dueno": 1237559052,
