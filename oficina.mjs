@@ -85,6 +85,7 @@ for (const [env, id, nombre, base, modelos, ultimo] of [
   ["NOVITA_API_KEY", "novita", "Novita", "https://api.novita.ai/openai", ["meta-llama/llama-3.3-70b-instruct", "deepseek/deepseek-v3-0324"], true],
   ["FIREWORKS_API_KEY", "fireworks", "Fireworks", "https://api.fireworks.ai/inference/v1", ["accounts/fireworks/models/llama-v3p3-70b-instruct", "accounts/fireworks/models/deepseek-v3"], true]
 ]) claves(env).forEach(k => PROV.push({ id, nombre, tipo: "openai", base, key: k, modelos, ultimo, maxFallas: modelos.length }));
+if (ENV.IA_LOCAL) PROV.push({ id: "local", nombre: "IA propia (Qwen en GitHub, sin cupo)", tipo: "openai", base: "http://127.0.0.1:11434/v1", key: "local", modelos: [ENV.IA_LOCAL], ultimo: true, maxFallas: 1 }); // (Claude 06/11) nunca se queda sin cupo
 if (ENV.SIN_POLLINATIONS !== "1") PROV.push({ id: "pollinations", nombre: "Pollinations", tipo: "openai", url: "https://text.pollinations.ai/openai", key: "", modelos: ["openai", "mistral"], ultimo: true }); // gratis y sin clave: último respaldo
 if ((ENV.BUZON_URL || BASE.buzon) && (ENV.OFICINA_PIN || TG_TOKEN)) PROV.push({ id: "cfai", nombre: "Cloudflare Workers AI", tipo: "buzon", key: "-", modelos: ["@cf/meta/llama-3.3-70b-instruct-fp8-fast", "@cf/meta/llama-4-scout-17b-16e-instruct", "@cf/mistralai/mistral-small-3.1-24b-instruct", "@cf/qwen/qwen2.5-coder-32b-instruct"], maxFallas: 4 });
 if (ENV.MOCK_PROVIDERS) for (const id of ENV.MOCK_PROVIDERS.split(",")) PROV.push({ id, nombre: id, tipo: "openai", base: ENV.MOCK_OPENAI_BASE, key: "x", modelos: ["m1", "m2"] });
@@ -185,6 +186,42 @@ async function llamarOpenAI(p, modelo, prompt, { json, imagen, largo }) {
 }
 // ia(): buscar=true → solo proveedores que buscan en internet (Gemini, y Groq compound de respaldo).
 // buscar=false → rota primero entre los que NO son Gemini, para guardar Gemini para las búsquedas.
+// (Claude 06/11) BUSCADOR PROPIO: los bots leen internet solos (DuckDuckGo / Bing + las páginas), sin gastar
+// el cupo de búsqueda de Gemini. Con lo que leen, piensa cualquiera de las IA gratis (o la IA propia de GitHub).
+const sinTags = h => String(h || "").replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<noscript[\s\S]*?<\/noscript>/gi, " ").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/\s+/g, " ").trim();
+async function buscarWeb(consulta, max = 5) {
+  const nav = { "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36", "accept-language": "es-AR,es;q=0.9" };
+  let links = [];
+  try {
+    const r = await traer("https://html.duckduckgo.com/html/", { method: "POST", headers: { ...nav, "content-type": "application/x-www-form-urlencoded" }, body: "q=" + encodeURIComponent(consulta) + "&kl=ar-es" }, 20000);
+    const h = await r.text();
+    for (const m of h.matchAll(/class="result__a"[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
+      let u = m[1]; const q = u.match(/uddg=([^&]+)/); if (q) u = decodeURIComponent(q[1]); if (u.startsWith("//")) u = "https:" + u;
+      if (/^https?:/.test(u) && !/duckduckgo\.com\/y\.js|bing\.com\/aclick/.test(u)) links.push({ url: u, titulo: sinTags(m[2]) });
+    }
+  } catch (e) { console.log("ddg:", e.message); }
+  if (links.length < 2) try {
+    const r = await traer("https://www.bing.com/search?setlang=es&cc=AR&q=" + encodeURIComponent(consulta), { headers: nav }, 20000);
+    const h = await r.text();
+    for (const m of h.matchAll(/<li class="b_algo"[\s\S]*?<h2[^>]*><a[^>]*href="(https?:[^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) links.push({ url: m[1].replace(/&amp;/g, "&"), titulo: sinTags(m[2]) });
+  } catch (e) { console.log("bing:", e.message); }
+  links = links.filter((x, i, a) => a.findIndex(y => y.url === x.url) === i).slice(0, max);
+  const partes = []; const fuentes = [];
+  for (const l of links) {
+    try { const r = await traer(l.url, { headers: nav }, 15000); const t = sinTags(await r.text()).slice(0, 3000); if (t.length > 200) { partes.push(`### ${l.titulo}\n${l.url}\n${t}`); fuentes.push(l); } } catch (e) { /* página caída: sigue */ }
+  }
+  return { texto: partes.join("\n\n"), fuentes };
+}
+async function iaConInternet(prompt, consulta, opts = {}) {
+  let w = null; try { w = await buscarWeb(consulta); } catch (e) { console.log("buscador:", e.message); }
+  if (w && w.fuentes.length >= 2) {
+    const r = await ia(prompt + `\n\nRESULTADOS REALES DE INTERNET (leídos hoy por tu buscador). Usá SOLO estos datos, citá el link de cada dato y si algo no está acá, decí que no lo encontraste:\n${w.texto.slice(0, 14000)}`, { ...opts, buscar: false });
+    return { ...r, fuentes: w.fuentes };
+  }
+  return ia(prompt, { ...opts, buscar: true });
+}
+const consultaDe = (b, orden) => (String(orden || "").trim() || String(b.mision || b.nombre).split(/[.:]/)[0]).slice(0, 150) + (/(villa mar|c[oó]rdoba|argentin)/i.test(orden || b.mision || "") ? "" : " Córdoba Argentina");
+
 async function ia(prompt, { buscar = false, json = false, imagen = null, largo = false } = {}) {
   if (est.consumo.consultas >= CFG.limites.consultasPorDia || consultasCorrida >= CFG.limites.consultasPorCorrida) throw Object.assign(new Error("se llegó al tope de consultas de hoy"), { cupo: true });
   if (buscar && est.consumo.busquedas >= CFG.limites.busquedasPorDia) throw Object.assign(new Error("se llegó al tope de búsquedas de hoy"), { cupo: true });
@@ -757,7 +794,8 @@ async function trabajar(b, { orden = "", origen = "agenda", resumen = false, hor
     log(b.nombre, orden ? (b.privado ? "empezó tu orden (privada)" : `empezó la orden: ${orden}`) : "empezó su tarea");
     let mejor = null, critica = ""; const imagen = foto ? await bajarFoto(foto) : null;
     for (let intento = 1; intento <= 2; intento++) {
-      const r = await ia(promptBot(b, orden, critica) + (imagen ? "\n\nTU JEFE TE MANDÓ UNA FOTO: mirala con atención y basá tu respuesta en lo que ves." : ""), { buscar: !!b.buscar && !imagen, imagen });
+      const pr = promptBot(b, orden, critica) + (imagen ? "\n\nTU JEFE TE MANDÓ UNA FOTO: mirala con atención y basá tu respuesta en lo que ves." : "");
+      const r = b.buscar && !imagen ? await iaConInternet(pr, consultaDe(b, orden)) : await ia(pr, { imagen });
       let ev; try { ev = await evaluar(b, r.texto, r.fuentes); } catch (e) { ev = { puntaje: 6, problemas: ["no se pudo evaluar: " + e.message], mejorar: "" }; }
       if (!mejor || ev.puntaje > mejor.ev.puntaje) mejor = { ...r, ev };
       log("Control de calidad", `${b.nombre}: ${ev.puntaje}/10${ev.problemas[0] ? " · " + ev.problemas[0] : ""}`);
@@ -1322,7 +1360,7 @@ Reglas: no repitas como loro lo que dijo; no recomiendes herramientas pagas ni s
   const acciones = Array.isArray(j.acciones) ? j.acciones.slice(0, 4) : [];
   if (j.buscar && !acciones.length) {
     const gen = { id: "gerente", nombre: "Gerente general", area: "direccion", buscar: true, mision: "Responder lo que pide el jefe con información real y actual.", entregable: "Respuesta completa, corta y lista para usar.", criterios: ["Responde exactamente lo pedido", "Datos reales con fuente", "Claro y breve"], evitar: ["Recomendar herramientas pagas", "Inventar"] };
-    const res = await ia(promptBot(gen, `${p.orden}\n\nCHARLA RECIENTE (para entender el contexto):\n${charla.slice(-2500)}`), { buscar: true });
+    const res = await iaConInternet(promptBot(gen, `${p.orden}\n\nCHARLA RECIENTE (para entender el contexto):\n${charla.slice(-2500)}`), String(p.orden).slice(0, 150));
     const f = (res.fuentes || []).slice(0, 4).map(x => "• " + x.url).join("\n");
     respuesta = res.texto + (f ? "\n\nFuentes:\n" + f : "");
   }

@@ -31,6 +31,30 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      # (Claude 06/11) IA PROPIA: un modelo abierto (Qwen) corriendo en la máquina gratis de GitHub. No tiene cupo:
+      # si todas las IA de afuera se quedan sin cupo, piensa esta. Si algo falla acá, la oficina sigue igual.
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/ollama_models
+            ~/ollama_bin
+          key: ia-propia-qwen2.5-3b-v1
+      - name: IA propia (sin cupo)
+        continue-on-error: true
+        timeout-minutes: 8
+        run: |
+          set +e
+          if [ ! -x ~/ollama_bin/bin/ollama ]; then
+            mkdir -p ~/ollama_bin
+            curl -fsSL https://github.com/ollama/ollama/releases/latest/download/ollama-linux-amd64.tgz | tar -xz -C ~/ollama_bin \
+              || (curl -fsSL https://github.com/ollama/ollama/releases/latest/download/ollama-linux-amd64.tar.zst | tar --zstd -x -C ~/ollama_bin)
+          fi
+          [ -x ~/ollama_bin/bin/ollama ] || { echo "no pude bajar ollama"; exit 0; }
+          export OLLAMA_MODELS=$HOME/ollama_models
+          nohup ~/ollama_bin/bin/ollama serve > /tmp/ollama.log 2>&1 &
+          sleep 6
+          timeout 360 ~/ollama_bin/bin/ollama pull qwen2.5:3b && echo "IA_LOCAL=qwen2.5:3b" >> "$GITHUB_ENV"
+          curl -s http://127.0.0.1:11434/api/generate -d '{"model":"qwen2.5:3b","prompt":"hola","stream":false,"options":{"num_predict":5}}' >/dev/null
       - name: Abrir la oficina
         env:
           MODO: ${{ github.event.inputs.modo || (github.event_name == 'push' && 'prueba') || 'auto' }}
