@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 343,
+   "corridas": 344,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-06",
-   "ultimaCorrida": "2026-11-07T02:51:40.039Z",
+   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
    "resumen": "💵 Dólar hoy (10:48 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1535 · venta $1555\n• Bolsa: compra $1573.8 · venta $1588\n• Contado con liquidación: compra $1658.4 · venta $1664.9\n• Mayorista: compra $1536.5",
    "informe": "data/informes/dolar/2026-11-06-1048.md",
    "pausado": false,
@@ -20,23 +20,23 @@
     "dolarBase": {
      "oficial": 1570,
      "blue": 1555,
-     "bolsa": 1588,
+     "bolsa": 1587.9,
      "contadoconliqui": 1664.9,
      "mayorista": 1545.5,
-     "cripto": 1662.5,
+     "cripto": 1650.09,
      "tarjeta": 2041
     },
-    "dolarFecha": "2026-11-06",
+    "dolarFecha": "2026-11-07",
     "dolar": {
      "oficial": 1570,
      "blue": 1555,
-     "bolsa": 1588,
+     "bolsa": 1587.9,
      "contadoconliqui": 1664.9,
      "mayorista": 1545.5,
-     "cripto": 1662.5,
+     "cripto": 1650.09,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-07T02:51:40.039Z",
+    "ultimoChequeo": "2026-11-07T03:21:44.254Z",
     "resumenFecha": "2026-11-06",
     "hist": {
      "2026-10-30": {
@@ -110,6 +110,15 @@
       "mayorista": 1545.5,
       "cripto": 1650.09,
       "tarjeta": 2041
+     },
+     "2026-11-07": {
+      "oficial": 1570,
+      "blue": 1555,
+      "bolsa": 1587.9,
+      "contadoconliqui": 1664.9,
+      "mayorista": 1545.5,
+      "cripto": 1650.09,
+      "tarjeta": 2041
      }
     }
    }
@@ -148,7 +157,7 @@
   },
   "licitaciones": {
    "estado": "listo",
-   "corridas": 176,
+   "corridas": 177,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -157,7 +166,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-07T02:19:43.260Z",
+   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
    "resumen": "🧱 Clientes y licitaciones\n\n• Carnaval 2027: Concordia repite la licitación tras descartar la única oferta (El Diario Paraná)\n  https://www.eldiario.com.ar/2026/11/06/carnaval-2027-concordia-repite-la-licitacion-tras-des",
    "informe": "data/informes/licitaciones/2026-11-06-2022.md",
    "pausado": false,
@@ -292,7 +301,7 @@
      "el banco nación ya prestó los $32.000 millones de anses para hipotecarios: cuántos crédito",
      "pp acusa al gobierno de \"negar información de obra del museo arqueológico que tiene desde "
     ],
-    "ultimoChequeo": "2026-11-07T02:19:43.260Z",
+    "ultimoChequeo": "2026-11-07T03:21:44.254Z",
     "semana": [
      {
       "titulo": "El Gobierno activa un control externo sobre las represas en Santa Cruz con una licitaci&#243;n de $39.624 millones",
@@ -1108,7 +1117,7 @@
   },
   "noticias_vm": {
    "estado": "listo",
-   "corridas": 176,
+   "corridas": 177,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1117,12 +1126,16 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-07T02:19:43.260Z",
+   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
    "resumen": "📰 Noticias de Villa María\n\n• Argentina y Córdoba se preparan para la gira del Papa León XIV (VIDEO) (Villa Maria Ya)\n  https://news.google.com/rss/articles/CBMiswFBVV95cUxNX3Z1UjIzSzhVR0Q5ZVp6RHFZUDlmcm16YTBTd3BpNUJtejl",
    "informe": "data/informes/noticias_vm/2026-11-06-2022.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "dos apellidos históricos de villa maría, integrados en un negocio que abarca todo el ciclo",
+     "ella dejó la docencia y él se bajó del camión para trabajar la tierra: continúan un legado",
+     "pymes cordobesas: cuáles son los beneficios impositivos de la nueva ley de promoción indus",
+     "tiempo en villa maría hoy",
      "córdoba capital tiene su polideportivo social n°84 en el trencito y villa los 40 guasos",
      "amenazaron de muerte al ministro de seguridad de córdoba y le enviaron una foto con armas",
      "suspenden este viernes la fiesta de la cerveza y la pasan al martes 10",
@@ -1718,13 +1731,9 @@
      "avanzan las obras de pavimentación en metán: el intendente josé maría issa supervisó los t",
      "mujer resultó gravemente herida tras ser embestida por un fiat cronos",
      "una mujer con posible fractura tras ser atropellada en la costanera",
-     "reconocerán a vecinos destacados de villa maría: cómo postularlos",
-     "video: así fue el \"operativo anti horas\" del finde en villa maría",
-     "el 21 y 22 de noviembre retornará «villa allende crea» |",
-     "villa maría: más de 500 corredores participaron de la primera edición de la carrera rosa",
-     "mendiolaza, la ciudad cordobesa récord en referéndum revocatorios |"
+     "reconocerán a vecinos destacados de villa maría: cómo postularlos"
     ],
-    "ultimoChequeo": "2026-11-07T02:19:43.260Z",
+    "ultimoChequeo": "2026-11-07T03:21:44.254Z",
     "bandeja": [
      {
       "titulo": "Con gran convocatoria, Villa Nueva vive la “Fiesta de la Cerveza”",
@@ -1770,15 +1779,31 @@
       "titulo": "Amenazaron de muerte al ministro de Seguridad de Córdoba y le enviaron una foto con armas",
       "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPVzJidVpWdW1JS3NTYlNoYkpJTHYtRHVPNHUwcC00WEVVZEtVVmJDSmo0cldtMjRRamRDQTVFY215eDZleTZfYnFyR0xIbmptLUZNR3ZGMHpsNjdNem5NRkR1UTY4YW5zQ2FTSEwyQ013YkRJSTZWMXJRMmJDSzMxLXBpNkNhZ0hjc2I1SFRCUGFEa1A0d2R1YVZROHhULXhNbjVCdlVvZXhZejFNOWltenk3ZkVab0Z6dEZMeTJNeHRJWEktd3dkSTVWWXlDNWVCODNlR1BRbks4dHhtNFHSAfgBQVVfeXFMTTZobWljMnU4VGZjcm1XQ213MFFRdjdoTWNkSGtPX3M2cklqV29ycWcxbFkyVWFaWHJpdzBJeS0xemx0bnlSaEZoenNLbHh6RlJNWG01aUdDRG5GS2lzUXYyd3NrdmwyWW1PZm9PTkRLV2l3X3NiT19hbDRCSkd0b3pqM2ZId2ZrOUMwSkFwcVBaVjNyZmwzLTJiVWZRWHpJbEV4d0NoZmJjU3lROUFQcC1rdGg2aWhQSUpyV3hIb3M4dW0zaW5ucEtHZkt4ZW9OeWZoVWtnTnNDWGpKU3ZGMDMzRk9VOENOVjFnQTgyXzhmZGU4ZERncWc?oc=5",
       "fuente": "Infobae"
+     },
+     {
+      "titulo": "Dos apellidos históricos de Villa María, integrados en un negocio que abarca todo el ciclo de la vida",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOWlotN1lmQk5wdE5pM1VHYWJMTVFxS3FlWmNTbG1TQ3RDUFRHbTRrM0ZCQ01wWHhXMk53bUxMZ3FpbG5HU1BFSEJadU5QNWlUcm1OYzA5Z2M4Y00ybFZmT0Zoa0ZiQjVUZ3ZVVlpQWVJDaTVUbkY2RFczUW5BZkVSdUlWdmhTUXl3MEowejhOR25ZelJVTXR5bURYUUQ1LWVDZTc5OS1QY0h1R3ZGdWRzd0FGVWgxOWFUN19UQmln?oc=5",
+      "fuente": "La Voz del Interior"
+     },
+     {
+      "titulo": "Ella dejó la docencia y él se bajó del camión para trabajar la tierra: continúan un legado familiar en la Patagonia",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQV1hYN3I0VHZsZDNwdXlKMWQwc3hBaW1pVWVYZlNFQ3JFRmR1MExTMG5ZTDlTdVZjR2JNeFQ1NUNfRDd5LUEtUmNjM3ZuRVl6bjVIREdmdUhtQnRGUXdJX0M2TWVsVjgybjlpSGVsWTdHaWo4LTFIaThjNjNZRUdWdW1sdHprWXRnSDJORVQyU2hkRXVvOElCU1JEMTJwVDFOMFlVLURvUDNJaGtTSmJRWFc1R3I3Nm84SVBDb1hpQTBfNl8xY3ExVlNsa3VrQkt2aE0wYTg5UlhGRXdweFR0a2Q4c9IB6wFBVV95cUxPSFNNSDNhY0VUTFB3aUJ6SGV4RWp1cUxZT1BIWTVORGkzRUVkMEhhNzg5MGlIYUtBeGdwZU8zcFdBdV9LeGU3c3M0RzFhcjZ3UFVSb3BfUmt3T296TG9iNGRZdFNadEY2bl8wWEx5c1F6RHAyVVJfUmRsQXNIWkJ4MjkydlFCSkZHckJFdUpEZGV0U1p1akcxNGNqX3BUMmUxOV9NaG5BVFpMYTNPV3hyMkVIOUMwYmMyUGctQnRvYXZGeElSUkdTdklSdGF4eDdlUWhMalRQQkRqOG9VOTJtQkp0MVRsZ3FFZXFB?oc=5",
+      "fuente": "Diario Río Negro"
+     },
+     {
+      "titulo": "Pymes cordobesas: cuáles son los beneficios impositivos de la nueva ley de promoción industrial",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQd01UcXZKdEdfSXo4bjNTTnM4a2RNbWc1a184bmY1NHR2TWNNaUk1OTB3RUVTUy1DOGFCelVGdUowSVV0TjBaSzhhazRpTXRvUUo0VDhtRTdIcU5zTjhZVV9mSFptYnZtekhjQU4taDhZU1ZTM3NIQkZlY25KcF84MkpjMDBOOXRHQ2lvOWtHOGEzVnpxZDRJSjlCb2Zpd1U3VVRsSm1sYW52X3VDQmhrZmhRQTBqUHVoWVViODJOX1lSUmpsZHpaT3BiTGFxdGdrMlcw?oc=5",
+      "fuente": "Radio Villa María"
+     },
+     {
+      "titulo": "Tiempo en Villa María hoy",
+      "link": "https://www.meteored.com.ar/hoy/tiempo-en_Villa+Maria-America+Sur-Argentina-Cordoba--1-16927.html",
+      "fuente": "Meteored"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-06",
-     "hechas": [
-      "07:30",
-      "13:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-07",
+     "hechas": []
     },
     "semana": [
      {
@@ -3106,7 +3131,7 @@
   },
   "noticias_ar": {
    "estado": "listo",
-   "corridas": 176,
+   "corridas": 177,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -3115,12 +3140,14 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-07T02:19:43.260Z",
+   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
    "resumen": "📰 Argentina: economía y obra pública\n\n• CAMARCO Delegación Chaco realiza el 17 la Jornada “Día de la Construcción” (CHACODIAPORDIA.COM)\n  https://news.google.com/rss/articles/CBMiogFBVV95cUxPVmY4bkZKUzdmVkJVb2FLVk9wRERO",
    "informe": "data/informes/noticias_ar/2026-11-06-2022.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "león xiv regresa a casa, la patria del corazón",
+     "pampa energía inicia la construcción de su planta de fertilizantes y aumenta la producción",
      "el móvil de koldo puso a la uco en la pista del blanqueo de la trama",
      "qué pasó en paraguay: cómo la caída de ueno bank destapó un fraude y llevó a santiago peña",
      "las obras aumentaron 7,8% respecto de agosto y 5,1% interanual; la actividad manufacurera ",
@@ -3718,11 +3745,9 @@
      "tanti abre la licitación para concesionar la confitería del balneario el diquecito",
      "ramón gallardo presentó un proyecto para incentivar la construcción privada",
      "la derrota de trump anticipa un mercado inestable que buscará certidumbres",
-     "elección en ee.uu.: ¿cómo puede impactar en el dólar y el riesgo país en argentina?",
-     "una derrota de trump puede ser una buena noticia para ponerle límites a la ultraderecha",
-     "nueva herramienta gratuita para calcular el aislamiento térmico correcto en paredes y tech"
+     "elección en ee.uu.: ¿cómo puede impactar en el dólar y el riesgo país en argentina?"
     ],
-    "ultimoChequeo": "2026-11-07T02:19:43.260Z",
+    "ultimoChequeo": "2026-11-07T03:21:44.254Z",
     "bandeja": [
      {
       "titulo": "Ulpiano Suarez logra apoyo para la subasta de terrenos de la Estación Mendoza (mobile)",
@@ -3813,15 +3838,21 @@
       "titulo": "Requisitos para el crédito hipotecario: de cuánto debe ser la cuota según tus ingresos y qué gastos no podés ignorar",
       "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQa2gzVE44eEh2cFhGOGJJR0dMSDdld3ZHSVB0aGFsdFBpOVpvbjNGUzlMZkxKLTNfTmZ2a2hva2R6MXpVQnV4b3AyX1lVV2VOcEpBdlJFcjhkTllOT3ZtUnlscHBsbm90RVJiWFREbTBOZzNzXzRlbWpfdzdJTFlxQnZ3MFpPREMxNXhscHRQQ2Jyel84WnNQVlU5bEtEVGFZQVlnakxqYWxrN3lnQUZ1QW1xUU1feWJ6U184SVhWRWhKT0FDTU0yZVdDendZX29iVHNlaUdWdWkzaTBP?oc=5",
       "fuente": "Infozona"
+     },
+     {
+      "titulo": "León XIV regresa a casa, la patria del corazón",
+      "link": "https://www.religiondigital.org/opinion/leon-xiv-regresa-casa-patria-peru-argentina-uruguay-claves_1_1472191.html",
+      "fuente": "Religión Digital"
+     },
+     {
+      "titulo": "Pampa Energía inicia la construcción de su planta de fertilizantes y aumenta la producción en Rincón de Aranda",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNSkpPUUpJaU9xa0k3V1VmV2M0R3FEeVhsWnZmcWFTamVRYnJSMFVxVmV3bEFRcVBoQVREeUVhb1YyMjk1ZTk2VzJjMmVPVVU4N3cwUjRSSlJaX2xyUGpDZ0lLeDNqSGlFWjNvVVh6ZUlaQWtLeURXcUJoY2VsVElFcmlNUk1NVWJ4LTZQU0M4R050bzM0M0dDWHpScXVFOWFhU1VvNWxEWlY4Vk16RFN0MDhfbkJFZTNST3FjUFg4dWx4aDJRVWF0bGxic1VPeFB5QkJiU05Bbkw5N1l6Vmd6RC1NdkE?oc=5",
+      "fuente": "Página|12"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-06",
-     "hechas": [
-      "07:30",
-      "13:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-07",
+     "hechas": []
     },
     "semana": [
      {
@@ -5218,33 +5249,32 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-06",
-   "ultimaCorrida": "2026-11-07T02:47:15.607Z",
+   "ultimaFecha": "2026-11-07",
+   "ultimaCorrida": "2026-11-07T03:18:27.440Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794019635607,
+     "t": 1794021507440,
      "redes_hoy": {
-      "publicaciones": 14,
-      "historias": 26,
-      "reels": 26,
-      "seguidos": 48,
-      "gringo": 9,
-      "errores": 36,
-      "reinicios": 104,
+      "publicaciones": 0,
+      "historias": 1,
+      "reels": 0,
+      "seguidos": 6,
+      "gringo": 0,
+      "errores": 0,
+      "reinicios": 0,
       "ultimas": [
-       "23:26 ✔ Seguido (5/5): @martadelvallearagno (Marta del valle aragno), seguidor de @fernandoruizdiazokk (#pozodelmolle)",
-       "23:33 Post elegido de #albañiles",
-       "23:33 ✔ Historia compartida (avioncito)",
-       "23:35 ✔ Facebook: compartido en la Página (historia)",
-       "23:37 Instagram: ahora en @soycordobes.jpg",
-       "23:39 ✔ Historia compartida (avioncito)",
-       "23:40 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
-       "23:41 Instagram: ahora en @maestromayordeobrasjb",
-       "23:43 Post elegido de #arquitecturaargentina",
-       "23:43 ✔ Historia compartida (avioncito)"
+       "00:02 Post elegido de #memesargentinos",
+       "00:03 ✔ Historia compartida (avioncito)",
+       "00:04 Instagram: ahora en @maestromayordeobrasjb",
+       "00:05 ✔ Seguido (1/6): @serraeuge (Euge Serra), seguidor de @noticias_hipicas (#sanfranciscocordoba)",
+       "00:08 ✔ Seguido (2/6): @mario_dante63 (MARIO), seguidor de @noticias_hipicas (#sanfranciscocordoba)",
+       "00:08 ✔ Seguido (3/6): @eduardo.perazzo.585 (Eduardo Perazzo), seguidor de @noticias_hipicas (#sanfranciscocordoba)",
+       "00:11 ✔ Seguido (4/6): @pab2706 (Pablo José), seguidor de @magic_vm3d (#villamaria)",
+       "00:13 ✔ Seguido (5/6): @lauchywoj (Lauchy Wojtowicz), seguidor de @magic_vm3d (#villamaria)",
+       "00:14 ✔ Seguido (6/6): @jeffersson_cal (Jeffersson Rivera), seguidor de @magic_vm3d (#villamaria)"
       ]
      }
     },
@@ -5385,6 +5415,26 @@
        "23:43 Post elegido de #arquitecturaargentina",
        "23:43 ✔ Historia compartida (avioncito)"
       ]
+     },
+     "2026-11-07": {
+      "publicaciones": 0,
+      "historias": 1,
+      "reels": 0,
+      "seguidos": 6,
+      "gringo": 0,
+      "errores": 0,
+      "reinicios": 0,
+      "ultimas": [
+       "00:02 Post elegido de #memesargentinos",
+       "00:03 ✔ Historia compartida (avioncito)",
+       "00:04 Instagram: ahora en @maestromayordeobrasjb",
+       "00:05 ✔ Seguido (1/6): @serraeuge (Euge Serra), seguidor de @noticias_hipicas (#sanfranciscocordoba)",
+       "00:08 ✔ Seguido (2/6): @mario_dante63 (MARIO), seguidor de @noticias_hipicas (#sanfranciscocordoba)",
+       "00:08 ✔ Seguido (3/6): @eduardo.perazzo.585 (Eduardo Perazzo), seguidor de @noticias_hipicas (#sanfranciscocordoba)",
+       "00:11 ✔ Seguido (4/6): @pab2706 (Pablo José), seguidor de @magic_vm3d (#villamaria)",
+       "00:13 ✔ Seguido (5/6): @lauchywoj (Lauchy Wojtowicz), seguidor de @magic_vm3d (#villamaria)",
+       "00:14 ✔ Seguido (6/6): @jeffersson_cal (Jeffersson Rivera), seguidor de @magic_vm3d (#villamaria)"
+      ]
      }
     }
    }
@@ -5459,7 +5509,7 @@
   },
   "clima": {
    "estado": "listo",
-   "corridas": 90,
+   "corridas": 91,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -5468,13 +5518,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-11-07T01:20:29.836Z",
-   "resumen": "⚠️ Cambió el pronóstico para la obra\n\n🌤️ Clima en Villa María, Córdoba\n• Hoy 06/11: 15° a 25° · lluvia 90% · viento 25 km/h\n• Mañana 07/11: 11° a 20° · lluvia 96% · viento 28 km/h\n• Pasado 08/11: 8° a 22° · lluvia 0% · ",
-   "informe": "data/informes/clima/2026-11-06-0949.md",
+   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
+   "resumen": "⚠️ Cambió el pronóstico para la obra\n\n🌤️ Clima en Villa María, Córdoba\n• Hoy 07/11: 11° a 20° · lluvia 88% · viento 26 km/h\n• Mañana 08/11: 8° a 23° · lluvia 0% · viento 13 km/h\n• Pasado 09/11: 11° a 26° · lluvia 0% · v",
+   "informe": "data/informes/clima/2026-11-07-0021.md",
    "pausado": false,
    "memoria": {
-    "ultimoChequeo": "2026-11-07T01:20:29.836Z",
-    "ultimoAviso": "Hoy: 90% de lluvia (4 mm)",
+    "ultimoChequeo": "2026-11-07T03:21:44.254Z",
+    "ultimoAviso": "Hoy: 88% de lluvia (2 mm)",
     "resumenFecha": "2026-10-30"
    }
   },
@@ -8857,7 +8907,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 343,
+   "corridas": 344,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -8866,7 +8916,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-07T02:51:40.039Z",
+   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -8876,7 +8926,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-07T02:51:40.039Z",
+    "ultimoChequeo": "2026-11-07T03:21:44.254Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -8989,6 +9039,20 @@
       "https://bosio-central.uwuubuntu83.workers.dev/": [
        47,
        47
+      ]
+     },
+     "2026-11-07": {
+      "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
+       1,
+       1
+      ],
+      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
+       1,
+       1
+      ],
+      "https://bosio-central.uwuubuntu83.workers.dev/": [
+       1,
+       1
       ]
      }
     }
@@ -9240,7 +9304,7 @@
   },
   "mundo_economia": {
    "estado": "listo",
-   "corridas": 174,
+   "corridas": 175,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9249,12 +9313,15 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-07T02:19:43.260Z",
+   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
    "resumen": "🌎 Mundo: economía\n\n• La importancia estratégica de la visita del Secretario General y el Presidente a Japón. (شبكة تواصل الإخبارية)\n  https://news.google.com/rss/articles/CBMiU0FVX3lxTE9QaG9Zcm81dDU3Y3lQbGZPdjJUNGRDUURj",
    "informe": "data/informes/mundo_economia/2026-11-06-2022.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "elecciones en estados unidos: cómo puede afectar a argentina el triunfo demócrata",
+     "fuentes: sudán ha propuesto a rusia la creación de una zona económica libre en el mar rojo",
+     "comercio chino invade nicaragua: unos 2,000 negocios arribaron al país en dos años del tlc",
      "tres importantes implicaciones estratégicas derivadas de la visita del secretario general ",
      "embajadores de rusia tienen encuentro con empresarios en mazatlán",
      "industria de china vuelve a contraerse durante octubre y aumenta preocupación por su econo",
@@ -9851,22 +9918,9 @@
      "colombia negociará un acuerdo económico con japón para finales de 2026",
      "los demócratas toman el control total del congreso de estados unidos",
      "méxico ‘pierde’ con la llegada de demócratas al congreso de eu: ¿por qué no será favorable",
-     "la derrota de donald trump inicia una época global que potenciaría la influencia de xi jin",
-     "ocde alerta de que la escasa integración de américa latina frena su crecimiento potencial",
-     "¿por qué estados unidos volvió a inclinarse por los demócratas? siempre fue la economía.",
-     "china concentra el 49% de las fábricas limpias del mundo: ¿está cambiando el equilibrio de"
+     "la derrota de donald trump inicia una época global que potenciaría la influencia de xi jin"
     ],
     "bandeja": [
-     {
-      "titulo": "Ecuador y EE. UU. usarán IA contra el lavado de activos",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQYnBjdWFiTGZMXzNodHpybDM2REJLRjlXS0tLSkhVVE9ESTBLMGF2b3R2STRab3JNYTh5dWJ3X21Nd1kybi1maFYxOWpOODZFUmNPZjNtX3Z5YUJsR2FmeVk1OWlBWVltMEY1ZHZTWmluYW1iVGJJTmRBbG9aRFdHdVBRRVBaMnV1b3h6YnNKZHAwdGlDTmVIVzBmZzRUYkFob3I4RTlhaWtJTW1aVXc?oc=5",
-      "fuente": "Diario La Hora"
-     },
-     {
-      "titulo": "Falla bancaria paraliza operaciones en 128 entidades y 3 mil 430 sucursales de Japón",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPaFVacWNSV29PZU4xVW9MSGxJZ0lUUmdydXRFZXRNeHo2S1huNWZNZlBET1hIcVRQQ1NlX3dIVmJHMC1rNGk3TWxtdWtzb2tYUEdQejdINkFzeHZ1NmdyenVPdDlQQ212VGtkSUZVdlF4b1ZnVmVPUENCamM1M1lWb0w2VzhXNTFBaVFmMVF6X0xTQ2VLcVlXV2doY3c2LXNBcVhuRlRabEt0QWREdGlRM1U0cWE5aXFCMER6aE1uSUc?oc=5",
-      "fuente": "Potosinoticias.com"
-     },
      {
       "titulo": "Perú acelera sus exportaciones a China: en nueve meses ya roza lo vendido en todo el 2025 por boom de minerales",
       "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPaFJETWI1aFNFUXhzVEMtaWpjc0c2NGhZb09DeUs5dVd2cDM1Tm8zWXQ1WllhNThTMmZxUlVZWWNad2IxZFVLVzRJYm9hb0lqMHg1NEMzZUNZOV9Dc1YtdHd6MUd0dERlNE1uZUFNUWZ1cVdmeEFobWlaa0F5M2pVal9wQXdDWnFGckU2WENnWGRTd1dISTJXZVc3VjROVElUakoyX21rbDkwWVVEemxUcEk1S2pJMHlwWjFjSk1wWm9xYnRoamFxbWx4QmF0NXJia1gyNnIwVEpyR21POVAyMkdlU1RiaUdZUmVKbUFlYnU?oc=5",
@@ -10001,17 +10055,28 @@
       "titulo": "El CEO de Kärcher alerta de una \"tormenta perfecta\" para la economía europea",
       "link": "https://www.msn.com/es-es/noticias/otras/el-ceo-de-k%C3%A4rcher-alerta-de-una-tormenta-perfecta-para-la-econom%C3%ADa-europea/ar-AA2gwnXM",
       "fuente": "Euronews on MSN"
+     },
+     {
+      "titulo": "Elecciones en Estados Unidos: cómo puede afectar a Argentina el triunfo demócrata",
+      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOamp5N1l3NXhmOE1PM3VxQ3dUaHhmcmYyaTBDeHZSVU1ROXFtSTExR18xOTVmc1d4NEF6UFJVX0xOOEdIaUJ5aTEtRTAxMl9nSlZiTHhtekhsaGJLYnA2VnZiQUFQMzFsdmJuSF9nVjJra21ldFhtakxtRUFweG9hWTZxSUFHOUtqQndfMThROGxhUkdFSmZiZklQWDZqTGNCR3ZaZVlkUGVVcE83UFEzTkkyaFpKdFltcFlOVURRNGxtQVNYYUxwaXEtNE5lV2UzUTJwVHBWSzhCajVqdGdNUEt4MGlTV2VhOVgw?oc=5",
+      "fuente": "El Litoral"
+     },
+     {
+      "titulo": "Fuentes: Sudán ha propuesto a Rusia la creación de una zona económica libre en el Mar Rojo.",
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNMlhVZ29IcVcxWWQxbC1UN0dHMmZWbHU2aldWbHZGQ1F6VlcyLWVkSmhRN3dwNjc4YU96d193Ulh5dUZYamh4OTdMSlQycE1mTUIweER3YVBrNFhZNFpNaEluMjBjT0lQZHA0dHpqUGd3ZzB2UVl0MW1DdHhJRlNiWFppZUVUTWNFcnZfUldrdF9zVy16MkE4TVhsd3pSSzRuY2UzN1VDZTJtLVJHbTJrSzhQX2V1NW1DZVMzX0tCMU1QU0tjUEpHYktwRHNQZldLNW1RT2lMdTc4aW5UQ1E?oc=5",
+      "fuente": "Agenzia Nova"
+     },
+     {
+      "titulo": "Comercio chino invade Nicaragua: Unos 2,000 negocios arribaron al país en dos años del TLC",
+      "link": "https://www.laprensani.com/2026/11/02/economia/3806323-negocios-chinos-nicaragua-tlc",
+      "fuente": "La Prensa"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-06",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-07",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-07T02:19:43.260Z",
+    "ultimoChequeo": "2026-11-07T03:21:44.254Z",
     "semana": [
      {
       "titulo": "Alerta por el impacto de El Niño en la mortalidad mundial: qué se prevé en Argentina",
@@ -11338,7 +11403,7 @@
   },
   "mundo_tecnologia": {
    "estado": "listo",
-   "corridas": 174,
+   "corridas": 175,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -11347,12 +11412,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-07T02:19:43.260Z",
+   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
    "resumen": "🌎 Mundo: tecnología\n\n• La importancia estratégica de la visita del Secretario General y el Presidente a Japón. (شبكة تواصل الإخبارية)\n  https://news.google.com/rss/articles/CBMiU0FVX3lxTE9QaG9Zcm81dDU3Y3lQbGZPdjJUNGRDUU",
    "informe": "data/informes/mundo_tecnologia/2026-11-06-2022.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "ministros rusos llegan a mazatlán, sinaloa y buscan lazos comerciales con sectores; ofrece",
+     "profundizar la cooperación estratégica entre vietnam y japón.",
+     "la tecnología de baja altitud de china impulsa el desarrollo de américa latina",
+     "en imágenes: empresa de tecnología de exoesqueleto redefine movilidad humana",
+     "asia profundiza desplome bursátil: nikkei cae 5,8% por temores sobre la regulación de la i",
+     "invertir en ciencia para avanzar",
+     "víctor pascual (cosmikal): europa, ciberseguridad y competitividad",
+     "china solo tardaría 12 minutos en transmitir todo el conocimiento de la humanidad desde 20",
+     "flavia santoro: \"europa debe avanzar hacia una mayor autonomía tecnológica, pero sin confu",
+     "rusia con nuevo parche corneal sin suturas",
      "delegación venezolana compite en la olimpiada mundial abierta de astronomía 2026 en rusia",
      "corea del sur está invirtiendo más de 40 millones de dólares en el desarrollo de chips sem",
      "chile apuesta por china para ampliar sus exportaciones agrícolas y abrir nuevos mercados.",
@@ -11942,69 +12017,9 @@
      "toyota y waymo prevén probar el bz4x en japón en 2027",
      "argentina desarrolla nuevos satélites, japón viaja a fobos y la nasa cambia sus planes par",
      "corea del sur: us$56.440 millones en chips en un mes",
-     "corea del sur busca un lugar de aterrizaje para su sonda lunar.",
-     "vietnam y japón promueven la cooperación en materia de electricidad y gas, así como la tra",
-     "susana del río: anticipación e integración, vectores de poder europeo",
-     "investigadores de la ugr contribuirán a reforzar la resiliencia de la red eléctrica en el ",
-     "promover las relaciones de inversión entre las localidades y las empresas vietnamitas-core",
-     "fmi establecerá en valencia su primera oficina tecnológica fuera de estados unidos",
-     "el futuro submarino de chile podría tener tecnología surcoreana",
-     "corea del sur convoca reunión de emergencia sobre criptomonedas ante robos norcoreanos y o",
-     "erdoğan en seúl: crece el interés de corea por el pd170",
-     "corea del sur desarrolla una ia capaz de deducir las intenciones del oponente, ganando el ",
-     "acciones asiáticas suben con tecnología antes de resultados de apple"
+     "corea del sur busca un lugar de aterrizaje para su sonda lunar."
     ],
     "bandeja": [
-     {
-      "titulo": "Países de Europa se manifiestan contra centros de datos para la IA",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVGc3YWtEdnJHSm5RMGtuNnhSVTd1OVdTQk16cmlVTFUteDFuanFTWXh4NGp4X3FKYnBkUlMtSnlKMUJBSFFvZlBuc1czNC13Q2UxVTVuZHRzX09JazNKWnMyZDZKMUdORkhvOVJWcWcyLWRlUUJ6S2JzMTJFamFCYk44R0dtWVBramMwWUpGMDUyYktWeDl0Uw?oc=5",
-      "fuente": "Quinta Fuerza"
-     },
-     {
-      "titulo": "Corea del Sur diseña su sistema administrativo basándose en un modelo de gobierno que funciona con inteligencia artificial.",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTDY0LVhRUnlmSUl1OU9XUFo2RE1lU1JpR1hzYlNOVEd3MDF0UG5yNUcyNHBXMWNRc3l4QjlrM1gyaHVtZXllYVJHRTJXQVl6VDNKQm41LTgyd0VMTlVPZURNNFRDRE42azFOSDhRSThHcDdCaGNHMHZEOHRqWnlHQVZtLUF1V045WjhuTktPNnBaaWp6QTVNSHVzMUhnSVVkTFVFSU45N2JBaXU2cHdkRTZUbW5JTGM?oc=5",
-      "fuente": "Vietnam.vn"
-     },
-     {
-      "titulo": "La victoria de los demócratas en las 'midterms' desata temblores en la fiebre de la IA",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOak5GZ00tRkpZX0RGR0ZJMGQ4S0dnZVpUTGU1c2FDNndSdmRGd1k2aXo3ZjM0SlJyN2xJeHY1WFc1X1Z4ZElGbll0WkhzNmZWeklfcExVWWJkZ1dkX2VYdlNxRm9qWkM2NXpaWHAtc3ZPZmZBNkgtQWUzVDloOFhTcVNISVl4VWFTQnU1cF9KVkZMZnYxNTlHaTBuN2Zkb1d5M0dCeVZKRy0xbUxqZk1SNGRlbC1XWFN6OVNxVy10SzRhMUtwMmo5RUM3bmpCazjSAc8BQVVfeXFMTy02cW9UR0NDeXI1VVl3SFFXMzdCSDF4Sm9nZlh5WW1Qald3Tk9pVFVoaVoxZXZXZ1g0Y3lVRzVRaUZ1Yld2cG5RbGVUTWVIQUtXWmtKTVhaXzRWQUlPOTRoRVNDUFl6R2dLX3NDRUJRdG1ZZDduQjZ6YW1RM0FrVHJyZ2xwNnNoTFhhNk8xMWh4VXF3RlZNUVdnd25jMVkyOGRXbV9qZjJNZlZTWkZ4eWlPeDJlRklNSkVnSW9YZVE2aUVNRlJpWm1ZRTdRR3Fj?oc=5",
-      "fuente": "Expansión"
-     },
-     {
-      "titulo": "Las telcos salieron a cuestionar una medida del Gobierno contra la tecnología china",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQSWRjcE8zdGExTUdCZ3dHdWE0WHVZci1Xd0c1a1R2SVJqRmRqSE8tU1JjUlpFS0g2R3M3UkdKajZqVVhxRkprd2tackpvM0RzMkwxcGRLYi1QVHh0Y3hValpqSnJnX0FFbEZnQmhha1lUanROcDNFVG1Sc2RSM2lHTElEMmp2SW1WdUVRS3ZicS1MU01maHFQR1o5OWtLcV9uUGNUV1plRk5VUGNvcG1uY0FRanNremNscUVYN3kxRmhYa2R4UHhV0gHMAUFVX3lxTE1DRFZldVEzOFRoM29BM0pkUjFQOGNac25lVXFteFVRWVk4RTc0MjB5TkxyamZQMkQ2LURYcVdVaHd2cl9iMllJc3FRai1ZaUdWLXhINnY5ZUt2dnpkV3ZWNDhPaDVKaWVhTmxMM0VvdWoyeWhTcXFkX0xTWnlENWpfb3JJbDIyaGFEbzBQaVY4Zl9WUF82RDdnMWhkcW9uMENWRzRfSzl1TjVVSXFmY1dSZkNCSU5fQjFPRVIwNXdUcWN3UHZCMXd1Qmg4NQ?oc=5",
-      "fuente": "iProfesional"
-     },
-     {
-      "titulo": "\"No me interesa\" no basta: Europa exige cambios al algoritmo de TikTok",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOWDZzLUZuY1E0cnl5NFFXOWtzcno5Yl9ELWxMem5Zck5lTVVmbWpVVGNpWUhzT1dsWENhcHA1My05Z212ZHhyLTJjamJFYjVnaUk3OHJCUktNYzNkOXIxMlFxSEJ0MUExRWlYZlBYcHAwenNFdWlMUXpkTHRTYnFKOTNUbmZiRjZPQXQxVXlLUE45cFRZSnlGTVVDSlNsOW5PbFlXelYzd0I3Vmxr?oc=5",
-      "fuente": "Forbes Colombia"
-     },
-     {
-      "titulo": "Tres implicaciones estratégicas de la visita del Secretario General y Presidente To Lam a Japón.",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0xaGJTNlJSWDlyQWpMOEdvZzlzUUx3WVp2OWF6UnhhZW5nMkYzekdreXVkc3h4RUpVUkFRTlJ2V19fMXZOdDB6SjRCNTltMzVQTGhV?oc=5",
-      "fuente": "شبكة تواصل الإخبارية"
-     },
-     {
-      "titulo": "T-MEC: buscan impulsar proveedores mexicanos de tecnología",
-      "link": "https://conecta.tec.mx/es/noticias/nacional/investigacion/t-mec-buscan-impulsar-proveedores-mexicanos-de-tecnologia",
-      "fuente": "CONECTA"
-     },
-     {
-      "titulo": "Ecuador y Estados Unidos firman acuerdos para combatir el lavado de activos, los secuestros y la minería ilegal",
-      "link": "https://www.eluniverso.com/politica/ejecutivo/ecuador-y-estados-unidos-firman-acuerdos-para-combatir-el-lavado-de-activos-los-secuestros-y-la-mineria-ilegal-nota/",
-      "fuente": "El Universo"
-     },
-     {
-      "titulo": "Panamá y Japón exploran cooperación en prevención de desastres",
-      "link": "https://www.critica.com.pa/nacional/panama-y-japon-exploran-cooperacion-en-prevencion-de-desastres-519407",
-      "fuente": "Crítica"
-     },
-     {
-      "titulo": "Las ‘Siete magníficas’ de la tecnología en Estados Unidos pierden un billón de dólares en la bolsa",
-      "link": "https://efe.com/economia/2026-11-06/siete-magnificas-tecnologia-estados-unidos-perdidas-bolsa-valores/",
-      "fuente": "EFE"
-     },
      {
       "titulo": "Las bolsas estadounidenses se estabilizaron tras la caída de las acciones tecnológicas.",
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQNUFMQmxueHVLV3RhZ1RKbFpfS3JEZlZmbXNqNkpFeGx2VXZZVjJDdlNoa2l6U0pkaUlubU1aZVY3YldWc3BtaEI2NnFPWmlUeXJwVDJNdU9PZ2Q1amRTQ2lxb2J6czJadnRucXpuaEJiRWhfR1k0UW1DVXNWVjBOSVhuYWFvX2FhTjRDYQ?oc=5",
@@ -12104,17 +12119,63 @@
       "titulo": "Toyota y Waymo llevarán sus coches autónomos a Japón en 2027",
       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1kd0JJSnJucXRPeDZHS1BxaklISURCY0ozZUhaZWN2Rk5HckdwUFlpYmxKNWx0bXZPcUI4V3otSHducS10WnF6QlR2QWltM3BoSjI3MC1nb1ZsZ0VyOFhZaU82ZHE4UXExWFMtOWJacEZUaGtUQ2c?oc=5",
       "fuente": "Motorpoint"
+     },
+     {
+      "titulo": "Ministros rusos llegan a Mazatlán, Sinaloa y buscan lazos comerciales con sectores; ofrecen tecnologías de riego",
+      "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPVjhINUFVUXNOaXExd09oRDZ1cXpxLVMzU1YyWGlEREJRVXRZTC16czFGaldReFVnNmhNRW92cUpaMVpNaDROSDRWSGVyOGlrOFJmbkpfLXpTQXcyTDBDTnBkNmt3cU9XYVBPYmVmX3pVRFM1d1hqV3BBR3B1OTBfNS1kNXBQWWowNlZLVU9SZlE5RHhyRjFWa25NN3ZjS283QVhtcFBiaHlSay0yaFJxMHFqZ280d1dMUWtHUmkycGJiLVVfTVZFWjAybkpsWXJfSmw2eTRDRkpxRXk0M0VReHhDZVhPNHI4cXBBenBidjVBb0JmQ21tMg?oc=5",
+      "fuente": "Los Noticieristas"
+     },
+     {
+      "titulo": "Profundizar la cooperación estratégica entre Vietnam y Japón.",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOQ1pjZWZGbTRYSFBLMmN5T3FsN3ExV1VfSFFsbjJrVnFsWVVKRHh1MWRqRl8zS3pDb0NFVFo5NW53WDNqT2ZyVU8wQ1JGVVB6M2tXUzlIb3piaGc0QVB1d2FDaEMwamV4anFfdGs4ZHZYZzRnTlJ3UGhVWEd0TEJrSENVUXFkRDVBRkZV?oc=5",
+      "fuente": "Vietnam.vn"
+     },
+     {
+      "titulo": "La tecnología de baja altitud de China impulsa el desarrollo de América Latina",
+      "link": "https://espanol.cgtn.com/2026/11/07/ARTI1794017819134876",
+      "fuente": "CGTN en Español"
+     },
+     {
+      "titulo": "En imágenes: Empresa de tecnología de exoesqueleto redefine movilidad humana",
+      "link": "https://www.telesurtv.net/ruta-a-china/exoesqueleto-movilidad-humana/",
+      "fuente": "teleSUR"
+     },
+     {
+      "titulo": "Asia profundiza desplome bursátil: Nikkei cae 5,8% por temores sobre la regulación de la IA en EE.UU.",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQYldjZlFIZ3l2c2lKU0lHeDFWcUNuRzVEQmc1SlI1ZVBub010RGdkN012c004TFhQZUJELWlRRDdtVzYyUDdzUGtIQ2ZPSU5DQ1U5UHJxZWFwa3ZSZVZaazJkeHNFcEw2d2hrY1VoTzRRcWxfeENuYXBjaVRrLVNwZzJFblQ3REptWVRlT0QyYWNNZjRwWW1BZUZMNXJyakVFaVMzM0xJY3lZVmd2NkIzM1l4bEZJTExkQm5NbVFGVmhXd19qRlhlY2tsRmp6blpsdXfSAeYBQVVfeXFMTUZnaTMzeXExMUFoQk0zZUtLaFhWYkZ5RGFxdHNTNjNiSEVMTFBodDE1dmZCc015QUhzNXFWWDVJTFk0ZElvSkhzSHpsMFpZbHlWdHk0QXpYMDFCdGZFbi1Cdnkxb18tS3c2YXpzS3U4djdkUlFDbVZhVzRJZWctR1dQQkxfSFZOYXFmWXVhcEdtRUxXbHBIRndGZVhSWVBCbDBaRVBySjVRS2xKS2c4alhxVzh4ZjBYbWFPY18tWlJKZFBDa2Z3cmFtaGRUYW1yRmJpNGM2cW43a0J4UG9pb2xNX2dwX2c?oc=5",
+      "fuente": "Bloomberg Línea"
+     },
+     {
+      "titulo": "Invertir en ciencia para avanzar",
+      "link": "https://elperuano.pe/noticia/308462-invertir-en-ciencia-para-avanzar",
+      "fuente": "Diario Oficial El Peruano"
+     },
+     {
+      "titulo": "Víctor Pascual (Cosmikal): Europa, Ciberseguridad y Competitividad",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNZDBEaTFDMERPcllvU3BWMDlINEhuaEJkekx6ektOemVMUTlPblYxRnE0c1NKdHg5UTNGTUhOeXBpZHZZRHVOM2FDdjNlMWtmYU83czZOMXRpdzFKbE9ZTDB3aFJ1TC1ONGxvcnZMWks0dVplSHNFMkdvMVB4UVl2QWloVV8weHg1T0xiWU9CSFlzRjFDSWd2RENFOXhNdGZDV3lYRW8yQkZvOVQwNDlpcw?oc=5",
+      "fuente": "Asociación para el Progreso de la Dirección | APD"
+     },
+     {
+      "titulo": "China solo tardaría 12 minutos en transmitir todo el conocimiento de la humanidad desde 2007: usando este cable de fibra óptica de alta tecnología",
+      "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNZTZvblJvNENCM3d1M1JvTHQzeFFVTEtOUktjXzdsVzZfR0M2U2IzYV9OY29wTkZWR29WZDd3YjQ1dWdxMkxCME1mVm0zNmJKdnRnNVc2RUNlWjFfYmgtRmY3dTBtS2p3WldFWVFDNm42dVg5Slo5c2Zxd3RZRjVhU0JPbGszVmRpTkE0VHJlWHRPOC1TUEE3Y3pIRHl5cmotUGpqVUhtNGtaeEpyUklsam45OVd1TDJZS3FIclktdGdwb05JdC1UNXJ3aGdnOGExVGZHZy11d3A4aTc1clpleFU1ZG9PRFJYelpN0gHrAUFVX3lxTFBrR1RXR193ZXVxZ3F3azV1QjJ3cjYxTXQwdk9GbG5tSTJzNWxrTnlObkJkSXhuRWZTS3RYOGFJT1g3Q09qR3o4N2dIZGJuZzFjZXlnTGFpdG9QaldBY3RDckVVcEdoLTA0TTVfNW4taklMYnJBckVLWHlMTngwZWpWRWswdEpvUkVIS0tWXy1jVW5Lb1B1MFZFY3dlMU9HalcwX1lSTFhiRVViN1V4MTVDc0dRM1BnbnZGNDZRZjlkQ3ZZUkYydjhXOEpfaWtvTFJpM3o2dldCT3pSdWNZQ2VMaURLNkRjZ0RVaWM?oc=5",
+      "fuente": "MARCA"
+     },
+     {
+      "titulo": "Flavia Santoro: \"Europa debe avanzar hacia una mayor autonomía tecnológica, pero sin confundir autonomía con autosuficiencia\"",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNkw1bmVJTFJ0YmdZQjYzT2dia1FpX1lCQk5PVTZfaDNtaVFOdzhUODJFLTJRV0dsNkxMYWpyT3FKcGdlbTNaTXREQlVPYWFJTWRLd0o5Rk52WF9RTXRCRy1RcGdac2xrQTNLellmVFlvbUlkWF80T28xcGdBNFRieC1WVURGZlZqZE80dGVtVVZucy1xVkh3M09zZEtMQUZNeEJLdVRHdlhGRVlzZTZEMy1kVkVrLU94SkZXd29rdTRPS3BHb3BySzhSNzAwQm5mM0dFUnc5TWVPcTBOS0d4N3RYUFlLYjlpOVFKWVRkaw?oc=5",
+      "fuente": "Escudo Digital"
+     },
+     {
+      "titulo": "Rusia con nuevo parche corneal sin suturas",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONHFGVC05T0lQeGdmaGFNYmlMN1Z0YWliSFBzWWZ0elZ2ZEtrSzJjSG96VDJNNmNHY0pvYXYxWlNISWFlWWF6eWFYNXdRQXFzNWhCNHBSUzJmaTdaWUFtNjY2UHdneW5lWk93SGg0d2dOcjZoTnNFUTkyRDJPM0FhUFA4ZlhvS250TEFsQ2pGM1V4YmdhbXc?oc=5",
+      "fuente": "Radio Cadena Agramonte, Camagüey, Cuba"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-06",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-07",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-07T02:19:43.260Z",
+    "ultimoChequeo": "2026-11-07T03:21:44.254Z",
     "semana": [
      {
       "titulo": "RODMENA: infraestructura soberana contra la IA de EEUU",
@@ -13441,7 +13502,7 @@
   },
   "mundo_salud": {
    "estado": "listo",
-   "corridas": 174,
+   "corridas": 175,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -13450,12 +13511,16 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-07T02:19:43.260Z",
+   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
    "resumen": "🌎 Mundo: salud y ciencia\n\n• Neira presenta en España su candidatura a la OMS y apuesta por recuperar una imagen científica fuerte (ConSalud.es)\n  https://www.consalud.es/politica/neira-presenta-en-espana-su-candidatura-",
    "informe": "data/informes/mundo_salud/2026-11-06-2022.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "ante cámara de diputados, issste presenta 200 avances en salud y hospitales en méxico",
+     "japón aprueba plan de ciberseguridad y prepara equipo de rescate",
+     "el tratamiento busca recuperar las neuronas que producen dopamina",
+     "fiscales de eeuu archivan el caso contra una científica rusa por tráfico de embriones de r",
      "sedeco celebra 378 proyectos de inversión por casi 300 mil millones de pesos durante actua",
      "la confianza en la ciencia retrocede y la oms prepara una movilización mundial",
      "el hongo ‘tsukiyotake’ causa más del 50 % de las intoxicaciones por setas silvestres en ot",
@@ -14051,11 +14116,7 @@
      "quiénes son los siete candidatos que aspiran a dirigir la oms desde 2027 | el colombiano",
      "brusca caída del petróleo por posible reanudación de negociaciones en oriente medio",
      "becas de investigación sobre estudios japoneses de the japan foundation en japón",
-     "un médico operó a un paciente con cáncer a 56 kilómetros de distancia: el avance que marca",
-     "ee. uu. mediará nuevas negociaciones entre rusia y ucrania",
-     "dominicano en rusia afirma que nadie es obligado a firmar contratos militares",
-     "investigadores descubren la \"victoria colombiana\", una nueva especie de planta gigante",
-     "brotes de ébola y hantavirus reavivan llamado de la oms a un acuerdo mundial contra pandem"
+     "un médico operó a un paciente con cáncer a 56 kilómetros de distancia: el avance que marca"
     ],
     "bandeja": [
      {
@@ -14122,17 +14183,33 @@
       "titulo": "Diputadas y diputados cuestionan al gabinete de Salud sobre abasto de medicamentos, modernización de infraestructura y universalización del servicio",
       "link": "https://www.tallapolitica.com.mx/diputadas-y-diputados-cuestionan-al-gabinete-de-salud-sobre-abasto-de-medicamentos-modernizacion-de-infraestructura-y-universalizacion-del-servicio/",
       "fuente": "tallapolitica.com.mx"
+     },
+     {
+      "titulo": "Ante Cámara de Diputados, ISSSTE presenta 200 avances en salud y hospitales en México",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPdGYzb3doTFdkTDJLV1FSRVFLbm1IY0dPcTg1TUVBNkUzM1hkYndBVE90Q3JwUFZNSDF2OHFZQU1uTEF2SVBJS2k4d085SWxWSjFsOW9SYnFTZXdZeDJKQ1BZNjc0SXg0VTVrLW4yYkR3enFMazZ1bzZXVC0zS0hvcVZ5WGtvRnNWMmVydUJSWWxfbFZjdVpReU9SUEJiWXY0MWo3OHV1QXBYMTBPLWZVN1RRS0U2TlRwWTJHZll5V3VWUVlVVldN0gHiAUFVX3lxTFBUb2dBVHdDQVgtTTRKQ0dZTWdTUkh2R0l4VmxEX19RWlVIeTJId01KX3lLN1dmR1FveUNlaHlaeUxWNUQ4T3hTYnNGQjVZbGp2SFprWVpLbHZKbER4MU5jN3RiUHI1WTI4VUw3VVJtOWE3bTRQSWdQMVVzNmNYNTFzUjJGdW92b2hVTGxSSlNxMUdKRGNoT1E1RzJsTFNXczRCZzRvWm51N0drUjVST3oyb0RCSGJVcFlRNUJNNUFlT3pvekNlT1pOa09XREhsbXlLcGlFMWNRdE1ZOU5ZRnFrZkE?oc=5",
+      "fuente": "La Razón de México"
+     },
+     {
+      "titulo": "Japón aprueba plan de ciberseguridad y prepara equipo de rescate",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE40RDFlY2FYeldrWVpBak1pc3dyaVdvTmFyZnJEMWhTM2Z1czZQbFVJVC0yNFQ2UVdUUzRiSk1zQTlxNjZWNXFvVV9QYkJaU3Nzc3RTV0xvbUJuekxtQ25GcW9R?oc=5",
+      "fuente": "https://fomoera.com/"
+     },
+     {
+      "titulo": "El tratamiento busca recuperar las neuronas que producen dopamina",
+      "link": "https://www.65ymas.com/transicion-activa-fundacion-ibercaja/japon-autoriza-terapia-celular-contra-parkinson-como-funciona_87419_102.html",
+      "fuente": "65ymás"
+     },
+     {
+      "titulo": "Fiscales de EEUU archivan el caso contra una científica rusa por tráfico de embriones de rana",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOY3ZfTzNQUlJQd2l6RU9WTVhoLUp6RTZ5alZpRGp0OHhMZUJmSC1TQW9EQmFQbUhBR3J1a1R3RVJfaEhRQUFMa1FXOW5vZWdJSnc4bWlHVHBHdm9FVU54cm9aMWZLdnJrdEluOUpTS0J3bTYwWHVSQ2E2d010S1RLV1JuWGdtbU05bXJnZXpMLU1DZXBrN2pYRzFSRnJObkc4dXN5U2xqRWpGazdfUGdMdTRXWnlZTVZQU29LeFBjSXRCaUZnVlhKUGd2bkUySUx1dDQ4amVDTDVlSGhwQ2NreEE2VHNHVXM?oc=5",
+      "fuente": "RFI"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-06",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-07",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-07T02:19:43.260Z",
+    "ultimoChequeo": "2026-11-07T03:21:44.254Z",
     "semana": [
      {
       "titulo": "Qué es la ansiedad por inteligencia artificial y por qué preocupa a los expertos",
@@ -15474,13 +15551,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-06",
-     "hechas": [
-      "08:30",
-      "13:00",
-      "17:30",
-      "21:30"
-     ]
+     "fecha": "2026-11-07",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-07T00:51:39.253Z"
    }
@@ -15502,10 +15574,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-06",
-     "hechas": [
-      "20:30"
-     ]
+     "fecha": "2026-11-07",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-06T23:52:40.056Z"
    }
@@ -15612,10 +15682,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-06",
-     "hechas": [
-      "09:00"
-     ]
+     "fecha": "2026-11-07",
+     "hechas": []
     },
     "instruido": true,
     "ultimoChequeo": "2026-11-06T12:19:53.882Z"
@@ -15638,17 +15706,15 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-06",
-     "hechas": [
-      "21:45"
-     ]
+     "fecha": "2026-11-07",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-07T00:51:39.253Z"
    }
   },
   "noticias_tec": {
    "estado": "listo",
-   "corridas": 174,
+   "corridas": 175,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -15657,12 +15723,21 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-07T02:19:43.260Z",
+   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
    "resumen": "💻 Lo último en tecnología\n\n• OPPO Find X10 Ultra habría sido suspendido antes de su estreno (ENTER.CO)\n  https://news.google.com/rss/articles/CBMinAFBVV95cUxPTHZzMTZCR3BESmVhcUFQdDhqbkhTU21kU2NMNFNlaVJxS3h5ZTREM3oxZm1Xd",
    "informe": "data/informes/noticias_tec/2026-11-06-2122.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "interrupción bancaria en japón reaviva alertas de ciberseguridad; méxico enfrentaría riesg",
+     "golpearon a mon laferte en pleno show: le arrojaron un celular que impactó directo en su r",
+     "así puede programar mensajes en whatsapp, en el celular y en la versión web",
+     "motorola presentó el signature 27, un celular con cámara de 200 mp, pantalla de 12.000 nit",
+     "fan lanza celular y golpea a mon laferte durante presentación",
+     "cómo elegir el equipo ideal en el cyber monday celulares",
+     "nequi anunció el lanzamiento de bolsillos con rentabilidad; requisitos y cómo usar esta nu",
+     "blue origin retrasa el new glenn a 2027 tras la explosión",
+     "github: agentes ia necesitan supervisión, dice sanz del río",
      "marlos moreno vuelve: las novedades de la convocatoria de nacional",
      "mon laferte es golpeada por un celular durante concierto en las vegas: así fue el incident",
      "toyota apuesta por la ia en sus fábricas para reinventarse",
@@ -16253,16 +16328,7 @@
      "desafío de la administración de justicia en la era de la ia",
      "estrellas esperan brillar en casa: barcelona vs aston villa en vivo",
      "díaz, figura que no se recuperó: atlético de madrid vs bayern en vivo",
-     "xbox game pass confirma una nueva tanda de juegos para noviembre: todas las incorporacione",
-     "honor in blue watch company reviews - honor chile anuncia el lanzamiento de honor magic se",
-     "tencent lanza hy4 y eleva la presión en la carrera china por la ia de pesos abiertos",
-     "tencent hy4 vs hy4 preview: modelo más nuevo, menos abierto",
-     "kit de emergencia 72 horas, la ue presenta su guía oficial",
-     "incibe-cert alerta de dos vulnerabilidades php críticas en el servidor regard 7000 opc ua ",
-     "funditec advierte sobre los riesgos de la era post cuántica y urge a las empresas a blinda",
-     "funditec alerta de los \"riesgos\" de la era post cuántica y anima a las empresas a proteger",
-     "ejército nacional frustra atentado en peaje de chachagüí, na",
-     "reino unido alerta sobre ransomware con ia hasta 2028"
+     "xbox game pass confirma una nueva tanda de juegos para noviembre: todas las incorporacione"
     ],
     "bandeja": [
      {
@@ -16329,18 +16395,58 @@
       "titulo": "¿Qué es Anthropic? Claude, la acción ANT y la OPI",
       "link": "https://www.vtmarkets.com/es-latam/discover/what-is-anthropic-claude-ant-stock-and-ipo/",
       "fuente": "vtmarkets.com"
+     },
+     {
+      "titulo": "Interrupción bancaria en Japón reaviva alertas de ciberseguridad; México enfrentaría riesgos indirectos",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPUWs0aXlQVXlmbjZOLTJmckZtQXZfRVJCT1J1OUc3VTVZVnpLaFJPSS1hX19vTjVoV1JDUmw3Z3ZXMHd1aENRWW45Ym1LWUtQWTBBWEZ6WndWSUw3OGNmNUlEeXZhUjJuWHRZWnhfSDUwZ1RKYnRPRVQ1MjF5TWdtcXlrRlNEY0RHLWhVZEZEM3JNVkVOd3JJV0hFbmN2TkY5TzJId2JxSmxnczhNa2VpSTY3S1ZpRWwwdmRCZmJ2bjU5SUFBcVQybHRTRXlra1M3?oc=5",
+      "fuente": "Tala Jalisco Noticias"
+     },
+     {
+      "titulo": "Golpearon a Mon Laferte en pleno show: le arrojaron un celular que impactó directo en su rostro",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM3JfNUVkSzFvakpOcGJKdVYwQ3NuNGlzN3hOMGJCTk1IUFlaZm1MZzIzY09lQjNHeFlUUXIzQUhTYkE3UkJITGNWMGNkald3VDFTSzY0R0s1LVlCM3ZBV2Z3elBZenh3V01Pd2N4QXpjamhUOTJQUUZyMTFEamZtTjhRYjdnSEFfRXJTLVc4MWN5WDJVLUFMTEpsdms4ZFJ2QnNOcW1UVmV2R3pELW02WXBVT3JVSXo0VHpTaUZfYjVWamRGOVJsc1BodmlpbFnSAc8BQVVfeXFMTzNyXzVFZEsxb2pKTnBiSnVWMENzbjRpczd4TjBiQk5NSFBZWmZtTGcyM2NPZUIzR3hZVFFyM0FIU2JBN1JCSExjVjBjZGpXd1QxU0s2NEdLNS1ZQjN2QVdmd3pQWXp4d1dNT3djeEF6Y2poVDkyUFFGcjExRGpmbU44UWI3Z0hBX0VyUy1XODFjeVgyVS1BTExKbHZrOGRSdkJzTnFtVFZldkd6RC1tNllwVU9yVUl6NFR6U2lGX2I1VmpkRjlSbHNQaHZpaWxZ?oc=5",
+      "fuente": "MinutoUno"
+     },
+     {
+      "titulo": "Así puede programar mensajes en WhatsApp, en el celular y en la versión web",
+      "link": "https://www.msn.com/es-co/tecnolog%C3%ADa/software/as%C3%AD-puede-programar-mensajes-en-whatsapp-en-el-celular-y-en-la-versi%C3%B3n-web/ar-AA2gVSNB",
+      "fuente": "Semana on MSN"
+     },
+     {
+      "titulo": "Motorola presentó el Signature 27, un celular con cámara de 200 MP, pantalla de 12.000 nits y sonido de Bang & Olufsen: todo lo que debe saber",
+      "link": "https://www.msn.com/es-co/noticias/otras/motorola-present%C3%B3-el-signature-27-un-celular-con-c%C3%A1mara-de-200-mp-pantalla-de-12000-nits-y-sonido-de-bang-olufsen-todo-lo-que-debe-saber/ar-AA2gVGhd",
+      "fuente": "El Tiempo on MSN"
+     },
+     {
+      "titulo": "Fan lanza celular y golpea a Mon Laferte durante presentación",
+      "link": "https://canal44.com/lanzan-celular-mon-laferte-golpean-rostro-concierto-las-vegas/",
+      "fuente": "Canal 44"
+     },
+     {
+      "titulo": "Cómo elegir el equipo ideal en el Cyber Monday celulares",
+      "link": "https://www.barilocheopina.com/noticias/2026/11/06/97032-como-elegir-el-equipo-ideal-en-el-cyber-monday-celulares",
+      "fuente": "Bariloche Opina"
+     },
+     {
+      "titulo": "Nequi anunció el lanzamiento de bolsillos con rentabilidad; requisitos y cómo usar esta nueva opción",
+      "link": "https://www.tropicanafm.com/2026/nequi-anuncio-el-lanzamiento-de-bolsillos-con-rentabilidad-requisitos-y-como-usar-esta-nueva-opcion-480374.html",
+      "fuente": "Tropicana Colombia"
+     },
+     {
+      "titulo": "Blue Origin retrasa el New Glenn a 2027 tras la explosión",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPZHdxMk1IQzRRZk0zeUltQzFSUFZKemFneDhfeXF3R0R6aE5XT2F2NXUweGZCc0JjTHFET1gyazFMaUYxNEQ1U0Ewa01pSS0tamx3cF92V25CaThlRmJMTnlGTXh2N3V3ZkY3dmItcEF3ZE1uTG50cmwwU1BMRUV6QUZmMUtSbU9XaU04NkdWbWgxZw?oc=5",
+      "fuente": "El Ecosistema Startup"
+     },
+     {
+      "titulo": "GitHub: agentes IA necesitan supervisión, dice Sanz del Río",
+      "link": "https://prensamercosur.org/2026/11/04/github-agentes-ia-necesitan-supervision-dice-sanz-del-rio/",
+      "fuente": "prensamercosur"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-06",
-     "hechas": [
-      "09:00",
-      "13:00",
-      "17:00",
-      "21:00"
-     ]
+     "fecha": "2026-11-07",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-07T02:19:43.260Z",
+    "ultimoChequeo": "2026-11-07T03:21:44.254Z",
     "semana": [
      {
       "titulo": "iPhone 15 Pro Max de 512GB cae a $13,593 pesos en Amazon; tiene 61% de descuento e incluye envío gratis",
@@ -18102,10 +18208,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-06",
-     "hechas": [
-      "22:00"
-     ]
+     "fecha": "2026-11-07",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-07T01:20:29.836Z"
    }
@@ -18237,10 +18341,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-06",
-     "hechas": [
-      "06:50"
-     ]
+     "fecha": "2026-11-07",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-06T09:50:31.244Z"
    }
@@ -18287,10 +18389,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-06",
-     "hechas": [
-      "10:00"
-     ]
+     "fecha": "2026-11-07",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-06T13:18:58.275Z"
    }
@@ -18347,7 +18447,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 325,
+   "corridas": 326,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -18356,13 +18456,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-07T02:51:40.039Z",
+   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-06",
-    "ultimoChequeo": "2026-11-07T02:51:40.039Z"
+    "ultimoChequeo": "2026-11-07T03:21:44.254Z"
    }
   },
   "feriados": {
@@ -18535,8 +18635,8 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-06",
-   "ultimaCorrida": "2026-11-07T02:43:00.000Z",
+   "ultimaFecha": "2026-11-07",
+   "ultimaCorrida": "2026-11-07T03:04:00.000Z",
    "resumen": "Apagado (espera medidas y precio) · ensayo OK en «TRATO HECHO 2.0 Villa Maria» 14:18 (no publicó) · grupos: TRATO HECHO VILLA MARIA, TRATO HECHO VILLA NUEVA, Trato Hecho Villa Maria 1, TRATO HECHO VILLA MARIA 3",
    "informe": null,
    "pausado": false,
@@ -18544,6 +18644,21 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-07T03:21:44.254Z",
+   "quien": "Clima para la obra",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-07T03:21:44.254Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-07T03:21:44.254Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-07T02:51:40.039Z",
    "quien": "Mesa de entrada",
@@ -20028,26 +20143,10 @@
    "t": "2026-11-05T15:58:20.767Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-05T15:58:20.767Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-05T15:18:00.791Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-05T15:18:00.791Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "192": "comidas",
   "193": "licitaciones",
   "194": "mundo_economia",
   "195": "mundo_economia",
@@ -20546,7 +20645,8 @@
   "913": "comidas",
   "914": "informe_redes",
   "915": "vencimientos",
-  "916": "tarifas"
+  "916": "tarifas",
+  "918": "clima"
  },
  "tgOffset": 196508516,
  "hechos": {
@@ -20558,24 +20658,13 @@
   "buenDia": "2026-11-06"
  },
  "consumo": {
-  "fecha": "2026-11-06",
-  "consultas": 62,
+  "fecha": "2026-11-07",
+  "consultas": 0,
   "busquedas": 0,
-  "por": {
-   "gemini": 18,
-   "groq": 3,
-   "llm7": 1,
-   "huggingface": 1,
-   "zai": 1,
-   "openrouter": 6,
-   "cerebras": 5,
-   "sambanova": 10,
-   "nvidia": 11,
-   "cohere": 6
-  }
+  "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-07T02:51:40.039Z",
+ "actualizado": "2026-11-07T03:21:44.254Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -20600,383 +20689,9 @@
   ]
  },
  "ia": {
-  "fecha": "2026-11-06",
-  "agotado": {
-   "gemini:gemini-3.8-flash": 1793976711524,
-   "gemini:gemini-3.7-flash": 1793976718054,
-   "gemini:gemini-3.6-flash": 1793976724558,
-   "groq:groq/compound": true,
-   "huggingface": 1794059755825,
-   "openrouter:google/gemma-4-26b-a4b-it:free": 1794018035873,
-   "openrouter:google/gemma-4-31b-it:free": 1794018038199,
-   "cerebras:gpt-oss-120b": 1794063299609,
-   "cerebras:qwen-3.8-27b": 1794063302077,
-   "cerebras:zai-glm-4.7": true,
-   "sambanova:Meta-Llama-3.3-70B-Instruct": 1793984316625,
-   "sambanova:gpt-oss-120b": 1793984318936,
-   "sambanova:DeepSeek-V3.1": true,
-   "nvidia:deepseek-ai/deepseek-v4.1-flash": 1793984698859,
-   "nvidia:z-ai/glm-5.3-flash": 1793984818861,
-   "nvidia:moonshotai/kimi-k2.6": true,
-   "sambanova:Llama-4-Maverick-17B-128E-Instruct": true,
-   "nvidia:mistralai/mistral-large": true,
-   "nvidia:meta/llama-3.3-70b-instruct": true,
-   "nvidia:openai/gpt-oss-120b": true,
-   "nvidia:qwen/qwen3-next-80b-a3b-instruct": true,
-   "cerebras:llama-3.3-70b": true,
-   "cerebras:qwen-3-32b": true
-  },
-  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
-  "vivos": {
-   "llm7": {
-    "fecha": "2026-11-06",
-    "ids": [
-     "DeepSeek-V4-Flash-0731",
-     "GLM-5.3-Flash",
-     "Inkling-Small",
-     "L3-8B-Lunaris-v1-Turbo",
-     "Voxtral-Mini-3B-2507",
-     "Voxtral-Small-24B-2507",
-     "anthropic/claude-opus-4-6",
-     "anthropic/claude-opus-4-7",
-     "anthropic/claude-opus-4-8",
-     "anthropic/claude-sonnet-4-6",
-     "anthropic/claude-sonnet-5",
-     "anthropic/claude-sonnet-5-5",
-     "chroma-v.46-flash",
-     "claude-fable-5",
-     "claude-fable-5-1",
-     "claude-haiku-4-5",
-     "claude-haiku-5-5",
-     "claude-opus-4-8",
-     "claude-opus-5",
-     "claude-opus-5-5",
-     "claude-sonnet-4-6",
-     "claude-sonnet-5",
-     "codestral-latest",
-     "dark-beast-krea2",
-     "deepseek-v4-flash:0731",
-     "deepseek-v4-pro",
-     "deepseek-v4.1-flash",
-     "gemini-3-flash",
-     "gemini-3.0-pro-image",
-     "gemini-3.1-flash-image",
-     "gemini-3.1-pro",
-     "gemini-3.6-flash-high",
-     "gemini-3.8-flash-high",
-     "gemini-4-argon",
-     "gemini-nano-banana-2.1",
-     "gemini-omni-flash",
-     "gemma4:31b",
-     "glm-5.2",
-     "glm-5.3",
-     "gpt-5.6-luna",
-     "gpt-5.6-sol",
-     "gpt-5.6-terra",
-     "gpt-6-astra",
-     "gpt-6-luna",
-     "gpt-6-sol",
-     "gpt-6.1-sol",
-     "gpt-image-2",
-     "gpt-image-2.5",
-     "gpt-oss:20b",
-     "grok-4.7",
-     "jev-latest",
-     "kimi-k2.6",
-     "kimi-k2.7-code",
-     "kimi-k3",
-     "kling-v3.0-pro",
-     "kling-v3.0-turbo",
-     "llama-4-maverick",
-     "minimax-m2.7",
-     "minimax-m3",
-     "mistral-Nemo-Instruct-2407",
-     "mistral-Small-24B-Instruct-2501",
-     "mistral-large-3:675b",
-     "muse-spark-1.3",
-     "nemotron-3-nano:30b",
-     "seed-2.0-mini",
-     "seedance-2.0",
-     "seedance-2.0-fast",
-     "seedance-2.0-mini"
-    ]
-   },
-   "huggingface": {
-    "fecha": "2026-11-06",
-    "ids": [
-     "Qwen/Qwen3.8-27B",
-     "deepseek-ai/DeepSeek-V4.1-Flash-1017",
-     "deepseek-ai/DeepSeek-V4.1-Flash",
-     "zai-org/GLM-5.3-Flash",
-     "meta-llama/Llama-3.1-8B-Instruct",
-     "moonshotai/Kimi-K3",
-     "google/gemma-4-31B-it",
-     "Qwen/Qwen3.5-9B",
-     "zai-org/GLM-5.3",
-     "Qwen/Qwen3.6-35B-A3B",
-     "meta-models/Muse-Glimmer-30B",
-     "tencent/Hy4-preview",
-     "openai/gpt-oss-20b",
-     "Qwen/Qwen3.8-2.4T-A95B",
-     "meta-models/Muse-Spark-Open-816B-A42B",
-     "openai/gpt-oss-120b",
-     "MiniMaxAI/MiniMax-M3.1-Flash",
-     "reflection/Beam-1.0-501B-A23B",
-     "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
-     "XiaomiMiMo/MiMo-V2.6-Pro-RL",
-     "google/gemma-4-26B-A4B-it",
-     "deepseek-ai/DeepSeek-V4-Flash",
-     "google/gemma-3-4b-it",
-     "CohereLabs/tiny-aya-global",
-     "ibm-granite/granite-4.2-3b",
-     "deepseek-ai/DeepSeek-R1",
-     "inclusionAI/Ling-3.1-flash",
-     "thinkingmachines/Inkling-Small",
-     "deepseek-ai/DeepSeek-V4-Pro",
-     "zai-org/GLM-5.2",
-     "XiaomiMiMo/MiMo-V2.6-Flash-RL",
-     "Qwen/Qwen3.8-Flash-Next-FP8",
-     "Qwen/Qwen3.5-27B",
-     "deepseek-ai/DeepSeek-V4-Pro-0813",
-     "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-     "meta-llama/Llama-3.3-70B-Instruct",
-     "deepseek-ai/DeepSeek-V4-Flash-0731",
-     "zai-org/GLM-4.7-Flash",
-     "google/gemma-3-27b-it",
-     "Qwen/Qwen3.5-122B-A10B",
-     "Qwen/Qwen3-30B-A3B",
-     "google/gemma-3-12b-it",
-     "meta-llama/Llama-4-Scout-17B-16E-Instruct",
-     "microsoft/phi-4",
-     "MiniMaxAI/MiniMax-M3",
-     "zai-org/GLM-5.3-Flash-BF16",
-     "moonshotai/Kimi-K2.7-Code",
-     "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
-     "thinkingmachines/Inkling",
-     "Qwen/Qwen3.6-27B",
-     "CohereLabs/tiny-aya-earth",
-     "swiss-ai/Apertus-v1.5-70B",
-     "speakleash/Bielik-11B-v3.0-Instruct",
-     "Qwen/Qwen2.5-72B-Instruct",
-     "inclusionAI/Ling-3.0-flash-Fin",
-     "Qwen/Qwen3.5-35B-A3B",
-     "Qwen/Qwen3-14B",
-     "zai-org/GLM-5.3-BF16",
-     "deepseek-ai/DeepSeek-V3.2",
-     "ibm-granite/granite-4.2-8b",
-     "deepseek-ai/DeepSeek-V3",
-     "zai-org/AutoGLM-Phone-9B-Multilingual",
-     "aisingapore/Qwen-SEA-LION-v4.5-27B-IT",
-     "Qwen/Qwen3-32B",
-     "moonshotai/Kimi-K2.5",
-     "zai-org/GLM-4.6V-Flash",
-     "zai-org/GLM-4.7",
-     "moonshotai/Kimi-K2.6",
-     "zai-org/GLM-4.5",
-     "Qwen/Qwen3.5-397B-A17B",
-     "zai-org/GLM-5",
-     "inclusionAI/Ling-3.0-flash-VL",
-     "Qwen/Qwen3-VL-235B-A22B-Instruct",
-     "XiaomiMiMo/MiMo-V2.5-Pro",
-     "Sao10K/L3-8B-Stheno-v3.2",
-     "swiss-ai/Apertus-8B-Instruct-2509",
-     "XiaomiMiMo/MiMo-V2.5",
-     "inclusionAI/Ling-3.0-flash",
-     "ibm-granite/granite-4.2-30b",
-     "CohereLabs/aya-vision-32b",
-     "zai-org/GLM-4.5V-FP8",
-     "alpindale/WizardLM-2-8x22B",
-     "NousResearch/Hermes-3-Llama-3.1-70B",
-     "Qwen/Qwen3-VL-30B-A3B-Instruct",
-     "zai-org/GLM-4.5V",
-     "deepseek-ai/DeepSeek-R1-0528",
-     "deepseek-ai/DeepSeek-V3-0324",
-     "stepfun-ai/Step-3.7-Flash",
-     "zai-org/GLM-4.6V",
-     "MiniMaxAI/MiniMax-M1-80k",
-     "Qwen/Qwen3-235B-A22B-Instruct-2507",
-     "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-     "zai-org/GLM-4.6V-FP8",
-     "moonshotai/Kimi-K2-Instruct",
-     "CohereLabs/c4ai-command-r-08-2024",
-     "Qwen/Qwen3-235B-A22B-Thinking-2507",
-     "moonshotai/Kimi-K2-Instruct-0905",
-     "CohereLabs/aya-expanse-32b",
-     "deepseek-ai/DeepSeek-V3.1",
-     "zai-org/GLM-4.6",
-     "CohereLabs/c4ai-command-r7b-12-2024",
-     "Qwen/Qwen3-Next-80B-A3B-Instruct",
-     "MiniMaxAI/MiniMax-M2.5",
-     "CohereLabs/c4ai-command-r7b-arabic-02-2025",
-     "deepseek-ai/DeepSeek-V3.1-Terminus",
-     "MiniMaxAI/MiniMax-M2.7",
-     "CohereLabs/c4ai-command-a-03-2025",
-     "stepfun-ai/Step-3.5-Flash",
-     "aisingapore/Gemma-SEA-LION-v4-27B-IT",
-     "CohereLabs/command-a-reasoning-08-2025",
-     "zai-org/GLM-5.1",
-     "swiss-ai/Apertus-70B-Instruct-2509",
-     "CohereLabs/command-a-translate-08-2025",
-     "tencent/Hy3",
-     "aisingapore/Qwen-SEA-LION-v4-32B-IT",
-     "CohereLabs/tiny-aya-water",
-     "Qwen/Qwen2.5-VL-72B-Instruct",
-     "BSC-LT/ALIA-40b-instruct-2606",
-     "zai-org/GLM-4.5-Air",
-     "CohereLabs/tiny-aya-fire",
-     "aisingapore/Nemotron-SEA-LION-v4.8-120B-A12B",
-     "zai-org/GLM-4.6-FP8",
-     "zai-org/GLM-4.7-FP8",
-     "zai-org/GLM-5.1-FP8",
-     "zai-org/GLM-5.2-FP8"
-    ]
-   },
-   "zai": {
-    "fecha": "2026-11-06",
-    "ids": [
-     "glm-4.5",
-     "glm-4.5-air",
-     "glm-4.6",
-     "glm-4.7",
-     "glm-5",
-     "glm-5-turbo",
-     "glm-5.1",
-     "glm-5.2",
-     "glm-5.3",
-     "glm-5.3-flash",
-     "glm-5.3-flashx",
-     "glm-5.3-flashx-legal"
-    ]
-   },
-   "groq": {
-    "fecha": "2026-11-06",
-    "ids": [
-     "allam-2-7b",
-     "canopylabs/orpheus-arabic-saudi",
-     "qwen/qwen3.8-27b",
-     "openai/gpt-oss-20b",
-     "canopylabs/orpheus-v1-english",
-     "openai/gpt-oss-120b"
-    ]
-   },
-   "cerebras": {
-    "fecha": "2026-11-06",
-    "ids": [
-     "gpt-oss-120b",
-     "qwen-3.8-27b"
-    ]
-   },
-   "sambanova": {
-    "fecha": "2026-11-06",
-    "ids": [
-     "Meta-Llama-3.3-70B-Instruct",
-     "MiniMax-M3.1-Flash",
-     "gemma-4-31B-it",
-     "gpt-oss-120b"
-    ]
-   },
-   "nvidia": {
-    "fecha": "2026-11-06",
-    "ids": [
-     "01-ai/yi-large",
-     "adept/fuyu-8b",
-     "ai21labs/jamba-1.5-large-instruct",
-     "aisingapore/sea-lion-7b-instruct",
-     "bigcode/starcoder2-15b",
-     "databricks/dbrx-instruct",
-     "deepseek-ai/deepseek-coder-6.7b-instruct",
-     "deepseek-ai/deepseek-v4.1-flash",
-     "google/codegemma-1.1-7b",
-     "google/codegemma-7b",
-     "google/deplot",
-     "google/diffusiongemma-26b-a4b-it",
-     "google/gemma-2b",
-     "google/gemma-3-12b-it",
-     "google/gemma-3-4b-it",
-     "google/gemma-4-31b-it",
-     "google/recurrentgemma-2b",
-     "ibm/granite-3.0-3b-a800m-instruct",
-     "ibm/granite-3.0-8b-instruct",
-     "ibm/granite-34b-code-instruct",
-     "ibm/granite-8b-code-instruct",
-     "meta/codellama-70b",
-     "meta/llama-3.2-90b-vision-instruct",
-     "meta/llama2-70b",
-     "meta/muse-glimmer-30b",
-     "microsoft/kosmos-2",
-     "microsoft/phi-3-vision-128k-instruct",
-     "microsoft/phi-3.5-moe-instruct",
-     "minimaxai/minimax-m3.1-flash",
-     "mistralai/codestral-22b-instruct-v0.1",
-     "mistralai/mistral-7b-instruct-v0.3",
-     "mistralai/mistral-large",
-     "mistralai/mistral-large-2-instruct",
-     "mistralai/mistral-large-4-1t-a52b",
-     "mistralai/mixtral-8x22b-v0.1",
-     "moonshotai/kimi-k2.6",
-     "nv-mistralai/mistral-nemo-12b-instruct",
-     "nvidia/ai-synthetic-video-detector",
-     "nvidia/cosmos-reason2-8b",
-     "nvidia/ising-calibration-1.5-31b",
-     "nvidia/llama-3.1-nemotron-51b-instruct",
-     "nvidia/llama-3.1-nemotron-70b-instruct",
-     "nvidia/llama-3.1-nemotron-ultra-253b-v1",
-     "nvidia/llama3-chatqa-1.5-70b",
-     "nvidia/mistral-nemo-minitron-8b-8k-instruct",
-     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-     "nvidia/nemotron-3-super-120b-a12b",
-     "nvidia/nemotron-3-ultra-550b-a55b",
-     "nvidia/nemotron-3.5-bolt-e4b",
-     "nvidia/nemotron-3.5-lightning-30b-a3b",
-     "nvidia/nemotron-3.5-super-vl-120b-a12b",
-     "nvidia/nemotron-4-340b-instruct",
-     "nvidia/nemotron-nano-3-30b-a3b",
-     "nvidia/nemotron-parse",
-     "nvidia/nemotron-parse-2.0",
-     "nvidia/neva-22b",
-     "nvidia/riva-translate-4b-instruct",
-     "nvidia/riva-translate-4b-instruct-v2",
-     "nvidia/vila",
-     "openai/gpt-oss-20b",
-     "poolside/laguna-xs-2.1",
-     "stepfun-ai/step-5-preview",
-     "writer/palmyra-creative-122b",
-     "writer/palmyra-fin-70b-32k",
-     "writer/palmyra-med-70b",
-     "writer/palmyra-med-70b-32k",
-     "z-ai/glm-5.3-flash",
-     "zyphra/zamba2-7b-instruct"
-    ]
-   },
-   "cohere": {
-    "fecha": "2026-11-06",
-    "ids": [
-     "c4ai-aya-expanse-32b",
-     "c4ai-aya-vision-32b",
-     "command-a-03-2025",
-     "command-a-plus-05-2026",
-     "command-a-reasoning-08-2025",
-     "command-a-translate-08-2025",
-     "command-a-vision-07-2025",
-     "command-r-08-2024",
-     "command-r-plus-08-2024",
-     "command-r7b-12-2024",
-     "command-r7b-arabic-02-2025",
-     "north-mini-code-1.0",
-     "north-small-translate-1.0",
-     "parse-v5.0",
-     "tiny-aya-earth",
-     "tiny-aya-fire",
-     "tiny-aya-global",
-     "tiny-aya-water"
-    ]
-   }
-  },
-  "ultimo": {
-   "prov": "OpenRouter",
-   "modelo": "nvidia/nemotron-3.5-super-vl:free",
-   "t": "2026-11-07T02:19:43.260Z"
-  }
+  "fecha": "2026-11-07",
+  "agotado": {},
+  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
  },
  "dueno": 1237559052,
  "pendientesCant": 0
