@@ -1,0 +1,8 @@
+- Filtrar y excluir datos inviables antes de incluirlos en el listado (ej.: 1 m² a USD 80 000/m² o 240 000 m² a USD 0,07/m²).
+- Verificar que cada enlace dirija al aviso específico, no solo a la página principal de la plataforma.
+- Ordenar el listado principal por precio por m² ascendente y especificar el criterio de ordenamiento en la introducción.
+- Excluir terrenos rurales o no comparables con los urbanos, o señalarlos claramente como notas al margen.
+- Comprobar la fecha de publicación y descartar avisos antiguos para asegurar actualidad.
+- Indicar la fuente exacta de cada terreno (nombre de la web y sección) junto al enlace.
+- Corroborar superficies y precios con capturas de pantalla o detalles de la publicación para evitar errores tipográficos.
+- Priorizar la mejor oportunidad basada en el menor precio por m², justificando excepciones con datos concretos (servicios, ubicación, etc.).

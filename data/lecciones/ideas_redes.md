@@ -1,8 +1,8 @@
-- Usa audios en tendencia que encajen con el humor cordobés y combínalos con visuales locales.
-- Muestra lugares icónicos (Cerro, Centro, Av. del Libertador) y la cultura de Córdoba (comida, clima, vida diaria).
-- Crea un gancho visual o auditivo en los primeros 3 segundos para captar la atención de inmediato.
-- Escribe textos cortos y directos, terminando cada caption con una pregunta que invite a comentar.
-- Sé auténtico y muestra imperfecciones; la vulnerabilidad genera conexión.
-- Responde a los comentarios en los primeros minutos para activar el algoritmo y fomentar el engagement.
-- Evita audios genéricos sin contexto; prioriza estilos que maximicen el alcance (ej.: cumbia pop, reggaetón remix, beats de TikTok).
-- Publica en horarios pico: 12:00‑14:00 y 19:00‑21:00 para mayor visibilidad.
+- Usá audios en tendencia (cumbia pop, reggaetón remix, beats de TikTok) con visuales locales de Córdoba; evitá sonidos genéricos sin contexto.
+- Mostrá lugares icónicos (Cerro, Centro, Av. del Libertador) y la cultura cordobesa: comida, clima y vida diaria.
+- Gancho visual o auditivo en los primeros 3 segundos para detener el scroll.
+- Escribí captions cortos y directos, terminando siempre con una pregunta que invite a comentar.
+- Sé auténtico: mostrá imperfecciones y momentos vulnerables, generan más conexión que lo pulido.
+- Responde comentarios en los primeros minutos para activar el algoritmo y fomentar el engagement.
+- Publicá en horarios pico: 12:00‑14:00 y 19:00‑21:00 para mayor visibilidad.
+- Mezclá humor cordobés con tu obra o rutina local; evitá contenido genérico sin contexto de la ciudad.
