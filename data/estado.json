@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 344,
+   "corridas": 345,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-06",
-   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
+   "ultimaCorrida": "2026-11-07T03:50:46.731Z",
    "resumen": "💵 Dólar hoy (10:48 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1535 · venta $1555\n• Bolsa: compra $1573.8 · venta $1588\n• Contado con liquidación: compra $1658.4 · venta $1664.9\n• Mayorista: compra $1536.5",
    "informe": "data/informes/dolar/2026-11-06-1048.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1650.09,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-07T03:21:44.254Z",
+    "ultimoChequeo": "2026-11-07T03:50:46.731Z",
     "resumenFecha": "2026-11-06",
     "hist": {
      "2026-10-30": {
@@ -5250,31 +5250,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-07",
-   "ultimaCorrida": "2026-11-07T03:18:27.440Z",
+   "ultimaCorrida": "2026-11-07T03:49:39.776Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794021507440,
+     "t": 1794023379776,
      "redes_hoy": {
-      "publicaciones": 0,
+      "publicaciones": 2,
       "historias": 1,
-      "reels": 0,
-      "seguidos": 6,
+      "reels": 2,
+      "seguidos": 14,
       "gringo": 0,
-      "errores": 0,
-      "reinicios": 0,
+      "errores": 1,
+      "reinicios": 1,
       "ultimas": [
-       "00:02 Post elegido de #memesargentinos",
-       "00:03 ✔ Historia compartida (avioncito)",
-       "00:04 Instagram: ahora en @maestromayordeobrasjb",
-       "00:05 ✔ Seguido (1/6): @serraeuge (Euge Serra), seguidor de @noticias_hipicas (#sanfranciscocordoba)",
-       "00:08 ✔ Seguido (2/6): @mario_dante63 (MARIO), seguidor de @noticias_hipicas (#sanfranciscocordoba)",
-       "00:08 ✔ Seguido (3/6): @eduardo.perazzo.585 (Eduardo Perazzo), seguidor de @noticias_hipicas (#sanfranciscocordoba)",
-       "00:11 ✔ Seguido (4/6): @pab2706 (Pablo José), seguidor de @magic_vm3d (#villamaria)",
-       "00:13 ✔ Seguido (5/6): @lauchywoj (Lauchy Wojtowicz), seguidor de @magic_vm3d (#villamaria)",
-       "00:14 ✔ Seguido (6/6): @jeffersson_cal (Jeffersson Rivera), seguidor de @magic_vm3d (#villamaria)"
+       "00:34 Guardado debug/pantalla_003426.png y .xml",
+       "00:34 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:34 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "00:36 Post elegido de #construccion",
+       "00:36 ✔ Repost publicado en tu perfil",
+       "00:38 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
+       "00:38 PLAN DE HOY:",
+       "00:44 ✔ Seguido (1/6): @juan.marinsalda.22 (Juan M Marinsalda), seguidor de @radio_vos (#oncativo)",
+       "00:45 ✔ Seguido (2/6): @mairatoloza02 (Maira Toloza), seguidor de @radio_vos (#oncativo)",
+       "00:47 ✔ Seguido (3/6): @evangelina_dubini (Luciana Evangelina Dubini), seguidor de @radio_vos (#oncativo)"
       ]
      }
     },
@@ -5417,23 +5418,24 @@
       ]
      },
      "2026-11-07": {
-      "publicaciones": 0,
+      "publicaciones": 2,
       "historias": 1,
-      "reels": 0,
-      "seguidos": 6,
+      "reels": 2,
+      "seguidos": 14,
       "gringo": 0,
-      "errores": 0,
-      "reinicios": 0,
+      "errores": 1,
+      "reinicios": 1,
       "ultimas": [
-       "00:02 Post elegido de #memesargentinos",
-       "00:03 ✔ Historia compartida (avioncito)",
-       "00:04 Instagram: ahora en @maestromayordeobrasjb",
-       "00:05 ✔ Seguido (1/6): @serraeuge (Euge Serra), seguidor de @noticias_hipicas (#sanfranciscocordoba)",
-       "00:08 ✔ Seguido (2/6): @mario_dante63 (MARIO), seguidor de @noticias_hipicas (#sanfranciscocordoba)",
-       "00:08 ✔ Seguido (3/6): @eduardo.perazzo.585 (Eduardo Perazzo), seguidor de @noticias_hipicas (#sanfranciscocordoba)",
-       "00:11 ✔ Seguido (4/6): @pab2706 (Pablo José), seguidor de @magic_vm3d (#villamaria)",
-       "00:13 ✔ Seguido (5/6): @lauchywoj (Lauchy Wojtowicz), seguidor de @magic_vm3d (#villamaria)",
-       "00:14 ✔ Seguido (6/6): @jeffersson_cal (Jeffersson Rivera), seguidor de @magic_vm3d (#villamaria)"
+       "00:34 Guardado debug/pantalla_003426.png y .xml",
+       "00:34 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:34 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "00:36 Post elegido de #construccion",
+       "00:36 ✔ Repost publicado en tu perfil",
+       "00:38 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
+       "00:38 PLAN DE HOY:",
+       "00:44 ✔ Seguido (1/6): @juan.marinsalda.22 (Juan M Marinsalda), seguidor de @radio_vos (#oncativo)",
+       "00:45 ✔ Seguido (2/6): @mairatoloza02 (Maira Toloza), seguidor de @radio_vos (#oncativo)",
+       "00:47 ✔ Seguido (3/6): @evangelina_dubini (Luciana Evangelina Dubini), seguidor de @radio_vos (#oncativo)"
       ]
      }
     }
@@ -8907,7 +8909,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 344,
+   "corridas": 345,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -8916,7 +8918,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
+   "ultimaCorrida": "2026-11-07T03:50:46.731Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -8926,7 +8928,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-07T03:21:44.254Z",
+    "ultimoChequeo": "2026-11-07T03:50:46.731Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9043,16 +9045,16 @@
      },
      "2026-11-07": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       1,
-       1
+       2,
+       2
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       1,
-       1
+       2,
+       2
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       1,
-       1
+       2,
+       2
       ]
      }
     }
@@ -18447,7 +18449,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 326,
+   "corridas": 327,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -18456,13 +18458,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-07T03:21:44.254Z",
+   "ultimaCorrida": "2026-11-07T03:50:46.731Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-06",
-    "ultimoChequeo": "2026-11-07T03:21:44.254Z"
+    "ultimoChequeo": "2026-11-07T03:50:46.731Z"
    }
   },
   "feriados": {
@@ -18636,7 +18638,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-07",
-   "ultimaCorrida": "2026-11-07T03:04:00.000Z",
+   "ultimaCorrida": "2026-11-07T03:38:00.000Z",
    "resumen": "Apagado (espera medidas y precio) · ensayo OK en «TRATO HECHO 2.0 Villa Maria» 14:18 (no publicó) · grupos: TRATO HECHO VILLA MARIA, TRATO HECHO VILLA NUEVA, Trato Hecho Villa Maria 1, TRATO HECHO VILLA MARIA 3",
    "informe": null,
    "pausado": false,
@@ -18644,6 +18646,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-07T03:50:46.731Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-07T03:50:46.731Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-07T03:21:44.254Z",
    "quien": "Clima para la obra",
@@ -20133,16 +20145,6 @@
    "t": "2026-11-05T15:58:20.767Z",
    "quien": "Aumentos de servicios",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-05T15:58:20.767Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-05T15:58:20.767Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
@@ -20664,7 +20666,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-07T03:21:44.254Z",
+ "actualizado": "2026-11-07T03:50:46.731Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
