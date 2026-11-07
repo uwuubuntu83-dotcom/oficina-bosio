@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 377,
+   "corridas": 378,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-07",
-   "ultimaCorrida": "2026-11-07T20:42:36.314Z",
+   "ultimaCorrida": "2026-11-07T21:12:45.981Z",
    "resumen": "💵 Dólar hoy (10:42 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1535 · venta $1555\n• Bolsa: compra $1560.2 · venta $1587.9\n• Contado con liquidación: compra $1658.4 · venta $1664.9\n• Mayorista: compra $1536",
    "informe": "data/informes/dolar/2026-11-07-1042.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1653.64,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-07T20:42:36.314Z",
+    "ultimoChequeo": "2026-11-07T21:12:45.981Z",
     "resumenFecha": "2026-11-07",
     "hist": {
      "2026-10-30": {
@@ -117,7 +117,7 @@
       "bolsa": 1587.9,
       "contadoconliqui": 1664.9,
       "mayorista": 1545.5,
-      "cripto": 1650.4,
+      "cripto": 1653.41,
       "tarjeta": 2041
      }
     }
@@ -5603,7 +5603,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-07",
    "ultimaCorrida": "2026-11-07T16:50:18.549Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 232 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 262 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -9347,7 +9347,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 377,
+   "corridas": 378,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9356,7 +9356,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-07T20:42:36.314Z",
+   "ultimaCorrida": "2026-11-07T21:12:45.981Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9366,7 +9366,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-07T20:42:36.314Z",
+    "ultimoChequeo": "2026-11-07T21:12:45.981Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9483,16 +9483,16 @@
      },
      "2026-11-07": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       34,
-       34
+       35,
+       35
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       34,
-       34
+       35,
+       35
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       34,
-       34
+       35,
+       35
       ]
      }
     }
@@ -19138,7 +19138,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 359,
+   "corridas": 360,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -19147,13 +19147,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-07T20:42:36.314Z",
+   "ultimaCorrida": "2026-11-07T21:12:45.981Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-07",
-    "ultimoChequeo": "2026-11-07T20:42:36.314Z"
+    "ultimoChequeo": "2026-11-07T21:12:45.981Z"
    }
   },
   "feriados": {
@@ -19317,7 +19317,7 @@
    "memoria": {}
   },
   "lote_fb": {
-   "estado": "listo",
+   "estado": "sin señal",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -19331,10 +19331,27 @@
    "resumen": "Apagado (espera medidas y precio) · ensayo OK en «TRATO HECHO 2.0 Villa Maria» 14:18 (no publicó) · grupos: TRATO HECHO VILLA MARIA, TRATO HECHO VILLA NUEVA, Trato Hecho Villa Maria 1, TRATO HECHO VILLA MARIA 3",
    "informe": null,
    "pausado": false,
-   "memoria": {}
+   "memoria": {
+    "avisoSinSenal": "2026-11-07T16:49:00.000Z"
+   }
   }
  },
  "log": [
+  {
+   "t": "2026-11-07T21:12:45.981Z",
+   "quien": "Mantenimiento",
+   "que": "Venta del lote (Facebook) no da señales hace 264 min"
+  },
+  {
+   "t": "2026-11-07T21:12:45.981Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-07T21:12:45.981Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-07T20:42:36.314Z",
    "quien": "Lo último en tecnología",
@@ -20819,21 +20836,6 @@
    "t": "2026-11-06T05:21:56.848Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-06T05:21:56.848Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-06T04:51:53.356Z",
-   "quien": "Clima para la obra",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-06T04:51:53.356Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
@@ -21355,7 +21357,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-07T20:42:36.314Z",
+ "actualizado": "2026-11-07T21:12:45.981Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
