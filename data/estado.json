@@ -5589,7 +5589,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-07",
    "ultimaCorrida": "2026-11-07T16:50:18.549Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 1202 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 1226 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -18919,7 +18919,7 @@
   },
   "lista_gringo": {
    "estado": "listo",
-   "corridas": 9,
+   "corridas": 10,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -18927,17 +18927,19 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-07",
-   "ultimaCorrida": "2026-11-07T13:12:31.002Z",
+   "ultimaFecha": "2026-11-08",
+   "ultimaCorrida": "2026-11-08T13:15:55.010Z",
    "resumen": "Le pedí al celu: «lista». Te contesta en un minuto.",
    "informe": "data/informes/lista_gringo/2026-10-31-1538.md",
    "pausado": false,
    "memoria": {
     "horas": {
      "fecha": "2026-11-08",
-     "hechas": []
+     "hechas": [
+      "10:00"
+     ]
     },
-    "ultimoChequeo": "2026-11-07T13:12:31.002Z"
+    "ultimoChequeo": "2026-11-08T13:15:55.010Z"
    }
   },
   "community": {
@@ -19035,7 +19037,7 @@
   },
   "consejero": {
    "estado": "listo",
-   "corridas": 1,
+   "corridas": 2,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -19043,17 +19045,19 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-01",
-   "ultimaCorrida": "2026-11-01T13:13:32.917Z",
+   "ultimaFecha": "2026-11-08",
+   "ultimaCorrida": "2026-11-08T13:15:55.010Z",
    "resumen": "🔒 Privado: te lo mandó por Telegram.",
    "informe": null,
    "pausado": false,
    "memoria": {
     "horas": {
      "fecha": "2026-11-08",
-     "hechas": []
+     "hechas": [
+      "10:00"
+     ]
     },
-    "ultimoChequeo": "2026-11-01T13:13:32.917Z"
+    "ultimoChequeo": "2026-11-08T13:15:55.010Z"
    }
   },
   "monotributo": {
@@ -19187,6 +19191,21 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-08T13:15:55.010Z",
+   "quien": "Contador y consejero financiero",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-08T13:15:55.010Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-08T13:15:55.010Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-08T12:52:42.842Z",
    "quien": "Lo último en tecnología",
@@ -20671,26 +20690,10 @@
    "t": "2026-11-06T15:23:59.446Z",
    "quien": "Control de calidad",
    "que": "Terrenos baratos: 8/10 · El terreno 8 (USD 17.000 - 240.000 m²) es rural y no comparable con los demás, pero se incluyó en la lista. Debió excluirse o mencionarse como nota al margen."
-  },
-  {
-   "t": "2026-11-06T15:23:59.446Z",
-   "quien": "Buscador",
-   "que": "«Buscar los terrenos más baratos publicados en Villa María y »: leí 4 páginas"
-  },
-  {
-   "t": "2026-11-06T15:23:59.446Z",
-   "quien": "Buscador",
-   "que": "ddg: 30 resultados (HTTP 200)"
-  },
-  {
-   "t": "2026-11-06T15:23:59.446Z",
-   "quien": "Terrenos baratos",
-   "que": "empezó su tarea"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "291": "mundo_tecnologia",
   "292": "mundo_tecnologia",
   "293": "mundo_salud",
   "294": "mundo_salud",
@@ -21189,7 +21192,8 @@
   "1009": "comidas",
   "1010": "clima",
   "1011": "noticias_tec",
-  "1012": "noticias_tec"
+  "1012": "noticias_tec",
+  "1013": "consejero"
  },
  "tgOffset": 196508516,
  "hechos": {
@@ -21207,7 +21211,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-08T12:52:42.842Z",
+ "actualizado": "2026-11-08T13:15:55.010Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
