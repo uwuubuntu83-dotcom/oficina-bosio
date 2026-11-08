@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 389,
+   "corridas": 390,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-07",
-   "ultimaCorrida": "2026-11-08T02:56:42.154Z",
+   "ultimaCorrida": "2026-11-08T03:26:32.431Z",
    "resumen": "💵 Dólar hoy (10:42 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1535 · venta $1555\n• Bolsa: compra $1560.2 · venta $1587.9\n• Contado con liquidación: compra $1658.4 · venta $1664.9\n• Mayorista: compra $1536",
    "informe": "data/informes/dolar/2026-11-07-1042.md",
    "pausado": false,
@@ -23,20 +23,20 @@
      "bolsa": 1587.9,
      "contadoconliqui": 1664.9,
      "mayorista": 1545.5,
-     "cripto": 1653.64,
+     "cripto": 1653.41,
      "tarjeta": 2041
     },
-    "dolarFecha": "2026-11-07",
+    "dolarFecha": "2026-11-08",
     "dolar": {
      "oficial": 1570,
      "blue": 1555,
      "bolsa": 1587.9,
      "contadoconliqui": 1664.9,
      "mayorista": 1545.5,
-     "cripto": 1653.64,
+     "cripto": 1653.41,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-08T02:56:42.154Z",
+    "ultimoChequeo": "2026-11-08T03:26:32.431Z",
     "resumenFecha": "2026-11-07",
     "hist": {
      "2026-10-30": {
@@ -112,6 +112,15 @@
       "tarjeta": 2041
      },
      "2026-11-07": {
+      "oficial": 1570,
+      "blue": 1555,
+      "bolsa": 1587.9,
+      "contadoconliqui": 1664.9,
+      "mayorista": 1545.5,
+      "cripto": 1653.41,
+      "tarjeta": 2041
+     },
+     "2026-11-08": {
       "oficial": 1570,
       "blue": 1555,
       "bolsa": 1587.9,
@@ -5564,7 +5573,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-07",
    "ultimaCorrida": "2026-11-07T16:50:18.549Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 606 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 636 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -9291,7 +9300,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 389,
+   "corridas": 390,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9300,7 +9309,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-08T02:56:42.154Z",
+   "ultimaCorrida": "2026-11-08T03:26:32.431Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9310,7 +9319,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-08T02:56:42.154Z",
+    "ultimoChequeo": "2026-11-08T03:26:32.431Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9437,6 +9446,20 @@
       "https://bosio-central.uwuubuntu83.workers.dev/": [
        46,
        46
+      ]
+     },
+     "2026-11-08": {
+      "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
+       1,
+       1
+      ],
+      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
+       1,
+       1
+      ],
+      "https://bosio-central.uwuubuntu83.workers.dev/": [
+       1,
+       1
       ]
      }
     }
@@ -16306,13 +16329,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-07",
-     "hechas": [
-      "08:30",
-      "13:00",
-      "17:30",
-      "21:30"
-     ]
+     "fecha": "2026-11-08",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-08T00:56:48.137Z"
    }
@@ -16334,10 +16352,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-07",
-     "hechas": [
-      "20:30"
-     ]
+     "fecha": "2026-11-08",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-07T23:41:46.842Z"
    }
@@ -16444,10 +16460,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-07",
-     "hechas": [
-      "09:00"
-     ]
+     "fecha": "2026-11-08",
+     "hechas": []
     },
     "instruido": true,
     "ultimoChequeo": "2026-11-07T12:12:34.320Z"
@@ -16470,10 +16484,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-07",
-     "hechas": [
-      "21:45"
-     ]
+     "fecha": "2026-11-08",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-08T00:56:48.137Z"
    }
@@ -18979,10 +18991,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-07",
-     "hechas": [
-      "22:00"
-     ]
+     "fecha": "2026-11-08",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-08T01:26:39.362Z"
    }
@@ -19139,10 +19149,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-01",
-     "hechas": [
-      "19:00"
-     ]
+     "fecha": "2026-11-08",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-01T22:24:24.520Z"
    }
@@ -19164,10 +19172,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-07",
-     "hechas": [
-      "10:00"
-     ]
+     "fecha": "2026-11-08",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-07T13:12:31.002Z"
    }
@@ -19214,17 +19220,15 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-01",
-     "hechas": [
-      "20:45"
-     ]
+     "fecha": "2026-11-08",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-01T23:53:53.381Z"
    }
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 371,
+   "corridas": 372,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -19233,13 +19237,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-08T02:56:42.154Z",
+   "ultimaCorrida": "2026-11-08T03:26:32.431Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-07",
-    "ultimoChequeo": "2026-11-08T02:56:42.154Z"
+    "ultimoChequeo": "2026-11-08T03:26:32.431Z"
    }
   },
   "feriados": {
@@ -19284,10 +19288,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-01",
-     "hechas": [
-      "10:00"
-     ]
+     "fecha": "2026-11-08",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-01T13:13:32.917Z"
    }
@@ -19423,6 +19425,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-08T03:26:32.431Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-08T03:26:32.431Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-08T02:56:42.154Z",
    "quien": "Mesa de entrada",
@@ -20912,16 +20924,6 @@
    "t": "2026-11-06T11:19:55.485Z",
    "quien": "Noticias de Villa María",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-06T11:19:55.485Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-06T11:19:55.485Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, pollinations, cfai"
   }
  ],
  "pendientes": [],
@@ -21437,15 +21439,13 @@
   "buenDia": "2026-11-07"
  },
  "consumo": {
-  "fecha": "2026-11-07",
-  "consultas": 1,
+  "fecha": "2026-11-08",
+  "consultas": 0,
   "busquedas": 0,
-  "por": {
-   "github": 1
-  }
+  "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-08T02:56:42.154Z",
+ "actualizado": "2026-11-08T03:26:32.431Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -21470,15 +21470,9 @@
   ]
  },
  "ia": {
-  "fecha": "2026-11-07",
+  "fecha": "2026-11-08",
   "agotado": {},
-  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
-  "vivos": {},
-  "ultimo": {
-   "prov": "GitHub Models",
-   "modelo": "openai/gpt-4.1-mini",
-   "t": "2026-11-08T02:26:28.950Z"
-  }
+  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
  },
  "dueno": 1237559052,
  "pendientesCant": 0
