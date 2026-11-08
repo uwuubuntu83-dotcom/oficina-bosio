@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 397,
+   "corridas": 398,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-07",
-   "ultimaCorrida": "2026-11-08T06:54:37.949Z",
+   "ultimaCorrida": "2026-11-08T07:24:27.680Z",
    "resumen": "💵 Dólar hoy (10:42 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1535 · venta $1555\n• Bolsa: compra $1560.2 · venta $1587.9\n• Contado con liquidación: compra $1658.4 · venta $1664.9\n• Mayorista: compra $1536",
    "informe": "data/informes/dolar/2026-11-07-1042.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1653.41,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-08T06:54:37.949Z",
+    "ultimoChequeo": "2026-11-08T07:24:27.680Z",
     "resumenFecha": "2026-11-07",
     "hist": {
      "2026-10-30": {
@@ -5670,7 +5670,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-07",
    "ultimaCorrida": "2026-11-07T16:50:18.549Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 844 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 874 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -9403,7 +9403,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 397,
+   "corridas": 398,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9412,7 +9412,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-08T06:54:37.949Z",
+   "ultimaCorrida": "2026-11-08T07:24:27.680Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9422,7 +9422,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-08T06:54:37.949Z",
+    "ultimoChequeo": "2026-11-08T07:24:27.680Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9553,16 +9553,16 @@
      },
      "2026-11-08": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       8,
-       8
+       9,
+       9
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       8,
-       8
+       9,
+       9
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       8,
-       8
+       9,
+       9
       ]
      }
     }
@@ -19619,7 +19619,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 379,
+   "corridas": 380,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -19628,13 +19628,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-08T06:54:37.949Z",
+   "ultimaCorrida": "2026-11-08T07:24:27.680Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-07",
-    "ultimoChequeo": "2026-11-08T06:54:37.949Z"
+    "ultimoChequeo": "2026-11-08T07:24:27.680Z"
    }
   },
   "feriados": {
@@ -19816,6 +19816,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-08T07:24:27.680Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-08T07:24:27.680Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-08T06:54:37.949Z",
    "quien": "Mesa de entrada",
@@ -21305,16 +21315,6 @@
    "t": "2026-11-06T13:18:58.275Z",
    "quien": "Aumentos de servicios",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-06T13:18:58.275Z",
-   "quien": "Terrenos baratos",
-   "que": "lo posterga: ninguna IA respondió (Google Gemini/gemini-3.7-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info | Google Gemini/gemini-3.6-flash: 429 You exceeded your current quota, please check your plan and billing details. For more info)"
-  },
-  {
-   "t": "2026-11-06T13:18:58.275Z",
-   "quien": "Terrenos baratos",
-   "que": "empezó su tarea"
   }
  ],
  "pendientes": [],
@@ -21836,7 +21836,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-08T06:54:37.949Z",
+ "actualizado": "2026-11-08T07:24:27.680Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
