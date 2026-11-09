@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 436,
+   "corridas": 437,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-08",
-   "ultimaCorrida": "2026-11-09T02:57:49.239Z",
+   "ultimaCorrida": "2026-11-09T03:27:34.011Z",
    "resumen": "💵 Dólar hoy (10:45 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1535 · venta $1555\n• Bolsa: compra $1560.2 · venta $1587.9\n• Contado con liquidación: compra $1658.4 · venta $1664.9\n• Mayorista: compra $1536",
    "informe": "data/informes/dolar/2026-11-08-1045.md",
    "pausado": false,
@@ -23,20 +23,20 @@
      "bolsa": 1587.9,
      "contadoconliqui": 1664.9,
      "mayorista": 1545.5,
-     "cripto": 1656.06,
+     "cripto": 1656.63,
      "tarjeta": 2041
     },
-    "dolarFecha": "2026-11-08",
+    "dolarFecha": "2026-11-09",
     "dolar": {
      "oficial": 1570,
      "blue": 1555,
      "bolsa": 1587.9,
      "contadoconliqui": 1664.9,
      "mayorista": 1545.5,
-     "cripto": 1656.06,
+     "cripto": 1656.63,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-09T02:57:49.239Z",
+    "ultimoChequeo": "2026-11-09T03:27:34.011Z",
     "resumenFecha": "2026-11-08",
     "hist": {
      "2026-10-30": {
@@ -128,6 +128,15 @@
       "mayorista": 1545.5,
       "cripto": 1656.63,
       "tarjeta": 2041
+     },
+     "2026-11-09": {
+      "oficial": 1570,
+      "blue": 1555,
+      "bolsa": 1587.9,
+      "contadoconliqui": 1664.9,
+      "mayorista": 1545.5,
+      "cripto": 1656.63,
+      "tarjeta": 2041
      }
     }
    }
@@ -166,7 +175,7 @@
   },
   "licitaciones": {
    "estado": "listo",
-   "corridas": 223,
+   "corridas": 224,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -175,7 +184,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-09T02:27:38.299Z",
+   "ultimaCorrida": "2026-11-09T03:27:34.011Z",
    "resumen": "🧱 Clientes y licitaciones\n\n• Almafuerte avanza en infraestructura clave. Inicio inminente del gas, licitación de cloacas y acuerdos estratégicos de servicios (Tribuna)\n  https://news.google.com/rss/articles/CBMiuwFBVV95",
    "informe": "data/informes/licitaciones/2026-11-08-2028.md",
    "pausado": false,
@@ -318,7 +327,7 @@
      "el banco nación ya prestó los $32.000 millones de anses para hipotecarios: cuántos crédito",
      "pp acusa al gobierno de \"negar información de obra del museo arqueológico que tiene desde "
     ],
-    "ultimoChequeo": "2026-11-09T02:27:38.299Z",
+    "ultimoChequeo": "2026-11-09T03:27:34.011Z",
     "semana": [
      {
       "titulo": "Córdoba activa el lunes el Plan Vives: 820 viviendas de alquiler a precio topado",
@@ -954,7 +963,7 @@
   },
   "noticias_vm": {
    "estado": "listo",
-   "corridas": 223,
+   "corridas": 224,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -963,12 +972,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-09T02:27:38.299Z",
+   "ultimaCorrida": "2026-11-09T03:27:34.011Z",
    "resumen": "📰 Noticias de Villa María\n\n• Juan Manuel La Serna y Camilo Ugo Carabelli se consagraron campeones en los Challenger de Villa María y Costa do Sauípe (Infobae)\n  https://www.infobae.com/deportes/2026/11/08/juan-manuel-la",
    "informe": "data/informes/noticias_vm/2026-11-08-2028.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "“manu” la serna se consagró en villa maría",
      "argentina — detuvieron en villa rosa a un hombre que amenazó de muerte al papa león xiv an",
      "entró a robar, lo identificaron por cámaras y lo reconocieron en la calle",
      "campanadas en las iglesias, pirotecnia en la villa 31, llaves en plaza de mayo y fervor po",
@@ -1567,10 +1577,9 @@
      "rifa solidaria para la operación de escoliosis de una joven villamariense",
      "barrio centro norte: una vecina busca a alguien que chocó su auto y huyó",
      "barrio botta: cayó un hombre con pedido de detención",
-     "clima en córdoba: siguen las tormentas intensas, pero llega el alivio desde mañana",
-     "las playas: detienen a un hombre que habría dañado dos patrulleros"
+     "clima en córdoba: siguen las tormentas intensas, pero llega el alivio desde mañana"
     ],
-    "ultimoChequeo": "2026-11-09T02:27:38.299Z",
+    "ultimoChequeo": "2026-11-09T03:27:34.011Z",
     "bandeja": [
      {
       "titulo": "Entró a robar, lo identificaron por cámaras y lo reconocieron en la calle",
@@ -1596,15 +1605,16 @@
       "titulo": "Argentina — Detuvieron en Villa Rosa a un hombre que amenazó de muerte al papa León XIV antes de su llegada a la Argentina",
       "link": "https://prensamercosur.org/2026/11/08/argentina-detuvieron-en-villa-rosa-a-un-hombre-que-amenazo-de-muerte-al-papa-leon-xiv-antes-de-su-llegada-a-la-argentina/",
       "fuente": "prensamercosur"
+     },
+     {
+      "titulo": "“Manu” La Serna se consagró en Villa María",
+      "link": "https://www.elesquiu.com/deportes/2026/11/9/manu-la-serna-se-consagro-en-villa-maria-602705.html",
+      "fuente": "El Esquiu"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-08",
-     "hechas": [
-      "07:30",
-      "13:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
     "semana": [
      {
@@ -3112,7 +3122,7 @@
   },
   "noticias_ar": {
    "estado": "listo",
-   "corridas": 223,
+   "corridas": 224,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -3121,12 +3131,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-09T02:27:38.299Z",
+   "ultimaCorrida": "2026-11-09T03:27:34.011Z",
    "resumen": "📰 Argentina: economía y obra pública\n\n• León XIV pidió que la economía esté al servicio de las personas y llamó a cuidar la democracia en la Argentina (Rosario Nuestro)\n  https://news.google.com/rss/articles/CBMi2AFBVV9",
    "informe": "data/informes/noticias_ar/2026-11-08-2028.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "economía, trabajo y educación: lo que dejó el primer discurso del papa león xiv en argenti",
+     "“la economía al servicio de las personas, no al revés”, advirtió el papa sobre la gente qu",
+     "el primer discurso del papa león xiv en la argentina: pidió diálogo y una economía \"al ser",
+     "león xiv: \"la economía debe estar al servicio de la persona y no la persona al servicio de",
+     "león xiv: “la economía debe estar al servicio de las personas y no las personas al servici",
+     "el primer discurso del papa león xiv en argentina: pidió diálogo, límites en el poder y un",
+     "los empresarios del grupo de los seis propondrán una mesa de diálogo nacional tras la visi",
+     "leon xiv en argentina: rechazó el aborto, pidió diálogo y una economía “al servicio de las",
+     "las 10 frases más impactantes del discurso inaugural del papa león xiv en la argentina",
+     "en argentina, león xiv afirma que la economía debe servir a la persona y no la persona a l",
      "el mensaje del papa león xiv sobre la economía que celebraron los gobernadores y la oposic",
      "león xiv llega a argentina y marca diferencias con milei: \"la economía debe estar al servi",
      "los gobernadores y la oposición destacaron el mensaje del papa león xiv sobre la economía ",
@@ -3716,70 +3736,10 @@
      "el riesgo país rompió la barrera de los 900 puntos y las acciones argentinas caen hasta 14",
      "claudio larraza destacó el impacto de argentina lng y pidió que plaza huincul sea protagon",
      "sin intervenir el dólar desde 2021, el ministro de economía de uruguay explicó la receta d",
-     "“tres preocupaciones”: los riesgos que identifica el bcra para la economía y por qué antic",
-     "advierten que la argentina podría tener menos respaldo financiero de estados unidos ante u",
-     "“pasaporte digital de la vaca”: una revolucionaria tecnología ayuda a estimar la grasa de ",
-     "elecciones en eeuu: qué puede cambiar para el campo y la agroindustria argentina tras la d",
-     "reactivar sin hacer un “plan platita”: qué medidas anunció el gobierno para impulsar la ec",
-     "gobernación de córdoba destinaría cerca de $40.000 millones para el acueducto de tierralta",
-     "pilar losantos advierte tras el registro de la casa de ábalos: \"esto tiene que ver con los",
-     "la principal cámara empresaria de ee.uu. alertó que la derrota de trump puede complicar un",
-     "el bcra difunde el rem de octubre con las principales proyecciones económicas de los anali",
-     "la principal cámara de eeuu anticipó que la derrota de trump limitará una posible asistenc",
-     "la cámara de la industria naval pide revisar el proyecto de ley de cabotaje"
+     "“tres preocupaciones”: los riesgos que identifica el bcra para la economía y por qué antic"
     ],
-    "ultimoChequeo": "2026-11-09T02:27:38.299Z",
+    "ultimoChequeo": "2026-11-09T03:27:34.011Z",
     "bandeja": [
-     {
-      "titulo": "León XIV en Argentina: el Papa pide una economía al servicio de la persona y llama al diálogo político.",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPVEhVSUs4bnhWWVZyQlRCNkk3b1dhYUdmUjJYMW5hRXdBaDRlY2YtX1ZKSm5ZSDQxNmFhUHlQSHJOR1g5NFZJNUdxbmlTVmE3bVZRM3VfM2lLSURpRkF1V0lRbTFsTnFRMWt0VTFUV080a1B0a1ZJaXBIVGhYdEh2NU9EYS1QVUlQTW4tZlpmcFRfV3I0TERQR21wci1aUHJYYkdlWVdtOFNXNDRCLXh2UDRWbW5RU3N3NS1PZWxkcWs5eTh1NTJ3OEUzaTFsMXNNSTAwNUVPeExRcXdlUWVGZEhtaw?oc=5",
-      "fuente": "RPP Noticias"
-     },
-     {
-      "titulo": "El Papa León XIV habló sobre la economía, la educación y la democracia durante su visita a la Argentina",
-      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOeU45NngtSFJhbVJ5a1pIcDdubmttVjllOHJ6RHhldWRxM3c3MUJkSldBYWVkcUZZODBPNGlrN1c0UG5nQXd2anI4ZlFTT25yWjhKWS1aa0Myb1NfMGNHLWdsbmpVMDN4X1ZPWWlGcEV6Y1pRSlVCZVFsMlpTOFBaX3EzWEs0VVNyR0M5RThNd09YOHEzMENQdllWel8zeWVGS1ZKTmxvQ2xodXpZU0hDVGJMREVMRG9WVjlGNkQ3VGtNY0hNY21VaEtXOU1oVl9lMFpKMUFGcXFPV3JQdXNqYQ?oc=5",
-      "fuente": "Medios Provincia"
-     },
-     {
-      "titulo": "Trabajo, jóvenes, familia y economía: las 5 frases más contundentes de León XIV sobre la Argentina",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTUlTR0pDYzhqYjJyRXN1elNFNjAxU01YM1RZamg1anBucWZjSWs3RTZ6VDMyU09UR285WTdJZldfbkVjWlZRVlNEb3pjZ3VnYzZ3Y2Q1b0Q3RmdvbWJ4WUpMaXN3aXhNS1VGc0VFQlNOa1V2dTVVczlWdEtKc1hTa3V5enNTQ3dhX3pmWkR4cFd1ZVF3d2M5em1KWHY2a0kxLURiT1kxbjZPUFZOSFNQQ2ZROWZnOG1hWGc?oc=5",
-      "fuente": "AHORA Entre Ríos"
-     },
-     {
-      "titulo": "León XIV recordó a Francisco en su primer discurso en Argentina y dejó un mensaje sobre el poder y la economía",
-      "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNSEE1N3NUWDhlOXQxSTdPQVpGZ2NRby1jN3ZOOXN4S0xkR284V2JwcHBReDF2YUM1V1lOdkN4QzJHSG81SWZVb0drRUNET245dUYydWt2V0pvbnprLVhPYjJWVjFOWDd4WXItSTFqQjhMMTJsaS1zRW8zSW5FMkZ5Q05KTnRZUkNrYXQ5aVhtTnJsRm5iUzZNNGhUQ1ZoSnhjYi1mdTFtNHc1WFBRb1Z0Qm03N3BBR3lQemRfZHpYY2hkUG5GSGtHaVlMdUpMb0tQeUlpb3haUEdCbm80YTFXQkZ3N3k1aUFZNkI4U0RkSTlsLWVNUC1PM3ZRY3LSAYICQVVfeXFMTV94N2FsRjZLR0JhZ3VaUFJ1VDFuVWhpUGZPQzgxMVNJZVd0UThTN1JJX3VZNlhLQ3BjcHdmQy1saVNBVHRaYWRwUnAtV24wSG5vRzQtZnRmMFUwa2tPa09RVEVlTXhOOVYyUzFOaXlzUzNXX2Itd3JDYlNSS2ZIbVBITVdlT0xUWkZRTXNpU1A5TEhvbXZlc284OF9Yak9sMTB2alJCeE5xV0VtN0pPMFVfUDd4OWVzRXFoeHR4T2luRFR0d2locFJjYVF2UHZXYzRiTkI1cXNVbWpQS1RxZVlEVmR3SW04YTI1WkE0NFIwTzV5QVhsX1ZRSEJ3UEJaaHN3?oc=5",
-      "fuente": "NoticiasNQN"
-     },
-     {
-      "titulo": "¡MANUEL ALONSO RECORTA RECURSOS! CÓRDOBA SIN OBRA Y CON TRABAJOS A MEDIAS",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQ1Q5OU9KZWVuTnhFaGxaRUo4bnNad2RzX3pHa1ZCMWRRcG5TVnVIaTBrQnpYdFpxcFEzdEVfbnoyTWM3dUE3eEMzdzVyS2pNUDdqZ1FUVGtLU3lSUzlDcnpjZVotbk5iQUU2TXBZUkkzRV9VSlRkSmFLdUpKdTlxY1dlUXQ1RHZnQWNJNlV2U2c4blpndGJqcUwxT3lzZjRwOUxyag?oc=5",
-      "fuente": "El Buen Tono"
-     },
-     {
-      "titulo": "La cronología del primer día del papa León XIV en su histórica visita a la Argentina: del encuentro con Milei a un discurso marcado por",
-      "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNcXAwMUxpZ3dOdzhMaFJ4b2twN1BhV2lPS0lmTFFidkk2b2Zmejh3RWhkXzdVUW04V2J1ZUFud2otekFfMHJiXzNVTm4zcFFOUm00MTAxTUMxRktTaXdFLVZMR0lwdlBCdFZRYkpDZW05TGVXWk5yVEFnaGczWlJ5Q3NpRWY1aEFjTkxOMWNyRGp5YUVCY1ZaVlBtTl9OMGN5M0lUUGNxd1gtV0RFRktGcVpfdjdwTkcxTGo3UGtoR1pEYU5RenVqS0w0N2tXLWZlZDdVa0N0Z2NzS3FWQ3hsdktRX2hiQzRSRmMzTWZ0Q04zNFFINGUzMW9OR1gxSDhYUFFXVGtPN0pqbFI2U3NkZg?oc=5",
-      "fuente": "El Comercial"
-     },
-     {
-      "titulo": "\"La economía debe estar al servicio de las personas y no las personas al servicio de la economía\": las críticas del papa León XIV al gobierno de Milei durante su visita a Argentina",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPa2VnZ0pUcUhWaXU4TW13OVVDNmFjWWo5aGN1a3FvNXhCdHZJQXZINUtDZ3g4VEVYbVlqTlE3dWZPbWE5M0gwRHU0X1dHYUtLXzFZMWphZTRtUkd4T0h6M0dqUUd5STdBeU5aRnVjRzlDdUllWDJWU1k5eXlwUG1ESmpHczJSN2p2N010Q3h0ZERJMXB6UmNodmt4RDg3QQ?oc=5",
-      "fuente": "Yahoo"
-     },
-     {
-      "titulo": "León XIV pidió cuidar a los adultos mayores y reclamó una economía al servicio de las personas ante Milei",
-      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPMTVCV0JCTWpnQ3A1TFoxYjdyQUllU2JRUk1xOUNxa2dCQnBGNkFETWFHdzNGN29lc2dFWjNjNW9jeFN6Vm1QMkowLWRwaXU5eEE2aFZpU1d2aDFPN2ZTc1VpeXFvVFJiT3Zia0R2UEJGZl82eUlYLVdNWk5OaTY1bG5EQklJaDRFcWV5MTBsTWhJbk9rZVJDajAwdzBvYWdVYmxaQk1XUWxJNjFZbWw4YWhyVEs5djJoeElqVENBYWJjV1B0eFVSdkZUVWoxUUFObFJkZ09oZ1BEd091X0F1cEQ5enc?oc=5",
-      "fuente": "Perfil"
-     },
-     {
-      "titulo": "El Papa, en Argentina: \"La economía debe estar al servicio de la persona\"",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOaVd3MjRnUHdCRXgwelFFR05iM2dyT1o1WVpXX2FSMWdvcy1LTU14WW0yeURRcXQ5U1lKUjE0V2lKWVNEYnc5SDNmcHhvLVBwWF9udktxVDlIMm51ZHNtR2pfRm1ULURROXNDM2NtamxramlzZGJ4Uk9UUk5CdFptTjM5ekxoTnRDR1c2RzVCel8tY2NOZGQzSDN3ZmJ4U0F1TkoySDM0bw?oc=5",
-      "fuente": "Noticias Urbanas"
-     },
-     {
-      "titulo": "León XIV habló de la economía en Argentina: \"Debe estar al servicio de las personas\"",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTU8wcm1tT2FEYmxZS2xaaWdxOWhTalRmb3U3bjJwOXo0akRhTkdSUGRjeXFFWWJySk9UbXRKRUc0ZDFrTnkzOTlydExaTHhCYnZ5OC1zVjRWUVpnQmZweU9iUVhadE1JWGJSOU1HTUlkUlY0OUlxbE1oQ1JjajBKUG44bk1IUmsxSndLdlNDMnQzbjViQjlPd2xsbnJxdVpycVpvMS1GQXlVMWlWT3dUN1pKVEVJd3UzcVR5ZVRVOA?oc=5",
-      "fuente": "Aire de Santa Fe"
-     },
      {
       "titulo": "Duro mensaje de León XIV en Argentina: “La economía debe estar al servicio de la persona y no la persona al servicio de la economía”",
       "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQX1JMTXVXdFdOampjRWtuSmtGOFZMSU9PTWM1emJSM3FGSlFyTy1JQlNvd2dsOEVIM2VUR1JqU0RTNml1dVYwUHlGc2Y1LUducWc4VUxVU3U1QWtYb2JIbWZDa1pkYzNHZ2pEeUdWd3ZvZV9LREk5MzUzMW1USFJEQTJHM2s0LU1nMGFBenBNNXFYeXZGTDRtZV9MOUZ5VmlGVjRMTWItdEZmOGVPTVkxa1BTOWo4VG8wdllBX25ZRHprMG5MLXo1VkMzTWlsMGRXTkpmbkJONzR1QU1NblhSUk5PZEtjYmRJQkZ2QjNfTmRZMnU1Nnc?oc=5",
@@ -3879,15 +3839,61 @@
       "titulo": "En su primer discurso en la Argentina, León XIV pidió una economía \"al servicio de las personas\"",
       "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOMC1URmhOSlF2YUZ1bmo4QVBrVW1wc1BEOTVxa2paa1VfOEtoNks2RkkxWnZ6a21lazJ6M0hqLW03eVNYV0Y2U19PVWZRdWhQeEdMbHVvcmx0MnJNa0phUUZMVXAzZ293U0Y5bWJ1eURGRGFMTGhWcGxnUjlVOUctX19aYzlNdGMxSWJOSEQwQlBQNkxwSmRLd051Z3hRRkgta2ZzZEdWUUpvWGVvNU9lOXFQcGFfQnJHeHRxVjhSVmZ2c2Z2OVNrc1RmTlRwMmV2aWZpSkM5akI3QzZw0gHiAUFVX3lxTE82MEZNanRyX2NMMmduSG1pSFMzenRLbVQ2SDVkSVZPb3BBR0xzbHhqSUZRVkxuVHlOQ0M1Vy1LVEdxejJnbU5NeDlYa1pfRWJHQXl4bEFfc3ZZMENpRmhzS0pyQ1FZLXBTY3VrbXdjNEJsM2I1ajh0b2hFN3J6WEdGN1pfQi1mWWVWanBIVmlfR29uUDZRNS1jdXJVTU5wQXFqNG1sNjUzY2lGLWNGZXVORU92WkxITUw3ZzZQczBLNnNDSkd2cGJZNFZ2VGdETXNRZmVGR2NhaVBWR2o1d0FuNVE?oc=5",
       "fuente": "El Observador Argentina"
+     },
+     {
+      "titulo": "Economía, trabajo y educación: lo que dejó el primer discurso del papa León XIV en Argentina",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUnY4aHM5VmEwTXNSX256Y1ZVUmdDam9uS3dCSDhwOXc4VW5ENVo2cWFtcjdESmlOc1ZFVEdJM0NTSTQycVFQa3dNcFhZdC1CaTdrcmliWUdhLXRVdUVvLWtGOTU1czVDMEVtQzYtS0NYSkdoSW9aY2hlaHY3MmFtN3lLZXVyV0RkVEQ3eU9IOWszLWlFQWdic1c4VUgzT0luZHJ2NEM4UjlOVGRhbzZLVWVfSldyTGdHNHZOczB3V1pzaEpJX2lZRA?oc=5",
+      "fuente": "La 100"
+     },
+     {
+      "titulo": "“La economía al servicio de las personas, no al revés”, advirtió el Papa sobre la gente que no llega a fin de mes",
+      "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOTTJOQm8zVkk3cWxBMVo0aFRsZFQ5SEdFSi10TmNKOW5VNDhCUkszaGxjUlVXQnRjSUExVHVud2dobnp3MHo0UHc0UzhzbFJrLXBkVGZqSnNWcVhXU3R5Y2wzQVRlN0pxWmVycHBwTGMtR1Job0hGaVdBNWJWZkZyZmd0SnBXcXhNQ1AtdkFSX1hvUGJiMkU1WTE5RVRZN2RRMGJXQTY3bGtxSl9aQ1NkU0c3em1KX1ZlSTFIS1lOYTAxZWRHbFBwUURVX3BSdVdxNEc3R0V2NTZJWHhNUHpmTA?oc=5",
+      "fuente": "infocronos.com.ar"
+     },
+     {
+      "titulo": "El primer discurso del papa León XIV en la Argentina: pidió diálogo y una economía \"al servicio de las personas\"",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPSVI5QTFOZk0yYWZBRjA1djVOVE52QzllSTd4NkhjSjFpeFZDbjlGRjBfX0IwTkVkSnVUYUJEY3V6V1FmVmRkdmlYcWdzVDJvck1CamwxVjVqeWFmTWNabTVKNmtkekt0OWhpM1hGVXBLQ2hzRlBGa09lYV9TemtrNE5pMHdiTjBLVWhURHZPTlBDbTdETW1mTGh1Y2k0VE9HWHBBZkNzV1ZSYVI2V3Nkc1VtTjB1YmZ4T2JkRHdJbjlGcHJ0VTBTTTBwRFVsYWZwSEExUnRTYzJpY09YNWpfR0Z6anNHYkE1U2tJQ0tVNUNzMU0?oc=5",
+      "fuente": "Telefe Noticias"
+     },
+     {
+      "titulo": "León XIV: \"La economía debe estar al servicio de la persona y no la persona al servicio de la economía\"",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPd2g4a0N1M0xvUTNabDNPWWpjeHNXTnAzVDNOWHhrbVZnUzk2OGdUa1JGeHR5cWdoYXY4SGVyV1dZVWFxQTFWSUZON1M5YzlBMzZSVmFjMEpfWnpfOEJfTy16YkVETloxTVQ2QzROcWhFS2VRc1JidEt0NWJyVlJwbFI4VjNNS05WOUpoRHc5OUpFdVA2MnV6cUlKemRodjhzZGdMWHNqQU9CZ0JtVGN4S0V6ejlrNURiV0pMMXZqYXFvSXFrQ0lBWjJfQXpySllOX2xKUUxVMmtoYzFvZXdTYTFUSmlKZ0lKOXc?oc=5",
+      "fuente": "La Brújula 24"
+     },
+     {
+      "titulo": "León XIV: “La economía debe estar al servicio de las personas y no las personas al servicio de la economía”",
+      "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNcFhaVC1ZV2tyYXdfcUtpMDFGbGRicjVkd0tlSFo3eFhOMW5BMlc2eldMR3ZnZ1ItV1JuZVp3M2g3WlE0b1hrRDRBd3lLVl9qZ0FLX0FFWWN1ZDhGWndaelBwMEdOcUZ4Y0h2VmZ5UnBoMUZSSTNrR2FHdWNlWVk1VEF6a2Z6WU9mTEhpUHVadEZ3dnBvRXdVc1JHYl9XVEN5OVVzRXpYVTgzdHpxdU9LUG5KU2tYdVp3Zk5qQmYwMWZOYTZFRWJxRk9UUk5sNkhnS2VRRy00bzdZNlhBaFU2VDBOUlFOZ2hQSXVPdmk2N29Ra0tMVTQ3a1cyT20?oc=5",
+      "fuente": "ADNSUR"
+     },
+     {
+      "titulo": "El primer discurso del Papa León XIV en Argentina: pidió diálogo, límites en el poder y una economía al servicio de la gente",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQVjdJS0lSX2Y3X1ltMkcydmtIamxBQXJScmxqTUdTOWhnY1YxRkE0MVhWYXA0cGlLckxRVVBvQktiQ01wbUkyZ2tZTGtOOWcxTks3NXRHTE5xcERvRi1PQUl1MXdtMGdDdWd3aFRXSFI5LVRBdGxQTjdDdTZ4NVdteE5zYmRKb1I3cWg4aW9ha05UMFZheTY4cGROdGI1YWdZODRXOElfM2t1Nm82RDFRQ3gxaUtOczQ1SUFLcXNFVERUcG9iQWhuWXhBQUZvZ1Jma2luOFpvMWo?oc=5",
+      "fuente": "Clarin.com"
+     },
+     {
+      "titulo": "Los empresarios del Grupo de los Seis propondrán una mesa de diálogo nacional tras la visita del Papa",
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQYUt4cmRYN1FnTVJuR3lCc3FjR3laUEZGMGZXdUJHVkpqU3lIX081dFRLVTY3eDJWTl9sejBoTkxnY1ZmUWpQcFZHbTcwZGMtRkhvUGVJYlVqa2h5cmVyWHRMcnVKWXV1TzJwR3RoVUJaT2pkejJuc0ZveUNpZHo0b1RNeDNKR0hBMVJGLURnbFpTUEMyZkh3QzlmRHJOVXhIQ2N5X1Raem5GbEE1Wm5JSDd0c2hPd2Q5M19tRTUydXh2aGVUVVdFeFpxZHUza2hBdERLMHhMQk9aeFQzM3I4?oc=5",
+      "fuente": "La Nación"
+     },
+     {
+      "titulo": "Leon XIV en Argentina: rechazó el aborto, pidió diálogo y una economía “al servicio de las personas”",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPcEpnN3cwY2haY3A5aXN3NDhSNHBJYlJ1QmpRZ3R1OE1VbU1IRWY1Y0cxSHlSYWxPbHRSYjdtSDhKcWdxMU52bVp3Zk03M3YwU2dZQjl1M0dETVJacERoTFJqM1dCVlFFU250THVsZThPWnpySElkbkxPR1BwRDVoQks4U1plR3Vkd2VpbUwwYXliS2ljRXB3MV9EdGxDc3Uwb0lZMnVuWWtscWRsZ3RZdnFSZDltOWIxN1NsbV9SUURBQkI1OVMxbGFtSzR4SU5wUkNsMmhuNUE4RldvQ2ZxSHJQbkJqVmx6ZjNiT2p5RDfSAfABQVVfeXFMT3BKZzd3MGNoWmNwOWlzdzQ4UjRwSWJSdUJqUWd0dThNVW1NSEVmNWNHMUh5UmFsT2x0UmI3bUg4SnFncTFOdm1ad2ZNNzN2MFNnWUI5dTNHRE1SWnBEaExSajNXQlZRRVNudEx1bGU4T1p6ckhJZG5MT0dQcEQ1aEJLOFNaZUd1ZHdlaW1MMGF5YktpY0VwdzFfRHRsQ3N1MG9JWTJ1bllrbHFkbGd0WXZxUmQ5bTliMTdTbG1fUlFEQUJCNTlTMWxhbUs0eElOcFJDbDJobjVBOEZXb0NmcUhyUG5CalZsemYzYk9qeUQ3?oc=5",
+      "fuente": "El Territorio"
+     },
+     {
+      "titulo": "Las 10 frases más impactantes del discurso inaugural del papa León XIV en la Argentina",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOU3dHcVgtVURqU3I2VWpqOC05OGxEYWctaWZ5QUEwQk1FNXZfdHR4WDlRelUwbUNFekVyOEhNaFM4bE5OXzdTczdnczBSV1V4ZzlEYmdZTmdObmRmeEdhclB4RnBoOHZGV2pzaU9EWXV1VFZKXzAzZWoweEJGMVVwLUsyQmtnbXRNWmpodTVYeC05YmJRNVdaV1RGRTROOTFqZVd5azRWZURSeFlyWG5pMlVHUjZ5LXRZazgtSDZYeGF3MHg0?oc=5",
+      "fuente": "Página|12"
+     },
+     {
+      "titulo": "En Argentina, León XIV afirma que la economía debe servir a la persona y no la persona a la economía",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPblhwNENzNm9CUXEzSGVFeEhQenBQVmN5c241S2plWlFCUTMxRDlFUE11b1c5M2tmRlJpUGFta1hmSlkyTUZFZGR0eUZueXVNUVQxT0dXUFJWRmdMNUNDc2t5YjRQWUo1YnpwSjdWZTVBTHZtNmhJanJybjF3anFROGVKVHQ5Zw?oc=5",
+      "fuente": "EWTN News"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-08",
-     "hechas": [
-      "07:30",
-      "13:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
     "semana": [
      {
@@ -5466,7 +5472,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-07",
    "ultimaCorrida": "2026-11-07T16:50:18.549Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 2048 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 2077 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -8989,7 +8995,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 436,
+   "corridas": 437,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -8998,7 +9004,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-09T02:57:49.239Z",
+   "ultimaCorrida": "2026-11-09T03:27:34.011Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9008,7 +9014,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-09T02:57:49.239Z",
+    "ultimoChequeo": "2026-11-09T03:27:34.011Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9149,6 +9155,20 @@
       "https://bosio-central.uwuubuntu83.workers.dev/": [
        47,
        47
+      ]
+     },
+     "2026-11-09": {
+      "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
+       1,
+       1
+      ],
+      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
+       1,
+       1
+      ],
+      "https://bosio-central.uwuubuntu83.workers.dev/": [
+       1,
+       1
       ]
      }
     }
@@ -9387,7 +9407,7 @@
   },
   "mundo_economia": {
    "estado": "listo",
-   "corridas": 221,
+   "corridas": 222,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9396,12 +9416,16 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-09T02:27:38.299Z",
+   "ultimaCorrida": "2026-11-09T03:27:34.011Z",
    "resumen": "🌎 Mundo: economía\n\n• ¿Pinchó una burbuja tecnológica en el \"Nasdaq chino\"? Índice en Shanghái acumula una caída de casi 50% (BioBioChile on MSN)\n  https://www.msn.com/es-cl/noticias/otras/pinch%C3%B3-una-burbuja-tecnol%",
    "informe": "data/informes/mundo_economia/2026-11-08-2028.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "ueda, del boj, ve “algunos riesgos al alza” para la inflación",
+     "el yen japonés se fortalece a pesar de los sólidos datos de empleo de ee.uu.",
+     "la jornada laboral y el tamaño de la empresa determinarán la cotización a los seguros soci",
+     "ee.uu. exige a china que respete el acuerdo comercial bilateral",
      "banco vietnam-japón: conectando flujos de capital y ampliando la cooperación en materia de",
      "nvidia investiga a su director por tener una relación con una supuesta espía china y trump",
      "¿cómo afectarán los resultados de las elecciones de mitad de mandato en estados unidos a l",
@@ -9997,11 +10021,7 @@
      "eeuu impone nuevas sanciones a cuba, dirigidas a determinados sectores de su economía",
      "“esperaba un crecimiento más alto”: el gobierno reconoció una recuperación más débil pero ",
      "melania trump pide un alto el fuego más duradero en ucrania",
-     "el bitcoin sube y vuelve a la zona de los us$80.000 tras las elecciones en estados unidos",
-     "colombia podría casi duplicar sus viajes aéreos por habitante: ¿qué falta para lograrlo?",
-     "vicat se beneficia del repunte en estados unidos y del dinamismo de los mercados emergente",
-     "argentina autoriza derribar aviones hostiles durante la visita papal",
-     "daniel schteingart presentó su nuevo libro: cómo está la argentina y qué futuro le espera "
+     "el bitcoin sube y vuelve a la zona de los us$80.000 tras las elecciones en estados unidos"
     ],
     "bandeja": [
      {
@@ -10053,17 +10073,33 @@
       "titulo": "El hongo ‘tsukiyotake’ causa más del 50 % de las intoxicaciones por setas silvestres en otoño en Japón",
       "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9DdFJNV1B4RV9PWk9jeGJUTWhZOTJnOEpaek1LX0FmRndTd3hqY0RtWS1uUGs4YlZOTVV2MnhfQ1ROZVFiZm1Sb3NjQkxwNHhMNzlJTQ?oc=5",
       "fuente": "Nippon.com"
+     },
+     {
+      "titulo": "Ueda, del BOJ, ve “algunos riesgos al alza” para la inflación",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVk5Qc1JkVWFIdUFfTFNFLUl6U1lOaXRpWTA4MTBmMElETkRsekFjRVhYNGp6ODFoQTAwbXNHb05vR0JhM3RTWEtoaVJscno1aEFyTWItN21CYnZSVjVfV1pfNjQ5SWcxQVlRNzNsSnNaNThFd2RNcUM2X0pBbEx6V3RyTGVvaUQxWmIxZHloakY4dW9raTZ5TC1NT1jSAaIBQVVfeXFMT0ZqX2Q1eHNDem5VNVVqZFlJemYzV3hKaXg3dERVbEJJdVNqeHZzZ21YcnpTdFJWM1Z6RThlYU5SLWdOT2NnVVNEYkNtZi1UR25sSXBNU21vSmRzVVNMQVF2TElqUGY0azF2WmZJOFpTTFpzNFl1bTRjMXdOX1o0OEZwZl9VaTdPZ0stanR6SE1feW9mamU3aEJxaUNCWjAtRmRB?oc=5",
+      "fuente": "El Economista"
+     },
+     {
+      "titulo": "El Yen japonés se fortalece a pesar de los sólidos datos de empleo de EE.UU.",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOR0hFRUJqNU00SHpSWFFVRjN2T3AtbEVTRy1YckFySjkzeDBoYTVlVktrZjNHSkJQOEFadkV4UkYtcTBWM0hHazFLRHVPbUEzdWkwT3VSVzZKc21VdGJNUlMzVXZTZ2pQZVUwbGdLVzFVZEJfV1RMbkh3QTZmTm1ILVQzSXlLZ3pGM1BFSEhBNGU5ajcxZkZSMDUxcVBoQWdwdWVWM2Q2bHM5R3poWDQyN1pB?oc=5",
+      "fuente": "FXStreet"
+     },
+     {
+      "titulo": "La jornada laboral y el tamaño de la empresa determinarán la cotización a los seguros sociales en Japón",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE82YzE5c180MkpjTHZIcEpORGY2VWJmMGRTUDBidk1kSmMtMjhHMXBFdkVoWTVrVk9ELTBhUGdCQUstdlZaRE5qMDdkb3RZeGt2dVpHbw?oc=5",
+      "fuente": "Nippon.com"
+     },
+     {
+      "titulo": "EE.UU. exige a China que respete el acuerdo comercial bilateral",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORVI3c1ZxT2Job0dOQkRxQjFXOUdpY0tXM3kzN3g5NWNsQVNXVXduMVo4clRMVjZoOVh3Y0RPVTl3a0M5eVM5Z2tyeElaOW8wZjFlVjJmUTV0ZUg1ZUp1dXZ5LXl1WnRRQjI5c2lNajRDUFZ2UXlxQzZDYzFwNjZsYThDXzVITEJwZm5GQ29wRkw1REdPTW1fSVVn0gGaAUFVX3lxTE1qaGdUY1htYzJTNDk0WUR4bFFBQU5JOTZsRzIyTmRYSXgtMTducXFkMzJhMk1RMkcweFBzdGVXaEx3NExFYjdGRDNyS0xub2tCdDhoM0Jzak5zTWx2Mm9ELXdEcHQ2RGRqZlVrQ3E4dVdVb2FVcnJ6VktrU0E5MUc5QUJfWjQtRVBZX0FoMWN5MmNOSkRESjVsTGc?oc=5",
+      "fuente": "DW.com"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-08",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-09T02:27:38.299Z",
+    "ultimoChequeo": "2026-11-09T03:27:34.011Z",
     "semana": [
      {
       "titulo": "China frena su actividad industrial y preocupa a la economía mundial",
@@ -11570,7 +11606,7 @@
   },
   "mundo_tecnologia": {
    "estado": "listo",
-   "corridas": 221,
+   "corridas": 222,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -11579,12 +11615,19 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-09T02:27:38.299Z",
+   "ultimaCorrida": "2026-11-09T03:27:34.011Z",
    "resumen": "🌎 Mundo: tecnología\n\n• Rusia permite a los ciudadanos comerciar con Bitcoin, Ethereum y Tether (Cryptopolitan)\n  https://news.google.com/rss/articles/CBMimAFBVV95cUxOM004OE9XVVZ0TG1FVm9qb2JTTlg0Z3YzcUZFVURMY3djZW56NDNNV",
    "informe": "data/informes/mundo_tecnologia/2026-11-08-2028.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "ceo de nvidia reconoce relación íntima con una presunta espía china - 24-horas",
+     "investigan si amante de ceo de nvidia era espía china",
+     "ni iphone duo ni galaxy z: este es el mejor plegable del mundo y probablemente podamos dis",
+     "el pollo loco llegará a nueva york en 2027: abrirá hasta 30 restaurantes en estados unidos",
+     "se alía spacex con qualcomm para acelerar su red móvil 5g en estados unidos",
+     "corea del sur abre una fábrica de datos con 12 robots humanoides",
+     "el consejo europeo de innovación invertirá 1.800 millones en tecnología profunda y áreas e",
      "corea del sur abre fábrica de datos para entrenar robots humanoides",
      "colombia y ee. uu. desarrollan software militar para rastrear comunicaciones de las diside",
      "honda sustituye importaciones de china y amplía producción de motocicletas en méxico",
@@ -12177,14 +12220,7 @@
      "home actualidad la bolsa hoy en directo",
      "perú y estados unidos firman acuerdo nuclear hacia 2040",
      "marte no está 'muerto' en su interior, sino 'inactivo'",
-     "la ia de apple llega a china con modelos de alibaba",
-     "putin exige que los centros de datos privados de rusia reserven el 10% de su capacidad",
-     "la fcc amplía el veto a la tecnología china: cámaras de salpicadero y transmisores de víde",
-     "vietnam y corea del sur celebran una conferencia para promover la cooperación en inteligen",
-     "vietnam y corea del sur promueven la cooperación estratégica en alta tecnología y energía ",
-     "motorola presenta el moto watch 2 fit con 12 días de autonomía y los auriculares moto buds",
-     "la nasa presenta el x-70 fractal, su nuevo avión experimental: \"el futuro de ciencia ficci",
-     "el pentágono dará a conocer qué leyes rigen a los laboratorios de ia en estados unidos"
+     "la ia de apple llega a china con modelos de alibaba"
     ],
     "bandeja": [
      {
@@ -12236,17 +12272,48 @@
       "titulo": "Honda sustituye importaciones de China y amplía producción de motocicletas en México",
       "link": "https://www.zocalo.com.mx/honda-sustituye-importaciones-de-china-y-amplia-produccion-de-motocicletas-en-mexico/",
       "fuente": "Periódico Zócalo"
+     },
+     {
+      "titulo": "CEO de Nvidia reconoce relación íntima con una presunta espía china - 24-horas",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOTFdqN3htLXlwU2pLOTFuTXA5M0hQb3NUdklqWDhCWkhyNkdIM05tTkV3dmhscGVTRUlBVW9WN0M1a2dka1VLMGMyV2xYaGhjdGNCZFpDcUFPRlV4Z1JrSmliQWRndF9GRmxJbTA0S3d5ZUJ1YTJoVmY0S2lNM2dlMmRwSzZwUlRmYnJuclJtaUdqLTA4SnYwVmpzVQ?oc=5",
+      "fuente": "24-horas"
+     },
+     {
+      "titulo": "Investigan si amante de CEO de Nvidia era espía china",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVU1NZTVTR0NuanBwQzlUcWhQa2oxREtCa1NYSGlDTjdGRmp0WUpvMVB6MG1tcXZEWkx5Z1hidDNQQVlXZXF6NDZTbjFJUVpROWZrOU9SRGUxLU1aXzVLb2N1REV0VG0xMVZiaFVYeVh2bThUbjlUYzY5azRqU2JkOGFQQmFGWWZVMEROaEp5d2RJcjZndDhSNEVmb0hGdmVoaC1kdmY1ZkI?oc=5",
+      "fuente": "El Horizonte"
+     },
+     {
+      "titulo": "Ni iPhone Duo ni Galaxy Z: este es el mejor plegable del mundo y probablemente podamos disfrutarlo en Europa",
+      "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQZHpZQl93M3ZpaDVOZnFRUDdkd3FOQldJMDRSUVAycW8xR3dmQXQ3czdrb241RW5XUTlPUFNIbkZXOTZZeUF6bGRqOUtyN0lUelVEZ0otb2Q3Tm1oUWdSNllXRF9tUUhabjBianNHeVg5TmM3enRyVHQzam5uN0JjNW1rZF9yXzNmVzljTVJOTkV2S2lma1pFNGlUMkpsWm5yOWVaY0doa1NiNngwaTQ3V2dqT0ZfVmZZSmszZ25rVWh0WmtTR3NjQjY1dmhFWDQ5enBHanFXdVB1RlJWMVFQZFJZSlJ2cm02X242d0VYMWI3b1V5NXRaTXBtb2tLVm8wd3FZeA?oc=5",
+      "fuente": "La Razón"
+     },
+     {
+      "titulo": "El Pollo Loco llegará a Nueva York en 2027: abrirá hasta 30 restaurantes en Estados Unidos",
+      "link": "https://www.debate.com.mx/economia/el-pollo-loco-llegara-a-nueva-york-en-2027-abrira-hasta-30-restaurantes-en-estados-unidos-20261108-0121.html",
+      "fuente": "El Debate"
+     },
+     {
+      "titulo": "Se alía SpaceX con Qualcomm para acelerar su red móvil 5G en Estados Unidos",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBYTzVzZ184Uk93UzhQb3VCZWtNR0E5dThlM1AzYk94d0YyWklDVVktVWNQbmdJM3paYktDNFNRVTU0V3ZObUkzVDcyUFczOWM?oc=5",
+      "fuente": "El Comentario"
+     },
+     {
+      "titulo": "Corea del Sur abre una fábrica de datos con 12 robots humanoides",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQU04teTVzNmV5Z0o0cm1fYjRvMkRqWHZpLU9mUWNxMzNSMmc1VUZKTHNfRmkzTzlreldPSXY2Rkt3bEdXUHJZdHMxcXNjbG4zZlNUNF9LMGx6RkNBV1dYUDlxWkFPNW12SnJwTVljRWFNYUNKTFYzdVVOMWlvU1ZHWHF5emlGajFBUXhjWV9wMlIxZ2RyMUJkMkhMSHdHaWhfN3dsdFNvblh3SE1VcTN6ejNyMA?oc=5",
+      "fuente": "MechatronicStore"
+     },
+     {
+      "titulo": "El Consejo Europeo de Innovación invertirá 1.800 millones en tecnología profunda y áreas estratégicas en 2027",
+      "link": "https://www.infobae.com/america/agencias/2026/11/05/el-consejo-europeo-de-innovacion-invertira-1800-millones-en-tecnologia-profunda-y-areas-estrategicas-en-2027/",
+      "fuente": "Infobae"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-08",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-09T02:27:38.299Z",
+    "ultimoChequeo": "2026-11-09T03:27:34.011Z",
     "semana": [
      {
       "titulo": "\"Situación potencialmente peligrosa\": El nuevo superadar ruso que podría espiar gran parte de Europa",
@@ -13753,7 +13820,7 @@
   },
   "mundo_salud": {
    "estado": "listo",
-   "corridas": 221,
+   "corridas": 222,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -13762,12 +13829,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-09T02:27:38.299Z",
+   "ultimaCorrida": "2026-11-09T03:27:34.011Z",
    "resumen": "🌎 Mundo: salud y ciencia\n\n• Dr. Ampudia Blasco: Algún día estaremos en condiciones de curar la diabetes tipo 1 (Infobae)\n  https://news.google.com/rss/articles/CBMi5wFBVV95cUxPYmxoVVVKQ25vM1pSRXRVRzFNZ2Fpd1l2MU9rQzBvOWR",
    "informe": "data/informes/mundo_salud/2026-11-08-2028.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "lazzarini lamenta la \"indiferencia\" ante el agravamiento de la crisis humanitaria por inun",
      "alerta oms: muchos jóvenes no hacen bastante ejercicio y comprometen su salud a futuro",
      "la jornada laboral y el tamaño de la empresa determinarán la cotización a los seguros soci",
      "cuba y china acuerdan impulsar 3 proyectos en sector biotecnología",
@@ -14366,8 +14434,7 @@
      "histórico triunfo latino en estados unidos: gina hinojosa y xavier becerra conquistan las ",
      "los seis ganadores que marcaron un hito en las elecciones de estados unidos, un republican",
      "la oms revela que uno de cada 4 adolescentes no hace ejercicio ningún día",
-     "la era trump termina abruptamente y con paliza. un eu progresista resurge con furia",
-     "seis medidas en materia de clima y salud podrían salvar 1,6 millones de vidas: informe oms"
+     "la era trump termina abruptamente y con paliza. un eu progresista resurge con furia"
     ],
     "bandeja": [
      {
@@ -14434,17 +14501,18 @@
       "titulo": "Ciudadanos vivirán menos: Dato que pone en jaque la esperanza de vida",
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUUhzWEpid3EwVUk4bkVBWU9wa1RPTU03NWZiRmNHZkZ0dVJ2V0llaks3Znl2ZlY0TGhCTjhpQkxDMUtOOGJoaDYwZk4zWVI3MzVKWTJLNHVtMGNuWE9FQnoxZl9FMTFxRTFtX1ZrOU9YN21ILUlOTEN3TkhDd2NSd1N2TGF4cEkxQ0NkOXlpVVJtSUM5dVZHOGRmdXlrOFJmTmVYYzFXVDjSAagBQVVfeXFMTVFIc1hKYndxMFVJOG5FQVlPcGtUT01NNzVmYkZjR2ZGdHVSdldJZWpLN2Z5dmZWNExoQk44aUJMQzFLTjhiaGg2MGZOM1lSNzM1SlkySzR1bTBjblhPRUJ6MWZfRTExcUUxbV9WazlPWDdtSC1JTkxDd05IQ3djUndTdkxheHBJMUNDZDl5aVVSbUlDOXVWRzhkZnV5azhSZk5lWGMxV1Q4?oc=5",
       "fuente": "Alerta"
+     },
+     {
+      "titulo": "Lazzarini lamenta la \"indiferencia\" ante el agravamiento de la crisis humanitaria por inundaciones en Gaza",
+      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPU091a2J1ZkREVGh4R1BJYTNvYmUwWDF4Nm5fNXNfTm8wZC1Ta0hKZTdYbDVpT2p6enlBZXQ3MzQxYTI0R3hyQXFWd1dicmpwU0RlOHM4WGFrakU4U3ZVNnZtdzZqVXk5V0ZWYWJibzB3Nlk5dGFsRnpmS2QzdmZHcUhacmg1U01rNm84NktMRG5oLTluUWZPd3kxWkxLU2xnZDFaaUF0emJJNm1VU2Flc0M3X0JBY3FYRjVqaFFMeG0xaHNJcmpVWnpLZS1CUmN6RVRvQlBQdFpROWlZS0JwWnNvNHJ1c0x0N1l5N3lR0gGIAkFVX3lxTFBfSDdpeVZrVlhJT3FmVjBiRGlsaWNzVGVsNkZOaUJKQjBRRFA0TlJyUVFGaDUybE1pUWFvbG5zS3BhaUNHc1VINGN2TE5hUjdPYmdRUElhc3IyamE4ellyN3pqdHlob2REcXZrQWxNT1RRMmRJYm1OdHFvSUNKX0tjNmNJeUpENkNCblNUdVJMNHRZNGFXVmpraXdoNE90TFdfcVFXd0ZXckpFQmg5Q3FuVUtxLXdHR1FNdWtWV0hXTVZCN2VqOXNJTVB3MUliTnBLWnhRaUJ4Mkh3amNzdjRPWGVYUGhadXpjQVBjRmkyNEpOTnhMRHNXTjZLQU9adUFnVXZXSW1Qcg?oc=5",
+      "fuente": "Infobae"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-08",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-09T02:27:38.299Z",
+    "ultimoChequeo": "2026-11-09T03:27:34.011Z",
     "semana": [
      {
       "titulo": "¡En llamas! Ucrania ataca refinería rusa y provoca incendio en Ufá",
@@ -15966,13 +16034,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-08",
-     "hechas": [
-      "08:30",
-      "13:00",
-      "17:30",
-      "21:30"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-09T00:58:38.779Z"
    }
@@ -15994,10 +16057,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-08",
-     "hechas": [
-      "20:30"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-08T23:58:27.330Z"
    }
@@ -16104,10 +16165,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-08",
-     "hechas": [
-      "09:00"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
     "instruido": true,
     "ultimoChequeo": "2026-11-08T12:22:39.115Z"
@@ -16130,17 +16189,15 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-08",
-     "hechas": [
-      "21:45"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-09T00:58:38.779Z"
    }
   },
   "noticias_tec": {
    "estado": "listo",
-   "corridas": 221,
+   "corridas": 222,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -16149,12 +16206,17 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-09T02:27:38.299Z",
+   "ultimaCorrida": "2026-11-09T03:27:34.011Z",
    "resumen": "💻 Lo último en tecnología\n\n• Proporcionar capacitación en inteligencia artificial a funcionarios de base para mejorar la calidad del servicio a la ciudadanía. (Vietnam.vn)\n  https://news.google.com/rss/articles/CBMikAFB",
    "informe": "data/informes/noticias_tec/2026-11-08-2128.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "senapred decreta alerta roja en monte patria por riesgo de desborde del río grande",
+     "¡alerta máxima en el vaticano! detienen en argentina a un radical que planeaba un atentado",
+     "microsoft: 20 millones de agentes de ia y salida voluntaria",
+     "¿cacería de brujas? la inteligencia artificial pone a prueba al mundo literario",
+     "ofertas de ia 2026: todas las formas reales de ahorrar en herramientas de ia",
      "uruguay — león xiv alertó sobre los riesgos de la inteligencia artificial y pidió poner a ",
      "día del programador: qué es y por qué se celebra esta fecha",
      "underdog lanza woof: voz ia de 32 mb sin internet",
@@ -16749,12 +16811,7 @@
      "¿hackearon cuenta del distrito para amenazar vuelos en europa? galán ordena investigar ale",
      "la ops apuesta por la inteligencia artificial para anticipar amenazas sanitarias: capacita",
      "chatgpt crea gif, openai lanza images 2.6 y dos modelos más",
-     "openai lanza images 2.6: promete generar imágenes 50% más rápido y crear gif animados",
-     "motorola quiere destronar al iphone: lanzó su nuevo celular ultra premium de 1.600 dólares",
-     "qué es conductor, la empresa que acaba de comprar meta, y por qué importa en el ámbito de ",
-     "seguridad invertirá $2.733 millones en 1.200 cámaras con inteligencia artificial",
-     "apple alerta a usuarios de 99 países por spyware mercenario en iphone",
-     "macbook, ipad, apple tv y más: recopilación de todo lo nuevo que ha presentado apple desde"
+     "openai lanza images 2.6: promete generar imágenes 50% más rápido y crear gif animados"
     ],
     "bandeja": [
      {
@@ -16801,18 +16858,38 @@
       "titulo": "Xiaomi tiene cuatro móviles nuevos en camino: acaban de pasar por la certificación china y todos traen IA que funciona sin internet",
       "link": "https://www.mundoxiaomi.com/noticias/xiaomi-tiene-cuatro-moviles-nuevos-camino-acaban-pasar-certificacion-china-todos-traen-ia-que-funciona-internet",
       "fuente": "Mundo Xiaomi"
+     },
+     {
+      "titulo": "Senapred decreta alerta roja en Monte Patria por riesgo de desborde del río Grande",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNbGx3eDQyVlhsQ21GNXh5MUhjQjZKOG45ek9KNVVrSXRMVkpLRTJDNVRlZGdfbGROa2lzbnNtODNZR1ZzVHpTc29uM2dqcWpabUNtR3NnblY5MVpMcnNMUnM4N3JvNG9DdmhYOWN1NjVncWFRV2ZJOUF6VHR3VUNSZkdCV1paaGhCWDc4c0dpdzZaM0t4M21zYjlja3R2SllMSHVoaFI1QzU?oc=5",
+      "fuente": "laconexion.cl"
+     },
+     {
+      "titulo": "¡ALERTA MÁXIMA EN EL VATICANO! Detienen en Argentina a un radical que planeaba un atentado mortal contra el Papa León XIV",
+      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQcDBIa3hNT2dncm1XRm44MF9PMDd3VUdpZXJsY3lwWnhlazNGMFhXSG9UOUJCUHRiX2hmZ1VBVUtsSVd0TFFSaXpPZGZUZ1hEUDcyM00yQWtjVkU2ZXdncFpiMi0yblB2OEtobWtuSXBYWk5DQVhEWWtaOVhlTjJ1MFUyYU94YjIwMVlPdmpDQkJ2QVhqbVBpbnF2MmkwNDgtUzNkMDM4RTQtMGVJbzBSWlpHLVJBVk9iS3lYbkhGUmV3RkozX0gyRFA5aE9iUHZ3S2JqZWliRFFLZw?oc=5",
+      "fuente": "laconexion.cl"
+     },
+     {
+      "titulo": "Microsoft: 20 millones de agentes de IA y salida voluntaria",
+      "link": "https://ecosistemastartup.com/microsoft-20-millones-de-agentes-de-ia-y-salida-voluntaria/",
+      "fuente": "ecosistemastartup"
+     },
+     {
+      "titulo": "¿Cacería de brujas? La inteligencia artificial pone a prueba al mundo literario",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNNTdWNm1wX0FoR2xQTVNQeVFOal9CUmJ2UGNfaWFnZFNuektLckE2eDB6ZmFyNjV1ei1sd0tLY01PdUJ0bVA4a0R6RWR3b2JVMnc5aW5QWENraVV5b2s3eHpRLXVGd2pBdmxBbTBJb2NYM0xLVmhITVRpMzBDN3NDaTVBRm9oZGNvY21PM1Y5WGpHNFQ0RFRYUlZaOGlKTjhOSVHSAcMBQVVfeXFMTUJMZGExakVlMzdOakpsakFpV3Z0YXo1VkVfYUZDU1JEamRXMjJYLUJQTkFkaHg4cngzUTFRT2RvbFZYaVBWSW9oTFlhZ3lMRTdIRUZ1bWRWWHg4bmlaUldKN200NktRWUt4bzV6bUdVNE1LWmFCSERrdWYta2hoNGdlcGlOQ1UzWW1SaUJWbzFINXI2MmdSazdvWFktMDJMczAtdUZUUHVfVE1FTmNxUzNHTldoaGZpM0xyRTd3ZEtwM0pj?oc=5",
+      "fuente": "La Tercera"
+     },
+     {
+      "titulo": "Ofertas de IA 2026: todas las formas reales de ahorrar en herramientas de IA",
+      "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE83MkFORUtZeHljQ0NPY3pZZXRRNndjOEZZTDRjWTFuMjlpVWVCMjRiWEZQT2N1VkNudWhCblhwdEJ1NTJ5TWEwaUhn?oc=5",
+      "fuente": "Fello AI"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-08",
-     "hechas": [
-      "09:00",
-      "13:00",
-      "17:00",
-      "21:00"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-09T02:27:38.299Z",
+    "ultimoChequeo": "2026-11-09T03:27:34.011Z",
     "semana": [
      {
       "titulo": "James, Cardona y Uribe: los mejores disfraces de Nacional en Halloween",
@@ -18634,10 +18711,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-08",
-     "hechas": [
-      "22:00"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-09T01:28:39.253Z"
    }
@@ -18744,10 +18819,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-02",
-     "hechas": [
-      "09:00"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-02T12:21:53.118Z"
    }
@@ -18769,10 +18842,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-07",
-     "hechas": [
-      "06:50"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-07T10:14:40.957Z"
    }
@@ -18819,10 +18890,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-08",
-     "hechas": [
-      "10:00"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-08T13:15:55.010Z"
    }
@@ -18844,10 +18913,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-02",
-     "hechas": [
-      "09:30"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-02T12:51:54.950Z"
    }
@@ -18879,7 +18946,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 418,
+   "corridas": 419,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -18888,13 +18955,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-09T02:57:49.239Z",
+   "ultimaCorrida": "2026-11-09T03:27:34.011Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-08",
-    "ultimoChequeo": "2026-11-09T02:57:49.239Z"
+    "ultimoChequeo": "2026-11-09T03:27:34.011Z"
    }
   },
   "feriados": {
@@ -18914,10 +18981,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-02",
-     "hechas": [
-      "08:00"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-02T11:21:52.712Z"
    }
@@ -18981,10 +19046,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-02",
-     "hechas": [
-      "10:00"
-     ]
+     "fecha": "2026-11-09",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-02T13:05:54.717Z"
    }
@@ -19078,6 +19141,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-09T03:27:34.011Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-09T03:27:34.011Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-09T02:57:49.239Z",
    "quien": "Mesa de entrada",
@@ -20567,16 +20640,6 @@
    "t": "2026-11-07T04:50:49.917Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-07T04:50:49.917Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-07T04:20:38.424Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
@@ -21092,16 +21155,13 @@
   "buenDia": "2026-11-08"
  },
  "consumo": {
-  "fecha": "2026-11-08",
-  "consultas": 2,
+  "fecha": "2026-11-09",
+  "consultas": 0,
   "busquedas": 0,
-  "por": {
-   "huggingface": 1,
-   "zai": 1
-  }
+  "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-09T02:57:49.239Z",
+ "actualizado": "2026-11-09T03:27:34.011Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -21126,164 +21186,9 @@
   ]
  },
  "ia": {
-  "fecha": "2026-11-08",
-  "agotado": {
-   "huggingface": 1794277685418
-  },
-  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
-  "vivos": {
-   "huggingface": {
-    "fecha": "2026-11-08",
-    "ids": [
-     "Qwen/Qwen3.8-27B",
-     "deepseek-ai/DeepSeek-V4.1-Flash-1017",
-     "zai-org/GLM-5.3-Flash",
-     "deepseek-ai/DeepSeek-V4.1-Flash",
-     "meta-llama/Llama-3.1-8B-Instruct",
-     "moonshotai/Kimi-K3",
-     "google/gemma-4-31B-it",
-     "Qwen/Qwen3.5-9B",
-     "zai-org/GLM-5.3",
-     "Qwen/Qwen3.6-35B-A3B",
-     "MiniMaxAI/MiniMax-M3.1-Flash",
-     "tencent/Hy4-preview",
-     "meta-models/Muse-Glimmer-30B",
-     "openai/gpt-oss-20b",
-     "reflection/Beam-1.0-501B-A23B",
-     "google/gemma-4-26B-A4B-it",
-     "XiaomiMiMo/MiMo-V2.6-Pro-RL",
-     "Qwen/Qwen3.8-2.4T-A95B",
-     "thinkingmachines/Inkling-Small",
-     "google/gemma-3-4b-it",
-     "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
-     "openai/gpt-oss-120b",
-     "deepseek-ai/DeepSeek-R1",
-     "deepseek-ai/DeepSeek-V4-Flash",
-     "CohereLabs/tiny-aya-global",
-     "meta-models/Muse-Spark-Open-816B-A42B",
-     "Qwen/Qwen3.8-Flash-Next-FP8",
-     "Qwen/Qwen3.5-27B",
-     "XiaomiMiMo/MiMo-V2.6-Flash-RL",
-     "meta-llama/Llama-3.3-70B-Instruct",
-     "inclusionAI/Ling-3.1-flash",
-     "zai-org/GLM-5.2",
-     "deepseek-ai/DeepSeek-V4-Pro",
-     "Qwen/Qwen3.6-27B",
-     "ibm-granite/granite-4.2-3b",
-     "Qwen/Qwen3.5-35B-A3B",
-     "thinkingmachines/Inkling",
-     "deepseek-ai/DeepSeek-V4-Flash-0731",
-     "zai-org/GLM-4.7-Flash",
-     "google/gemma-3-12b-it",
-     "swiss-ai/Apertus-v1.5-70B",
-     "meta-llama/Llama-4-Scout-17B-16E-Instruct",
-     "Qwen/Qwen3-30B-A3B",
-     "deepseek-ai/DeepSeek-V4-Pro-0813",
-     "ibm-granite/granite-4.2-8b",
-     "moonshotai/Kimi-K2.5",
-     "inclusionAI/Ling-3.0-flash-Fin",
-     "microsoft/phi-4",
-     "moonshotai/Kimi-K2.7-Code",
-     "zai-org/GLM-5.3-Flash-BF16",
-     "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
-     "google/gemma-3-27b-it",
-     "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
-     "zai-org/GLM-5.3-BF16",
-     "Qwen/Qwen3-14B",
-     "moonshotai/Kimi-K2-Instruct",
-     "deepseek-ai/DeepSeek-V3.2",
-     "Qwen/Qwen3-VL-235B-A22B-Instruct",
-     "moonshotai/Kimi-K2.6",
-     "ibm-granite/granite-4.2-30b",
-     "CohereLabs/tiny-aya-earth",
-     "aisingapore/Qwen-SEA-LION-v4.5-27B-IT",
-     "Qwen/Qwen2.5-VL-72B-Instruct",
-     "Qwen/Qwen2.5-72B-Instruct",
-     "CohereLabs/aya-expanse-32b",
-     "zai-org/AutoGLM-Phone-9B-Multilingual",
-     "Qwen/Qwen3.5-397B-A17B",
-     "Qwen/Qwen3-32B",
-     "Qwen/Qwen3.5-122B-A10B",
-     "inclusionAI/Ling-3.0-flash-VL",
-     "XiaomiMiMo/MiMo-V2.5-Pro",
-     "swiss-ai/Apertus-8B-Instruct-2509",
-     "zai-org/GLM-4.6V-Flash",
-     "zai-org/GLM-4.7",
-     "Sao10K/L3-8B-Stheno-v3.2",
-     "XiaomiMiMo/MiMo-V2.5",
-     "speakleash/Bielik-11B-v3.0-Instruct",
-     "MiniMaxAI/MiniMax-M2.5",
-     "inclusionAI/Ling-3.0-flash",
-     "CohereLabs/aya-vision-32b",
-     "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
-     "alpindale/WizardLM-2-8x22B",
-     "NousResearch/Hermes-3-Llama-3.1-70B",
-     "zai-org/GLM-4.5",
-     "zai-org/GLM-4.5V",
-     "deepseek-ai/DeepSeek-R1-0528",
-     "deepseek-ai/DeepSeek-V3",
-     "zai-org/GLM-4.5-Air",
-     "MiniMaxAI/MiniMax-M3",
-     "MiniMaxAI/MiniMax-M1-80k",
-     "deepseek-ai/DeepSeek-V3-0324",
-     "CohereLabs/c4ai-command-r-08-2024",
-     "zai-org/GLM-4.6-FP8",
-     "moonshotai/Kimi-K2-Instruct-0905",
-     "Qwen/Qwen3-235B-A22B-Instruct-2507",
-     "CohereLabs/c4ai-command-r7b-12-2024",
-     "zai-org/GLM-4.6",
-     "zai-org/GLM-5",
-     "Qwen/Qwen3-235B-A22B-Thinking-2507",
-     "CohereLabs/c4ai-command-a-03-2025",
-     "zai-org/GLM-4.7-FP8",
-     "MiniMaxAI/MiniMax-M2.7",
-     "deepseek-ai/DeepSeek-V3.1",
-     "CohereLabs/command-a-reasoning-08-2025",
-     "zai-org/GLM-5.1",
-     "Qwen/Qwen3-Next-80B-A3B-Instruct",
-     "CohereLabs/command-a-translate-08-2025",
-     "zai-org/GLM-5.1-FP8",
-     "deepseek-ai/DeepSeek-V3.1-Terminus",
-     "CohereLabs/tiny-aya-water",
-     "zai-org/GLM-5.2-FP8",
-     "stepfun-ai/Step-3.5-Flash",
-     "CohereLabs/tiny-aya-fire",
-     "aisingapore/Gemma-SEA-LION-v4-27B-IT",
-     "tencent/Hy3",
-     "zai-org/GLM-4.5V-FP8",
-     "Qwen/Qwen3-VL-30B-A3B-Instruct",
-     "swiss-ai/Apertus-70B-Instruct-2509",
-     "zai-org/GLM-4.6V",
-     "stepfun-ai/Step-3.7-Flash",
-     "aisingapore/Qwen-SEA-LION-v4-32B-IT",
-     "zai-org/GLM-4.6V-FP8",
-     "BSC-LT/ALIA-40b-instruct-2606",
-     "aisingapore/Nemotron-SEA-LION-v4.8-120B-A12B"
-    ]
-   },
-   "zai": {
-    "fecha": "2026-11-08",
-    "ids": [
-     "glm-4.5",
-     "glm-4.5-air",
-     "glm-4.6",
-     "glm-4.7",
-     "glm-5",
-     "glm-5-turbo",
-     "glm-5.1",
-     "glm-5.2",
-     "glm-5.3",
-     "glm-5.3-flash",
-     "glm-5.3-flashx",
-     "glm-5.3-flashx-legal"
-    ]
-   }
-  },
-  "ultimo": {
-   "prov": "Z.ai (GLM)",
-   "modelo": "glm-4.5-flash",
-   "t": "2026-11-09T02:27:38.299Z"
-  }
+  "fecha": "2026-11-09",
+  "agotado": {},
+  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
  },
  "dueno": 1237559052,
  "pendientesCant": 0
