@@ -5164,7 +5164,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-07",
    "ultimaCorrida": "2026-11-07T16:50:18.549Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 3998 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 4014 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -15956,7 +15956,7 @@
   },
   "comidas": {
    "estado": "listo",
-   "corridas": 44,
+   "corridas": 45,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -15964,17 +15964,19 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-09",
-   "ultimaCorrida": "2026-11-10T00:41:42.182Z",
+   "ultimaFecha": "2026-11-10",
+   "ultimaCorrida": "2026-11-10T11:44:39.325Z",
    "resumen": "🔒 Privado: te lo mandó por Telegram.",
    "informe": null,
    "pausado": false,
    "memoria": {
     "horas": {
      "fecha": "2026-11-10",
-     "hechas": []
+     "hechas": [
+      "08:30"
+     ]
     },
-    "ultimoChequeo": "2026-11-10T00:41:42.182Z"
+    "ultimoChequeo": "2026-11-10T11:44:39.325Z"
    }
   },
   "ejercicio": {
@@ -19169,6 +19171,21 @@
  },
  "log": [
   {
+   "t": "2026-11-10T11:44:39.325Z",
+   "quien": "¿Qué comiste?",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-10T11:44:39.325Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-10T11:44:39.325Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
+  {
    "t": "2026-11-10T11:28:08.065Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
@@ -20652,26 +20669,10 @@
    "t": "2026-11-08T14:15:38.880Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-08T14:15:38.880Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-08T13:45:25.797Z",
-   "quien": "Dólar",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-08T13:45:25.797Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "496": "informe_redes",
   "499": "clima",
   "504": "vencimientos",
   "505": "tarifas",
@@ -21170,7 +21171,8 @@
   "1150": "licitaciones",
   "1151": "noticias_vm",
   "1152": "noticias_ar",
-  "1153": "noticias_ar"
+  "1153": "noticias_ar",
+  "1155": "comidas"
  },
  "tgOffset": 196508516,
  "hechos": {
@@ -21188,7 +21190,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-10T11:28:08.065Z",
+ "actualizado": "2026-11-10T11:44:39.325Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
