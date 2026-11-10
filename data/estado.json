@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 483,
+   "corridas": 484,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-09",
-   "ultimaCorrida": "2026-11-10T02:40:45.917Z",
+   "ultimaCorrida": "2026-11-10T03:10:41.086Z",
    "resumen": "💵 Dólar hoy (10:39 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1535 · venta $1555\n• Bolsa: compra $1560.2 · venta $1587.9\n• Contado con liquidación: compra $1658.4 · venta $1664.9\n• Mayorista: compra $1536",
    "informe": "data/informes/dolar/2026-11-09-1039.md",
    "pausado": false,
@@ -23,20 +23,20 @@
      "bolsa": 1587.9,
      "contadoconliqui": 1664.9,
      "mayorista": 1545.5,
-     "cripto": 1665.81,
+     "cripto": 1666,
      "tarjeta": 2041
     },
-    "dolarFecha": "2026-11-09",
+    "dolarFecha": "2026-11-10",
     "dolar": {
      "oficial": 1570,
      "blue": 1555,
      "bolsa": 1587.9,
      "contadoconliqui": 1664.9,
      "mayorista": 1545.5,
-     "cripto": 1665.81,
+     "cripto": 1666,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-10T02:40:45.917Z",
+    "ultimoChequeo": "2026-11-10T03:10:41.086Z",
     "resumenFecha": "2026-11-09",
     "hist": {
      "2026-10-30": {
@@ -130,6 +130,15 @@
       "tarjeta": 2041
      },
      "2026-11-09": {
+      "oficial": 1570,
+      "blue": 1555,
+      "bolsa": 1587.9,
+      "contadoconliqui": 1664.9,
+      "mayorista": 1545.5,
+      "cripto": 1666,
+      "tarjeta": 2041
+     },
+     "2026-11-10": {
       "oficial": 1570,
       "blue": 1555,
       "bolsa": 1587.9,
@@ -5536,7 +5545,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-07",
    "ultimaCorrida": "2026-11-07T16:50:18.549Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 3470 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 3500 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -9078,7 +9087,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 483,
+   "corridas": 484,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9087,7 +9096,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-10T02:40:45.917Z",
+   "ultimaCorrida": "2026-11-10T03:10:41.086Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9097,7 +9106,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-10T02:40:45.917Z",
+    "ultimoChequeo": "2026-11-10T03:10:41.086Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9252,6 +9261,20 @@
       "https://bosio-central.uwuubuntu83.workers.dev/": [
        47,
        47
+      ]
+     },
+     "2026-11-10": {
+      "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
+       1,
+       1
+      ],
+      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
+       1,
+       1
+      ],
+      "https://bosio-central.uwuubuntu83.workers.dev/": [
+       1,
+       1
       ]
      }
     }
@@ -16180,13 +16203,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-09",
-     "hechas": [
-      "08:30",
-      "13:00",
-      "17:30",
-      "21:30"
-     ]
+     "fecha": "2026-11-10",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-10T00:41:42.182Z"
    }
@@ -16208,10 +16226,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-09",
-     "hechas": [
-      "20:30"
-     ]
+     "fecha": "2026-11-10",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-09T23:41:45.598Z"
    }
@@ -16318,10 +16334,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-09",
-     "hechas": [
-      "09:00"
-     ]
+     "fecha": "2026-11-10",
+     "hechas": []
     },
     "instruido": true,
     "ultimoChequeo": "2026-11-09T12:10:54.327Z"
@@ -16344,10 +16358,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-09",
-     "hechas": [
-      "21:45"
-     ]
+     "fecha": "2026-11-10",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-10T01:11:54.158Z"
    }
@@ -18903,10 +18915,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-09",
-     "hechas": [
-      "22:00"
-     ]
+     "fecha": "2026-11-10",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-10T01:11:54.158Z"
    }
@@ -19038,10 +19048,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-09",
-     "hechas": [
-      "06:50"
-     ]
+     "fecha": "2026-11-10",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-09T10:10:34.882Z"
    }
@@ -19088,10 +19096,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-09",
-     "hechas": [
-      "10:00"
-     ]
+     "fecha": "2026-11-10",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-09T13:09:43.434Z"
    }
@@ -19148,7 +19154,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 465,
+   "corridas": 466,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -19157,13 +19163,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-10T02:40:45.917Z",
+   "ultimaCorrida": "2026-11-10T03:10:41.086Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-09",
-    "ultimoChequeo": "2026-11-10T02:40:45.917Z"
+    "ultimoChequeo": "2026-11-10T03:10:41.086Z"
    }
   },
   "feriados": {
@@ -19347,6 +19353,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-10T03:10:41.086Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-10T03:10:41.086Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-10T02:40:45.917Z",
    "quien": "Aumentos de servicios",
@@ -20836,16 +20852,6 @@
    "t": "2026-11-08T06:24:43.046Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-08T05:54:40.264Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-08T05:54:40.264Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
   }
  ],
  "pendientes": [],
@@ -21361,15 +21367,13 @@
   "buenDia": "2026-11-09"
  },
  "consumo": {
-  "fecha": "2026-11-09",
-  "consultas": 1,
+  "fecha": "2026-11-10",
+  "consultas": 0,
   "busquedas": 0,
-  "por": {
-   "cohere": 1
-  }
+  "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-10T02:40:45.917Z",
+ "actualizado": "2026-11-10T03:10:41.086Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -21394,39 +21398,9 @@
   ]
  },
  "ia": {
-  "fecha": "2026-11-09",
+  "fecha": "2026-11-10",
   "agotado": {},
-  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
-  "vivos": {
-   "cohere": {
-    "fecha": "2026-11-09",
-    "ids": [
-     "c4ai-aya-expanse-32b",
-     "c4ai-aya-vision-32b",
-     "command-a-03-2025",
-     "command-a-plus-05-2026",
-     "command-a-reasoning-08-2025",
-     "command-a-translate-08-2025",
-     "command-a-vision-07-2025",
-     "command-r-08-2024",
-     "command-r-plus-08-2024",
-     "command-r7b-12-2024",
-     "command-r7b-arabic-02-2025",
-     "north-mini-code-1.0",
-     "north-small-translate-1.0",
-     "parse-v5.0",
-     "tiny-aya-earth",
-     "tiny-aya-fire",
-     "tiny-aya-global",
-     "tiny-aya-water"
-    ]
-   }
-  },
-  "ultimo": {
-   "prov": "Cohere",
-   "modelo": "command-a-03-2025",
-   "t": "2026-11-10T02:10:52.551Z"
-  }
+  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
  },
  "dueno": 1237559052,
  "pendientesCant": 0
