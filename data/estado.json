@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 529,
+   "corridas": 530,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-10",
-   "ultimaCorrida": "2026-11-11T02:07:50.753Z",
+   "ultimaCorrida": "2026-11-11T02:37:39.919Z",
    "resumen": "🚨 Movimiento fuerte del dólar\nCripto: bajó 2.1% → $1623\n\n💵 Dólar hoy (18:09 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1535 · venta $1555\n• Bolsa: compra $1560.2 · venta $1587.9\n• Contado con liquidación",
    "informe": "data/informes/dolar/2026-11-10-1809.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1657.5,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-11T02:07:50.753Z",
+    "ultimoChequeo": "2026-11-11T02:37:39.919Z",
     "resumenFecha": "2026-11-10",
     "hist": {
      "2026-10-30": {
@@ -5462,7 +5462,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "sin señal",
+   "estado": "listo",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -5471,33 +5471,33 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-07",
-   "ultimaCorrida": "2026-11-07T16:50:18.549Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 4878 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "ultimaFecha": "2026-11-10",
+   "ultimaCorrida": "2026-11-11T02:20:01.386Z",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 18 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794070218549,
+     "t": 1794363601386,
      "redes_hoy": {
-      "publicaciones": 19,
-      "historias": 45,
-      "reels": 25,
-      "seguidos": 56,
-      "gringo": 8,
-      "errores": 32,
-      "reinicios": 75,
+      "publicaciones": 0,
+      "historias": 0,
+      "reels": 0,
+      "seguidos": 0,
+      "gringo": 0,
+      "errores": 1,
+      "reinicios": 0,
       "ultimas": [
-       "13:40 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
-       "13:41 No encontré un post adecuado para la historia",
-       "13:41 Instagram: ahora en @soycordobes.jpg",
-       "13:43 La cuenta maestromayordeobrasjb no apareció en la lista (intento 2/3)",
-       "13:43 Guardado debug/pantalla_134348.png y .xml",
-       "13:45 Instagram: ahora en @maestromayordeobrasjb",
-       "13:45 Post elegido de #memesgraciosos",
-       "13:46 ✔ Repost publicado en tu perfil",
-       "13:47 Instagram: ahora en @soycordobes.jpg",
-       "13:48 Instagram: ahora en @maestromayordeobrasjb"
+       "23:17 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "23:17 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
+       "23:17 PLAN DE HOY:",
+       "23:19 Error en fb_historia: No encontré ninguno de: ['Menú', 'Menu']",
+       "23:19 Guardado debug/pantalla_231935.png y .xml",
+       "23:19 Conectado por cable USB (emulator-5554)",
+       "23:19 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "23:19 ⚠ El vigía estaba apagado: lo volví a prender",
+       "23:19 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "23:19 ⚠ El vigía estaba apagado: lo volví a prender"
       ]
      }
     },
@@ -5658,6 +5658,27 @@
        "13:46 ✔ Repost publicado en tu perfil",
        "13:47 Instagram: ahora en @soycordobes.jpg",
        "13:48 Instagram: ahora en @maestromayordeobrasjb"
+      ]
+     },
+     "2026-11-10": {
+      "publicaciones": 0,
+      "historias": 0,
+      "reels": 0,
+      "seguidos": 0,
+      "gringo": 0,
+      "errores": 1,
+      "reinicios": 0,
+      "ultimas": [
+       "23:17 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "23:17 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
+       "23:17 PLAN DE HOY:",
+       "23:19 Error en fb_historia: No encontré ninguno de: ['Menú', 'Menu']",
+       "23:19 Guardado debug/pantalla_231935.png y .xml",
+       "23:19 Conectado por cable USB (emulator-5554)",
+       "23:19 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "23:19 ⚠ El vigía estaba apagado: lo volví a prender",
+       "23:19 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "23:19 ⚠ El vigía estaba apagado: lo volví a prender"
       ]
      }
     }
@@ -8989,7 +9010,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 529,
+   "corridas": 530,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -8998,7 +9019,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-11T02:07:50.753Z",
+   "ultimaCorrida": "2026-11-11T02:37:39.919Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9008,7 +9029,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-11T02:07:50.753Z",
+    "ultimoChequeo": "2026-11-11T02:37:39.919Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9167,16 +9188,16 @@
      },
      "2026-11-10": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       46,
-       46
+       47,
+       47
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       46,
-       46
+       47,
+       47
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       46,
-       46
+       47,
+       47
       ]
      }
     }
@@ -19107,7 +19128,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 511,
+   "corridas": 512,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -19116,13 +19137,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-11T02:07:50.753Z",
+   "ultimaCorrida": "2026-11-11T02:37:39.919Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-10",
-    "ultimoChequeo": "2026-11-11T02:07:50.753Z"
+    "ultimoChequeo": "2026-11-11T02:37:39.919Z"
    }
   },
   "feriados": {
@@ -19286,7 +19307,7 @@
    "memoria": {}
   },
   "lote_fb": {
-   "estado": "sin señal",
+   "estado": "listo",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -19295,8 +19316,8 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-07",
-   "ultimaCorrida": "2026-11-07T16:49:00.000Z",
+   "ultimaFecha": "2026-11-10",
+   "ultimaCorrida": "2026-11-11T02:17:00.000Z",
    "resumen": "Apagado (espera medidas y precio) · ensayo OK en «TRATO HECHO 2.0 Villa Maria» 14:18 (no publicó) · grupos: TRATO HECHO VILLA MARIA, TRATO HECHO VILLA NUEVA, Trato Hecho Villa Maria 1, TRATO HECHO VILLA MARIA 3",
    "informe": null,
    "pausado": false,
@@ -19306,6 +19327,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-11T02:37:39.919Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-11T02:37:39.919Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-11T02:07:50.753Z",
    "quien": "Entrenador",
@@ -20795,16 +20826,6 @@
    "t": "2026-11-09T05:27:50.587Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-09T04:57:26.326Z",
-   "quien": "Clima para la obra",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-09T04:57:26.326Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
@@ -21329,7 +21350,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-11T02:07:50.753Z",
+ "actualizado": "2026-11-11T02:37:39.919Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
