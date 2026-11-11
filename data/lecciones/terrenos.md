@@ -1,8 +1,8 @@
-- **Filtrar datos inviables (ej.: precios o superficies irreales) antes de incluirlos en el listado, evitando su aparición por completo.**
-- **Verificar que cada enlace lleve directamente al aviso específico, no solo a la página principal de la plataforma.**
-- **Ordenar el listado por precio por m² ascendente (menor a mayor) y explicitar este criterio en la introducción.**
-- **Excluir terrenos rurales o marcarlos como notas al margen si no son comparables con los urbanos.**
-- **Descartar avisos con publicación anterior a 30 días para asegurar información actualizada.**
-- **Indicar fuente exacta (sitio web + sección) junto al enlace de cada terreno.**
-- **Verificar superficies y precios con capturas o detalles de la publicación para corregir errores tipográficos.**
-- **Priorizar la mejor oportunidad como el terreno con menor precio por m², justificando excepciones solo con datos concretos (servicios, ubicación, etc.).**
+- Filtrar completamente datos inviables (ej: precios/superficies irreales) ANTES de incluir en el listado, evitando su aparición incluso como descarte.
+- Verificar que cada enlace lleve directamente al aviso específico, no solo a la plataforma general.
+- Ordenar el listado por precio por m² ascendente (menor a mayor) y explicitar este criterio en la introducción.
+- Excluir terrenos rurales o incluirlos solo como notas al margen, no en el listado principal.
+- Descartar avisos con publicación anterior a 30 días para asegurar información actualizada.
+- Indicar fuente exacta (sitio web + sección) junto al enlace de cada terreno.
+- Verificar superficies y precios con capturas o detalles de la publicación para corregir errores numéricos.
+- Priorizar la mejor oportunidad como el terreno con menor precio por m², justificando excepciones solo con datos concretos (servicios, ubicación, etc.).
