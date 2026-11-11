@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 555,
+   "corridas": 556,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-11",
-   "ultimaCorrida": "2026-11-11T15:11:45.017Z",
+   "ultimaCorrida": "2026-11-11T15:41:28.735Z",
    "resumen": "💵 Dólar hoy (10:41 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1535 · venta $1555\n• Bolsa: compra $1560.2 · venta $1587.9\n• Contado con liquidación: compra $1658.4 · venta $1664.9\n• Mayorista: compra $1536",
    "informe": "data/informes/dolar/2026-11-11-1041.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1644.17,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-11T15:11:45.017Z",
+    "ultimoChequeo": "2026-11-11T15:41:28.735Z",
     "resumenFecha": "2026-11-11",
     "hist": {
      "2026-10-30": {
@@ -5384,7 +5384,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "sin señal",
+   "estado": "listo",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -5393,33 +5393,33 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-10",
-   "ultimaCorrida": "2026-11-11T02:20:01.386Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 772 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "ultimaFecha": "2026-11-11",
+   "ultimaCorrida": "2026-11-11T15:38:44.876Z",
+   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794363601386,
+     "t": 1794411524876,
      "redes_hoy": {
-      "publicaciones": 0,
-      "historias": 0,
-      "reels": 0,
-      "seguidos": 0,
+      "publicaciones": 19,
+      "historias": 40,
+      "reels": 23,
+      "seguidos": 68,
       "gringo": 0,
-      "errores": 1,
-      "reinicios": 0,
+      "errores": 11,
+      "reinicios": 45,
       "ultimas": [
-       "23:17 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "23:17 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
-       "23:17 PLAN DE HOY:",
-       "23:19 Error en fb_historia: No encontré ninguno de: ['Menú', 'Menu']",
-       "23:19 Guardado debug/pantalla_231935.png y .xml",
-       "23:19 Conectado por cable USB (emulator-5554)",
-       "23:19 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "23:19 ⚠ El vigía estaba apagado: lo volví a prender",
-       "23:19 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "23:19 ⚠ El vigía estaba apagado: lo volví a prender"
+       "12:26 Error en fb_historia: Facebook: no encontré un video apto para compartir",
+       "12:26 Guardado debug/pantalla_122633.png y .xml",
+       "12:26 Conectado por cable USB (emulator-5554)",
+       "12:26 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "12:28 Post elegido de #construcciondecasas",
+       "12:29 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
+       "12:29 Claude: module 'reporte_claude' has no attribute 'en_hueco'",
+       "12:35 No encontré un reel adecuado para repostear",
+       "12:36 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "12:37 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram."
       ]
      }
     },
@@ -5601,6 +5601,27 @@
        "23:19 ⚠ El vigía estaba apagado: lo volví a prender",
        "23:19 Celular conectado: SM-A515F | pantalla 1080x2400",
        "23:19 ⚠ El vigía estaba apagado: lo volví a prender"
+      ]
+     },
+     "2026-11-11": {
+      "publicaciones": 19,
+      "historias": 40,
+      "reels": 23,
+      "seguidos": 68,
+      "gringo": 0,
+      "errores": 11,
+      "reinicios": 45,
+      "ultimas": [
+       "12:26 Error en fb_historia: Facebook: no encontré un video apto para compartir",
+       "12:26 Guardado debug/pantalla_122633.png y .xml",
+       "12:26 Conectado por cable USB (emulator-5554)",
+       "12:26 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "12:28 Post elegido de #construcciondecasas",
+       "12:29 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
+       "12:29 Claude: module 'reporte_claude' has no attribute 'en_hueco'",
+       "12:35 No encontré un reel adecuado para repostear",
+       "12:36 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "12:37 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram."
       ]
      }
     }
@@ -8936,7 +8957,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 555,
+   "corridas": 556,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -8945,7 +8966,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-11T15:11:45.017Z",
+   "ultimaCorrida": "2026-11-11T15:41:28.735Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -8955,7 +8976,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-11T15:11:45.017Z",
+    "ultimoChequeo": "2026-11-11T15:41:28.735Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9128,16 +9149,16 @@
      },
      "2026-11-11": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       25,
-       25
+       26,
+       26
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       25,
-       25
+       26,
+       26
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       25,
-       25
+       26,
+       26
       ]
      }
     }
@@ -18965,7 +18986,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 537,
+   "corridas": 538,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -18974,13 +18995,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-11T15:11:45.017Z",
+   "ultimaCorrida": "2026-11-11T15:41:28.735Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-11",
-    "ultimoChequeo": "2026-11-11T15:11:45.017Z"
+    "ultimoChequeo": "2026-11-11T15:41:28.735Z"
    }
   },
   "feriados": {
@@ -19144,7 +19165,7 @@
    "memoria": {}
   },
   "lote_fb": {
-   "estado": "sin señal",
+   "estado": "listo",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -19153,8 +19174,8 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-10",
-   "ultimaCorrida": "2026-11-11T02:17:00.000Z",
+   "ultimaFecha": "2026-11-11",
+   "ultimaCorrida": "2026-11-11T15:26:00.000Z",
    "resumen": "Apagado (espera medidas y precio) · ensayo OK en «TRATO HECHO 2.0 Villa Maria» 14:18 (no publicó) · grupos: TRATO HECHO VILLA MARIA, TRATO HECHO VILLA NUEVA, Trato Hecho Villa Maria 1, TRATO HECHO VILLA MARIA 3",
    "informe": null,
    "pausado": false,
@@ -19164,6 +19185,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-11T15:41:28.735Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-11T15:41:28.735Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-11T15:11:45.017Z",
    "quien": "Aumentos de servicios",
@@ -20653,16 +20684,6 @@
    "t": "2026-11-09T16:38:58.874Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-09T16:38:58.874Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-09T16:08:34.034Z",
-   "quien": "¿Qué comiste?",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
@@ -21184,7 +21205,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-11T15:11:45.017Z",
+ "actualizado": "2026-11-11T15:41:28.735Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
