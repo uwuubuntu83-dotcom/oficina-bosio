@@ -5514,13 +5514,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-12",
-   "ultimaCorrida": "2026-11-12T03:39:57.382Z",
+   "ultimaCorrida": "2026-11-12T03:45:09.188Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794454797382,
+     "t": 1794455109188,
      "redes_hoy": {
       "publicaciones": 2,
       "historias": 0,
@@ -5530,8 +5530,6 @@
       "errores": 0,
       "reinicios": 2,
       "ultimas": [
-       "00:22 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
-       "00:23 Instagram: ahora en @maestromayordeobrasjb",
        "00:24 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
        "00:24 PLAN DE HOY:",
        "00:31 No encontré un post adecuado para la historia",
@@ -5539,7 +5537,9 @@
        "00:32 Instagram: ahora en @maestromayordeobrasjb",
        "00:36 Instagram: ahora en @soycordobes.jpg",
        "00:37 Post elegido de #memesdeargentina",
-       "00:38 ✔ Repost publicado en tu perfil"
+       "00:38 ✔ Repost publicado en tu perfil",
+       "00:40 Instagram: ahora en @maestromayordeobrasjb",
+       "00:44 Instagram: ahora en @soycordobes.jpg"
       ]
      }
     },
@@ -5753,8 +5753,6 @@
       "errores": 0,
       "reinicios": 2,
       "ultimas": [
-       "00:22 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
-       "00:23 Instagram: ahora en @maestromayordeobrasjb",
        "00:24 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
        "00:24 PLAN DE HOY:",
        "00:31 No encontré un post adecuado para la historia",
@@ -5762,7 +5760,9 @@
        "00:32 Instagram: ahora en @maestromayordeobrasjb",
        "00:36 Instagram: ahora en @soycordobes.jpg",
        "00:37 Post elegido de #memesdeargentina",
-       "00:38 ✔ Repost publicado en tu perfil"
+       "00:38 ✔ Repost publicado en tu perfil",
+       "00:40 Instagram: ahora en @maestromayordeobrasjb",
+       "00:44 Instagram: ahora en @soycordobes.jpg"
       ]
      }
     }
@@ -19473,6 +19473,16 @@
  },
  "log": [
   {
+   "t": "2026-11-12T03:47:53.770Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-12T03:47:53.770Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
+  {
    "t": "2026-11-12T03:41:27.328Z",
    "quien": "Aumentos de servicios",
    "que": "entregó (sin IA)"
@@ -20961,16 +20971,6 @@
    "t": "2026-11-10T05:58:41.908Z",
    "quien": "Aumentos de servicios",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-10T05:58:41.908Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-10T05:58:41.908Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
   }
  ],
  "pendientes": [],
@@ -21492,7 +21492,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-12T03:41:27.328Z",
+ "actualizado": "2026-11-12T03:47:53.770Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
