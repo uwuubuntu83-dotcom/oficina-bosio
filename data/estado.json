@@ -5360,7 +5360,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-12",
    "ultimaCorrida": "2026-11-12T16:07:45.212Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 979 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 998 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -5684,18 +5684,18 @@
   "clima": {
    "estado": "falló",
    "corridas": 162,
-   "fallas": 5,
-   "fallasSeguidas": 2,
+   "fallas": 6,
+   "fallasSeguidas": 3,
    "puntaje": null,
    "historial": [],
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-11-13T08:26:43.341Z",
+   "ultimaCorrida": "2026-11-13T08:45:16.256Z",
    "resumen": "Falló: fetch failed",
    "informe": "data/informes/clima/2026-11-13-0057.md",
-   "pausado": false,
+   "pausado": true,
    "memoria": {
     "ultimoChequeo": "2026-11-13T05:56:28.326Z",
     "ultimoAviso": "Hoy: 68% de lluvia (2.5 mm)",
@@ -19333,6 +19333,21 @@
  },
  "log": [
   {
+   "t": "2026-11-13T08:45:16.256Z",
+   "quien": "Clima para la obra",
+   "que": "falló: fetch failed"
+  },
+  {
+   "t": "2026-11-13T08:45:16.256Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-13T08:45:16.256Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
+  {
    "t": "2026-11-13T08:26:43.341Z",
    "quien": "Clima para la obra",
    "que": "falló: fetch failed"
@@ -20816,21 +20831,6 @@
    "t": "2026-11-11T11:12:53.759Z",
    "quien": "Mundo: tecnología",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-11T11:12:53.759Z",
-   "quien": "Mundo: economía",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-11T11:12:53.759Z",
-   "quien": "Argentina: economía y obra pública",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-11T11:12:53.759Z",
-   "quien": "Noticias de Villa María",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
@@ -21352,7 +21352,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-13T08:26:43.341Z",
+ "actualizado": "2026-11-13T08:45:16.256Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
