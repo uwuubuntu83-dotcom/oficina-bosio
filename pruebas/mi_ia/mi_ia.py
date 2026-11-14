@@ -341,14 +341,16 @@ CARPETA_CEREBRO = os.path.join(DIR, "cerebro")
 CARPETA_PROYECTOS = os.path.join(DIR, "proyectos")
 _CEREBRO = {}
 
-INSTRUCCIONES = """Sos un programador experto que trabaja solo. Tenés estas herramientas y respondés SIEMPRE con UN solo JSON, sin texto extra:
-{"pensar": "tu razonamiento corto", "accion": "buscar", "texto": "qué buscar en internet"}
-{"pensar": "...", "accion": "leer", "url": "https://..."}
-{"pensar": "...", "accion": "escribir", "archivo": "ruta/relativa.ext", "contenido": "el archivo COMPLETO"}
-{"pensar": "...", "accion": "terminar", "resumen": "qué hiciste y cómo se usa"}
-Método: 1) buscá cómo se hace; 2) leé lo útil; 3) planeá los archivos; 4) escribí cada archivo completo y funcionando;
-5) si la revisión marca errores, corregilos; 6) terminá. Textos y comentarios en español.
-Preferí apps web en un solo index.html (HTML, CSS y JavaScript) que funcionen abriendo el archivo."""
+INSTRUCCIONES = """Sos un programador experto que trabaja solo. Respondés SIEMPRE con UN solo JSON y nada más.
+Acciones posibles:
+  buscar   → {"pensar": "...", "accion": "buscar", "texto": "qué buscar"}
+  leer     → {"pensar": "...", "accion": "leer", "url": "https://..."}
+  escribir → {"pensar": "...", "accion": "escribir", "archivo": "index.html", "contenido": "<!DOCTYPE html>..."}
+  terminar → {"pensar": "...", "accion": "terminar", "resumen": "qué hiciste y cómo se usa"}
+Ejemplo de escribir: {"pensar": "escribo la app completa", "accion": "escribir", "archivo": "index.html", "contenido": "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>App</title></head><body>...</body></html>"}
+Reglas: el archivo principal se llama index.html. Escribí el archivo COMPLETO, nunca «...». Buscá como mucho 2 veces y leé solo
+páginas de programación (MDN, W3Schools, GitHub, StackOverflow). Si una revisión marca errores, reescribí el archivo corregido.
+Textos de la app en español. La app tiene que funcionar abriendo index.html, sin servidor."""
 
 
 def elegir_cerebro():
@@ -417,6 +419,47 @@ def sacar_json(t):
     return None
 
 
+LECCIONES = os.path.join(DIR, "lecciones.json")
+
+
+def leer_lecciones():
+    try: return json.load(open(LECCIONES, encoding="utf-8"))
+    except Exception: return []
+
+
+def anotar_leccion(texto):
+    """Lo que aprendió de un error queda guardado y lo usa en TODOS los proyectos siguientes."""
+    l = leer_lecciones()
+    if texto not in l:
+        l.append(texto); json.dump(l[-40:], open(LECCIONES, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+
+def probar_en_navegador(ruta):
+    """Abre la app en un navegador de verdad (si tenés Playwright), toca los botones, junta errores y saca una foto."""
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        return None, None
+    errores, foto = [], os.path.splitext(ruta)[0] + "_captura.png"
+    try:
+        with sync_playwright() as pw:
+            nav = pw.chromium.launch(); pag = nav.new_page(viewport={"width": 420, "height": 860})
+            pag.on("pageerror", lambda e: errores.append("Error de JavaScript: " + str(e)[:200]))
+            pag.on("console", lambda m: errores.append("Consola: " + m.text[:200]) if m.type == "error" else None)
+            pag.goto("file://" + os.path.abspath(ruta)); pag.wait_for_timeout(800)
+            for campo in pag.query_selector_all("input[type=text], input:not([type]), textarea")[:3]:
+                try: campo.fill("prueba")
+                except Exception: pass
+            for b in pag.query_selector_all("button")[:6]:
+                try: b.click(timeout=800); pag.wait_for_timeout(200)
+                except Exception: pass
+            if not pag.inner_text("body").strip(): errores.append("La página se ve en blanco.")
+            pag.screenshot(path=foto); nav.close()
+    except Exception as e:
+        errores.append("No pude abrirla en el navegador: " + str(e)[:150])
+    return errores[:6], foto
+
+
 def revisar_archivo(ruta):
     """Revisa que lo escrito funcione (sin ejecutar nada peligroso)."""
     ext = os.path.splitext(ruta)[1].lower()
@@ -432,15 +475,40 @@ def revisar_archivo(ruta):
         elif ext in (".html", ".htm"):
             t = open(ruta, encoding="utf-8", errors="ignore").read().lower()
             if "<html" not in t or "</html>" not in t: return "El HTML está incompleto (falta <html> o </html>)."
+            if "..." in t and len(t) < 600: return "El archivo tiene partes sin escribir («...»). Escribilo completo."
+            errs, foto = probar_en_navegador(ruta)
+            if errs: return "Al probarla en un navegador real: " + " | ".join(errs)
         return ""
     except Exception as e:
         return str(e)[:600]
 
 
+def guardar_para_soñar(pedido, carpeta):
+    """Cada app terminada se guarda como ejemplo para que TU IA (mi_ia.pt) aprenda de ella mientras dormís."""
+    os.makedirs(CARPETA_DATOS, exist_ok=True)
+    with open(os.path.join(CARPETA_DATOS, "aprendido_del_cerebro.txt"), "a", encoding="utf-8") as f:
+        for r, _, fs in os.walk(carpeta):
+            for n in fs:
+                if n.endswith((".html", ".py", ".js", ".css")):
+                    f.write(f"\nPEDIDO: {pedido}\nARCHIVO: {n}\n{open(os.path.join(r, n), encoding='utf-8', errors='ignore').read()}\n\n")
+
+
+def soñar(horas=None):
+    """Mientras no la usás, TU IA se entrena con todo lo que hizo el cerebro grande: cada noche se parece más a él, y es tuya."""
+    f = os.path.join(CARPETA_DATOS, "aprendido_del_cerebro.txt")
+    if not os.path.exists(f): print("Todavía no hay nada para soñar: primero creá algo con  python mi_ia.py crear \"...\""); return
+    print(f"Soñando con {os.path.getsize(f)/1e6:.1f} MB de lo que aprendió del cerebro grande + tus textos...")
+    if horas: CONFIG["pasos"] = int(float(horas) * 3600 / 1.5)
+    entrenar()
+
+
 def crear(pedido, pasos_max=40):
     nombre = re.sub(r"[^a-z0-9]+", "_", pedido.lower())[:40].strip("_") or "proyecto"
     carpeta = os.path.join(CARPETA_PROYECTOS, nombre); os.makedirs(carpeta, exist_ok=True)
-    mensajes = [{"role": "system", "content": INSTRUCCIONES}, {"role": "user", "content": "PEDIDO: " + pedido}]
+    lec = leer_lecciones()
+    extra = ("\nLECCIONES DE PROYECTOS ANTERIORES (aplicalas):\n- " + "\n- ".join(lec[-12:])) if lec else ""
+    mensajes = [{"role": "system", "content": INSTRUCCIONES + extra}, {"role": "user", "content": "PEDIDO: " + pedido}]
+    busquedas = 0; escritos = 0
     print(f"Proyecto en: {carpeta}\n")
     for paso in range(1, pasos_max + 1):
         crudo, quien = pensar(mensajes)
@@ -450,7 +518,12 @@ def crear(pedido, pasos_max=40):
             print(f"[{paso}] ({quien}) respuesta no válida, le pido que corrija"); continue
         print(f"[{paso}] {a.get('pensar', '')[:160]}")
         acc = a["accion"]; resultado = ""
+        if acc in ("buscar", "leer") and busquedas >= 3 and not escritos:
+            resultado = "Ya investigaste suficiente. AHORA escribí el archivo index.html completo con la acción escribir."
+            acc = "_"
+            anotar_leccion("No investigar de más: con 2 o 3 búsquedas alcanza, después escribir el código.")
         if acc == "buscar":
+            busquedas += 1
             q = str(a.get("texto", pedido)); print(f"     🔎 busco: {q}")
             res = []
             for f in (buscar_duckduckgo, buscar_wikipedia):
@@ -459,21 +532,30 @@ def crear(pedido, pasos_max=40):
             res += [(f"https://github.com/search?q={urllib.parse.quote(q)}&type=code", "Código en GitHub")]
             resultado = "Resultados:\n" + "\n".join(f"- {t}: {u}" for u, t in res[:8])
         elif acc == "leer":
+            busquedas += 1
             u = str(a.get("url", "")); print(f"     📖 leo: {u}")
             texto = leer(u)
             mejores = mejores_oraciones(pedido + " " + a.get("pensar", ""), [(u, texto)], 25)
             resultado = ("Lo importante de la página:\n" + "\n".join(o for o, _ in mejores)) if mejores else (texto[:4000] or "No pude leer esa página.")
         elif acc == "escribir":
-            rel = os.path.normpath(str(a.get("archivo", "index.html"))).lstrip(os.sep).replace("..", "_")
+            rel = os.path.normpath(str(a.get("archivo") or "index.html")).lstrip(os.sep).replace("..", "_")
+            if "relativa" in rel or "." not in os.path.basename(rel) or rel.endswith(("ext", ".ext")):
+                anotar_leccion("El archivo principal se llama index.html, no el nombre del ejemplo.")
+                rel = "index.html"
+            escritos += 1
             ruta = os.path.join(carpeta, rel); os.makedirs(os.path.dirname(ruta), exist_ok=True)
             open(ruta, "w", encoding="utf-8").write(str(a.get("contenido", "")))
             err = revisar_archivo(ruta); print(f"     ✍️  escribí {rel}" + (f"  ⚠️ {err[:120]}" if err else "  ✅"))
-            resultado = f"Escribí {rel}. " + (f"LA REVISIÓN ENCONTRÓ UN ERROR, corregilo: {err}" if err else "Revisado sin errores.")
+            if err: anotar_leccion(f"Revisar antes de entregar: {err[:140]}")
+            resultado = f"Escribí {rel}. " + (f"LA REVISIÓN ENCONTRÓ UN ERROR, reescribí el archivo corregido: {err}" if err else "Revisado sin errores. Si ya está todo, usá terminar.")
+        elif acc == "terminar" and not escritos:
+            resultado = "Todavía no escribiste ningún archivo. Escribí index.html completo antes de terminar."
         elif acc == "terminar":
+            guardar_para_soñar(pedido, carpeta)
             archivos = [os.path.relpath(os.path.join(r, f), carpeta) for r, _, fs in os.walk(carpeta) for f in fs]
             print(f"\n✅ Listo: {a.get('resumen', '')}\nArchivos: {', '.join(archivos) or '(ninguno)'}\nCarpeta: {carpeta}")
             return carpeta
-        else:
+        elif acc != "_":
             resultado = f"La acción «{acc}» no existe. Usá buscar, leer, escribir o terminar."
         mensajes += [{"role": "assistant", "content": json.dumps(a, ensure_ascii=False)[:6000]}, {"role": "user", "content": resultado[:8000]}]
         if len(mensajes) > 30: mensajes = mensajes[:2] + mensajes[-26:]
@@ -567,6 +649,13 @@ if __name__ == "__main__":
     elif modo == "crear":
         pedido = " ".join(sys.argv[2:]) or input("¿Qué querés que cree? ")
         crear(pedido)
+    elif modo == "mejorar":
+        carpeta = sys.argv[2] if len(sys.argv) > 2 else input("Carpeta del proyecto: ")
+        pedido = " ".join(sys.argv[3:]) or input("¿Qué le mejoro? ")
+        actual = open(os.path.join(carpeta, "index.html"), encoding="utf-8").read() if os.path.exists(os.path.join(carpeta, "index.html")) else ""
+        crear(f"Mejorá esta app: {pedido}. CÓDIGO ACTUAL de index.html:\n{actual[:12000]}")
+    elif modo == "soñar": soñar(sys.argv[2] if len(sys.argv) > 2 else None)
+    elif modo == "lecciones": print("\n".join("• " + x for x in leer_lecciones()) or "Todavía no aprendió lecciones.")
     elif modo == "web": web(int(sys.argv[2]) if len(sys.argv) > 2 else 8000)
     elif modo == "preguntar":
         if len(sys.argv) > 2: print(responder(" ".join(sys.argv[2:])))
@@ -576,4 +665,4 @@ if __name__ == "__main__":
                 try: q = input("\nVos: ").strip()
                 except (KeyboardInterrupt, EOFError): break
                 if q: print("\n" + responder(q))
-    else: print("Uso: python mi_ia.py aprender | entrenar | charlar | preguntar | crear | web")
+    else: print("Uso: python mi_ia.py aprender | entrenar | charlar | preguntar | crear | mejorar | soñar | lecciones | web")
