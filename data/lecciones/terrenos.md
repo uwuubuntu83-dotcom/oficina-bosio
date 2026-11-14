@@ -1,8 +1,8 @@
-- Filtrar previamente cualquier dato inviable (precios o superficies absurdas) y excluirlo del listado; no incluirlo ni siquiera como descarte.
-- Verificar que cada enlace dirija al aviso específico, no a la página principal de la plataforma; evitar enlaces genéricos.
-- Ordenar el listado por precio por m² de forma ascendente y explicitar este criterio en la introducción; no usar otro ordenamiento.
-- Excluir terrenos rurales del listado principal y, si se mencionan, relegarlos a notas al margen; no mezclarlos con terrenos urbanos.
-- Descartar avisos con fecha de publicación superior a 30 días para garantizar actualidad; no incluir publicaciones antiguas.
+- Filtrar previamente cualquier dato inviable (precios o superficies absurdas) y excluirlos completamente del listado, sin incluirlos ni como descarte.
+- Verificar que cada enlace lleve directamente al aviso específico, no a la página principal de la plataforma; evitar enlaces genéricos.
+- Ordenar el listado exclusivamente por precio por m² de forma ascendente (menor a mayor) y explicitar este criterio en la introducción.
+- Excluir terrenos rurales del listado principal; si se mencionan, relegarlos a notas al margen, no mezclados con terrenos urbanos.
+- Descartar avisos con fecha de publicación superior a 30 días para garantizar actualidad; no incluir publicaciones antiguas.
 - Indicar la fuente exacta (sitio web + sección) junto a cada enlace; evitar referencias vagas o solo al dominio.
-- Corroborar superficies y precios con capturas de pantalla o detalles de la publicación para corregir posibles errores numéricos; no confiar ciegamente en los datos mostrados.
-- Priorizar la mejor oportunidad como el terreno con menor precio por m², justificando cualquier excepción con datos concretos (servicios, ubicación, etc.); no elegir por criterios no cuantificados.
+- Corroborar superficies y precios con capturas de pantalla o detalles de la publicación para corregir errores numéricos; no confiar ciegamente en los datos mostrados.
+- Priorizar la mejor oportunidad como el terreno con menor precio por m²; justificar excepciones solo con datos concretos (servicios, ubicación, etc.), no con criterios no cuantificados.
