@@ -15,7 +15,7 @@ CONFIG = dict(tamano="chica", lote=32, aprendizaje=3e-4, pasos=5000, cada=250, d
 DIR = os.path.dirname(os.path.abspath(__file__))
 CARPETA_DATOS = os.path.join(DIR, "datos")
 ARCHIVO_MODELO = os.path.join(DIR, "mi_ia.pt")
-VERSION = 6
+VERSION = 7
 if sys.stdout is None:  # corriendo escondida (sin ventana negra): lo que diría va a mi_ia_registro.txt
     sys.stdout = sys.stderr = open(os.path.join(DIR, "mi_ia_registro.txt"), "a", encoding="utf-8", buffering=1)
 FUENTE = "https://raw.githubusercontent.com/uwuubuntu83-dotcom/oficina-bosio/main/pruebas/mi_ia/mi_ia.py"
@@ -31,7 +31,9 @@ def actualizarse():
             compile(nuevo, "mi_ia.py", "exec")  # solo si el código nuevo está sano
             open(os.path.abspath(__file__), "w", encoding="utf-8").write(nuevo)
             print(f"Me actualicé sola a la versión {v}. Reinicio...", flush=True)
-            os.execv(sys.executable, [sys.executable, os.path.abspath(__file__)] + sys.argv[1:])
+            import subprocess
+            subprocess.Popen([sys.executable, os.path.abspath(__file__)] + [a for a in sys.argv[1:] if a != "esperar"] + ["esperar"])
+            os._exit(0)
     except Exception as e:
         print(f"(no pude buscar actualizaciones: {str(e)[:80]}; sigo con la versión {VERSION})")
 
@@ -691,7 +693,7 @@ input{flex:1;padding:12px 14px;border-radius:12px;border:1px solid #2c3140;backg
 button{padding:0 16px;border:0;border-radius:12px;background:var(--a);color:#111;font-weight:600;font-size:15px}
 label{display:flex;align-items:center;gap:6px;color:var(--s);font-size:13px;padding:0 14px 10px}
 </style></head><body>
-<header><span></span>Mi IA <small style="color:var(--s);font-weight:400">· versión 6</small></header><div id="chat"></div>
+<header><span></span>Mi IA <small style="color:var(--s);font-weight:400">· versión 7</small></header><div id="chat"></div>
 <form id="f"><input id="q" placeholder="Escribí..." autocomplete="off"><button>Enviar</button></form>
 <label id="estado">Busca en internet sola · para crear: «creame una app de…» (tarda unos minutos) · la primera respuesta tarda más</label>
 <script>
@@ -717,9 +719,11 @@ def web(puerto=8000, silencio=False):
     except OSError:
         pass
     uso = [time.time()]
-    def liberar():  # si no la usás 15 minutos, suelta el cerebro y libera la memoria de tu compu
+    def liberar():  # si no la usás 15 minutos, suelta el cerebro; y cada 20 minutos se fija si hay versión nueva
+        vueltas = 0
         while True:
-            time.sleep(60)
+            time.sleep(60); vueltas += 1
+            if vueltas % 20 == 0 and time.time() - uso[0] > 120: actualizarse()
             if _CEREBRO and time.time() - uso[0] > 900:
                 _CEREBRO.clear(); import gc; gc.collect(); print("Solté el cerebro para liberar memoria.", flush=True)
     threading.Thread(target=liberar, daemon=True).start()
@@ -733,7 +737,7 @@ def web(puerto=8000, silencio=False):
     charla = []
     def contestar(texto, internet):
         uso[0] = time.time()
-        if re.match(r"\s*(crear|cre[aá]|creame|cre[aá]me|haceme|hac[eé]|armame|program[aá]me|necesito)\b.{0,40}\b(app|aplicaci[oó]n|p[aá]gina|web|programa|juego|sistema)", texto.lower()) or texto.lower().startswith(("crear:", "creá:", "crea:")):
+        if re.search(r"\b(crea\w*|cre[aá]\w*|hac\w*|arm\w*|program\w*|necesit\w*|quier\w*|pod[eé]s)\b.{0,50}\b(app|apps|aplicaci[oó]n|p[aá]gina|web|programa|juego|sistema|calculadora)\b", texto.lower()) and not re.search(r"\b(qu[eé] (app|programa)|recomend|cu[aá]l es)", texto.lower()) or texto.lower().startswith(("crear:", "creá:", "crea:")):
             pedido = texto.split(":", 1)[-1].strip() if ":" in texto[:8] else texto
             print(f"[{time.strftime('%H:%M:%S')}] Creando app: {pedido[:60]}", flush=True)
             carpeta = crear(pedido)
@@ -747,14 +751,16 @@ def web(puerto=8000, silencio=False):
         if re.search(r"\b(hoy|ahora|actual|últim|ultim|precio|cu[aá]nto (sale|cuesta|est[aá])|d[oó]lar|cotiz|noticia|clima|pron[oó]stico|20(2[5-9]|3\d)|qui[eé]n (es|gan[oó])|busc[aá]|investig[aá]|internet)", texto.lower()):
             internet = True
         if internet:
-            try: extra = "\n\nINFORMACIÓN QUE ENCONTRÉ EN INTERNET (usala y nombrá las fuentes):\n" + responder(texto)[:6000]
+            try: extra = "\n\n[El programa YA buscó en internet por vos. Esto encontró; usalo y nombrá las fuentes:]\n" + responder(texto)[:6000]
             except Exception as e: extra = f"\n(no pude buscar en internet: {e})"
         try:
             sistema = ("Sos Mi IA, el asistente personal de Jonathan Bosio (maestro mayor de obras, Villa María, Argentina). "
                        "Corrés en SU propia computadora y sos de él. Ayudás con TODO: charla, preguntas, cuentas, obras, programación, ideas, negocios. "
                        "Nunca digas «no puedo ayudarte con eso» ni «lo siento»: si no sabés algo, decí lo que sí sabés o qué buscarías. "
                        "Si te saluda, saludalo. Respondé en español rioplatense, claro y directo. "
-                       "Si te pide crear una app, decile que escriba «crear: lo que quiera».")
+                       "TUS CAPACIDADES REALES: SÍ tenés internet (el programa busca por vos y te pasa lo que encuentra) y SÍ creás apps "
+                       "(cuando te piden «creame una app de…» el programa la arma, la prueba y la abre). Nunca digas que no tenés internet "
+                       "ni que no podés crear apps. Si te preguntan qué podés hacer: charlar, buscar en internet, crear apps y mejorarlas.")
             charla.append({"role": "user", "content": texto + extra})
             print(f"[{time.strftime('%H:%M:%S')}] Pensando{' (con internet)' if internet else ''}: {texto[:60]}", flush=True)
             base = [{"role": "system", "content": sistema + " Respondé corto (máximo 8 renglones) salvo que te pidan algo largo."}]
@@ -807,6 +813,7 @@ def web(puerto=8000, silencio=False):
 
 # ======================================================================================
 if __name__ == "__main__":
+    if "esperar" in sys.argv: time.sleep(4)  # viene de actualizarse: dejo que la vieja termine de cerrarse
     modo = (sys.argv[1] if len(sys.argv) > 1 else "web").lower()  # doble clic en mi_ia.py = abre la web
     if modo == "web": actualizarse(); poner_icono()
     if modo == "entrenar": entrenar()
