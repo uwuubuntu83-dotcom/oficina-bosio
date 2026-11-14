@@ -1,0 +1,66 @@
+
+PEDIDO: una app de lista de tareas en un solo index.html: agregar tareas, marcarlas como hechas, borrarlas y que se guarden en el navegador. (03:59 7B comprimido)
+ARCHIVO: index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .task { margin: 5px 0; }
+        .completed { text-decoration: line-through; }
+    </style>
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <input type="text" id="newTask" placeholder="Nueva tarea">
+    <button onclick="addTask()">Agregar Tarea</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        function loadTasks() {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+            tasks.forEach((task, index) => {
+                const li = document.createElement('li');
+                li.className = task.completed ? 'task completed' : 'task';
+                li.textContent = task.text;
+                li.innerHTML += ' <button onclick="toggleTask(' + index + ')">Marcar como ' + (task.completed ? 'pendiente' : 'hecho') + '</button> <button onclick="deleteTask(' + index + ')">Borrar</button>';
+                taskList.appendChild(li);
+            });
+        }
+
+        function addTask() {
+            const newTaskInput = document.getElementById('newTask');
+            const newTaskText = newTaskInput.value.trim();
+            if (newTaskText) {
+                const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+                tasks.push({ text: newTaskText, completed: false });
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+                newTaskInput.value = '';
+                loadTasks();
+            }
+        }
+
+        function toggleTask(index) {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks[index].completed = !tasks[index].completed;
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            loadTasks();
+        }
+
+        function deleteTask(index) {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.splice(index, 1);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            loadTasks();
+        }
+
+        loadTasks();
+    </script>
+</body>
+</html>
+
