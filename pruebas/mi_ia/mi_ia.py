@@ -15,7 +15,7 @@ CONFIG = dict(tamano="chica", lote=32, aprendizaje=3e-4, pasos=5000, cada=250, d
 DIR = os.path.dirname(os.path.abspath(__file__))
 CARPETA_DATOS = os.path.join(DIR, "datos")
 ARCHIVO_MODELO = os.path.join(DIR, "mi_ia.pt")
-VERSION = 5
+VERSION = 6
 if sys.stdout is None:  # corriendo escondida (sin ventana negra): lo que diría va a mi_ia_registro.txt
     sys.stdout = sys.stderr = open(os.path.join(DIR, "mi_ia_registro.txt"), "a", encoding="utf-8", buffering=1)
 FUENTE = "https://raw.githubusercontent.com/uwuubuntu83-dotcom/oficina-bosio/main/pruebas/mi_ia/mi_ia.py"
@@ -691,16 +691,16 @@ input{flex:1;padding:12px 14px;border-radius:12px;border:1px solid #2c3140;backg
 button{padding:0 16px;border:0;border-radius:12px;background:var(--a);color:#111;font-weight:600;font-size:15px}
 label{display:flex;align-items:center;gap:6px;color:var(--s);font-size:13px;padding:0 14px 10px}
 </style></head><body>
-<header><span></span>Mi IA <small style="color:var(--s);font-weight:400">· versión 5</small></header><div id="chat"></div>
+<header><span></span>Mi IA <small style="color:var(--s);font-weight:400">· versión 6</small></header><div id="chat"></div>
 <form id="f"><input id="q" placeholder="Escribí..." autocomplete="off"><button>Enviar</button></form>
-<label id="estado">Busca en internet sola cuando hace falta · la primera respuesta tarda más (carga el cerebro)</label>
+<label id="estado">Busca en internet sola · para crear: «creame una app de…» (tarda unos minutos) · la primera respuesta tarda más</label>
 <script>
 const chat=document.getElementById('chat');
 function poner(t,c){const d=document.createElement('div');d.className='m '+c;d.textContent=t;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;return d}
 document.getElementById('f').onsubmit=async e=>{e.preventDefault();const q=document.getElementById('q');const t=q.value.trim();if(!t)return;q.value='';
 poner(t,'vos');const r=poner('Pensando…','ia');let s=0;const tm=setInterval(()=>{s++;r.textContent='Pensando… '+s+' s'},1000);
 try{const res=await fetch('/api',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({texto:t,internet:false})});
-r.textContent=(await res.json()).respuesta||'(sin respuesta)'}catch(err){r.textContent='No pude conectar con la IA. ¿Está abierta la ventana negra?'}clearInterval(tm)};
+r.textContent=(await res.json()).respuesta||'(sin respuesta)'}catch(err){r.textContent='Mi IA está apagada. Hacé doble clic en el ícono «Mi IA» del Escritorio y volvé a mandar el mensaje.'}clearInterval(tm)};
 if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js');
 </script></body></html>"""
 MANIFEST = '{"name":"Mi IA","short_name":"Mi IA","start_url":"/","display":"standalone","background_color":"#111318","theme_color":"#111318","icons":[{"src":"/icono.svg","sizes":"any","type":"image/svg+xml"}]}'
@@ -733,8 +733,15 @@ def web(puerto=8000, silencio=False):
     charla = []
     def contestar(texto, internet):
         uso[0] = time.time()
-        if texto.lower().startswith(("crear:", "creá:", "crea:", "haceme")):
-            return "Listo. Proyecto creado en: " + crear(texto.split(":", 1)[-1].strip())
+        if re.match(r"\s*(crear|cre[aá]|creame|cre[aá]me|haceme|hac[eé]|armame|program[aá]me|necesito)\b.{0,40}\b(app|aplicaci[oó]n|p[aá]gina|web|programa|juego|sistema)", texto.lower()) or texto.lower().startswith(("crear:", "creá:", "crea:")):
+            pedido = texto.split(":", 1)[-1].strip() if ":" in texto[:8] else texto
+            print(f"[{time.strftime('%H:%M:%S')}] Creando app: {pedido[:60]}", flush=True)
+            carpeta = crear(pedido)
+            web_abrir = os.path.join(carpeta, "index.html")
+            if os.path.exists(web_abrir):
+                import webbrowser; webbrowser.open("file:///" + web_abrir.replace(os.sep, "/"))
+                return f"¡Listo! Te la abrí en otra pestaña.\nQuedó guardada en: {carpeta}"
+            return "Intenté crearla pero no quedó bien. Probá pedírmela de nuevo con más detalle."
         extra = ""
         # decide sola si hace falta buscar: cosas actuales o que cambian
         if re.search(r"\b(hoy|ahora|actual|últim|ultim|precio|cu[aá]nto (sale|cuesta|est[aá])|d[oó]lar|cotiz|noticia|clima|pron[oó]stico|20(2[5-9]|3\d)|qui[eé]n (es|gan[oó])|busc[aá]|investig[aá]|internet)", texto.lower()):
