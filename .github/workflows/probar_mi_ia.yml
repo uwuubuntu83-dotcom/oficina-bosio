@@ -9,18 +9,18 @@ concurrency: { group: probar-mi-ia, cancel-in-progress: true }
 jobs:
   probar:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - name: Instalar
-        run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q transformers huggingface_hub accelerate requests beautifulsoup4 playwright && python -m playwright install --with-deps chromium >/dev/null
+        run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q llama-cpp-python huggingface_hub requests beautifulsoup4 playwright --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu && python -m playwright install --with-deps chromium >/dev/null
       - name: Crear la app (cerebro real + internet real)
         working-directory: pruebas/mi_ia
         run: |
           PEDIDO="$(cat pedido.txt)"
-          MI_IA_CEREBRO=Qwen/Qwen2.5-Coder-3B-Instruct timeout 7800 python -u mi_ia.py crear "$PEDIDO" 2>&1 | tee salida.txt || true
+          timeout 7800 python -u mi_ia.py crear "$PEDIDO" 2>&1 | tee salida.txt || true
           rm -rf cerebro __pycache__; cat lecciones.json 2>/dev/null >> salida.txt || true
       - name: Guardar resultado
         run: |

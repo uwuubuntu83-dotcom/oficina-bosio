@@ -376,7 +376,73 @@ def cargar_cerebro():
     return m, t
 
 
+def ram_total_gb():
+    try:
+        if os.name == "nt":
+            import ctypes
+            class M(ctypes.Structure):
+                _fields_ = [("dwLength", ctypes.c_ulong), ("dwMemoryLoad", ctypes.c_ulong), ("ullTotalPhys", ctypes.c_ulonglong),
+                            ("ullAvailPhys", ctypes.c_ulonglong), ("a", ctypes.c_ulonglong), ("b", ctypes.c_ulonglong),
+                            ("c", ctypes.c_ulonglong), ("d", ctypes.c_ulonglong), ("e", ctypes.c_ulonglong)]
+            m = M(); m.dwLength = ctypes.sizeof(M); ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(m))
+            return m.ullTotalPhys / 1e9
+        return int(open("/proc/meminfo").read().split()[1]) / 1e6
+    except Exception:
+        return 8.0
+
+
+# Cerebros COMPRIMIDOS (GGUF, 4 bits): misma IA, ~4 veces menos memoria, rápidos en procesador común.
+COMPRIMIDOS = [
+    ("Qwen/Qwen2.5-Coder-7B-Instruct-GGUF", "q4_k_m", 7.5),   # ~5 GB de memoria: el que mejor razona
+    ("Qwen/Qwen2.5-Coder-3B-Instruct-GGUF", "q4_k_m", 3.5),   # ~2 GB
+    ("Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF", "q4_k_m", 0),   # ~1 GB
+]
+
+
+def bajar_comprimido(repo, tipo):
+    from huggingface_hub import list_repo_files, hf_hub_download
+    local = os.path.join(CARPETA_CEREBRO, repo.split("/")[-1])
+    ya = sorted(glob.glob(os.path.join(local, f"*{tipo}*.gguf")))
+    if ya: return ya[0]
+    partes = sorted(f for f in list_repo_files(repo) if f.lower().endswith(".gguf") and tipo in f.lower())
+    if not partes: raise RuntimeError(f"no encontré el archivo {tipo} en {repo}")
+    print(f"Bajo el cerebro {repo} ({len(partes)} archivo/s) a tu carpeta, una sola vez...")
+    for f in partes: hf_hub_download(repo, f, local_dir=local)
+    return os.path.join(local, partes[0])
+
+
+def cargar_comprimido():
+    from llama_cpp import Llama
+    pedido = os.environ.get("MI_IA_CEREBRO", "")
+    ram = ram_total_gb()
+    lista = [c for c in COMPRIMIDOS if pedido.lower() in c[0].lower()] if pedido else [c for c in COMPRIMIDOS if ram >= c[2]]
+    for repo, tipo, _ in (lista or COMPRIMIDOS):
+        try:
+            ruta = bajar_comprimido(repo, tipo)
+            m = Llama(model_path=ruta, n_ctx=8192, n_threads=max(1, (os.cpu_count() or 4)), verbose=False)
+            _CEREBRO.update(llama=m, nombre=repo.split("/")[-1].replace("-GGUF", "") + " (comprimido)")
+            print(f"Cerebro listo: {_CEREBRO['nombre']} · tu compu tiene {ram:.0f} GB de RAM")
+            return m
+        except MemoryError:
+            print(f"No me alcanzó la memoria para {repo}: pruebo con uno más chico.")
+        except Exception as e:
+            if "memory" in str(e).lower() or "alloc" in str(e).lower():
+                print(f"No me alcanzó la memoria para {repo}: pruebo con uno más chico.")
+            else: raise
+    raise RuntimeError("No pude cargar ningún cerebro comprimido.")
+
+
 def cerebro_local(mensajes, largo=3000):
+    # 1) comprimido (llama.cpp): el recomendado para compus sin placa de video
+    try:
+        import llama_cpp  # noqa
+        m = _CEREBRO.get("llama") or cargar_comprimido()
+        r = m.create_chat_completion(messages=mensajes, max_tokens=largo, temperature=0.2,
+                                     response_format={"type": "json_object"})
+        return r["choices"][0]["message"]["content"]
+    except ImportError:
+        pass
+    # 2) sin comprimir (transformers): para compus con placa de video
     m, t = cargar_cerebro()
     ids = t.apply_chat_template(mensajes, add_generation_prompt=True, return_tensors="pt")
     if not torch.is_tensor(ids): ids = ids["input_ids"]
@@ -400,7 +466,7 @@ def cerebro_propio(mensajes):
 def pensar(mensajes):
     try: return cerebro_local(mensajes), _CEREBRO.get("nombre", "cerebro")
     except ImportError:
-        print("Para razonar falta instalar una vez:  pip install transformers huggingface_hub accelerate")
+        print("Para razonar falta instalar una vez:\n  pip install llama-cpp-python huggingface_hub --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu")
         return cerebro_propio(mensajes), "mi_ia.pt"
 
 
