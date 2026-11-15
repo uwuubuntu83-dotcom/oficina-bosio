@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 732,
+   "corridas": 733,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-14",
-   "ultimaCorrida": "2026-11-15T11:55:44.696Z",
+   "ultimaCorrida": "2026-11-15T12:25:56.436Z",
    "resumen": "💵 Dólar hoy (10:53 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1555 · venta $1575\n• Bolsa: compra $1575.5 · venta $1580.9\n• Contado con liquidación: compra $1668.2 · venta $1671.9\n• Mayorista: compra $1534",
    "informe": "data/informes/dolar/2026-11-14-1053.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1676.1,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-15T11:55:44.696Z",
+    "ultimoChequeo": "2026-11-15T12:25:56.436Z",
     "resumenFecha": "2026-11-14",
     "hist": {
      "2026-10-30": {
@@ -189,7 +189,7 @@
       "bolsa": 1580.9,
       "contadoconliqui": 1671.9,
       "mayorista": 1543.5,
-      "cripto": 1676.1,
+      "cripto": 1682.83,
       "tarjeta": 2041
      }
     },
@@ -5294,7 +5294,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-13",
    "ultimaCorrida": "2026-11-13T23:36:13.680Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 2180 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 2210 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -5637,22 +5637,22 @@
    "memoria": {}
   },
   "clima": {
-   "estado": "falló",
-   "corridas": 177,
+   "estado": "listo",
+   "corridas": 178,
    "fallas": 11,
-   "fallasSeguidas": 1,
+   "fallasSeguidas": 0,
    "puntaje": null,
    "historial": [],
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-11-15T11:55:44.696Z",
+   "ultimaCorrida": "2026-11-15T12:25:56.436Z",
    "resumen": "Falló: fetch failed",
    "informe": "data/informes/clima/2026-11-15-0445.md",
    "pausado": false,
    "memoria": {
-    "ultimoChequeo": "2026-11-15T09:56:36.708Z",
+    "ultimoChequeo": "2026-11-15T12:25:56.436Z",
     "ultimoAviso": "Mañana: 64% de lluvia (5.2 mm)",
     "resumenFecha": "2026-10-30",
     "autoReintento": "2026-11-13",
@@ -8994,7 +8994,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 732,
+   "corridas": 733,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9003,7 +9003,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-15T11:55:44.696Z",
+   "ultimaCorrida": "2026-11-15T12:25:56.436Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9013,7 +9013,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-15T11:55:44.696Z",
+    "ultimoChequeo": "2026-11-15T12:25:56.436Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9242,16 +9242,16 @@
      },
      "2026-11-15": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       18,
-       18
+       19,
+       19
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       18,
-       18
+       19,
+       19
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       18,
-       18
+       19,
+       19
       ]
      }
     }
@@ -15858,7 +15858,7 @@
   },
   "gastos_casa": {
    "estado": "listo",
-   "corridas": 16,
+   "corridas": 17,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -15866,18 +15866,20 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-14",
-   "ultimaCorrida": "2026-11-14T12:24:02.283Z",
+   "ultimaFecha": "2026-11-15",
+   "ultimaCorrida": "2026-11-15T12:25:56.436Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "horas": {
      "fecha": "2026-11-15",
-     "hechas": []
+     "hechas": [
+      "09:00"
+     ]
     },
     "instruido": true,
-    "ultimoChequeo": "2026-11-14T12:24:02.283Z"
+    "ultimoChequeo": "2026-11-15T12:25:56.436Z"
    }
   },
   "gastos_personales": {
@@ -18736,7 +18738,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 714,
+   "corridas": 715,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -18745,13 +18747,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-15T11:55:44.696Z",
+   "ultimaCorrida": "2026-11-15T12:25:56.436Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-15",
-    "ultimoChequeo": "2026-11-15T11:55:44.696Z"
+    "ultimoChequeo": "2026-11-15T12:25:56.436Z"
    }
   },
   "feriados": {
@@ -18933,6 +18935,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-15T12:25:56.436Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-15T12:25:56.436Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-15T11:55:44.696Z",
    "quien": "¿Qué comiste?",
@@ -20422,16 +20434,6 @@
    "t": "2026-11-13T16:10:54.167Z",
    "quien": "Noticias de Villa María",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-13T16:10:54.167Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-13T16:10:54.167Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
   }
  ],
  "pendientes": [],
@@ -20953,7 +20955,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-15T11:55:44.696Z",
+ "actualizado": "2026-11-15T12:25:56.436Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
