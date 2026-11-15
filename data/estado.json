@@ -5206,7 +5206,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-13",
    "ultimaCorrida": "2026-11-13T23:36:13.680Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 1519 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 1543 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -5549,23 +5549,23 @@
    "memoria": {}
   },
   "clima": {
-   "estado": "falló",
-   "corridas": 172,
+   "estado": "listo",
+   "corridas": 173,
    "fallas": 9,
-   "fallasSeguidas": 1,
+   "fallasSeguidas": 0,
    "puntaje": null,
    "historial": [],
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-11-15T00:55:40.574Z",
-   "resumen": "Falló: fetch failed",
-   "informe": "data/informes/clima/2026-11-14-1731.md",
+   "ultimaCorrida": "2026-11-15T01:18:55.193Z",
+   "resumen": "⚠️ Cambió el pronóstico para la obra\n\n🌤️ Clima en Villa María, Córdoba\n• Hoy 14/11: 18° a 26° · lluvia 51% · viento 24 km/h\n• Mañana 15/11: 14° a 28° · lluvia 4% · viento 12 km/h\n• Pasado 16/11: 18° a 30° · lluvia 64% ·",
+   "informe": "data/informes/clima/2026-11-14-2218.md",
    "pausado": false,
    "memoria": {
-    "ultimoChequeo": "2026-11-14T22:55:40.493Z",
-    "ultimoAviso": "Pasado: 64% de lluvia (8.4 mm)",
+    "ultimoChequeo": "2026-11-15T01:18:55.193Z",
+    "ultimoAviso": "Pasado: 64% de lluvia (7.5 mm)",
     "resumenFecha": "2026-10-30",
     "autoReintento": "2026-11-13",
     "autoReintentos": 1
@@ -18326,7 +18326,7 @@
   },
   "informe_redes": {
    "estado": "listo",
-   "corridas": 15,
+   "corridas": 16,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -18334,17 +18334,19 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-13",
-   "ultimaCorrida": "2026-11-14T01:20:45.514Z",
-   "resumen": "🧾 Informe del día del celu bot\n\n📱 Celu bot · 🔴 no responde hace 105 min (revisá la depuración inalámbrica)\nBot de Instagram: trabajando\n\nHoy: 12 publicaciones · 16 historias · 17 reels/reposts · 22 seguidos · 5 dejado",
-   "informe": "data/informes/informe_redes/2026-11-13-2220.md",
+   "ultimaFecha": "2026-11-14",
+   "ultimaCorrida": "2026-11-15T01:18:55.193Z",
+   "resumen": "🧾 Informe del día del celu bot\n\n📱 Celu bot · 🔴 no responde hace 1543 min (revisá la depuración inalámbrica)\nBot de Instagram: trabajando\n\nHoy: 12 publicaciones · 16 historias · 17 reels/reposts · 22 seguidos · 5 dejad",
+   "informe": "data/informes/informe_redes/2026-11-14-2218.md",
    "pausado": false,
    "memoria": {
     "horas": {
      "fecha": "2026-11-14",
-     "hechas": []
+     "hechas": [
+      "22:00"
+     ]
     },
-    "ultimoChequeo": "2026-11-14T01:20:45.514Z"
+    "ultimoChequeo": "2026-11-15T01:18:55.193Z"
    }
   },
   "yt_tendencias": {
@@ -18783,6 +18785,26 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-15T01:18:55.193Z",
+   "quien": "Informe del celu",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-15T01:18:55.193Z",
+   "quien": "Clima para la obra",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-15T01:18:55.193Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-15T01:18:55.193Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-15T00:55:40.574Z",
    "quien": "¿Qué comiste?",
@@ -20262,32 +20284,10 @@
    "t": "2026-11-13T05:56:28.326Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-13T05:56:28.326Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-13T05:27:32.428Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-13T05:27:32.428Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-13T04:57:30.464Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "936": "mundo_tecnologia",
-  "937": "mundo_salud",
   "938": "comidas",
   "939": "licitaciones",
   "940": "noticias_tec",
@@ -20785,7 +20785,9 @@
   "1556": "noticias_tec",
   "1557": "noticias_tec",
   "1558": "salud_oficina",
-  "1559": "comidas"
+  "1559": "comidas",
+  "1560": "clima",
+  "1561": "informe_redes"
  },
  "tgOffset": 196508517,
  "hechos": {
@@ -20803,7 +20805,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-15T00:55:40.574Z",
+ "actualizado": "2026-11-15T01:18:55.193Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
