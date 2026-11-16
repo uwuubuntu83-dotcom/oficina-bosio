@@ -867,7 +867,7 @@
   },
   "gerente": {
    "estado": "esperando",
-   "resumen": "Mandó el parte del día",
+   "resumen": "Habló con vos",
    "ultimaCorrida": null
   },
   "terrenos": {
@@ -5193,7 +5193,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "falló",
+   "estado": "listo",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -5203,13 +5203,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-16T16:37:52.368Z",
-   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
+   "ultimaCorrida": "2026-11-16T16:43:03.607Z",
+   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794847072368,
+     "t": 1794847383607,
      "redes_hoy": {
       "publicaciones": 0,
       "historias": 0,
@@ -5218,7 +5218,14 @@
       "gringo": 0,
       "errores": 0,
       "reinicios": 0,
-      "ultimas": []
+      "ultimas": [
+       "13:38 Conectado por cable USB (emulator-5554)",
+       "13:38 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "13:38 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
+       "13:38 PLAN DE HOY:",
+       "13:40 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
+       "13:41 ✔ Facebook: compartido en la Página (publicación)"
+      ]
      }
     },
     "avisoSinSenal": "2026-11-13T23:36:13.680Z",
@@ -5472,7 +5479,14 @@
       "gringo": 0,
       "errores": 0,
       "reinicios": 0,
-      "ultimas": []
+      "ultimas": [
+       "13:38 Conectado por cable USB (emulator-5554)",
+       "13:38 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "13:38 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
+       "13:38 PLAN DE HOY:",
+       "13:40 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
+       "13:41 ✔ Facebook: compartido en la Página (publicación)"
+      ]
      }
     }
    }
@@ -19243,6 +19257,26 @@
  },
  "log": [
   {
+   "t": "2026-11-16T16:44:05.009Z",
+   "quien": "Gerente general",
+   "que": "respondió"
+  },
+  {
+   "t": "2026-11-16T16:44:05.009Z",
+   "quien": "Jonathan",
+   "que": "mandó una orden por Telegram"
+  },
+  {
+   "t": "2026-11-16T16:44:05.009Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 mensajes de Telegram"
+  },
+  {
+   "t": "2026-11-16T16:44:05.009Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
+  {
    "t": "2026-11-16T16:38:45.494Z",
    "quien": "Lo último en tecnología",
    "que": "entregó (sin IA)"
@@ -20721,26 +20755,6 @@
    "t": "2026-11-15T04:17:28.061Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-15T03:47:59.886Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-15T03:47:59.886Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-15T03:47:59.886Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-15T03:18:34.096Z",
-   "quien": "Clima para la obra",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
@@ -21246,7 +21260,7 @@
   "1681": "noticias_tec",
   "1682": "noticias_tec"
  },
- "tgOffset": 196508517,
+ "tgOffset": 196508518,
  "hechos": {
   "parte": "2026-11-15",
   "entrenamiento": "2026-11-15",
@@ -21257,12 +21271,15 @@
  },
  "consumo": {
   "fecha": "2026-11-16",
-  "consultas": 0,
+  "consultas": 4,
   "busquedas": 0,
-  "por": {}
+  "por": {
+   "nvidia": 3,
+   "cohere": 1
+  }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-16T16:38:45.494Z",
+ "actualizado": "2026-11-16T16:44:05.009Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -21288,8 +21305,68 @@
  },
  "ia": {
   "fecha": "2026-11-16",
-  "agotado": {},
-  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
+  "agotado": {
+   "nvidia:deepseek-ai/deepseek-v4.1-flash": 1794848167279,
+   "nvidia:z-ai/glm-5.3-flash": 1794848287280,
+   "nvidia:mistralai/mistral-large-4-1t-a52b": 1794848407282
+  },
+  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
+  "vivos": {
+   "nvidia": {
+    "fecha": "2026-11-16",
+    "ids": [
+     "bigcode/starcoder2-15b",
+     "deepseek-ai/deepseek-v4.1-flash",
+     "google/gemma-3-12b-it",
+     "google/gemma-3-4b-it",
+     "google/gemma-4-31b-it",
+     "meta/muse-glimmer-30b",
+     "minimaxai/minimax-m3.1-flash",
+     "mistralai/mistral-large-4-1t-a52b",
+     "nvidia/ai-synthetic-video-detector",
+     "nvidia/cosmos-reason2-8b",
+     "nvidia/ising-calibration-1.5-31b",
+     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+     "nvidia/nemotron-3-ultra-550b-a55b",
+     "nvidia/nemotron-3.5-bolt-e4b",
+     "nvidia/nemotron-3.5-lightning-30b-a3b",
+     "nvidia/nemotron-3.5-super-vl-120b-a12b",
+     "nvidia/riva-translate-4b-instruct-v2",
+     "openai/gpt-oss-20b",
+     "poolside/laguna-xs-2.1",
+     "stepfun-ai/step-5-preview",
+     "z-ai/glm-5.3-flash"
+    ]
+   },
+   "cohere": {
+    "fecha": "2026-11-16",
+    "ids": [
+     "c4ai-aya-expanse-32b",
+     "c4ai-aya-vision-32b",
+     "command-a-03-2025",
+     "command-a-plus-05-2026",
+     "command-a-reasoning-08-2025",
+     "command-a-translate-08-2025",
+     "command-a-vision-07-2025",
+     "command-r-08-2024",
+     "command-r-plus-08-2024",
+     "command-r7b-12-2024",
+     "command-r7b-arabic-02-2025",
+     "north-mini-code-1.0",
+     "north-small-translate-1.0",
+     "parse-v5.0",
+     "tiny-aya-earth",
+     "tiny-aya-fire",
+     "tiny-aya-global",
+     "tiny-aya-water"
+    ]
+   }
+  },
+  "ultimo": {
+   "prov": "Cohere",
+   "modelo": "command-a-03-2025",
+   "t": "2026-11-16T16:44:05.009Z"
+  }
  },
  "dueno": 1237559052,
  "pendientesCant": 0
