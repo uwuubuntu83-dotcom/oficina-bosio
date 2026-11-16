@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 796,
+   "corridas": 797,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-16T20:55:50.903Z",
+   "ultimaCorrida": "2026-11-16T21:41:01.204Z",
    "resumen": "💵 Dólar hoy (11:37 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1560 · venta $1580 (+0.3%)\n• Bolsa: compra $1578.3 · venta $1578.3 (-0.2%)\n• Contado con liquidación: compra $1675.5 · venta $1675.5 (+0.2%)\n•",
    "informe": "data/informes/dolar/2026-11-16-1137.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1672.96,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-16T20:55:50.903Z",
+    "ultimoChequeo": "2026-11-16T21:41:01.204Z",
     "resumenFecha": "2026-11-16",
     "hist": {
      "2026-10-30": {
@@ -194,11 +194,11 @@
      },
      "2026-11-16": {
       "oficial": 1575,
-      "blue": 1590,
-      "bolsa": 1584.5,
-      "contadoconliqui": 1681.1,
+      "blue": 1600,
+      "bolsa": 1588.9,
+      "contadoconliqui": 1682.9,
       "mayorista": 1551,
-      "cripto": 1678.37,
+      "cripto": 1676.69,
       "tarjeta": 2047.5
      }
     },
@@ -5511,7 +5511,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "listo",
+   "estado": "sin señal",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -5521,36 +5521,36 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-16T20:51:59.049Z",
-   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
+   "ultimaCorrida": "2026-11-16T21:07:32.966Z",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 33 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794862319049,
+     "t": 1794863252966,
      "redes_hoy": {
       "publicaciones": 6,
-      "historias": 10,
-      "reels": 6,
+      "historias": 11,
+      "reels": 7,
       "seguidos": 35,
       "gringo": 1,
       "errores": 1,
       "reinicios": 9,
       "ultimas": [
-       "17:34 ✔ Seguido (2/3): @aldanadon (Aldana Don Don), seguidor de @moka_etruria (#etruria)",
-       "17:35 ✔ Seguido (3/3): @rebevillacorta (Rebe Villacorta), seguidor de @moka_etruria (#etruria)",
-       "17:39 Guardado debug/pantalla_173918.png y .xml",
-       "17:39 Chat: 0 reels en el chat, 0 sin subir",
-       "17:45 Memes: tocado 'Descargar', esperando que baje el video...",
-       "17:46 Memes: reel descargado (16176 KB) de @rami.ro9365",
-       "17:46 Memes: descripción lista (5 hashtags)",
-       "17:46 Memes: no encontré el '+'. Subo el video por el menú Compartir (plan B).",
-       "17:48 ✔ Memes: reel descargado y resubido en @maestromayordeobrasjb",
-       "17:51 Facebook: toqué Publicar como la Página — revisar que aparezca"
+       "17:56 ✔ Historia compartida (avioncito)",
+       "17:59 Instagram: ahora en @soycordobes.jpg",
+       "18:00 Guardado debug/pantalla_180031.png y .xml",
+       "18:00 Chat: 0 reels en el chat, 0 sin subir",
+       "18:01 Memes: tocado 'Descargar', esperando que baje el video...",
+       "18:02 Memes: reel descargado (9807 KB) de @pasaenargentinanomas",
+       "18:02 Memes: descripción lista (5 hashtags)",
+       "18:03 Memes: video elegido de la galería (    seleccionado imagen en miniatura de video creado(a) el 1)",
+       "18:04 ✔ Memes: reel descargado y resubido en @soycordobes.jpg",
+       "18:06 Memes: video borrado del celular (ya estaba subido)"
       ]
      }
     },
-    "avisoSinSenal": "2026-11-13T23:36:13.680Z",
+    "avisoSinSenal": "2026-11-16T21:07:32.966Z",
     "diario": {
      "2026-10-30": {
       "publicaciones": 21,
@@ -5795,23 +5795,23 @@
      },
      "2026-11-16": {
       "publicaciones": 6,
-      "historias": 10,
-      "reels": 6,
+      "historias": 11,
+      "reels": 7,
       "seguidos": 35,
       "gringo": 1,
       "errores": 1,
       "reinicios": 9,
       "ultimas": [
-       "17:34 ✔ Seguido (2/3): @aldanadon (Aldana Don Don), seguidor de @moka_etruria (#etruria)",
-       "17:35 ✔ Seguido (3/3): @rebevillacorta (Rebe Villacorta), seguidor de @moka_etruria (#etruria)",
-       "17:39 Guardado debug/pantalla_173918.png y .xml",
-       "17:39 Chat: 0 reels en el chat, 0 sin subir",
-       "17:45 Memes: tocado 'Descargar', esperando que baje el video...",
-       "17:46 Memes: reel descargado (16176 KB) de @rami.ro9365",
-       "17:46 Memes: descripción lista (5 hashtags)",
-       "17:46 Memes: no encontré el '+'. Subo el video por el menú Compartir (plan B).",
-       "17:48 ✔ Memes: reel descargado y resubido en @maestromayordeobrasjb",
-       "17:51 Facebook: toqué Publicar como la Página — revisar que aparezca"
+       "17:56 ✔ Historia compartida (avioncito)",
+       "17:59 Instagram: ahora en @soycordobes.jpg",
+       "18:00 Guardado debug/pantalla_180031.png y .xml",
+       "18:00 Chat: 0 reels en el chat, 0 sin subir",
+       "18:01 Memes: tocado 'Descargar', esperando que baje el video...",
+       "18:02 Memes: reel descargado (9807 KB) de @pasaenargentinanomas",
+       "18:02 Memes: descripción lista (5 hashtags)",
+       "18:03 Memes: video elegido de la galería (    seleccionado imagen en miniatura de video creado(a) el 1)",
+       "18:04 ✔ Memes: reel descargado y resubido en @soycordobes.jpg",
+       "18:06 Memes: video borrado del celular (ya estaba subido)"
       ]
      }
     }
@@ -9347,7 +9347,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 796,
+   "corridas": 797,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9356,7 +9356,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-16T20:55:50.903Z",
+   "ultimaCorrida": "2026-11-16T21:41:01.204Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9366,7 +9366,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-16T20:55:50.903Z",
+    "ultimoChequeo": "2026-11-16T21:41:01.204Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9609,16 +9609,16 @@
      },
      "2026-11-16": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       34,
-       34
+       35,
+       35
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       34,
-       34
+       35,
+       35
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       34,
-       34
+       35,
+       35
       ]
      }
     }
@@ -19327,7 +19327,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 778,
+   "corridas": 779,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -19336,13 +19336,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-16T20:55:50.903Z",
+   "ultimaCorrida": "2026-11-16T21:41:01.204Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-16",
-    "ultimoChequeo": "2026-11-16T20:55:50.903Z"
+    "ultimoChequeo": "2026-11-16T21:41:01.204Z"
    }
   },
   "feriados": {
@@ -19526,6 +19526,21 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-16T21:41:01.204Z",
+   "quien": "Mantenimiento",
+   "que": "Celular bot (Instagram) no da señales hace 33 min"
+  },
+  {
+   "t": "2026-11-16T21:41:01.204Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-16T21:41:01.204Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-16T20:55:50.903Z",
    "quien": "Lo último en tecnología",
@@ -21010,21 +21025,6 @@
    "t": "2026-11-15T20:20:54.507Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-15T20:20:54.507Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-15T19:50:40.555Z",
-   "quien": "Clientes y licitaciones",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-15T19:50:40.555Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
@@ -21554,7 +21554,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-16T20:55:50.903Z",
+ "actualizado": "2026-11-16T21:41:01.204Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
