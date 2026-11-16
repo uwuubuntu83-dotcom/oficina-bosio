@@ -5203,13 +5203,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-16T17:14:02.743Z",
-   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
+   "ultimaCorrida": "2026-11-16T17:19:05.207Z",
+   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: ⏸ en pausa · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794849242743,
+     "t": 1794849545207,
      "redes_hoy": {
       "publicaciones": 1,
       "historias": 2,
@@ -5217,18 +5217,18 @@
       "seguidos": 0,
       "gringo": 1,
       "errores": 0,
-      "reinicios": 0,
+      "reinicios": 1,
       "ultimas": [
-       "13:58 ✔ Historia compartida (avioncito)",
-       "13:59 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «pasar al perfil personal de Jonathan Bos»: {'numero': None, 'listo': False, 'por_que': 'La pan",
-       "14:00 LOTE: Facebook vuelve a quedar en la Página",
-       "14:00 LOTE: turno: no pude confirmar el perfil personal: no sigo (no encontré el cambio)",
-       "14:05 No encontré un post adecuado para la historia",
        "14:08 La cuenta soycordobes.jpg no apareció en la lista (intento 1/3)",
        "14:08 Guardado debug/pantalla_140851.png y .xml",
        "14:10 Instagram: ahora en @soycordobes.jpg",
        "14:13 Post elegido de #cordobeses",
-       "14:13 ✔ Historia compartida (avioncito)"
+       "14:13 ✔ Historia compartida (avioncito)",
+       "14:14 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "14:15 Instagram: ahora en @maestromayordeobrasjb",
+       "14:17 LOTE: en el perfil personal de Jonathan",
+       "14:17 ⏸ Lo del lote queda para después: estás usando el celu.",
+       "14:17 📱 Estás usando el celu: el bot espera y sigue cuando lo dejes (2 min sin tocarlo)."
       ]
      }
     },
@@ -5482,18 +5482,18 @@
       "seguidos": 0,
       "gringo": 1,
       "errores": 0,
-      "reinicios": 0,
+      "reinicios": 1,
       "ultimas": [
-       "13:58 ✔ Historia compartida (avioncito)",
-       "13:59 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «pasar al perfil personal de Jonathan Bos»: {'numero': None, 'listo': False, 'por_que': 'La pan",
-       "14:00 LOTE: Facebook vuelve a quedar en la Página",
-       "14:00 LOTE: turno: no pude confirmar el perfil personal: no sigo (no encontré el cambio)",
-       "14:05 No encontré un post adecuado para la historia",
        "14:08 La cuenta soycordobes.jpg no apareció en la lista (intento 1/3)",
        "14:08 Guardado debug/pantalla_140851.png y .xml",
        "14:10 Instagram: ahora en @soycordobes.jpg",
        "14:13 Post elegido de #cordobeses",
-       "14:13 ✔ Historia compartida (avioncito)"
+       "14:13 ✔ Historia compartida (avioncito)",
+       "14:14 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "14:15 Instagram: ahora en @maestromayordeobrasjb",
+       "14:17 LOTE: en el perfil personal de Jonathan",
+       "14:17 ⏸ Lo del lote queda para después: estás usando el celu.",
+       "14:17 📱 Estás usando el celu: el bot espera y sigue cuando lo dejes (2 min sin tocarlo)."
       ]
      }
     }
@@ -18990,7 +18990,7 @@
   },
   "lista_gringo": {
    "estado": "listo",
-   "corridas": 20,
+   "corridas": 21,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -18999,9 +18999,9 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-16T17:17:30.024Z",
+   "ultimaCorrida": "2026-11-16T17:19:46.660Z",
    "resumen": "Le pedí al celu: «lista». Te contesta en un minuto.",
-   "informe": "data/informes/lista_gringo/2026-11-16-1417.md",
+   "informe": "data/informes/lista_gringo/2026-11-16-1419.md",
    "pausado": false,
    "memoria": {
     "horas": {
@@ -19010,7 +19010,7 @@
       "10:00"
      ]
     },
-    "ultimoChequeo": "2026-11-16T17:17:30.024Z"
+    "ultimoChequeo": "2026-11-16T17:19:46.660Z"
    }
   },
   "community": {
@@ -19264,6 +19264,36 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-16T17:19:46.660Z",
+   "quien": "Gerente general",
+   "que": "respondió y movió lista_gringo"
+  },
+  {
+   "t": "2026-11-16T17:19:46.660Z",
+   "quien": "Lista del Gringo",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-16T17:19:46.660Z",
+   "quien": "IA",
+   "que": "Hugging Face: se quedó sin créditos gratis, la salteo por hoy"
+  },
+  {
+   "t": "2026-11-16T17:19:46.660Z",
+   "quien": "Jonathan",
+   "que": "mandó una orden por Telegram"
+  },
+  {
+   "t": "2026-11-16T17:19:46.660Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 mensajes de Telegram"
+  },
+  {
+   "t": "2026-11-16T17:19:46.660Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-16T17:17:30.024Z",
    "quien": "Gerente general",
@@ -20733,41 +20763,10 @@
    "t": "2026-11-15T07:15:36.897Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-15T07:15:36.897Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-15T06:45:38.219Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-15T06:45:38.219Z",
-   "quien": "Valor m² del Colegio de MMO",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-15T06:45:38.219Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-15T06:45:38.219Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-15T06:16:51.345Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1068": "precio_mmo",
   "1069": "vencimientos",
   "1070": "tarifas",
   "1072": "licitaciones",
@@ -21266,9 +21265,10 @@
   "1681": "noticias_tec",
   "1682": "noticias_tec",
   "1687": "lista_gringo",
-  "1692": "lista_gringo"
+  "1692": "lista_gringo",
+  "1696": "lista_gringo"
  },
- "tgOffset": 196508520,
+ "tgOffset": 196508521,
  "hechos": {
   "parte": "2026-11-15",
   "entrenamiento": "2026-11-15",
@@ -21279,18 +21279,20 @@
  },
  "consumo": {
   "fecha": "2026-11-16",
-  "consultas": 13,
+  "consultas": 18,
   "busquedas": 0,
   "por": {
    "nvidia": 3,
    "cohere": 1,
    "groq": 3,
    "openrouter": 3,
-   "llm7": 3
+   "llm7": 4,
+   "huggingface": 1,
+   "zai": 3
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-16T17:17:30.024Z",
+ "actualizado": "2026-11-16T17:19:46.660Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -21326,7 +21328,11 @@
    "openrouter:google/gemma-4-26b-a4b-it:free": 1794848781681,
    "openrouter:google/gemma-4-31b-it:free": 1794848784166,
    "llm7:gpt-oss:20b": 1794850081890,
-   "llm7:gemma4:31b": 1794850082010
+   "llm7:gemma4:31b": 1794850082010,
+   "huggingface": 1794935988253,
+   "zai:glm-4.5-flash": 1794850308664,
+   "zai:glm-4.7-flash": 1794849739149,
+   "zai:glm-4-flash-250414": true
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
   "vivos": {
@@ -21464,12 +21470,196 @@
      "seedance-2.0-fast",
      "seedance-2.0-mini"
     ]
+   },
+   "huggingface": {
+    "fecha": "2026-11-16",
+    "ids": [
+     "Qwen/Qwen3.8-27B",
+     "thinkingmachines/Inkling-2-Small",
+     "moonshotai/Kimi-K3.1-Pro",
+     "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "LiquidAI/LFM3-1.7B",
+     "zai-org/GLM-5.3-Flash",
+     "meta-llama/Llama-3.1-8B-Instruct",
+     "deepseek-ai/DeepSeek-V4.1-Flash",
+     "zai-org/GLM-5.3",
+     "google/gemma-4-31B-it",
+     "moonshotai/Kimi-K3",
+     "MiniMaxAI/MiniMax-M3.1-Flash",
+     "Qwen/Qwen3.5-9B",
+     "meta-llama/Llama-3.2-3B-Instruct",
+     "Qwen/Qwen3.6-35B-A3B",
+     "meta-models/Muse-Glimmer-30B",
+     "openai/gpt-oss-120b",
+     "google/gemma-4-26B-A4B-it",
+     "openai/gpt-oss-20b",
+     "Qwen/Qwen3.8-2.4T-A95B",
+     "google/gemma-3-4b-it",
+     "mistralai/Mistral-Large-4-1T-A52B",
+     "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+     "deepseek-ai/DeepSeek-V4-Flash",
+     "Qwen/Qwen3.8-Flash-Next-FP8",
+     "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+     "CohereLabs/tiny-aya-global",
+     "tencent/Hy4-preview",
+     "inclusionAI/Ling-3.0-tiny",
+     "LiquidAI/LFM2.5-24B-A2B",
+     "ibm-granite/granite-4.2-8b",
+     "thinkingmachines/Inkling",
+     "XiaomiMiMo/MiMo-V2.6-Pro-RL",
+     "meta-models/Muse-Spark-Open-816B-A42B",
+     "Qwen/Qwen3-VL-8B-Instruct",
+     "meta-llama/Llama-3.3-70B-Instruct",
+     "deepseek-ai/DeepSeek-V4-Flash-0731",
+     "deepseek-ai/DeepSeek-V4-Pro",
+     "deepseek-ai/DeepSeek-R1",
+     "reflection/Beam-1.0-501B-A23B",
+     "XiaomiMiMo/MiMo-V2.6-Flash-RL",
+     "inclusionAI/Ling-3.1-flash",
+     "meta-llama/Llama-3.2-1B-Instruct",
+     "Qwen/Qwen3.5-122B-A10B",
+     "deepseek-ai/DeepSeek-V4-Pro-0813",
+     "Qwen/Qwen2.5-Coder-32B-Instruct",
+     "thinkingmachines/Inkling-Small",
+     "deepseek-ai/DeepSeek-V3.2",
+     "Qwen/Qwen3-14B",
+     "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+     "zai-org/GLM-5.2",
+     "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+     "microsoft/phi-4",
+     "dphn/Dolphin-Mistral-24B-Venice-Edition",
+     "MiniMaxAI/MiniMax-M3",
+     "Qwen/Qwen3-Coder-Next",
+     "zai-org/GLM-5.3-Flash-BF16",
+     "zai-org/GLM-4.7-Flash",
+     "meta-llama/Llama-4-Maverick-17B-128E-Instruct",
+     "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+     "Sao10K/L3-8B-Stheno-v3.2",
+     "Qwen/Qwen2.5-72B-Instruct",
+     "moondream/moondream3.1-9B-A2B",
+     "google/gemma-3-12b-it",
+     "ibm-granite/granite-4.2-3b",
+     "Qwen/Qwen3.6-27B",
+     "ibm-granite/granite-4.2-30b",
+     "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+     "google/gemma-2-27b-it",
+     "MiniMaxAI/MiniMax-M2.5",
+     "ByteDance-Seed/UI-TARS-1.5-7B",
+     "moonshotai/Kimi-K2.6",
+     "meta-llama/Llama-3.1-70B-Instruct",
+     "inclusionAI/Ling-3.0-flash",
+     "moonshotai/Kimi-K2.7-Code",
+     "moonshotai/Kimi-K2-Thinking",
+     "swiss-ai/Apertus-v1.5-70B",
+     "tencent/Hy3",
+     "CohereLabs/tiny-aya-earth",
+     "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+     "CohereLabs/tiny-aya-fire",
+     "swiss-ai/Apertus-8B-Instruct-2509",
+     "Qwen/Qwen3.5-35B-A3B",
+     "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+     "google/gemma-3-27b-it",
+     "speakleash/Bielik-11B-v3.0-Instruct",
+     "Qwen/Qwen3-VL-30B-A3B-Instruct",
+     "moondream/moondream3-preview",
+     "moonshotai/Kimi-K2.5",
+     "Qwen/Qwen3.5-27B",
+     "zai-org/GLM-4.5-Air",
+     "MiniMaxAI/MiniMax-M2.7",
+     "zai-org/GLM-5.3-BF16",
+     "inclusionAI/Ling-3.0-flash-Fin",
+     "zai-org/GLM-4.6V-Flash",
+     "Qwen/Qwen3.5-397B-A17B",
+     "deepseek-ai/DeepSeek-V3",
+     "Gryphe/MythoMax-L2-13b",
+     "Qwen/Qwen3-30B-A3B",
+     "Qwen/Qwen3-32B",
+     "deepseek-ai/DeepSeek-V3.1",
+     "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+     "Qwen/Qwen3-30B-A3B-Instruct-2507",
+     "zai-org/GLM-4.5V",
+     "NousResearch/Hermes-3-Llama-3.1-70B",
+     "aisingapore/Gemma-SEA-LION-v4-27B-IT",
+     "Undi95/ReMM-SLERP-L2-13B",
+     "zai-org/AutoGLM-Phone-9B-Multilingual",
+     "deepseek-ai/DeepSeek-V3-0324",
+     "swiss-ai/Apertus-70B-Instruct-2509",
+     "Sao10K/L3-8B-Lunaris-v1",
+     "inclusionAI/Ling-3.0-flash-VL",
+     "deepseek-ai/DeepSeek-R1-0528",
+     "aisingapore/Qwen-SEA-LION-v4-32B-IT",
+     "anthracite-org/magnum-v4-72b",
+     "CohereLabs/aya-vision-32b",
+     "Qwen/Qwen3-235B-A22B-Instruct-2507",
+     "BSC-LT/ALIA-40b-instruct-2606",
+     "moonshotai/Kimi-K2-Instruct",
+     "CohereLabs/command-a-vision-07-2025",
+     "Qwen/Qwen3-235B-A22B-Thinking-2507",
+     "aisingapore/Nemotron-SEA-LION-v4.8-120B-A12B",
+     "NousResearch/Hermes-4-405B",
+     "CohereLabs/command-a-plus-05-2026-bf16",
+     "Qwen/Qwen3-Next-80B-A3B-Instruct",
+     "CohereLabs/c4ai-command-r-08-2024",
+     "moonshotai/Kimi-K2-Instruct-0905",
+     "CohereLabs/command-a-plus-05-2026-fp8",
+     "deepseek-ai/DeepSeek-V3.1-Terminus",
+     "CohereLabs/aya-expanse-32b",
+     "deepseek-ai/DeepSeek-V3.2-Exp",
+     "CohereLabs/command-a-plus-05-2026-w4a4",
+     "zai-org/GLM-4.6",
+     "CohereLabs/c4ai-command-r7b-12-2024",
+     "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+     "zai-org/GLM-4.5V-FP8",
+     "zai-org/GLM-4.7",
+     "CohereLabs/c4ai-command-r7b-arabic-02-2025",
+     "zai-org/GLM-5",
+     "zai-org/GLM-4.6V",
+     "stepfun-ai/Step-3.5-Flash",
+     "CohereLabs/c4ai-command-a-03-2025",
+     "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
+     "zai-org/GLM-4.6V-FP8",
+     "zai-org/GLM-5.1",
+     "CohereLabs/command-a-reasoning-08-2025",
+     "XiaomiMiMo/MiMo-V2.5-Pro",
+     "Qwen/Qwen3-VL-235B-A22B-Instruct",
+     "XiaomiMiMo/MiMo-V2.5",
+     "Qwen/Qwen2.5-VL-72B-Instruct",
+     "CohereLabs/command-a-translate-08-2025",
+     "stepfun-ai/Step-3.7-Flash",
+     "RekaAI/reka-edge-2603",
+     "CohereLabs/tiny-aya-water",
+     "zai-org/GLM-4.5",
+     "aisingapore/Qwen-SEA-LION-v4.5-27B-IT",
+     "alpindale/WizardLM-2-8x22B",
+     "zai-org/GLM-4.6-FP8",
+     "MiniMaxAI/MiniMax-M1-80k",
+     "zai-org/GLM-4.7-FP8",
+     "zai-org/GLM-5.1-FP8",
+     "zai-org/GLM-5.2-FP8"
+    ]
+   },
+   "zai": {
+    "fecha": "2026-11-16",
+    "ids": [
+     "glm-4.5",
+     "glm-4.5-air",
+     "glm-4.6",
+     "glm-4.7",
+     "glm-5",
+     "glm-5-turbo",
+     "glm-5.1",
+     "glm-5.2",
+     "glm-5.3",
+     "glm-5.3-flash",
+     "glm-5.3-flashx",
+     "glm-5.3-flashx-legal"
+    ]
    }
   },
   "ultimo": {
    "prov": "LLM7",
    "modelo": "mistral-Nemo-Instruct-2407",
-   "t": "2026-11-16T17:17:30.024Z"
+   "t": "2026-11-16T17:19:46.660Z"
   }
  },
  "dueno": 1237559052,
