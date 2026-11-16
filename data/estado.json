@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 788,
+   "corridas": 789,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-16T16:38:45.494Z",
+   "ultimaCorrida": "2026-11-16T17:05:44.552Z",
    "resumen": "💵 Dólar hoy (11:37 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1560 · venta $1580 (+0.3%)\n• Bolsa: compra $1578.3 · venta $1578.3 (-0.2%)\n• Contado con liquidación: compra $1675.5 · venta $1675.5 (+0.2%)\n•",
    "informe": "data/informes/dolar/2026-11-16-1137.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1672.96,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-16T16:38:45.494Z",
+    "ultimoChequeo": "2026-11-16T17:05:44.552Z",
     "resumenFecha": "2026-11-16",
     "hist": {
      "2026-10-30": {
@@ -195,10 +195,10 @@
      "2026-11-16": {
       "oficial": 1575,
       "blue": 1585,
-      "bolsa": 1581.4,
-      "contadoconliqui": 1679.2,
-      "mayorista": 1548,
-      "cripto": 1678.38,
+      "bolsa": 1584,
+      "contadoconliqui": 1680.2,
+      "mayorista": 1548.5,
+      "cripto": 1678.36,
       "tarjeta": 2047.5
      }
     },
@@ -5203,28 +5203,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-16T16:43:03.607Z",
+   "ultimaCorrida": "2026-11-16T17:03:50.431Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794847383607,
+     "t": 1794848630431,
      "redes_hoy": {
-      "publicaciones": 0,
-      "historias": 0,
-      "reels": 0,
+      "publicaciones": 1,
+      "historias": 1,
+      "reels": 1,
       "seguidos": 0,
-      "gringo": 0,
+      "gringo": 1,
       "errores": 0,
       "reinicios": 0,
       "ultimas": [
-       "13:38 Conectado por cable USB (emulator-5554)",
-       "13:38 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "13:38 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
-       "13:38 PLAN DE HOY:",
-       "13:40 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
-       "13:41 ✔ Facebook: compartido en la Página (publicación)"
+       "13:50 Instagram: ahora en @soycordobes.jpg",
+       "13:51 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
+       "13:52 Post elegido de #humorlatino",
+       "13:53 ✔ Repost publicado en tu perfil",
+       "13:55 Instagram: ahora en @maestromayordeobrasjb",
+       "13:57 Post elegido de #construcciondecasas",
+       "13:58 ✔ Historia compartida (avioncito)",
+       "13:59 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «pasar al perfil personal de Jonathan Bos»: {'numero': None, 'listo': False, 'por_que': 'La pan",
+       "14:00 LOTE: Facebook vuelve a quedar en la Página",
+       "14:00 LOTE: turno: no pude confirmar el perfil personal: no sigo (no encontré el cambio)"
       ]
      }
     },
@@ -5472,20 +5476,24 @@
       ]
      },
      "2026-11-16": {
-      "publicaciones": 0,
-      "historias": 0,
-      "reels": 0,
+      "publicaciones": 1,
+      "historias": 1,
+      "reels": 1,
       "seguidos": 0,
-      "gringo": 0,
+      "gringo": 1,
       "errores": 0,
       "reinicios": 0,
       "ultimas": [
-       "13:38 Conectado por cable USB (emulator-5554)",
-       "13:38 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "13:38 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
-       "13:38 PLAN DE HOY:",
-       "13:40 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
-       "13:41 ✔ Facebook: compartido en la Página (publicación)"
+       "13:50 Instagram: ahora en @soycordobes.jpg",
+       "13:51 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
+       "13:52 Post elegido de #humorlatino",
+       "13:53 ✔ Repost publicado en tu perfil",
+       "13:55 Instagram: ahora en @maestromayordeobrasjb",
+       "13:57 Post elegido de #construcciondecasas",
+       "13:58 ✔ Historia compartida (avioncito)",
+       "13:59 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «pasar al perfil personal de Jonathan Bos»: {'numero': None, 'listo': False, 'por_que': 'La pan",
+       "14:00 LOTE: Facebook vuelve a quedar en la Página",
+       "14:00 LOTE: turno: no pude confirmar el perfil personal: no sigo (no encontré el cambio)"
       ]
      }
     }
@@ -8992,7 +9000,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 788,
+   "corridas": 789,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9001,7 +9009,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-16T16:38:45.494Z",
+   "ultimaCorrida": "2026-11-16T17:05:44.552Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9011,7 +9019,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-16T16:38:45.494Z",
+    "ultimoChequeo": "2026-11-16T17:05:44.552Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9254,16 +9262,16 @@
      },
      "2026-11-16": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       26,
-       26
+       27,
+       27
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       26,
-       26
+       27,
+       27
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       26,
-       26
+       27,
+       27
       ]
      }
     }
@@ -18982,7 +18990,7 @@
   },
   "lista_gringo": {
    "estado": "listo",
-   "corridas": 18,
+   "corridas": 19,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -18991,9 +18999,9 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-16T13:24:02.980Z",
+   "ultimaCorrida": "2026-11-16T17:05:44.552Z",
    "resumen": "Le pedí al celu: «lista». Te contesta en un minuto.",
-   "informe": "data/informes/lista_gringo/2026-10-31-1538.md",
+   "informe": "data/informes/lista_gringo/2026-11-16-1405.md",
    "pausado": false,
    "memoria": {
     "horas": {
@@ -19002,7 +19010,7 @@
       "10:00"
      ]
     },
-    "ultimoChequeo": "2026-11-16T13:24:02.980Z"
+    "ultimoChequeo": "2026-11-16T17:05:44.552Z"
    }
   },
   "community": {
@@ -19057,7 +19065,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 770,
+   "corridas": 771,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -19066,13 +19074,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-16T16:38:45.494Z",
+   "ultimaCorrida": "2026-11-16T17:05:44.552Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-16",
-    "ultimoChequeo": "2026-11-16T16:38:45.494Z"
+    "ultimoChequeo": "2026-11-16T17:05:44.552Z"
    }
   },
   "feriados": {
@@ -19236,7 +19244,7 @@
    "memoria": {}
   },
   "lote_fb": {
-   "estado": "sin señal",
+   "estado": "falló",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -19245,9 +19253,9 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-13",
-   "ultimaCorrida": "2026-11-13T22:49:00.000Z",
-   "resumen": "Publicando · hoy: 3 · error: no pude abrir el menú de Facebook · grupos: TRATO HECHO VILLA MARIA, TRATO HECHO VILLA NUEVA, Compra - Venta Las Varillas (Córdoba), TECNOVN, Villa Maria y Toda la Zona Compra y Vende",
+   "ultimaFecha": "2026-11-16",
+   "ultimaCorrida": "2026-11-16T17:00:00.000Z",
+   "resumen": "Publicando · hoy: 0 · error: no pude confirmar el perfil personal: no sigo (no encontré el cambio) · grupos: TRATO HECHO VILLA MARIA, TRATO HECHO VILLA NUEVA, Compra - Venta Las Varillas (Córdoba), TECNOVN, Villa Maria y Toda la Zona Compra y Vende",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -19256,6 +19264,31 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-16T17:05:44.552Z",
+   "quien": "Gerente general",
+   "que": "respondió y movió lista_gringo"
+  },
+  {
+   "t": "2026-11-16T17:05:44.552Z",
+   "quien": "Lista del Gringo",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-16T17:05:44.552Z",
+   "quien": "Jonathan",
+   "que": "mandó una orden por Telegram"
+  },
+  {
+   "t": "2026-11-16T17:05:44.552Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 mensajes de Telegram"
+  },
+  {
+   "t": "2026-11-16T17:05:44.552Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-16T16:44:05.009Z",
    "quien": "Gerente general",
@@ -20730,36 +20763,10 @@
    "t": "2026-11-15T05:17:39.169Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-15T04:47:28.472Z",
-   "quien": "Clientes y licitaciones",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-15T04:47:28.472Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-15T04:47:28.472Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-15T04:17:28.061Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-15T04:17:28.061Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1065": "comidas",
   "1067": "informe_redes",
   "1068": "precio_mmo",
   "1069": "vencimientos",
@@ -21258,9 +21265,10 @@
   "1679": "noticias_ar",
   "1680": "noticias_ar",
   "1681": "noticias_tec",
-  "1682": "noticias_tec"
+  "1682": "noticias_tec",
+  "1687": "lista_gringo"
  },
- "tgOffset": 196508518,
+ "tgOffset": 196508519,
  "hechos": {
   "parte": "2026-11-15",
   "entrenamiento": "2026-11-15",
@@ -21271,15 +21279,17 @@
  },
  "consumo": {
   "fecha": "2026-11-16",
-  "consultas": 4,
+  "consultas": 10,
   "busquedas": 0,
   "por": {
    "nvidia": 3,
-   "cohere": 1
+   "cohere": 1,
+   "groq": 3,
+   "openrouter": 3
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-16T16:44:05.009Z",
+ "actualizado": "2026-11-16T17:05:44.552Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -21308,7 +21318,12 @@
   "agotado": {
    "nvidia:deepseek-ai/deepseek-v4.1-flash": 1794848167279,
    "nvidia:z-ai/glm-5.3-flash": 1794848287280,
-   "nvidia:mistralai/mistral-large-4-1t-a52b": 1794848407282
+   "nvidia:mistralai/mistral-large-4-1t-a52b": 1794848407282,
+   "groq:openai/gpt-oss-120b": 1794849346337,
+   "groq:openai/gpt-oss-20b": 1794849348840,
+   "groq:qwen/qwen3.8-27b": 1794849351380,
+   "openrouter:google/gemma-4-26b-a4b-it:free": 1794848781681,
+   "openrouter:google/gemma-4-31b-it:free": 1794848784166
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
   "vivos": {
@@ -21360,12 +21375,23 @@
      "tiny-aya-global",
      "tiny-aya-water"
     ]
+   },
+   "groq": {
+    "fecha": "2026-11-16",
+    "ids": [
+     "allam-2-7b",
+     "qwen/qwen3.8-27b",
+     "openai/gpt-oss-20b",
+     "canopylabs/orpheus-arabic-saudi",
+     "canopylabs/orpheus-v1-english",
+     "openai/gpt-oss-120b"
+    ]
    }
   },
   "ultimo": {
-   "prov": "Cohere",
-   "modelo": "command-a-03-2025",
-   "t": "2026-11-16T16:44:05.009Z"
+   "prov": "OpenRouter",
+   "modelo": "nvidia/nemotron-3.5-super-vl:free",
+   "t": "2026-11-16T17:05:44.552Z"
   }
  },
  "dueno": 1237559052,
