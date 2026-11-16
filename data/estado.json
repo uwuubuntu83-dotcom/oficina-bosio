@@ -5203,32 +5203,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-16T17:03:50.431Z",
+   "ultimaCorrida": "2026-11-16T17:14:02.743Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794848630431,
+     "t": 1794849242743,
      "redes_hoy": {
       "publicaciones": 1,
-      "historias": 1,
+      "historias": 2,
       "reels": 1,
       "seguidos": 0,
       "gringo": 1,
       "errores": 0,
       "reinicios": 0,
       "ultimas": [
-       "13:50 Instagram: ahora en @soycordobes.jpg",
-       "13:51 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
-       "13:52 Post elegido de #humorlatino",
-       "13:53 ✔ Repost publicado en tu perfil",
-       "13:55 Instagram: ahora en @maestromayordeobrasjb",
-       "13:57 Post elegido de #construcciondecasas",
        "13:58 ✔ Historia compartida (avioncito)",
        "13:59 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «pasar al perfil personal de Jonathan Bos»: {'numero': None, 'listo': False, 'por_que': 'La pan",
        "14:00 LOTE: Facebook vuelve a quedar en la Página",
-       "14:00 LOTE: turno: no pude confirmar el perfil personal: no sigo (no encontré el cambio)"
+       "14:00 LOTE: turno: no pude confirmar el perfil personal: no sigo (no encontré el cambio)",
+       "14:05 No encontré un post adecuado para la historia",
+       "14:08 La cuenta soycordobes.jpg no apareció en la lista (intento 1/3)",
+       "14:08 Guardado debug/pantalla_140851.png y .xml",
+       "14:10 Instagram: ahora en @soycordobes.jpg",
+       "14:13 Post elegido de #cordobeses",
+       "14:13 ✔ Historia compartida (avioncito)"
       ]
      }
     },
@@ -5477,23 +5477,23 @@
      },
      "2026-11-16": {
       "publicaciones": 1,
-      "historias": 1,
+      "historias": 2,
       "reels": 1,
       "seguidos": 0,
       "gringo": 1,
       "errores": 0,
       "reinicios": 0,
       "ultimas": [
-       "13:50 Instagram: ahora en @soycordobes.jpg",
-       "13:51 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
-       "13:52 Post elegido de #humorlatino",
-       "13:53 ✔ Repost publicado en tu perfil",
-       "13:55 Instagram: ahora en @maestromayordeobrasjb",
-       "13:57 Post elegido de #construcciondecasas",
        "13:58 ✔ Historia compartida (avioncito)",
        "13:59 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «pasar al perfil personal de Jonathan Bos»: {'numero': None, 'listo': False, 'por_que': 'La pan",
        "14:00 LOTE: Facebook vuelve a quedar en la Página",
-       "14:00 LOTE: turno: no pude confirmar el perfil personal: no sigo (no encontré el cambio)"
+       "14:00 LOTE: turno: no pude confirmar el perfil personal: no sigo (no encontré el cambio)",
+       "14:05 No encontré un post adecuado para la historia",
+       "14:08 La cuenta soycordobes.jpg no apareció en la lista (intento 1/3)",
+       "14:08 Guardado debug/pantalla_140851.png y .xml",
+       "14:10 Instagram: ahora en @soycordobes.jpg",
+       "14:13 Post elegido de #cordobeses",
+       "14:13 ✔ Historia compartida (avioncito)"
       ]
      }
     }
@@ -18990,7 +18990,7 @@
   },
   "lista_gringo": {
    "estado": "listo",
-   "corridas": 19,
+   "corridas": 20,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -18999,9 +18999,9 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-16T17:05:44.552Z",
+   "ultimaCorrida": "2026-11-16T17:17:30.024Z",
    "resumen": "Le pedí al celu: «lista». Te contesta en un minuto.",
-   "informe": "data/informes/lista_gringo/2026-11-16-1405.md",
+   "informe": "data/informes/lista_gringo/2026-11-16-1417.md",
    "pausado": false,
    "memoria": {
     "horas": {
@@ -19010,7 +19010,7 @@
       "10:00"
      ]
     },
-    "ultimoChequeo": "2026-11-16T17:05:44.552Z"
+    "ultimoChequeo": "2026-11-16T17:17:30.024Z"
    }
   },
   "community": {
@@ -19264,6 +19264,31 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-16T17:17:30.024Z",
+   "quien": "Gerente general",
+   "que": "respondió y movió lista_gringo"
+  },
+  {
+   "t": "2026-11-16T17:17:30.024Z",
+   "quien": "Lista del Gringo",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-16T17:17:30.024Z",
+   "quien": "Jonathan",
+   "que": "mandó una orden por Telegram"
+  },
+  {
+   "t": "2026-11-16T17:17:30.024Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 1 mensajes de Telegram"
+  },
+  {
+   "t": "2026-11-16T17:17:30.024Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-16T17:05:44.552Z",
    "quien": "Gerente general",
@@ -20738,36 +20763,10 @@
    "t": "2026-11-15T06:16:51.345Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-15T06:16:51.345Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-15T05:46:40.904Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-15T05:46:40.904Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-15T05:17:39.169Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-15T05:17:39.169Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1067": "informe_redes",
   "1068": "precio_mmo",
   "1069": "vencimientos",
   "1070": "tarifas",
@@ -21266,9 +21265,10 @@
   "1680": "noticias_ar",
   "1681": "noticias_tec",
   "1682": "noticias_tec",
-  "1687": "lista_gringo"
+  "1687": "lista_gringo",
+  "1692": "lista_gringo"
  },
- "tgOffset": 196508519,
+ "tgOffset": 196508520,
  "hechos": {
   "parte": "2026-11-15",
   "entrenamiento": "2026-11-15",
@@ -21279,17 +21279,18 @@
  },
  "consumo": {
   "fecha": "2026-11-16",
-  "consultas": 10,
+  "consultas": 13,
   "busquedas": 0,
   "por": {
    "nvidia": 3,
    "cohere": 1,
    "groq": 3,
-   "openrouter": 3
+   "openrouter": 3,
+   "llm7": 3
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-16T17:05:44.552Z",
+ "actualizado": "2026-11-16T17:17:30.024Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -21323,7 +21324,9 @@
    "groq:openai/gpt-oss-20b": 1794849348840,
    "groq:qwen/qwen3.8-27b": 1794849351380,
    "openrouter:google/gemma-4-26b-a4b-it:free": 1794848781681,
-   "openrouter:google/gemma-4-31b-it:free": 1794848784166
+   "openrouter:google/gemma-4-31b-it:free": 1794848784166,
+   "llm7:gpt-oss:20b": 1794850081890,
+   "llm7:gemma4:31b": 1794850082010
   },
   "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
   "vivos": {
@@ -21386,12 +21389,87 @@
      "canopylabs/orpheus-v1-english",
      "openai/gpt-oss-120b"
     ]
+   },
+   "llm7": {
+    "fecha": "2026-11-16",
+    "ids": [
+     "DeepSeek-V4-Flash-0731",
+     "Inkling-Small",
+     "L3-8B-Lunaris-v1-Turbo",
+     "Voxtral-Mini-3B-2507",
+     "Voxtral-Small-24B-2507",
+     "anthropic/claude-opus-4-6",
+     "anthropic/claude-opus-4-7",
+     "anthropic/claude-opus-4-8",
+     "anthropic/claude-sonnet-4-6",
+     "anthropic/claude-sonnet-5",
+     "anthropic/claude-sonnet-5-5",
+     "chroma-v.46-flash",
+     "claude-fable-5",
+     "claude-fable-5-1",
+     "claude-fable-5-2",
+     "claude-haiku-4-5",
+     "claude-haiku-5-5",
+     "claude-opus-4-8",
+     "claude-opus-5",
+     "claude-opus-5-5",
+     "claude-sonnet-4-6",
+     "claude-sonnet-5",
+     "codestral-latest",
+     "dark-beast-krea2",
+     "deepseek-v4-flash:0731",
+     "deepseek-v4-pro",
+     "deepseek-v4.1-flash",
+     "gemini-3-flash",
+     "gemini-3.0-pro-image",
+     "gemini-3.1-flash-image",
+     "gemini-3.1-pro",
+     "gemini-3.6-flash-high",
+     "gemini-3.8-flash-high",
+     "gemini-4-argon",
+     "gemini-nano-banana-2.1",
+     "gemini-omni-flash",
+     "gemma4:31b",
+     "glm-5.2",
+     "glm-5.3",
+     "glm-5.3-flash",
+     "gpt-5.6-luna",
+     "gpt-5.6-sol",
+     "gpt-5.6-terra",
+     "gpt-6-astra",
+     "gpt-6-luna",
+     "gpt-6-sol",
+     "gpt-6.1-sol",
+     "gpt-image-2",
+     "gpt-image-2.5",
+     "gpt-image-2.6",
+     "gpt-oss:20b",
+     "grok-4.7",
+     "jev-latest",
+     "kimi-k2.6",
+     "kimi-k2.7-code",
+     "kimi-k3",
+     "kimi-k3.1-pro",
+     "kling-v3.0-pro",
+     "kling-v3.0-turbo",
+     "llama-4-maverick",
+     "mimo-v2.6-flash",
+     "mimo-v2.6-pro",
+     "minimax-m2.7",
+     "minimax-m3",
+     "mistral-Nemo-Instruct-2407",
+     "mistral-Small-24B-Instruct-2501",
+     "seed-2.0-mini",
+     "seedance-2.0",
+     "seedance-2.0-fast",
+     "seedance-2.0-mini"
+    ]
    }
   },
   "ultimo": {
-   "prov": "OpenRouter",
-   "modelo": "nvidia/nemotron-3.5-super-vl:free",
-   "t": "2026-11-16T17:05:44.552Z"
+   "prov": "LLM7",
+   "modelo": "mistral-Nemo-Instruct-2407",
+   "t": "2026-11-16T17:17:30.024Z"
   }
  },
  "dueno": 1237559052,
