@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 803,
+   "corridas": 804,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-17T00:57:43.521Z",
+   "ultimaCorrida": "2026-11-17T01:27:53.798Z",
    "resumen": "💵 Dólar hoy (11:37 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1560 · venta $1580 (+0.3%)\n• Bolsa: compra $1578.3 · venta $1578.3 (-0.2%)\n• Contado con liquidación: compra $1675.5 · venta $1675.5 (+0.2%)\n•",
    "informe": "data/informes/dolar/2026-11-16-1137.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1672.96,
      "tarjeta": 2041
     },
-    "ultimoChequeo": "2026-11-17T00:57:43.521Z",
+    "ultimoChequeo": "2026-11-17T01:27:53.798Z",
     "resumenFecha": "2026-11-16",
     "hist": {
      "2026-10-30": {
@@ -5294,32 +5294,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-17T00:53:30.026Z",
+   "ultimaCorrida": "2026-11-17T01:24:37.257Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794876810026,
+     "t": 1794878677257,
      "redes_hoy": {
       "publicaciones": 12,
-      "historias": 19,
-      "reels": 15,
+      "historias": 21,
+      "reels": 16,
       "seguidos": 38,
       "gringo": 1,
       "errores": 6,
-      "reinicios": 10,
+      "reinicios": 12,
       "ultimas": [
-       "21:44 ✔ Historia compartida (avioncito)",
-       "21:45 No se abrió la lista de cuentas (intento 1/3)",
-       "21:45 Guardado debug/pantalla_214531.png y .xml",
-       "21:46 Instagram: ahora en @maestromayordeobrasjb",
-       "21:48 ✔ Facebook: compartido en la Página (publicación)",
-       "21:49 Post elegido de #casaenconstruccion",
-       "21:49 ✔ Historia compartida (avioncito)",
-       "21:51 Instagram: ahora en @soycordobes.jpg",
-       "21:52 Guardado debug/pantalla_215210.png y .xml",
-       "21:52 Chat: 0 reels en el chat, 0 sin subir"
+       "22:12 No encontré un reel adecuado para repostear",
+       "22:12 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "22:13 Instagram: ahora en @maestromayordeobrasjb",
+       "22:18 Post elegido de #albañileria",
+       "22:19 ✔ Historia compartida (avioncito)",
+       "22:20 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "22:20 Instagram: ahora en @maestromayordeobrasjb",
+       "22:22 Facebook: el video no es de obra (o la IA dijo que no): no lo comparto",
+       "22:22 ✔ Facebook: compartido en la Página (publicación)",
+       "22:24 Post elegido de #albañilesargentinos"
       ]
      }
     },
@@ -5568,23 +5568,23 @@
      },
      "2026-11-16": {
       "publicaciones": 12,
-      "historias": 19,
-      "reels": 15,
+      "historias": 21,
+      "reels": 16,
       "seguidos": 38,
       "gringo": 1,
       "errores": 6,
-      "reinicios": 10,
+      "reinicios": 12,
       "ultimas": [
-       "21:44 ✔ Historia compartida (avioncito)",
-       "21:45 No se abrió la lista de cuentas (intento 1/3)",
-       "21:45 Guardado debug/pantalla_214531.png y .xml",
-       "21:46 Instagram: ahora en @maestromayordeobrasjb",
-       "21:48 ✔ Facebook: compartido en la Página (publicación)",
-       "21:49 Post elegido de #casaenconstruccion",
-       "21:49 ✔ Historia compartida (avioncito)",
-       "21:51 Instagram: ahora en @soycordobes.jpg",
-       "21:52 Guardado debug/pantalla_215210.png y .xml",
-       "21:52 Chat: 0 reels en el chat, 0 sin subir"
+       "22:12 No encontré un reel adecuado para repostear",
+       "22:12 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "22:13 Instagram: ahora en @maestromayordeobrasjb",
+       "22:18 Post elegido de #albañileria",
+       "22:19 ✔ Historia compartida (avioncito)",
+       "22:20 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "22:20 Instagram: ahora en @maestromayordeobrasjb",
+       "22:22 Facebook: el video no es de obra (o la IA dijo que no): no lo comparto",
+       "22:22 ✔ Facebook: compartido en la Página (publicación)",
+       "22:24 Post elegido de #albañilesargentinos"
       ]
      }
     }
@@ -5683,7 +5683,7 @@
   },
   "vencimientos": {
    "estado": "listo",
-   "corridas": 138,
+   "corridas": 139,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -5692,12 +5692,15 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-16T22:28:46.598Z",
-   "resumen": "🧾 Vencimientos e impuestos\n\n• Llaryora y una baja de impuestos en el Presupuesto 2027: qué pasará con el Inmobiliario e Ingresos Brutos (Vía País)\n  https://viapais.com.ar/cordoba/llaryora-baja-impuestos-presupuesto-202",
-   "informe": "data/informes/vencimientos/2026-11-16-1928.md",
+   "ultimaCorrida": "2026-11-17T01:27:53.798Z",
+   "resumen": "🧾 Vencimientos e impuestos\n\n• La excepción de inhabilidad de título en el juicio de ejecución fiscal y la inexistencia de la deuda (Ámbito Financiero)\n  https://www.ambito.com/novedades-fiscales/la-excepcion-inhabilidad",
+   "informe": "data/informes/vencimientos/2026-11-16-2227.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "la excepción de inhabilidad de título en el juicio de ejecución fiscal y la inexistencia d",
+     "presupuesto 2027: guillermo acosta presentó el proyecto de ley en la legislatura",
+     "argentina — medidas de caputo: ya está operativo un beneficio clave para pymes con deudas ",
      "llaryora y una baja de impuestos en el presupuesto 2027: qué pasará con el inmobiliario e ",
      "alarma en la salud privada: 6.000 clínicas del interior podrían cerrar si el gobierno no p",
      "presupuesto 2027: el ministro guillermo acosta presentó el proyecto de ley en la legislatu",
@@ -6008,7 +6011,7 @@
      "arca modifica la emisión de facturas del monotributo social desde noviembre",
      "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
     ],
-    "ultimoChequeo": "2026-11-16T22:28:46.598Z",
+    "ultimoChequeo": "2026-11-17T01:27:53.798Z",
     "semana": [
      {
       "titulo": "Feriados de noviembre 2026: impacto en vencimientos ARCA",
@@ -6675,13 +6678,31 @@
       "link": "https://www.infoplatense.com.ar/caputo-mejores-18-meses-shock-externo-kirchnerismo-milei-primera-vuelta/",
       "fuente": "Info Platense",
       "t": 1794868131463
+     },
+     {
+      "titulo": "La excepción de inhabilidad de título en el juicio de ejecución fiscal y la inexistencia de la deuda",
+      "link": "https://www.ambito.com/novedades-fiscales/la-excepcion-inhabilidad-titulo-el-juicio-ejecucion-fiscal-y-la-inexistencia-la-deuda-n6345859",
+      "fuente": "Ámbito Financiero",
+      "t": 1794878879696
+     },
+     {
+      "titulo": "Presupuesto 2027: Guillermo Acosta presentó el proyecto de ley en la Legislatura",
+      "link": "https://legislaturacba.gob.ar/presupuesto-2027-guillermo-acosta-presento-el-proyecto-de-ley-en-la-legislatura/",
+      "fuente": "Legislatura de la Provincia de Córdoba",
+      "t": 1794878879696
+     },
+     {
+      "titulo": "Argentina — Medidas de Caputo: ya está operativo un beneficio clave para pymes con deudas impositivas",
+      "link": "https://prensamercosur.org/2026/11/16/argentina-medidas-de-caputo-ya-esta-operativo-un-beneficio-clave-para-pymes-con-deudas-impositivas/",
+      "fuente": "prensamercosur",
+      "t": 1794878879696
      }
     ]
    }
   },
   "tarifas": {
    "estado": "listo",
-   "corridas": 139,
+   "corridas": 140,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -6690,12 +6711,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-16T22:28:46.598Z",
-   "resumen": "🧾 Aumentos de servicios\n\n• VIDEO: Lluvia y viento en el microcentro de Villa María (Facebook)\n  https://news.google.com/rss/articles/CBMivgFBVV95cUxNNVBfZDFfX0RIU2w1TE85UzNSZFhMUHE2V0R3aV9pTmtMeE0zRmF0OFZWWjhFSHdFRFBleU",
-   "informe": "data/informes/tarifas/2026-11-16-1928.md",
+   "ultimaCorrida": "2026-11-17T01:27:53.798Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• Derribando mitos (ENREDACCIÓN)\n  https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iYk9aeUlPNkstN3laMDV3WDEtZkRrWG1QRFZxSEhmR2lWTHlQLWdkYVdmaFkyVWFXaHZ6b2FwRGV6amhYelFLVUJCU29iUW41TEFrZFhoVQ",
+   "informe": "data/informes/tarifas/2026-11-16-2227.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "derribando mitos",
+     "el informe que muestra cómo los gastos suben por encima de la inflación",
+     "jubilaciones de anses: cuánto cobro en noviembre 2026 con el aumento, el bono y el aguinal",
+     "16 de noviembre de 2026",
+     "hoy será noticia. martes, 17 de noviembre",
+     "vicepresidente josé manuel restrepo anunció las primeras inversiones de la milagro week: a",
      "video: lluvia y viento en el microcentro de villa maría",
      "por qué la selección argentina postergó su viaje a córdoba: la explicación de scaloni",
      "¿cuáles son las provincias más afectadas por el cierre de empresas?",
@@ -7289,52 +7316,10 @@
      "auh de anses: cuánto se cobra en noviembre y cuándo se paga",
      "tarifas de luz, gas y agua: cuánto aumentan los servicios públicos en noviembre en el amba",
      "salarios de noviembre, uno a uno: qué gremios reciben aumentos y quiénes cobran bonos de m",
-     "prepagas en noviembre: cuánto aumentan osde, swiss medical, galeno y omint",
-     "la visita del papa dispara los alquileres en luján",
-     "manuel alonso infla nómina con 33 millones extra y blinda gasto en propaganda",
-     "clima en córdoba: cómo seguirá el tiempo este domingo 1 de noviembre",
-     "anses en noviembre: por los feriados del papa, los pagos arrancan el 11 y los bancos cierr",
-     "energía y minería impulsan las perspectivas económicas para 2027",
-     "cornejo... el tarifazo para compensar el recorte de subsidios al gas -"
+     "prepagas en noviembre: cuánto aumentan osde, swiss medical, galeno y omint"
     ],
-    "ultimoChequeo": "2026-11-16T22:28:46.598Z",
+    "ultimoChequeo": "2026-11-17T01:27:53.798Z",
     "semana": [
-     {
-      "titulo": "Capturas por estupefacientes en Córdoba aumentan un 51% en 2026",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQdFlva2FkQ3VkYUItdlpXM3dOb3ZNLXBoSXIzMngySjQ3aWsxQVN6V3RoTkQwVVgyeGxyMXoxbHpLZ2x3aC1SU3ZsblJCeUFZYjBqTkU2eUpCdlphS0N2NmFoNldGa0txRGtkU243RDNVUFJJRXpRZkFZTUtzX29OZzhQZS1YUlVpTmpSZm1zR0lMaFA4eDVrTnNmemtNZ9IBsgFBVV95cUxNSnkwdUprR0FFTlJOeHBSQXhFRk90RDdhSk1Xc1FOUEJnZTJ0NlpuSGZKbDdURFR1Z0FhbGE0RDBackxKNmhuSmRuekxHZ0N0R0V2YU9LX2F6TkxPaG5pSWg3T0lkcGtCLUhWd0JLQ0ozVm5ucE16WWYxYkFvQUVINm5FU3R4VGFNUUxzRTZPTHpxQnFsTXhBdnlzbUxPQTNIUzdsWHBiUnh3SmFaQklmN09B?oc=5",
-      "fuente": "Caracol Radio",
-      "t": 1794235223705
-     },
-     {
-      "titulo": "Ingenio dará la bienvenida a la Navidad el 21 de noviembre con una gran fiesta familiar",
-      "link": "https://ingenio.es/ingenio-dara-la-bienvenida-a-la-navidad-el-21-de-noviembre-con-una-gran-fiesta-familiar/",
-      "fuente": "ingenio.es",
-      "t": 1794235223705
-     },
-     {
-      "titulo": "Un estudio del INTA Reconquista descubrió cómo aumentar hasta un 40% la cosecha de algodón",
-      "link": "https://sinmordaza.com/noticia/524662-un-estudio-del-inta-reconquista-descubrio-como-aumentar-hasta-un-40-la-cosecha-de-algodon.html",
-      "fuente": "Sin Mordaza",
-      "t": 1794235223705
-     },
-     {
-      "titulo": "Corte de agua hoy, lunes 9 de noviembre, en distritos de Lima: zonas y horarios, según reporte de Sedapal.",
-      "link": "https://www.expreso.com.pe/actualidad/corte-de-agua-hoy-lunes-9-de-noviembre-en-distritos-de-lima-zonas-y-horarios-segun-reporte-de-sedapal-recibo-medidor-tuberias-servicio-potable-alcantarillado-noticia/1330269/",
-      "fuente": "Diario Expreso",
-      "t": 1794235223705
-     },
-     {
-      "titulo": "Inflación en CABA: se aceleró al 1,9% en octubre y acumuló 26,1% en diez meses",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdk1ZVFp0cEhfYkJDMjZQV3lnSV9EY3NYQTl4MDU3ZGFVbVZpSVFPeDhYdGpmbU1VcVJrVlp4N1ROU0hsZGdHY0tnYVhzN3BfUGlwWTlJNlZQUG5JTVE4WVY4V1N6bWN2X3JBTkwtMmJkM1JtTlJ6eS1LNjROUzFfWm1OUTJhekIzd092UXY5MXlRYTd4VjY4UGtheWZnMndGLVU2Rw?oc=5",
-      "fuente": "RoadShow",
-      "t": 1794235223705
-     },
-     {
-      "titulo": "Paro en el INE Córdoba: trabajadores suspenden trámites por aumento salarial digno - El Sol de Córdoba",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQakd5VjNDWUdIZUZtcWQ2b2trSDZYWUhXZFJCOGF0NXlPV053bFF2VTVNa2I5SFJpbElqRFVCYTZZR0JGcDlCYXNuZS1kaUwydC1OZHdhU3Ixa2JKc1d4dmRfdUVlMzZzTVExamdxby1aMTQ3aXM2dVBCeW1PZUJkWmM5N1hnUU8ydHRzSFZ1RW13RGc1Y0R3enJjMWRHcHJGQ05Vd3AyX1BBMFl2TWt0TjlBR3VvODdvWDhad2w3TUpZRnZKOVJZSHd3?oc=5",
-      "fuente": "El Sol de México",
-      "t": 1794245897351
-     },
      {
       "titulo": "Protestan trabajadores del INE en Córdoba y Orizaba por aumento salarial",
       "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQeDBTX1RLUkU0SFppUU1ESVFEUlBkczkxbXQ5d3A3NkZxWEJrZEJheFVXYUVHejlNRlcyZjcyR3BCU3VCTVQ5d2g4bDRKbzA0d2VpdURfcmFnRld0ZlNXZS1QWWxNT3BUVXRZUTJNTlZUWlh0MDB5M0RMT0x6cllub1FKM3BKdEJxU1llemlQRVRlYWdmR2hXdkJ3RGVXdDZPMWZHNEdLU041QXd4R3MwellPbw?oc=5",
@@ -9098,6 +9083,42 @@
       "link": "https://eldoce.tv/actualidad/2026/11/16/cortes-de-luz-de-epec-para-este-martes-en-cordoba-los-lugares-afectados/",
       "fuente": "ElDoce.tv",
       "t": 1794868133826
+     },
+     {
+      "titulo": "Derribando mitos",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iYk9aeUlPNkstN3laMDV3WDEtZkRrWG1QRFZxSEhmR2lWTHlQLWdkYVdmaFkyVWFXaHZ6b2FwRGV6amhYelFLVUJCU29iUW41TEFrZFhoVQ?oc=5",
+      "fuente": "ENREDACCIÓN",
+      "t": 1794878882389
+     },
+     {
+      "titulo": "El informe que muestra cómo los gastos suben por encima de la inflación",
+      "link": "https://www.msn.com/es-ar/finanzas/econom%C3%ADa/el-informe-que-muestra-c%C3%B3mo-los-gastos-suben-por-encima-de-la-inflaci%C3%B3n/ar-AA2hzwTf",
+      "fuente": "Noticias on MSN",
+      "t": 1794878882389
+     },
+     {
+      "titulo": "Jubilaciones de Anses: cuánto cobro en noviembre 2026 con el aumento, el bono y el aguinaldo",
+      "link": "https://www.lanacion.com.ar/economia/jubilaciones-de-anses-cuanto-cobro-en-noviembre-2026-con-el-aumento-el-bono-y-el-aguinaldo-nid16112026/",
+      "fuente": "LA NACION",
+      "t": 1794878882389
+     },
+     {
+      "titulo": "16 de noviembre de 2026",
+      "link": "https://hoydia.com.ar/economia/caputo-aseguro-que-la-argentina-llegara-a-2027-mas-fortalecida-que-nunca-y-anticipo-un-ano-mas-tranquilo/",
+      "fuente": "Hoy Día Córdoba",
+      "t": 1794878882389
+     },
+     {
+      "titulo": "Hoy será noticia. Martes, 17 de noviembre",
+      "link": "https://www.infobae.com/espana/agencias/2026/11/16/hoy-sera-noticia-martes-17-de-noviembre/",
+      "fuente": "Infobae",
+      "t": 1794878882389
+     },
+     {
+      "titulo": "Vicepresidente José Manuel Restrepo anunció las primeras inversiones de la Milagro Week: Avianca, Grupo Plata y Core X hicieron importantes apuestas por Colombia",
+      "link": "https://www.infobae.com/colombia/2026/11/16/vicepresidente-jose-manuel-restrepo-anuncio-las-primeras-inversiones-de-la-milagro-week-avianca-grupo-plata-y-core-x-hicieron-importantes-apuestas-por-colombia/",
+      "fuente": "Infobae",
+      "t": 1794878882389
      }
     ]
    }
@@ -9155,7 +9176,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 803,
+   "corridas": 804,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9164,7 +9185,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-17T00:57:43.521Z",
+   "ultimaCorrida": "2026-11-17T01:27:53.798Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9174,7 +9195,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-17T00:57:43.521Z",
+    "ultimoChequeo": "2026-11-17T01:27:53.798Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9417,16 +9438,16 @@
      },
      "2026-11-16": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       41,
-       41
+       42,
+       42
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       41,
-       41
+       42,
+       42
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       41,
-       41
+       42,
+       42
       ]
      }
     }
@@ -9453,7 +9474,7 @@
   },
   "precio_mmo": {
    "estado": "listo",
-   "corridas": 137,
+   "corridas": 138,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9462,7 +9483,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-16T22:28:46.598Z",
+   "ultimaCorrida": "2026-11-17T01:27:53.798Z",
    "resumen": "🧱 Valor m² del Colegio de MMO\n\n• El costo de construir es más alto que el índice de la inflación (El Día)\n  https://www.eldia.com/la-ciudad/el-costo-de-construir-es-mas-alto-que-el-indice-de-la-inflacion-la-ciudad_17948",
    "informe": "data/informes/precio_mmo/2026-11-16-0357.md",
    "pausado": false,
@@ -9540,7 +9561,7 @@
      "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
      "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
     ],
-    "ultimoChequeo": "2026-11-16T22:28:46.598Z",
+    "ultimoChequeo": "2026-11-17T01:27:53.798Z",
     "semana": [
      {
       "titulo": "Comparación. La obra tradicional acumuló un aumento interanual de casi 32% hasta octubre pasado",
@@ -18626,7 +18647,7 @@
   },
   "informe_redes": {
    "estado": "listo",
-   "corridas": 17,
+   "corridas": 18,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -18634,17 +18655,19 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-15",
-   "ultimaCorrida": "2026-11-16T01:00:09.401Z",
-   "resumen": "🧾 Informe del día del celu bot\n\n📱 Celu bot · 🔴 no responde hace 2969 min (revisá la depuración inalámbrica)\nBot de Instagram: trabajando\n\nHoy: 12 publicaciones · 16 historias · 17 reels/reposts · 22 seguidos · 5 dejad",
-   "informe": "data/informes/informe_redes/2026-11-15-2200.md",
+   "ultimaFecha": "2026-11-16",
+   "ultimaCorrida": "2026-11-17T01:27:53.798Z",
+   "resumen": "🧾 Informe del día del celu bot\n\n📱 Celu bot · 🟢 andando\nBot de Instagram: trabajando\n\nHoy: 12 publicaciones · 21 historias · 16 reels/reposts · 38 seguidos · 1 dejados de seguir (gringo) · 6 errores · 12 reinicios\n\nÚlt",
+   "informe": "data/informes/informe_redes/2026-11-16-2227.md",
    "pausado": false,
    "memoria": {
     "horas": {
      "fecha": "2026-11-16",
-     "hechas": []
+     "hechas": [
+      "22:00"
+     ]
     },
-    "ultimoChequeo": "2026-11-16T01:00:09.401Z"
+    "ultimoChequeo": "2026-11-17T01:27:53.798Z"
    }
   },
   "yt_tendencias": {
@@ -18884,7 +18907,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 785,
+   "corridas": 786,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -18893,13 +18916,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-17T00:57:43.521Z",
+   "ultimaCorrida": "2026-11-17T01:27:53.798Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-16",
-    "ultimoChequeo": "2026-11-17T00:57:43.521Z"
+    "ultimoChequeo": "2026-11-17T01:27:53.798Z"
    }
   },
   "feriados": {
@@ -19083,6 +19106,51 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-17T01:27:53.798Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-17T01:27:53.798Z",
+   "quien": "Aumentos de servicios",
+   "que": "no pude leer «aumentos noviembre Córdoba»: respondió 429"
+  },
+  {
+   "t": "2026-11-17T01:27:53.798Z",
+   "quien": "Aumentos de servicios",
+   "que": "no pude leer «aumento tarifa luz Córdoba EPEC»: respondió 429"
+  },
+  {
+   "t": "2026-11-17T01:27:53.798Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-17T01:27:53.798Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "no pude leer «ingresos brutos Córdoba vencimiento»: respondió 429"
+  },
+  {
+   "t": "2026-11-17T01:27:53.798Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "no pude leer «vencimientos ARCA»: respondió 429"
+  },
+  {
+   "t": "2026-11-17T01:27:53.798Z",
+   "quien": "Informe del celu",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-17T01:27:53.798Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-17T01:27:53.798Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-17T00:57:43.521Z",
    "quien": "Lo último en tecnología",
@@ -20537,58 +20605,10 @@
    "t": "2026-11-16T01:00:09.401Z",
    "quien": "Vencimientos e impuestos",
    "que": "no pude leer «ingresos brutos Córdoba vencimiento»: respondió 503"
-  },
-  {
-   "t": "2026-11-16T01:00:09.401Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "no pude leer «monotributo vencimiento»: respondió 503"
-  },
-  {
-   "t": "2026-11-16T01:00:09.401Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "no pude leer «vencimientos ARCA»: respondió 503"
-  },
-  {
-   "t": "2026-11-16T01:00:09.401Z",
-   "quien": "¿Qué comiste?",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-16T01:00:09.401Z",
-   "quien": "Informe del celu",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-16T01:00:09.401Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "no pude leer «descubrimiento científico»: respondió 503"
-  },
-  {
-   "t": "2026-11-16T01:00:09.401Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "no pude leer «OMS salud mundial»: respondió 503"
-  },
-  {
-   "t": "2026-11-16T01:00:09.401Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "no pude leer «Rusia salud»: respondió 503"
-  },
-  {
-   "t": "2026-11-16T01:00:09.401Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "no pude leer «Estados Unidos salud avance médico»: respondió 503"
-  },
-  {
-   "t": "2026-11-16T01:00:09.401Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "no pude leer «Japón salud ciencia»: respondió 503"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1097": "noticias_tec",
-  "1098": "noticias_tec",
-  "1099": "soporte",
   "1100": "dolar",
   "1101": "licitaciones",
   "1102": "vencimientos",
@@ -21085,7 +21105,10 @@
   "1736": "ejercicio",
   "1737": "salud_oficina",
   "1738": "comidas",
-  "1739": "noticias_tec"
+  "1739": "noticias_tec",
+  "1740": "informe_redes",
+  "1741": "vencimientos",
+  "1742": "tarifas"
  },
  "tgOffset": 196508524,
  "hechos": {
@@ -21111,7 +21134,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-17T00:57:43.521Z",
+ "actualizado": "2026-11-17T01:27:53.798Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
