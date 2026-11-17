@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 807,
+   "corridas": 808,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-17T03:04:45.087Z",
+   "ultimaCorrida": "2026-11-17T03:34:38.782Z",
    "resumen": "💵 Dólar hoy (11:37 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1560 · venta $1580 (+0.3%)\n• Bolsa: compra $1578.3 · venta $1578.3 (-0.2%)\n• Contado con liquidación: compra $1675.5 · venta $1675.5 (+0.2%)\n•",
    "informe": "data/informes/dolar/2026-11-16-1137.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1676.69,
      "tarjeta": 2047.5
     },
-    "ultimoChequeo": "2026-11-17T03:04:45.087Z",
+    "ultimoChequeo": "2026-11-17T03:34:38.782Z",
     "resumenFecha": "2026-11-16",
     "hist": {
      "2026-10-30": {
@@ -5440,26 +5440,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-17",
-   "ultimaCorrida": "2026-11-17T03:03:02.879Z",
+   "ultimaCorrida": "2026-11-17T03:34:13.109Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794884582879,
+     "t": 1794886453109,
      "redes_hoy": {
-      "publicaciones": 0,
+      "publicaciones": 2,
       "historias": 0,
-      "reels": 0,
-      "seguidos": 0,
+      "reels": 2,
+      "seguidos": 3,
       "gringo": 0,
-      "errores": 1,
-      "reinicios": 0,
+      "errores": 2,
+      "reinicios": 1,
       "ultimas": [
-       "00:00 Error en obra_reel: Memes: no pude bajar ningún reel (no es de obra: 5)",
-       "00:00 Guardado debug/pantalla_000020.png y .xml",
-       "00:00 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "00:00 Celular conectado: SM-A515F | pantalla 1080x2400"
+       "00:28 Error en obra_reel: Memes: no pude bajar ningún reel (no es de obra: 13, la IA dijo que no: 4)",
+       "00:28 Guardado debug/pantalla_002823.png y .xml",
+       "00:28 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:28 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "00:30 Instagram: ahora en @soycordobes.jpg",
+       "00:30 Post elegido de #cordobeses",
+       "00:31 ✔ Repost publicado en tu perfil",
+       "00:32 Instagram: ahora en @maestromayordeobrasjb",
+       "00:33 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
+       "00:33 PLAN DE HOY:"
       ]
      }
     },
@@ -5728,18 +5734,24 @@
       ]
      },
      "2026-11-17": {
-      "publicaciones": 0,
+      "publicaciones": 2,
       "historias": 0,
-      "reels": 0,
-      "seguidos": 0,
+      "reels": 2,
+      "seguidos": 3,
       "gringo": 0,
-      "errores": 1,
-      "reinicios": 0,
+      "errores": 2,
+      "reinicios": 1,
       "ultimas": [
-       "00:00 Error en obra_reel: Memes: no pude bajar ningún reel (no es de obra: 5)",
-       "00:00 Guardado debug/pantalla_000020.png y .xml",
-       "00:00 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "00:00 Celular conectado: SM-A515F | pantalla 1080x2400"
+       "00:28 Error en obra_reel: Memes: no pude bajar ningún reel (no es de obra: 13, la IA dijo que no: 4)",
+       "00:28 Guardado debug/pantalla_002823.png y .xml",
+       "00:28 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:28 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "00:30 Instagram: ahora en @soycordobes.jpg",
+       "00:30 Post elegido de #cordobeses",
+       "00:31 ✔ Repost publicado en tu perfil",
+       "00:32 Instagram: ahora en @maestromayordeobrasjb",
+       "00:33 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
+       "00:33 PLAN DE HOY:"
       ]
      }
     }
@@ -9331,7 +9343,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 807,
+   "corridas": 808,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9340,7 +9352,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-17T03:04:45.087Z",
+   "ultimaCorrida": "2026-11-17T03:34:38.782Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9350,7 +9362,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-17T03:04:45.087Z",
+    "ultimoChequeo": "2026-11-17T03:34:38.782Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9607,16 +9619,16 @@
      },
      "2026-11-17": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       1,
-       1
+       2,
+       2
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       1,
-       1
+       2,
+       2
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       1,
-       1
+       2,
+       2
       ]
      }
     }
@@ -19363,7 +19375,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 789,
+   "corridas": 790,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -19372,13 +19384,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-17T03:04:45.087Z",
+   "ultimaCorrida": "2026-11-17T03:34:38.782Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-16",
-    "ultimoChequeo": "2026-11-17T03:04:45.087Z"
+    "ultimoChequeo": "2026-11-17T03:34:38.782Z"
    }
   },
   "feriados": {
@@ -19547,7 +19559,7 @@
    "memoria": {}
   },
   "lote_fb": {
-   "estado": "listo",
+   "estado": "sin señal",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -19562,11 +19574,26 @@
    "informe": null,
    "pausado": false,
    "memoria": {
-    "avisoSinSenal": "2026-11-16T17:57:00.000Z"
+    "avisoSinSenal": "2026-11-16T23:21:00.000Z"
    }
   }
  },
  "log": [
+  {
+   "t": "2026-11-17T03:34:38.782Z",
+   "quien": "Mantenimiento",
+   "que": "Venta del lote (Facebook) no da señales hace 254 min"
+  },
+  {
+   "t": "2026-11-17T03:34:38.782Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-17T03:34:38.782Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-17T03:04:45.087Z",
    "quien": "Mundo: salud y ciencia",
@@ -21051,21 +21078,6 @@
    "t": "2026-11-16T03:57:47.758Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-16T03:57:47.758Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-16T03:27:37.842Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-16T03:27:37.842Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
   }
  ],
  "pendientes": [],
@@ -21587,7 +21599,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-17T03:04:45.087Z",
+ "actualizado": "2026-11-17T03:34:38.782Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
