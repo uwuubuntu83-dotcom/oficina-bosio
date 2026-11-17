@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 809,
+   "corridas": 810,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-17T04:04:29.068Z",
+   "ultimaCorrida": "2026-11-17T04:34:38.572Z",
    "resumen": "💵 Dólar hoy (11:37 hs)\n• Oficial: compra $1520 · venta $1570\n• Blue: compra $1560 · venta $1580 (+0.3%)\n• Bolsa: compra $1578.3 · venta $1578.3 (-0.2%)\n• Contado con liquidación: compra $1675.5 · venta $1675.5 (+0.2%)\n•",
    "informe": "data/informes/dolar/2026-11-16-1137.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1676.69,
      "tarjeta": 2047.5
     },
-    "ultimoChequeo": "2026-11-17T04:04:29.068Z",
+    "ultimoChequeo": "2026-11-17T04:34:38.572Z",
     "resumenFecha": "2026-11-16",
     "hist": {
      "2026-10-30": {
@@ -5444,13 +5444,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-17",
-   "ultimaCorrida": "2026-11-17T04:00:10.111Z",
+   "ultimaCorrida": "2026-11-17T04:31:12.777Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794888010111,
+     "t": 1794889872777,
      "redes_hoy": {
       "publicaciones": 2,
       "historias": 1,
@@ -5458,18 +5458,18 @@
       "seguidos": 9,
       "gringo": 0,
       "errores": 2,
-      "reinicios": 1,
+      "reinicios": 2,
       "ultimas": [
-       "00:39 ✔ Memes: seguido (3/6) seguidores de @casero.memes",
-       "00:40 ✔ Memes: seguido (4/6) seguidores de @casero.memes",
-       "00:41 ✔ Memes: seguido (5/6) seguidores de @casero.memes",
-       "00:41 ✔ Memes: seguido (6/6) seguidores de @casero.memes",
-       "00:44 Instagram: ahora en @maestromayordeobrasjb",
-       "00:45 Instagram: ahora en @soycordobes.jpg",
-       "00:49 Post elegido de #cordobeses",
-       "00:50 ✔ Historia compartida (avioncito)",
        "00:52 Instagram: ahora en @maestromayordeobrasjb",
-       "00:59 No encontré un post adecuado para la historia"
+       "00:59 No encontré un post adecuado para la historia",
+       "01:00 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "01:00 Instagram: ahora en @maestromayordeobrasjb",
+       "01:06 Instagram: ahora en @gringobosio",
+       "01:06 Guardado debug/pantalla_010648.png y .xml",
+       "01:27 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "01:27 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "01:27 Reinicio: retomo el plan de hoy con los MISMOS horarios (184 tareas pendientes)",
+       "01:27 PLAN DE HOY:"
       ]
      }
     },
@@ -5744,18 +5744,18 @@
       "seguidos": 9,
       "gringo": 0,
       "errores": 2,
-      "reinicios": 1,
+      "reinicios": 2,
       "ultimas": [
-       "00:39 ✔ Memes: seguido (3/6) seguidores de @casero.memes",
-       "00:40 ✔ Memes: seguido (4/6) seguidores de @casero.memes",
-       "00:41 ✔ Memes: seguido (5/6) seguidores de @casero.memes",
-       "00:41 ✔ Memes: seguido (6/6) seguidores de @casero.memes",
-       "00:44 Instagram: ahora en @maestromayordeobrasjb",
-       "00:45 Instagram: ahora en @soycordobes.jpg",
-       "00:49 Post elegido de #cordobeses",
-       "00:50 ✔ Historia compartida (avioncito)",
        "00:52 Instagram: ahora en @maestromayordeobrasjb",
-       "00:59 No encontré un post adecuado para la historia"
+       "00:59 No encontré un post adecuado para la historia",
+       "01:00 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "01:00 Instagram: ahora en @maestromayordeobrasjb",
+       "01:06 Instagram: ahora en @gringobosio",
+       "01:06 Guardado debug/pantalla_010648.png y .xml",
+       "01:27 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "01:27 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "01:27 Reinicio: retomo el plan de hoy con los MISMOS horarios (184 tareas pendientes)",
+       "01:27 PLAN DE HOY:"
       ]
      }
     }
@@ -5831,7 +5831,7 @@
   },
   "clima": {
    "estado": "listo",
-   "corridas": 191,
+   "corridas": 192,
    "fallas": 15,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -5840,13 +5840,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-11-17T02:35:07.325Z",
-   "resumen": "⚠️ Cambió el pronóstico para la obra\n\n🌤️ Clima en Villa María, Córdoba\n• Hoy 16/11: 18° a 30° · lluvia 100% · viento 24 km/h\n• Mañana 17/11: 17° a 27° · lluvia 41% · viento 20 km/h\n• Pasado 18/11: 17° a 27° · lluvia 51%",
-   "informe": "data/informes/clima/2026-11-16-2335.md",
+   "ultimaCorrida": "2026-11-17T04:34:38.572Z",
+   "resumen": "⚠️ Cambió el pronóstico para la obra\n\n🌤️ Clima en Villa María, Córdoba\n• Hoy 17/11: 17° a 27° · lluvia 25% · viento 20 km/h\n• Mañana 18/11: 17° a 27° · lluvia 59% · viento 13 km/h\n• Pasado 19/11: 16° a 23° · lluvia 90% ",
+   "informe": "data/informes/clima/2026-11-17-0134.md",
    "pausado": false,
    "memoria": {
-    "ultimoChequeo": "2026-11-17T02:35:07.325Z",
-    "ultimoAviso": "Hoy: 100% de lluvia (27.5 mm)",
+    "ultimoChequeo": "2026-11-17T04:34:38.572Z",
+    "ultimoAviso": "Pasado: 90% de lluvia (10.2 mm)",
     "resumenFecha": "2026-10-30",
     "autoReintento": "2026-11-16",
     "autoReintentos": 2
@@ -5854,7 +5854,7 @@
   },
   "vencimientos": {
    "estado": "listo",
-   "corridas": 139,
+   "corridas": 140,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -5863,12 +5863,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-17T01:27:53.798Z",
-   "resumen": "🧾 Vencimientos e impuestos\n\n• La excepción de inhabilidad de título en el juicio de ejecución fiscal y la inexistencia de la deuda (Ámbito Financiero)\n  https://www.ambito.com/novedades-fiscales/la-excepcion-inhabilidad",
-   "informe": "data/informes/vencimientos/2026-11-16-2227.md",
+   "ultimaCorrida": "2026-11-17T04:34:38.572Z",
+   "resumen": "🧾 Vencimientos e impuestos\n\n• Analizan exigir trabajadores en blanco a las empresas que liciten obras en San Juan (Tiempo de San Juan)\n  https://www.tiempodesanjuan.com/politica/analizan-exigir-trabajadores-en-blanco-a-",
+   "informe": "data/informes/vencimientos/2026-11-17-0134.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "analizan exigir trabajadores en blanco a las empresas que liciten obras en san juan",
      "la excepción de inhabilidad de título en el juicio de ejecución fiscal y la inexistencia d",
      "presupuesto 2027: guillermo acosta presentó el proyecto de ley en la legislatura",
      "argentina — medidas de caputo: ya está operativo un beneficio clave para pymes con deudas ",
@@ -6182,14 +6183,8 @@
      "arca modifica la emisión de facturas del monotributo social desde noviembre",
      "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
     ],
-    "ultimoChequeo": "2026-11-17T01:27:53.798Z",
+    "ultimoChequeo": "2026-11-17T04:34:38.572Z",
     "semana": [
-     {
-      "titulo": "Feriados de noviembre 2026: impacto en vencimientos ARCA",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNYmZPRmZzU3p3ZW5zdF9jUXNfTXRYNnI1UXQtazRnXzFzZ2tmWkxYbGZYRzdZMk95TEZMOHNQMXVkUXZKTU4zYk9USnFRN19mZDhDRWNFVzhLUHVGdFpaZ3ItZkw2R1NkUGVrNEQ0QVN1bXRWZ2lBSVA2RzIxZDFDSEMyUG56RW55THJHV0NYd3E?oc=5",
-      "fuente": "Mundo Empresarial AR",
-      "t": 1794191277890
-     },
      {
       "titulo": "ARCA detalla las claves del régimen simplificado de Ganancias",
       "link": "https://www.iprofesional.com/impuestos/468648-arca-detalla-las-claves-del-regimen-simplificado-de-ganancias",
@@ -6867,13 +6862,19 @@
       "link": "https://prensamercosur.org/2026/11/16/argentina-medidas-de-caputo-ya-esta-operativo-un-beneficio-clave-para-pymes-con-deudas-impositivas/",
       "fuente": "prensamercosur",
       "t": 1794878879696
+     },
+     {
+      "titulo": "Analizan exigir trabajadores en blanco a las empresas que liciten obras en San Juan",
+      "link": "https://www.tiempodesanjuan.com/politica/analizan-exigir-trabajadores-en-blanco-a-las-empresas-que-liciten-obras-en-san-juan_1794878562",
+      "fuente": "Tiempo de San Juan",
+      "t": 1794890082630
      }
     ]
    }
   },
   "tarifas": {
    "estado": "listo",
-   "corridas": 140,
+   "corridas": 141,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -6882,12 +6883,17 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-17T01:27:53.798Z",
-   "resumen": "🧾 Aumentos de servicios\n\n• Derribando mitos (ENREDACCIÓN)\n  https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iYk9aeUlPNkstN3laMDV3WDEtZkRrWG1QRFZxSEhmR2lWTHlQLWdkYVdmaFkyVWFXaHZ6b2FwRGV6amhYelFLVUJCU29iUW41TEFrZFhoVQ",
-   "informe": "data/informes/tarifas/2026-11-16-2227.md",
+   "ultimaCorrida": "2026-11-17T04:34:38.572Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• Clima en Córdoba: cómo estará el tiempo este martes 17 de noviembre (Cadena 3 Argentina)\n  https://news.google.com/rss/articles/CBMisAFBVV95cUxNTnprNzRZN2x5REtEY3Z4M1lCZmVoT3RrZGEyQU5aU2lRUXhC",
+   "informe": "data/informes/tarifas/2026-11-17-0134.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "clima en córdoba: cómo estará el tiempo este martes 17 de noviembre",
+     "bornoroni: “eliminaremos el impuesto inmobiliario, cuando llaryora lo aumentó 170% el año ",
+     "los empleados bancarios tendrán un nuevo aumento en línea con la inflación: en cuánto qued",
+     "anmat le prohibió a kinfarma vender medicamentos fuera de buenos aires",
+     "la producción de maquinaria agrícola se desploma: cae 31% interanual en córdoba",
      "derribando mitos",
      "el informe que muestra cómo los gastos suben por encima de la inflación",
      "jubilaciones de anses: cuánto cobro en noviembre 2026 con el aumento, el bono y el aguinal",
@@ -7482,45 +7488,10 @@
      "cuánto aumentarán la luz, el gas y el agua en noviembre y qué nuevos ajustes están en eval",
      "athletic club y real sociedad repetirán el histórico gesto de la ikurriña 50 años después ",
      "llaryora volvió a reclamar por los subsidios al transporte: córdoba exige lo que le corres",
-     "haberes de anses en noviembre: confirman aumentos, extras y el calendario oficial de cobro",
-     "noviembre llegó con aumento de micros, alquileres y colegios",
-     "auh de anses: cuánto se cobra en noviembre y cuándo se paga",
-     "tarifas de luz, gas y agua: cuánto aumentan los servicios públicos en noviembre en el amba",
-     "salarios de noviembre, uno a uno: qué gremios reciben aumentos y quiénes cobran bonos de m",
-     "prepagas en noviembre: cuánto aumentan osde, swiss medical, galeno y omint"
+     "haberes de anses en noviembre: confirman aumentos, extras y el calendario oficial de cobro"
     ],
-    "ultimoChequeo": "2026-11-17T01:27:53.798Z",
+    "ultimoChequeo": "2026-11-17T04:34:38.572Z",
     "semana": [
-     {
-      "titulo": "Protestan trabajadores del INE en Córdoba y Orizaba por aumento salarial",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQeDBTX1RLUkU0SFppUU1ESVFEUlBkczkxbXQ5d3A3NkZxWEJrZEJheFVXYUVHejlNRlcyZjcyR3BCU3VCTVQ5d2g4bDRKbzA0d2VpdURfcmFnRld0ZlNXZS1QWWxNT3BUVXRZUTJNTlZUWlh0MDB5M0RMT0x6cllub1FKM3BKdEJxU1llemlQRVRlYWdmR2hXdkJ3RGVXdDZPMWZHNEdLU041QXd4R3MwellPbw?oc=5",
-      "fuente": "xeu.mx",
-      "t": 1794245897351
-     },
-     {
-      "titulo": "Provincia de Córdoba: comienzan a llegar los peregrinos al predio de FAdeA para ver al papa León XIV",
-      "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNZ2pabE0wRE5idmhfVTUzR19EMVZMWUl4bGdmOVRjVjQ2QzF5UkZKdU9ocWdaYi1tSC1FYXZzeFViM0RuYm9mUWk2bXczQlZBZG9CczM1bVpkTE5KOEdZLWpVODNrMEpkOVZnLUlROXZyUVBGYUZSOUYxTTJMY0VrMmJTRGVaTGZPdENWNlA2OWQweFgxdlRKSjRyd21kb2EwbTd1TElvYUdLa19FWnVOdi04b0QyT2hnR1FYUWpKWWRoWm5BOFJnLXBPcUpXVnYweGVpUklRTHBfblVRc2U4N0FXRUJ6bDYxWkpSZ1NndWNYQkVtQVJPN3lB0gGIAkFVX3lxTE03YkFwZUpMZzQyMEpmSFBwV3hKeFF6SkhKSlAyVUozUjJIaGxQYzBMbTNJVWZqbmNtMmJmdVVrVUtoME15X3hhSGRhR3huR09YYVlyTXNSV1I5T1ZhY1YzMnFfUV92RXE5M1BOZlRiWURVZGFuX3J4NDdZTXVhbkdpRjg1Tk03ZGNYLWtHcWt3N2Q5TXdLcldRWmlYZkhKc2RRb1N0ZDlTeXJ1Yzh1WV9tT0ktQkRqMmpEMUlHZVh6Zi1LTnNMV2pySVJDNmZBdm5IRDBLaUdsTHF1MlFlNEZJRWZxQThLV1N5ajlnWGY2dFBQRUI5TUEwUW9GSzRfcjRkRjlmRlRUNQ?oc=5",
-      "fuente": "Agencia Noticias Argentinas",
-      "t": 1794245897351
-     },
-     {
-      "titulo": "Semana de verano en Córdoba: cuándo será el pico con 35 grados",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZVU1cGgwcDVPVWJPeHF3RXR1a2VYODNReEg0ZXFCTG5zdmhlR3VnZXJOQWNtWEwtMlBPeGk5YWo1Ui1IUGk1aFRxT2c5RHNWdHU3RjlNTUh4aFp1WmhFdmF2UkZLZUlYM2RnRl9vTXR0R3BwUkZrNTZGQThOM01tQUw3ZTA5Ti1uN0pCdkZUeGdmZndWZklvdDRnM0pkNHJYNnhKVNIBuAFBVV95cUxNbVlCZlFNaUxQdDhIVDVETF9Nb25fX1BEcEZoZW81S3Y2SDVMNkVad3BrSzNRRVlaemRRaWZpS0JFbDhnc0FCNWVnOWlLb3RIM2FMNVVUdV9rb09KTEU3bm1adTVMbENpbk9JZlkxYXpCd2JmWXExMEgzMlp2ZDFEMUZ3MEdITlJHaU4tX092ODhNQ2FqWDViVDVvQm1oVkVCVVVFSG9zdVdOS0Y0TExidDdYQTBDOERN?oc=5",
-      "fuente": "eldoce",
-      "t": 1794245897351
-     },
-     {
-      "titulo": "Bajo protesta, personal de módulos del INE exige nivelación salarial y mejores condiciones laborales en Cór...",
-      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNUkZtQVIwRl9RUGtrU2I5Zl9QNnlvVThjX1B6bUVTTWs1NEtFdGtTTDI4aXAyQXdzVkMwdVd0TzBSdlB0UjJieTRTWWd0dm4zVWp6SXBxcG1MOHgwY1VCOFkzMUZxMjJQdFlSNXQ4S3I3X0lNMTczdFpiNElCeEYydEhBOVNmdFJXaGhfZmxiU3FCNlVzSTQxNGhjTmlrYjRxSFRIcVlVQVFmSFZPNEgtaElTMmJuZjVDeUw5V1hQcVFQZ3VSVW1hOXVaRVJpQUdtSVMzaVRuc3U2NkHSAeABQVVfeXFMUHIxTWVGaGF2S2NrSXBHSFZhQTllaUlrNnFuQ2lYZ21naGFYSnNwb0JvaVVKTl81cEdXZUVJRGxQZUlFeVJYWHNTbG5TRGNYSm5td3dmeFN4cEw5bU05NWVONGlkUHZpcW5VLVNpYUh4N1c0cW90NWhjRGpuemdNQmtWTU1yam9zcl83bVR1d3hJdFp1WTFLd196Q0JLZk54Tl9MdGhDeVh4aW9ZM21sclhDeGkycXp6M2czekIzT2pkbU16Vk4xX2hUcmdKTUx4MlVraWFTNXllOGpGa3VSUEc?oc=5",
-      "fuente": "Imagen del Golfo",
-      "t": 1794245897351
-     },
-     {
-      "titulo": "Córdoba alcanza un récord absoluto de exportaciones entre enero y noviembre de 2022",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQd21OdXVTdF9rbmJvb1NkVXo2Ui1VdkdINnltdlpaMTdIS2xBSnRBbzBRNVk0SWNyRm9rS3FYc1lIVWJ5MUExZ3hsOFo0UldONWNEV3hPUmFTenYyclpOUjhIejQ0bkpNeUVDTlVEQXNtTllhWjRQbmtkRUVISkJrNGNTWndjZE9DaGoyMWZ5dGxFWHVsTTF5Wkk1a2hmeEtkcFdlM3NyUUxjMEJPY1cxSHhFYXlUM1JwUExRTGdVZ2VVT0ZCT1JV0gHMAUFVX3lxTFA4bVR5RVpncnBPeVo5enV1RFJSWnpNOHVZMzNheUltQ1NTVkk0NjkybjdvbVVhbGVMRlNKQ2tTdXFoVzJCWDBfMVYwVFdMM0hXRUxBQlJUZlo2N2pFYXFheDBGakZ6VV9rSU9IMm5hdkVqUW43akM3NWtKMnB2NmhDVWp6dEZpVGZPbFJhNl9sY185dURPczBuZHllbzBDcWZSdU1ZdWF2VG1yeHlUcDRrUlVnb1NpT1RETXpUTmJkZllfc0JXaVp3eld6eg?oc=5",
-      "fuente": "Cordoba Hoy",
-      "t": 1794245897351
-     },
      {
       "titulo": "Agua. El Ersep aprobó un aumento del 11,9% para Aguas Cordobesas y ya rige en Córdoba",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbXh5RlBXdk82ZmpIcDRjYXZkUnZZTXF0NTl5ODlTeUNpOE16SUZaYjVTWXRGVGVMNmhmOE5CcXNCclpUUVc2cUZXcVFjVi1xOGdYY1EwdjBRWEFyS05kc1dGNXdDU3JRbkx2RURFaGNwck9yQVhZQjZ2WVBoZ0Y3TEw4Vm8xX212bmpLakdOeEdTN3NqVkI2Q3JqR05PSERtbjdDNkVVSExjZw?oc=5",
@@ -9290,6 +9261,36 @@
       "link": "https://www.infobae.com/colombia/2026/11/16/vicepresidente-jose-manuel-restrepo-anuncio-las-primeras-inversiones-de-la-milagro-week-avianca-grupo-plata-y-core-x-hicieron-importantes-apuestas-por-colombia/",
       "fuente": "Infobae",
       "t": 1794878882389
+     },
+     {
+      "titulo": "Clima en Córdoba: cómo estará el tiempo este martes 17 de noviembre",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTnprNzRZN2x5REtEY3Z4M1lCZmVoT3RrZGEyQU5aU2lRUXhCMm5sakotOEhIOVROOGpjNlRsYTZCaENmeFd5SThGSGhkUU5kN3dmOGo1N0dkR05teXhUdWxNTjRJUXZ3dll3M0E4WUxhUDZHbGZpRW10dmlNcDgzLWwwa3dRekJ2ZEtFN0JfeGJOMGJ5VlpNYnR1V2V2VWk1dE5lMG43aWlfc1hDMGd6b9IBtgFBVV95cUxNX2lQazYxbTBGdzJ0aG9LMnBpSkZkRzhXVk1Ea1VHb0JwdXRadE45RU42bkVXb0JBY3VBSy1KQUdoVkl2ZXdaVGppMEZfVU9EQWJQUmdlVnFUekFpdm5UdHV3TUlMYkU1OTAtM19Pd1FxTXlCSmFRLTR1ZEI2TEk4a3AwWGVRajVJblJFTjNYLTBQbXMyWDJnMml5UkgzTWhTcUY5OFN3WGFuSDhvWmNpVUNqVVF3UQ?oc=5",
+      "fuente": "Cadena 3 Argentina",
+      "t": 1794890084999
+     },
+     {
+      "titulo": "Bornoroni: “Eliminaremos el impuesto inmobiliario, cuando Llaryora lo aumentó 170% el año pasado”",
+      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPUDIyelNnN0taZnVjRExpQlVBOGRiUjltU0E3TW5ZdFVLeUh6VUYyOFIyM0hKdXpDNDlwdlFmbmdfMVlIdmRGSHU1WmgzN0FMTmF2WU1lcC1zV0NYS3BrcjZSeDRiUzZEWnB0R3hYS1Z4aWdGalZUQV9vSWVxVnJkTmlTRlBEWmtLRWVkSXM5d1NZRTE0RGMtbElJeWl5ZXhhZTZVTVctX05EM0ZpVllQSUdOd2hFSjNDNDNwYnFVd253cnZYY0NIMXlobXhDRmVLRlpPazRpUjdRd0paWUtxWHlYRzA1YzjSAecBQVVfeXFMT1AyMnpTZzdLWmZ1Y0RMaUJVQThkYlI5bVNBN01uWXRVS3lIelVGMjhSMjNISnV6QzQ5cHZRZm5nXzFZSHZkRkh1NVpoMzdBTE5hdllNZXAtc1dDWEtwa3I2Ung0YlM2RFpwdEd4WEtWeGlnRmpWVEFfb0llcVZyZE5pU0ZQRFprS0VlZElzOXdTWUUxNERjLWxJSXlpeWV4YWU2VU1XLV9ORDNGaVZZUElHTndoRUozQzQzcGJxVXdud3J2WGNDSDF5aG14Q0ZlS0ZaT2s0aVI3UXdKWllLcVh5WEcwNWM4?oc=5",
+      "fuente": "Cadena 3 Argentina",
+      "t": 1794890084999
+     },
+     {
+      "titulo": "Los empleados bancarios tendrán un nuevo aumento en línea con la inflación: en cuánto quedará el salario inicial",
+      "link": "https://www.infobae.com/economia/2026/11/16/los-empleados-bancarios-tendran-un-nuevo-aumento-en-linea-con-la-inflacion-en-cuanto-quedara-el-salario-inicial/",
+      "fuente": "Infobae",
+      "t": 1794890084999
+     },
+     {
+      "titulo": "ANMAT le prohibió a Kinfarma vender medicamentos fuera de Buenos Aires",
+      "link": "https://elargentinodiario.com.ar/zona-destacada/16/11/2026/anmat-le-prohibio-a-kinfarma-vender-medicamentos-fuera-de-buenos-aires/",
+      "fuente": "El Argentino Diario",
+      "t": 1794890084999
+     },
+     {
+      "titulo": "La producción de maquinaria agrícola se desploma: cae 31% interanual en Córdoba",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPb0lRMFB5aGhpaGRoakhrSWJaazVZcjVDRHNiX0JhQk00VHZCSm93ZUFBZTdRX1h5M2FLSk8wZFBwOWhoX1ZMaFFaX203V3BrZEVOU0dBOG4yQkNsY05ka3N6UzN1MjUwZjhTY3pFY1FvRHlFY3FhSkx1d2RZcDQxLV9zLUh4RndGYmI0OGFzZnNiZFoxaXhCX0huS2VJNDZLSzZqUGlGcEpWQ0JhbWdya29QeF84bzhE?oc=5",
+      "fuente": "Página|12",
+      "t": 1794890084999
      }
     ]
    }
@@ -9347,7 +9348,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 809,
+   "corridas": 810,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9356,7 +9357,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-17T04:04:29.068Z",
+   "ultimaCorrida": "2026-11-17T04:34:38.572Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9366,7 +9367,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-17T04:04:29.068Z",
+    "ultimoChequeo": "2026-11-17T04:34:38.572Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9623,16 +9624,16 @@
      },
      "2026-11-17": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       3,
-       3
+       4,
+       4
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       3,
-       3
+       4,
+       4
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       3,
-       3
+       4,
+       4
       ]
      }
     }
@@ -9659,7 +9660,7 @@
   },
   "precio_mmo": {
    "estado": "listo",
-   "corridas": 138,
+   "corridas": 139,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9668,7 +9669,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-17T01:27:53.798Z",
+   "ultimaCorrida": "2026-11-17T04:34:38.572Z",
    "resumen": "🧱 Valor m² del Colegio de MMO\n\n• El costo de construir es más alto que el índice de la inflación (El Día)\n  https://www.eldia.com/la-ciudad/el-costo-de-construir-es-mas-alto-que-el-indice-de-la-inflacion-la-ciudad_17948",
    "informe": "data/informes/precio_mmo/2026-11-16-0357.md",
    "pausado": false,
@@ -9746,7 +9747,7 @@
      "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
      "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
     ],
-    "ultimoChequeo": "2026-11-17T01:27:53.798Z",
+    "ultimoChequeo": "2026-11-17T04:34:38.572Z",
     "semana": [
      {
       "titulo": "Comparación. La obra tradicional acumuló un aumento interanual de casi 32% hasta octubre pasado",
@@ -19434,7 +19435,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 791,
+   "corridas": 792,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -19443,13 +19444,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-17T04:04:29.068Z",
+   "ultimaCorrida": "2026-11-17T04:34:38.572Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-16",
-    "ultimoChequeo": "2026-11-17T04:04:29.068Z"
+    "ultimoChequeo": "2026-11-17T04:34:38.572Z"
    }
   },
   "feriados": {
@@ -19638,6 +19639,41 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-17T04:34:38.572Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-17T04:34:38.572Z",
+   "quien": "Aumentos de servicios",
+   "que": "no pude leer «aumento agua Villa María»: respondió 429"
+  },
+  {
+   "t": "2026-11-17T04:34:38.572Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-17T04:34:38.572Z",
+   "quien": "Clima para la obra",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-17T04:34:38.572Z",
+   "quien": "Valor m² del Colegio de MMO",
+   "que": "no pude leer «costo de la construcción Córdoba metro cuadrado»: respondió 429"
+  },
+  {
+   "t": "2026-11-17T04:34:38.572Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-17T04:34:38.572Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-17T04:04:29.068Z",
    "quien": "Lo último en tecnología",
@@ -21102,48 +21138,10 @@
    "t": "2026-11-16T07:28:04.470Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-16T06:57:45.652Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-16T06:57:45.652Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-16T06:57:45.652Z",
-   "quien": "Valor m² del Colegio de MMO",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-16T06:57:45.652Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-16T06:57:45.652Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-16T06:28:01.164Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-16T06:28:01.164Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1102": "vencimientos",
-  "1103": "tarifas",
-  "1104": "clima",
   "1105": "comidas",
   "1106": "noticias_vm",
   "1107": "noticias_ar",
@@ -21640,7 +21638,10 @@
   "1741": "vencimientos",
   "1742": "tarifas",
   "1744": "clima",
-  "1746": "licitaciones"
+  "1746": "licitaciones",
+  "1747": "clima",
+  "1748": "vencimientos",
+  "1749": "tarifas"
  },
  "tgOffset": 196508524,
  "hechos": {
@@ -21658,7 +21659,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-17T04:04:29.068Z",
+ "actualizado": "2026-11-17T04:34:38.572Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
