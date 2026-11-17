@@ -5364,32 +5364,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-16",
-   "ultimaCorrida": "2026-11-17T01:55:50.601Z",
+   "ultimaCorrida": "2026-11-17T02:00:47.624Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794880550601,
+     "t": 1794880847624,
      "redes_hoy": {
       "publicaciones": 14,
       "historias": 22,
-      "reels": 18,
+      "reels": 19,
       "seguidos": 38,
       "gringo": 1,
       "errores": 8,
       "reinicios": 12,
       "ultimas": [
-       "22:48 Post elegido de #humor",
-       "22:48 ✔ Historia compartida (avioncito)",
-       "22:50 Instagram: ahora en @maestromayordeobrasjb",
        "22:52 Instagram: ahora en @soycordobes.jpg",
        "22:53 Guardado debug/pantalla_225304.png y .xml",
        "22:53 Chat: 0 reels en el chat, 0 sin subir",
        "22:54 Memes: tocado 'Descargar', esperando que baje el video...",
        "22:54 Memes: reel descargado (14023 KB) de @memesdocentes.ok",
        "22:54 Memes: descripción lista (5 hashtags)",
-       "22:55 Memes: no encontré el '+'. Subo el video por el menú Compartir (plan B)."
+       "22:55 Memes: no encontré el '+'. Subo el video por el menú Compartir (plan B).",
+       "22:57 ✔ Memes: reel descargado y resubido en @soycordobes.jpg",
+       "22:57 Memes: video borrado del celular (ya estaba subido)",
+       "22:59 Instagram: ahora en @maestromayordeobrasjb"
       ]
      }
     },
@@ -5639,22 +5639,22 @@
      "2026-11-16": {
       "publicaciones": 14,
       "historias": 22,
-      "reels": 18,
+      "reels": 19,
       "seguidos": 38,
       "gringo": 1,
       "errores": 8,
       "reinicios": 12,
       "ultimas": [
-       "22:48 Post elegido de #humor",
-       "22:48 ✔ Historia compartida (avioncito)",
-       "22:50 Instagram: ahora en @maestromayordeobrasjb",
        "22:52 Instagram: ahora en @soycordobes.jpg",
        "22:53 Guardado debug/pantalla_225304.png y .xml",
        "22:53 Chat: 0 reels en el chat, 0 sin subir",
        "22:54 Memes: tocado 'Descargar', esperando que baje el video...",
        "22:54 Memes: reel descargado (14023 KB) de @memesdocentes.ok",
        "22:54 Memes: descripción lista (5 hashtags)",
-       "22:55 Memes: no encontré el '+'. Subo el video por el menú Compartir (plan B)."
+       "22:55 Memes: no encontré el '+'. Subo el video por el menú Compartir (plan B).",
+       "22:57 ✔ Memes: reel descargado y resubido en @soycordobes.jpg",
+       "22:57 Memes: video borrado del celular (ya estaba subido)",
+       "22:59 Instagram: ahora en @maestromayordeobrasjb"
       ]
      }
     }
@@ -5729,10 +5729,10 @@
    "memoria": {}
   },
   "clima": {
-   "estado": "falló",
+   "estado": "esperando",
    "corridas": 190,
    "fallas": 15,
-   "fallasSeguidas": 3,
+   "fallasSeguidas": 2,
    "puntaje": null,
    "historial": [],
    "likes": 0,
@@ -5742,13 +5742,13 @@
    "ultimaCorrida": "2026-11-16T16:10:33.936Z",
    "resumen": "Falló: fetch failed",
    "informe": "data/informes/clima/2026-11-16-0954.md",
-   "pausado": true,
+   "pausado": false,
    "memoria": {
     "ultimoChequeo": "2026-11-16T12:54:37.795Z",
     "ultimoAviso": "Hoy: 100% de lluvia (5.7 mm)",
     "resumenFecha": "2026-10-30",
-    "autoReintento": "2026-11-13",
-    "autoReintentos": 1
+    "autoReintento": "2026-11-16",
+    "autoReintentos": 2
    }
   },
   "vencimientos": {
@@ -19348,6 +19348,21 @@
  },
  "log": [
   {
+   "t": "2026-11-17T02:04:53.930Z",
+   "quien": "Mantenimiento",
+   "que": "reactivó para reintentar: Clima para la obra"
+  },
+  {
+   "t": "2026-11-17T02:04:53.930Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-17T02:04:53.930Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
+  {
    "t": "2026-11-17T01:57:44.950Z",
    "quien": "Mundo: salud y ciencia",
    "que": "no pude leer «China salud avance médico»: respondió 429"
@@ -20831,21 +20846,6 @@
    "t": "2026-11-16T01:00:09.401Z",
    "quien": "Lo último en tecnología",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-16T01:00:09.401Z",
-   "quien": "Lo último en tecnología",
-   "que": "no pude leer «ciberseguridad alerta»: respondió 503"
-  },
-  {
-   "t": "2026-11-16T01:00:09.401Z",
-   "quien": "Lo último en tecnología",
-   "que": "no pude leer «celulares lanzamiento»: respondió 503"
-  },
-  {
-   "t": "2026-11-16T01:00:09.401Z",
-   "quien": "Lo último en tecnología",
-   "que": "no pude leer «GitHub herramienta nueva»: respondió 503"
   }
  ],
  "pendientes": [],
@@ -21354,7 +21354,7 @@
  "tgOffset": 196508524,
  "hechos": {
   "parte": "2026-11-16",
-  "entrenamiento": "2026-11-15",
+  "entrenamiento": "2026-11-16",
   "buzonAvisado": "2026-10-30T13:35:53.482Z",
   "celuAvisosOficina": "2026-10-30T21:27:53.966Z",
   "linkPin": "2026-10-31T19:12:57.175Z",
@@ -21375,7 +21375,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-17T01:57:44.950Z",
+ "actualizado": "2026-11-17T02:04:53.930Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
