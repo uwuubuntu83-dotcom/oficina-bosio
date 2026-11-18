@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 855,
+   "corridas": 856,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-17",
-   "ultimaCorrida": "2026-11-18T03:23:41.670Z",
+   "ultimaCorrida": "2026-11-18T03:53:34.791Z",
    "resumen": "💵 Dólar hoy (10:39 hs)\n• Oficial: compra $1525 · venta $1575\n• Blue: compra $1580 · venta $1600\n• Bolsa: compra $1581.2 · venta $1588.9\n• Contado con liquidación: compra $1680.1 · venta $1682.9\n• Mayorista: compra $1542",
    "informe": "data/informes/dolar/2026-11-17-1039.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1694.83,
      "tarjeta": 2047.5
     },
-    "ultimoChequeo": "2026-11-18T03:23:41.670Z",
+    "ultimoChequeo": "2026-11-18T03:53:34.791Z",
     "resumenFecha": "2026-11-17",
     "hist": {
      "2026-10-30": {
@@ -5682,32 +5682,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-18",
-   "ultimaCorrida": "2026-11-18T03:21:35.650Z",
+   "ultimaCorrida": "2026-11-18T03:52:49.259Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794972095650,
+     "t": 1794973969259,
      "redes_hoy": {
       "publicaciones": 1,
       "historias": 1,
       "reels": 1,
       "seguidos": 4,
       "gringo": 0,
-      "errores": 0,
-      "reinicios": 1,
+      "errores": 7,
+      "reinicios": 19,
       "ultimas": [
-       "00:03 Post elegido de #obraencurso",
-       "00:04 ✔ Historia compartida (avioncito)",
-       "00:06 ✔ Facebook: compartido en la Página (publicación)",
-       "00:06 Post elegido de #arquitectura",
-       "00:07 ✔ Repost publicado en tu perfil",
-       "00:10 ✔ Facebook: compartido en la Página (historia)",
-       "00:11 ✔ Seguido (1/4): @petit.hernan (Hernán Petit), seguidor de @vassallopremoldeados (#cordoba)",
-       "00:13 ✔ Seguido (2/4): @javierperillo (Javier Perillo), seguidor de @vassallopremoldeados (#cordoba)",
-       "00:16 ✔ Seguido (3/4): @liliana.gaunarojas (Liliana Gauna Rojas), seguidor de @vassallopremoldeados (#cordoba)",
-       "00:18 ✔ Seguido (4/4): @anto.suarezz04 (Anto Suarez), seguidor de @noe.emprende_digital (#lacarlota)"
+       "00:48 Error en obra_historia: No quedó en la cuenta maestromayordeobrasjb (está en desconocida)",
+       "00:48 Guardado debug/pantalla_004802.png y .xml",
+       "00:48 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:48 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "00:48 Error en fb_historia: No encontré ninguno de: ['Menú', 'Menu']",
+       "00:48 Guardado debug/pantalla_004826.png y .xml",
+       "00:48 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:48 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "00:48 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
+       "00:48 PLAN DE HOY:"
       ]
      }
     },
@@ -6002,19 +6002,19 @@
       "reels": 1,
       "seguidos": 4,
       "gringo": 0,
-      "errores": 0,
-      "reinicios": 1,
+      "errores": 7,
+      "reinicios": 19,
       "ultimas": [
-       "00:03 Post elegido de #obraencurso",
-       "00:04 ✔ Historia compartida (avioncito)",
-       "00:06 ✔ Facebook: compartido en la Página (publicación)",
-       "00:06 Post elegido de #arquitectura",
-       "00:07 ✔ Repost publicado en tu perfil",
-       "00:10 ✔ Facebook: compartido en la Página (historia)",
-       "00:11 ✔ Seguido (1/4): @petit.hernan (Hernán Petit), seguidor de @vassallopremoldeados (#cordoba)",
-       "00:13 ✔ Seguido (2/4): @javierperillo (Javier Perillo), seguidor de @vassallopremoldeados (#cordoba)",
-       "00:16 ✔ Seguido (3/4): @liliana.gaunarojas (Liliana Gauna Rojas), seguidor de @vassallopremoldeados (#cordoba)",
-       "00:18 ✔ Seguido (4/4): @anto.suarezz04 (Anto Suarez), seguidor de @noe.emprende_digital (#lacarlota)"
+       "00:48 Error en obra_historia: No quedó en la cuenta maestromayordeobrasjb (está en desconocida)",
+       "00:48 Guardado debug/pantalla_004802.png y .xml",
+       "00:48 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:48 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "00:48 Error en fb_historia: No encontré ninguno de: ['Menú', 'Menu']",
+       "00:48 Guardado debug/pantalla_004826.png y .xml",
+       "00:48 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:48 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "00:48 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
+       "00:48 PLAN DE HOY:"
       ]
      }
     }
@@ -9666,7 +9666,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 855,
+   "corridas": 856,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9675,7 +9675,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-18T03:23:41.670Z",
+   "ultimaCorrida": "2026-11-18T03:53:34.791Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9685,7 +9685,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-18T03:23:41.670Z",
+    "ultimoChequeo": "2026-11-18T03:53:34.791Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9956,16 +9956,16 @@
      },
      "2026-11-18": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       1,
-       1
+       2,
+       2
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       1,
-       1
+       2,
+       2
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       1,
-       1
+       2,
+       2
       ]
      }
     }
@@ -20016,7 +20016,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 837,
+   "corridas": 838,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20025,13 +20025,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-18T03:23:41.670Z",
+   "ultimaCorrida": "2026-11-18T03:53:34.791Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-17",
-    "ultimoChequeo": "2026-11-18T03:23:41.670Z"
+    "ultimoChequeo": "2026-11-18T03:53:34.791Z"
    }
   },
   "feriados": {
@@ -20223,6 +20223,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-18T03:53:34.791Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-18T03:53:34.791Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-18T03:23:41.670Z",
    "quien": "Clima para la obra",
@@ -21712,16 +21722,6 @@
    "t": "2026-11-17T00:57:43.521Z",
    "quien": "Mundo: economía",
    "que": "no pude leer «Japón economía»: respondió 429"
-  },
-  {
-   "t": "2026-11-17T00:57:43.521Z",
-   "quien": "Mundo: economía",
-   "que": "no pude leer «China economía»: respondió 429"
-  },
-  {
-   "t": "2026-11-17T00:57:43.521Z",
-   "quien": "Argentina: economía y obra pública",
-   "que": "no pude leer «construcción Argentina»: respondió 429"
   }
  ],
  "pendientes": [],
@@ -22243,7 +22243,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-18T03:23:41.670Z",
+ "actualizado": "2026-11-18T03:53:34.791Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
