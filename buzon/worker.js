@@ -7,6 +7,7 @@
 import { DurableObject } from "cloudflare:workers";
 
 const MAX_CHAT = 400;
+const CLAVES_IA = ["gemini", "github", "groq", "openrouter", "cerebras", "mistral"];   // (cuentas) IA gratis y sin tarjeta que puede tener cada bot
 const json = (o, st = 200, extra = {}) => new Response(JSON.stringify(o), { status: st, headers: { "content-type": "application/json; charset=utf-8", ...extra } });
 
 export class Buzon extends DurableObject {
@@ -30,6 +31,25 @@ export class Buzon extends DurableObject {
         const periodico = /últimos \d+ min/i.test(r.texto);           // el resumen de cada 15 min queda solo en el chat de la oficina
         return json({ ok: true, aTelegram: r.urgente || r.alerta || !periodico, texto: r.texto });
       }
+      case "/oficina/cuentas": {                       // (cuentas) la página ve qué tiene cargado cada bot/área, NUNCA las claves enteras
+        const c = (await s.get("cuentas")) || {};
+        const vista = {}; for (const [id, x] of Object.entries(c)) vista[id] = { correo: x.correo || "", soloPropias: !!x.soloPropias, actualizado: x.actualizado || 0, claves: Object.fromEntries(Object.entries(x.claves || {}).filter(([, v]) => v).map(([k, v]) => [k, "…" + String(v).slice(-4)])) };
+        return json({ cuentas: vista });
+      }
+      case "/oficina/cuenta": {                        // (cuentas) guardar correo y claves de un bot o de un área; campo vacío = deja la que estaba
+        const id = String(body.id || "");
+        if (!/^(bot|area):[a-z0-9_]{1,40}$/.test(id)) return json({ ok: false, error: "id no válido" }, 400);
+        const c = (await s.get("cuentas")) || {}; const x = c[id] || { claves: {} };
+        if (body.borrarTodo) { delete c[id]; await s.put("cuentas", c); return json({ ok: true, borrado: id }); }
+        if (typeof body.correo === "string") x.correo = body.correo.trim().slice(0, 120);
+        if (typeof body.soloPropias === "boolean") x.soloPropias = body.soloPropias;
+        for (const k of CLAVES_IA) { const v = body.claves && body.claves[k]; if (typeof v === "string" && v.trim()) x.claves[k] = v.trim().slice(0, 300); }
+        for (const k of (body.borrar || [])) if (CLAVES_IA.includes(k)) delete x.claves[k];
+        x.actualizado = Date.now(); c[id] = x; await s.put("cuentas", c);
+        return json({ ok: true, id, claves: Object.keys(x.claves) });
+      }
+      case "/celu/cuentas":                            // (cuentas) solo el motor de la oficina (con la clave del celu) recibe las claves enteras
+        return json({ cuentas: (await s.get("cuentas")) || {} });
       case "/oficina/celu":
         return json({ estado: (await s.get("estado")) || null, chat: ((await s.get("chat")) || []).slice(-120), pendientes: ((await s.get("ordenes")) || []).length, ahora: Date.now() });
       case "/oficina/orden": {

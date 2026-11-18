@@ -6,6 +6,7 @@ import path from "node:path";
 import crypto from "node:crypto";
 import zlib from "node:zlib";
 import { spawnSync } from "node:child_process";
+import { AsyncLocalStorage } from "node:async_hooks";
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const DATA = path.join(ROOT, "data");
@@ -92,6 +93,45 @@ if (ENV.MOCK_PROVIDERS) for (const id of ENV.MOCK_PROVIDERS.split(",")) PROV.pus
 
 // modelos gratis que pueden leer fotos (tickets, capturas del banco, fotos tuyas)
 const VISION = { groq: ["meta-llama/llama-4-scout-17b-16e-instruct", "meta-llama/llama-4-maverick-17b-128e-instruct"], openrouter: ["qwen/qwen2.5-vl-72b-instruct:free", "meta-llama/llama-4-maverick:free", "google/gemma-3-27b-it:free", "mistralai/mistral-small-3.2-24b-instruct:free"], nvidia: ["meta/llama-4-maverick-17b-128e-instruct", "meta/llama-3.2-90b-vision-instruct", "microsoft/phi-4-multimodal-instruct"], github: ["openai/gpt-4.1-mini", "openai/gpt-4o", "openai/gpt-4o-mini", "meta/Llama-4-Scout-17B-16E-Instruct"], sambanova: ["Llama-4-Maverick-17B-128E-Instruct"], huggingface: ["meta-llama/Llama-4-Scout-17B-16E-Instruct"] };
+/* ---------- (cuentas) cada bot o área con su propia cuenta de Google y sus propias claves ----------
+   Las claves las carga Jonathan en la ficha del bot (página) → quedan en el buzón de Cloudflare → el motor las baja acá.
+   Nunca se escriben en data/ (el repo es público). Cada bot usa PRIMERO las suyas, rotando entre ellas; si se le acaban
+   todas, sigue con las comunes de la oficina (salvo que en su ficha diga «solo las mías»). */
+const BOTCTX = new AsyncLocalStorage();
+let CUENTAS = {};
+const FAMILIAS = {
+  gemini: c => ({ tipo: "gemini", buscar: true, modelos: null }),
+  github: c => ({ tipo: "openai", familia: "github", base: "https://models.github.ai/inference", modelos: ["openai/gpt-4.1-mini", "xai/grok-3-mini", "openai/gpt-4o-mini", "openai/gpt-4.1", "xai/grok-3", "openai/gpt-4o", "deepseek/DeepSeek-V3-0324", "meta/Llama-3.3-70B-Instruct"], soloFijos: true, maxFallas: 6 }),
+  groq: c => ({ tipo: "openai", familia: "groq", base: "https://api.groq.com/openai/v1", modelos: ["openai/gpt-oss-120b", "llama-3.3-70b-versatile", "qwen/qwen3-32b", "meta-llama/llama-4-scout-17b-16e-instruct"], buscarModelo: "groq/compound" }),
+  openrouter: c => ({ tipo: "openai", familia: "openrouter", base: "https://openrouter.ai/api/v1", modelos: null, gratis: true }),
+  cerebras: c => ({ tipo: "openai", familia: "cerebras", base: "https://api.cerebras.ai/v1", modelos: ["gpt-oss-120b", "llama-3.3-70b", "qwen-3-32b"] }),
+  mistral: c => ({ tipo: "openai", familia: "mistral", base: "https://api.mistral.ai/v1", modelos: ["mistral-small-latest", "mistral-medium-latest"] })
+};
+const NOMBRE_FAM = { gemini: "Gemini", github: "GitHub (GPT y Grok)", groq: "Groq", openrouter: "OpenRouter", cerebras: "Cerebras", mistral: "Mistral" };
+function cuentaDe(b) {
+  if (!b) return null;
+  const propia = CUENTAS["bot:" + b.id], area = CUENTAS["area:" + b.area];
+  const c = propia && Object.keys(propia.claves || {}).length ? { id: "bot:" + b.id, ...propia } : area && Object.keys(area.claves || {}).length ? { id: "area:" + b.area, ...area } : null;
+  return c;
+}
+const provCache = {};
+function provsDe(c) {
+  if (provCache[c.id]) return provCache[c.id];
+  const sufijo = "~" + c.id.replace(/[^a-z0-9_]/g, "_");
+  const l = [];
+  for (const [fam, key] of Object.entries(c.claves || {})) if (key && FAMILIAS[fam]) l.push({ id: fam + sufijo, familia: fam, nombre: `${NOMBRE_FAM[fam]} (cuenta propia)`, key, propio: c.id, ...FAMILIAS[fam](c) });
+  return (provCache[c.id] = l);
+}
+async function cargarCuentas() {
+  if (!BUZON || !CELU_KEY) return;
+  try {
+    const r = await traer(BUZON + "/celu/cuentas", { headers: { "x-clave": CELU_KEY } }, 15000);
+    if (!r.ok) { log("Cuentas", `el buzón no me dio las cuentas (${r.status})`); return; }
+    CUENTAS = (await r.json()).cuentas || {};
+    const n = Object.values(CUENTAS).filter(x => Object.keys(x.claves || {}).length).length;
+    if (n) log("Cuentas", `${n} bots/áreas con su propia cuenta de IA`);
+  } catch (e) { log("Cuentas", "no pude leer las cuentas del buzón: " + e.message); }
+}
 const agotado = clave => est.ia.agotado[clave] === true || (typeof est.ia.agotado[clave] === "number" && est.ia.agotado[clave] > Date.now());
 const marcar = (clave, hastaMs) => { est.ia.agotado[clave] = hastaMs ? Date.now() + hastaMs : true; };
 const usar = id => { est.consumo.por[id] = (est.consumo.por[id] || 0) + 1; };
@@ -132,7 +172,7 @@ async function modelosVivos(p) {
   try { const r = await traer(p.base + "/models", { headers: p.key ? { authorization: "Bearer " + p.key } : {} }, 15000); if (!r.ok) return null; const j = await r.json(); const ids = (j.data || j.models || []).map(m => m.id || m.name).filter(Boolean).filter(id => !NO_CHAT.test(id)); if (!ids.length) return null; est.ia.vivos[p.id] = { fecha: fechaAR(), ids: ids.slice(0, 400) }; return est.ia.vivos[p.id].ids; } catch { return null; }
 }
 async function modelosDe(p, { imagen } = {}) {
-  const base = imagen ? (VISION[p.id.replace(/\d+$/, "")] || []) : (p.modelos || []);
+  const base = imagen ? (VISION[(p.familia || p.id).replace(/\d+$/, "")] || []) : (p.modelos || []);
   const vivos = await modelosVivos(p); if (!vivos) return base;
   const set = new Set(vivos); const fijos = base.filter(m => set.has(m)); const ausentes = base.filter(m => !set.has(m));
   const rank = id => { const i = BUENOS.findIndex(r => r.test(id)); return i < 0 ? 99 : i; };
@@ -234,12 +274,19 @@ async function iaConInternet(prompt, consulta, opts = {}) {
 const consultaDe = (b, orden) => (String(orden || "").trim() || String(b.mision || b.nombre).split(/[.:]/)[0]).slice(0, 150) + (/(villa mar|c[oó]rdoba|argentin)/i.test(orden || b.mision || "") ? "" : " Córdoba Argentina");
 
 async function ia(prompt, { buscar = false, json = false, imagen = null, largo = false } = {}) {
-  if (est.consumo.consultas >= CFG.limites.consultasPorDia || consultasCorrida >= CFG.limites.consultasPorCorrida) throw Object.assign(new Error("se llegó al tope de consultas de hoy"), { cupo: true });
+  const ctxB = BOTCTX.getStore(), cta = ctxB && cuentaDe(ctxB.b), propios = cta ? provsDe(cta) : [];
+  if (!propios.length && (est.consumo.consultas >= CFG.limites.consultasPorDia || consultasCorrida >= CFG.limites.consultasPorCorrida)) throw Object.assign(new Error("se llegó al tope de consultas de hoy"), { cupo: true });
+  if (propios.length && consultasCorrida >= CFG.limites.consultasPorCorrida * 3) throw Object.assign(new Error("se llegó al tope de consultas de esta vuelta"), { cupo: true });
   if (buscar && est.consumo.busquedas >= CFG.limites.busquedasPorDia) throw Object.assign(new Error("se llegó al tope de búsquedas de hoy"), { cupo: true });
   let lista;
-  if (imagen) lista = [...PROV.filter(p => p.tipo === "gemini"), ...PROV.filter(p => VISION[p.id.replace(/\d+$/, "")])]; // las que pueden ver fotos
+  if (imagen) lista = [...PROV.filter(p => p.tipo === "gemini"), ...PROV.filter(p => VISION[(p.familia || p.id).replace(/\d+$/, "")])]; // las que pueden ver fotos
   else if (buscar) lista = [...PROV.filter(p => p.buscar), ...PROV.filter(p => p.buscarModelo)];
   else { const otros = PROV.filter(p => p.tipo !== "gemini" && !p.ultimo); const gem = PROV.filter(p => p.tipo === "gemini"); rueda++; const rot = [...otros.slice(rueda % (otros.length || 1)), ...otros.slice(0, rueda % (otros.length || 1))]; lista = largo ? [...gem, ...rot, ...PROV.filter(p => p.ultimo)] : [...rot, ...gem, ...PROV.filter(p => p.ultimo)]; }
+  if (propios.length) {                                                       // (cuentas) primero las IA de su propia cuenta, rotando
+    let mias = imagen ? propios.filter(p => p.tipo === "gemini" || VISION[p.familia]) : buscar ? propios.filter(p => p.buscar || p.buscarModelo) : propios.slice();
+    if (!imagen && !buscar && mias.length > 1) { const k = rueda % mias.length; mias = [...mias.slice(k), ...mias.slice(0, k)]; }
+    lista = [...mias, ...(cta.soloPropias ? lista.filter(p => p.ultimo) : lista)];
+  }
   if (!lista.length) throw Object.assign(new Error(imagen ? "no hay ninguna IA que pueda ver fotos conectada" : buscar ? "no hay ninguna IA con búsqueda conectada (falta GEMINI_API_KEY)" : "no hay ninguna IA conectada"), { cupo: true });
   const errores = []; if (imagen) consultasCorrida = Math.min(consultasCorrida, CFG.limites.consultasPorCorrida - 12);
   for (const p of lista) {
@@ -261,7 +308,7 @@ async function ia(prompt, { buscar = false, json = false, imagen = null, largo =
         if (r.error && r.status === 429 && reintento === 0) { const rd = retryDe(r.j); if (!rd.porDia && rd.segundos > 0 && rd.segundos <= 45) { await sleep(rd.segundos * 1000 + 800); continue; } }
         break;
       }
-      if (!r.error) { if (buscar) est.consumo.busquedas++; est.ia.ultimo = { prov: p.nombre, modelo, t: NOW.toISOString() }; return { ...r, modelo: `${p.nombre} · ${modelo}` }; }
+      if (!r.error) { if (p.propio) { (est.consumo.cuentas ||= {})[p.propio] = (est.consumo.cuentas[p.propio] || 0) + 1; } if (buscar) est.consumo.busquedas++; est.ia.ultimo = { prov: p.nombre, modelo, t: NOW.toISOString() }; return { ...r, modelo: `${p.nombre} · ${modelo}` }; }
       errores.push(`${p.nombre}/${modelo}: ${r.status} ${String(r.msg).slice(0, 90)}`);
       if (/insufficient balance|recharge|payment required|no remaining credits/i.test(String(r.msg))) { marcar(clave, 24 * 3600e3); if (++fallasProv >= (p.maxFallas || 3)) break; continue; }
       if (r.status === 429) { const rd = retryDe(r.j); marcar(clave, rd.porDia ? 0 : Math.min(Math.max(rd.segundos, 30), 3600) * 1000); if (rd.porDia) log("IA", `${p.nombre} ${modelo}: cupo diario agotado, sigo con otra`); }
@@ -786,7 +833,8 @@ function guardarInforme(b, texto, extraMd, orden) {
   escribir(path.join(ROOT, rel), `# ${b.nombre} · ${fechaAR()} ${horaAR()}\n\n${orden ? `**Orden:** ${orden}\n\n` : ""}${texto}\n${extraMd || ""}`);
   return rel;
 }
-async function trabajar(b, { orden = "", origen = "agenda", resumen = false, hora = null, foto = null } = {}) {
+function trabajar(b, opts = {}) { return BOTCTX.run({ b }, () => trabajarBot(b, opts)); }   // (cuentas) todo lo que haga este bot usa su cuenta
+async function trabajarBot(b, { orden = "", origen = "agenda", resumen = false, hora = null, foto = null } = {}) {
   const sb = est.bots[b.id] ||= nuevoBot();
   sb.estado = "trabajando"; sb.ultimaCorrida = NOW.toISOString();
   try {
@@ -1407,7 +1455,7 @@ async function autoprueba() {
   }
   // fotos: una imagen chica generada acá (torta de 2 colores)
   const png = pngTorta([{ v: 70, rgb: [220, 40, 40] }, { v: 30, rgb: [40, 90, 220] }], 160); const imagen = { mime: "image/png", b64: png.toString("base64") };
-  for (const p of PROV.filter(p => p.tipo === "gemini" || VISION[p.id.replace(/\d+$/, "")])) {
+  for (const p of PROV.filter(p => p.tipo === "gemini" || VISION[(p.familia || p.id).replace(/\d+$/, "")])) {
     const modelos = p.tipo === "gemini" ? (await modelosGemini(p).catch(() => [])).filter(m => /flash/.test(m)) : await modelosDe(p, { imagen: true });
     const fila = { prov: p.nombre, ok: false, modelo: "", error: "" };
     for (const modelo of modelos.slice(0, 2)) {
@@ -1545,7 +1593,7 @@ async function entrenar() {
     const rec = leerFeed(b).filter(x => new Date(x.t).getTime() > Date.now() - 8 * 86400e3); if (!rec.length) continue;
     const actuales = leerLecc(b) || "(todavía ninguna)";
     try {
-      const r = await ia(`Sos el entrenador de "${b.nombre}", un bot cuya tarea es: ${b.mision}\nEntregable: ${b.entregable}\nSUS LECCIONES ACTUALES:\n${actuales}\nNOTAS RECIENTES (las del jefe valen el doble):\n${rec.map(x => x.tipo === "jefe" ? `JEFE (${x.valor > 0 ? "positivo" : x.valor < 0 ? "negativo" : "comentario"}): ${x.texto}` : `CALIDAD ${x.puntaje}/10: ${(x.problemas || []).join("; ")} → ${x.mejorar}`).join("\n").slice(0, 6000)}\nReescribí sus lecciones: máximo 8 viñetas cortas y accionables (qué hacer y qué evitar), conservando las que sirven. Respondé SOLO las viñetas empezando con "- ".`);
+      const r = await BOTCTX.run({ b }, () => ia(`Sos el entrenador de "${b.nombre}", un bot cuya tarea es: ${b.mision}\nEntregable: ${b.entregable}\nSUS LECCIONES ACTUALES:\n${actuales}\nNOTAS RECIENTES (las del jefe valen el doble):\n${rec.map(x => x.tipo === "jefe" ? `JEFE (${x.valor > 0 ? "positivo" : x.valor < 0 ? "negativo" : "comentario"}): ${x.texto}` : `CALIDAD ${x.puntaje}/10: ${(x.problemas || []).join("; ")} → ${x.mejorar}`).join("\n").slice(0, 6000)}\nReescribí sus lecciones: máximo 8 viñetas cortas y accionables (qué hacer y qué evitar), conservando las que sirven. Respondé SOLO las viñetas empezando con "- ".`));
       const nuevas = r.texto.split("\n").map(s => s.trim()).filter(s => /^[-•*]/.test(s)).map(s => "- " + s.replace(/^[-•*]\s*/, "")).slice(0, 8).join("\n");
       if (nuevas) { guardarLecc(b, nuevas + "\n"); est.bots[b.id].nivel++; aprendieron.push(b.nombre); log("Entrenador", `${b.nombre} subió a nivel ${est.bots[b.id].nivel}`); }
     } catch (e) { log("Entrenador", `${b.nombre}: no pude entrenarlo (${e.message})`); if (e.cupo) break; }
@@ -1584,6 +1632,7 @@ async function main() {
   log("Oficina", `abre (${MODO}) · IA conectadas: ${PROV.map(p => p.id).join(", ") || "ninguna"}`);
   for (const id of Object.keys(est.bots)) if (est.bots[id].estado === "trabajando") est.bots[id].estado = "esperando";
   if (TG_TOKEN && !est.botUsuario) { const me = await tg("getMe", {}); if (me && me.username) est.botUsuario = me.username; }
+  await cargarCuentas();
   if (!est.pendientes.length) est.pendientes = leerPrivSeguro("pendientes", []);
   { const viejas = est.pendientes.filter(p => p.t && NOW - new Date(p.t) > 6 * 3600e3); if (viejas.length) { est.pendientes = est.pendientes.filter(p => !viejas.includes(p)); log("Gerente general", `descartó ${viejas.length} órdenes viejas que esperaban IA`); await enviar(`🗑️ Descarté ${viejas.length} orden(es) de hace más de 6 horas que no se pudieron hacer por falta de IA: ${viejas.map(p => "«" + String(p.orden || p.bot || p.tipo).slice(0, 40) + "»").join(", ")}. Si todavía las necesitás, pedímelas de nuevo.`); } }
   await procesarMensajes();

@@ -117,6 +117,7 @@ dialog::backdrop{background:rgba(5,6,10,.7)}
 .dh h2{margin:0;font-family:var(--f-head);font-size:19px}
 .dh button{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 12px}
 .db{padding:14px 16px;display:flex;flex-direction:column;gap:14px;max-height:calc(100vh - 140px);overflow:auto}
+.cta{display:grid;gap:10px}.cta label{display:grid;gap:4px;font-size:13px}.cta label span{color:var(--muted);font-size:12px}.cta input[type=text],.cta input[type=email],.cta input[type=password]{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:9px;color:var(--ink);font:inherit}.cta .ok{color:#5fd38d}.cta .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.cta button{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:9px 14px;color:var(--ink);font:inherit;cursor:pointer}.cta button.pri{background:#2f7d4f;border-color:#2f7d4f}.cta a{color:#8ab4ff}
 .kv{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:13.5px}
 .kv dt{color:var(--muted)}.kv dd{margin:0}
 .rep{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:12px;font-size:13.5px;line-height:1.5;max-height:420px;overflow:auto;overflow-wrap:anywhere}
@@ -330,14 +331,41 @@ function verBot(b){const s=(OF.EST.bots||{})[b.id]||{};const a=OF.ORG.areas.find
   const rep=h("div",{class:"rep"},h("p",{class:"empty"},s.informe?"Cargando…":"Todavía no entregó ningún informe."));B.append(h("b",{},"Último informe"),rep);
   if(b.tipo==="ia"){const lec=h("div",{class:"rep"},h("p",{class:"empty"},"Cargando…"));B.append(h("b",{},"Lo que aprendió"),lec);
     fetch("data/lecciones/"+b.id+".md?t="+Date.now()).then(r=>r.ok?r.text():Promise.reject()).then(t=>lec.innerHTML=md(t)).catch(()=>lec.innerHTML='<p class="empty">Todavía no se entrenó. La primera noche después de trabajar aprende de sus notas.</p>')}
+  B.append(h("button",{class:"org-bot",onclick:()=>verCuenta("bot",b.id,b.nombre,b.area)},h("b",{},"🔑 Cuenta de IA de este bot"),h("p",{},"Su correo y sus claves (Gemini, GitHub con ChatGPT y Grok, Groq…). Trabaja con sus propios cupos gratis.")));
   if(b.tipo==="externo")B.append(h("button",{class:"org-bot",onclick:()=>verCelu()},h("b",{},"📱 Abrir el panel del celu"),h("p",{},"Semáforo, lo que hizo hoy, botones de pausar / seguir / reiniciar y chat con el celu.")));
   $("#dlg").showModal();
   if(s.informe)fetch(s.informe+"?t="+Date.now()).then(r=>r.ok?r.text():Promise.reject()).then(t=>rep.innerHTML=md(t)).catch(()=>rep.innerHTML='<p class="empty">No pude abrir el informe.</p>');
 }
 function verArea(a){const bs=OF.ORG.bots.filter(b=>b.area===a.id);$("#dT").textContent="Gerente de "+a.nombre;const B=$("#dB");B.innerHTML="";
   B.append(h("p",{},"Coordina "+bs.length+" bots. Tus órdenes llegan por el Gerente general, que elige el bot de esta área que corresponde."));
+  B.append(h("button",{class:"org-bot",onclick:()=>verCuenta("area",a.id,a.nombre)},h("b",{},"🔑 Cuenta de IA del área"),h("p",{},"Un correo y sus claves para todos los bots de "+a.nombre+" (el bot que tenga cuenta propia usa la suya).")));
   for(const b of bs){const s=st(b);B.append(h("button",{class:"org-bot",onclick:()=>verBot(b)},h("b",{},kindIco(b)+" "+b.nombre),h("span",{class:"st"},s.t),h("p",{},b.mision)))}
   $("#dlg").showModal()}
+/* ---------- (cuentas) correo y claves de IA de cada bot o área: se guardan en el buzón (Cloudflare), nunca en esta página ni en GitHub ---------- */
+const IAS=[["gemini","Google Gemini","https://aistudio.google.com/apikey","Entrá con el correo de este bot → «Create API key». Gratis, sin tarjeta."],
+  ["github","GitHub (ChatGPT y Grok gratis)","https://github.com/settings/personal-access-tokens/new","Con una cuenta de GitHub de este bot: token «Fine-grained», permiso «Models: Read». Da GPT-4.1, GPT-4o y Grok 3 gratis por día."],
+  ["groq","Groq","https://console.groq.com/keys","Rápida y gratis por día. Entrá con el correo de este bot."],
+  ["openrouter","OpenRouter","https://openrouter.ai/keys","Modelos «:free» gratis por día."],
+  ["cerebras","Cerebras","https://cloud.cerebras.ai","Gratis por día."],
+  ["mistral","Mistral","https://console.mistral.ai/api-keys","Plan gratis «Experiment»."]];
+async function verCuenta(tipo,id,nombre,area){const cid=tipo+":"+id;$("#dT").textContent="🔑 Cuenta de IA · "+nombre;const B=$("#dB");B.innerHTML="";
+  if(!getPin()){B.append(h("p",{},"Para ver y cargar cuentas poné tu PIN."),h("button",{class:"org-bot",onclick:()=>pedirPin(()=>verCuenta(tipo,id,nombre,area))},h("b",{},"Poner PIN")));$("#dlg").open||$("#dlg").showModal();return}
+  const info=h("p",{class:"empty"},"Cargando…");B.append(info);$("#dlg").open||$("#dlg").showModal();
+  let todas={};try{todas=(await buzon("/oficina/cuentas")).cuentas||{}}catch(e){info.textContent="No pude leer el buzón: "+e.message;return}
+  const c=todas[cid]||{claves:{}},deArea=tipo==="bot"&&area?todas["area:"+area]:null;
+  info.textContent=Object.keys(c.claves||{}).length?(tipo==="bot"?"Este bot":"Esta área")+" ya trabaja con su propia cuenta. Las claves no se muestran: solo los últimos 4 caracteres.":deArea&&Object.keys(deArea.claves||{}).length?"Ahora usa la cuenta del área ("+(deArea.correo||"sin correo")+"). Si le cargás claves acá, pasa a usar las suyas.":"Todavía no tiene cuenta propia: usa las IA comunes de la oficina.";
+  const correo=h("input",{type:"email",value:c.correo||"",placeholder:"correo de Google de "+(tipo==="bot"?"este bot":"esta área"),autocomplete:"off"});
+  const solo=h("input",{type:"checkbox"});solo.checked=!!c.soloPropias;
+  const form=h("form",{class:"cta",onsubmit:async e=>{e.preventDefault();const claves={};for(const[k]of IAS){const v=form.querySelector("[name="+k+"]").value.trim();if(v)claves[k]=v}
+    const btn=form.querySelector("button.pri");btn.disabled=true;btn.textContent="Guardando…";
+    try{const r=await buzon("/oficina/cuenta",{id:cid,correo:correo.value,soloPropias:solo.checked,claves});btn.textContent="✅ Guardado ("+r.claves.length+" IA)";setTimeout(()=>verCuenta(tipo,id,nombre,area),900)}catch(err){btn.disabled=false;btn.textContent="Guardar";alert("No se guardó: "+err.message)}}},
+    h("label",{},"📧 Correo de Google",correo,h("span",{},"Con este correo sacás las claves de abajo. Así "+(tipo==="bot"?"este bot":"esta área")+" gasta solo sus cupos.")));
+  for(const[k,n,url,ayuda]of IAS){const tiene=(c.claves||{})[k];
+    form.append(h("label",{},h("b",{},n+" ",tiene?h("span",{class:"ok"},"✓ cargada "+tiene):""),h("input",{type:"password",name:k,placeholder:tiene?"(dejala vacía para no cambiarla)":"pegá la clave acá",autocomplete:"off"}),h("span",{},ayuda+" ",h("a",{href:url,target:"_blank",rel:"noopener"},"Sacar la clave ↗")," ",tiene?h("a",{href:"#",onclick:async ev=>{ev.preventDefault();if(!confirm("¿Borrar la clave de "+n+"?"))return;await buzon("/oficina/cuenta",{id:cid,borrar:[k]});verCuenta(tipo,id,nombre,area)}},"Borrar"):"")))}
+  form.append(h("label",{class:"row"},solo,"Usar solo las IA de esta cuenta (si se le acaban, espera en vez de usar las comunes de la oficina)"),
+    h("div",{class:"row"},h("button",{class:"pri",type:"submit"},"Guardar"),Object.keys(c.claves||{}).length||c.correo?h("button",{type:"button",onclick:async()=>{if(!confirm("¿Borrar toda la cuenta de "+nombre+"?"))return;await buzon("/oficina/cuenta",{id:cid,borrarTodo:true});verCuenta(tipo,id,nombre,area)}},"Borrar cuenta"):""),
+    h("p",{class:"empty"},"ChatGPT y Grok directos (OpenAI y xAI) no tienen cupo gratis sin tarjeta: por eso entran por GitHub, que los da gratis. Las claves viajan solo a tu buzón de Cloudflare y la oficina nunca las publica."));
+  B.append(form)}
 $("#dX").addEventListener("click",()=>$("#dlg").close());$("#dlg").addEventListener("click",e=>{if(e.target.id==="dlg")$("#dlg").close()});
 function setVista(v){OF.vista=v;for(const id of ["2d","3d","org"])$("#v"+id).hidden=id!==v;document.querySelectorAll("#bar [data-v]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.v===v)));if(v==="3d")iniciar3D();try{localStorage.setItem("of-vista",v)}catch(e){}}
 document.querySelectorAll("#bar button").forEach(b=>b.addEventListener("click",()=>{
