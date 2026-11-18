@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 869,
+   "corridas": 870,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-17",
-   "ultimaCorrida": "2026-11-18T10:20:37.786Z",
+   "ultimaCorrida": "2026-11-18T11:11:28.919Z",
    "resumen": "💵 Dólar hoy (10:39 hs)\n• Oficial: compra $1525 · venta $1575\n• Blue: compra $1580 · venta $1600\n• Bolsa: compra $1581.2 · venta $1588.9\n• Contado con liquidación: compra $1680.1 · venta $1682.9\n• Mayorista: compra $1542",
    "informe": "data/informes/dolar/2026-11-17-1039.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1694.83,
      "tarjeta": 2047.5
     },
-    "ultimoChequeo": "2026-11-18T10:20:37.786Z",
+    "ultimoChequeo": "2026-11-18T11:11:28.919Z",
     "resumenFecha": "2026-11-17",
     "hist": {
      "2026-10-30": {
@@ -5730,7 +5730,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "sin señal",
+   "estado": "falló",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -5740,32 +5740,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-18",
-   "ultimaCorrida": "2026-11-18T05:47:04.907Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 295 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "ultimaCorrida": "2026-11-18T11:08:01.884Z",
+   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1794980824907,
+     "t": 1795000081884,
      "redes_hoy": {
       "publicaciones": 1,
       "historias": 1,
       "reels": 1,
       "seguidos": 4,
       "gringo": 0,
-      "errores": 19,
-      "reinicios": 58,
+      "errores": 20,
+      "reinicios": 60,
       "ultimas": [
-       "02:40 No leo en qué cuenta está Instagram (intento 3/3). Reinicio Instagram.",
-       "02:41 Guardado debug/pantalla_024150.png y .xml",
-       "02:42 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
-       "02:43 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
-       "02:44 No leo en qué cuenta está Instagram (intento 3/3). Reinicio Instagram.",
        "02:45 Guardado debug/pantalla_024554.png y .xml",
        "02:46 Error en grin_lista: No quedó en la cuenta gringobosio (está en desconocida)",
        "02:46 Guardado debug/pantalla_024638.png y .xml",
        "02:46 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "02:46 Celular conectado: SM-A515F | pantalla 1080x2400"
+       "02:46 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "02:47 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "02:48 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
+       "02:48 Error en obra_historia: device offline",
+       "02:48 adb connect 127.0.0.1:5555: failed to connect to '127.0.0.1:5555': Connection refused",
+       "02:48 Buscando el puerto Wi-Fi del celular en 127.0.0.1..."
       ]
      }
     },
@@ -6060,19 +6060,19 @@
       "reels": 1,
       "seguidos": 4,
       "gringo": 0,
-      "errores": 19,
-      "reinicios": 58,
+      "errores": 20,
+      "reinicios": 60,
       "ultimas": [
-       "02:40 No leo en qué cuenta está Instagram (intento 3/3). Reinicio Instagram.",
-       "02:41 Guardado debug/pantalla_024150.png y .xml",
-       "02:42 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
-       "02:43 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
-       "02:44 No leo en qué cuenta está Instagram (intento 3/3). Reinicio Instagram.",
        "02:45 Guardado debug/pantalla_024554.png y .xml",
        "02:46 Error en grin_lista: No quedó en la cuenta gringobosio (está en desconocida)",
        "02:46 Guardado debug/pantalla_024638.png y .xml",
        "02:46 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "02:46 Celular conectado: SM-A515F | pantalla 1080x2400"
+       "02:46 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "02:47 No leo en qué cuenta está Instagram (intento 1/3). Reinicio Instagram.",
+       "02:48 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
+       "02:48 Error en obra_historia: device offline",
+       "02:48 adb connect 127.0.0.1:5555: failed to connect to '127.0.0.1:5555': Connection refused",
+       "02:48 Buscando el puerto Wi-Fi del celular en 127.0.0.1..."
       ]
      }
     }
@@ -6171,7 +6171,7 @@
   },
   "vencimientos": {
    "estado": "listo",
-   "corridas": 149,
+   "corridas": 150,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -6180,7 +6180,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-18T07:50:37.926Z",
+   "ultimaCorrida": "2026-11-18T11:11:28.919Z",
    "resumen": "🧾 Vencimientos e impuestos\n\n• Presupuesto 2027: Llaryora arriesga y baja aún más la presión fiscal (Comercio y Justicia)\n  https://comercioyjusticia.info/economia/presupuesto-2027-llaryora-arriesga-y-baja-aun-mas-la-pre",
    "informe": "data/informes/vencimientos/2026-11-18-0152.md",
    "pausado": false,
@@ -6512,7 +6512,7 @@
      "arca modifica la emisión de facturas del monotributo social desde noviembre",
      "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
     ],
-    "ultimoChequeo": "2026-11-18T07:50:37.926Z",
+    "ultimoChequeo": "2026-11-18T11:11:28.919Z",
     "semana": [
      {
       "titulo": "ARCA aplicó cambios a Monotributistas Sociales",
@@ -7239,7 +7239,7 @@
   },
   "tarifas": {
    "estado": "listo",
-   "corridas": 150,
+   "corridas": 151,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7248,12 +7248,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-18T07:50:37.926Z",
-   "resumen": "🧾 Aumentos de servicios\n\n• Sedapal cortará el agua hasta por 13 horas en estos distritos de Lima este miércoles 18 de noviembre (La República)\n  https://news.google.com/rss/articles/CBMi4gFBVV95cUxQU0NKZE8yeGdiOV91czlXM",
-   "informe": "data/informes/tarifas/2026-11-18-0450.md",
+   "ultimaCorrida": "2026-11-18T11:11:28.919Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• Suben 2,2% las prestaciones por discapacidad en noviembre: los nuevos aranceles (Ámbito Financiero)\n  https://www.ambito.com/politica/suben-22-las-prestaciones-discapacidad-noviembre-los-nuevo",
+   "informe": "data/informes/tarifas/2026-11-18-0811.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "suben 2,2% las prestaciones por discapacidad en noviembre: los nuevos aranceles",
+     "más de 500 empresas de gas lp piden actualizar precios ante pérdidas operativas en méxico",
+     "vacaciones en brasil: cómo impacta la caída del real en el bolsillo de los argentinos",
+     "sueldos uom: cuánto cobran los metalúrgicos en noviembre y qué aumentos vienen",
+     "jubilaciones de anses: cuánto cobro en diciembre 2026 con el aumento, el bono y el aguinal",
+     "anses confirmó el aumento de las jubilaciones, pensiones y asignaciones en diciembre de 20",
      "sedapal cortará el agua hasta por 13 horas en estos distritos de lima este miércoles 18 de",
      "clima en córdoba: cómo estará el tiempo este miércoles 18 de noviembre",
      "avalúo de un lote para el metro de bogotá aumentó cerca del 6.000 %: ¿qué pasó?",
@@ -7847,52 +7853,10 @@
      "la factura de la luz será la más cara para este mes en cuatro años y subirá un 38%",
      "clima en córdoba: cómo seguirá el tiempo este lunes 2 de noviembre",
      "los precios de los alquileres en córdoba siguen en aumento",
-     "llaryora contra milei: cuestionó el aumento de subsidios al transporte del amba y reclamó ",
-     "corte de agua y luz hasta el 7 de noviembre: zonas afectadas y hora de reposición",
-     "impuesto inmobiliario rural de córdoba. en vísperas de definiciones para el aumento en 202",
-     "salud mental en las aulas: córdoba necesita reforzar sus equipos profesionales | 2 de novi",
-     "voyage privé: mi experiencia con las escapadas de lujo en españa",
-     "“el gavilán” y manuel alonso inflan sueldos en tránsito en más de 725 mil pesos",
-     "datazo: los feriados que le quedan a 2026"
+     "llaryora contra milei: cuestionó el aumento de subsidios al transporte del amba y reclamó "
     ],
-    "ultimoChequeo": "2026-11-18T07:50:37.926Z",
+    "ultimoChequeo": "2026-11-18T11:11:28.919Z",
     "semana": [
-     {
-      "titulo": "Distritos de Lima sin agua del 10 al 12 de noviembre: ¿Qué zonas se verán afectadas por el corte?",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNR183cW82NFUzTnpUd3VXaEE2SklsV29ZOW00LUVUNzg3eGJRQllNZDBKVm1rTUx2RkloM3hfNFNSRFhkTUFHWVpvR0Y4YnZDWFJmdXdRV0VMS3J0VVJickROcFNLR01UcFdNYjZpYjh5dDd4dWZtV0pkdG1hZDc4MXk4VzQyQ1hTYlBFZzNOOXhlUFhZUzZoVl9WVmlGU21ucTY1aFpnZ0Riel9JTC0wR0o3czVaY0ZGSEdCaDVveDdYYWoxbTcwMDFWVmp1WVlUMHJoeVpB0gHqAUFVX3lxTFA5Q1lka3BxeFlxOHUzcWYycmplcFJQdE9aT1o3Sl9RS2J6VGw0YVdTOEowYThNUEJGY0hsOGY2Q2IxUDBHSFMyellaNVl0OXo3R1Y0T1dwTlBpNXNKTlpUWEdoWldfcXRiaGFMa2wxSFlBVTgyRWN6VDJiZTRnNnp1QjM3SDN2OERBZVhEMEgtUjNGZDJsWWNNbXlGNFlRUzlHWWpsRmN6V3kwRUl0UjhIb21lQU5GZWY4OXJfazRtTGxmTEp4ZC1yQlhvbUlSVFEwTjI2THV6X0lKMjVjTmZ6Y0dnRkhaRHVCQQ?oc=5",
-      "fuente": "El Comercio Perú",
-      "t": 1794355757453
-     },
-     {
-      "titulo": "Clima en Córdoba: muy nuboso y 25 grados para este martes 10 de noviembre",
-      "link": "https://tn.com.ar/clima/alertas/2026/11/10/clima-en-cordoba-hoy-martes-10-de-noviembre-lluvia-ligera-y-cielo-cubierto/",
-      "fuente": "Todo Noticias",
-      "t": 1794355757453
-     },
-     {
-      "titulo": "Cenepred: El Niño amenaza a 19 millones de peruanos que viven en zonas de alto riesgo",
-      "link": "https://www.cronicaviva.com.pe/cenepred-el-nino-amenaza-a-19-millones-de-peruanos-que-viven-en-zonas-de-alto-riesgo/",
-      "fuente": "Crónica Viva",
-      "t": 1794355757453
-     },
-     {
-      "titulo": "¡Atención, Lima! Corte de agua del 10 al 12 de noviembre: revisa qué zonas no contarán con el servicio",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNR183cW82NFUzTnpUd3VXaEE2SklsV29ZOW00LUVUNzg3eGJRQllNZDBKVm1rTUx2RkloM3hfNFNSRFhkTUFHWVpvR0Y4YnZDWFJmdXdRV0VMS3J0VVJickROcFNLR01UcFdNYjZpYjh5dDd4dWZtV0pkdG1hZDc4MXk4VzQyQ1hTYlBFZzNOOXhlUFhZUzZoVl9WVmlGU21ucTY1aFpnZ0Riel9JTC0wR0o3czVaY0ZGSEdCaDVveDdYYWoxbTcwMDFWVmp1WVlUMHJoeVpB0gHqAUFVX3lxTFA5Q1lka3BxeFlxOHUzcWYycmplcFJQdE9aT1o3Sl9RS2J6VGw0YVdTOEowYThNUEJGY0hsOGY2Q2IxUDBHSFMyellaNVl0OXo3R1Y0T1dwTlBpNXNKTlpUWEdoWldfcXRiaGFMa2wxSFlBVTgyRWN6VDJiZTRnNnp1QjM3SDN2OERBZVhEMEgtUjNGZDJsWWNNbXlGNFlRUzlHWWpsRmN6V3kwRUl0UjhIb21lQU5GZWY4OXJfazRtTGxmTEp4ZC1yQlhvbUlSVFEwTjI2THV6X0lKMjVjTmZ6Y0dnRkhaRHVCQQ?oc=5",
-      "fuente": "El Comercio Perú",
-      "t": 1794366490947
-     },
-     {
-      "titulo": "ANSES retoma el calendario de pagos tras los feriados: cuándo cobran jubilados, pensionados y AUH en noviembre",
-      "link": "https://prensamercosur.org/2026/11/10/anses-retoma-el-calendario-de-pagos-tras-los-feriados-cuando-cobran-jubilados-pensionados-y-auh-en-noviembre/",
-      "fuente": "prensamercosur",
-      "t": 1794366490947
-     },
-     {
-      "titulo": "¡HASTA 12 HORAS SIN AGUA! Sedapal confirma CORTE este miércoles 11 de noviembre en 6 distritos de Lima: revisa AQUÍ las zonas afectadas",
-      "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxQenFsZEt3YTFHbXJBd0gzZXYtNzRJS1RVR1hpRy16ZV94RExnS3JKSF9jUEMzQ09BUG1vU0pjZEJGNlhjb3M3Rjk4amlHUmtNVDd1VmlsV1lmQWdlWk1yMV9iLW12OERsSXdXTE41SERuSDh4T0U4S3VUZFRjcldDUlpEajFiNS1neWYxWmg4US0xdExGZEtHSmI3VG1paFR0MzZHQkpkSUxRTlVkQnpCVUhnY09NM0NPNF83MU9LRUE4dHlGYmJaVU1LeEp4R29NdmllbzRVQVotWWpyUm9tMjQ5ODJacllkTHhBU2ZlUmw1SXpUbkNhLUZObXY5Zk0wZnppUW92OHlHZXBBejE40gGUAkFVX3lxTE9Fd2oxczh0WTNiOXliazIzLUNvLXVpLUI5WG5NaDNxTHh4X1NUa3lXQjM3b2VnODdab2lrRUVUajZIbUFMd2lTcklkVG45X3l6ZTcxQmh2NG9GVnZxOFJicjl0M25xRG45ZHFIVU9qdTFmb242MnFSWkd3cGFndjdKb2M2TEdYOV9odjB3ZU5LclBSczN5QVlBOF9YYWkxZkt2eXNyWHR0RTRKSmthMTN2Tm5iODJIN2lKLUVjQ2tWVTV1ZnlzdGVQQzlfOHd6NHF6Z2hzUHVfOXNjT01KOUlObUZReWo5dkUybHZPV3BuNUhhLXZyUVhhdjNoRkFqMHo2VG5CZEhzd2J3LXFPMmxVM0Q4WQ?oc=5",
-      "fuente": "El Popular",
-      "t": 1794366490947
-     },
      {
       "titulo": "Laboratorio estatal de medicamentos: el oficialismo celebró la media sanción, pero la oposición denunció un “gasto desmedido”",
       "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQcENEV3NQSjN2S3ltbkN3LUI2QXhfTHFjaG95M0Fmby1IdTdUQ3RUazBwV05qX0RTaGpXakJiOThuY1p0eEF4cVluSUNnQWZvQ2J1N0RyajFBNkx1clF5d3lWTXRzVlJQbU1DUm5LVzhNckJ4c3VGWTJ0NkhhWUxXVXlrbVdjYTR5MHZHRTZJZF9zZmF4R0pwVnFES1kzZjhKcUxZdklYQmJOcUU3eVZrc2VfSEVUZ2VJMVU0b2RiNGtGTzM1QzJoOEJDUS1laWRpTHoyVTlEQWFSQ0tzMVF5T1VYRjA5VXV0N09SSml3Q0FUWGRDSTlZ?oc=5",
@@ -9656,6 +9620,42 @@
       "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPOF9yLWlaMWQxYWdER0xOTERrd1VpWnQ4WXJwWThWVWJYT2x2WEFEUU1HWEc3VWUtTlFsdWstSGQ0cndwMzJGeGUwRy1Xd3RtZVRPTmxpSWwzWnU5WFhwZVBRY2xFa29aLUNrRVA3X0dhNU8xc0k5cG9mRXVBekU5c1E2Z1ZvZm0yS29ZVkdWUXRqcklTTTQ2WjJWUnllLXdudWd0OGwwbkRuMVVN0gGsAUFVX3lxTE84X3ItaVoxZDFhZ0RHTE5MRGt3VWladDhZcnBZOFZVYlhPbHZYQURRTUdYRzdVZS1OUWx1ay1IZDRyd3AzMkZ4ZTBHLVd3dG1lVE9ObGlJbDNadTlYWHBlUFFjbEVrb1otQ2tFUDdfR2E1TzFzSTlwb2ZFdUF6RTlzUTZnVm9mbTJLb1lWR1ZRdGpySVNNNDZaMlZSeWUtd251Z3Q4bDBuRG4xVU0?oc=5",
       "fuente": "Bariloche2000",
       "t": 1794988247217
+     },
+     {
+      "titulo": "Suben 2,2% las prestaciones por discapacidad en noviembre: los nuevos aranceles",
+      "link": "https://www.ambito.com/politica/suben-22-las-prestaciones-discapacidad-noviembre-los-nuevos-aranceles-n6346470",
+      "fuente": "Ámbito Financiero",
+      "t": 1795000296569
+     },
+     {
+      "titulo": "Más de 500 empresas de Gas LP piden actualizar precios ante pérdidas operativas en México",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQT3J4c09zSENEeU1FY3V1bzRHUFBtOGM1VjJEVndpT3ZkNDJWSldWanZyd3phTDB6WnRNbVBFRm1WTGFDN0F0MFFXdFNUaXhaV2YtNHg0MXZQWDg3eElZUjFLTjkxSVo0aVBVZExTamZvYXhkTnZoV1dUdE95aEZDcW83bjRrTU9IYTNmNWd4SEgtbHJrQy0yM2F2ekhqd3pDMFRXemxZc01IM09BcHRPcWhTcUpua1hhaTJBcjFQdS15eWNlNjNmMGlvUDU1d9IBzgFBVV95cUxQT3J4c09zSENEeU1FY3V1bzRHUFBtOGM1VjJEVndpT3ZkNDJWSldWanZyd3phTDB6WnRNbVBFRm1WTGFDN0F0MFFXdFNUaXhaV2YtNHg0MXZQWDg3eElZUjFLTjkxSVo0aVBVZExTamZvYXhkTnZoV1dUdE95aEZDcW83bjRrTU9IYTNmNWd4SEgtbHJrQy0yM2F2ekhqd3pDMFRXemxZc01IM09BcHRPcWhTcUpua1hhaTJBcjFQdS15eWNlNjNmMGlvUDU1dw?oc=5",
+      "fuente": "Noticias de Bariloche",
+      "t": 1795000296569
+     },
+     {
+      "titulo": "Vacaciones en Brasil: cómo impacta la caída del real en el bolsillo de los argentinos",
+      "link": "https://elargentinodiario.com.ar/economia/turismo/17/11/2026/vacaciones-en-brasil-como-impacta-la-caida-del-real-en-el-bolsillo-de-los-argentinos/",
+      "fuente": "El Argentino Diario",
+      "t": 1795000296569
+     },
+     {
+      "titulo": "Sueldos UOM: cuánto cobran los metalúrgicos en noviembre y qué aumentos vienen",
+      "link": "https://www.iprofesional.com/economia/469240-cuanto-cobra-un-metalurgico-en-noviembre-2026-salarios-uom-por-categoria",
+      "fuente": "iProfesional",
+      "t": 1795000296569
+     },
+     {
+      "titulo": "Jubilaciones de Anses: cuánto cobro en diciembre 2026 con el aumento, el bono y el aguinaldo",
+      "link": "https://www.lanacion.com.ar/economia/jubilaciones-de-anses-cuanto-cobro-en-noviembre-2026-con-el-aumento-el-bono-y-el-aguinaldo-nid16112026/",
+      "fuente": "LA NACION",
+      "t": 1795000296569
+     },
+     {
+      "titulo": "ANSES confirmó el aumento de las jubilaciones, pensiones y asignaciones en diciembre de 2026",
+      "link": "https://www.ambito.com/informacion-general/anses-confirmo-el-aumento-las-jubilaciones-pensiones-y-asignaciones-diciembre-2026-n6344596",
+      "fuente": "Ámbito Financiero",
+      "t": 1795000296569
      }
     ]
    }
@@ -9713,7 +9713,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 869,
+   "corridas": 870,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9722,7 +9722,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-18T10:20:37.786Z",
+   "ultimaCorrida": "2026-11-18T11:11:28.919Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9732,7 +9732,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-18T10:20:37.786Z",
+    "ultimoChequeo": "2026-11-18T11:11:28.919Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10003,16 +10003,16 @@
      },
      "2026-11-18": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       15,
-       15
+       16,
+       16
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       15,
-       15
+       16,
+       16
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       15,
-       15
+       16,
+       16
       ]
      }
     }
@@ -10039,7 +10039,7 @@
   },
   "precio_mmo": {
    "estado": "listo",
-   "corridas": 148,
+   "corridas": 149,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10048,7 +10048,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-18T07:50:37.926Z",
+   "ultimaCorrida": "2026-11-18T11:11:28.919Z",
    "resumen": "🧱 Valor m² del Colegio de MMO\n\n• Tiene 40 años, dejó Buenos Aires y construyó una casa vikinga de madera de 40 m² con un mirador de 360° en las sierras de Córdoba (Los Andes)\n  https://news.google.com/rss/articles/CBMi7",
    "informe": "data/informes/precio_mmo/2026-11-18-0152.md",
    "pausado": false,
@@ -10138,7 +10138,7 @@
      "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
      "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
     ],
-    "ultimoChequeo": "2026-11-18T07:50:37.926Z",
+    "ultimoChequeo": "2026-11-18T11:11:28.919Z",
     "semana": [
      {
       "titulo": "Reformar un baño y una cocina ya cuesta $28,4 millones: los nuevos valores por metro cuadrado",
@@ -20181,7 +20181,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 851,
+   "corridas": 852,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20190,13 +20190,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-18T10:20:37.786Z",
+   "ultimaCorrida": "2026-11-18T11:11:28.919Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
-    "fechasAvisadas": "2026-11-17",
-    "ultimoChequeo": "2026-11-18T10:20:37.786Z"
+    "fechasAvisadas": "2026-11-18",
+    "ultimoChequeo": "2026-11-18T11:11:28.919Z"
    }
   },
   "feriados": {
@@ -20388,6 +20388,41 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-18T11:11:28.919Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-18T11:11:28.919Z",
+   "quien": "Aumentos de servicios",
+   "que": "no pude leer «aumento prepagas»: respondió 429"
+  },
+  {
+   "t": "2026-11-18T11:11:28.919Z",
+   "quien": "Aumentos de servicios",
+   "que": "no pude leer «aumento tarifa luz Córdoba EPEC»: respondió 429"
+  },
+  {
+   "t": "2026-11-18T11:11:28.919Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "no pude leer «vencimientos ARCA»: respondió 429"
+  },
+  {
+   "t": "2026-11-18T11:11:28.919Z",
+   "quien": "Valor m² del Colegio de MMO",
+   "que": "no pude leer «\"maestros mayores de obras\" Córdoba valor metro cuadrado»: respondió 429"
+  },
+  {
+   "t": "2026-11-18T11:11:28.919Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-18T11:11:28.919Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-18T10:42:10.418Z",
    "quien": "Mesa de entrada",
@@ -21852,46 +21887,10 @@
    "t": "2026-11-17T04:04:29.068Z",
    "quien": "Mundo: tecnología",
    "que": "no pude leer «China tecnología»: respondió 429"
-  },
-  {
-   "t": "2026-11-17T04:04:29.068Z",
-   "quien": "Argentina: economía y obra pública",
-   "que": "no pude leer «obra pública Córdoba»: respondió 429"
-  },
-  {
-   "t": "2026-11-17T04:04:29.068Z",
-   "quien": "Argentina: economía y obra pública",
-   "que": "no pude leer «construcción Argentina»: respondió 429"
-  },
-  {
-   "t": "2026-11-17T04:04:29.068Z",
-   "quien": "Argentina: economía y obra pública",
-   "que": "no pude leer «economía Argentina»: respondió 429"
-  },
-  {
-   "t": "2026-11-17T04:04:29.068Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «\"Villa María Ya\"»: respondió 429"
-  },
-  {
-   "t": "2026-11-17T04:04:29.068Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa María clima tormenta»: respondió 429"
-  },
-  {
-   "t": "2026-11-17T04:04:29.068Z",
-   "quien": "Clientes y licitaciones",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-17T04:04:29.068Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1183": "tarifas",
   "1184": "clima",
   "1185": "noticias_tec",
   "1186": "comidas",
@@ -22390,7 +22389,8 @@
   "1848": "tarifas",
   "1849": "jefe_obra",
   "1850": "licitaciones",
-  "1851": "clima"
+  "1851": "clima",
+  "1856": "tarifas"
  },
  "tgOffset": 196508524,
  "hechos": {
@@ -22408,7 +22408,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-18T10:42:10.418Z",
+ "actualizado": "2026-11-18T11:11:28.919Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
