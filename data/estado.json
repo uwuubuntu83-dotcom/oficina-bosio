@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 877,
+   "corridas": 878,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-18",
-   "ultimaCorrida": "2026-11-18T14:40:31.260Z",
+   "ultimaCorrida": "2026-11-18T15:10:51.076Z",
    "resumen": "💵 Dólar hoy (10:40 hs)\n• Oficial: compra $1525 · venta $1575\n• Blue: compra $1585 · venta $1605\n• Bolsa: compra $1591.5 · venta $1603.3\n• Contado con liquidación: compra $1694.2 · venta $1697.2\n• Mayorista: compra $1543",
    "informe": "data/informes/dolar/2026-11-18-1040.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1689.93,
      "tarjeta": 2047.5
     },
-    "ultimoChequeo": "2026-11-18T14:40:31.260Z",
+    "ultimoChequeo": "2026-11-18T15:10:51.076Z",
     "resumenFecha": "2026-11-18",
     "hist": {
      "2026-10-30": {
@@ -211,13 +211,13 @@
       "tarjeta": 2047.5
      },
      "2026-11-18": {
-      "oficial": 1575,
+      "oficial": 1580,
       "blue": 1610,
-      "bolsa": 1601.8,
-      "contadoconliqui": 1698.5,
-      "mayorista": 1556,
-      "cripto": 1699.49,
-      "tarjeta": 2047.5
+      "bolsa": 1608.7,
+      "contadoconliqui": 1704.7,
+      "mayorista": 1557,
+      "cripto": 1702.35,
+      "tarjeta": 2054
      }
     },
     "ultimaAlerta": "Cripto: bajó 2.1% → $1623"
@@ -5688,13 +5688,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-18",
-   "ultimaCorrida": "2026-11-18T14:39:43.873Z",
+   "ultimaCorrida": "2026-11-18T15:05:40.384Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795012783873,
+     "t": 1795014340384,
      "redes_hoy": {
       "publicaciones": 1,
       "historias": 1,
@@ -9670,7 +9670,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 877,
+   "corridas": 878,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9679,7 +9679,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-18T14:40:31.260Z",
+   "ultimaCorrida": "2026-11-18T15:10:51.076Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9689,7 +9689,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-18T14:40:31.260Z",
+    "ultimoChequeo": "2026-11-18T15:10:51.076Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -9960,16 +9960,16 @@
      },
      "2026-11-18": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       23,
-       23
+       24,
+       24
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       23,
-       23
+       24,
+       24
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       23,
-       23
+       24,
+       24
       ]
      }
     }
@@ -20112,7 +20112,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 859,
+   "corridas": 860,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20121,13 +20121,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-18T14:40:31.260Z",
+   "ultimaCorrida": "2026-11-18T15:10:51.076Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-18",
-    "ultimoChequeo": "2026-11-18T14:40:31.260Z"
+    "ultimoChequeo": "2026-11-18T15:10:51.076Z"
    }
   },
   "feriados": {
@@ -20319,6 +20319,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-18T15:10:51.076Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-18T15:10:51.076Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-18T14:40:31.260Z",
    "quien": "Clientes y licitaciones",
@@ -21808,16 +21818,6 @@
    "t": "2026-11-17T06:04:27.837Z",
    "quien": "Mundo: salud y ciencia",
    "que": "no pude leer «China salud avance médico»: respondió 429"
-  },
-  {
-   "t": "2026-11-17T06:04:27.837Z",
-   "quien": "Mundo: tecnología",
-   "que": "no pude leer «Europa tecnología»: respondió 429"
-  },
-  {
-   "t": "2026-11-17T06:04:27.837Z",
-   "quien": "Mundo: tecnología",
-   "que": "no pude leer «Corea del Sur tecnología»: respondió 429"
   }
  ],
  "pendientes": [],
@@ -22339,7 +22339,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-18T14:40:31.260Z",
+ "actualizado": "2026-11-18T15:10:51.076Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
