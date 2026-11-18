@@ -5584,7 +5584,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "falló",
+   "estado": "sin conectar",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -19772,6 +19772,21 @@
  },
  "log": [
   {
+   "t": "2026-11-18T19:24:47.233Z",
+   "quien": "Redes sociales",
+   "que": "no pude leer el buzón del celu: el buzón respondió 409"
+  },
+  {
+   "t": "2026-11-18T19:24:47.233Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-18T19:24:47.233Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
+  {
    "t": "2026-11-18T19:14:32.422Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
@@ -21255,21 +21270,6 @@
    "t": "2026-11-17T08:04:28.784Z",
    "quien": "Noticias de Villa María",
    "que": "no pude leer «\"El Diario del Centro del País\"»: respondió 429"
-  },
-  {
-   "t": "2026-11-17T08:04:28.784Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa Nueva Córdoba»: respondió 429"
-  },
-  {
-   "t": "2026-11-17T08:04:28.784Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa María trabajo empleo»: respondió 429"
-  },
-  {
-   "t": "2026-11-17T08:04:28.784Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa María Córdoba»: respondió 429"
   }
  ],
  "pendientes": [],
@@ -21794,7 +21794,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-18T19:14:32.422Z",
+ "actualizado": "2026-11-18T19:24:47.233Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
