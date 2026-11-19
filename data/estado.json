@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 927,
+   "corridas": 928,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-19",
-   "ultimaCorrida": "2026-11-19T15:58:53.388Z",
+   "ultimaCorrida": "2026-11-19T16:28:33.098Z",
    "resumen": "🚨 Movimiento fuerte del dólar\nBlue: subió 4.5% → $1635\n\n💵 Dólar hoy (11:29 hs)\n• Oficial: compra $1530 · venta $1580\n• Blue: compra $1615 · venta $1635 (+4.5%)\n• Bolsa: compra $1616 · venta $1616 (-0.8%)\n• Contado con ",
    "informe": "data/informes/dolar/2026-11-19-1129.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1718.2,
      "tarjeta": 2054
     },
-    "ultimoChequeo": "2026-11-19T15:58:53.388Z",
+    "ultimoChequeo": "2026-11-19T16:28:33.098Z",
     "resumenFecha": "2026-11-19",
     "hist": {
      "2026-10-30": {
@@ -222,10 +222,10 @@
      "2026-11-19": {
       "oficial": 1580,
       "blue": 1635,
-      "bolsa": 1622.8,
-      "contadoconliqui": 1717,
-      "mayorista": 1559,
-      "cripto": 1715.22,
+      "bolsa": 1627.6,
+      "contadoconliqui": 1724.4,
+      "mayorista": 1562,
+      "cripto": 1723.13,
       "tarjeta": 2054
      }
     },
@@ -5890,7 +5890,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "listo",
+   "estado": "sin señal",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -5901,7 +5901,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-19",
    "ultimaCorrida": "2026-11-19T15:51:17.013Z",
-   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 37 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -5929,7 +5929,7 @@
       ]
      }
     },
-    "avisoSinSenal": "2026-11-18T05:47:04.907Z",
+    "avisoSinSenal": "2026-11-19T15:51:17.013Z",
     "diario": {
      "2026-10-30": {
       "publicaciones": 21,
@@ -9974,7 +9974,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 927,
+   "corridas": 928,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9983,7 +9983,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-19T15:58:53.388Z",
+   "ultimaCorrida": "2026-11-19T16:28:33.098Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9993,7 +9993,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-19T15:58:53.388Z",
+    "ultimoChequeo": "2026-11-19T16:28:33.098Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10278,16 +10278,16 @@
      },
      "2026-11-19": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       26,
-       26
+       27,
+       27
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       26,
-       26
+       27,
+       27
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       26,
-       26
+       27,
+       27
       ]
      }
     }
@@ -17286,7 +17286,7 @@
   },
   "comidas": {
    "estado": "listo",
-   "corridas": 81,
+   "corridas": 82,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -17295,7 +17295,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-19",
-   "ultimaCorrida": "2026-11-19T11:58:58.662Z",
+   "ultimaCorrida": "2026-11-19T16:28:33.098Z",
    "resumen": "🔒 Privado: te lo mandó por Telegram.",
    "informe": null,
    "pausado": false,
@@ -17303,10 +17303,11 @@
     "horas": {
      "fecha": "2026-11-19",
      "hechas": [
-      "08:30"
+      "08:30",
+      "13:00"
      ]
     },
-    "ultimoChequeo": "2026-11-19T11:58:58.662Z"
+    "ultimoChequeo": "2026-11-19T16:28:33.098Z"
    }
   },
   "ejercicio": {
@@ -20307,7 +20308,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 909,
+   "corridas": 910,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20316,13 +20317,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-19T15:58:53.388Z",
+   "ultimaCorrida": "2026-11-19T16:28:33.098Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-19",
-    "ultimoChequeo": "2026-11-19T15:58:53.388Z"
+    "ultimoChequeo": "2026-11-19T16:28:33.098Z"
    }
   },
   "feriados": {
@@ -20514,6 +20515,26 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-19T16:28:33.098Z",
+   "quien": "¿Qué comiste?",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-19T16:28:33.098Z",
+   "quien": "Mantenimiento",
+   "que": "Celular bot (Instagram) no da señales hace 37 min"
+  },
+  {
+   "t": "2026-11-19T16:28:33.098Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-19T16:28:33.098Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-19T15:58:53.388Z",
    "quien": "Clientes y licitaciones",
@@ -21993,31 +22014,10 @@
    "t": "2026-11-18T00:15:59.715Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-17T23:46:05.161Z",
-   "quien": "Seguimiento de ejercicio",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-17T23:46:05.161Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-17T23:46:05.161Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-17T23:16:03.581Z",
-   "quien": "Gerente general",
-   "que": "mandó el parte del día (sin IA)"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1332": "mundo_tecnologia",
   "1333": "mundo_tecnologia",
   "1334": "mundo_salud",
   "1335": "mundo_salud",
@@ -22516,7 +22516,8 @@
   "2017": "tarifas",
   "2018": "licitaciones",
   "2019": "clima",
-  "2021": "licitaciones"
+  "2021": "licitaciones",
+  "2023": "comidas"
  },
  "tgOffset": 196508528,
  "hechos": {
@@ -22534,7 +22535,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-19T15:58:53.388Z",
+ "actualizado": "2026-11-19T16:28:33.098Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
