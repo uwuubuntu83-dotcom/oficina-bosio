@@ -5528,13 +5528,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-18",
-   "ultimaCorrida": "2026-11-19T01:19:22.750Z",
+   "ultimaCorrida": "2026-11-19T01:24:34.526Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795051162750,
+     "t": 1795051474526,
      "redes_hoy": {
       "publicaciones": 14,
       "historias": 24,
@@ -5544,8 +5544,6 @@
       "errores": 27,
       "reinicios": 80,
       "ultimas": [
-       "22:10 Instagram: ahora en @soycordobes.jpg",
-       "22:11 Guardado debug/pantalla_221126.png y .xml",
        "22:11 Chat: 0 reels en el chat, 0 sin subir",
        "22:12 Memes: tocado 'Descargar', esperando que baje el video...",
        "22:14 Memes: reel descargado (14569 KB) de @mateamosche",
@@ -5553,7 +5551,9 @@
        "22:14 Memes: video elegido de la galería (    seleccionado imagen en miniatura de video creado(a) el 1)",
        "22:16 ✔ Memes: reel descargado y resubido en @soycordobes.jpg",
        "22:17 Memes: video borrado del celular (ya estaba subido)",
-       "22:18 Instagram: ahora en @maestromayordeobrasjb"
+       "22:18 Instagram: ahora en @maestromayordeobrasjb",
+       "22:21 ✔ Facebook: compartido en la Página (publicación)",
+       "22:22 Chat: 2 reels en el chat, 0 sin subir"
       ]
      }
     },
@@ -5851,8 +5851,6 @@
       "errores": 27,
       "reinicios": 80,
       "ultimas": [
-       "22:10 Instagram: ahora en @soycordobes.jpg",
-       "22:11 Guardado debug/pantalla_221126.png y .xml",
        "22:11 Chat: 0 reels en el chat, 0 sin subir",
        "22:12 Memes: tocado 'Descargar', esperando que baje el video...",
        "22:14 Memes: reel descargado (14569 KB) de @mateamosche",
@@ -5860,7 +5858,9 @@
        "22:14 Memes: video elegido de la galería (    seleccionado imagen en miniatura de video creado(a) el 1)",
        "22:16 ✔ Memes: reel descargado y resubido en @soycordobes.jpg",
        "22:17 Memes: video borrado del celular (ya estaba subido)",
-       "22:18 Instagram: ahora en @maestromayordeobrasjb"
+       "22:18 Instagram: ahora en @maestromayordeobrasjb",
+       "22:21 ✔ Facebook: compartido en la Página (publicación)",
+       "22:22 Chat: 2 reels en el chat, 0 sin subir"
       ]
      }
     }
@@ -19621,6 +19621,16 @@
  },
  "log": [
   {
+   "t": "2026-11-19T01:28:56.180Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-19T01:28:56.180Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
+  {
    "t": "2026-11-19T01:22:10.768Z",
    "quien": "Informe del celu",
    "que": "entregó (sin IA)"
@@ -21109,16 +21119,6 @@
    "t": "2026-11-17T12:10:02.609Z",
    "quien": "Lo último en tecnología",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-17T12:10:02.609Z",
-   "quien": "Clientes y licitaciones",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-17T12:10:02.609Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
@@ -21643,7 +21643,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-19T01:22:10.768Z",
+ "actualizado": "2026-11-19T01:28:56.180Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
