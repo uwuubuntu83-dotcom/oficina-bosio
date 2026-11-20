@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 979,
+   "corridas": 980,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-20",
-   "ultimaCorrida": "2026-11-20T18:29:43.260Z",
+   "ultimaCorrida": "2026-11-20T18:59:44.543Z",
    "resumen": "🚨 Movimiento fuerte del dólar\nContado con liquidación: subió 2.2% → $1786.5\nCripto: subió 2.9% → $1784.87\n\n💵 Dólar hoy (15:29 hs)\n• Oficial: compra $1545 · venta $1595 (+0.6%)\n• Blue: compra $1650 · venta $1670 (+1.8%)",
    "informe": "data/informes/dolar/2026-11-20-1529.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1734.81,
      "tarjeta": 2060.5
     },
-    "ultimoChequeo": "2026-11-20T18:29:43.260Z",
+    "ultimoChequeo": "2026-11-20T18:59:44.543Z",
     "resumenFecha": "2026-11-20",
     "hist": {
      "2026-10-30": {
@@ -5824,7 +5824,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-19",
    "ultimaCorrida": "2026-11-19T15:51:17.013Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 1598 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 1628 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -9994,7 +9994,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 979,
+   "corridas": 980,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10003,7 +10003,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-20T18:29:43.260Z",
+   "ultimaCorrida": "2026-11-20T18:59:44.543Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10013,7 +10013,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-20T18:29:43.260Z",
+    "ultimoChequeo": "2026-11-20T18:59:44.543Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10312,16 +10312,16 @@
      },
      "2026-11-20": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       31,
-       31
+       32,
+       32
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       31,
-       31
+       32,
+       32
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       31,
-       31
+       32,
+       32
       ]
      }
     }
@@ -20190,7 +20190,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 961,
+   "corridas": 962,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20199,13 +20199,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-20T18:29:43.260Z",
+   "ultimaCorrida": "2026-11-20T18:59:44.543Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-20",
-    "ultimoChequeo": "2026-11-20T18:29:43.260Z"
+    "ultimoChequeo": "2026-11-20T18:59:44.543Z"
    }
   },
   "feriados": {
@@ -20397,6 +20397,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-20T18:59:44.543Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-20T18:59:44.543Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-20T18:29:43.260Z",
    "quien": "Clientes y licitaciones",
@@ -21886,16 +21896,6 @@
    "t": "2026-11-19T09:58:43.658Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-19T09:58:43.658Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-19T09:29:04.861Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
@@ -22417,7 +22417,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-20T18:29:43.260Z",
+ "actualizado": "2026-11-20T18:59:44.543Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
