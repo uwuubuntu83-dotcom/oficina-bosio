@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 965,
+   "corridas": 966,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-19",
-   "ultimaCorrida": "2026-11-20T11:09:36.525Z",
+   "ultimaCorrida": "2026-11-20T11:39:44.569Z",
    "resumen": "🚨 Movimiento fuerte del dólar\nBlue: subió 4.8% → $1640\n\n💵 Dólar hoy (14:28 hs)\n• Oficial: compra $1535 · venta $1585 (+0.3%)\n• Blue: compra $1620 · venta $1640 (+4.8%)\n• Bolsa: compra $1629.4 · venta $1632.2 (+0.2%)\n• ",
    "informe": "data/informes/dolar/2026-11-19-1428.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1735,
      "tarjeta": 2060.5
     },
-    "ultimoChequeo": "2026-11-20T11:09:36.525Z",
+    "ultimoChequeo": "2026-11-20T11:39:44.569Z",
     "resumenFecha": "2026-11-19",
     "hist": {
      "2026-10-30": {
@@ -5603,7 +5603,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-19",
    "ultimaCorrida": "2026-11-19T15:51:17.013Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 1158 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 1188 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -6030,18 +6030,18 @@
    "memoria": {}
   },
   "clima": {
-   "estado": "listo",
+   "estado": "falló",
    "corridas": 228,
-   "fallas": 23,
-   "fallasSeguidas": 0,
+   "fallas": 24,
+   "fallasSeguidas": 1,
    "puntaje": null,
    "historial": [],
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-11-20T09:40:03.681Z",
-   "resumen": "⚠️ Cambió el pronóstico para la obra\n\n🌤️ Clima en Villa María, Córdoba\n• Hoy 20/11: 16° a 26° · lluvia 88% · viento 19 km/h\n• Mañana 21/11: 15° a 22° · lluvia 96% · viento 20 km/h\n• Pasado 22/11: 13° a 24° · lluvia 57% ",
+   "ultimaCorrida": "2026-11-20T11:39:44.569Z",
+   "resumen": "Falló: fetch failed",
    "informe": "data/informes/clima/2026-11-20-0441.md",
    "pausado": false,
    "memoria": {
@@ -6054,7 +6054,7 @@
   },
   "vencimientos": {
    "estado": "listo",
-   "corridas": 165,
+   "corridas": 166,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -6063,12 +6063,17 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-20T08:42:03.316Z",
-   "resumen": "🧾 Vencimientos e impuestos\n\n• Qué cambia con la nueva Ley de Discapacidad que aprobó el Senado (InfoYa)\n  https://www.diarioinfoya.com.ar/nacional/que-cambia-con-la-nueva-ley-de-discapacidad-que-aprobo-el-senado/\n• Ley ",
-   "informe": "data/informes/vencimientos/2026-11-20-0542.md",
+   "ultimaCorrida": "2026-11-20T11:39:44.569Z",
+   "resumen": "🧾 Vencimientos e impuestos\n\n• La Ley de Tierras seguirá vigente: el Senado mantuvo los límites a la extranjerización (newsdigitales)\n  https://www.newsdigitales.com/nota/350522/la-ley-de-tierras-seguira-vigente-el-senad",
+   "informe": "data/informes/vencimientos/2026-11-20-0839.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "la ley de tierras seguirá vigente: el senado mantuvo los límites a la extranjerización",
+     "monotributo 2026: vencimiento de octubre, cuotas vigentes y cuándo aumenta",
+     "cómo abrir una cuenta fal, qué hay que informar a arca y hasta qué fecha hay tiempo",
+     "el senado aprobó la ley de discapacidad y estableció un régimen permanente de prestaciones",
+     "llaryora anunció una fuerte baja de impuestos en córdoba para 2027: qué cambia en inmobili",
      "qué cambia con la nueva ley de discapacidad que aprobó el senado",
      "ley de discapacidad: qué cambia para las pensiones y las prestaciones tras la aprobación d",
      "cuándo cobro en provincia de buenos aires el aguinaldo de diciembre 2026: la fecha confirm",
@@ -6444,20 +6449,8 @@
      "arca modifica la emisión de facturas del monotributo social desde noviembre",
      "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
     ],
-    "ultimoChequeo": "2026-11-20T08:42:03.316Z",
+    "ultimoChequeo": "2026-11-20T11:39:44.569Z",
     "semana": [
-     {
-      "titulo": "ARCA reglamentó el descuento del 50% en multas: quiénes pueden acceder y hasta cuándo",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOY2NHWnRTNmhaNENBcGoyU0xnS2F3bGJNNExCNDNiRGtmcUluOGRfZXdEZDJfdEpDaThsSElPRlBRc0I3bl9NRG52bGNncE91enNXN0ZqRDRQMGg0QVVuc00tS3ZXT2xZS1hJT1JxeWcza1k5NWp4ZDNsQnZEbFkwWVQ2Z2h2ZUsw0gGIAUFVX3lxTE5jY0dadFM2aFo0Q0FwajJTTGdLYXdsYk00TEI0M2JEa2ZxSW44ZF9ld0RkMl90SkNpOGxISU9GUFFzQjduX01EbnZsY2dwT3V6c1c3RmpENFAwaDRBVW5zTS1LdldPbFlLWElPUnF5ZzNrWTk1anhkM2xCdkRsWTBZVDZnaHZlSzA?oc=5",
-      "fuente": "Elonce.com",
-      "t": 1794476873043
-     },
-     {
-      "titulo": "CABA y Provincia: los nuevos planes para pagar deudas de Patentes y otros impuestos, y cuándo vencen",
-      "link": "https://www.clarin.com/servicios/caba-provincia-nuevos-planes-pagar-deudas-patentes-impuestos-vencen_0_EIlt653IgM.html",
-      "fuente": "Clarín",
-      "t": 1794476873043
-     },
      {
       "titulo": "ARCA confirmó un descuento del 50% en multas: quiénes pueden acceder y cuál es la fecha límite - Voces Criticas",
       "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOU0VaTjlLaTdtWjJ2cnZrb29oc1Jvenh3bXFFSWtEdktsWVZ5a2JseUZTdVNKR0xVc25LWDUwWkg0bVNxSGZiUFBiUVcxaS1xczRCTmRTYUY5Y1VBVWNsd2dHaEJqOElJbzd3dEl5VWNJU0x3bWs3UmZHSDZDTnQ5YlBfNGdSWk80OHVMc29KVElweldSbGFTQ3ZIbWtZMy1TUXdXSi1uNkx3Tkctbm5TOUVyRnRqQmJRTEpNbl9RbkZvN2F2SHhPeUNvbGN5eC1DYmRwSTQzdXJ3MVEtSFdFaXo2S1dhb0RDQkxwX2lxWWnSAfYBQVVfeXFMUEFHS1REUUNDcDczSXNFTVVNUmZyRDJORXR0SGRTNzRXLVZzdGVidU5BTVVPM2JTSzRjMEwzMXgwOHZiRHVxdEg1N2dUb1lkcUlmdWRJY05pN1hrcUNQWGY4NXJHTktCb2g0aC1Ua1h1NXVkSUlJVG9PdlA4enhrX0pzSGVzaFgyM2xMVnRteGFtSk5EZjU1NmJ2ak5PX3Y3YlpjSm8yOGlibWt5eWpDekNQYmNGYktYTkNpYmVzUGRkdFpBdWctWGlCNjFnQ2o5OS1UdlZHNGZfcVhZcjVkVFA3YVNBZG1HbHRDdG5zOUhfdkgzUld3?oc=5",
@@ -7279,13 +7272,43 @@
       "link": "https://puntoapunto.com.ar/la-cuenta-regresiva-de-los-fal-que-tan-preparadas-estan-las-empresas-para-diciembre",
       "fuente": "Punto a Punto",
       "t": 1795164127497
+     },
+     {
+      "titulo": "La Ley de Tierras seguirá vigente: el Senado mantuvo los límites a la extranjerización",
+      "link": "https://www.newsdigitales.com/nota/350522/la-ley-de-tierras-seguira-vigente-el-senado-mantuvo-los-limites-a-la-extranjerizacion/",
+      "fuente": "newsdigitales",
+      "t": 1795174800851
+     },
+     {
+      "titulo": "Monotributo 2026: vencimiento de octubre, cuotas vigentes y cuándo aumenta",
+      "link": "https://www.newsdigitales.com/nota/350509/monotributo-2026-vencimiento-de-octubre-cuotas-vigentes-y-cuando-aumenta/",
+      "fuente": "newsdigitales",
+      "t": 1795174800851
+     },
+     {
+      "titulo": "Cómo abrir una cuenta FAL, qué hay que informar a ARCA y hasta qué fecha hay tiempo",
+      "link": "https://www.cronista.com/finanzas-mercados/como-abrir-una-cuenta-fal-que-hay-que-informar-a-arca-y-hasta-que-fecha-hay-tiempo/",
+      "fuente": "El Cronista",
+      "t": 1795174800851
+     },
+     {
+      "titulo": "El Senado aprobó la ley de discapacidad y estableció un régimen permanente de prestaciones",
+      "link": "https://elregionaldigital.com.ar/el-senado-aprobo-la-ley-de-discapacidad-y-establecio-un-regimen-permanente-de-prestaciones/",
+      "fuente": "El Regional Digital",
+      "t": 1795174800851
+     },
+     {
+      "titulo": "Llaryora anunció una fuerte baja de impuestos en Córdoba para 2027: qué cambia en Inmobiliario e Ingresos Brutos",
+      "link": "https://www.cronica.com.ar/politica/llaryora-anuncio-una-fuerte-baja-de-impuestos-en-cordoba-para-2027-que-cambia-en-inmobiliario-e-ingresos-brutos/",
+      "fuente": "Crónica",
+      "t": 1795174800851
      }
     ]
    }
   },
   "tarifas": {
    "estado": "listo",
-   "corridas": 166,
+   "corridas": 167,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7294,12 +7317,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-20T08:42:03.316Z",
-   "resumen": "🧾 Aumentos de servicios\n\n• La Corte declaró inconstitucionales los aumentos libres de las prepagas y volverán los controles (Diario UNO)\n  https://news.google.com/rss/articles/CBMi1wFBVV95cUxQeEhrOHZXWGNkWUZwaTgyOEFiRU5",
-   "informe": "data/informes/tarifas/2026-11-20-0542.md",
+   "ultimaCorrida": "2026-11-20T11:39:44.569Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• Pronóstico del clima en Colombia hoy, 20 de noviembre: lluvias en Bogotá y varias regiones (Revista Semana)\n  https://news.google.com/rss/articles/CBMigAJBVV95cUxQcUt6OU5rdjFjZTRyeDBLWWhyWHJkN",
+   "informe": "data/informes/tarifas/2026-11-20-0839.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "pronóstico del clima en colombia hoy, 20 de noviembre: lluvias en bogotá y varias regiones",
+     "la corte frenó los aumentos libres de las prepagas y volvió a meter al estado en la cancha",
+     "la corte ordenó control estatal sobre aumentos de prepagas",
+     "la corte frenó los aumentos sin control estatal en prepagas",
+     "alojarse en las sierras de córdoba un 26% promedio más este verano",
+     "otro fin de semana largo golpeado por las reservas de último momento",
      "la corte declaró inconstitucionales los aumentos libres de las prepagas y volverán los con",
      "prepagas: la corte suprema declaró inconstitucional el decreto que liberó el aumento de la",
      "las prepagas ya no podrán aumentar sus cuotas sin la autorización del gobierno",
@@ -7893,52 +7922,10 @@
      "la visita del papa león xiv genera un estallido de reservas turísticas en argentina",
      "la cobertura médica privada perdió casi un millón de afiliados",
      "intensa llovizna inunda distritos de lima sur",
-     "lluvias en perú en vivo: precipitaciones por el fenómeno el niño en el sur de lima inundan",
-     "la cobertura de obras sociales y prepagas cayó a su nivel más bajo desde 2016",
-     "el subsidio al transporte volvió a la agenda: en caba el boleto cuesta un tercio que en có",
-     "anses confirmó las 3 novedades clave de noviembre para jubilados: aumento, bono y nuevo ca",
-     "presenta sheinbaum balance del plan michoacán: hay 67% de avance",
-     "el municipio pide acelerar la puesta a punto de circunvalación",
-     "clima en córdoba hoy jueves 5 de noviembre: cielo claro y temperatura cálida"
+     "lluvias en perú en vivo: precipitaciones por el fenómeno el niño en el sur de lima inundan"
     ],
-    "ultimoChequeo": "2026-11-20T08:42:03.316Z",
+    "ultimoChequeo": "2026-11-20T11:39:44.569Z",
     "semana": [
-     {
-      "titulo": "Aumento del gasto de viaje: la red de peajes amplía su cobertura con 27 tramos de rutas nacionales",
-      "link": "https://infoarenales.com/2026/11/13/viajar-mas-caro-suman-27-tramos-de-rutas-nacionales-a-la-red-peajes/",
-      "fuente": "infoarenales",
-      "t": 1794568430158
-     },
-     {
-      "titulo": "Cuánto cobrarán en diciembre los jubilados que perciben la mínima con el aguinaldo y el bono",
-      "link": "https://www.infobae.com/economia/2026/11/13/cuanto-cobraran-en-diciembre-los-jubilados-que-perciben-la-minima-con-el-aguinaldo-y-el-bono/",
-      "fuente": "Infobae",
-      "t": 1794568430158
-     },
-     {
-      "titulo": "Luis Caputo justificó el aumento de la inflación de octubre por los cambios en el Régimen de Zonas Frías",
-      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNRGNlNGVvOHdnZ1h5U0tIV0xnQ3VhX2d2SEZQelBnbzM5bXlsXzlOWkRGZ2tBdlVpdGxhYmtWdE5JZ2dyTHQzTk1NbEJzSU1HZ1M5amYtdFFadTRYeVBOWEpkeFBzcTNzRkE4aEk3a0xEMi1KTGI5TVE2N3I2dXotNlZuZllJVFUzX0RWUWdTbTN1dXZlM1BGaU0wSjZZaUZ6bFpRWG15aFJSU2M5SzlVZVVkVkRuQy02ZEdsN0VVRlI0MldPX0hJZVZEdDVGa2lnVXBhT3hmYm9HQ1k0eDRLRmdBWUk?oc=5",
-      "fuente": "Enterate Noticias",
-      "t": 1794568430158
-     },
-     {
-      "titulo": "Por la quita de la Zona Fría, el IPC de Córdoba trepó al 2,7% en octubre",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOcXlZblVPOFB4aGU1MHBxOWdDMnJaa0tKUVEzbEJ2eUpqUnBhckZPYTBpOEFuOGlGUE1mVzAyamNBSFlpMzdpaDlRbTA4M3BwQ2lPUl9TcC0tbHV2X3FvU1hUbXA4QXBQQmZURkM5TUwxNW1ZYkFXZ1FhZndWRHo0TnRCa0FVY0ZnSXBVc2t2ZnFieTRQbXlQQkpuM2EzdndabXVNZjZUOEstQWE00gGsAUFVX3lxTE5xeVluVU84UHhoZTUwcHE5Z0MyclprS0pRUTNsQnZ5SmpScGFyRk9hMGk4QW44aUZQTWZXMDJqY0FIWWkzN2loOVFtMDgzcHBDaU9SX1NwLS1sdXZfcW9TWFRtcDhBcFBCZlRGQzlNTDE1bVliQVdnUWFmd1ZEejROdEJrQVVjRmdJcFVza3ZmcWJ5NFBteVBCSm4zYTN2d1ptdU1mNlQ4Sy1BYTQ?oc=5",
-      "fuente": "puntal.com.ar",
-      "t": 1794579074668
-     },
-     {
-      "titulo": "Fuerte salto de la inflación en Córdoba: octubre cerró en 2,7",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSklVNDJlb09SNHpESTZxaTFwMWNzSnJCd3Q0ek1XNFN0eHRuMnN6V3lNZWlqc3BIR3RFUkswRnpQNnFQcVE3elhTbmU5Y3V0VjN5dzdudjJzak44d2RlN1RjUFQyZ01HajR5SVZzSFAxNmJCd2E1a3lKZ3BoQjJrMEI1Ym11YzhyWE4yZUplY21mZ2xqZ0t6Tk5qV0ZZVEhyRlNSbQ?oc=5",
-      "fuente": "La Estafeta Online",
-      "t": 1794579074668
-     },
-     {
-      "titulo": "La inflación se modera en Córdoba, pero usar el coche cuesta un 16,6 % más que hace un año",
-      "link": "https://www.eldebate.com/espana/la-voz-de-cordoba/economia/20261113/inflacion-modera-cordoba-usar-coche-cuesta-166-hace-ano_480559.html",
-      "fuente": "El Debate",
-      "t": 1794579074668
-     },
      {
       "titulo": "Una falla en un pozo de bombeo afecta el suministro de agua en barrios de la Capital",
       "link": "https://inforama.com.ar/servicios/2026/11/13/una-falla-en-un-pozo-de-bombeo-afecta-el-suministro-de-agua-en-barrios-de-la-capital/",
@@ -9702,6 +9689,42 @@
       "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOcTNETi1GdzFGdHhudTRqb2tuYlhCQlRwdUJNQVV6Z1h3NjNNdDZWLXJCUmVOM25KSlVlVFhNZTVlcUV6ZFRIQk9Ga2dha0N4WUpBendZandnc3o3RkpsV19OOUZwYzltRXJUWDNtRlR6c1p2Y204Nmw2V2VBTFhkeWE4YlM1Q2ZmQnpEQkl4ZzZDejZlLXFQb0plTFdCOWt5Rlp3MExiQmNMZktKeURWQzljOTZ0c0hxSHlRWTFJSk9kMnA3?oc=5",
       "fuente": "ANDigital",
       "t": 1795164130025
+     },
+     {
+      "titulo": "Pronóstico del clima en Colombia hoy, 20 de noviembre: lluvias en Bogotá y varias regiones",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQcUt6OU5rdjFjZTRyeDBLWWhyWHJkNkNuS1Q2N0tSQ1JRMloyM2tDWWFJTGFIdGxkaUdRaFRsLVRfWWV0Vmg1MHNsN1Y4TGhPYnFYUFhKR3BEMFJVcWY2cjdhWVFMbnB3MXk1Q0o5U293Zzc2dGIxQjJBOGI5MTJfRzRDRmdFSU81UEJ5Xy1ibWdfclNHRFdWc1lrblpmN3JTSHhacWF2T2NBcVV2UFpHdF9WclhSTURnenV1X2xMNDA5Q3l5SEJrMWphdTBzVzVkcGRRZThkZXZ6c2pDRzFiUzZfLWtuV0I2OGdLNmQtY1ZZUHdsTVZDQzVIeUtQdG0w?oc=5",
+      "fuente": "Revista Semana",
+      "t": 1795174803515
+     },
+     {
+      "titulo": "La Corte frenó los aumentos libres de las prepagas y volvió a meter al Estado en la cancha",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQNUFnTTI4RHI5b24tOFhMa2M0RERTaG4zaEYwOTl2bUg5WXpIcmhiY0dCSldpWWVQb082WFF6ZWpZSTRXOGg5OXYwUnFwWjJ1aU9NMHREaG44UGFPNUFWWk45MlI4TWRtdjBsR2F1a2Q0aFVGSTB1VVA3Tjk3VmRNc3V1QUt3RW5Jbk1ZYm5xQ2w1T1lpVHRydU5PMVNTNzBjelF1bm03ZmgzMHVHODVkWHlpRDY4OUlQbmdiOW9YTGpJNUly?oc=5",
+      "fuente": "Del Sur Diario",
+      "t": 1795174803515
+     },
+     {
+      "titulo": "La Corte ordenó control estatal sobre aumentos de prepagas",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQcEtXczYxbkx3MEw1R0RpVzNrRy1BMnZJdkZSMkpva2xHT3UtSWlJQjZ3aWs0QlNwc1YzYjRkZ1pwRlh0eW5VQUtVVEZUZW9rSUFQTEs4d3oyZWZ6R0o4OGJKdmlFQkdZcW1NU3VRRlp6aXNubjBlR3dKdVBIdVNtaThKUkQtVnRWSU16X3pCU1RKWE5lMzloVTRhMTJ0enVVaXZKaVBVcw?oc=5",
+      "fuente": "El Zonda",
+      "t": 1795174803515
+     },
+     {
+      "titulo": "La Corte frenó los aumentos sin control estatal en prepagas",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQckFpUHE1eVBYdmZwQnlGdzY4eFZNUHR1ZExCT1RvNW5pWWl5N3Y0aDd4ekUtQ3dXNE1HYmdXYnZzU1EtblNneHRtYlVZMlF3Z0FqaUxVWkhTVk5KRWh2TGJKQUYxdkNPZFF6X1pIRTB3QXBBSjQ1UGFNLUJmeVlGYzQ4UzJoY0g0dTRHNHBIMDg0U19Wc2YxeEVyeVBiOUZKeUE?oc=5",
+      "fuente": "TeleSol Diario",
+      "t": 1795174803515
+     },
+     {
+      "titulo": "Alojarse en las Sierras de Córdoba un 26% promedio más este verano",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNejhfbG5wUnFoVkw4SXExajFmekNMNUc5d3pnWkpueWE2UU5wQ1NNblgxSzFjYTE3dUZaZHptS0I0bUlLSmZNU0VnVmNyamxaeG5PR21vaWsyTnBMZ2stMEZoMjN4VWFWbXpSZFE1S1RBeWE0bUpFUEtSZFYyYkc3SjMtNDV1a01VWllXbDFCMjVKcmZveHEyNC1jNUY?oc=5",
+      "fuente": "Carlos Paz Vivo",
+      "t": 1795174803515
+     },
+     {
+      "titulo": "Otro fin de semana largo golpeado por las reservas de último momento",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUGtvRVowcExUbnQ0ejQzZjRxLXdUU2Zoam9JSkxscFVmZlMwRjRobVl4MWhJMVZ0dm1ONGNTMnV3d2l5bDR0UmJERjBwTldrc2RTSktYbnpHVkNUTF9BVlNuZ2RSamxMaWJlWnNvTVBwejhMZm14U0JWMXhSM0dSTUpvRUp2dHlocG1PODhTc1pXQUlyOFpydGdtdTlnTmtlTGpSNFJ5QUNyeWc?oc=5",
+      "fuente": "Report News",
+      "t": 1795174803515
      }
     ]
    }
@@ -9759,7 +9782,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 965,
+   "corridas": 966,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9768,7 +9791,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-20T11:09:36.525Z",
+   "ultimaCorrida": "2026-11-20T11:39:44.569Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9778,7 +9801,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-20T11:09:36.525Z",
+    "ultimoChequeo": "2026-11-20T11:39:44.569Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10077,16 +10100,16 @@
      },
      "2026-11-20": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       17,
-       17
+       18,
+       18
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       17,
-       17
+       18,
+       18
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       17,
-       17
+       18,
+       18
       ]
      }
     }
@@ -10113,7 +10136,7 @@
   },
   "precio_mmo": {
    "estado": "listo",
-   "corridas": 164,
+   "corridas": 165,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10122,12 +10145,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-20T08:42:03.316Z",
-   "resumen": "🧱 Valor m² del Colegio de MMO\n\n• Más de un millón de pesos por metro cuadrado se necesitan para construir una vivienda en Santa Fe (lalupamedios)\n  https://lalupamedios.com.ar/contenido/37424/mas-de-un-millon-de-pesos-p",
-   "informe": "data/informes/precio_mmo/2026-11-19-2039.md",
+   "ultimaCorrida": "2026-11-20T11:39:44.569Z",
+   "resumen": "🧱 Valor m² del Colegio de MMO\n\n• La \"inmobiliaria de Milei\" libera más de 60.000 m2 en el Parque de la Costa: qué se podría construir (Ambito)\n  https://news.google.com/rss/articles/CBMixwFBVV95cUxNVF9VV3NqZG1razZ1Qjk1U",
+   "informe": "data/informes/precio_mmo/2026-11-20-0839.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "la \"inmobiliaria de milei\" libera más de 60.000 m2 en el parque de la costa: qué se podría",
      "más de un millón de pesos por metro cuadrado se necesitan para construir una vivienda en s",
      "construir en santa fe ya cuesta más de $1 millón por metro cuadrado: cuánto aumentó en oct",
      "rosario y santa fe: cuánto cuesta el metro cuadrado tras un nuevo aumento de costos",
@@ -10221,14 +10245,8 @@
      "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
      "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
     ],
-    "ultimoChequeo": "2026-11-20T08:42:03.316Z",
+    "ultimoChequeo": "2026-11-20T11:39:44.569Z",
     "semana": [
-     {
-      "titulo": "Tiene dos hijos, dejaron Buenos Aires y se instalaron cerca de las Cataratas de Iguazú para construir su casa de barro de 48 m²",
-      "link": "https://tn.com.ar/sociedad/2026/11/11/tiene-dos-hijos-dejaron-buenos-aires-y-se-instalaron-cerca-de-las-cataratas-de-iguazu-para-construir-su-casa-de-barro-de-48-m/",
-      "fuente": "Todo Noticias",
-      "t": 1794454890796
-     },
      {
       "titulo": "Construir una casa de 80 m² ya supera los $161 millones y el metro cuadrado alcanza los $2,05 millones",
       "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNS2VzVEVLZ0JObXBDRUZ5SDc0MU1KUU9PcHpBUmNNcE5aaWRHalpvNERNSmN0LU1qVW1QR0RQVndBMlZod0JyYXJmaHRpbW52LVY4ZEJNbWpuRUlPTUxiZEtPbk9IbEpRbHhjUGxLRjM4U1ZkWUVoY2ZyYjJXaHkyOHppNXItYk1mcG1Sa01zWmsxSXJTcUNBZjdJeVNDdGRFZzQtUV9GdkhXczgxQVJIOFlEa0YwaDBvUE5rdkVNV3NpcGlmTlB5NFhsV2RicVRqS0VDcmxQdlUwSmF2T3NDeWJIZ25rN21v?oc=5",
@@ -10432,6 +10450,12 @@
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNRXI4NHZjVGYxc3JLNmxCajZuelRWZ0F3U080eGxiRG5zYW5DOTFSV0o2SmZvbGVDcHFMdWF4WVF1YndZNUEwZXNUUXloNmw5X1BUVEh3LXNIMm50NUVnUHFxcWpNWkw2bDF6RnRqOXA0UnE0T0FKTlplYVdPanpQZlZfNnV5cDh5cXRfalBmMmxSUFFCcW9IR2J3dHZIaGdnaC05YkVTcjhwQzdMdGg1dzlndnM5SUpW?oc=5",
       "fuente": "Diario El Día de La Plata",
       "t": 1795131573150
+     },
+     {
+      "titulo": "La \"inmobiliaria de Milei\" libera más de 60.000 m2 en el Parque de la Costa: qué se podría construir",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNVF9VV3NqZG1razZ1Qjk1UEtITWJzWldZU3dLMUx4a3BTOHBIUVJPbzlEMTRRT2JRNHczazY1LUdHbmhVNXUyLVN2eXRzaXFwUV9GbkpKWEtXZXB4S0drRGFSbVBUWUpHX0pIcXNLVXhjdmlmUG84N1RrZFIwMG1PbkdTM1Z6aW9Mbk0zcDFvOEJpbnJqYVBZMmw1REFCNTYwMEd1OWhEQVI2VklUZndxa0staEdOWUtfU0dGUTlTaEQ0Y0lWM3pR0gHMAUFVX3lxTE16U2tsNjlvbkg4MFlFR05HeDZURUtsenBHLVVlYVRTLXdiWHdTVjNjVnZqUnMzbVBYT1VQSGhZR0M5WkhKc2t4dDVrMGhPR1JyZjZNWUcxUTJrRjVqejgxWTh5bm5tSVBUWGllSGdBVTR5MDRnaTNFbGtxcy1wR3doZzlHVmZGVHRBUnpNTlY5MWNUamdJTnFlSnZ3ZWJ3S2JVMlViVkpvQTdxTktyWHpLdXFWM01UX3E0bDVFQl9XMXhLVXVaMnkxNTBJZA?oc=5",
+      "fuente": "Ambito",
+      "t": 1795174788453
      }
     ]
    }
@@ -16828,7 +16852,7 @@
   },
   "comidas": {
    "estado": "listo",
-   "corridas": 84,
+   "corridas": 85,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -16836,17 +16860,19 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-19",
-   "ultimaCorrida": "2026-11-20T00:39:35.280Z",
+   "ultimaFecha": "2026-11-20",
+   "ultimaCorrida": "2026-11-20T11:39:44.569Z",
    "resumen": "🔒 Privado: te lo mandó por Telegram.",
    "informe": null,
    "pausado": false,
    "memoria": {
     "horas": {
      "fecha": "2026-11-20",
-     "hechas": []
+     "hechas": [
+      "08:30"
+     ]
     },
-    "ultimoChequeo": "2026-11-20T00:39:35.280Z"
+    "ultimoChequeo": "2026-11-20T11:39:44.569Z"
    }
   },
   "ejercicio": {
@@ -19841,7 +19867,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 947,
+   "corridas": 948,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -19850,13 +19876,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-20T11:09:36.525Z",
+   "ultimaCorrida": "2026-11-20T11:39:44.569Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-20",
-    "ultimoChequeo": "2026-11-20T11:09:36.525Z"
+    "ultimoChequeo": "2026-11-20T11:39:44.569Z"
    }
   },
   "feriados": {
@@ -20048,6 +20074,41 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-20T11:39:44.569Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-20T11:39:44.569Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-20T11:39:44.569Z",
+   "quien": "¿Qué comiste?",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-20T11:39:44.569Z",
+   "quien": "Clima para la obra",
+   "que": "falló: fetch failed"
+  },
+  {
+   "t": "2026-11-20T11:39:44.569Z",
+   "quien": "Valor m² del Colegio de MMO",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-20T11:39:44.569Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-20T11:39:44.569Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-20T11:09:36.525Z",
    "quien": "Lo último en tecnología",
@@ -21512,49 +21573,10 @@
    "t": "2026-11-19T00:22:37.308Z",
    "quien": "Monitor de salud",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-19T00:22:37.308Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-19T00:22:37.308Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-18T23:52:43.851Z",
-   "quien": "Seguimiento de ejercicio",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-18T23:52:43.851Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-18T23:52:43.851Z",
-   "quien": "Mundo: tecnología",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-18T23:52:43.851Z",
-   "quien": "Mundo: economía",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-18T23:52:43.851Z",
-   "quien": "Argentina: economía y obra pública",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1416": "precio_mmo",
-  "1417": "noticias_vm",
-  "1418": "noticias_ar",
-  "1419": "noticias_ar",
   "1420": "mundo_economia",
   "1421": "mundo_tecnologia",
   "1422": "mundo_tecnologia",
@@ -22050,7 +22072,11 @@
   "2085": "mundo_tecnologia",
   "2086": "mundo_tecnologia",
   "2087": "mundo_salud",
-  "2088": "mundo_salud"
+  "2088": "mundo_salud",
+  "2089": "precio_mmo",
+  "2090": "comidas",
+  "2091": "vencimientos",
+  "2092": "tarifas"
  },
  "tgOffset": 196508528,
  "hechos": {
@@ -22068,7 +22094,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-20T11:09:36.525Z",
+ "actualizado": "2026-11-20T11:39:44.569Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
