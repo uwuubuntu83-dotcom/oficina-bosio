@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1024,
+   "corridas": 1025,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-21",
-   "ultimaCorrida": "2026-11-21T17:17:59.381Z",
+   "ultimaCorrida": "2026-11-21T17:46:42.522Z",
    "resumen": "💵 Dólar hoy (10:56 hs)\n• Oficial: compra $1550 · venta $1600\n• Blue: compra $1655 · venta $1675\n• Bolsa: compra $1682.6 · venta $1743.1\n• Contado con liquidación: compra $1801.4 · venta $1806.2\n• Mayorista: compra $1571",
    "informe": "data/informes/dolar/2026-11-21-1056.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1795.66,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-21T17:17:59.381Z",
+    "ultimoChequeo": "2026-11-21T17:46:42.522Z",
     "resumenFecha": "2026-11-21",
     "hist": {
      "2026-10-30": {
@@ -284,7 +284,7 @@
   },
   "licitaciones": {
    "estado": "listo",
-   "corridas": 519,
+   "corridas": 520,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -293,7 +293,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-21T16:47:43.460Z",
+   "ultimaCorrida": "2026-11-21T17:46:42.522Z",
    "resumen": "🧱 Clientes y licitaciones\n\n• La Provincia licita obras por casi $8.000 millones para reducir inundaciones en San Martín y Villa Ballester (Zona Norte Diario Online)\n  https://www.zonanortediario.com.ar/21/11/2026/la-pro",
    "informe": "data/informes/licitaciones/2026-11-21-1247.md",
    "pausado": false,
@@ -563,7 +563,7 @@
      "el banco nación ya prestó los $32.000 millones de anses para hipotecarios: cuántos crédito",
      "pp acusa al gobierno de \"negar información de obra del museo arqueológico que tiene desde "
     ],
-    "ultimoChequeo": "2026-11-21T16:47:43.460Z",
+    "ultimoChequeo": "2026-11-21T17:46:42.522Z",
     "semana": [
      {
       "titulo": "Villa de Pozos continúa con estrategia de vivienda del bienestar",
@@ -1349,7 +1349,7 @@
   },
   "noticias_vm": {
    "estado": "listo",
-   "corridas": 519,
+   "corridas": 520,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1358,12 +1358,15 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-21T16:47:43.460Z",
+   "ultimaCorrida": "2026-11-21T17:46:42.522Z",
    "resumen": "📰 Noticias de Villa María\n\n• Votos por 100.000 pesos y cargos para los aliados: la acusación de la Fiscalía contra el alcalde de Barrancabermeja (Cambio Colombia)\n  https://cambiocolombia.com/poder/articulo/2026/11/voto",
    "informe": "data/informes/noticias_vm/2026-11-21-1347.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "tras el violento temporal, epec logró restablecer la luz en toda la ciudad y continuará co",
+     "un interno murió tras manipular un alargue casero en la cárcel de villa maría",
+     "enrique gavier",
      "boleto policial: qué es y cómo funcionará el beneficio anunciado por llaryora",
      "bomberos de villa nueva y la zona recibieron fondos para obras y equipamiento",
      "un hombre murió electrocturado tras manipular un alargue casero en córdoba",
@@ -1960,13 +1963,26 @@
      "tras las tormentas, bajó la temperatura en villa carlos paz y alrededores",
      "morrison: hallaron inconsciente a una mujer y detuvieron a su pareja",
      "realizan jornada por la memoria en la unvm por ester y luis",
-     "el botánico suma agua y cloacas en un sector que esperaba obras",
-     "incendio en un comedor: \"permaneceremos cerrados hasta nuevo aviso\"",
-     "horóscopo de hoy martes 17 de noviembre de 2026",
-     "río segundo: detuvieron a dos hombres que habrían intentado engañar a un jubilado con el c"
+     "el botánico suma agua y cloacas en un sector que esperaba obras"
     ],
-    "ultimoChequeo": "2026-11-21T16:47:43.460Z",
-    "bandeja": [],
+    "ultimoChequeo": "2026-11-21T17:46:42.522Z",
+    "bandeja": [
+     {
+      "titulo": "Tras el violento temporal, EPEC logró restablecer la luz en toda la ciudad y continuará con las reparaciones",
+      "link": "https://eltiempodiario.com.ar/noticia/tras-el-violento-temporal-epec-logro-restablecer-la-luz-en-toda-la-ciudad-y-continuara-con-las-reparaciones/5611",
+      "fuente": "eltiempodiario"
+     },
+     {
+      "titulo": "Un interno murió tras manipular un alargue casero en la cárcel de Villa María",
+      "link": "https://www.eldiariodecarlospaz.com.ar/sucesos/2026/11/21/un-interno-murio-tras-manipular-un-alargue-casero-en-la-carcel-de-villa-maria-264891.html",
+      "fuente": "El Diario de Carlos Paz"
+     },
+     {
+      "titulo": "Enrique Gavier",
+      "link": "https://www.perfil.com/personas/justicia/enrique-gavier",
+      "fuente": "Perfil"
+     }
+    ],
     "entregas": {
      "fecha": "2026-11-21",
      "hechas": [
@@ -3420,7 +3436,7 @@
   },
   "noticias_ar": {
    "estado": "listo",
-   "corridas": 519,
+   "corridas": 520,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -3429,12 +3445,17 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-21T16:47:43.460Z",
+   "ultimaCorrida": "2026-11-21T17:46:42.522Z",
    "resumen": "📰 Argentina: economía y obra pública\n\n• Primera dama anuncia viviendas para Quibdó y el Baudó tras reunión con gobernadora (cwmas)\n  https://cwmas.com.co/nacion/2026/11/21/viviendas-choco-primera-dama-obras/\n• Aprueban ",
    "informe": "data/informes/noticias_ar/2026-11-21-1347.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "general levalle recibió fondos provinciales para iniciar la construcción de viviendas",
+     "qué implica que el riesgo país haya superado los 1.000 puntos y cuáles son las consecuenci",
+     "[novedad] presentación a el verdugo en el umbral: “rivera, por la vuelta”",
+     "las grandes mentiras que la argentina se cuenta sobre su economía: el nuevo libro de luis ",
+     "patricia bullrich respaldó el rumbo de milei, pero pidió mejorar la situación económica de",
      "primera dama anuncia viviendas para quibdó y el baudó tras reunión con gobernadora",
      "aprueban el rigi de ypf para exportar gnl por u$s50.750 millones y será la mayor inversión",
      "bonos del tesoro y el futuro incierto de la política de la fed: cómo impacta en argentina",
@@ -4029,15 +4050,36 @@
      "bausili habló de “destrucción creativa” y reformas económicas",
      "arauco vendió bosques a canadienses y dejó claro que en argentina la tierra está “regala” ",
      "allanamientos por presuntos fraudes en el coys: horas extras excesivas y maniobras con coo",
-     "llaryora anticipó menos obras nuevas para 2027, pero ratificó la finalización de la autopi",
-     "la pesca argentina rechazó la propuesta de sturzenegger: “las especies ya están en su máxi",
-     "un gigante de la maquinaria agrícola de brasil eligió a una empresa argentina para incorpo",
-     "así cambió el negocio de vender autos en la argentina: cuánto cayó el margen de ganancia y",
-     "el 60% de los jóvenes ganan salarios de miseria en la argentina de milei",
-     "esperanza es la tercera ciudad argentina con mayor superficie de construcción autorizada p"
+     "llaryora anticipó menos obras nuevas para 2027, pero ratificó la finalización de la autopi"
     ],
-    "ultimoChequeo": "2026-11-21T16:47:43.460Z",
-    "bandeja": [],
+    "ultimoChequeo": "2026-11-21T17:46:42.522Z",
+    "bandeja": [
+     {
+      "titulo": "General Levalle recibió fondos provinciales para iniciar la construcción de viviendas",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNY0FXR3ptekZBZ1ZjTTJKMkstRGdxWWN3OFBuNUlDek1pWHB2eF9IV0NLa09qMkd1ci1BTWlHQ01fa1BCcW1IR0ctdU1WWnpZcEFWRlh6X0ltM0ozWFdWazBFYjRsQ2dlUWpoa05SQ0J2ajdDOTFnTl96eER2NXhhdjliMlhKVW1HYkhqRXd1ZzhobjgzQ1VVOUc4WE1iVER0eFF5N3Rvc0NyZGVjS2I0ZTFIU1I2dGREU2dpanZOV29rUQ?oc=5",
+      "fuente": "Prensa Mercosur"
+     },
+     {
+      "titulo": "Qué implica que el riesgo país haya superado los 1.000 puntos y cuáles son las consecuencias para la economía argentina",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQZWdlS0dSa3ctWVRpVnRrQTBPdDU5OFdFVWY3Sl9LeVhLbUUySnJEeTFvb2ZObE8wbHJjSE1TY0JDbTQ4S3llQl82dGJZMGJidE1kUUtxQW1XZEh4aTM4cXJSRGw2UUUtWkxVa3g5dnRPYmxmVjI0QUlnQXBZZWNPUHFVeFB2WDBJRWRLNXprZWlnWnpicUR5Ti15aWh6TmhWdE1fWHktd0ktZlpEMnB4Q08yZFVNZGp5OXhyVl83Slg0MGs4c2t4QVU0eFR6bTM0S3dOZkN1ZmpYbUM2?oc=5",
+      "fuente": "Neuquen Post"
+     },
+     {
+      "titulo": "[Novedad] Presentación a El verdugo en el umbral: “Rivera, por la vuelta”",
+      "link": "https://www.laizquierdadiario.com/Novedad-Presentacion-a-El-verdugo-en-el-umbral-Rivera-por-la-vuelta",
+      "fuente": "La Izquierda Diario"
+     },
+     {
+      "titulo": "Las grandes mentiras que la Argentina se cuenta sobre su economía: el nuevo libro de Luis Secco",
+      "link": "https://eleconomista.com.ar/economia/las-grandes-mentiras-argentina-cuenta-sobre-su-economia-nuevo-libro-luis-secco-n99748",
+      "fuente": "El Economista"
+     },
+     {
+      "titulo": "Patricia Bullrich respaldó el rumbo de Milei, pero pidió mejorar la situación económica de los argentinos: \"Necesita un refuerzo\"",
+      "link": "https://www.msn.com/es-ar/noticias/other/patricia-bullrich-respald%C3%B3-el-rumbo-de-milei-pero-pidi%C3%B3-mejorar-la-situaci%C3%B3n-econ%C3%B3mica-de-los-argentinos-necesita-un-refuerzo/ar-AA2hGvVm",
+      "fuente": "A24 on MSN"
+     }
+    ],
     "entregas": {
      "fecha": "2026-11-21",
      "hechas": [
@@ -5562,7 +5604,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-19",
    "ultimaCorrida": "2026-11-19T15:51:17.013Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 2967 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 2995 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -5989,23 +6031,23 @@
    "memoria": {}
   },
   "clima": {
-   "estado": "falló",
-   "corridas": 241,
+   "estado": "listo",
+   "corridas": 242,
    "fallas": 30,
-   "fallasSeguidas": 1,
+   "fallasSeguidas": 0,
    "puntaje": null,
    "historial": [],
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-11-21T17:17:59.381Z",
-   "resumen": "Falló: fetch failed",
-   "informe": "data/informes/clima/2026-11-21-1156.md",
+   "ultimaCorrida": "2026-11-21T17:46:42.522Z",
+   "resumen": "⚠️ Cambió el pronóstico para la obra\n\n🌤️ Clima en Villa María, Córdoba\n• Hoy 21/11: 15° a 21° · lluvia 100% · viento 16 km/h\n• Mañana 22/11: 13° a 26° · lluvia 51% · viento 10 km/h\n• Pasado 23/11: 16° a 20° · lluvia 97%",
+   "informe": "data/informes/clima/2026-11-21-1446.md",
    "pausado": false,
    "memoria": {
-    "ultimoChequeo": "2026-11-21T14:56:34.290Z",
-    "ultimoAviso": "Hoy: 100% de lluvia (14.5 mm)|Pasado: 94% de lluvia (27.2 mm)",
+    "ultimoChequeo": "2026-11-21T17:46:42.522Z",
+    "ultimoAviso": "Hoy: 100% de lluvia (14.5 mm)|Pasado: 97% de lluvia (27.2 mm)",
     "resumenFecha": "2026-10-30",
     "autoReintento": "2026-11-16",
     "autoReintentos": 2
@@ -9784,7 +9826,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1024,
+   "corridas": 1025,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9793,7 +9835,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-21T17:17:59.381Z",
+   "ultimaCorrida": "2026-11-21T17:46:42.522Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9803,7 +9845,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-21T17:17:59.381Z",
+    "ultimoChequeo": "2026-11-21T17:46:42.522Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10116,16 +10158,16 @@
      },
      "2026-11-21": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       28,
-       28
+       29,
+       29
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       28,
-       28
+       29,
+       29
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       28,
-       28
+       29,
+       29
       ]
      }
     }
@@ -10520,7 +10562,7 @@
   },
   "mundo_economia": {
    "estado": "listo",
-   "corridas": 517,
+   "corridas": 518,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10529,12 +10571,21 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-21T16:47:43.460Z",
-   "resumen": "🌎 Mundo: economía\n\n• De Trump al Mundial 2026: las predicciones de The Economist que sí se cumplieron (Vanguardia MX)\n  https://vanguardia.com.mx/noticias/internacional/de-trump-al-mundial-2026-las-predicciones-de-the-e",
-   "informe": "data/informes/mundo_economia/2026-11-21-0827.md",
+   "ultimaCorrida": "2026-11-21T17:46:42.522Z",
+   "resumen": "🌎 Mundo: economía\n\n• El PIB de Japón se contrae de forma inesperada en el tercer trimestre por la debilidad del consumo de los hogares y las exportaciones (MarketScreener)\n  https://es.marketscreener.com/noticias/el-pib",
+   "informe": "data/informes/mundo_economia/2026-11-21-1446.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "fujimori y takaichi: dos líderes conservadoras estrechan lazos entre perú y japón",
+     "perú afianza alianza estratégica con japón con nueve acuerdos y us$3.500 millones para bli",
+     "keiko fujimori busca inversiones japonesas en perú y se reúne con poderoso gremio empresar",
+     "gorillaz, sheinbaum y alicia: las ‘antipatías’ de viajar a las ‘antípodas’.",
+     "cuánto cuestan los autos eléctricos tesla en la argentina vs otros países de la región, es",
+     "cumbre apec: avanzan los temas económicos más allá del encuentro entre xi, trump y putin",
+     "bruselas eleva dos décimas su previsión de crecimiento de españa este año, hasta el 2,6 %",
+     "el pib definitivo anualizado de japón cae un 0,1% en el tercer trimestre",
+     "la economía japonesa se contrajo un 0,1% anualizado entre julio y septiembre",
      "el cuarto actor del t-mec",
      "“es mucho más transparente y más seguro”: en cuba, las reformas económicas impulsan el com",
      "lula dice que el mundo entero sintió pavor cuando él perdió la primera vuelta presidencial",
@@ -11125,237 +11176,18 @@
      "migración y cárcel es: ¿modernidad o neofascismo?",
      "bruselas sitúa a españa a la cabeza del crecimiento en la ue, pero con más inflación",
      "‘la economía al servicio de las personas’: sheinbaum defiende el plan méxico ante empresar",
-     "colombia y japón impulsan acuerdo de asociación económica en tokio",
-     "la inflación mayorista en estados unidos alcanzó el 6,5% interanual, el nivel más alto des",
-     "xi jinping y sanae takaichi se dan la mano en la apec en medio de una relación gélida : in",
-     "poniendo los números a prueba: ¿gta 6 hará que los gamers falten al trabajo y afecten la e",
-     "ministro de trabajo destaca alianza con japón para impulsar la transferencia tecnológica",
-     "españa como puerta de entrada a europa: la apuesta de las empresas argentinas en un año en",
-     "informe privado: los préstamos personales en la argentina tienen la carga impositiva más a",
-     "amplia propuesta acompaña edición 47 del festival internacional del nuevo cine latinoameri",
-     "trump, putin y xi jinping se reúnen en china: ¿qué está en juego para el mundo?",
-     "trump, xi y putin se sientan en la cumbre apec de china a repartirse el mundo y al margen "
+     "colombia y japón impulsan acuerdo de asociación económica en tokio"
     ],
-    "bandeja": [
-     {
-      "titulo": "KEIKO FUJIMORI CONSOLIDA ACUERDOS COMERCIALES Y DIPLOMÁTICOS DURANTE LA CUMBRE APEC Y SU VIAJE A JAPÓN",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPOWFGc1l1enpoMHpXNTJnWktrbjItVF9lTFdWeGVnaXZ4bXhBbmRELWZ0dkd4bVFzS2hjdkZxVkNFeWFIVFZPUFRlLXV4bkIxVExTU2duLXFyUlpKLTUzQjZ4YXJLSGZWOWNRMmZmM2RNRVBIWmhjU1AwWU1KUy1CdXlzZXE2V25hV1ZoVWFfWVJDUXRkVExwcDlsWWpwWE54dFNRbmRjdmJSUmJyWVdpLVZOVjdKQnVQa1ZvSHNpbVJjVzhwcmc?oc=5",
-      "fuente": "RCR Peru"
-     },
-     {
-      "titulo": "Tito Olivo, economista, analiza Cumbre en China, Director de Primicias economía RD",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVlY3U2RpeVR2RnVGS3dFUUJWb3BXQlVDVmZ2US03RzQzTGFVTFdaOW5NMm1Va0tsSUVIRi13ZW9qZDVKMnBHU2Y1bmVZdnV2TTIwVnlyYlJtWHFMNGhxcGFZVWFvY0JaVHRFaGtteno0MUlqNF9zSWplNnNaZG9yNER5eHcxU3J4M0V3bjBUVDJXQUJ2eEhlRjZJQm9LbVljTHRDVTdPSUlDUQ?oc=5",
-      "fuente": "primicias.net"
-     },
-     {
-      "titulo": "Las ambiciones comerciales entre Pakistán y Rusia superan la realidad económica",
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOQ2VBdDlOZy02SE1pUG1nYzNUMzQwaHluTXVIVmJRaHMzeWM0czhOZFRpMkxhWmVJOFFva2ZvcktTSlFFSkstdEZKbWtSd2lKVHRsWEJYLXRXaDVrVUh0S3JzdDR4TXRydGcwVXZWRU5qZVF2Ql8zMWxnSG9rUVBsM3dIRnZaQkRlSG9vcFgwR3oxRFZQcEdfVVZ3bDVyeFdna1JIcUxBSzNwTTh2VVBBRHVia2xadnZCWFBBRldMMHBBWGt4R1Bad2lmUF9WYVMwOUNmdTBnX1I?oc=5",
-      "fuente": "Atalayar"
-     },
-     {
-      "titulo": "Cuáles son las consecuencias para la economía Argentina de un riesgo país de más de 1.000 puntos",
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQQ0lJSTBEbFdqU0lRTkx0Z0txMk1qZmtsVkR6Y3J3Wm1IYkZKTTFyel9HTGdtSG85Z2NFc1R1Y1RqSjFpSEhMTUIxZU9JRnU3SzdDdGRuT3JXVWtPNXV3LXZXTGZSZzBnSjlWN2JseFhoSDJIQ3gzZEhKcmNaLUhyNlMtT1lqcERjTENjQ29va1cwVUpjaTlld1dNZFJvS0dfRU1nTE9TWTlwWVpVenNtTlc2M2JSRml0bGxmcURCSkF5VlZ6MHFhQVlCcU1ZRmFtanowazBTUdIB8gFBVV95cUxOck8wOEp3Y3U5RmFvWXN2aWZBc3JQTTR4dkpVdjdOb1RVNmthSFFYRDlMdTZETGNvZ1FsekRVU2FJT1QwVTNUWUxqdE9XYzFXbjkxZnlyS01rWjBVaE5ONmhMV1BYdXFScDFfSUVVaUlPQkdIRHlDMnViYjNvWjFOU3JJYV9wNmdvaGtoSGhNek4ybUEteDJwMVdRLWFSTlAtZzRsMWc0bjI5QUhqUWFvN01CZXl3TTVzaV9Kckl2ZWJYUThhV3l5bnNDYzZQVEMtVWloRFV4Z3ZXdWJPUDYycC1LdjZDYTJ4Wm0xS3ZvSmF5UQ?oc=5",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "Brasil, Sudáfrica, India y China defienden los intereses de los países en desarrollo en la COP31",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQZlozbVllNm8wRUJrMlNqWkN5NEZrcktaZWdlclVodGhKZFJLaFhobDVkeXlFbC15WmxkR2cyelBRelBOQzQ0V0l3NEtCUWZlc2RWaFlYQmd3UkthZkN3ZFlzREIxNTdrZ2dYY0J4Y3h1SDJ6al9GYktwczJvZzdHOHdTb2s2MEM2eFBQU0paMFdQMWM1RzFnRE5hak9hb09SUnd4QTRfN3NoTTBwQXlqQVRBX1JMZWdqcjJ3cFlwQWNlSUZ4X0dCc1NqNG9Ga1NMZTJFd2QxV2VQWVFhS1gtSmR3b9IB4wFBVV95cUxQZlozbVllNm8wRUJrMlNqWkN5NEZrcktaZWdlclVodGhKZFJLaFhobDVkeXlFbC15WmxkR2cyelBRelBOQzQ0V0l3NEtCUWZlc2RWaFlYQmd3UkthZkN3ZFlzREIxNTdrZ2dYY0J4Y3h1SDJ6al9GYktwczJvZzdHOHdTb2s2MEM2eFBQU0paMFdQMWM1RzFnRE5hak9hb09SUnd4QTRfN3NoTTBwQXlqQVRBX1JMZWdqcjJ3cFlwQWNlSUZ4X0dCc1NqNG9Ga1NMZTJFd2QxV2VQWVFhS1gtSmR3bw?oc=5",
-      "fuente": "Visión 360"
-     },
-     {
-      "titulo": "China impulsa al sorgo brasileño: supera al maíz en precio y atrae nuevas siembras",
-      "link": "https://www.agrolatam.com/mercados-latam/china-impulsa-al-sorgo-brasileno-supera-al-maiz-en-precio-y-atrae-nuevas-siembras/",
-      "fuente": "agrolatam"
-     },
-     {
-      "titulo": "¿Qué países usan más la IA? ¿Qué posición y cuota ocupa España?",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBBYUh3c2t1a3JwUGM1VjVSTkNwazhXVnVTNXNlSnZZcTdVMEd5TTNUMEM4b3BmdHVsRHhEcFR1a1dORlBjMzJhd20xZGhPMnFLemRRSEdSOEh0YWJBWjNENnB3NHlRR3NUU1E?oc=5",
-      "fuente": "Bankinter"
-     },
-     {
-      "titulo": "México cobra más por aranceles con un cerco a productos chinos, pero Hacienda esperaba más",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNbFZfcThzaVc2cTFZMlZYRmtIMnV4TWFSOEVqVzNXaVA1YXhmcjhuMERtdWRQMWE3TWVRZFU5YzUtTVNRRUg2VG5BZEx1eWRwOVIta2UxRUQ3M2pMdnRSZUpJRXA1R0owU0hvcHpPaGZBYWF6TTlsOWo2eGVEazhaZGF5SGdhWjRXUldfT1JZSTRoMnlnLTlva1hTWHNUZWF40gGuAUFVX3lxTE1vQTFQdjBtU0JJNnRDNGtfVXM0cEpEalBnLUZwWE9lX1dZR3FkR3JzMEM1NE9CS01kRmF0aVlZTXFPNGFrRVJDQTc5ZW9FT2FZU05HVXNDMDZ3X1MyYXllUW1ZTXp0V194NHlxR1Z3MjU1c0JydVg2enVobjd6VE9iZFFNb180TnJIWlRKVEhDN1RNYXl0SS1ZMDRjNHc1QzNwUzEzVFY0QVhhM2NsUQ?oc=5",
-      "fuente": "Expansión"
-     },
-     {
-      "titulo": "Putin coloca a Asia-Pacífico en el centro de la economía global y cuestiona las sanciones energéticas contra Rusia",
-      "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQWm5taGRTWlF1a2lac3ZnVEh4SE53YndmMWpUcGZuaUJHSHVTYmpYcWRtV21vSGdCVVBoYkJvWnlvbXVSOFBObTlXaU0zSlZrRVR5OUQyMkRSbmwyeXVyUVhLdTJiajNIcF9iMm5WQmRsbEh0Wmc1Y1htbTYxLWpIaUNqNzZnZXRXMkh0R2tMVWpjNk0tSDZnbEdTNFFwTWZYMGVsZXE4VTI2OFhaYTFqQUo3b09NWVowd2hHcWYzNEJibHpCMmlJWDd5Y2hIMm1hYVFIekJHcEI2LXY2YnFWczlNZGNVdXRPdXE1d2JuVzhKRVpJ?oc=5",
-      "fuente": "Petróleo y Energía"
-     },
-     {
-      "titulo": "El economista explica el profundo impacto que el lanzamiento de GTA VI tendrá sobre la economía de los Estados Unidos de América",
-      "link": "https://www.sport.es/es/noticias/videojuegos/santiago-nino-becerra-experto-economia-136568018",
-      "fuente": "Sport"
-     },
-     {
-      "titulo": "Ilurco mira a Estados Unidos, Brasil y Oriente Medio en su plan de exportación",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOd3paTkZLWE5DaDJ5RDZJYW01NHVsaTVXWmhYblB2MlZhNDNIemR1NU95LXpMZDlPTm9pTlVLbldub1pKVXNGWFEtUGZDaHlUN0FsM0JNZjU1V2tsZnJHUjR2alpvM3JtZVdJdVpfdlpqckJjMnFDbEJOcGFPRXNTRzhlRnlwMi1OX3pjWnlyM3hQZTJOQTVDNjJIODQ4ckxmaXfSAacBQVVfeXFMT0pNNWN3RUpWTXNmV3RKdkNvV0lReWFzeFkxWE9FMnBfWGJadXpoWnpSRFJ4djdHbkFKR09pUXd6ak5EdlhGdkw1RFMxeGVOOFBqcmc3cDY4N0ttOXRrZW1nUXNuNFI4SThZUlBNbkJwWFNpM1RDeHR5dDNxdjJ2Y01aeXBIUUE5Q09JZ1h6VFpCWThoWU0yRDhJeHduY2RXZ0pEaXc0TmM?oc=5",
-      "fuente": "Ideal"
-     },
-     {
-      "titulo": "Mano dura y una economía debilitada: el balance agridulce de los primeros 100 días de Abelardo de la Espriella en Colombia",
-      "link": "https://news.google.com/rss/articles/CBMijAJBVV95cUxONlFYOHRfMnZZYkQ4anVCOHJGc2FtVVE4MndiSzBPWFhCUHVHaDRNbGR3Vm1yRXZDM0NOeG15VXY3ak5tazQ1MlQ3SUVhN1lwLTl6OU1mdzNGWENrcmRPNHQxSHZHQ3lTOG1FLWJEZ1B6WTdaanF5UDlTZXoyTzRwZ0F2bXlWcDRBVi1jLTExM3d1SVFZdDBpZlZwdTJEa3R5djVobmd3YTZ3TjB3SmtuTHBuTG1XcWp5VGt4MGpfVDltU2JFWGduSnktS2E2dGpzNW9NLW5GZGFVZ1g2aXpGTzdRVEVEcUt1b0t4MXM3Z08yVTdrNFl1N3RlZ3RwLTJUWkxRS2xnb0kwYWpT0gGSAkFVX3lxTFA0YUhPeWY0dkJYQVB0VFcyRWJHd1JBdUlOWmlnZXNtWmpGNkJrcWZ6Q2NQMVBMbmUxaDdVdkZQR2F3SUpDSlo5cTJXZXFVV25YU2ZKTFdkVEpWRXNmYmQzVDlnV0hfTE5hYjB2TEVwXzBDYWVDdDB3ZjVxbktTUklRQkFnYmlaRF9rTDVQblZNbHloQzM4NGZVT0ZHYUZOczZHbklYQm5OaWR1YmkzcEUxTC03OURRbTNOZFljdTBQUXhMdnpIcmNWdWF2c0FTNE1obVI1cXdiVzhyRzVSb01fZjl1SzhFNkQ5U2VZZ3RyNVozY3FfZWd2UF9qQk1KdGFDYkNFT3BpYlVITEZFY29PT2c?oc=5",
-      "fuente": "El Observador"
-     },
-     {
-      "titulo": "La empresa granadina que apunta a Estados Unidos, Brasil y Oriente Medio con sus depósitos de agua",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNUVRudTJMZXZ2c0hxVTFpMFJpcy1tY195TFJQWkdxSDZPVlZfY3kwZ0hFdFhIeUM1aHpNemEyZ2NjLXRoSHpmVjlxeUV2UjljaDN5WEpVRXd0eDN0dkRibXF5elRoR1hBdUlIQkViUFNRa3NoT0xoTTRDV3h6aUYwcjlXUkJBT0xUekRNdFZmVHgxVDQ2SWhjSUJYSVpkeVNZUGZqMFpTOGFpRm9PWUVUZlFGT002TU1aM0JlU3MxSHd2czdMRlJn0gHMAUFVX3lxTE9jalhVemtCeXBTamFTRGJYNW9qaGhOWndrZEk3VExVWFBOYUNVdWhYTHBTTXEyWXlhdE9zRmFwck9STmR3ZVlUc1R0eF9rWUtTLUVkYzA5aWF0OGNnUkxRZGYybjZHYk5QQnhIUnJBaTNVeWNSTVMwNVRfSVk0WlNhakR0YWdTbVphQXBaZDZ3ZGJSZ2JUTzFGM1lLbC1IcGZPc25BdGZlTHhGYnlyOFl3MDlsQ0VwMUZ5S280RjhWSnhod2VtcmtJTDdjQQ?oc=5",
-      "fuente": "Ideal"
-     },
-     {
-      "titulo": "Los tres socios en la dirección del mundo",
-      "link": "https://eldoce.tv/opinion/2026/11/21/los-tres-socios-en-la-direccion-del-mundo/",
-      "fuente": "ElDoce.tv"
-     },
-     {
-      "titulo": "Previsiones informativas semanales de Prensa Latina",
-      "link": "https://www.prensa-latina.cu/2026/11/21/previsiones-informativas-semanales-de-prensa-latina-87/",
-      "fuente": "Prensa Latina"
-     },
-     {
-      "titulo": "Estados Unidos dirige sanciones hacia el sector privado en Cuba, intensificando la presión económica sobre la isla.",
-      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQQzZHTXpqTUpwZFJLUlFCYnNJUG1tLXk2NVZUYWFnUzhDN2kwemNWTzZjbDNUdUw0cjNEZkJqM1p0cTU3eWlzT3NOSlpYWndTWENDNEVoT3ZZMWhuSDdYRFk0OEJvc0hVeW05S195Q2lVLTlaZ1FDdjFJQlQyYXRvTFRlLU15S09yZ0xHeFYtTktiUEU?oc=5",
-      "fuente": "El Congresista"
-     },
-     {
-      "titulo": "“Estamos trabajando con ella”: Trump anuncia posible cierre en negociaciones en el T-MEC con México https://mile.io/4zyvLUu",
-      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPdVFlSUk1UkdsdV9oY0R5WFc2WUxPMTlPUVJRSmpaM0tlZVlVMkhRaHZwcnl0d3U1VExYbW9MQnk1YUphelNNaUFlX3BGYTBmRHVfUXlTSjh2V1ExdU02Y0pzTTFqWGRfWjNoVGFGczVLMGdTUkt5ZS1UT0dsSjJ4d0xBMHdIRjRjNURNSVNLanpQUDNud2piTXNybVcwb0RTdG1WUzF1cXNXbENRUXRvZ0cwYXJwcVJhbG1OTm5HeXdtRjVVcW14OFFHaW9kRVlfbzdIbWY1YTRyczVT?oc=5",
-      "fuente": "Facebook"
-     },
-     {
-      "titulo": "Economía de Michoacán depende de los EU",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA0QkNFNWhaZmZrdUhFU0dLNzJ6aS1wVk96MHAybWNaMW5yOXBpcEFYN1FlWUpzdDF0TE10YkZacXpfbnVyM1dCM2xiOFVhdTVSbUVxQXdId2hVWmJmQW83SDJSNk1Qb0Q5M3lMNDZyRFo0dGFwcDZNYWZrMA?oc=5",
-      "fuente": "Periodismo digital"
-     },
-     {
-      "titulo": "Estados Unidos — Sol para el pueblo: la salida del callejón eléctrico",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbmU1N2EtUVNiWDQ3b054Rk55ZnA4dDJ2eklXT3Z3VThRY3ZzY3lIN2ZkM3dvWnNfWUg5bVd1S0xxNlRSXzAwYThzWE5oLTFGZndjdHpydFZFQnlWaGJ0aEliTTJxeUxhSnVETjJOZGNFaDk1U0FucVNsOVVNd2hhZS10V25WakxEbmRvNUdFZVBEQ09OckxBX1AtRndFLW12RmFBb0hNdEc?oc=5",
-      "fuente": "Prensa Mercosur"
-     },
-     {
-      "titulo": "El Real Madrid contempla reanudar los conciertos en el Santiago Bernabéu",
-      "link": "https://www.abc.com.py/deportes/futbol/internacional/2026/11/21/el-real-madrid-contempla-reanudar-los-conciertos-en-el-santiago-bernabeu/",
-      "fuente": "ABC Color"
-     },
-     {
-      "titulo": "El cuarto actor del T-MEC",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPalpCdFRwYi1FVUlDRFdXbHp4RnhyZzcxd3hKRFJMVGJQLWZodHhLei00N1hJZHlvMDVCdHc4ZHRBOVR4Ymx4MDNObk1oQ1pZcDV1NFhKMDJoTDMwVVY0eUItQzEzSG9ZRlFxYTg2OHFjbm1RSUs4SHZGUVd5a0RTMTkwcVkwUdIBiwFBVV95cUxNREwyTmRfQURLcjBzV2RGVFY4WXo1ZnNpOWdlSmluSEFZY0xPQ0pPcGZGZGllcExlajEteW81bFBXa3ZmUEJobEliM3htSjRBbW1Ca3dIdGRUQWdjTUpsZ0dEWWlkb0FPZ0swWDFBSnQ2RjZlak5zVlMxV0VMVUJ6Q2VfSXR4XzJ5b3Mw?oc=5",
-      "fuente": "El Economista"
-     },
-     {
-      "titulo": "“Es mucho más transparente y más seguro”: en Cuba, las reformas económicas impulsan el comercio",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNMk1vemxETldDV0Z4MlVfM1Y4TVhoa0NGU2tIYTVjRTdQbllfTlBmWENaU3dQMGRueV9BQTlLMC1MSWcyOWUybldSODNaX2E0em1kd3FIeHZiTXY0bEYwc0duWHpCUENlNnZBeTVUXzRBcVdBckhSTU5qQW1uRnhCT3lER0JXWmNFRTduRmE5c3QwSlR1eXVVemZPd01uWUtpcTE5WlZudFZLd1A3V0g1UFFoWlc3N2h6aGJfOFRwb2ZtNFYwQnc?oc=5",
-      "fuente": "Universidad de Chile"
-     },
-     {
-      "titulo": "Lula dice que el mundo entero sintió pavor cuando él perdió la primera vuelta presidencial en Brasil",
-      "link": "https://elcomercio.pe/mundo/latinoamerica/luiz-inacio-lula-da-silva-dice-que-el-mundo-entero-sintio-pavor-cuando-el-perdio-la-primera-vuelta-presidencial-en-brasil-flavio-bolsonaro-ultimas-noticia/",
-      "fuente": "El Comercio"
-     },
-     {
-      "titulo": "Un misil ruso impacta en Polonia mientras los aliados de Ucrania realizan ejercicios militares",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA5TTZ0TGVIS1FyWXptNndlNlVCLV9TenY1NS04Z1J3VjRJRjhmSXlHbkxpdGFzUVMyV0J1UzdCRVlmdmZGanh1SzJZNzQ2Z1k5Y0VoblctU3FHUVJK0gFiQVVfeXFMTjJqeHVRV05jWEtMUUpqN3BtbHhvbDZyOFZmZVZRLXE0eFJtMFMtc1VZUG0xT1RlYjQzdHBJMURTMlU3ekl4MC1lNUJwNXdWTEZQTENFblVxeDhLRUstNjNfdHc?oc=5",
-      "fuente": "BBC"
-     },
-     {
-      "titulo": "Putin afirma en la APEC 2026 que las sanciones occidentales han fracasado y presenta a Asia-Pacífico como el nuevo centro de la economía mundial",
-      "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxONy1aek4wbFZnSENWd3c3UzVvNENmZ1FBVlNQdUhjcVc5THJFT3psalMwT0d6ckNIMWdTTWZpOUxFX0JkMzdfNUtNMXIwaldPYXlNVHFVQkp0WVhjVExIXzVCSVpZaVdIN3BGWmRxaUZSWU4xcm1JN2F0SGxPVDVsdTVjWEx4T2FfdlBPLUxLMzUyd3pNaWRtM3FDREdJSmQwQmdnOGNJOUpWUjVWM1Nva3FHREw1Um5VUWRRaTRCM1RQYXRDSEFsR3lsYWtmZTMtemQ2X0hIQWxnM3RiaVVWSEFzb2xUaWkwanQ5X3phd05pWnVTcmNNUnkxTTlxUDNDcDlGNmJzSGMyZw?oc=5",
-      "fuente": "Noticia Zavaleta"
-     },
-     {
-      "titulo": "Trump y Xi se ven por tercera vez este año: dónde le gana EE. UU. a China en la economía y dónde no",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONUZZdVFlZWFQZk5aY1ZyZGRmd0pEWTNDNHlZWWM4RDlwT2VKU0xaaTF1MTZ1WUxndjY4QnR3SERKZ01lR1dMcEJSMFY4SkNIS2JpMjBoTWUzTmZjT1o4V0RPSksxNzNaSFBxWk9nLWF5WDBTcm1sOHhRUGYyNzdoLWJwdG4yaVhadVFHU1czV3phZlFPNTViM0p3cHBfSWxVZnc4OEp3?oc=5",
-      "fuente": "Revista Mercado"
-     },
-     {
-      "titulo": "China pasa del milagro al estancamiento y amenaza con cambiar la economía global",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNVWxHUUpFWGwyeTJ0U0l5OG9pd29HMDhKMUQzZDFJZXd3MXFfSVBvNWNHQW8wRDBSWU1IV1BaSUVSWmR0Q0dtbDVJUmU1MEstX3p3WlBqMFg3YXpGVnkyLTVxVzZlcEZlV3pOTDVzT1Etb0hWSkZXZXplRWxpakE1anJxWGhSZGxSd1BVQmE4MFpTMVZfd2N6OFhuOWVZZHJ4alVWRkZZbUE4cmdpd01SamNuYzfSAbQBQVVfeXFMTVVsR1FKRVhsMnkydFNJeThvaXdvRzA4SjFEM2QxSWV3dzFxX0lQbzVjR0FvMEQwUllNSFdQWklFUlpkdENHbWw1SVJlNTBLLV96d1pQajBYN2F6RlZ5Mi01cVc2ZXBGZVd6Tkw1c09RLW9IVkpGV2V6ZUVsaWpBNWpycVhoUmRsUndQVUJhODBaUzFWX3djejhYbjllWWRyeGpVVkZGWW1BOHJnaXdNUmpjbmM3?oc=5",
-      "fuente": "Pymes y Autonomos"
-     },
-     {
-      "titulo": "Putin no pudo conquistar Ucrania y ahora lleva la guerra al corazón de Europa",
-      "link": "https://eleconomista.com.ar/internacional/putin-pudo-conquistar-ucrania-ahora-lleva-guerra-corazon-europa-n99677",
-      "fuente": "El Economista"
-     },
-     {
-      "titulo": "La economía de Japón se estancó en el tercer trimestre por la inflación, el clima y la guerra en Irán",
-      "link": "https://santotome-online.com.ar/index.php/mundo/la-economia-de-japon-se-estanco-en-el-tercer-trimestre-por-la-inflacion-el-clima-y-la-guerra-en-iran",
-      "fuente": "Santo Tomé Online"
-     },
-     {
-      "titulo": "El PIB de Japón se contrae de forma inesperada en el tercer trimestre por la debilidad del consumo de los hogares y las exportaciones",
-      "link": "https://es.marketscreener.com/noticias/el-pib-de-jap-n-se-contrae-de-forma-inesperada-en-el-tercer-trimestre-por-la-debilidad-del-consumo-d-ce785ededf8cf127",
-      "fuente": "MarketScreener"
-     }
-    ],
+    "bandeja": [],
     "entregas": {
      "fecha": "2026-11-21",
      "hechas": [
-      "08:00"
+      "08:00",
+      "14:00"
      ]
     },
-    "ultimoChequeo": "2026-11-21T16:47:43.460Z",
+    "ultimoChequeo": "2026-11-21T17:46:42.522Z",
     "semana": [
-     {
-      "titulo": "‘No es tanto’: Sheinbaum minimiza acusaciones de dumping contra China previo a reunión con Xi Jinping",
-      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPc0hCVU50SVJFNHg1YjE0ZFRBYmNJeUZaQmJJRU5rOWg0djNISXk1M0luUlhtbVNqeUk4MWxBMGNVNjh3VVg5TmVJOTZVWnhCTU5EOFpoZFNDT3NvUWhsNDRGWS14a1VHYXJLZWVSajJNb0VMUU5VQVhjS3NLRDBNemVsdF9tbVZOZF9BM3ZNM01nV1M1VUFGd056YW5iWHN3ejZhRDE1LWJhYkl5YUJFYWoxV01yTFVGb1cwVW1XQ3p1LXpFa1pKVzBiSFZYOUdTaXQ0RXUxUDZfa0ZDM3k0cFIzTEpxdw?oc=5",
-      "fuente": "El Financiero",
-      "t": 1794589843533
-     },
-     {
-      "titulo": "Presencia de mandataria en APEC reafirmará vínculos de economía peruana con Asia-Pacífico",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNZTQwTE12bWhHbHI0Q3ZqWXc1ZGlEeHVqT1o4Y28zaFpzMjdWM0x6Vjd1aDdBeEVkOHlOM0Rid0JTaGJyU3o4RVZmTjhwYUZkcl9nMHQ5clpPbk0zMlNXR1VLQkVOdnI4X2xRVDZhRHlhNENlaVpjV2laN0RMZ2NfS1ltVWVmaTFGMmRwZThPRXg2Q2JrcUx5QmRqc1RCeEQ1V3dqaE4yWXBDNkMtbTh1T21VbnNtSEZLTXJVQk43bw?oc=5",
-      "fuente": "Agencia Andina",
-      "t": 1794589843533
-     },
-     {
-      "titulo": "Aranceles de Estados Unidos hacia México: ¿qué hay detrás de la más reciente amenaza de Donald Trump?",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxObWxKcVJLbHREZ3I3WWNxLXBtQ1hoVG9uQUdjNmU4MWo2NkZjc21lTzBleUJRYkZSX0NZZ0xjRV9YQWVLVnFtOUlXb1ktSHJvRk1sRTRocHdvUG9qREZjbTZ0VzNvakNnU2xlS0dkRm9qMm93RElhTTAtR0hPMXhGbnRwb1E2c2JOWkxneW82ekpVemtPTzNVd205VVQzVjUtZkxwY0xBTWJLTkZEdEFOb3QtdGk4bm1UOWdMbGVFMGtoeEROTmJDc3ZER0J1c0FqM0NSV1BRbkdOYjNwWl92bWRsa2kydDFwcFpkcmU5WHM?oc=5",
-      "fuente": "El Heraldo de México",
-      "t": 1794589843533
-     },
-     {
-      "titulo": "Japón y México acuerdan fortalecer comercio y cooperación energética rumbo a 2027",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPdy1kbUN3MmhMUWlpM0ZiTG9HRnFkWlY5emRjRmJEcWY5V1A4TW5uRTdTTnNnWUJDX0dQNG0tY1o5SEJyR1FWaWRQdEJZWHFzNWNrY1p0VGVXNllEenBCNzd2ZS1nUFRoaEpmbzEwaHlBRmlqMTZISWFaRnJhd01fLVY1c0dFQjJrcEpRaXpEZUhhOTJaNWZTSm1EMDlxWmc1WnFmVzN6bUdrTWJZZTVSZA?oc=5",
-      "fuente": "Alto Nivel",
-      "t": 1794589843533
-     },
-     {
-      "titulo": "Rusia adapta narrativas de desinformación para México y Europa, advierte Alexander Slivchuk",
-      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPQUplb0d3a2JVeHY2Zy0yRC1jNDRTbFB0aGVKV3pJbzJadldrNFg2NXZOc0pndjdNWnZwVm1Kc0FhZHIyQ2RNQkRZTmxSX0ZNZU5YYXc2MGxPOUZnQThDRjBQR1hXaHRnaGpaQmZYM0RzVnBmOEZlUDFuTDFILVB1ckJGRWpod1V6WGJ4eWttei1velBCTEkxc3U2TUJnMk9GeURqN3hhU25wdV90X1o4MkFmN0QwU2Y0MTEzUjZyaWNCdlVJeHN4alMtY2c0YnpNVTVOdlF5bVFkY09PTlJ2QkVDVERRUQ?oc=5",
-      "fuente": "El Heraldo de México",
-      "t": 1794589843533
-     },
-     {
-      "titulo": "Autoridades en Estados Unidos confiscan más de 1.200 millones de dólares por el presunto robo a Binance",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOUE5NN3o1T050YXhNX2JTa25wcHc4cnpWNlhVQ29QS1VnRkM1TURBazF6NDB6QnZteVZtbzVlS1BiZFc1VzUxYWNZdzUxamlSNExPdzVhZXVqLWg2dnhzQU5pZ216R2FHWWRNU2xMRHJaN0RwZG0xN2JNTVdwTU5tYXRWanZWclVVY1hNRVpPNi1EX3ItUVFPdjZkcjZtMkRza3ljNHFCalFMdHY2WDFkWEtoYlE5UU5CRG9DZ0V2TkRkT01uQ1AxYnFXMkI?oc=5",
-      "fuente": "Uruguay Al Día",
-      "t": 1794589843533
-     },
-     {
-      "titulo": "La inflación mayorista se desaceleró en EEUU, pero el mercado todavía espera dos subas de tasas al hilo",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOWVJFNjJQQ2NoeWx3SWpCVlc3NzV3QUpwSEtNUVo1MG9jWktsemNsZXNHbGRTVXBQRHV0elUzXzFfNUk5cWY3M25OOTBhUjljbzhKYTBfZGVVYmRZUVZHX19ydEFac2pGS2pZRXcwMm5pZEI0SW5OMEQ4QmhnS0dNTzFpZHlPT1gxSktCdTlva08wVnZ1VlNmLVJwUVUtN2xZSVA3NmxkR0lmeE1nQUYzeUdhMk90ZV9KeWhoYjB0Z3dsRkJrQi0zZFFpXzMtVENoTnQw0gHYAUFVX3lxTFBxSlEtQXN4WkdmZVdJMGJsZ1VhNGxReEY5NU5jQUtCU0Z2Uzd6OXZlNVRfOW5EZDRQUGhoTDFlOTgtVllyQnl3RHJ0Z0J2d1Y3aUJ3QXNBYkNWUDZLbTJBVFZ2ODdWOHoyM0E3OGZ6MDUzcV9QSFlNNHQ5endhT18wSDh2dmlEWVpxYWx4OTJDSFNyYW43XzdvM0ZpZGFMMFZJcXhwUThGYzI5MVFOTV9DUUg2cEhGanQxbkhVOG9zMXlfWFl2Z0JHM3VZZ28yQ2tNU1NNRlFQcg?oc=5",
-      "fuente": "Ambito",
-      "t": 1794589843533
-     },
-     {
-      "titulo": "Japón, China y Corea, aliados de empresas tecnológicas morelenses",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcTJsVkIwdlFwcHprR2ZQQy1jNkF3UFZlWE5sd09RT1RrR085VmkybmpoUjNrZjhJNmREQmQxUHFNSEt3dVJ0azBGQVNJN2dyRWY1SURibGRuc2RXdE5tUlVRRnVTYTJxMVJmNFNjcWxKWG5Ybk9PU2RQTG8yTFFkdmJ5N0NuLWV1THNDMHJpSTJvdTl3MGRtLTNzNV96b0xBNk81T3ZDTVA0MUlEUFh3SEh4U1AxVFBn?oc=5",
-      "fuente": "La Jornada Morelos",
-      "t": 1794589843533
-     },
-     {
-      "titulo": "¿Cómo serán las mañaneras de Claudia Sheinbaum desde China? Toma nota",
-      "link": "https://www.msn.com/es-us/noticias/otras/c%C3%B3mo-ser%C3%A1n-las-ma%C3%B1aneras-de-claudia-sheinbaum-desde-china-toma-nota/ar-AA2ho7ef",
-      "fuente": "Heraldo USA on MSN",
-      "t": 1794589843533
-     },
-     {
-      "titulo": "China juega a fondo en la era de la IA",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPdTJlTGg3cGM2TF9rM1BVejlfb005T004X014eEd4bElwNHBFTGt2TGF6WjlRM0FRZUgzTWoyYklzZ0o3YVo0d3p4NU1jNnZmbUN4VHdLdGNkbzcyaXFZMjlRVWtmTXlBNE1IcVBwSFhxZ1lwMXRNNTNPVzlhWDV6dFF4d3NZVGVxSHVkRE5R?oc=5",
-      "fuente": "Perfil",
-      "t": 1794589843533
-     },
      {
       "titulo": "Efecto China y “costo argentino”: referentes de la industria del acero elogian avances macro, pero alertan por el empleo y la competitividad",
       "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNZXIyOHZhek8yYy1aMExKNDl0WURTZXhEOVEzVllYaEU4QjdnaEViLUZFYWx4LW95YlNRZ1BITXRUcVZuSi1kY05MRTRrTThMdjNsbmZPUGxMclRZQ3owTDZDWE14RTFITnd5SW9hSUp5MDVXU2pmM2dfVE1DZmNNRFdIZHUyYUNuVVdERmJJYmxWbk1ZRDVmZTJPb2FZMi1ubkc3dDl0RXI3WDZEdEZSQjQ3b0ZzUXcwNlNneERDbWYwZDdVUkViV3VGbnhuTFd0R2dvZWpWeTI1NU5I?oc=5",
@@ -12735,13 +12567,73 @@
       "link": "https://elceo.com/negocios/microsoft-restablece-el-servicio-de-outlook-y-teams-tras-interrupcion-global/",
       "fuente": "EL CEO",
       "t": 1795260478745
+     },
+     {
+      "titulo": "El PIB de Japón se contrae de forma inesperada en el tercer trimestre por la debilidad del consumo de los hogares y las exportaciones",
+      "link": "https://es.marketscreener.com/noticias/el-pib-de-jap-n-se-contrae-de-forma-inesperada-en-el-tercer-trimestre-por-la-debilidad-del-consumo-d-ce785ededf8cf127",
+      "fuente": "MarketScreener",
+      "t": 1795283216732
+     },
+     {
+      "titulo": "Fujimori y Takaichi: dos líderes conservadoras estrechan lazos entre Perú y Japón",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSkdyY21zcjNYbG9lNXVMY1M4UFZKRHFpWVBQWEkteEJNbHZGVUNxY2xTWHBnSFIzUkI3Y0lGYnRJQ1BuaXRjLW5sRXVzZU5PSnVUUkljbTBTQXpSQmhlUlZLR2pMVjIzbUZnZUxxOEstZ2Y1VVBBN242ckhlZThRbjVSTjlOeWVFdGVSUjA2YVVOSVF1LXJCZ2dmaWsyUzZoQzQtUFN2T2kxaml3VmJwNW1LZnRJeHpMN3pud1U0SEk?oc=5",
+      "fuente": "NewsDigitales",
+      "t": 1795283216732
+     },
+     {
+      "titulo": "Perú afianza alianza estratégica con Japón con nueve acuerdos y US$3.500 millones para blindar su economía e impulsar inversiones",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPNnlfYW9ZTjFULXlUTUYxdTlVZHZPaTFJZUgxMGcwd2JmMVpJQldlTF9DQnB4UXNIbzNjbUxNd1dVdDRXSVFEVW1ZelBobklIZGxoZ3ZKdkZFRnRIdk1DYTlXTzFFTmpIeERQTUExSGlTdnV2VlVBZjlHMjVOd1ZWR1JKTk5wRVE2YTI4S3ZwWmtJTnJOSUxzcmEwQnc1MXh2YTJldTMxWWxuZWM2OWU0NFlGOW1QSmFWT0hEOFl5TXk2QUdGZ0tpN01XVmpKamxpVW94eUZfTWJJNEM2aUVCdGJxWF82eGR5cUJkQXRqWW8?oc=5",
+      "fuente": "ICNDiario",
+      "t": 1795283216732
+     },
+     {
+      "titulo": "Keiko Fujimori busca inversiones japonesas en Perú y se reúne con poderoso gremio empresarial de Japón",
+      "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNZGtiamdDLVlXWUVZbW9wLWtLOTM0c2NWX1BOV3hRZndvc1MxTjVuQmNnYXBZbDBRMGxJUm04OWtFSDJnbEhEYTdGZFBSZ2dKYklqTFV1Z3g3YnFvMjBGdzg5dDloRFNRVm9JMWp5aDlNMFBNUDV5UFlhaTRNMjk5aVpVRmlwTnlfU2g5bnM5MmU1aGxLZDVWTU1yNmRFRm9QTnlBM3o5a2kwUFpNNGRyMm91a0l2QUs0eGxLd2s1ejNSaEpXRXR6V2c3T2hiWlEyM21fVzJoMFhvNHpURDVKZXVNejhzN05uUjh5NnRQbG85bGF3U21xLS1CTktMTTg4V0E0T2F0aEo2S3YzMDBGcw?oc=5",
+      "fuente": "Expreso",
+      "t": 1795283216732
+     },
+     {
+      "titulo": "Gorillaz, Sheinbaum y Alicia: las ‘antipatías’ de viajar a las ‘antípodas’.",
+      "link": "https://www.sdpnoticias.com/opinion/gorillaz-sheinbaum-y-alicia-las-antipatias-de-viajar-a-las-antipodas/",
+      "fuente": "sdpnoticias",
+      "t": 1795283216732
+     },
+     {
+      "titulo": "Cuánto cuestan los autos eléctricos Tesla en la Argentina vs otros países de la región, Estados Unidos, China y Europa",
+      "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQQkxEaFpiaGZxblFZaDBnRVZ1NlBpMGZmcU5VeUNFM2RtYjV5ZGwyOVNkdXVzVHBMV1NrTjRvSkVuY3M0Z0FrbWF6WWpoU3dySlBRS2ZqbGcwVjhFRko5Z3l5OHQwZEdNOWNwaElGNkQtSENkcU1INEVpNjRLeVNGUXNGRC05X3NGWEE5RzVUN2JwY2R5ZmN1RzNaSnJGNzZCejM5NC1LSHA1MkdMWkVFN1hSTTdyZk00Y0JkVUNVdDRZUWltd3hSMzhqOW96OXhTb3c5bGNCOHp2VkZzOURmNU56Yy0tckV3MUJRSkxSaUIzYU3SAY4CQVVfeXFMUGV5cFFsWlEtdjRadW8zS24wMGEzbjI2RkpPTHM1MUdvVGFaTWcyMVlfaG1TMW9PZlNIbnB3X2Vva3FyZ2dHbnUyVFpKRWlZNjcyUlR4ZW80dEM5al9ZNU5TRmFHNUJ2dmtzeUQ2WGVUWVd0aDlpWDZscTRXN1UyRWZNZ3hvcWJsWUR0ZG5oLTE4N0VVTUdJNEgxbE1TQXpxREtQRWZrVm1vNC1OZjE1aHdXdU94M1hzcjA5aGdyNDl5MTlLVmMzN3hER1hHakVDN0Y1RlRhNnFTcXBKc1lBSE04THhUMmdNalgwMG1nRVRkN0haaVp0a1pjZEVaU1pMUUFGQ0JEdUdNc3dPbEhB?oc=5",
+      "fuente": "Infobae",
+      "t": 1795283216732
+     },
+     {
+      "titulo": "Cumbre APEC: avanzan los temas económicos más allá del encuentro entre Xi, Trump y Putin",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNY01lZnlYQlVsRkZHV1pMcFlJWUZickprM0VEREFIYmozTVRvdW9ZMlhGSEQ4R0ljVnFNMlVMTk4zbE9nX080MndubE1EMDMwMENBM1BNbzZRRmtNenFGWnc1cmpUcExXMkREMVk2cUloeVlsYlhEOHZtckFTQW82SUgtSk44N0hZd1ZJNkhhdDZPaDE2TVdJdGFHQQ?oc=5",
+      "fuente": "France 24",
+      "t": 1795283216732
+     },
+     {
+      "titulo": "Bruselas eleva dos décimas su previsión de crecimiento de España este año, hasta el 2,6 %",
+      "link": "https://www.heraldo.es/noticias/economia/2026/11/17/bruselas-eleva-prevision-crecimiento-espana-2026-2069330.html",
+      "fuente": "Heraldo de Aragón",
+      "t": 1795283216732
+     },
+     {
+      "titulo": "El PIB definitivo anualizado de Japón cae un 0,1% en el tercer trimestre",
+      "link": "https://es.marketscreener.com/noticias/el-pib-definitivo-anualizado-de-jap-n-cae-un-0-1-en-el-tercer-trimestre-ce785ededf8dff20",
+      "fuente": "MarketScreener",
+      "t": 1795283216732
+     },
+     {
+      "titulo": "La economía japonesa se contrajo un 0,1% anualizado entre julio y septiembre",
+      "link": "https://es.marketscreener.com/noticias/la-econom-a-japonesa-se-contrajo-un-0-1-anualizado-entre-julio-y-septiembre-ce785ededf8df527",
+      "fuente": "MarketScreener",
+      "t": 1795283216732
      }
     ]
    }
   },
   "mundo_tecnologia": {
    "estado": "listo",
-   "corridas": 517,
+   "corridas": 518,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12750,12 +12642,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-21T16:47:43.460Z",
-   "resumen": "🌎 Mundo: tecnología\n\n• Matías Armani: \"Más de la mitad de las pymes no quiere saber el costo real de sus productos\" (Los Andes)\n  https://news.google.com/rss/articles/CBMixAFBVV95cUxQTjR5U3JBQjQzVU9mVDcxMDdEcnlWelVjSWt2",
-   "informe": "data/informes/mundo_tecnologia/2026-11-21-0827.md",
+   "ultimaCorrida": "2026-11-21T17:46:42.522Z",
+   "resumen": "🌎 Mundo: tecnología\n\n• Fujimori y Takaichi: dos líderes conservadoras estrechan lazos entre Perú y Japón (NewsDigitales)\n  https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSkdyY21zcjNYbG9lNXVMY1M4UFZKRHFpWVBQWEkteEJ",
+   "informe": "data/informes/mundo_tecnologia/2026-11-21-1446.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "fujimori y takaichi: dos líderes conservadoras estrechan lazos entre perú y japón",
+     "gia lai: aplicación de la tecnología para mejorar el valor de los productos agrícolas loca",
+     "chileweek china 2026 impulsa exportaciones tecnológicas y agroalimentarias",
+     "los smartphones de corea del norte parecen normales, pero censuran hasta lo que escribes",
+     "alerta nacional en corea del sur para detectar a estudiantes que ocultan teléfonos",
+     "la segunda serie más seguida del automovilismo entra en la casa de la fórmula 1",
+     "dientes revelan que el homo erectus vivía en selvas de china",
+     "trump amenaza con castigar a las empresas que construyan centros de datos fuera de estados",
+     "el papa león xiv advierte sobre el 'enorme riesgo para la humanidad' que representa el des",
+     "actualización de noticias médicas del 21 de noviembre: dando forma al futuro de la cirugía",
      "dos marcas se quedan con 66 de cada 100 celulares despachados en europa",
      "proyecto europeo liderado por el citic de la universidade da coruña impulsa nueva generaci",
      "málaga techpark reivindica en bruselas el papel de los parques tecnológicos",
@@ -13345,238 +13247,18 @@
      "claudia sheinbaum confirma meganoticia feliz para el imss y el issste tras acuerdo con chi",
      "trump llegó a china y lo recibió xi jinping antes de la cumbre con putin",
      "apec: por qué la histórica cumbre entre trump, putin y xi preocupa a europa y qué puede si",
-     "corea del sur adelanta cuatro años su \"día q\" y comienza su migración a la criptografía po",
-     "¿inteligencia artificial y robots en hospitales mexicanos? sheinbaum busca traer tecnologí",
-     "trump rechazó cualquier regulación de la inteligencia artificial y defendió su desarrollo ",
-     "corea del sur y la lección del desarrollo",
-     "obsolescencia, complejidad e ia, el cóctel detrás de ola de fallas en estados unidos",
-     "tres potencias, tres intereses y un mundo en tensión: las claves de la cumbre de trump, xi",
-     "estados unidos anuncia un histórico acuerdo para restablecer la cooperación militar con ve",
-     "china: shenzhen exhibe su tecnología de robots humanoides en la apec.",
-     "nvidia suspende el envío a china de chips de ia autorizados por estados unidos",
-     "milenio. . 🔴🇺🇸 en menos de una semana, fallas tecnológicas han afectado vuelos, bancos ",
-     "¿por qué es histórica la reunión que tendrán putin, trump y xi jinping? puntos claves"
+     "corea del sur adelanta cuatro años su \"día q\" y comienza su migración a la criptografía po"
     ],
-    "bandeja": [
-     {
-      "titulo": "Microsoft: 50 años de una marca que marcó el mundo",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNM0FnZ0xyTVpnTUZIUTFUNUU2cXdsb3k0QVFTRkVkU3dUdUhCTllLS1F4S214SzlnY1Q1UXlMR0Qzek9uYTZ3ekFDa3dGUmg0cjNwN2kxTE9DVno5aGdPMXZJSWJkeFJnV19ZcWVxV1JZQVBzZUVMUE5sWXpjOTc1UzA4MjN5WVYwd0FCMQ?oc=5",
-      "fuente": "UDG TV"
-     },
-     {
-      "titulo": "España impulsa nuevos programas de defensa mientras la UE reclama acelerar la incorporación tecnológica",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNNTA4QmNUZkF5cnZ3VThhallPYmNvdHhpMWI0SEd6SFlNQW9CcUxWVmRlLXJUYW04dGFlQi0ya01CWFliOU1qTnJSZVViOURCRnQwR195Mmcxc193dkNvWm83T0ZxQU9sVUJoQzVOb3Y3a0x2STNnVE9keUphWkhxVGVJbFlqT1dDSXZCNkJCTjM4a3dRNWN1eFBVSUNTZUc2b0U2ZTZGU2Y0TF9VS1E?oc=5",
-      "fuente": "El Confidencial"
-     },
-     {
-      "titulo": "El Nikkei 225 y el Kospi se hunden más de un 5% por el desplome de los valores tecnológicos",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9MakNQOXRhejJuc19MbG1RT3dIZlpOcFRUdWItMEprYWtFTDFaX2x2c3lONnUwcjJ5dUgwa3JUcXZidnRQa2Q2YmY5VDJFNll5bDRKRllSQTlMTUxvd0pfb1hKZ2kzV03SAWxBVV95cUxQNThHeHVFNGp4a0JtajFiYzJ1RGhqeG1LSHdXWlZZeWZxcmtMVHh1OFpsOXdCanFxX19DWldxODF5amprZGJ1cjZMdjgtUkZsTkcyVU90ek5pRVRaMUQ1c0d5VDdPbUxDLUJOdVM?oc=5",
-      "fuente": "El Boletín"
-     },
-     {
-      "titulo": "China, la APEC y el poder tecnológico en América Latina",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdVZnb0FlaVowTzFBMkFwUExsa1JKbjJJVWRSLWpwZlBzenVVNFlfc1ZWVFdmNXAyUlk0bUNDWG9nMkFWWEZyb25kTW5PY3lia2owbnNFM2I4aFhqZWZhQTM2S1VnMmFqaFJzWUZUMVlDUWZRSXFzUVdISDV0bkMxQWVzRmJxSmF1YThtQlBwLTNWa3pZRFFsU1JEZE5ha3lGMTFBbE55dVhidHMyMzBCUmtwd2VMQ1k4?oc=5",
-      "fuente": "El Heraldo de México"
-     },
-     {
-      "titulo": "Embajada de Estados Unidos entrega equipo tecnológico para tres áreas de DoctorSV",
-      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPc255bUJJd3prTVF6dmZMQWxWQVU5YnJnWlZMdUhEdFotTFhWWng0ZnRDTHdnWEJ4OUp2b0w5RzF0bkVfWlNjem1qbzZqWlpNMERrSk1yZFUwTS1QSGJ3anlZSFRZNDkzX3BqOXdIdHYzWThuRmpVeHNGOHgxQl90dC1MZE4wOEdLSi1GeGNieE5SSlhMdFZ1N2ZaQnhQXzJ1NEktVGNrNXgzSWpSOFhBWUdLZS1oQVpnMkRhNzlPcVludmlHWlEtZms5Y09sLUxVVGxmU1p0clhsZk0?oc=5",
-      "fuente": "La Prensa Gráfica"
-     },
-     {
-      "titulo": "La UNLP se une a China para desarrollar robots más inteligentes",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOcWl1MElLTkpxblhMTUI2Z2l6Q3V5UWQzbHcxOWJSbHJ3RjZCRlBETW9oU1BDSW5YY3J6S0FJdTNlNmF6WmtiM1VQQ3RtT1V0TGtvU1c5V3I2dW1oNjVTZWxmT0p0M2JRZUhmejk3WlFMR2VEYzduLWhjbTY3UHRIOFRzQ1VYMGdacHdGY0ZQRTctNkI5eWpiV3lzSzgxdUhSeVJV?oc=5",
-      "fuente": "Punto Capital Noticias"
-     },
-     {
-      "titulo": "Sheinbaum visita hospital inteligente en China; busca acercar tecnología médica a México",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWHc2bjRxMldyTGFMa0JtLUlJZ0tYanYyTGlNZWt2aEl4MVJqVnVNTzBlNE1nWVF4RmZlYV80RUp5RDMzZ0pVVUVsckEtQ3dMaGRBWF9fX2tONHhsd1Q2MzRZT2tMRXBpaXFGQW1FX0MzZm15ZWtjZ1lyTFFjT3cwbUVLVWR1LXVYd2dpUTdzNDlJNElZTWV0TnVGSFFhWGQwRFJrY0RSQmhqc1V3YVR1NzNjZHZzN2pyVjZvWUthT21YSHF4YlBrNg?oc=5",
-      "fuente": "Revista Fortuna"
-     },
-     {
-      "titulo": "México busca incorporar inteligencia artificial y tecnología hospitalaria mediante cooperación con China",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNWDVaOXBKN2lTT3NHWE1ISXR0Wkt1T1dsTnF6UjNBZ0Nnb3hKcFpvcDN6V0pJQVhyalFFR2dLNTdCTTl6UHRIblduZ3pSNzBBa2FWbHFSc2xhVHZrVTVQTzFsMk9ETzhyTld5TktsczFWMDdEWjdwbVFDUWNxdGVQTUhPLVZkM3FWRnEwbktNbWx1TmMwRG83MWZXd2k5S1FodmxZYkpMUksxOEtZTU9objRrNm5IOTFtSmJMSmdINmxnZw?oc=5",
-      "fuente": "CódigoF"
-     },
-     {
-      "titulo": "Un ciudadano ruso fue imputado por la presunta vigilancia de empleados de una empresa tecnológica de Estados Unidos",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVmw0Z3ZGUUVlRzAyTUdZZWJOLUNRVEtobTkzQ3Y2c3g3UTZFckVHLXpBV0xQekp4OEFqNHU0b2hQOWE1NTVndnVhS2VlTTV5elM3ckdlN0k3MGVmcmNtN3p4OEg1NDVFVFVnd1B1c3BabURON3ZzX1M3dE9BR19fdUluZFBHVE5ac3VvZFJuNmFrZVlCNV9B?oc=5",
-      "fuente": "Mezha.net"
-     },
-     {
-      "titulo": "Estados Unidos descartó un ciberataque detrás de las recientes fallas tecnológicas",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNcEk2VWxnOEpVM01mX3FCaUtsWU5seGo4TGZrN2lTVFhBcGUtTi1nZ1FQMUtvYlA2ZUFKbFBObFFWMWtZbC1IRDhNZ0MwNHNvaEIxSVoxaDlWcVZ2OUVUVDZqaTlfWllrMDY1NVZWYk9zQXdKa2lmR2lBOFJtNW5MSDJEUlJ2RGFGTFEtTG9xZ0k5NVF5NXZnUG9yMl9hYTNCLXBzY3ZSTDlDMUY5eGVpM3dJWXhCdThnUWRCVG5UM2duT2N0eUNEcURmMXRMQ3JuU2dR?oc=5",
-      "fuente": "Diario Digital Conclusión"
-     },
-     {
-      "titulo": "Japón e India acuerdan ejercicios militares con fuego real y transferencia de tecnología naval avanzada",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUTJ4NTdhdXktZ1pTaFVuQURoaW9oMTVBeVBIZ0h0SGgxZzhmVVFaVWQ1eFFMWHdTUXdSeVNsSUpsWXNUbTl5NE1GeVRWd1JYdzJVelM1a05OcnBNMVIza1NFNTQxNEdQY2kxMXhYcy1fM1RVTmRKek5zbl90b3Utak52ekN4Wmx4TlR5bVBqeXlic1FoR2Q3SjRSZDY2Rk0zMEE2RjAwYkhEbjYwX2NDVA?oc=5",
-      "fuente": "IFM Noticias"
-     },
-     {
-      "titulo": "El disco queda girando a la vista y eso es solo el principio",
-      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5zTk5ROVkwZkpGQ3lfNkN4WW03Wk5uTGd1aG1lZFBoYXVOM29BSFB2amRTbDlwYzlJWkZJb09hNlQ3MmtSS1o0ckJ2OWNFRnBlSVIxdlNOUEZmLXJsQUhvNzFlVjJXSFdINFNTdmJaeVlMcnh3d2o4VDA1R3JfUQ?oc=5",
-      "fuente": "Tecnología Geek"
-     },
-     {
-      "titulo": "Nueve de cada cien celulares menos en la calle y Apple con más de la mitad del mercado estadounidense",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5QZklEOGlGVFZGSElGMjVSOU1YZXVTN1NMdzNYbnh6YnVfcE53Y0FQM2Npc1hmNldibG1Gc2NpYUg4R2lUVENKSnVibHFoc3JudW9LeURUYV8zb2hVbjlZVWtnTVRvRVkxd3JXTnIzaw?oc=5",
-      "fuente": "Tecnología Geek"
-     },
-     {
-      "titulo": "El éxito de la primera misión europea al planeta más inexplorado del sistema solar depende de una pieza vasca",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPeU5ybk44a1RSVFVzRFpBWTJYTFcwbDkwYnRiSTZIOF8tRDFpRTRhZy1QazI4bTFUNXF6ZXN3Y1pUX1BENThQbE5ZcFJ0RC1Vcm9TVk9mTVhCOF85OU9iNVozUEdJVk1td0h1LUphbWFKTFE1eGNQSnZWaEVYLUVMSXhheGV2MjBWeVRBVm9vNzdXWTBoVG9Ock92TnlqbjJndWhrbUEwYWdSWnRYRDlFdy1rd1RWUVlIZHlmVkF2WjIwMzNHSEFuTGNDaHhUdTBUZHRjQ0RR?oc=5",
-      "fuente": "El Confidencial"
-     },
-     {
-      "titulo": "EEUU afirma que narcotráfico marítimo cayó más del 95 % y destaca cooperación con México",
-      "link": "https://www.latribuna.hn/2026/11/21/eeuu-afirma-que-narcotrafico-maritimo-cayo-mas-del-95-y-destaca-cooperacion-con-mexico/",
-      "fuente": "La Tribuna"
-     },
-     {
-      "titulo": "Estados Unidos echó al jefe de Ciberseguridad tras diversos fallos tecnológicos",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNRkU4MWZFbkV3Zi1MNjFxeDk2Ry10UGhrcHJnVGY0X2FxUTBkZWxrbEJIZlk0UVpDT1JSdy11ZE9SRTBtOGdiUXFjbmUtaElheWxaeFVVRTFqR0RodlFmVVc2Z003cUphb3Zwc3JKOENvTDZPRnFmUmdOM3NRdWJOT3VjQ1A0QmNNa1A1OWVyTFVKTGlhYUMzY0dxeFlnMHhjWTRXOUxId2lHczdtM0hxWjNzUUdsRWlpTHdrdzN30gG-AUFVX3lxTE1GRTgxZkVuRXdmLUw2MXF4OTZHLXRQaGtwcmdUZjRfYXFRMGRlbGtsQkhmWTRRWkNPUlJ3LXVkT1JFMG04Z2JRcWNuZS1oSWF5bFp4VVVFMWpHRGh2UWZVVzZnTTdxSmFvdnBzcko4Q29MNk9GcWZSZ04zc1F1Yk5PdWNDUDRCY01rUDU5ZXJMVUpMaWFhQzNjR3F4WWcweGNZNFc5TEh3aUdzN20zSHFaM3NRR2xFaWlMd2t3M3c?oc=5",
-      "fuente": "Crónica"
-     },
-     {
-      "titulo": "Estados Unidos descartó que los cortes tecnológicos recientes estén relacionados con ciberataques",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOZ1EteHlVVVJtdTZ5TnBoejd5MDJERnZkMDJPbjdQcEVQSjFrSE9TWGJoVEg5RTd4c3N4MkIteloyNlN3dnVtNG5iQTZQZ0N0NFhWaUQ4cnBsZDFFa1kySjg2VnpXWDNBam0zUWdpWDV6bmZmcmEzZGIzSGNZbjl3aHdtNlBZY19QMGJvZjJ0ZS03YWx1Si1sOHZ6QkNFMXNMdUM4dWQ3Mk5wZFVRdV9MakdGNHBaVEs2M1MtV1ktZjhSOVFQaUtYZ1VBZw?oc=5",
-      "fuente": "La Reforma, General Pico"
-     },
-     {
-      "titulo": "FBI acusa a ruso de espiar a empresa tecnológica de EE. UU.; habría cruzado la frontera de México con ayuda de coyotes",
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOV0pSaHJJLUo1TFk2TGFYRlQ4RzlKczdJdkhGQnFHWVVSWkZiTFM5X09zOXNpVklMeGpyRzQ4MlNCTnFmc3NTbjNSdmh3T25LMTdWSnpfNlRWRjh1NGdpa1RwYlI1MDNEN1I0S0pVZzRzTm8xV0MzYmwzSUdNZGxjOU9WZVJXaE51b3pDbmdEcm15WjdEaWdfemJJTDByVkZTN19QZ3J0eWFQenhpSnZrV1BZd3NRdUpGa2VmSWtHcWg4NXRIZlI4Ml9NN0pkOV82SjRsQ0xNUG5XdDFyRmFTbXZsNW1vWEU?oc=5",
-      "fuente": "UnoTV"
-     },
-     {
-      "titulo": "Sheinbaum busca replicar en México tecnología médica y de IA china",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQWZrQ19YZDhNeG9YLTl0dDJPQTZtSEVyVjVSall0RXhrOTg5VEpoT1ZLc2lhM0l4QXRTbVhPaTlFWWpraXFKT3RzQXVpaXNmdmc1QzBYMlNEdHZOcjA4NXYzRW5QT3lfYnZGQk1fSksza0haa3pfSDkyZmM4TzZDUnluQWZ2V295Z1p6bThDWEl4TkZrUUpWZkNROGZIa1VGelRWWTY5LUJYbWM?oc=5",
-      "fuente": "China en las Américas"
-     },
-     {
-      "titulo": "La Policía del Neuquén actualiza su infraestructura de comunicaciones con tecnología europea",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQc2dmcDhLQ0V0MU82NFFoaFBVYndlMGFOVEtScF9zYmV3RW92YmVXLWdxQ1dtT3dLT0VpYXItTnhrR3lIUXo2R25kM09OYm9wLVZNcmRLcXpNdWh3akltbDFBMFFibWVTN0ZnWmFLenZEOHBtaHo5ZVdtald6TVJvVnVTSTFoa01BUl9DU0VEa2YyUGlJSlBobTNZbnFLV0RmNkttMFRXS3VvMm1IMjNLR2wtbFI2andJVnlhdm5IdW81MEl6emFOSEcxRXdBUzZrcExGQmFB?oc=5",
-      "fuente": "Cutral Co al Instante"
-     },
-     {
-      "titulo": "Dos marcas se quedan con 66 de cada 100 celulares despachados en Europa",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE43Yl80aFBZSlcyVkU4RVU3UmF1b2tTSmJrRlQwQVloOV81aEhubHVHdHFjb3FBdURyMWpadnJxZHVUOHlzOFJudlc3c0R6QllrOVZ1RUJHVlFqOERHR2FlRjNCZWUtalJvRnZGU3pnTmtOc1ZJaUoxYUtKYWs?oc=5",
-      "fuente": "Tecnología Geek"
-     },
-     {
-      "titulo": "Proyecto europeo liderado por el CITIC de la Universidade da Coruña impulsa nueva generación de robots capaces de aprender",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOSnRrX2I0U0FXRkZVaVZObTNjV1p0ek4xbXZoYk9LY1dZeU5qeUVwMVFyb3NIR3hTUjFLcDhQNlZ1RVdrS0h0WUNRbFlBQVFWZERBVnQtN3ZzLTNuaEI0cjJFcjFYZGtiSXBrNVBLeW1zR21WODRyOHptR0ZCbFFTY0hjRjgwRjhUeGxQeWN4OHBFWFQzZkR1cXpBUVhycF96QmdxU3FJYnVMZnBlU1kyd0ZYUnhSd0dNNUg1Y0FOdTUzQjhnaDNIaUVCaHNZT3NER2tRUGExcFFaSmJuTWFqQklOU0MwaHJvdEJvYQ?oc=5",
-      "fuente": "La Web de la Salud"
-     },
-     {
-      "titulo": "Málaga TechPark reivindica en Bruselas el papel de los parques tecnológicos",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQLUVEbUdTSjBUQVgyQ1NGRTFQUTdJVEpYYUdVWnc5cUIta1JzZHRaUlZGb0w0UnV2RHdBSVlkZGZjUVNLZzl2SVU3RFRscE9ESWlJcEtyLVJXZFU2c3MzQ3hDOFZXY1pMa0EtNk5NX2FMOFBUc0t3T0tyek80UlB3NE1GZnU4WHZx?oc=5",
-      "fuente": "Vidaeconómica"
-     },
-     {
-      "titulo": "El proyecto de IA soberana de Japón se encarece 5.000 millones por los chips y el yen débil",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNbmR2dEF0UF9rRnRzZzZUUEoxVV91UmVUT0l5anVJQ0VzM1NlbV9MSnl3ZEVidzNidWJHSEc1alpsOGpGSk1wYkRsZzFMaVFkWThTc3RUWTdMeWpqRnVUWmRpXzM4YURzQk1aRmxNNVMtazBqSzJMMEl4a3N0eWFEMDRB?oc=5",
-      "fuente": "Merca2.es"
-     },
-     {
-      "titulo": "China «Podrían aprovechar la tecnología estadounidense para amenazar a las fuerzas estadounidenses», advierten los líderes de los organismos de control del Congreso",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOYzYwdGwwRVJuUDRNQ0MwSUR4cExmSEN1OFp5MGJvYV9RanRuSHAxNy1QTEhXdjdOUnpzZGpQaHFGTmU4MUR2bjBocFFNT2tOZlJOVzBHZ0dXTVFZTzdmcHBxR1pSS3g2TkNiLUc3bk0tM0FPN2VYYjhnODRsSHN1MzJLVlM3b3MxbmRaSko2SlJEZXU0WUE4aVdUenl3ZndNTmJ1blcwS1lCT3gwcUVNenJrUmZodWZqcVBKeHJ5Mk15Z2NVS2V4TVB2NXhOQdIBzgFBVV95cUxOYzYwdGwwRVJuUDRNQ0MwSUR4cExmSEN1OFp5MGJvYV9RanRuSHAxNy1QTEhXdjdOUnpzZGpQaHFGTmU4MUR2bjBocFFNT2tOZlJOVzBHZ0dXTVFZTzdmcHBxR1pSS3g2TkNiLUc3bk0tM0FPN2VYYjhnODRsSHN1MzJLVlM3b3MxbmRaSko2SlJEZXU0WUE4aVdUenl3ZndNTmJ1blcwS1lCT3gwcUVNenJrUmZodWZqcVBKeHJ5Mk15Z2NVS2V4TVB2NXhOQQ?oc=5",
-      "fuente": "Fox News"
-     },
-     {
-      "titulo": "Ford ha comenzado a fabricar baterías para vehículos eléctricos en Estados Unidos utilizando tecnología china.",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOcUFHNm0zZFhjX0oyeUY1cmRNYTFVWGR1TEhEN01vQXFWMGpDYi1fWkIwQkxDUG95OThFTE85QnIxUE5QMHQzVUhXUjJfdFFxUWY2ek5BNTdic1ZMUXd0OUQ2dXZFa3dVaThkaDZiN0FUSGI4aU9oVWVlY0VRYkh3VlpUNllBelhYelpfazJ0ckg0UUxIT3E4TlM3aVY?oc=5",
-      "fuente": "Vietnam.vn"
-     },
-     {
-      "titulo": "¿Qué provoca las fallas tecnológicas en Estados Unidos? Trump niega un ataque coordinado y expertos señalan varias causas",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQSlp2TXpoR0p3ckFhTnJIeWhTZDhPbE1EbHowRlF3bnV2bWVnaHNSQzNtcUdrMTE1cW1ZR3RUckZLMXVlZWluMzdwZEpBOW4ydnpBLWhLTU9rN0NZeEcxbzlEMWxEZHR1Wm92cVNoT3BTemd4R2VxMUFQdE84bE9EVU9xbWZYMUZsOWZVeXAxYXUyNVlyWVp0ZS0xcjlnQ0YtSVZ5Tk5xSTlEbm1jUkMzU2lB?oc=5",
-      "fuente": "Primicias"
-     },
-     {
-      "titulo": "De las frutas a la innovación, la ruta de cooperación entre China y Chile",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9GTGhMbThGVWxZS3U3UjdPX0NPVG5tVjFWUXdtdnBJUF9iYWZKOWFlRDkwRU91MkNxdkRlWFk4cURteTZjaWc0TXQyU0RxWXVaSEFXaTQzb0ZFNTBEcG9DblczTEpHVmlnUGgzd2JWbU1rM1N2YWc?oc=5",
-      "fuente": "Spanish People Daily"
-     },
-     {
-      "titulo": "Una cadena de fallas digitales pone en alerta a EU: esto se sabe",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOX3h6NXdmcklKWmhFdmtSeU5pS1d6dGJNOE1rV0RvNmRHZ0J0dDF6LW8zT1c4bkZMcFZUdjc1WTE3V0JqS2I1MEV3TFRyMThaVVRyWEFjZG5EaGNwejdYeVJxajA3aGFYcXp0TU9vb1ZVOUJ0N0I5TDdVSXFfdkVaVXpWMmQ1WDVHbkJwUko0NVQtam5QbkZWVFpzanbSAZwBQVVfeXFMTXh4Tk9QRFR5UTlmdkdta3RDS0Rwc3RISW43Nk9WMXRGdWM3cEFNZUY0SU9lZjl0QkcyS3ZtbVl4MTd4RlpFVnJpMTRURXI3V3hxWmU3MElWQzRZbVNvQTVKQUFjM2d5eFBBeW5WNHdMb1psTE1GQ2o2SVBxWkdJNmE4aFJNSjljV0Q0TUh6LWRPcnFjRjc4UVlFRHVn?oc=5",
-      "fuente": "MILENIO"
-     },
-     {
-      "titulo": "ChipNation aborda el papel de los semiconductores como tecnología clave para la autonomía digital e industrial de Europa",
-      "link": "https://news.google.com/rss/articles/CBMingJBVV95cUxQRElEMFNXQ0VnWG5HekUyemlNUWRVbWVhaUdqcnotakg5OWZ5cnppLXlDTVYtNkhEQWQtanBXVXM5NEx4NEYtbUMtcG5ZM3FRZTM1RG5kemkyLWZUSTdJWE81cTY0YWdnYWNEc0ZWTFZrSzR0TnBVX2tYQ1h3cFBfNG9pSkRrUGJtcVNkYlNHUy1hUzkwcFdqSktUeEQtaW5CSmx1VlU1YjZKUWlaVzBTaHcwMG5uWWVjd0hMQmlBaVdpZzJwUkhnRUJUU2dQaERiUWw2S2hjalhYNFJObmdKdzVibEJsWnBwN0FSUXloWVFZa2FiMDhNQjNpQkt3NTVhNEVDS3VlUmVnLThkODJjWWN0Z2FBa1drcDN1Tll3?oc=5",
-      "fuente": "Ajuntament de Barcelona"
-     }
-    ],
+    "bandeja": [],
     "entregas": {
      "fecha": "2026-11-21",
      "hechas": [
-      "08:00"
+      "08:00",
+      "14:00"
      ]
     },
-    "ultimoChequeo": "2026-11-21T16:47:43.460Z",
+    "ultimoChequeo": "2026-11-21T17:46:42.522Z",
     "semana": [
-     {
-      "titulo": "Caída global de Microsoft reabre el debate sobre la autonomía tecnológica europea",
-      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQOFJRQVktSnFJVkY0aUNVaHItYUNrZ2pkeHZpWnBoTS02MDlSNGFWYkc3eUJoc28zZ3VNQzhwd29GWVR5SE1SX3JyeVlvXzZiV1E1U1lsbWxNelJWN2NVUjZOSkgwLUF5d0p5TEE1ODg4b3hmc1Q0bFloNkVWdFZkTzViUFpFVnNndTRWcWlKZVBuUTh1dWdlOUdYTGUydFhDaHRVRnFUTTJ6X0dvUVhON2drWXF0Sy1veGhyd3hQVnNIWi13alVwb0hfdlpYSmJxZjEyRTJ6cnl2Zw?oc=5",
-      "fuente": "Noticias Bancarias",
-      "t": 1794589847531
-     },
-     {
-      "titulo": "Rusia desarrolla un hígado bioartificial que podría ayudar a pacientes a evitar un trasplante",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQMjdDai05dFZPTTB3VEwtQkkteVBra09xQzA3WVRKR3kyOTFGRlhvNmlucHpiclJqUng1TXBvbUdFY1RURkx3cndsVTd1OHFkbTZ0Y1BwZzRidlFTbDNTUzIwRm9KZ1p4X2VCS3J0UmVCRFdmQ1FQeVREb1ZDRHVPdGVGX2VQZHlaMVl0MFdNOWI5M3RFc09hSjQtdUo2c202cUVhbHl6ZjB2OWxyTF9DRnNR0gG3AUFVX3lxTE8zZ3k5cFpvNnIxaEt5bGw0NDNYNWF6UUwzZWFNeE1JblRYSmxRdWVnZnNjMGJkUkZkekh0Q01hVGFxZHF4OFFUVXNLLVRaN0hlX042Q01TSjUtUHJKcnRzY3lKbk9nQjJwZGltaWE2R0JhZVVJSnAxeEozT3hMVVZFRFBGVElFVjVVdkl5VnZ2ZDdpT0NVYXhNZ0d4WHVGaEg1YkhyMWZXd3NsaUhzalAwS1ZhWVc3UQ?oc=5",
-      "fuente": "FM Mundo",
-      "t": 1794589847531
-     },
-     {
-      "titulo": "Jensen Huang es llamado por el Congreso de EE. UU. para explicar su relación con presunta espía china",
-      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNbTNkN1ZoUktZaGswb3gxRmNnWDdMUXh4eXV6QWs3SlN2WnQ4RzE0a0JCbUtMMmJJajdaT0xDbkRGWUhnTHN5VTNfeG5uQm1TeExaSWJyNHJabDFqRl8yMDFPZ3BnT21JWW5EZWVRaWVHNXNobWRvb3JuVkRnRUtrWUJiWU0wVTlZU2kyVklicnZJc09XVEhwa1dVOTV3RTB6UzRzVER2QlRObnEtQkNjU2xmUHpnYjlERm5PVGVGT2Q2VUhHT1ljRU93dV93OGt3MjZyYnB3SG94dXBZWkJj0gHkAUFVX3lxTFBjWkxsRnM3a1ktOTVJQzMyb1ZiQ01TZEZsYW0xbktKQ2htU1kyb0NSZG5YVmJFSVZWVHhuYzRRX1JsRXl5NHJTR2x6RDVuUWk1bHlNbFJQbUhLWlB6X2tVMktPVlBlSkhEMXZVRVBiVGcxYmhwandYVkxmV19uSlFfQy0tenpHYXNWT2NUbVdBN0lyeEJ1QzJ1Y01DZWhUZXdtMXRab0VLU0plTVZWME1lcS1PWHFCQkd5Mm5NZVhTNkZ4N0ROdTdNRDFPd1lGYlpyVWhzWGpwOFgtamdWY3kzbk9pcQ?oc=5",
-      "fuente": "Portafolio.co",
-      "t": 1794589847531
-     },
-     {
-      "titulo": "Qué causó la falla de Microsoft y otras 3 claves sobre la caída global de servicios del gigante tecnológico",
-      "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOQW1YR0JfYTlLLTBZMk9kZXo3VFFtMVVXYkVfTmw4Nm41UGRkbFRmclFvY3R6WWtDV3lDdkljS1h5Rk4yX1RnVjhwTkRBZkphNUhfcjF3MEZEck1NY1RfYlRULXVxVktaRjFLMDBUWW1uTWNJTVpVTVNvVGxtZ2NqQjgwSnRZTXpGWGZYS0lrb3ZnVGJDOHQ2R3F3bHBwSG83ZHJrUXJuWEJVQjZGUFhJTmVkZkVrMGNfTkFCSC1RdFdHYnkxYm5VRVhFSThvblY0Z3VDN0prMjRocUNtQllmcGFLV0kxR0ZGOXpHdzBTOHMxblNGSHJPYlB3?oc=5",
-      "fuente": "El Observador",
-      "t": 1794589847531
-     },
-     {
-      "titulo": "Portugal: una industria flexible, tecnológica y preparada para competir en las nuevas cadenas de valor europeas",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQTnZzLVVpYWhzNU1LRWczRlFDalZIWFZuS1ZPdklRN1lGMHZBckFpd1dtTUVUNll4Qy0yaUozSUJIUmN4UF9XRy11NmZEXzMxLWVnRUVhYWpSWlV2NEUxa2l5Nll3LUk1SFlVQ2NFMEtBRnV4WFVyR2J4NTFSU056WVVzYTNNUDhKSzJBNV9TeWRLNmw4MjNkTWJMTlpTd1BRUEdfa3FiT3dBWVJrNmNGaDQ3VUdVQ1dKcXIwcm42aWJ1MVZ4RTFkV2ZGM2c?oc=5",
-      "fuente": "Interempresas Media",
-      "t": 1794589847531
-     },
-     {
-      "titulo": "Los gurús tecnológicos se citan en Dublín para enseñar a la UE a aprovechar la Inteligencia Artificial",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVi1TdTRQMmFxZEFHLWNXNkZMRF85MUFZUnpKeEZvOENqaVZkaHhEU1ZjbFZtVDBpclBTUXFHcm96Q2liWWNuaTUwMTV3SzZEZDZlbFU1R3R5QVlhR0pDQmRLMTQ5U1ZYcTJyVnR0OWhIc244aGM3cmpiTUFVWjJrUUN4Um9aX1ZHUDhOTS0xTUk0MDE1NHYwdGhqYWdQWkdMZW8yQjhSM3NOVEJxajhVTE1zWE5KUGlSMEthSEdyeW14NzllbnE3YlQzc2HSAdIBQVVfeXFMT0Z3b2JoU1R2R1hWaWM0WC1vY0tLa0J0ZE9pdUNHOU41djRGQlJOaG5MS0t0Ylg0TW03VFBlczJrZEhlMm5KOU9kNmdzNUpDckZDNlFwejFBOG1HaURTREZzaUppbFhvSXQzS0dnVDRlWlU1dkFGcTJ5Z0x3NGhKaVRra3pWTmEzZ2gxbDZsX25KRTJJLWdILUtsU3ZObkpxdkN4XzBYQ1BwTm9KQjNRaU04ZW0wakpERzFzdzljSGQ0MTNwWUdpWlVab1FEd3BvckR3?oc=5",
-      "fuente": "El Debate",
-      "t": 1794589847531
-     },
-     {
-      "titulo": "La Unión Europea celebra su primera cumbre sobre inteligencia artificial",
-      "link": "https://www.msn.com/es-us/noticias/mundo/la-uni%C3%B3n-europea-celebra-su-primera-cumbre-sobre-inteligencia-artificial/ar-AA2hmltM",
-      "fuente": "DW on MSN",
-      "t": 1794589847531
-     },
-     {
-      "titulo": "Estados Unidos usará IA en todo su espacio aéreo para reordenar vuelos y reducir demoras",
-      "link": "https://www.infobae.com/tecno/2026/11/13/estados-unidos-usara-ia-en-todo-su-espacio-aereo-para-reordenar-vuelos-y-reducir-demoras/",
-      "fuente": "Infobae",
-      "t": 1794589847531
-     },
-     {
-      "titulo": "El Gobierno provincial refuerza la Policía con móviles, tecnología y un nuevo salón institucional",
-      "link": "https://www.contextotucuman.com/nota/428295/el-gobierno-provincial-refuerza-la-policia-con-moviles-tecnologia-y-un-nuevo-salon-institucional.html",
-      "fuente": "Contexto Tucumán",
-      "t": 1794589847531
-     },
-     {
-      "titulo": "La exprimera ministra finlandesa llama a Europa a rearmarse en tecnología frente a Rusia",
-      "link": "https://www.abc.com.py/internacionales/2026/11/10/la-exprimera-ministra-finlandesa-llama-a-europa-a-rearmarse-en-tecnologia-frente-a-rusia/",
-      "fuente": "ABC Color",
-      "t": 1794589847531
-     },
      {
       "titulo": "En pleno escándalo, Estados Unidos rastreó chips de Nvidia que llegaron a China desde una firma de Singapur",
       "link": "https://www.mdzol.com/mundo/2026/11/13/en-pleno-escandalo-estados-unidos-rastreo-chips-de-nvidia-que-llegaron-a-china-desde-una-firma-de-singapur-1995303.html",
@@ -14956,13 +14638,73 @@
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMnloWWZ2cXptU3NfbUdZQjhoYWsyRGY3T0FKZHFvdzg3bTI1dmNhekdDNjlpLXBtaHJOLWVWYjBvY0dvcTE4aHZGNkVSTHZLMEo0SVBoOE11V3N0RlNfNnJzUjB1N0NZOWpYMGkxTVBHNjVmd05naUp4ckhnS2VwbFhEaDVnRzFOMDJUend6My1NTGhjVWNqNXVMQ0xKQVJ3c3ZyM3otSEJIUE5HOTdv?oc=5",
       "fuente": "UnoTV",
       "t": 1795260483151
+     },
+     {
+      "titulo": "Fujimori y Takaichi: dos líderes conservadoras estrechan lazos entre Perú y Japón",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSkdyY21zcjNYbG9lNXVMY1M4UFZKRHFpWVBQWEkteEJNbHZGVUNxY2xTWHBnSFIzUkI3Y0lGYnRJQ1BuaXRjLW5sRXVzZU5PSnVUUkljbTBTQXpSQmhlUlZLR2pMVjIzbUZnZUxxOEstZ2Y1VVBBN242ckhlZThRbjVSTjlOeWVFdGVSUjA2YVVOSVF1LXJCZ2dmaWsyUzZoQzQtUFN2T2kxaml3VmJwNW1LZnRJeHpMN3pud1U0SEk?oc=5",
+      "fuente": "NewsDigitales",
+      "t": 1795283221393
+     },
+     {
+      "titulo": "Gia Lai: Aplicación de la tecnología para mejorar el valor de los productos agrícolas locales.",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUk5uYUZFeWpFWXNsdkItOHJsMzIwSXptODU3YmFmWXhjTWQyN2NFbGNyRDZ5cThkZVJ3MEtUUm5QMUpmaURsTEoxaGU4d2tSbDRDSzc2U1g5cGRzUkhqa0hrenJBYzdNZkVnZ2ZXWmFlV2w3WjBDNXM5YWhFcjdjQkJINDZjb3dZemUxN0Z0Vk1xNTg?oc=5",
+      "fuente": "Vietnam.vn",
+      "t": 1795283221393
+     },
+     {
+      "titulo": "ChileWeek China 2026 impulsa exportaciones tecnológicas y agroalimentarias",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNOU1aX1JJd2hVY0Q0S3NjMnVFMm4zMnlHby1qcUVMSEF2clhkMFZnU3BYUzR4Y3FoTTUydkZyN2V5MlBKak5zYTdKV2o1NmtaMHJCNlV4TmZtRTlzbjB0XzlaR2ZtdHBuNGtwZVJDcHowWTd2WjhLaER1eG5qaGNIWG5PdVBNbW95bjFaTEFpZTV5TlZETUVfRGNSV1d4RHNrdGxBODNmSlB4Zw?oc=5",
+      "fuente": "Portal Metropolitano",
+      "t": 1795283221393
+     },
+     {
+      "titulo": "Los smartphones de Corea del Norte parecen normales, pero censuran hasta lo que escribes",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQZHUtZUdvcFExTVEwWERGV25LQzZQSWg4LUpmTUFiYkM1ZkJhX25qSU9GOVdKYkNCeHFCLUJQVF94ZXUxcVJOTlpBV3dJTXc4bkZqWExPdWdlYk9wbTZsX0VldUx4V1RHUldIX0tVQWkzcDdJVExTbHpCdGRhVm51ajhvUFQ0bUl1UkxTYi1NYW12dUd2aHlVT2gyc0VrVzRYUnVWX3N6UlJsd0ZvTlJtdDdVWUpva0REdHRSUDJvRmNOSVBxUmc?oc=5",
+      "fuente": "El Nacional.cat",
+      "t": 1795283221393
+     },
+     {
+      "titulo": "Alerta nacional en Corea del Sur para detectar a estudiantes que ocultan teléfonos",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOdGpwQWhhcTRkcU1ORmlYc0tzSzZESWsxaUtFeXVKRTJ2cEFiVjVScFJZWjVUU0Z2dnJFS1UtOExYYm9ra3RiT0V3LXlWdVhqRXhsZmdBb0l3THZMMTg4Z3ZiUDk3NjVXZXBxZGtLcXRSVmhRVkpiVVZoQXU1R3pqVnBjcFhCTXVSbVhzRE5zNzVWNG5pZU9VTkxBdUEyNjR1VDlURUFKOWs1ZEVTajkwMG1NWmMzLW94WlNJaA?oc=5",
+      "fuente": "Zamin.uz",
+      "t": 1795283221393
+     },
+     {
+      "titulo": "La segunda serie más seguida del automovilismo entra en la casa de la Fórmula 1",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE13UWtnYzlWLTBMUDc1Sld2Z0ZQdE5PckZwWnp1WlhsM1p5RjhEOUVHdWFXN2NvUWtQMFl4b21fMWNKdldRanhVdmVlNlBOUnhnQVVFaWZMVXpST3ZoV3NBM2lR?oc=5",
+      "fuente": "Tecnología Geek",
+      "t": 1795283221393
+     },
+     {
+      "titulo": "Dientes revelan que el Homo erectus vivía en selvas de China",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPNHEwSVBMNmVkQUxwUm55VjlwQU1IZmxZMWo0YkhTWUloTU4yVzFFUzExbFJTZWFhQ1FhNDBvOW12Mi15S1VyeTlCMENwMmxIVDdQRjJ3cE1oYzN3Y2V1RE9RZWZxV2txU3dqTTlhVzI5WGxkaXpYUW5VMnVJbkg3czl6cjl0Z1IzUFBXSms2eEx3WmJ0V21sSThqX1FpTEFNUjNTemplbFRUV3JZQnRNVG5WRkJXV2VhSXJZTEN3T2l3Y2MtYzdUdmRNTkxSZw?oc=5",
+      "fuente": "Tenemos Noticias",
+      "t": 1795283221393
+     },
+     {
+      "titulo": "Trump amenaza con castigar a las empresas que construyan centros de datos fuera de Estados Unidos, justo cuando en su país crece el rechazo a tenerlos cerca",
+      "link": "https://news.google.com/rss/articles/CBMimAJBVV95cUxQNnlHcDVsWXNnakRTTHBJNXpuME5uTHpiUmttQ09udzZGRnlxcU9jRGdQQVRJbmJHWm9ZN0NxWFM3T1ltQVg1N21MMUJUeW1FTXQ3MllQNDJKN1ZQYlRBaTNSby10a2Vod0ZXVUJrVFNXb3ZMU1ZNdUVqMnY0VnE2Nmt3QmNDWGhrYVA5V2ljUk5LMks0S19aVmw2emhKZUMtdWFoX0l1eldTeHBpUUdXclZBRGJqaGVaTmRUd0Z0UmV6YzFDWnIzZ3Q3b2dJSkZsTENXLXBKWHJRcHUzYjVzaTJDY21CWjJranpVRFMxM1JWUVVSWVJLVEx3Uk50eExMczFHMHpoRTNoLVZ6WXNRVEdNMkp3QjNo?oc=5",
+      "fuente": "Gizmodo en Español",
+      "t": 1795283221393
+     },
+     {
+      "titulo": "El papa León XIV advierte sobre el 'enorme riesgo para la humanidad' que representa el desarrollo tecnológico sin ética",
+      "link": "https://www.msn.com/es-co/noticias/otras/el-papa-le%C3%B3n-xiv-advierte-sobre-el-enorme-riesgo-para-la-humanidad-que-representa-el-desarrollo-tecnol%C3%B3gico-sin-%C3%A9tica/ar-AA2hUSsn",
+      "fuente": "El Tiempo on MSN",
+      "t": 1795283221393
+     },
+     {
+      "titulo": "Actualización de noticias médicas del 21 de noviembre: Dando forma al futuro de la cirugía vietnamita con tecnología médica avanzada.",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQUUFRVHhjbmVlY1BESVdmTXpaaXZnYlZjTU80Z3VyZ0NQZG1PaTF4bjVFRGY5ek9FNzRVVUZFTkFTV1FZOXNVVlExb2xpWmpWX3BDN1VRRU1oTzd4czFYMGYwUENWWFNiYmdHdGlKbUI1V2owZGdjZmZBX1JUdU5HSVJoOGhCNUtGQ3NlcVFqSUE3dnVWRTcxLUpKVkxVcHZfSUp1SElWRTI3SEF2ZzFhNWdHd2tRSC1CenVtZg?oc=5",
+      "fuente": "Vietnam.vn",
+      "t": 1795283221393
      }
     ]
    }
   },
   "mundo_salud": {
    "estado": "listo",
-   "corridas": 517,
+   "corridas": 518,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -14971,12 +14713,19 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-21T16:47:43.460Z",
-   "resumen": "🌎 Mundo: salud y ciencia\n\n• La OMS, España y otros 19 países lanzan campaña global para luchar contra la obesidad (ABC)\n  https://www.abc.es/salud/oms-espana-paises-lanzan-campana-global-luchar-20261117194355-nt.html\n• ",
-   "informe": "data/informes/mundo_salud/2026-11-21-0827.md",
+   "ultimaCorrida": "2026-11-21T17:46:42.522Z",
+   "resumen": "🌎 Mundo: salud y ciencia\n\n• “No somos un país de mierda (todavía)”: Daniel Schteingart cuestiona los mitos sobre la decadencia argentina (Perfil)\n  https://www.perfil.com/economia/no-somos-un-pais-de-mierda-todavia-el-l",
+   "informe": "data/informes/mundo_salud/2026-11-21-1446.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "visa para estados unidos: dónde queda la nueva oficina para tramitarla",
+     "presidente kast vuelve de asia con varios flancos abiertos en la moneda",
+     "trump asegura que china y rusia se retiraron de venezuela por gestiones de washington",
+     "medicare modifica sus tarifas para 2027: por qué podría ser más difícil conseguir una cita",
+     "sheinbaum busca incorporar tecnología médica china con inteligencia artificial en hospital",
+     "oms mantiene emergencia internacional por brote de ébola",
+     "un estudio sugiere que la pérdida de dientes podría asociarse con un mayor riesgo de deter",
      "descubren en colombia una diminuta rana de 2 centímetros: lo que encontraron junto a ella ",
      "un medicamento oral hizo desaparecer tumores de páncreas en un ensayo clínico: \"es el mayo",
      "¿debería haber una edad en la que los médicos estén obligados a jubilarse?",
@@ -15569,205 +15318,18 @@
      "ataque nocturno de rusia causa daños en 2 puentes y el suministro de agua y calefacción en",
      "apec 2026: sheinbaum confirma reunión con trump y visita hospital inteligente en china",
      "vuelo bajío-madrid podría arrancar en el primer trimestre de 2027; colombia y japón están ",
-     "oms advierte sobre la amenaza creciente de la resistencia antimicrobiana a nivel mundial",
-     "el presidente de finlandia, alexander stubb, critica dejar el diálogo con rusia en manos d",
-     "¿estamos entrando en una ciencia posthumana?",
-     "méxico y eu pierden estatus de “país libre de sarampión”: organización panamericana de la ",
-     "un ataque de ucrania \"sin precedentes\" destruye parcialmente el emblemático puente de puti",
-     "méxico, ee uu y bolivia pierden el estatus de países libres de sarampión debido a desinfor",
-     "el regreso del sarampión: una enfermedad que había sido erradicada se propaga por estados ",
-     "el regreso del sarampión: una enfermedad que había sido erradicada regresa a estados unido"
+     "oms advierte sobre la amenaza creciente de la resistencia antimicrobiana a nivel mundial"
     ],
-    "bandeja": [
-     {
-      "titulo": "Un medicamento oral hizo desaparecer tumores de páncreas en un ensayo clínico: “Es el mayor avance en décadas”",
-      "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQOFYzWnFPM0ZKY19QYVVJajZGUFlXQ1VoTGpRRjhfRmFOTll0ZTVlLWRWTEZqNHZHbEdsWjIxUWN5dHgyZy1vU0xjMFlSbFlULS1QN1Q5b3FRQllqNVQ0VjF4U2FUQmpPMjZGUTNmZk1wUDNMb3ZfWmt3RE43MTlfbl85d1VXTTZYcTVLQlphdHJRSWJzeEN5LU1VQTJVenYzbnpWUUlyVDRUSEM0anJXM3QzNHdrUm0tcTladmdVZG1NRGNPdkxBM196eHR2SS1HRGRCTXh6dmJWUFZvVFRKQ3AyakxkQ2FWdGhwVGNrbGFDamV5RFhkc1F0Z9IBlgJBVV95cUxPUmZlcFptYXdheXJ0bDVqRkhXb0MzZ3poS1VwanRyMzRXX2JObzVzcHUtQk81YnFvY3FQRm9CLWhqOURvUWFRUXhMV1ZNN0NQTmpwX1RnSTlyazNoakhib19kZnBybFBVNDBObEZxOHd0eHB4ZjFqOGp4SWVMOHZySS1NUXFkWjNGX2dKa3AwM01uUWI5WWk5MG5jc1ZKYU5rUGZjQkRnZlJSMGlrM1BLUldZaVpXZ08zVzVDMlJvSjhNMjdneGlTcEZxSGxfRVJhQWlZalV2Y3lYVlZYT1VrcmZOeG4xS1JGMFRIampNcDMtN1NueV9xdVQzQ1lQdnIzUnZRaU5BcnRRT3RNUG5ybk56UW45QQ?oc=5",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "Docente mendocina recibió una de las máximas condecoraciones que otorga Japón",
-      "link": "https://www.diariouno.com.ar/sociedad/docente-mendocina-recibio-una-las-maximas-condecoraciones-que-otorga-japon-n1616994",
-      "fuente": "Diario UNO"
-     },
-     {
-      "titulo": "Bebidas vegetales: qué nutrientes pierdes al dejar la leche y cómo compensarlos con criterio",
-      "link": "https://www.msn.com/es-es/noticias/otras/bebidas-vegetales-qu%C3%A9-nutrientes-pierdes-al-dejar-la-leche-y-c%C3%B3mo-compensarlos-con-criterio/ar-AA2hU7Cn",
-      "fuente": "Merca2 on MSN"
-     },
-     {
-      "titulo": "SHEINBAUM BUSCARÁ COOPERACIÓN CON CHINA PARA INCORPORAR IA A HOSPITALES",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOVkI2NFpfQ0lXbmc1N19WQ0RKSS1UTmlrdzhuaUlaWU9uUFZUdXhNb2NubFlXV0RrblY0YzlOSnQ3MmRrdDNPek4zbnZzOUVfanU3NEZ2d19IR0ZBbFNiTDVfQmR2SFVWcmUzb0k3Tm8xalVaVjB4WTFzOUZkZl9VSlNMWHRVeDNWRkhkZGk3WDRiaHRjVGEzanJtZ01POFhRbkFRNEF5YWU2SUdWWlBEUUgwd1I1UQ?oc=5",
-      "fuente": "El Heraldo de San Luis Potosí."
-     },
-     {
-      "titulo": "Avance médico (Estados Unidos): Desarrollan técnica molecular que destruye tumores de próstata sin dañar células sanas.",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNWmV0YzB4UGxsSFVQNFZFUnZCbVFOc0Q5ZjU1cGx6LVFOSldiNkp5aXhraGY4ek1ZOGRxN1FqZHE0TXBlY2F1YlRvV1BjN0hJM1BkNVZSaV90UUhjUnJMMVY2NXVlUXROOFhzZ2gtRHdjOTh3c01hT2hzMG9JNXJOT2dJQ294UHNVWWRtVkwxb1BVZUw3dElZTEltVHpIb0NFbXNPc3FXV3I4Tlk2eF9kaGIyTUNEeEJrRTNYNHhBdE9BOGNrazQ1NEh3bHpyUVJ6bGd1REtra0JfRkNIZjdLS0NiRV9DcmxTVDhsaFNka3A?oc=5",
-      "fuente": "Cadena del Mar"
-     },
-     {
-      "titulo": "Colombia vs. Japón, en el Mundial Sub-17: hora, TV y dónde ver el partido de la selección",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUENfNVA4OUJPNG90MEtGajFNSnJ2RG1DeHBCQm1vLTR0ZHdpZzVIdVRfNGVqdXh2YVBoNkg5RFg3bFl5eGZKUXFud0ZxS3Nha2hweFJXbXk1d2dfcXFyWmlwQTgyTXZiMkVBY2E1YUNMT0NuWHIzNjVPdDQ1eWZtdEE1NUFTbDRGSVAyb0RCd0FLYXlScDI3YndXRXDSAbABQVVfeXFMTnJZZDZmT04wQ19Ca2VWZVRkM0JoTFJ2WFpNOTlFcjI2N3hSWkxGemN4Y2dPSDhkbGdlbE5TLTVtcksxV0F1aXlNSnFiOU14Q0JZMGFmNk5ZbmdJYnE1Snc2ZWRmM2poOURrdUxpdzVfLUlCcjVLcG1MX3k5ZXlyc3NKWm9DUEZHR0FvOXJ2NXhKamkwZWctVG9fQ3ZnaUlVYVdMdmpQbUNDT2o2WU5CSUo?oc=5",
-      "fuente": "El Espectador"
-     },
-     {
-      "titulo": "El homenaje más inesperado: un escarabajo descubierto en el norte del país lleva el nombre del Indio Solari",
-      "link": "https://www.lanacion.com.ar/sociedad/el-homenaje-mas-inesperado-un-escarabajo-descubierto-en-el-norte-del-pais-lleva-el-nombre-del-indio-nid19112026/",
-      "fuente": "LA NACION"
-     },
-     {
-      "titulo": "La OMS alertó por sustancias químicas presentes en productos cotidianos que pueden afectar la salud",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQMlNMOGE0RVZPN01zdU9kOGRYNDIzeFZhSkljenpNUHk2Q09PSHh1WVNVLWtidnRadFNWdjVxS0pBUmxQejROeUZMUkNsdC00LUFXSm1ibDlnd1JFazlWVi1oWFZZeUxISEQ2YTNlOTlBNjV3a0xSY2RoQWlRSE9YaWt4ZkRrYUhhaGZ6UERlUjBqMlJiVEh1VURkaklPN1JoTkMtZjZSc3JDcXAwV2NTNzc0OVEzcXJsYjJRZ2dCeGY5VWdpQ2xOTDBB0gHPAUFVX3lxTE55OW1ETldocHZzWlVTUjdlSjJ3ZnVKRGJ2VjR5amVjaWhIbjdyREJsWHI5YVJlQkxYUzBGNGtjbVR4Y2dYSFRUTEgyT3FtS3hEZWowZ0R6ckZMMkVkY251YnhaQVp2LUJqYk43emxJZ0dZdkpzVUxjMmlMZDM4ZW9CeFJYNmNjSUJYd2hfRE94MGN4VTZNZG5XallMcEtGcVNxcVdFamtXeXp2bXg2MkpJdVFoeXJOOUh1YlpWTUdHdFBPSlFzNk9XRGRhd2dKSQ?oc=5",
-      "fuente": "La Unión Digital"
-     },
-     {
-      "titulo": "La OMS publica sus primeras directrices sobre la diabetes de tipo 1 en el adulto",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNNktGdHRRa1NFYnhMNzRYNlN5ZjlEMlFQQ3BEV2Fhd3pnSmptdFNwUXhtQUFYVzY2TExXY195RzlpLTIxZU1SRHBkTlJNLVFvaEQ1T25MaHdodWVqekZaWGdIQTNXNnhKeVh6MmtmNTU3TnFsWVdzUGZZOTlxcnB0TUFaWDl4VFlhX3VjRTJhMTdaSDVtQzl6bDRNQnIyWV9nM2lDQXRmN2MtX20xSUFJRlNQclpNaEJXU3NhQQ?oc=5",
-      "fuente": "laGacetaOnline"
-     },
-     {
-      "titulo": "OMS reconoce a Sonora por su modelo de atención a migrantes",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNRU0yeUtCbVEyZ1ZyaS04VHhhU0ZQQ2lPdDhLVG9OUXk3NDZuVkRmR1AyZjM0X3J1QVdUcVNIeHJDZ1gyNXQ5WUZXaEE2cGZBcUVBajYwSzB1UzY3R18zMjVHejNiU1VGWkpuSkV5aTZ1T2Rxb09Sa0dtc0VqeTZINDZwcl80aFR4V0tmb29tWGhWS3hreFEyeG1fdkwwYXdqTmc?oc=5",
-      "fuente": "INFO7"
-     },
-     {
-      "titulo": "Secretaría de Salud Pública de la Ciudad de México fortalece la atención prehospitalaria a través de la cooperación con OPS/OMS y AECID",
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQOFRIbVFKWmJzbkNnSWhWamNuMEVWZlNlRjBNYU11TTRKN2pZU29sQlgwcFprZHhJVHBEa0QxU3FFX2lUWEw3MUI2M18yMnVMVjN6MFV2RVUxX0lsNWsya3dwaElzSDJwOTRoOHpjMjFpTUlsX1JyMVBoZEZEZVBQY1BGbUNkOW5ieTRnZ1VMRHpoOWRlTFVRSDBiY3hyNDBnVy0yaVBrUmVLUC1WNkl1STVOdmJfYVBya00zbVFwRUwzcmh3QTNma2JDSDNCNXVkZzJyUWFsTQ?oc=5",
-      "fuente": "Naciones Unidas en México"
-     },
-     {
-      "titulo": "Con el objetivo de brindar herramientas para la detección temprana y el acompañamiento emocional, funcionarios de la División de Prevención Integral del Delito realizaron un conversatorio sobre la prevención de conductas suicidas dirigido al personal del",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1DRzJWYUw5Z25yb0hYdENndTZmaGg3a0dSWXVPWkVURWU4M0FQaDBzY2k0VTNtMTBySUxBLWpiUHFlQUFMT25FV3dobHBBYkVNQ3c?oc=5",
-      "fuente": "Instagram"
-     },
-     {
-      "titulo": "El Niño amenaza un 2027 con epidemias, hambre y mortalidad extrema",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQkFsRTcwaEpFUGZSVi1PamhJMzN6VTZrVDRoa012VnBGQ0k2Y0tzS2JUTC05UnNaV1RUWElpZlhQOWFoQms0ejRjN0ljcXlqYXU4V0ZuMFhzeVJrQUFQSzMtVVhScmNCQTN6NlhmaEFLZU9VNl94am4yb0YtUHZIWGZYQmxDcWdtdTVqU0JYRHNoNTF5RjVXckpGNVQzUXI2VWowRw?oc=5",
-      "fuente": "Plano Informativo"
-     },
-     {
-      "titulo": "Día Internacional del Hombre: desafíos en salud física y mental y por qué su esperanza de vida es menor, según la OMS",
-      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNSTdNbjU3X2xmdmV3OGFpcXI0dDBlVF8yWlNfZ0tvTXotQlhhSU5Hd2l4dzlodkdXc3A1RlVyZHR4X3B5N1FsWG9pZlJxeHlaYmM5ODQ0MVdYYmNmRmtWREdpOUJRSzJWaVBZeXRLcU9rUi1pM2pnVk1NMVRWV0kxSHhsbWdOQjJsU0pKQ0tMTS1RdVpVaWNtVHRteE03UWFsZ3NYSVdzdC1qaGkwUURyTjNxSHJFcEdEZlR3eHNHUFdiaEdXZ0xmWXhQWFZGWHA3LVg4MzFobE1ZZVdob2ZF0gHkAUFVX3lxTE9RajVCX3RKQ0F0TGlveDRIUGpscEJWM1FPdjFsSWJ4dElLRmlkVHBCQjQxeU5pQkw1M0dTdEJUdHVBRjdsS0FxSHNyZk5jeldiOWVSeUhUTm5EN1U1MkNMck5IdFhsSVpYTk15LXdpa0d6anp5TFdOUTlXdjdHNG1tZnJGUk9FZmVEUENhak5hdkV0LW1ibTcyMnpXV1puYlBwT1hCS21sQ1RjelFqMm9tS1piODBYVUY3R3hmN2dqVnlQb0Z2RkY5b2swZHJPd04xMnFFWGVDaTRkX1M0NC1Ca01QMg?oc=5",
-      "fuente": "Pulzo"
-     },
-     {
-      "titulo": "España destaca la capacidad de María Neira para dirigir la OMS en tiempos difíciles",
-      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOeG5VMERET0xhbHprRm9QOTlyZkR4dFAyYUdsbkJ4ZnBVU2pFNW0yX0tGZEhFdEozeDZ3aGM4dktUU2t4Q25SVFZFbHNtUnNiUm14VUhoYmN6NUFveUxxdXVpRkJyU3c1YnBqOHJ5NmxnOEphRnp3QWtSS3BZRVpHbGtMdS01UnQyWVhIT1FZNFFKdTdxeVR5ck4wS084N0RmN2xZUUtDRG5JY0lKVFNlQXV1aWlFRkl6cjFJSnVKMTkzems4M1BpX0RKdDBVSzBHdmfSAewBQVVfeXFMTXFSbTlacjMyTXd2TFllOGxSN2VQeGktV25PNEx1ZGxLMGRTRVFTb2RaTjRMSjNUQzFsV055a3ZZQzVwdlk5MFlqejc3YnJHUVZPY2Z3NDJPanF3LVdqbWV3SnB1MUkyVENpTF9PTlllUVJaVThEalhfbnNCNnBrMDFHVTVsQldkM0JSa3NDVjZ0YlJCS2NFaWpjc2x0dXB3cXlTd2lHamV0WkptQ2liVVlxTU1WQXEwNEZfeWo0ZzVzVk9QT1ZteDUtZmlSdDVPTV9fcGpkUmMzYXAydXdQMVQySGx1d1pDQlhsX00?oc=5",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "García afirma que el apoyo de España a la lucha contra la…",
-      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOczljc0xoU1hZT0hSbm9QZWR5VmhGOFI4NkJTa25xSXFyM2hMYzFnVE1UU3dzZmQxRXZzdm1pYkRBUVQ3ZzRnY01VelFBYkxBaFB0XzJ1aFZjTGpHWnBLRzlLZjF0cXN6Q2NBc2d0aEFKdFNqM2ZMUkNyRm4wRk96U2FVXzBXUHgwQVZ6U05iWl8zMU5BX2hLby1NUHhQLUhtWXA2Wkt5dHRNTlNUS3BFbDNYWkMwUWxUcC1MeXNJa29LdXF5MmdaMnhXS0ptV09uTW1GNVM3WFNqYk5lb3hISlZCR0lna1ZVQ09keFI4MFg?oc=5",
-      "fuente": "Uruguay Al Día"
-     },
-     {
-      "titulo": "García basa el respaldo de España a la acción de la OMS y Unicef contra la obesidad en que es una ambición compartida",
-      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQbTk5QTFlSm9UcTIyWnV5dGRna0pUN1pCTG9mZVprU1pTb0NYUlY0MXhrMEJtWkFjcnBoUURSVmxETFQ3anh2NEN5MU9XWVdVLTl5Rkx5a3lFdGZKX2U0QnJCUndEb2FIRmlhOVY0NS1KeDNydjN4YVktbFRmUEI2bkNlMkNtY3BPaG1oMHZ1cnNRaHJTMWVkN2x3dllKRUZrUjhHYmFKbmdOc2FsS2dLMTVJaDRLTjBZQmJhWVpDdjZRNndLRVB4eF9yc1ZOV19TSGZFbzVCVWRNdw?oc=5",
-      "fuente": "Diario Estrategia"
-     },
-     {
-      "titulo": "OPS retiró designación sanitaria a Estados Unidos, México y Bolivia tras repunte en contagios de sarampión",
-      "link": "https://imagendeveracruz.mx/internacional/ops-retiro-designacion-sanitaria-a-estados-unidos-mexico-y-bolivia-tras-repunte-en-contagios-de-sarampion-20261117-0039.html",
-      "fuente": "Imagen de Veracruz"
-     },
-     {
-      "titulo": "Descubren en Colombia una diminuta rana de 2 centímetros: lo que encontraron junto a ella sorprendió a los científicos",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9xcV91dFk1YmZ0VVlkODBLZDJLNmVHWm53Y0o5WVlGOVcwZUJXX2gxRnh3dUhZbEs2M3BOcUtfYXhTQzN3VzRrY25VbmRUTE9McnBISnFjaWgwbFFDRDZsMUE0aktmdTQ3NjZiZ0ZsZFdGRVpiaGV0eFF1TQ?oc=5",
-      "fuente": "PortalNews \"Noticias & Actualidad 7/24\""
-     },
-     {
-      "titulo": "Un medicamento oral hizo desaparecer tumores de páncreas en un ensayo clínico: \"Es el mayor avance en décadas\"",
-      "link": "https://www.diariodecuyo.com.ar/salud/un-medicamento-oral-hizo-desaparecer-tumores-pancreas-un-ensayo-clinico-es-el-mayor-avance-decadas-n6589234",
-      "fuente": "Diario de Cuyo"
-     },
-     {
-      "titulo": "¿Debería haber una edad en la que los médicos estén obligados a jubilarse?",
-      "link": "https://es.wired.com/articulos/deberia-haber-una-edad-en-la-que-los-medicos-esten-obligados-a-jubilarse",
-      "fuente": "WIRED en Español"
-     },
-     {
-      "titulo": "“No somos un país de mierda (todavía)”: Daniel Schteingart cuestiona los mitos sobre la decadencia argentina",
-      "link": "https://www.perfil.com/economia/no-somos-un-pais-de-mierda-todavia-el-libro-de-daniel-schteingart-aEhyU2y1l7oW",
-      "fuente": "Perfil"
-     },
-     {
-      "titulo": "El secreto de quienes superan los cien años no está en el gimnasio ni en las dietas estrictas sino en lo que hacen cada veinte minutos sin darse cuenta",
-      "link": "https://www.larazon.es/actualidad/secreto-quienes-superan-cien-anos-esta-gimnasio-dietas-estrictas-sino-que-hacen-cada-veinte-minutos-darse-cuenta-b50m_202611216b01a00ac0d5c85b96c3dff9.html",
-      "fuente": "La Razón"
-     },
-     {
-      "titulo": "La OMS alerta de que más de 1.000 millones de personas viven con obesidad",
-      "link": "https://www.abc.es/salud/oms-alerta-1000-millones-personas-viven-obesidad-20261117194341-nt.html",
-      "fuente": "ABC"
-     }
-    ],
+    "bandeja": [],
     "entregas": {
      "fecha": "2026-11-21",
      "hechas": [
-      "08:00"
+      "08:00",
+      "14:00"
      ]
     },
-    "ultimoChequeo": "2026-11-21T16:47:43.460Z",
+    "ultimoChequeo": "2026-11-21T17:46:42.522Z",
     "semana": [
-     {
-      "titulo": "Vacuna personalizada rusa contra el cáncer logra remisión completa en primer paciente",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRFQ2QjJTSFUtWFduYU13ZEhERlY1S3RCOXZPam1VbEhuT0NMVDgtYmdCWGhyUVFtcExuZFFVaFlDS1E5X2ZRbHdKcjFSQmlEWm4tdlE2dFQ1TGx4MzdBbjlPNHp0X1JqS3VCRnBXTzJmY1RaWFRKUUZ5UUlVWTd2YVFFN01TUHYxY2NCODFVQTBpTXRMV3cxajNXdUdtOXRjY2FUWFlUMDUyc2RqMkZlMUpDS0RmNVZFd2NfekZweUV6Z2pk?oc=5",
-      "fuente": "Diario del Sur",
-      "t": 1794589851161
-     },
-     {
-      "titulo": "Sobornos, recetas falsas y servicios jamás prestados: así operó el megafraude de USD 133 millones a Medicare y Medicaid en Nueva York",
-      "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOekItSkdNWXY0Z0l1RWMxVkhZcEFaNXFPT0g2QUJIMldBN21nMGhhUVF6blFlbUlHejZMQkJuSVowNU1kSFU2WjJwYnBjamYtWHlQNl9tV2pYRkNmZHhZQlJDb043a2dKRUNaNjNSMjhrX1RmX2VFQ0l1WVZLVDdhdWhBanQwMnJzbWFuYTBUX2w2aFBtUUZ0bXNOTjUwRzU1d0dPekViY0hMYjRUV002YUtYNXdXTmh3MTRRb2RYZV9UT3pJZkpzSThkOEhfWE8wb0U1NXFNbGpVdmROek1uYm1jRFZqTGo4QVlZWlVhaGx3dW8zMG5UdXBrSGhMaGJtZW5VczhwNGFCUkpxM0VF0gGqAkFVX3lxTE56OGptMVRxWURxS25JQTduQ3lsMEkxcDlQMmxjVnRGM3JtNkxUZnZPNmhCNnNCdC14RW5pQ2NwaGNTWEtCemdzc000RVlMOS1hYktEZDRZbEYxQlM4WTZMT3FpUmZqdXp1N19VOVRWbW9hQkNHYWV6aW9tNFlZZDNiN25tbUpjN05GVGhPYWFVamV5SkU4U3VWQzBRbGs1OVB5aVpVUkdLNTNxM0Z4eDZvNXY0dDMzNnMtUjd6VGE2bGVScXdhWVFzSURmLVpHclZmdnNMaG5VQ3F6M0lnZGZ0ZndyWTExbEFfQ3lxNVdxM0NKemJJdFRIZFRqMlFmZVA0RVVvUGJvM1BIWjMyT2t3OUVIamhQWF9OQnNaVUhrUktOLU9ScDhKRFE?oc=5",
-      "fuente": "Infobae",
-      "t": 1794589851161
-     },
-     {
-      "titulo": "Disminuye 35% la mortalidad en el mundo a causa de tuberculosis; aumenta incidencia de casos en las Américas: informe mundial de la OMS",
-      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNTVFVRFFKZUw1LUhIQkJ1TEQwY2FkUTZxZm1JTVV0VHlFNWQ1S1pDSTRMRXlSQzdOalA4NUFyT2xKeTk0ZWVydjVBanNTSnlDUXM0QUpuNWJTdmdFaDBwOGxxX3R4VC10dzFwcEpZSFYzOTVHNzg3MmQwT1hwdFhzMVgtX19ZQ3JWNUFhMnRqcHp4cW1aMjdqNWxOSmVZbkJBYkxJRk9QZGNsY2ZKVlhYUVAzRU51VWw5cUZHM2dmU1M4QWluWXc0aWppWnpwYW03OWNXVDdmYjFrazBKTjJpQkFNdDJWMXdUU29veU5ZZHpqZw?oc=5",
-      "fuente": "La Web de la Salud",
-      "t": 1794589851161
-     },
-     {
-      "titulo": "Científicos detectan extraño objeto cerca de la Tierra: mide menos de dos metros y parece una miniluna",
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQQWZRa0F5d0lOYWRiUXVkVXZEMnRxdVBIelpJemFPUE9faERXcDNXbktUSHJsLXJyR2VNUUhJeGRnRGpyek5feU03anhLLVBJMmU1U3VCQ3dmaFNkZUR1QjN6NHlpRGNGUF8zMkphT0NMMGJpTXZVclRMcnItYzJmYTNJclJ2VGc2d1JHZzBVaVB0b2ZNOUFXZVNuaC1sWU52bmtoTGY5YjF2ZTB6U3VEcHcybEZSM2ttb3Vyd2dXR3pnZ09SbGxFM1ZXbndZMU1kZjh3RVV6Y3R0bFg3V2tqcWNnbFFkRFE?oc=5",
-      "fuente": "Revista Semana",
-      "t": 1794589851161
-     },
-     {
-      "titulo": "Rusia desarrolla un hígado bioartificial que podría ayudar a pacientes a evitar un trasplante",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQMjdDai05dFZPTTB3VEwtQkkteVBra09xQzA3WVRKR3kyOTFGRlhvNmlucHpiclJqUng1TXBvbUdFY1RURkx3cndsVTd1OHFkbTZ0Y1BwZzRidlFTbDNTUzIwRm9KZ1p4X2VCS3J0UmVCRFdmQ1FQeVREb1ZDRHVPdGVGX2VQZHlaMVl0MFdNOWI5M3RFc09hSjQtdUo2c202cUVhbHl6ZjB2OWxyTF9DRnNR0gG3AUFVX3lxTE8zZ3k5cFpvNnIxaEt5bGw0NDNYNWF6UUwzZWFNeE1JblRYSmxRdWVnZnNjMGJkUkZkekh0Q01hVGFxZHF4OFFUVXNLLVRaN0hlX042Q01TSjUtUHJKcnRzY3lKbk9nQjJwZGltaWE2R0JhZVVJSnAxeEozT3hMVVZFRFBGVElFVjVVdkl5VnZ2ZDdpT0NVYXhNZ0d4WHVGaEg1YkhyMWZXd3NsaUhzalAwS1ZhWVc3UQ?oc=5",
-      "fuente": "FM Mundo",
-      "t": 1794589851161
-     },
-     {
-      "titulo": "Thúc đẩy hợp tác nhiều mặt giữa Việt Nam với tỉnh Kanagawa (Nhật Bản)",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSU9KTEljSU5obDZhbHpOTGRUT2xhQzZnSHcyUEUycDZzVTRKZy11SkZTc094RVJicDZXcGUwaVVHMG5QZXVvekNfZ3RhelhhTWpEN2V1WUQ4U1dfaXUtUzVRN25jZW5ZZVljVzUyM2pWNFJZNWp4cDlBRGdhM05FdWtLcUhhVjN6dFlpeDI5aWNZM1hWR1hrcA?oc=5",
-      "fuente": "Vietnam.vn",
-      "t": 1794589851161
-     },
-     {
-      "titulo": "La UE y Rusia chocan sobre la participación europea en las negociaciones sobre Ucrania",
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQYXpac2otS0RZbGY5RnZyYl9xdUlBOGlyWTFaaGhfNkhyV0FJYmNsbVdoek82WEdKSk1YZW9CWDF0SnBQcVVmTDVDT082RHUzU0tWZmRUVkJQTHVHQXFKbjVyd1Q5MkplZDdBQWkyMmdYZUhvZS10UW01WXFlekJ1SEpNcW90aWdkR1dTR0tURFNNZm9pV3ZCOGNHeWs4dlVGTUpEVmM1YzhiRUdfS3lYZHJnWklPS3hGTHpZQUY2MlN6R1NvUlJ6TEZaMkgwT3pCd2VlX1hpbw?oc=5",
-      "fuente": "RFI",
-      "t": 1794589851161
-     },
-     {
-      "titulo": "Centro del RCM-UPR atiende a niños con hemofilia y reclama servicios para adultos",
-      "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPQlRsUm1kbE1OclR1MWt0MTBNaWpTSGh4aV9QM1FEcEZSVldvank4bVFZZVlfTm1VMFQtQVlaQVpFYVpEYjZZVkk5aVlsZUFUSkROQmVQYkYxdmZlb3YycTA0U2EwMkhKaVYwSGNxVldXV2J6YTJxZ1QxZmJLcU5nWHJZRTFTUmYteTVIaGtTWGZ6dEdqcUh4VjkyWEZOcWdfQm42aUNjbDdwNkNIMm1kc24yYW1iUllYUGJ0OEZEMDZsdTZUTkZLbUhMSFF1bVk0UldTdm40MHFiaEszdGlDXzVpd0J1dVnSAewBQVVfeXFMUFdESzZEU2FKdk9QZG05U2ZPdTY5T01hZ3Q2QnZlT2Y2TzNNX3N6dVJnUF9qa0k4cGpnc1dTTzlaS0xKQkt6dk1kVkEzVEJLRVdRNmRRQ2p4TUFjN1J4dTItekVXX1p2QU8yY3lTVmNOYWMxckpaZUt1NC01ZHZ6SjVkdlhtRHlrcUZrS2tlS3VXOUJVNURjYWFWQmM2Tk1WSWpva1U4ckh0VWdQUEs4TmdzUjk2UWlVdldvS1U5d3dNN0tQZWNaLXJiWG9iZWpKUTB2TWRENEJTNU96WHJXZXZuUXNIbUxWUU5MWlc?oc=5",
-      "fuente": "Medicina y Salud Pública",
-      "t": 1794589851161
-     },
-     {
-      "titulo": "Formar odontólogos para una sociedad que envejece",
-      "link": "https://www.msn.com/es-cl/noticias/otras/formar-odont%C3%B3logos-para-una-sociedad-que-envejece/ar-AA2hnsWU",
-      "fuente": "La Tercera on MSN",
-      "t": 1794589851161
-     },
-     {
-      "titulo": "Ucrania y Rusia terminan sus negociaciones en Abu Dabi con optimismo pero sin acuerdos relevantes",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNU2VKSDlSUld3ZEtDaE1KdnFYamdwam4xOF9jQ1N2V0loX1hLVHh4WDRHVDV3dWlWLUR0Wi1XU1l4RjJEMVZ4UlBWdThENTNmMEdKb1UwOXNQek03Q3dYOVVDUlFxLVhKd2lxc2Rwemh4NjdyeHRaalY0bW94cndOTGtSczhTSTJ2bXFDX1pMWHJQREVXZE1OMWJHVnFlb0R3TEcxc1RLXzlJZG5ES3NZZS05SURGZG9MSHVUSnZnWEpZTzFyaWVjWk9XWi1KMUZz?oc=5",
-      "fuente": "RFI",
-      "t": 1794589851161
-     },
      {
       "titulo": "Un médico tucumano presidió el Congreso Argentino de Cirugía",
       "link": "https://www.contextotucuman.com/nota/428326/un-medico-tucumano-presidio-el-congreso-argentino-de-cirugia.html",
@@ -17147,6 +16709,66 @@
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZW5TSG53V0tramtBNUlPYjN6R0p2cXBWT3FxWHlRbGx5LUk3dm1sQVFkUjJpemxFUWxOMlFUeFFGRE5KVy1KU0g2M3Nyc1VHNkdGSHphRThHTGhuWXJ3MUJHbjdvdkVmbDRIZkZsU2NWTXk4TjB5ZFo1T3N0a0R5WW1SWGRMbXBEWDgxQUtjY0t4SEtvV1lQd25iLWxmT0pxaVFYbDJUbjNqM0hjM253N1FHN29iNDlpdnpjTkcxYWFBS3c?oc=5",
       "fuente": "UnoTV",
       "t": 1795260487968
+     },
+     {
+      "titulo": "“No somos un país de mierda (todavía)”: Daniel Schteingart cuestiona los mitos sobre la decadencia argentina",
+      "link": "https://www.perfil.com/economia/no-somos-un-pais-de-mierda-todavia-el-libro-de-daniel-schteingart-aEhyU2y1l7oW",
+      "fuente": "Perfil",
+      "t": 1795283225522
+     },
+     {
+      "titulo": "El secreto de quienes superan los cien años no está en el gimnasio ni en las dietas estrictas sino en lo que hacen cada veinte minutos sin darse cuenta",
+      "link": "https://www.larazon.es/actualidad/secreto-quienes-superan-cien-anos-esta-gimnasio-dietas-estrictas-sino-que-hacen-cada-veinte-minutos-darse-cuenta-b50m_202611216b01a00ac0d5c85b96c3dff9.html",
+      "fuente": "La Razón",
+      "t": 1795283225522
+     },
+     {
+      "titulo": "La OMS alerta de que más de 1.000 millones de personas viven con obesidad",
+      "link": "https://www.abc.es/salud/oms-alerta-1000-millones-personas-viven-obesidad-20261117194341-nt.html",
+      "fuente": "ABC",
+      "t": 1795283225522
+     },
+     {
+      "titulo": "Visa para Estados Unidos: dónde queda la nueva oficina para tramitarla",
+      "link": "https://www.contextotucuman.com/nota/315617/visa-para-estados-unidos-donde-queda-la-nueva-oficina-para-tramitarla.html",
+      "fuente": "Contexto Tucumán",
+      "t": 1795283225522
+     },
+     {
+      "titulo": "Presidente Kast vuelve de Asia con varios flancos abiertos en La Moneda",
+      "link": "https://www.msn.com/es-cl/noticias/other/presidente-kast-vuelve-de-asia-con-varios-flancos-abiertos-en-la-moneda/ar-AA2hW8L2",
+      "fuente": "El Mostrador on MSN",
+      "t": 1795283225522
+     },
+     {
+      "titulo": "Trump asegura que China y Rusia se retiraron de Venezuela por gestiones de Washington",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOZFhTYlhNdE9rdTl0R0RlTVV1TDZ5VDBwYmU4UEVMOENfWXlZdUJkYl9mWUhlbW5YeTBYSEhjcGM2VVpRa0gzXzVKY0FEakVMMm9kYkJ0dnJsUnhzai1aUTItSldRcGxTcU5IZmxJWWxVcmVkMUd5R042YlJEMTNwV0tWek94aU9RZHREV0xvb2xZQXRDVWlhYkhaaURsNVFNTUdEenFXM2EyOFM3czBieXBjT2RtWTB6LURDdWpaVk5vRURKRUNTejhXYXF0aXlpNjJBRg?oc=5",
+      "fuente": "2001 Online",
+      "t": 1795283225522
+     },
+     {
+      "titulo": "Medicare modifica sus tarifas para 2027: por qué podría ser más difícil conseguir una cita médica",
+      "link": "https://www.clarin.com/estados-unidos/medicare-modifica-tarifas-2027-podria-dificil-conseguir-cita-medica_0_X9K8AzecXJ.html",
+      "fuente": "Clarín",
+      "t": 1795283225522
+     },
+     {
+      "titulo": "Sheinbaum Busca Incorporar Tecnología Médica China con Inteligencia Artificial en Hospitales de México",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxONHY1eFoyX3Z1VGo5QVhoR2U1UXVjMU9Lb0lNbVdjTG9iVE5rbHlDaWV4NkhOR2J1T0RjbzlJdHAwN1hZeEY5ay1zM1pDWW9LSVc5ZGdQZVJhZ3JZQWtfOGR5U1hPVFZRRWFmTXVNei1MV0tLRWVlZXA0bHU4YkpqcUVrdnBnN3NEM1g2N1M1NkhfZE5ZNEwycXFUcVdPV2l3YUJrYTJpVTlMYkxIZGx3aTNjTzBUSFpSM1ZLSXRMbmd1ZnF2NERZMw?oc=5",
+      "fuente": "Diario CAMBIO22",
+      "t": 1795283225522
+     },
+     {
+      "titulo": "OMS mantiene emergencia internacional por brote de ébola",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNm12QXc1MjhVdEVYNFFpeXdMRFdaZUg5VWZjaTZacFZzdzdZZHEtemVqVkFNaXhOS3VlaWdSOUxJX0VPYW0yR1dvMmI5cUYtWEFNWUZPNldnSzNjTnVJd1dCSXg5WmVaRm16TE5obWZVN05jNDlkV3VTaE5JaGx5dENYQ3RWMm02SEtpOHU5N2k0a05SeGl4MA?oc=5",
+      "fuente": "Plano Informativo",
+      "t": 1795283225522
+     },
+     {
+      "titulo": "Un estudio sugiere que la pérdida de dientes podría asociarse con un mayor riesgo de deterioro cognitivo",
+      "link": "https://www.infobae.com/salud/ciencia/2026/11/17/un-estudio-sugiere-que-la-perdida-de-dientes-podria-asociarse-con-un-mayor-riesgo-de-deterioro-cognitivo/",
+      "fuente": "Infobae",
+      "t": 1795283225522
      }
     ]
    }
@@ -17336,7 +16958,7 @@
   },
   "noticias_tec": {
    "estado": "listo",
-   "corridas": 517,
+   "corridas": 518,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -17345,12 +16967,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-21T16:47:43.460Z",
+   "ultimaCorrida": "2026-11-21T17:46:42.522Z",
    "resumen": "💻 Lo último en tecnología\n\n• Pagos con stablecoins ligados a China estuvieron 55% por encima de su línea base tras lanzamientos de IA de EE. UU. (DiarioBitcoin)\n  https://news.google.com/rss/articles/CBMi6gFBVV95cUxPMWZ",
    "informe": "data/informes/noticias_tec/2026-11-21-1347.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "agente de ia de apple: qué hará y cuándo podría llegar",
+     "estafas de gta vi: falsas descargas, videos y criptomonedas",
+     "el fbi vuelve a ser atacado: investigan hackeo de su base nacional de datos criminales",
+     "el gallo más gallo reabre su histórica tienda el trébol y nuevos productos rca",
+     "una empresa valenciana lleva su inteligencia artificial a league of legends: permitirá cam",
+     "tesla llegó a la argentina: la trastienda del lanzamiento de la marca de elon musk en el p",
+     "la diputación de segovia protagoniza la ponencia inaugural del iv congreso de administraci",
+     "google crea un internet falso para probar sus agentes de ia",
+     "epyc venice 9006, 512 hilos y hardware nuevo con socket sp7",
+     "la oferta pública inicial récord de anthropic: wall street apuesta por la ia mientras la e",
      "pagos con stablecoins ligados a china estuvieron 55% por encima de su línea base tras lanz",
      "google podría bloquear el bootloader de los pixel, la alerta de grapheneos",
      "alerta de los mossos en plena campaña del black friday: así te pueden robar con la estafa ",
@@ -17940,19 +17572,60 @@
      "talleres gratuitos de inteligencia artificial para periodistas comienzan este viernes: fec",
      "alerta en estados unidos: se cayó la red interna de comunicaciones de la nsa y preocupa la",
      "cómo activar el modo gta vi en whatsapp: guía completa de personalización",
-     "nueva alerta global por fallo crítico y vulnerabilidad, esta vez en java",
-     "advolution 2026: las tendencias y desafíos que marcan el futuro de la publicidad digital",
-     "con phison ai data platform, las empresas pueden usar inteligencia empresarial generativa ",
-     "google lanza gemini 4 neon para programación, trabajo intelectual y ciencia",
-     "más de 150 personas exploran en badajoz cómo orientarse en un mercado laboral transformado",
-     "apagón mundial el 17 de noviembre, fema confirma solo una prueba de alerta",
-     "metalbear lleva mirrord a aws ecs sin desplegar código",
-     "google lanza app de gemini para dispositivos de bajo costo",
-     "alertas de bomba en italia, la policía identifica en ee. uu. a quien usa el nombre andropo",
-     "siete cofundadores de anthropic ganan 250 millones de dólares con la ipo",
-     "google lanza gemini para celulares con poca memoria: así funciona"
+     "nueva alerta global por fallo crítico y vulnerabilidad, esta vez en java"
     ],
-    "bandeja": [],
+    "bandeja": [
+     {
+      "titulo": "Agente de IA de Apple: qué hará y cuándo podría llegar",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZkpDcEdEaWZHeWpMMlUyRTFVYTA2cklENXhkS0xJS1B1X3Q3dUFZeWZnbnlqLUNWMm51UENJUkExWXRvUEZrcXAxMXAwYkRZT1VGeEJsRzUzZEJTdEw0ei11NzMtRjVrYnhwaE9KWWVJQ0pRUHZBOTMxazRlZUl0MWV3bndnb0luejhDTWs5RjdLQjRHYWlZazdGU2R0X2xaUzV4Yk4zdVBxUGhmNnFfckRzdllBVTcwcFlJOTAwOExFV0NqclFZZWF3dFl6clJMbDBqZQ?oc=5",
+      "fuente": "Soy de Mac"
+     },
+     {
+      "titulo": "Estafas de GTA VI: falsas descargas, videos y criptomonedas",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQYUg5M3NJdmVpOEdBSm9SR1oxSjZKTGpYU3h0Q1FsN3ktZktsaXhuc3AwdmU1c1RPaWdSUWxlbTlJRnphcnk1VFVNZmFZeGZLNVVOZDBLM1M5b3U4cjgtQ09Kbnp2YldkTnJRRmZZdTZSTVktTk4yZnZ3aVdDYng1OFJxSy1JazRzZmJrN05KOU9PQXQ3OWtCa2dENEN4Zw?oc=5",
+      "fuente": "Infosertec"
+     },
+     {
+      "titulo": "El FBI vuelve a ser atacado: investigan hackeo de su base nacional de datos criminales",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPX25ZZmdfck1sY3NkdmVtaVl2b0ctZzVWSEl1SHhwOEp5M3Jac0ZzUW50T3Zya0RrVHo0VHlMOHpHRk5SalZEdjZvdUUwdWx1Q19rdkFNNTdDc2dabzdWZm5uWDJxOWNkLWJEZERUNHVXcnNHY09UN0g0andEYkhPRHFZd3ZHd0hIalpEcVVpVkJLMDJjNlBkcXMtNGd2UQ?oc=5",
+      "fuente": "Sur Noticias"
+     },
+     {
+      "titulo": "El Gallo más Gallo reabre su histórica tienda el Trébol y nuevos productos RCA",
+      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOQVZPaXZnSERCNHpzNkI3Z3VtUElrenF6a3B0RHc2bk1wcDFObUR5aVBrTkVGYVo4SmJYdjZuamk1OHRrVUdYeVZudkRKU3pWMDRXVjlBc3JXakRjNzdEVWlGVVB2V1BkczJ2MXIwYWJTRXRHcEFzMnFEcnZZd0o0VlZTT2JFaE1FeklQT282TkVvMGRNZ1Q1SURvYWZMSk83aHRZSzY0UzJEZ1JLeXlJcjc4TWxSRUJZZUV3MklHUjFTX1FYVHItSkFUd1ZIdkpKVmc?oc=5",
+      "fuente": "Periódico Digital Centroamericano y del Caribe"
+     },
+     {
+      "titulo": "Una empresa valenciana lleva su inteligencia artificial a League of Legends: permitirá cambiar de voz en plena partida",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOcmlGQS1IRDgyS2lPZWhfNGRfSkVEaE5tZlpDT1FqeGxUTnV4UlZIeTl3RFdEbVFhUnowZGZzQU9PSE52MjBrdFFzWk5pTXV4VUhENmlNUmtxbW43S1RsNDR0Y1Z2ek5pTHN1YU9vYXlQUDBXYXdzZVBRTjJIbXNrU2VpRVJMdEF3clFCRnR1SWZqaUltRjNxMDNpcno3RnhuZHV6MXF30gGmAUFVX3lxTE5yaUZBLUhEODJLaU9laF80ZF9KRURoTm1mWkNPUWp4bFROdXhSVkh5OXdEV0RtUWFSejBkZnNBT09ITnYyMGt0UXNaTmlNdXhVSEQ2aU1Sa3FtbjdLVGw0NHRjVnZ6TmlMc3VhT29heVBQMFdhd3NlUFFOMkhtc2tTZWlFUkx0QXdyUUJGdHVJZmppSW1GM3EwM2lyejdGeG5kdXoxcXc?oc=5",
+      "fuente": "SPORT"
+     },
+     {
+      "titulo": "Tesla llegó a la Argentina: la trastienda del lanzamiento de la marca de Elon Musk en el país",
+      "link": "https://www.lanacion.com.ar/autos/tesla-llego-a-la-argentina-la-trastienda-del-lanzamiento-de-la-marca-de-elon-musk-en-el-pais-nid21112026/",
+      "fuente": "LA NACION"
+     },
+     {
+      "titulo": "La Diputación de Segovia protagoniza la ponencia inaugural del IV Congreso de Administración Electrónica ‘Gestiona Avanza’ celebrado en Zaragoza",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOaUFvMFpTSGhXMnZwR3JhYzNKMHAzYmtPQTNZdTF3V1hLSHJnTDFNbmR5RElfaW9CbTI2SFJiRVhjZFlKelFTb2NpcEJFQi1TcmM0U1B3cmJUd2ZSNDhVQjMzbktBRFVWXy14SmRsNXZiSWswQ1JuOWpZdnlCNC1qOWg1dw?oc=5",
+      "fuente": "Diputación de Segovia"
+     },
+     {
+      "titulo": "Google crea un internet falso para probar sus agentes de IA",
+      "link": "https://ecosistemastartup.com/google-crea-un-internet-falso-para-probar-sus-agentes-de-ia/",
+      "fuente": "ecosistemastartup"
+     },
+     {
+      "titulo": "EPYC Venice 9006, 512 hilos y hardware nuevo con socket SP7",
+      "link": "https://observatorioblockchain.com/tecnologia/epyc-venice-9006-256-nucleos-sp7/",
+      "fuente": "Observatorio Blockchain"
+     },
+     {
+      "titulo": "La oferta pública inicial récord de Anthropic: Wall Street apuesta por la IA mientras la empresa advierte sobre riesgos «existenciales»",
+      "link": "https://www.wsws.org/es/articles/2026/11/21/tbfw-n21.html",
+      "fuente": "World Socialist Web Site"
+     }
+    ],
     "entregas": {
      "fecha": "2026-11-21",
      "hechas": [
@@ -17960,7 +17633,7 @@
       "13:00"
      ]
     },
-    "ultimoChequeo": "2026-11-21T16:47:43.460Z",
+    "ultimoChequeo": "2026-11-21T17:46:42.522Z",
     "semana": [
      {
       "titulo": "Polestar presenta un concepto compacto que integra inteligencia artificial avanzada y un diseño aerodinámico",
@@ -20025,7 +19698,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1006,
+   "corridas": 1007,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20034,13 +19707,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-21T17:17:59.381Z",
+   "ultimaCorrida": "2026-11-21T17:46:42.522Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-21",
-    "ultimoChequeo": "2026-11-21T17:17:59.381Z"
+    "ultimoChequeo": "2026-11-21T17:46:42.522Z"
    }
   },
   "feriados": {
@@ -20232,6 +19905,36 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-21T17:46:42.522Z",
+   "quien": "Mundo: salud y ciencia",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-21T17:46:42.522Z",
+   "quien": "Mundo: tecnología",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-21T17:46:42.522Z",
+   "quien": "Mundo: economía",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-21T17:46:42.522Z",
+   "quien": "Clima para la obra",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-21T17:46:42.522Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-21T17:46:42.522Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-21T17:17:59.381Z",
    "quien": "Clima para la obra",
@@ -21701,46 +21404,10 @@
    "t": "2026-11-20T09:09:55.646Z",
    "quien": "Noticias de Villa María",
    "que": "no pude leer «Villa Nueva Córdoba»: respondió 503"
-  },
-  {
-   "t": "2026-11-20T09:09:55.646Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa María clima tormenta»: respondió 503"
-  },
-  {
-   "t": "2026-11-20T09:09:55.646Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa María trabajo empleo»: respondió 503"
-  },
-  {
-   "t": "2026-11-20T09:09:55.646Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa María seguridad policía»: respondió 503"
-  },
-  {
-   "t": "2026-11-20T09:09:55.646Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa María Córdoba»: respondió 503"
-  },
-  {
-   "t": "2026-11-20T09:09:55.646Z",
-   "quien": "Clientes y licitaciones",
-   "que": "no pude leer «concurso de precios obra Córdoba»: respondió 503"
-  },
-  {
-   "t": "2026-11-20T09:09:55.646Z",
-   "quien": "Clientes y licitaciones",
-   "que": "no pude leer «licitación vivienda Córdoba»: respondió 503"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1536": "mundo_salud",
-  "1537": "mundo_salud",
-  "1538": "tarifas",
-  "1539": "noticias_tec",
-  "1540": "clima",
-  "1541": "comidas",
   "1542": "vencimientos",
   "1543": "tarifas",
   "1544": "noticias_vm",
@@ -22234,7 +21901,13 @@
   "2187": "noticias_vm",
   "2188": "noticias_ar",
   "2189": "noticias_tec",
-  "2190": "noticias_tec"
+  "2190": "noticias_tec",
+  "2191": "clima",
+  "2192": "mundo_economia",
+  "2193": "mundo_economia",
+  "2194": "mundo_tecnologia",
+  "2195": "mundo_tecnologia",
+  "2196": "mundo_salud"
  },
  "tgOffset": 196508528,
  "hechos": {
@@ -22252,7 +21925,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-21T17:17:59.381Z",
+ "actualizado": "2026-11-21T17:46:42.522Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
