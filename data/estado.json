@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1023,
+   "corridas": 1024,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-21",
-   "ultimaCorrida": "2026-11-21T16:47:43.460Z",
+   "ultimaCorrida": "2026-11-21T17:17:59.381Z",
    "resumen": "💵 Dólar hoy (10:56 hs)\n• Oficial: compra $1550 · venta $1600\n• Blue: compra $1655 · venta $1675\n• Bolsa: compra $1682.6 · venta $1743.1\n• Contado con liquidación: compra $1801.4 · venta $1806.2\n• Mayorista: compra $1571",
    "informe": "data/informes/dolar/2026-11-21-1056.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1795.66,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-21T16:47:43.460Z",
+    "ultimoChequeo": "2026-11-21T17:17:59.381Z",
     "resumenFecha": "2026-11-21",
     "hist": {
      "2026-10-30": {
@@ -5562,7 +5562,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-19",
    "ultimaCorrida": "2026-11-19T15:51:17.013Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 2936 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 2967 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -5989,18 +5989,18 @@
    "memoria": {}
   },
   "clima": {
-   "estado": "listo",
+   "estado": "falló",
    "corridas": 241,
-   "fallas": 29,
-   "fallasSeguidas": 0,
+   "fallas": 30,
+   "fallasSeguidas": 1,
    "puntaje": null,
    "historial": [],
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-11-21T14:56:34.290Z",
-   "resumen": "⚠️ Cambió el pronóstico para la obra\n\n🌤️ Clima en Villa María, Córdoba\n• Hoy 21/11: 15° a 21° · lluvia 100% · viento 16 km/h\n• Mañana 22/11: 13° a 26° · lluvia 57% · viento 10 km/h\n• Pasado 23/11: 16° a 20° · lluvia 94%",
+   "ultimaCorrida": "2026-11-21T17:17:59.381Z",
+   "resumen": "Falló: fetch failed",
    "informe": "data/informes/clima/2026-11-21-1156.md",
    "pausado": false,
    "memoria": {
@@ -9784,7 +9784,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1023,
+   "corridas": 1024,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9793,7 +9793,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-21T16:47:43.460Z",
+   "ultimaCorrida": "2026-11-21T17:17:59.381Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9803,7 +9803,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-21T16:47:43.460Z",
+    "ultimoChequeo": "2026-11-21T17:17:59.381Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10116,16 +10116,16 @@
      },
      "2026-11-21": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       27,
-       27
+       28,
+       28
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       27,
-       27
+       28,
+       28
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       27,
-       27
+       28,
+       28
       ]
      }
     }
@@ -20025,7 +20025,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1005,
+   "corridas": 1006,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20034,13 +20034,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-21T16:47:43.460Z",
+   "ultimaCorrida": "2026-11-21T17:17:59.381Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-21",
-    "ultimoChequeo": "2026-11-21T16:47:43.460Z"
+    "ultimoChequeo": "2026-11-21T17:17:59.381Z"
    }
   },
   "feriados": {
@@ -20232,6 +20232,21 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-21T17:17:59.381Z",
+   "quien": "Clima para la obra",
+   "que": "falló: fetch failed"
+  },
+  {
+   "t": "2026-11-21T17:17:59.381Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-21T17:17:59.381Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-21T16:47:43.460Z",
    "quien": "Lo último en tecnología",
@@ -21716,21 +21731,6 @@
    "t": "2026-11-20T09:09:55.646Z",
    "quien": "Clientes y licitaciones",
    "que": "no pude leer «licitación vivienda Córdoba»: respondió 503"
-  },
-  {
-   "t": "2026-11-20T09:09:55.646Z",
-   "quien": "Clientes y licitaciones",
-   "que": "no pude leer «licitación pública Villa María»: respondió 503"
-  },
-  {
-   "t": "2026-11-20T09:09:55.646Z",
-   "quien": "Clientes y licitaciones",
-   "que": "no pude leer «licitación obra Córdoba»: respondió 503"
-  },
-  {
-   "t": "2026-11-20T09:09:55.646Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
@@ -22252,7 +22252,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-21T16:47:43.460Z",
+ "actualizado": "2026-11-21T17:17:59.381Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
