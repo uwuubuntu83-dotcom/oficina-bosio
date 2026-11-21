@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1009,
+   "corridas": 1010,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-20",
-   "ultimaCorrida": "2026-11-21T09:27:39.507Z",
+   "ultimaCorrida": "2026-11-21T09:57:39.628Z",
    "resumen": "🚨 Movimiento fuerte del dólar\nBlue: subió 2.1% → $1675\nBolsa: subió 5.7% → $1743.1\nContado con liquidación: subió 3.3% → $1806.2\nCripto: subió 3.3% → $1791.29\n\n💵 Dólar hoy (18:29 hs)\n• Oficial: compra $1550 · venta $16",
    "informe": "data/informes/dolar/2026-11-20-1829.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1791.29,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-21T09:27:39.507Z",
+    "ultimoChequeo": "2026-11-21T09:57:39.628Z",
     "resumenFecha": "2026-11-20",
     "hist": {
      "2026-10-30": {
@@ -5955,7 +5955,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-19",
    "ultimaCorrida": "2026-11-19T15:51:17.013Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 2496 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 2526 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -6382,18 +6382,18 @@
    "memoria": {}
   },
   "clima": {
-   "estado": "listo",
+   "estado": "falló",
    "corridas": 238,
-   "fallas": 27,
-   "fallasSeguidas": 0,
+   "fallas": 28,
+   "fallasSeguidas": 1,
    "puntaje": null,
    "historial": [],
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-11-21T07:57:44.175Z",
-   "resumen": "⚠️ Cambió el pronóstico para la obra\n\n🌤️ Clima en Villa María, Córdoba\n• Hoy 21/11: 15° a 20° · lluvia 100% · viento 14 km/h\n• Mañana 22/11: 14° a 25° · lluvia 37% · viento 9 km/h\n• Pasado 23/11: 16° a 21° · lluvia 94% ",
+   "ultimaCorrida": "2026-11-21T09:57:39.628Z",
+   "resumen": "Falló: fetch failed",
    "informe": "data/informes/clima/2026-11-21-0457.md",
    "pausado": false,
    "memoria": {
@@ -10154,7 +10154,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1009,
+   "corridas": 1010,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10163,7 +10163,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-21T09:27:39.507Z",
+   "ultimaCorrida": "2026-11-21T09:57:39.628Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10173,7 +10173,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-21T09:27:39.507Z",
+    "ultimoChequeo": "2026-11-21T09:57:39.628Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10486,16 +10486,16 @@
      },
      "2026-11-21": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       13,
-       13
+       14,
+       14
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       13,
-       13
+       14,
+       14
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       13,
-       13
+       14,
+       14
       ]
      }
     }
@@ -20617,7 +20617,7 @@
   },
   "jefe_obra": {
    "estado": "listo",
-   "corridas": 18,
+   "corridas": 19,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20625,17 +20625,19 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-20",
-   "ultimaCorrida": "2026-11-20T10:10:09.719Z",
-   "resumen": "🧱 Jefe de obra · viernes 20/11\n⚪ No pude leer el pronóstico (fetch failed).\n📋 Licitaciones y concursos de obra en los últimos 7 días: 80\n   • Frigorífico con 600 empleados debe $80.000 millones y acaba de entrar en con",
-   "informe": "data/informes/jefe_obra/2026-11-20-0710.md",
+   "ultimaFecha": "2026-11-21",
+   "ultimaCorrida": "2026-11-21T09:57:39.628Z",
+   "resumen": "🧱 Jefe de obra · sábado 21/11\n⚪ No pude leer el pronóstico (fetch failed).\n📋 Licitaciones y concursos de obra en los últimos 7 días: 82\n   • El Ayuntamiento de Córdoba prepara la obra del camino de la Alameda del Obisp",
+   "informe": "data/informes/jefe_obra/2026-11-21-0657.md",
    "pausado": false,
    "memoria": {
     "horas": {
      "fecha": "2026-11-21",
-     "hechas": []
+     "hechas": [
+      "06:50"
+     ]
     },
-    "ultimoChequeo": "2026-11-20T10:10:09.719Z"
+    "ultimoChequeo": "2026-11-21T09:57:39.628Z"
    }
   },
   "editor": {
@@ -20738,7 +20740,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 991,
+   "corridas": 992,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20747,13 +20749,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-21T09:27:39.507Z",
+   "ultimaCorrida": "2026-11-21T09:57:39.628Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-20",
-    "ultimoChequeo": "2026-11-21T09:27:39.507Z"
+    "ultimoChequeo": "2026-11-21T09:57:39.628Z"
    }
   },
   "feriados": {
@@ -20945,6 +20947,26 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-21T09:57:39.628Z",
+   "quien": "Jefe de obra",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-21T09:57:39.628Z",
+   "quien": "Clima para la obra",
+   "que": "falló: fetch failed"
+  },
+  {
+   "t": "2026-11-21T09:57:39.628Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-21T09:57:39.628Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-21T09:27:39.507Z",
    "quien": "Clientes y licitaciones",
@@ -22424,31 +22446,10 @@
    "t": "2026-11-20T00:39:35.280Z",
    "quien": "¿Qué comiste?",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-20T00:39:35.280Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-20T00:39:35.280Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-20T00:09:46.132Z",
-   "quien": "Monitor de salud",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-20T00:09:46.132Z",
-   "quien": "Lo último en tecnología",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1511": "mundo_economia",
   "1512": "mundo_tecnologia",
   "1513": "mundo_tecnologia",
   "1514": "mundo_salud",
@@ -22947,7 +22948,8 @@
   "2161": "clima",
   "2162": "licitaciones",
   "2163": "tarifas",
-  "2164": "licitaciones"
+  "2164": "licitaciones",
+  "2165": "jefe_obra"
  },
  "tgOffset": 196508528,
  "hechos": {
@@ -22965,7 +22967,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-21T09:27:39.507Z",
+ "actualizado": "2026-11-21T09:57:39.628Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
