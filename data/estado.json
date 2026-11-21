@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1027,
+   "corridas": 1028,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-21",
-   "ultimaCorrida": "2026-11-21T18:46:35.153Z",
+   "ultimaCorrida": "2026-11-21T19:16:36.013Z",
    "resumen": "💵 Dólar hoy (10:56 hs)\n• Oficial: compra $1550 · venta $1600\n• Blue: compra $1655 · venta $1675\n• Bolsa: compra $1682.6 · venta $1743.1\n• Contado con liquidación: compra $1801.4 · venta $1806.2\n• Mayorista: compra $1571",
    "informe": "data/informes/dolar/2026-11-21-1056.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1795.66,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-21T18:46:35.153Z",
+    "ultimoChequeo": "2026-11-21T19:16:36.013Z",
     "resumenFecha": "2026-11-21",
     "hist": {
      "2026-10-30": {
@@ -5677,32 +5677,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-21",
-   "ultimaCorrida": "2026-11-21T18:43:26.613Z",
+   "ultimaCorrida": "2026-11-21T19:12:54.733Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795286606613,
+     "t": 1795288374733,
      "redes_hoy": {
       "publicaciones": 0,
       "historias": 0,
       "reels": 0,
       "seguidos": 0,
       "gringo": 0,
-      "errores": 1,
-      "reinicios": 0,
+      "errores": 3,
+      "reinicios": 7,
       "ultimas": [
-       "15:35 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
-       "15:35 PLAN DE HOY:",
-       "15:35 ⏸ Paré lo de gringo porque estás usando el celu.",
-       "15:35 LOTE: no pude volver a la Página: Remote end closed connection without response",
-       "15:35 LOTE: turno: device offline",
-       "15:35 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
-       "15:41 Error en fb_compartir: No encontré ninguno de: ['Menú', 'Menu']",
-       "15:41 Guardado debug/pantalla_154100.png y .xml",
-       "15:41 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "15:41 Celular conectado: SM-A515F | pantalla 1080x2400"
+       "16:08 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "16:08 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "16:08 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "16:08 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "16:08 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "16:09 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "16:09 LOTE: Facebook vuelve a quedar en la Página",
+       "16:09 LOTE: turno: no pude abrir el menú de Facebook",
+       "16:10 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "16:11 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram."
       ]
      }
     },
@@ -6039,19 +6039,19 @@
       "reels": 0,
       "seguidos": 0,
       "gringo": 0,
-      "errores": 1,
-      "reinicios": 0,
+      "errores": 3,
+      "reinicios": 7,
       "ultimas": [
-       "15:35 Facebook igual que Instagram: 12 historias y 8 reposts en la Página",
-       "15:35 PLAN DE HOY:",
-       "15:35 ⏸ Paré lo de gringo porque estás usando el celu.",
-       "15:35 LOTE: no pude volver a la Página: Remote end closed connection without response",
-       "15:35 LOTE: turno: device offline",
-       "15:35 ⚡ Prioridad: lo de Claude que pediste por Telegram, antes de seguir con la tarea",
-       "15:41 Error en fb_compartir: No encontré ninguno de: ['Menú', 'Menu']",
-       "15:41 Guardado debug/pantalla_154100.png y .xml",
-       "15:41 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "15:41 Celular conectado: SM-A515F | pantalla 1080x2400"
+       "16:08 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "16:08 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "16:08 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "16:08 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "16:08 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "16:09 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "16:09 LOTE: Facebook vuelve a quedar en la Página",
+       "16:09 LOTE: turno: no pude abrir el menú de Facebook",
+       "16:10 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "16:11 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram."
       ]
      }
     }
@@ -9957,7 +9957,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1027,
+   "corridas": 1028,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9966,7 +9966,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-21T18:46:35.153Z",
+   "ultimaCorrida": "2026-11-21T19:16:36.013Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9976,7 +9976,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-21T18:46:35.153Z",
+    "ultimoChequeo": "2026-11-21T19:16:36.013Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10289,16 +10289,16 @@
      },
      "2026-11-21": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       31,
-       31
+       32,
+       32
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       31,
-       31
+       32,
+       32
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       31,
-       31
+       32,
+       32
       ]
      }
     }
@@ -19984,7 +19984,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1009,
+   "corridas": 1010,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -19993,13 +19993,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-21T18:46:35.153Z",
+   "ultimaCorrida": "2026-11-21T19:16:36.013Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-21",
-    "ultimoChequeo": "2026-11-21T18:46:35.153Z"
+    "ultimoChequeo": "2026-11-21T19:16:36.013Z"
    }
   },
   "feriados": {
@@ -20181,8 +20181,8 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-21",
-   "ultimaCorrida": "2026-11-21T18:35:00.000Z",
-   "resumen": "Publicando · hoy: 0 · error: device offline · grupos: TRATO HECHO VILLA MARIA 3, TRATO HECHO VILLA MARIA, Trato Hecho Villa Maria 1, TRATO HECHO VILLA MARIA/VILLA NUEVA",
+   "ultimaCorrida": "2026-11-21T19:09:00.000Z",
+   "resumen": "Publicando · hoy: 0 · error: no pude abrir el menú de Facebook · grupos: TRATO HECHO VILLA MARIA 3, TRATO HECHO VILLA MARIA, Trato Hecho Villa Maria 1, TRATO HECHO VILLA MARIA/VILLA NUEVA",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -20191,6 +20191,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-21T19:16:36.013Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-21T19:16:36.013Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-21T18:46:35.153Z",
    "quien": "Clientes y licitaciones",
@@ -21680,16 +21690,6 @@
    "t": "2026-11-20T09:09:55.646Z",
    "quien": "Mundo: economía",
    "que": "no pude leer «Estados Unidos economía»: respondió 503"
-  },
-  {
-   "t": "2026-11-20T09:09:55.646Z",
-   "quien": "Mundo: economía",
-   "que": "no pude leer «Japón economía»: respondió 503"
-  },
-  {
-   "t": "2026-11-20T09:09:55.646Z",
-   "quien": "Mundo: economía",
-   "que": "no pude leer «China economía»: respondió 503"
   }
  ],
  "pendientes": [],
@@ -22211,7 +22211,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-21T18:46:35.153Z",
+ "actualizado": "2026-11-21T19:16:36.013Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
