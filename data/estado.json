@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1019,
+   "corridas": 1020,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-21",
-   "ultimaCorrida": "2026-11-21T14:26:26.972Z",
+   "ultimaCorrida": "2026-11-21T14:56:34.290Z",
    "resumen": "💵 Dólar hoy (10:56 hs)\n• Oficial: compra $1550 · venta $1600\n• Blue: compra $1655 · venta $1675\n• Bolsa: compra $1682.6 · venta $1743.1\n• Contado con liquidación: compra $1801.4 · venta $1806.2\n• Mayorista: compra $1571",
    "informe": "data/informes/dolar/2026-11-21-1056.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1795.66,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-21T14:26:26.972Z",
+    "ultimoChequeo": "2026-11-21T14:56:34.290Z",
     "resumenFecha": "2026-11-21",
     "hist": {
      "2026-10-30": {
@@ -5768,7 +5768,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-19",
    "ultimaCorrida": "2026-11-19T15:51:17.013Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 2795 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 2825 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -6196,7 +6196,7 @@
   },
   "clima": {
    "estado": "listo",
-   "corridas": 240,
+   "corridas": 241,
    "fallas": 29,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -6205,13 +6205,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-11-21T12:56:37.308Z",
-   "resumen": "Falló: fetch failed",
-   "informe": "data/informes/clima/2026-11-21-0457.md",
+   "ultimaCorrida": "2026-11-21T14:56:34.290Z",
+   "resumen": "⚠️ Cambió el pronóstico para la obra\n\n🌤️ Clima en Villa María, Córdoba\n• Hoy 21/11: 15° a 21° · lluvia 100% · viento 16 km/h\n• Mañana 22/11: 13° a 26° · lluvia 57% · viento 10 km/h\n• Pasado 23/11: 16° a 20° · lluvia 94%",
+   "informe": "data/informes/clima/2026-11-21-1156.md",
    "pausado": false,
    "memoria": {
-    "ultimoChequeo": "2026-11-21T12:56:37.308Z",
-    "ultimoAviso": "Hoy: 100% de lluvia (16.6 mm)|Pasado: 94% de lluvia (25.8 mm)",
+    "ultimoChequeo": "2026-11-21T14:56:34.290Z",
+    "ultimoAviso": "Hoy: 100% de lluvia (14.5 mm)|Pasado: 94% de lluvia (27.2 mm)",
     "resumenFecha": "2026-10-30",
     "autoReintento": "2026-11-16",
     "autoReintentos": 2
@@ -6219,7 +6219,7 @@
   },
   "vencimientos": {
    "estado": "listo",
-   "corridas": 174,
+   "corridas": 175,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -6228,12 +6228,17 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-21T11:57:56.838Z",
-   "resumen": "🧾 Vencimientos e impuestos\n\n• Las empresas cordobesas tendrán nuevos beneficios impositivos en 2027 (El Diario de Carlos Paz)\n  https://www.eldiariodecarlospaz.com.ar/provincial/2026/11/19/las-empresas-cordobesas-tendra",
-   "informe": "data/informes/vencimientos/2026-11-21-0256.md",
+   "ultimaCorrida": "2026-11-21T14:56:34.290Z",
+   "resumen": "🧾 Vencimientos e impuestos\n\n• ARCA: qué hacer si pagaste el monotributo y todavía figura una deuda (MDZ Online)\n  https://news.google.com/rss/articles/CBMivwFBVV95cUxOVXcxOVJFVWZfM25xZ3R2TU9YSVg5UmhTTmo4Q3NlUWJQQk4xeXE4",
+   "informe": "data/informes/vencimientos/2026-11-21-1156.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "arca: qué hacer si pagaste el monotributo y todavía figura una deuda",
+     "qué cambia a partir de hoy con la nueva ley de discapacidad aprobada en el senado",
+     "el crédito a las familias llegó a un récord y la deuda promedio alcanzó los $5 millones",
+     "monotributo: cómo regularizar las deudas con arca pagando en cuotas",
+     "córdoba puso en marcha la nueva ley de promoción industrial con exenciones impositivas de ",
      "las empresas cordobesas tendrán nuevos beneficios impositivos en 2027",
      "presupuesto 2027: córdoba reducirá impuestos a inmuebles, empresas y comercios",
      "llaryora impulsa un alivio fiscal de $1,5 billones para córdoba",
@@ -6634,20 +6639,8 @@
      "arca modifica la emisión de facturas del monotributo social desde noviembre",
      "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
     ],
-    "ultimoChequeo": "2026-11-21T11:57:56.838Z",
+    "ultimoChequeo": "2026-11-21T14:56:34.290Z",
     "semana": [
-     {
-      "titulo": "El blanqueo laboral de ARCA vence el 28 de noviembre: qué deben completar los empleadores",
-      "link": "https://www.elonce.com/sociedad/el-blanqueo-laboral-de-arca-vence-el-28-de-noviembre-que-deben-completar-los-empleadores.htm",
-      "fuente": "Elonce.com",
-      "t": 1794579071985
-     },
-     {
-      "titulo": "Últimas 24 horas para regularizar deudas en ARBA con un descuento de hasta 40%: cómo adherir",
-      "link": "https://www.cronista.com/economia-politica/ultimas-24-horas-para-regularizar-deudas-en-arba-con-un-descuento-de-hasta-40-como-adherir/",
-      "fuente": "El Cronista",
-      "t": 1794579071985
-     },
      {
       "titulo": "SE CONFIRMÓ LA PRIVATIZACIÓN DE AYSA: quiénes son los nuevos dueños y qué pasará con las tarifas",
       "link": "https://eleconomista.com.ar/economia/se-confirmo-privatizacion-aysa-quienes-son-nuevos-duenos-pasara-tarifas-n99654",
@@ -7487,13 +7480,43 @@
       "link": "https://agroempresario.com/publicacion/123825/llaryora-impulsa-un-alivio-fiscal-de-15-billones-para-cordoba/",
       "fuente": "agroempresario",
       "t": 1795240593488
+     },
+     {
+      "titulo": "ARCA: qué hacer si pagaste el monotributo y todavía figura una deuda",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVXcxOVJFVWZfM25xZ3R2TU9YSVg5UmhTTmo4Q3NlUWJQQk4xeXE4YzVzSFR0NnY2VWp3VWVJWUtHUXlZay1KNG1wcHRRWjJMU0VJNWtDNFROdGlxMzg4Yl82UWxveXR1Uk9NS21DeW1oQkVWWmFIYm5wZmZPNEpRQWFXeUtxSTktYmc0aXBFell4WUN3XzZBeHo2bk1lNTNOVW12R0hlNUtLNnktS3Q3UkdFWXhVaGxST0FkanM5bw?oc=5",
+      "fuente": "MDZ Online",
+      "t": 1795272999808
+     },
+     {
+      "titulo": "Qué cambia a partir de hoy con la nueva Ley de Discapacidad aprobada en el Senado",
+      "link": "https://www.lapostanoticias.com.ar/2026-11-21/que-cambia-a-partir-de-hoy-con-la-nueva-ley-de-discapacidad-aprobada-en-el-senado-98894/",
+      "fuente": "La Posta Noticias",
+      "t": 1795272999808
+     },
+     {
+      "titulo": "El crédito a las familias llegó a un récord y la deuda promedio alcanzó los $5 millones",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOV0JHbURvb3h0a3ZPdGplYzZsWHl3ZkVVTUtfV3A3ckNkRmZlUW8wWlNweU04NTRGSVc5NWZHT2xoaGNTR1lNZGhGa0hkMW9DWGhlek0wWG14eVpCdUtCS1FrZWRvLTFYTy0wUnYwbGV1NzlEUlZnUmFpbmh4WjhzS0lNTTZpZlVJN1JpNEFzYi1WMFROa2x1cU5MRnpHWUZXTUtBcVlnNDE4Z09CX0VaUm05U1FtS1JqRnRVN3JLVkJGS252T1d1aQ?oc=5",
+      "fuente": "NewsDigitales",
+      "t": 1795272999808
+     },
+     {
+      "titulo": "Monotributo: cómo regularizar las deudas con ARCA pagando en cuotas",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZ3BtMHN4S3hWbGRMS2Z6bGlxMzZaVmdSLWFmQk16c2NsaWNkbl95S3NPZHRrcnEzMUg3Sk1aMXZ1dG5oVk8tVnBZcHRpX29heW9TckZqWkJtdkdVN0xhc3RFUmgzQjYxM2swbWxDVkdyMFB1TzR2SGI2N2d3Z09JWl9tY1BYdkZxQll2ZDRKWlJQS1ZDaXFBMURCRkhVUERkZWRhaE1icGVqMjNWZzlZRmRlM1AtWTJWbnlOaDRGakFiUUM4MUHSAcsBQVVfeXFMUFZOMmRXWEpubkRuX2pWWHdtZWFrOXoxeUtqY21hQW9peHNXVXBuLVBXUTcteS1WNVFJZnZtTFgteEg5b0QxVkViTzlGM1d0TmxsbGlRRlZHMWhMNUl1X1RUNlQyaEstbkp2NUtScEdxc2htOHo1WllVdjJNMmdURnFqMUg5Uk9qXzgxeTUxQm5PNG1IOFg2TmdxVTZUcjVja1pxQmcxLVA3Vk8xLWJ4d0Jjemt0M3VRenMzZnRxXzJNUlFsS0FqNzFVdUU?oc=5",
+      "fuente": "iProfesional",
+      "t": 1795272999808
+     },
+     {
+      "titulo": "Córdoba puso en marcha la nueva Ley de Promoción Industrial con exenciones impositivas de hasta 15 años",
+      "link": "https://diariodelasvarillas.com.ar/cordoba-puso-en-marcha-la-nueva-ley-de-promocion-industrial-con-exenciones-impositivas-de-hasta-15-anos/",
+      "fuente": "diariodelasvarillas.com.ar",
+      "t": 1795272999808
      }
     ]
    }
   },
   "tarifas": {
    "estado": "listo",
-   "corridas": 175,
+   "corridas": 176,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7502,12 +7525,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-21T11:57:56.838Z",
-   "resumen": "🧾 Aumentos de servicios\n\n• Encuesta: llenar el changuito de supermercado ya cuesta más de $1 millón (Diputados Bonaerenses)\n  https://diputadosbsas.com.ar/encuesta-llenar-changuito-un-millon-de-pesos/\n• La guerra de los",
-   "informe": "data/informes/tarifas/2026-11-21-0857.md",
+   "ultimaCorrida": "2026-11-21T14:56:34.290Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• Detectan en Argentina la nueva variante de Covid PJ.2.1 y explican el aumento de casos (Telefe Córdoba)\n  https://news.google.com/rss/articles/CBMi0wFBVV95cUxOQ2tNZ25sMU1NV1hiYWFldm9BTWpIUk1tM",
+   "informe": "data/informes/tarifas/2026-11-21-1156.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "detectan en argentina la nueva variante de covid pj.2.1 y explican el aumento de casos",
+     "la corte devolvió al estado el control de los aumentos de las prepagas",
+     "enrique rojas, psiquiatra de 77 años: \"el hombre se enamora por la vista y la mujer por el",
+     "plan de reducción de impuestos 2026: el anuncio de llaryora para dinamizar la economía cor",
+     "un viento devastador arrasó calchín oeste, en córdoba: techos arrancados, hierros retorcid",
+     "la corte obliga a las prepagas a pedir permiso para aumentar las cuotas",
      "encuesta: llenar el changuito de supermercado ya cuesta más de $1 millón",
      "la guerra de los alimentos: \"sembrar miedo puede ser más sencillo que educar\"",
      "polonia denunció que dos misiles y un dron rusos cayeron en su territorio",
@@ -8101,52 +8130,10 @@
      "la siembra de girasol se afianza con más del 70 % implantado",
      "inflación en caba de octubre subió a 1,9%: datos del idecba",
      "detienen a un ex servidor urbano acusado de amenazar al ministro de seguridad de córdoba",
-     "cómo es por dentro el palacio de recoleta donde se hospedará el papa león xiv",
-     "lluvias provocan inundación frente al hospital de emergencia de ves: agua llega casi hasta",
-     "córdoba: el agua de aguas cordobesas sube 11,9% desde este viernes y el ajuste del año ya ",
-     "la pobreza llegó al 34,4% y afecta a casi 16,5 millones",
-     "la inflación en caba volvió a acelerarse en octubre: fue del 1,9% y las verduras aumentaro",
-     "la inflación en caba se aceleró al 1,9% en octubre: qué rubros registraron las mayores sub",
-     "zona fría: mientras la justicia analiza los cambios, cuánto subirían las tarifas de gas"
+     "cómo es por dentro el palacio de recoleta donde se hospedará el papa león xiv"
     ],
-    "ultimoChequeo": "2026-11-21T11:57:56.838Z",
+    "ultimoChequeo": "2026-11-21T14:56:34.290Z",
     "semana": [
-     {
-      "titulo": "En los primeros tres años de Milei, cerraron 32.429 empresas y se perdieron 467.989 empleos registrados",
-      "link": "https://genesis24.net/2026/11/14/en-los-primeros-tres-anos-de-milei-cerraron-32-429-empresas-y-se-perdieron-467-989-empleos-registrados/",
-      "fuente": "GENESIS24.NET",
-      "t": 1794679324653
-     },
-     {
-      "titulo": "Bornoroni cree que Córdoba votará en marzo y acelera: lanza candidatos y propone bajar el inombiliario urbano",
-      "link": "https://www.letrap.com.ar/politica/bornoroni-cree-que-cordoba-votara-marzo-y-acelera-lanza-candidatos-y-propone-bajar-un-impuesto-rural-n5428205",
-      "fuente": "Letra P",
-      "t": 1794679324653
-     },
-     {
-      "titulo": "Un Sevilla de poderosa remada confirma el cambio de tornas en el derbi del Guadalquivir",
-      "link": "https://www.abc.es/deportes/sevilla/sevilla-poderosa-remada-confirma-cambio-tornas-derbi-20261114135035-nts.html",
-      "fuente": "ABC",
-      "t": 1794679324653
-     },
-     {
-      "titulo": "Córdoba: abrieron válvulas y compuertas en dos diques ante el pronóstico de lluvias",
-      "link": "https://diariosumario.com.ar/contenido/53223/cordoba-abrieron-valvulas-y-compuertas-en-dos-diques-ante-el-pronostico-de-lluvi",
-      "fuente": "diariosumario.com.ar",
-      "t": 1794679324653
-     },
-     {
-      "titulo": "Un sindicato aplicó un inusual \"paro a la japonesa\" en Aeroparque y Ezeiza: cuál es la situación para los pasajeros",
-      "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOUlZJWE9WeHhBRWN0cnBxWXNHRkx6RVFvTDZSYTFWR1RzMjlNU2lUYi1SWUw1ck93QmRQeGhDajdZams4dVlpRG9lamNVeWluOEhBVEo3SnA4WE5jcWFBdmp2TVZzSnlldWl1NzJyT2k0NGNfUlVSWU9Ec0NSNU9TLU9wZ0szRHNJMVRudnRTZTlxLW0wd2lqaERCV2I4RUJzMmg4Sy0tZzNhR00xcUlFZ0dOaWNmeG1zeExhZHU5ZnZNMnNXRnlHTXpQR3BFVXFMdzVBaml5Znc3WVhkZWNacjZTdDFSLTNLekc4ZVZB0gGIAkFVX3lxTE9ZaEtFQ3NKUVR5OWpHbHpIR2RDdGVmWTM2YUNvSS1BbUY5T3F1bTV1OHE5ekNmclJDZUJSUlZpdWZ4VW1vYmJqUF9hWjVjcUcyYWRLMXhQdXFpaGdISnU0Q3BUa2JKdkhfb2s3N1JnOVp2MUdaZ2VlYlo2bC1TVVdGcjFlUVNYbGhKQ2VhaWF3NWd0MU55NEI0RGh4SEVPUFJ2d2gyWEM5SWJkbnl1azhOdHpsUHZmZjZycWFuNE05YUpFc3ZUYl9DbThhbE94TDRmdHNIMV9KUkNQOEVIU2hqaGZpbFVCU3JsRW9Fb3NQdTV4MmhZSGQ0NElic0U3bm5hTl8ycjR3VA?oc=5",
-      "fuente": "Infobae",
-      "t": 1794679324653
-     },
-     {
-      "titulo": "En Argentina, 6,5 millones de personas mejoraron sus condiciones de vida, pero otras 4,8 millones empeoraron",
-      "link": "https://diarioelnorte.com.ar/argentina-condiciones-vida-indec-2026/",
-      "fuente": "Diario EL NORTE",
-      "t": 1794690074435
-     },
      {
       "titulo": "Cortes de luz de Epec para este domingo en Córdoba: los barrios y localidades afectadas",
       "link": "https://eldoce.tv/actualidad/2026/11/14/cortes-de-luz-de-epec-para-este-domingo-en-cordoba-los-barrios-y-localidades-afectadas/",
@@ -9910,6 +9897,42 @@
       "link": "https://www.semana.com/nacion/articulo/no-para-de-llover-en-colombia-se-pronostican-lluvias-para-este-viernes-20-de-noviembre-y-estas-seran-las-zonas-mas-afectadas/202623/",
       "fuente": "Semana",
       "t": 1795262365848
+     },
+     {
+      "titulo": "Detectan en Argentina la nueva variante de Covid PJ.2.1 y explican el aumento de casos",
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOQ2tNZ25sMU1NV1hiYWFldm9BTWpIUk1tMERnQWotRzAtXzRNVEZYelR3aXJNYUw3LU41S1p6OXptUjhEdHVJa0lLYnFJTkpwYTViOWdyWS1LMDhEWEJlZFdQVWNaV0RQcWtLWFBaT210ZFcxR2R1SmpudkVic09xZHFvX1UtamRjM1VyZTExMVd4eGZjOExXUGdFaTJrM0hYSVhfVEZqTjBrektEQlgzejNWd2Z0UDA0SUQwaGtsc3VzTWpwd0s5SUMwOTdmd25MTDJB?oc=5",
+      "fuente": "Telefe Córdoba",
+      "t": 1795273002302
+     },
+     {
+      "titulo": "La Corte devolvió al Estado el control de los aumentos de las prepagas",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNNk13YnppbU5QUmdKMW82NnlJS2VTVjRWVHRtMEtvaVVaRzVNbHRVRlFzUEJqQ3V1TU5aQlN3TWZxNUpuclpjandDZzA4SUFucl9QTlAyUEhuS1p0Z2lyd0F4dkdGTEFqLUhrcWxQeEtIV2w3clZkejJ1UmNQLTZRUF9MRll0US1OOVhrcXg5NERxTnA5VFpVdFN1a0hxRzNRcmhjbUlHemRfd2Fmc1RGUm5fVklJMERpdzc0?oc=5",
+      "fuente": "www.examedia.com.ar",
+      "t": 1795273002302
+     },
+     {
+      "titulo": "Enrique Rojas, psiquiatra de 77 años: \"El hombre se enamora por la vista y la mujer por el oído\"",
+      "link": "https://www.elconfidencial.com/alma-corazon-vida/2026-11-21/enrique-rojas-hombre-se-enamora-por-vista-mujer-por-oido-1qrt_4464763/",
+      "fuente": "El Confidencial",
+      "t": 1795273002302
+     },
+     {
+      "titulo": "Plan de Reducción de Impuestos 2026: el anuncio de Llaryora para dinamizar la economía cordobesa",
+      "link": "https://infonegocios.info/de-cordoba-al-pais/plan-de-reduccion-de-impuestos-2026-el-anuncio-de-llaryora-para-dinamizar-la-economia-cordobesa",
+      "fuente": "InfoNegocios",
+      "t": 1795273002302
+     },
+     {
+      "titulo": "Un viento devastador arrasó Calchín Oeste, en Córdoba: techos arrancados, hierros retorcidos y enormes destrozos en pocos minutos",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNQmJwblZEQ1VQaTRZcUF5SjFYcV85N201X2o1NkNhTkloZEJ6b2ROazNiSVVHTVEyalZxOU1hWE5ydFpTRUx4cWdOak1Oc1U5U1plLU5JSzVsTHY3RnpzOU1BMkg0Uk9WU0lJM1k3eXB4eUUteks3cXc5Ulo2blRyZDZ0ZTRCNjhTMi04MU9Lak9RRkpuVGFxQjgtWjJCdTk3aWxoOVlfcURZVWw0djFZZFdtUUJpNElab0o3T1VjYXYyUQ?oc=5",
+      "fuente": "Impacto Castex",
+      "t": 1795273002302
+     },
+     {
+      "titulo": "La Corte obliga a las prepagas a pedir permiso para aumentar las cuotas",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNcGNrd3N6cWVXa3VPVzRYQVFuN2M0VUdndTdsNlRzZzhpejNPSE5ERG5mbUtqcmQwYU1ZQm5VM3BZem9Db0xBRW1ZSzZHdDhPTkNleWYwQ3Zpc0JLUjN3Qkx6Y1N5c0JYQXJtMVRYbERkLVJHUzZSbmYyTFIyRzhxbzE3VEZyc3NMS09OM2xzamhKMUJ6MEZycURoUkpITGpJQTVYWVA3UXFwZXhia2JXa3I4OHdxQ2JCUmlocw?oc=5",
+      "fuente": "https://www.examedia.com.ar/",
+      "t": 1795273002302
      }
     ]
    }
@@ -9967,7 +9990,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1019,
+   "corridas": 1020,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9976,7 +9999,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-21T14:26:26.972Z",
+   "ultimaCorrida": "2026-11-21T14:56:34.290Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9986,7 +10009,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-21T14:26:26.972Z",
+    "ultimoChequeo": "2026-11-21T14:56:34.290Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10299,16 +10322,16 @@
      },
      "2026-11-21": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       23,
-       23
+       24,
+       24
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       23,
-       23
+       24,
+       24
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       23,
-       23
+       24,
+       24
       ]
      }
     }
@@ -10335,7 +10358,7 @@
   },
   "precio_mmo": {
    "estado": "listo",
-   "corridas": 173,
+   "corridas": 174,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10344,7 +10367,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-21T11:57:56.838Z",
+   "ultimaCorrida": "2026-11-21T14:56:34.290Z",
    "resumen": "🧱 Valor m² del Colegio de MMO\n\n• Ya están actualizados los precios de la construcción vigentes el mes de noviembre del 2026 (AyC Revista)\n  https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVGRmaDJFbDlINGs3OTJQZFRhRH",
    "informe": "data/informes/precio_mmo/2026-11-20-2357.md",
    "pausado": false,
@@ -10450,7 +10473,7 @@
      "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
      "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
     ],
-    "ultimoChequeo": "2026-11-21T11:57:56.838Z",
+    "ultimoChequeo": "2026-11-21T14:56:34.290Z",
     "semana": [
      {
       "titulo": "Construir una casa de 80 m² ya supera los $161 millones y el metro cuadrado alcanza los $2,05 millones",
@@ -20247,7 +20270,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1001,
+   "corridas": 1002,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20256,13 +20279,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-21T14:26:26.972Z",
+   "ultimaCorrida": "2026-11-21T14:56:34.290Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-21",
-    "ultimoChequeo": "2026-11-21T14:26:26.972Z"
+    "ultimoChequeo": "2026-11-21T14:56:34.290Z"
    }
   },
   "feriados": {
@@ -20454,6 +20477,31 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-21T14:56:34.290Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-21T14:56:34.290Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-21T14:56:34.290Z",
+   "quien": "Clima para la obra",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-21T14:56:34.290Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-21T14:56:34.290Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-21T14:26:26.972Z",
    "quien": "Mesa de entrada",
@@ -21928,38 +21976,10 @@
    "t": "2026-11-20T07:41:48.489Z",
    "quien": "Clima para la obra",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-20T07:41:48.489Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-20T07:41:48.489Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-20T07:11:35.344Z",
-   "quien": "Mundo: economía",
-   "que": "no pude leer «India Brasil economía»: respondió 429"
-  },
-  {
-   "t": "2026-11-20T07:11:35.344Z",
-   "quien": "Mundo: economía",
-   "que": "no pude leer «Japón economía»: respondió 429"
-  },
-  {
-   "t": "2026-11-20T07:11:35.344Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «\"El Diario del Centro del País\"»: respondió 429"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1527": "noticias_vm",
-  "1528": "noticias_vm",
-  "1529": "noticias_ar",
   "1530": "noticias_ar",
   "1531": "noticias_tec",
   "1532": "mundo_economia",
@@ -22456,7 +22476,10 @@
   "2178": "comidas",
   "2179": "tarifas",
   "2180": "noticias_tec",
-  "2181": "dolar"
+  "2181": "dolar",
+  "2182": "clima",
+  "2183": "vencimientos",
+  "2184": "tarifas"
  },
  "tgOffset": 196508528,
  "hechos": {
@@ -22474,7 +22497,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-21T14:26:26.972Z",
+ "actualizado": "2026-11-21T14:56:34.290Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
