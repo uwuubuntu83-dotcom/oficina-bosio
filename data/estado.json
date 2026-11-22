@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1063,
+   "corridas": 1064,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -11,10 +11,10 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-21",
-   "ultimaCorrida": "2026-11-22T13:18:32.618Z",
-   "resumen": "💵 Dólar hoy (10:56 hs)\n• Oficial: compra $1550 · venta $1600\n• Blue: compra $1655 · venta $1675\n• Bolsa: compra $1682.6 · venta $1743.1\n• Contado con liquidación: compra $1801.4 · venta $1806.2\n• Mayorista: compra $1571",
-   "informe": "data/informes/dolar/2026-11-21-1056.md",
+   "ultimaFecha": "2026-11-22",
+   "ultimaCorrida": "2026-11-22T13:48:47.889Z",
+   "resumen": "💵 Dólar hoy (10:48 hs)\n• Oficial: compra $1550 · venta $1600\n• Blue: compra $1655 · venta $1675\n• Bolsa: compra $1682.6 · venta $1743.1\n• Contado con liquidación: compra $1801.4 · venta $1806.2\n• Mayorista: compra $1571",
+   "informe": "data/informes/dolar/2026-11-22-1048.md",
    "pausado": false,
    "memoria": {
     "dolarBase": {
@@ -23,7 +23,7 @@
      "bolsa": 1743.1,
      "contadoconliqui": 1806.2,
      "mayorista": 1580,
-     "cripto": 1768.62,
+     "cripto": 1768.85,
      "tarjeta": 2080
     },
     "dolarFecha": "2026-11-22",
@@ -33,11 +33,11 @@
      "bolsa": 1743.1,
      "contadoconliqui": 1806.2,
      "mayorista": 1580,
-     "cripto": 1768.62,
+     "cripto": 1768.85,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-22T13:18:32.618Z",
-    "resumenFecha": "2026-11-21",
+    "ultimoChequeo": "2026-11-22T13:48:47.889Z",
+    "resumenFecha": "2026-11-22",
     "hist": {
      "2026-10-30": {
       "oficial": 1560,
@@ -5693,7 +5693,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-21",
    "ultimaCorrida": "2026-11-21T20:31:31.855Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 1007 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 1037 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -9915,7 +9915,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1063,
+   "corridas": 1064,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9924,7 +9924,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-22T13:18:32.618Z",
+   "ultimaCorrida": "2026-11-22T13:48:47.889Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -9934,7 +9934,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-22T13:18:32.618Z",
+    "ultimoChequeo": "2026-11-22T13:48:47.889Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10261,16 +10261,16 @@
      },
      "2026-11-22": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       21,
-       21
+       22,
+       22
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       21,
-       21
+       22,
+       22
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       21,
-       21
+       22,
+       22
       ]
      }
     }
@@ -20226,7 +20226,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1045,
+   "corridas": 1046,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20235,13 +20235,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-22T13:18:32.618Z",
+   "ultimaCorrida": "2026-11-22T13:48:47.889Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-22",
-    "ultimoChequeo": "2026-11-22T13:18:32.618Z"
+    "ultimoChequeo": "2026-11-22T13:48:47.889Z"
    }
   },
   "feriados": {
@@ -20433,6 +20433,21 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-22T13:48:47.889Z",
+   "quien": "Dólar",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-22T13:48:47.889Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-22T13:48:47.889Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-22T13:18:32.618Z",
    "quien": "Contador y consejero financiero",
@@ -21917,26 +21932,10 @@
    "t": "2026-11-20T23:58:11.791Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-20T23:28:33.006Z",
-   "quien": "Gerente general",
-   "que": "mandó el parte del día (sin IA)"
-  },
-  {
-   "t": "2026-11-20T23:28:33.006Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-20T23:28:33.006Z",
-   "quien": "Mundo: tecnología",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1598": "mundo_tecnologia",
   "1599": "mundo_tecnologia",
   "1600": "mundo_salud",
   "1601": "tarifas",
@@ -22435,7 +22434,8 @@
   "2258": "vencimientos",
   "2259": "tarifas",
   "2260": "licitaciones",
-  "2261": "consejero"
+  "2261": "consejero",
+  "2262": "dolar"
  },
  "tgOffset": 196508528,
  "hechos": {
@@ -22453,7 +22453,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-22T13:18:32.618Z",
+ "actualizado": "2026-11-22T13:48:47.889Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
