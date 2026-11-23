@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1119,
+   "corridas": 1120,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-23",
-   "ultimaCorrida": "2026-11-23T17:25:41.411Z",
+   "ultimaCorrida": "2026-11-23T17:56:06.929Z",
    "resumen": "💵 Dólar hoy (10:57 hs)\n• Oficial: compra $1550 · venta $1600\n• Blue: compra $1655 · venta $1675\n• Bolsa: compra $1682.6 · venta $1743.1\n• Contado con liquidación: compra $1801.4 · venta $1806.2\n• Mayorista: compra $1571",
    "informe": "data/informes/dolar/2026-11-23-1057.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1762.55,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-23T17:25:41.411Z",
+    "ultimoChequeo": "2026-11-23T17:56:06.929Z",
     "resumenFecha": "2026-11-23",
     "hist": {
      "2026-10-30": {
@@ -5864,13 +5864,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-23",
-   "ultimaCorrida": "2026-11-23T17:22:46.612Z",
+   "ultimaCorrida": "2026-11-23T17:53:33.445Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795454566612,
+     "t": 1795456413445,
      "redes_hoy": {
       "publicaciones": 0,
       "historias": 0,
@@ -10163,7 +10163,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1119,
+   "corridas": 1120,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10172,7 +10172,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-23T17:25:41.411Z",
+   "ultimaCorrida": "2026-11-23T17:56:06.929Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10182,7 +10182,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-23T17:25:41.411Z",
+    "ultimoChequeo": "2026-11-23T17:56:06.929Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10523,16 +10523,16 @@
      },
      "2026-11-23": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       29,
-       29
+       30,
+       30
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       29,
-       29
+       30,
+       30
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       29,
-       29
+       30,
+       30
       ]
      }
     }
@@ -20199,7 +20199,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1101,
+   "corridas": 1102,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20208,13 +20208,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-23T17:25:41.411Z",
+   "ultimaCorrida": "2026-11-23T17:56:06.929Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-23",
-    "ultimoChequeo": "2026-11-23T17:25:41.411Z"
+    "ultimoChequeo": "2026-11-23T17:56:06.929Z"
    }
   },
   "feriados": {
@@ -20406,6 +20406,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-23T17:56:06.929Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-23T17:56:06.929Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-23T17:25:41.411Z",
    "quien": "Mundo: salud y ciencia",
@@ -21895,16 +21905,6 @@
    "t": "2026-11-22T07:15:33.524Z",
    "quien": "Mundo: salud y ciencia",
    "que": "no pude leer «OMS salud mundial»: respondió 429"
-  },
-  {
-   "t": "2026-11-22T07:15:33.524Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "no pude leer «Estados Unidos salud avance médico»: respondió 429"
-  },
-  {
-   "t": "2026-11-22T07:15:33.524Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "no pude leer «Japón salud ciencia»: respondió 429"
   }
  ],
  "pendientes": [],
@@ -22426,7 +22426,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-23T17:25:41.411Z",
+ "actualizado": "2026-11-23T17:56:06.929Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
