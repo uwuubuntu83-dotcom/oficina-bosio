@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1121,
+   "corridas": 1122,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-23",
-   "ultimaCorrida": "2026-11-23T18:25:49.524Z",
+   "ultimaCorrida": "2026-11-23T18:55:54.333Z",
    "resumen": "💵 Dólar hoy (10:57 hs)\n• Oficial: compra $1550 · venta $1600\n• Blue: compra $1655 · venta $1675\n• Bolsa: compra $1682.6 · venta $1743.1\n• Contado con liquidación: compra $1801.4 · venta $1806.2\n• Mayorista: compra $1571",
    "informe": "data/informes/dolar/2026-11-23-1057.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1762.55,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-23T18:25:49.524Z",
+    "ultimoChequeo": "2026-11-23T18:55:54.333Z",
     "resumenFecha": "2026-11-23",
     "hist": {
      "2026-10-30": {
@@ -5934,7 +5934,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "falló",
+   "estado": "listo",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -5944,13 +5944,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-23",
-   "ultimaCorrida": "2026-11-23T18:24:35.640Z",
-   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
+   "ultimaCorrida": "2026-11-23T18:55:36.771Z",
+   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795458275640,
+     "t": 1795460136771,
      "redes_hoy": {
       "publicaciones": 0,
       "historias": 0,
@@ -5959,7 +5959,18 @@
       "gringo": 0,
       "errores": 0,
       "reinicios": 0,
-      "ultimas": []
+      "ultimas": [
+       "15:47 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "15:48 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "15:48 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La imagen",
+       "15:48 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La ima",
+       "15:49 LOTE: IA guía (cloudflare:@cf/meta/llama-4-scout-17b-16e-instruct) para «abrir el Menú de Facebook (el de la pest»: {'numero': 1, 'listo': False, 'p",
+       "15:49 LOTE: IA guía (cloudflare:@cf/meta/llama-4-scout-17b-16e-instruct) para «abrir el Menú de Facebook (el de la pest»: {'numero': 1, 'listo': False, 'p",
+       "15:49 LOTE: Facebook vuelve a quedar en la Página",
+       "15:49 LOTE: turno: device offline",
+       "15:53 Instagram: ahora en @maestromayordeobrasjb",
+       "15:54 Foto IA lista (Gemini, gratis) – 1/18 hoy"
+      ]
      }
     },
     "avisoSinSenal": "2026-11-21T20:31:31.855Z",
@@ -6318,7 +6329,18 @@
       "gringo": 0,
       "errores": 0,
       "reinicios": 0,
-      "ultimas": []
+      "ultimas": [
+       "15:47 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "15:48 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La pantal",
+       "15:48 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La imagen",
+       "15:48 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «abrir el Menú de Facebook (el de la pest»: {'numero': None, 'listo': False, 'por_que': 'La ima",
+       "15:49 LOTE: IA guía (cloudflare:@cf/meta/llama-4-scout-17b-16e-instruct) para «abrir el Menú de Facebook (el de la pest»: {'numero': 1, 'listo': False, 'p",
+       "15:49 LOTE: IA guía (cloudflare:@cf/meta/llama-4-scout-17b-16e-instruct) para «abrir el Menú de Facebook (el de la pest»: {'numero': 1, 'listo': False, 'p",
+       "15:49 LOTE: Facebook vuelve a quedar en la Página",
+       "15:49 LOTE: turno: device offline",
+       "15:53 Instagram: ahora en @maestromayordeobrasjb",
+       "15:54 Foto IA lista (Gemini, gratis) – 1/18 hoy"
+      ]
      }
     }
    }
@@ -10243,7 +10265,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1121,
+   "corridas": 1122,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10252,7 +10274,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-23T18:25:49.524Z",
+   "ultimaCorrida": "2026-11-23T18:55:54.333Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10262,7 +10284,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-23T18:25:49.524Z",
+    "ultimoChequeo": "2026-11-23T18:55:54.333Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10603,16 +10625,16 @@
      },
      "2026-11-23": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       31,
-       31
+       32,
+       32
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       31,
-       31
+       32,
+       32
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       31,
-       31
+       32,
+       32
       ]
      }
     }
@@ -20482,7 +20504,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1103,
+   "corridas": 1104,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20491,13 +20513,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-23T18:25:49.524Z",
+   "ultimaCorrida": "2026-11-23T18:55:54.333Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-23",
-    "ultimoChequeo": "2026-11-23T18:25:49.524Z"
+    "ultimoChequeo": "2026-11-23T18:55:54.333Z"
    }
   },
   "feriados": {
@@ -20669,7 +20691,7 @@
    "memoria": {}
   },
   "lote_fb": {
-   "estado": "sin señal",
+   "estado": "falló",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -20678,9 +20700,9 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-21",
-   "ultimaCorrida": "2026-11-21T19:09:00.000Z",
-   "resumen": "Publicando · hoy: 0 · error: no pude abrir el menú de Facebook · grupos: TRATO HECHO VILLA MARIA 3, TRATO HECHO VILLA MARIA, Trato Hecho Villa Maria 1, TRATO HECHO VILLA MARIA/VILLA NUEVA",
+   "ultimaFecha": "2026-11-23",
+   "ultimaCorrida": "2026-11-23T18:49:00.000Z",
+   "resumen": "Publicando · hoy: 0 · error: device offline · grupos: TRATO HECHO VILLA MARIA 3, TRATO HECHO VILLA MARIA, Trato Hecho Villa Maria 1, TRATO HECHO VILLA MARIA/VILLA NUEVA",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -20689,6 +20711,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-23T18:55:54.333Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-23T18:55:54.333Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-23T18:25:49.524Z",
    "quien": "Mesa de entrada",
@@ -22178,16 +22210,6 @@
    "t": "2026-11-22T07:44:41.644Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-22T07:15:33.524Z",
-   "quien": "Lo último en tecnología",
-   "que": "no pude leer «celulares lanzamiento»: respondió 429"
-  },
-  {
-   "t": "2026-11-22T07:15:33.524Z",
-   "quien": "Lo último en tecnología",
-   "que": "no pude leer «programación software novedades»: respondió 429"
   }
  ],
  "pendientes": [],
@@ -22709,7 +22731,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-23T18:25:49.524Z",
+ "actualizado": "2026-11-23T18:55:54.333Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
