@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1171,
+   "corridas": 1172,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,9 +12,9 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T19:49:41.652Z",
-   "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 3.0% → $1690.5\nCripto: subió 2.4% → $1786.59\n\n💵 Dólar hoy (16:21 hs)\n• Oficial: compra $1565 · venta $1615 (+0.9%)\n• Blue: compra $1680 · venta $1700 (+1.5%)\n• Bolsa: compra $1",
-   "informe": "data/informes/dolar/2026-11-24-1621.md",
+   "ultimaCorrida": "2026-11-24T20:20:00.795Z",
+   "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 2.8% → $1695.1\n\n💵 Dólar hoy (17:20 hs)\n• Oficial: compra $1565 · venta $1615 (+0.9%)\n• Blue: compra $1680 · venta $1700 (+1.5%)\n• Bolsa: compra $1677.6 · venta $1695.1 (-2.8%)\n",
+   "informe": "data/informes/dolar/2026-11-24-1720.md",
    "pausado": false,
    "memoria": {
     "dolarBase": {
@@ -36,7 +36,7 @@
      "cripto": 1744.12,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-24T19:49:41.652Z",
+    "ultimoChequeo": "2026-11-24T20:20:00.795Z",
     "resumenFecha": "2026-11-24",
     "hist": {
      "2026-10-30": {
@@ -267,14 +267,14 @@
      "2026-11-24": {
       "oficial": 1615,
       "blue": 1700,
-      "bolsa": 1690.5,
-      "contadoconliqui": 1791.9,
+      "bolsa": 1695.1,
+      "contadoconliqui": 1797.1,
       "mayorista": 1593,
-      "cripto": 1786.59,
+      "cripto": 1775.58,
       "tarjeta": 2099.5
      }
     },
-    "ultimaAlerta": "Bolsa: bajó 3.0% → $1690.5|Cripto: subió 2.4% → $1786.59"
+    "ultimaAlerta": "Bolsa: bajó 2.8% → $1695.1"
    }
   },
   "inmuebles": {
@@ -5978,32 +5978,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T19:47:27.146Z",
+   "ultimaCorrida": "2026-11-24T20:18:46.488Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795549647146,
+     "t": 1795551526488,
      "redes_hoy": {
-      "publicaciones": 17,
-      "historias": 26,
+      "publicaciones": 19,
+      "historias": 27,
       "reels": 15,
-      "seguidos": 64,
+      "seguidos": 69,
       "gringo": 2,
-      "errores": 26,
-      "reinicios": 16,
+      "errores": 27,
+      "reinicios": 17,
       "ultimas": [
-       "16:35 Post elegido de #hormigon",
-       "16:36 ✔ Historia compartida (avioncito)",
-       "16:38 ✔ Facebook: la Página siguió a otra página (1/3)",
-       "16:41 Instagram: ahora en @soycordobes.jpg",
-       "16:41 ✔ Memes: seguido (1/6) seguidores de @eldinosaurio_",
-       "16:42 ✔ Memes: seguido (2/6) seguidores de @eldinosaurio_",
-       "16:43 ✔ Memes: seguido (3/6) seguidores de @eldinosaurio_",
-       "16:44 ✔ Memes: seguido (4/6) seguidores de @eldinosaurio_",
-       "16:44 ✔ Memes: seguido (5/6) seguidores de @eldinosaurio_",
-       "16:45 ✔ Memes: seguido (6/6) seguidores de @eldinosaurio_"
+       "16:59 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "16:59 Celular conectado: SM-A515F | pantalla 2400x1080",
+       "17:02 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "17:04 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
+       "17:05 Instagram: ahora en @maestromayordeobrasjb",
+       "17:06 ✔ Seguido (1/6): @will_self (Will Self), seguidor de @materia.arquitectura (#cordobaargentina)",
+       "17:08 ✔ Seguido (2/6): @bererosset (Bere Rosset), seguidor de @materia.arquitectura (#cordobaargentina)",
+       "17:10 ✔ Seguido (3/6): @salvadortovar27 (Salvador Tovar), seguidor de @materia.arquitectura (#cordobaargentina)",
+       "17:14 ✔ Seguido (4/6): @sofissolo (Sofia Fissolo), seguidor de @lasalvadorapizzas (#carlospaz)",
+       "17:16 ✔ Seguido (5/6): @maicol__sz (Maicol Sz), seguidor de @lasalvadorapizzas (#carlospaz)"
       ]
      }
     },
@@ -6377,24 +6377,24 @@
       ]
      },
      "2026-11-24": {
-      "publicaciones": 17,
-      "historias": 26,
+      "publicaciones": 19,
+      "historias": 27,
       "reels": 15,
-      "seguidos": 64,
+      "seguidos": 69,
       "gringo": 2,
-      "errores": 26,
-      "reinicios": 16,
+      "errores": 27,
+      "reinicios": 17,
       "ultimas": [
-       "16:35 Post elegido de #hormigon",
-       "16:36 ✔ Historia compartida (avioncito)",
-       "16:38 ✔ Facebook: la Página siguió a otra página (1/3)",
-       "16:41 Instagram: ahora en @soycordobes.jpg",
-       "16:41 ✔ Memes: seguido (1/6) seguidores de @eldinosaurio_",
-       "16:42 ✔ Memes: seguido (2/6) seguidores de @eldinosaurio_",
-       "16:43 ✔ Memes: seguido (3/6) seguidores de @eldinosaurio_",
-       "16:44 ✔ Memes: seguido (4/6) seguidores de @eldinosaurio_",
-       "16:44 ✔ Memes: seguido (5/6) seguidores de @eldinosaurio_",
-       "16:45 ✔ Memes: seguido (6/6) seguidores de @eldinosaurio_"
+       "16:59 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "16:59 Celular conectado: SM-A515F | pantalla 2400x1080",
+       "17:02 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "17:04 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
+       "17:05 Instagram: ahora en @maestromayordeobrasjb",
+       "17:06 ✔ Seguido (1/6): @will_self (Will Self), seguidor de @materia.arquitectura (#cordobaargentina)",
+       "17:08 ✔ Seguido (2/6): @bererosset (Bere Rosset), seguidor de @materia.arquitectura (#cordobaargentina)",
+       "17:10 ✔ Seguido (3/6): @salvadortovar27 (Salvador Tovar), seguidor de @materia.arquitectura (#cordobaargentina)",
+       "17:14 ✔ Seguido (4/6): @sofissolo (Sofia Fissolo), seguidor de @lasalvadorapizzas (#carlospaz)",
+       "17:16 ✔ Seguido (5/6): @maicol__sz (Maicol Sz), seguidor de @lasalvadorapizzas (#carlospaz)"
       ]
      }
     }
@@ -6493,7 +6493,7 @@
   },
   "vencimientos": {
    "estado": "listo",
-   "corridas": 199,
+   "corridas": 200,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -6502,12 +6502,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-24T17:21:12.866Z",
-   "resumen": "🧾 Vencimientos e impuestos\n\n• ARCA devuelve dinero a monotributistas: quiénes pueden cobrarlo y qué requisito es clave (Diario de Cuyo)\n  https://news.google.com/rss/articles/CBMi0AFBVV95cUxNbHdNOUY4NnByRUtyaE9BazN6eThW",
-   "informe": "data/informes/vencimientos/2026-11-24-1421.md",
+   "ultimaCorrida": "2026-11-24T20:20:00.795Z",
+   "resumen": "🧾 Vencimientos e impuestos\n\n• Monotributo: cómo cobrar en marzo de 2027 el reintegro de un mes que paga ARCA (www.examedia.com.ar)\n  https://news.google.com/rss/articles/CBMiXkFVX3lxTE1IWXFVOE5vNjNiSnFPbV9lMjlRZWlXOVV1O",
+   "informe": "data/informes/vencimientos/2026-11-24-1720.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "monotributo: cómo cobrar en marzo de 2027 el reintegro de un mes que paga arca",
+     "monotributistas: pagan todos los meses por una obra social, pero ¿están realmente cubierto",
+     "¿por qué sube el dólar?: los 8 factores que impulsaron la cotización oficial a un nuevo ré",
+     "el dólar supera por primera vez los $1.600 en el banco nación y alcanza precios récord en ",
+     "ganancias de sociedades: cómo deberán hacerse las presentaciones y qué cambia de las recti",
+     "¿tu negocio tendrá que dar factura electrónica? lo que decide la dgii el 30 y qué pasa con",
      "arca devuelve dinero a monotributistas: quiénes pueden cobrarlo y qué requisito es clave",
      "arca devuelve dinero a monotributistas: cuáles son los requisitos para acceder al benefici",
      "cómo inscribir a un nuevo trabajador y pagar menos cargas patronales con el rifl",
@@ -6952,38 +6958,8 @@
      "arca modifica la emisión de facturas del monotributo social desde noviembre",
      "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
     ],
-    "ultimoChequeo": "2026-11-24T17:21:12.866Z",
+    "ultimoChequeo": "2026-11-24T20:20:00.795Z",
     "semana": [
-     {
-      "titulo": "ARCA habilita la financiación de deudas hasta en 18 cuotas para pagos de las pymes: quiénes pueden acceder",
-      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNWGZqMEZnN1VfVkRqSXJvdW5xbGp0bFd2WU5TZ0hGM21xeU1BSVkwbjhYTHhxNERRWU1RRHc0elpTaUxSN19JclRHOEJrOFlZRnJKZlhIcUZyVHJBM0lPUFVwX0JDc1F3Y2Z3MFljOGVPdW4yMDZ0ZVViRUZONDlwcFY2dzBRdmI1cXpFVVpvWjRFZkllcVJLNldLSmg1dDA4M0h4VGtMMUtiN2xSWk9SSXhJdTFIeV9vZS1US3pxazdBNUM5UjdoaUNSUlA5YmdIQXJVd0ZBQU1NcXBoem1KOVBFcw?oc=5",
-      "fuente": "Radio Mitre",
-      "t": 1794857175505
-     },
-     {
-      "titulo": "Monotributo: qué pasa si no pagás la cuota de noviembre antes del 20",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNcGVuWl95MHhxUGp0c0JtLVV2QmhrYzdWTjdZUEktSUVmMzNScUt2eHhIdERYUlUwY3dFcG9hVDlpdExZeGtycEt5VmE0dzh1SHVYbDdQNWZ1SXMzcFRwVGNzd0U0QlZzczc5ZTJvM0taTXIwYWFUbDBNTWNXLVRreE9tRVYzYTNKMXVWMFN0MkstMlVFNk4wXzNwVFY0T0ZENU1mUEFpbWRtSk9ndjQ5RWRuZmxLWUo0Z0thYUU3bw?oc=5",
-      "fuente": "MDZ Online",
-      "t": 1794857175505
-     },
-     {
-      "titulo": "Córdoba: Llaryora envía señales a la Rosada con el presupuesto provincial 2027",
-      "link": "https://www.lanacion.com.ar/politica/cordoba-llaryora-envia-senales-a-la-rosada-con-el-presupuesto-provincial-2027-nid16112026/",
-      "fuente": "LA NACION",
-      "t": 1794857175505
-     },
-     {
-      "titulo": "Córdoba reducirá impuestos en 2027: cuáles serán los principales beneficios del Presupuesto provincial",
-      "link": "https://elobjetivo.com.ar/contenido/103102/cordoba-reducira-impuestos-en-2027-cuales-seran-los-principales-beneficios-del-p",
-      "fuente": "elobjetivo.com.ar",
-      "t": 1794857175505
-     },
-     {
-      "titulo": "Martín Llaryora presentó el Presupuesto 2027 con una fuerte baja de impuestos en Córdoba",
-      "link": "https://www.cba24n.com.ar/cordoba/martin-llaryora-presento-el-presupuesto-2027-con-una-fuerte-baja-de-impuestos-en-cordoba_a6afaca4408c18f80ee7c88f5",
-      "fuente": "Cba24n",
-      "t": 1794857175505
-     },
      {
       "titulo": "Llaryora y una baja de impuestos en el Presupuesto 2027: qué pasará con el Inmobiliario e Ingresos Brutos",
       "link": "https://viapais.com.ar/cordoba/llaryora-baja-impuestos-presupuesto-2027-pasara-inmobiliario-ingresos-brutos_0_k2Ufyajza8.html",
@@ -7817,13 +7793,49 @@
       "link": "https://www.infobae.com/economia/2026/11/19/todo-lo-que-hay-que-saber-sobre-el-aguinaldo-cuando-se-cobra-cuanto-se-paga-y-como-se-calcula-para-cada-empleado/",
       "fuente": "Infobae",
       "t": 1795540878837
+     },
+     {
+      "titulo": "Monotributo: cómo cobrar en marzo de 2027 el reintegro de un mes que paga ARCA",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1IWXFVOE5vNjNiSnFPbV9lMjlRZWlXOVV1OUV1TFJjSElpRkI3Z2FIWUtBdVJmUW14Z0RMYlVSX2dVVmd1dG5IOWJSMFpIMmZ0TGZsX2FWSWpOZjBTa3c?oc=5",
+      "fuente": "www.examedia.com.ar",
+      "t": 1795551606671
+     },
+     {
+      "titulo": "Monotributistas: pagan todos los meses por una obra social, pero ¿están realmente cubiertos?",
+      "link": "https://desarrollozonal.com/monotributistas-pagan-todos-los-meses-por-una-obra-social-pero-estan-realmente-cubiertos/",
+      "fuente": "desarrollozonal.com",
+      "t": 1795551606671
+     },
+     {
+      "titulo": "¿Por qué sube el dólar?: los 8 factores que impulsaron la cotización oficial a un nuevo récord",
+      "link": "https://www.infobae.com/economia/2026/11/24/por-que-sube-el-dolar-los-8-factores-que-impulsaron-la-cotizacion-oficial-a-un-nuevo-record/",
+      "fuente": "Infobae",
+      "t": 1795551606671
+     },
+     {
+      "titulo": "El dólar supera por primera vez los $1.600 en el Banco Nación y alcanza precios récord en todos los segmentos",
+      "link": "https://www.infobae.com/economia/2026/11/24/el-dolar-supera-los-1600-en-el-banco-nacion-y-alcanza-precios-record-en-todos-los-segmentos/",
+      "fuente": "Infobae",
+      "t": 1795551606671
+     },
+     {
+      "titulo": "Ganancias de sociedades: cómo deberán hacerse las presentaciones y qué cambia de las rectificativas",
+      "link": "https://www.cronista.com/economia-politica/ganancias-de-sociedades-como-deberan-hacerse-las-presentaciones-y-que-cambia-de-las-rectificativas/",
+      "fuente": "El Cronista",
+      "t": 1795551606671
+     },
+     {
+      "titulo": "¿Tu negocio tendrá que dar factura electrónica? Lo que decide la DGII el 30 y qué pasa con colmados",
+      "link": "https://revistamercado.do/market-brief/finanzas/tu-negocio-tendra-que-dar-factura-electronica-lo-que-decide-la-dgii-el-30-y-que-pasa-con-colmados/",
+      "fuente": "Revista Mercado",
+      "t": 1795551606671
      }
     ]
    }
   },
   "tarifas": {
    "estado": "listo",
-   "corridas": 200,
+   "corridas": 201,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7832,12 +7844,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-24T17:21:12.866Z",
-   "resumen": "🧾 Aumentos de servicios\n\n• Luego de las últimas lluvias, así están los niveles de los diques de Córdoba (El Diario de Carlos Paz)\n  https://news.google.com/rss/articles/CBMi4gFBVV95cUxQR3FPVEROOW42NHVZQ1BuZGRmN0hxNVQtTn",
-   "informe": "data/informes/tarifas/2026-11-24-1421.md",
+   "ultimaCorrida": "2026-11-24T20:20:00.795Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• Agustín Pecantet ganó en Córdoba y ahora sueña con organizar una gran competencia en Rafaela (Radio Rafaela)\n  https://news.google.com/rss/articles/CBMixwFBVV95cUxNa2pCbWhJclB4dnNhUGNSVHNKcVFf",
+   "informe": "data/informes/tarifas/2026-11-24-1720.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "agustín pecantet ganó en córdoba y ahora sueña con organizar una gran competencia en rafae",
+     "martín llaryora dispuso la unificación definitiva del régimen laboral de salud",
+     "el dólar en córdoba: cuánto a cotiza este martes 24 de noviembre",
+     "polémica entre las petroleras y massa por un proyecto que las obligaría a informar los aum",
+     "recesión técnica: argentina registró dos trimestres de caída en la actividad económica",
+     "¡golpe al bolsillo! tortilla y masa aumentan un peso por kilogramo",
      "luego de las últimas lluvias, así están los niveles de los diques de córdoba",
      "dengue: córdoba confirmó los primeros dos casos importados de la temporada y reforzó la pr",
      "clima en córdoba: cómo seguirá el tiempo este martes 24 de noviembre",
@@ -8431,52 +8449,10 @@
      "directo a... bogotá y el aumento de los ataques de grupos armados en colombia",
      "tarifa de luz: el epre aclaró que todavía no autorizó el aumento del 45% que pidió la dist",
      "distritos de lima sin agua del 10 al 12 de noviembre: ¿qué zonas se verán afectadas por el",
-     "clima en córdoba: muy nuboso y 25 grados para este martes 10 de noviembre",
-     "cenepred: el niño amenaza a 19 millones de peruanos que viven en zonas de alto riesgo",
-     "cierran 40 negocios en córdoba; canacintra atribuye la crisis al aumento de costos laboral",
-     "reporta municipio aumento de 325 mdp en ingresos propios, pero tuvo un recorte de 156 mdp ",
-     "caída del 13,4 % en la producción de gas eleva a récord histórico las importaciones de col",
-     "la provincia de buenos aires convocó a una audiencia pública para definir las tarifas de l",
-     "el papa congrega a miles de fieles en córdoba tras encabezar la misa más masiva de su pont"
+     "clima en córdoba: muy nuboso y 25 grados para este martes 10 de noviembre"
     ],
-    "ultimoChequeo": "2026-11-24T17:21:12.866Z",
+    "ultimoChequeo": "2026-11-24T20:20:00.795Z",
     "semana": [
-     {
-      "titulo": "Paritaria docente en Córdoba: el Gobierno garantizará la canasta básica para el cargo de maestro con 28 horas",
-      "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNUV5UmQxVmV4MkVRLU5FeWVkTmRVQkttSVVmM29DamZPUC1vXzJDVzNVX3otb0ZTbzZFSV85ZGFmZFE0MW1nVFdKNHJtaThGRDRHSkJVUEhTNm5nOFNVNHpzQXotQXB4Yloyb24zakVWYWE1d2tYX1d3NzFxR1FKSHpnc3NBaWFDS0toSTM0UW5sQXJ2NDRYaElTNDNjemdtWmdzcDJCc3Q1NGZJVkNjVEZ6TEp2OHc1cC1CRHh0TzQ3YmFBclg3N0wyMVVURHJobkE?oc=5",
-      "fuente": "La Voz del Interior",
-      "t": 1794977579961
-     },
-     {
-      "titulo": "Lima y Callao batieron récords de calor en noviembre: la temperatura más alta fue en Carabayllo con 33 °C",
-      "link": "https://www.infobae.com/peru/2026/11/17/lima-y-callao-batieron-records-de-calor-en-noviembre-la-temperatura-mas-alta-fue-en-carabayllo-con-33-c/",
-      "fuente": "Infobae",
-      "t": 1794977579961
-     },
-     {
-      "titulo": "Sedapal cortará el agua hasta por 13 horas en estos distritos de Lima este miércoles 18 de noviembre",
-      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQU0NKZE8yeGdiOV91czlXMzNFbG12ZnJJRXJ1SjRYbDlBcy1QcEtjZW5pZnVFaHRZVHRIQURVLTVpdTdfeFBLMGxkUzVnV0k3X3VSdUhJc2stNWF4d2Y1ZGFZcDhwa0dNdTVrVXhsTXJYTTNhYXdDc3c3eFpmT3hfa2NwY0lRWTFKZ0RPMnlsWGFjRjhKdU9tZTVGMFViSmV1RExDQWw1cDNSS2c3VmRXSlFVeW0xaVM3Sm1tMVppZW4wLUl6Z0lzT1U5X1NSaXlBRUtfYjNuWHhWQm41QXBXNDRR0gHiAUFVX3lxTFBTQ0pkTzJ4Z2I5X3VzOVczM0VsbXZmcklFcnVKNFhsOUFzLVBwS2NlbmlmdUVodFlUdEhBRFUtNWl1N194UEswbGRTNWdXSTdfdVJ1SElzay01YXh3ZjVkYVlwOHBrR011NWtVeGxNclhNM2Fhd0Nzdzd4WmZPeF9rY3BjSVFZMUpnRE8yeWxYYWNGOEp1T21lNUYwVWJKZXVETENBbDVwM1JLZzdWZFdKUVV5bTFpUzdKbW0xWmllbjAtSXpnSXNPVTlfU1JpeUFFS19iM25YeFZCbjVBcFc0NFE?oc=5",
-      "fuente": "La República",
-      "t": 1794988247217
-     },
-     {
-      "titulo": "Clima en Córdoba: cómo estará el tiempo este miércoles 18 de noviembre",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORE94Tm9Sb0xna0tyd01BTzJSRnA4eUJPTW1ibVkydjdDWTVaMVYwcjJfc0pxeGN1X1cxUkJ3Q0Q0WVV0akliSTVnaVBqNDgxcDJYU2NZUHU3TzVBb1RnZG14Ml9lTVFSTW8wc1ZWejF6V3d5UmluWVpSVjNuM2tEMDFZcFpYYTlVczdQTDExa2Q5cjQ1bnVpTG91Vk9kOVZwOXpTWG0zU25TbDdsSC1FdnZXNkXSAboBQVVfeXFMTzFxNzZqUEJUQVVvMktNSEh2S1BkdHpfSmZVYTk4TWFvcThVa3dqQXNIdmg0S0FQVVpuSTlObmp6bGh4Rmtnby1Lb1pDV1QwVTNXSmxKU0ZBbF9lNXZ3REpjcjdSSnkyZkdrNlBpV0RHSFF4WE1hQ2dKeVFENWY3UFZPdWl4dGQ5YlZjdFh4WldBTzJBZnppb21JZl9fUGNFSGl5ZEJjLWMzdllhTDM0S1M3cWxRejJHMTl3?oc=5",
-      "fuente": "Cadena 3 Argentina",
-      "t": 1794988247217
-     },
-     {
-      "titulo": "Avalúo de un lote para el Metro de Bogotá aumentó cerca del 6.000 %: ¿qué pasó?",
-      "link": "https://citytv.eltiempo.com/programas/citynoticias-de-las-8/avaluo-de-un-lote-para-el-metro-de-bogota-aumento-cerca-del-6000-que-paso_97430",
-      "fuente": "Citytv - El Tiempo",
-      "t": 1794988247217
-     },
-     {
-      "titulo": "Las empresas que más venden en la Argentina, ejercicio 2016",
-      "link": "https://mercado.com.ar/historia-economica/las-empresas-que-mas-venden-2016",
-      "fuente": "Revista Mercado",
-      "t": 1794988247217
-     },
      {
       "titulo": "El Botánico suma agua y cloacas en un sector que esperaba obras",
       "link": "https://villamariavivo.com/el-botanico-suma-agua-y-cloacas-en-un-sector-que-esperaba-obras/",
@@ -10240,6 +10216,42 @@
       "link": "https://www.atv.pe/noticia/temperaturas-lima-primavera/",
       "fuente": "ATV",
       "t": 1795540881433
+     },
+     {
+      "titulo": "Agustín Pecantet ganó en Córdoba y ahora sueña con organizar una gran competencia en Rafaela",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNa2pCbWhJclB4dnNhUGNSVHNKcVFfTWNvTlgtclp2YWUwblBKWXpCdzZUb1hra2NTT01jakktcXlTRDNYVGZPZkZtcEpXOVBWMGpNREJUdEZNYXNMWUVabzhXRVFJV0lGajJuMnNDYlZmeXhhbHV3ZkxiN2F2WmU0WmpkUTF2RkM1T1VuZ1QzemswY2xRMm1jWFdqSENiVkFzMDdIeHVqQ3F5OWdVRFBoWnh5aGlqcnpXenVUQlUycmRYblpRSkU0?oc=5",
+      "fuente": "Radio Rafaela",
+      "t": 1795551609100
+     },
+     {
+      "titulo": "Martín Llaryora dispuso la unificación definitiva del régimen laboral de Salud",
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQQTdudE1BdUJfT09RbkluOUlSVktxTWktc2lXRkNieHlva2h5Vk9QSHItNVNUVmNTdktVMkxJT2sxUjVFbVJ1UXdLN2lOaXE0YkxtOHJiQ1FhdF9MWjF4NGxXYjZXdDY4ak00cDQzMlZVc0NKaml0dlMzR0RlcF9TaTNnbnlXVW1YX0ZlMEJGWGRHUGRKTF9ZR3NOZ1FqTFNnVVREUTZkVmRuYUFiOFJNWTRYaXgyaFNiQkRTQUFveU9yd1NPQ1FEVFY5WTIzbEd0dURkQg?oc=5",
+      "fuente": "Cba24n",
+      "t": 1795551609100
+     },
+     {
+      "titulo": "El dólar en Córdoba: cuánto a cotiza este martes 24 de noviembre",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVTNTYnpNMERiOVlDV2pab2t1SzcwQ0hlcnRPeXpSMDl2MjE2MWJ2UWotenc0dWw3bGdHVGpVaWx6d3FKeHp3alAyZ01hVnV6VE5OOTNwaF9fV0pCZndxUFlRVmZIeXo3R2d6QUs5akhXS2p0M1k0WUlnWFQ4dVE1cHFxYkd5eVZnYktkUE02M055MkJvdnlKMjQyZHl2cWNRdTVFLVRRTnFETDA?oc=5",
+      "fuente": "Perfil",
+      "t": 1795551609100
+     },
+     {
+      "titulo": "Polémica entre las petroleras y Massa por un proyecto que las obligaría a informar los aumentos de la nafta y el gasoil",
+      "link": "https://www.clarin.com/energia-y-mineria/polemica-petroleras-massa-proyecto-obligaria-informar-aumentos-nafta-gasoil_0_2QJHKXaAlB.html",
+      "fuente": "Clarín",
+      "t": 1795551609100
+     },
+     {
+      "titulo": "Recesión técnica: Argentina registró dos trimestres de caída en la actividad económica",
+      "link": "https://www.cba24n.com.ar/argentina/recesion-tecnica--argentina-registro-dos-trimestres-de-caida-en-la-actividad-economica-_a6b05e29d0fd8bdb0d710853e",
+      "fuente": "Cba24n",
+      "t": 1795551609100
+     },
+     {
+      "titulo": "¡Golpe al bolsillo! Tortilla y masa aumentan un peso por kilogramo",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSHk1dWFkSUZfazRKZXh0RGdEM0R6dEItd1BaSDY5RE5ucl9Da0wzQXlCU3pSTlZXN2FNMi15VzN4cmtWbWpHMWF0YmVWNVhsX3p5VlAyb0g0cDlUSElCUEIyel9ZMHA4VGlhbGtsWHRfTlRjd0JPXzBXT2dRYWpYay1aNi1xVEhJMkxqZjRTV2R4R0tLNHQ4YTRJZk0waWd6YXhNUlQzdVg5RUlzdlE?oc=5",
+      "fuente": "El Sol de México",
+      "t": 1795551609100
      }
     ]
    }
@@ -10297,7 +10309,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1171,
+   "corridas": 1172,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10306,7 +10318,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-24T19:49:41.652Z",
+   "ultimaCorrida": "2026-11-24T20:20:00.795Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10316,7 +10328,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-24T19:49:41.652Z",
+    "ultimoChequeo": "2026-11-24T20:20:00.795Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10671,16 +10683,16 @@
      },
      "2026-11-24": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       33,
-       33
+       34,
+       34
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       33,
-       33
+       34,
+       34
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       33,
-       33
+       34,
+       34
       ]
      }
     }
@@ -10707,7 +10719,7 @@
   },
   "precio_mmo": {
    "estado": "listo",
-   "corridas": 198,
+   "corridas": 199,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10716,12 +10728,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-24T17:21:12.866Z",
-   "resumen": "🧱 Valor m² del Colegio de MMO\n\n• La falta de mano de obra duplica el precio del metro cuadrado de las viviendas en Sevilla (Diario Sur)\n  https://news.google.com/rss/articles/CBMipgFBVV95cUxNc3dubGNVQ1NxRGFrSE9HVWFNWHVn",
-   "informe": "data/informes/precio_mmo/2026-11-24-0447.md",
+   "ultimaCorrida": "2026-11-24T20:20:00.795Z",
+   "resumen": "🧱 Valor m² del Colegio de MMO\n\n• Pozo o a estrenar: con el m2 a u$s 3173, cuál es la opción más barata para comprar (El Cronista)\n  https://www.cronista.com/negocios/pozo-o-a-estrenar-con-el-m2-a-us-3173-cual-ya-no-es-l",
+   "informe": "data/informes/precio_mmo/2026-11-24-1720.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "pozo o a estrenar: con el m2 a u$s 3173, cuál es la opción más barata para comprar",
      "la falta de mano de obra duplica el precio del metro cuadrado de las viviendas en sevilla",
      "inmobiliario argentino: m² a us$2.493 y crédito en alza",
      "tiene 48 años, dejó el conurbano y construyó una casa de barro y botellas recicladas de 16",
@@ -10827,7 +10840,7 @@
      "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
      "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
     ],
-    "ultimoChequeo": "2026-11-24T17:21:12.866Z",
+    "ultimoChequeo": "2026-11-24T20:20:00.795Z",
     "semana": [
      {
       "titulo": "El costo de construir en Córdoba superó los $1,06 millones por metro cuadrado y sigue en alza",
@@ -11026,6 +11039,12 @@
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNc3dubGNVQ1NxRGFrSE9HVWFNWHVnOVJfOEp5MmtsWnI4UkNCMUtBa1diZXRpcC1odE1BLUlTOFo3ZXpCdlN6em11TWpqZnEtMFpYaTBPZV9UV2tTUXVUdTRrbGRyU2RqemhzV05udkZXQmh5OUFiaVM4SEl3SXgtUV9TamJnSURFUkFMVUNfTzFvMjU5dUx2RzhrV3ktTV90N2UtaTZ30gGrAUFVX3lxTE5pVWVwcEpBU3A5UkhYMzc4VTZzNWxNa3M2SFcxOTRqQV9SczUxWUZtOHJ3YjhDYzhLZXBIX3lPcnZWVmZZNDJGMUFHMEhYMGV4MTAyRmMyTFVNTzgxbmNPR3FCOGUtUEg3dE5jUnhndkdHc21HVHVEdl81eUI5cFNDRVZ5U2V3eXRQUzNGN3lJTHdMSEtVY1p5WnoxYmNNdkZwQi0wQlhibF9YMA?oc=5",
       "fuente": "Diario Sur",
       "t": 1795506460284
+     },
+     {
+      "titulo": "Pozo o a estrenar: con el m2 a u$s 3173, cuál es la opción más barata para comprar",
+      "link": "https://www.cronista.com/negocios/pozo-o-a-estrenar-con-el-m2-a-us-3173-cual-ya-no-es-la-opcion-mas-barata-para-comprar/",
+      "fuente": "El Cronista",
+      "t": 1795551605258
      }
     ]
    }
@@ -20751,7 +20770,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1153,
+   "corridas": 1154,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20760,13 +20779,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-24T19:49:41.652Z",
+   "ultimaCorrida": "2026-11-24T20:20:00.795Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-24",
-    "ultimoChequeo": "2026-11-24T19:49:41.652Z"
+    "ultimoChequeo": "2026-11-24T20:20:00.795Z"
    }
   },
   "feriados": {
@@ -20958,6 +20977,36 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-24T20:20:00.795Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-24T20:20:00.795Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-24T20:20:00.795Z",
+   "quien": "Valor m² del Colegio de MMO",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-24T20:20:00.795Z",
+   "quien": "Dólar",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-24T20:20:00.795Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-24T20:20:00.795Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-24T19:49:41.652Z",
    "quien": "Mesa de entrada",
@@ -22427,44 +22476,10 @@
    "t": "2026-11-23T07:33:45.489Z",
    "quien": "Argentina: economía y obra pública",
    "que": "no pude leer «obra pública Córdoba»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Argentina: economía y obra pública",
-   "que": "no pude leer «construcción Argentina»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Argentina: economía y obra pública",
-   "que": "no pude leer «economía Argentina»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «\"Villa María Ya\"»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «\"Villa María Vivo\"»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «\"El Diario del Centro del País\"»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa Nueva Córdoba»: respondió 503"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1817": "noticias_ar",
-  "1818": "noticias_ar",
-  "1819": "mundo_economia",
-  "1820": "mundo_tecnologia",
   "1821": "mundo_tecnologia",
   "1822": "mundo_salud",
   "1824": "ejercicio",
@@ -22960,7 +22975,11 @@
   "2441": "mundo_salud",
   "2442": "mundo_salud",
   "2443": "dolar",
-  "2444": "dolar"
+  "2444": "dolar",
+  "2446": "dolar",
+  "2447": "precio_mmo",
+  "2448": "vencimientos",
+  "2449": "tarifas"
  },
  "tgOffset": 196508530,
  "hechos": {
@@ -22982,7 +23001,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-24T19:49:41.652Z",
+ "actualizado": "2026-11-24T20:20:00.795Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
