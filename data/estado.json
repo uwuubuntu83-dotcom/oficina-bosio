@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1169,
+   "corridas": 1170,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,9 +12,9 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T18:50:28.464Z",
-   "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 3.3% → $1685.2\nCripto: subió 2.3% → $1784.7\n\n💵 Dólar hoy (15:21 hs)\n• Oficial: compra $1565 · venta $1615 (+0.9%)\n• Blue: compra $1670 · venta $1690 (+0.9%)\n• Bolsa: compra $16",
-   "informe": "data/informes/dolar/2026-11-24-1521.md",
+   "ultimaCorrida": "2026-11-24T19:21:01.124Z",
+   "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 3.0% → $1690.5\nCripto: subió 2.4% → $1786.59\n\n💵 Dólar hoy (16:21 hs)\n• Oficial: compra $1565 · venta $1615 (+0.9%)\n• Blue: compra $1680 · venta $1700 (+1.5%)\n• Bolsa: compra $1",
+   "informe": "data/informes/dolar/2026-11-24-1621.md",
    "pausado": false,
    "memoria": {
     "dolarBase": {
@@ -36,7 +36,7 @@
      "cripto": 1744.12,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-24T18:50:28.464Z",
+    "ultimoChequeo": "2026-11-24T19:21:01.124Z",
     "resumenFecha": "2026-11-24",
     "hist": {
      "2026-10-30": {
@@ -266,15 +266,15 @@
      },
      "2026-11-24": {
       "oficial": 1615,
-      "blue": 1690,
-      "bolsa": 1685.2,
-      "contadoconliqui": 1786.5,
+      "blue": 1700,
+      "bolsa": 1690.5,
+      "contadoconliqui": 1791.9,
       "mayorista": 1593,
-      "cripto": 1784.7,
+      "cripto": 1786.59,
       "tarjeta": 2099.5
      }
     },
-    "ultimaAlerta": "Bolsa: bajó 3.3% → $1685.2|Cripto: subió 2.3% → $1784.7"
+    "ultimaAlerta": "Bolsa: bajó 3.0% → $1690.5|Cripto: subió 2.4% → $1786.59"
    }
   },
   "inmuebles": {
@@ -5878,13 +5878,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T18:50:18.051Z",
+   "ultimaCorrida": "2026-11-24T19:16:16.166Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795546218051,
+     "t": 1795547776166,
      "redes_hoy": {
       "publicaciones": 16,
       "historias": 24,
@@ -5894,16 +5894,16 @@
       "errores": 25,
       "reinicios": 15,
       "ultimas": [
-       "15:38 Guardado debug/pantalla_153759.png y .xml",
-       "15:38 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "15:38 Celular conectado: SM-A515F | pantalla 2400x1080",
-       "15:39 Guardado debug/pantalla_153913.png y .xml",
-       "15:39 Chat: 0 reels en el chat, 0 sin subir",
-       "15:46 Error en obra_reel: Memes: no pude bajar ningún reel (no es de obra: 3, la IA dijo que no: 3)",
-       "15:46 Guardado debug/pantalla_154615.png y .xml",
-       "15:46 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "15:46 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "15:49 Instagram: ahora en @soycordobes.jpg"
+       "15:57 No encontré un post adecuado para la historia",
+       "15:58 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "15:59 Instagram: ahora en @maestromayordeobrasjb",
+       "16:02 Instagram: ahora en @maestromayordeobrasjb",
+       "16:08 No encontré un post adecuado para la historia",
+       "16:10 LOTE capturas: subidas 2 a GitHub (capturas/20261124_1610)",
+       "16:10 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "16:11 Instagram: ahora en @maestromayordeobrasjb",
+       "16:12 Guardado debug/pantalla_161209.png y .xml",
+       "16:12 Chat: 0 reels en el chat, 0 sin subir"
       ]
      }
     },
@@ -6285,16 +6285,16 @@
       "errores": 25,
       "reinicios": 15,
       "ultimas": [
-       "15:38 Guardado debug/pantalla_153759.png y .xml",
-       "15:38 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "15:38 Celular conectado: SM-A515F | pantalla 2400x1080",
-       "15:39 Guardado debug/pantalla_153913.png y .xml",
-       "15:39 Chat: 0 reels en el chat, 0 sin subir",
-       "15:46 Error en obra_reel: Memes: no pude bajar ningún reel (no es de obra: 3, la IA dijo que no: 3)",
-       "15:46 Guardado debug/pantalla_154615.png y .xml",
-       "15:46 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "15:46 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "15:49 Instagram: ahora en @soycordobes.jpg"
+       "15:57 No encontré un post adecuado para la historia",
+       "15:58 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "15:59 Instagram: ahora en @maestromayordeobrasjb",
+       "16:02 Instagram: ahora en @maestromayordeobrasjb",
+       "16:08 No encontré un post adecuado para la historia",
+       "16:10 LOTE capturas: subidas 2 a GitHub (capturas/20261124_1610)",
+       "16:10 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "16:11 Instagram: ahora en @maestromayordeobrasjb",
+       "16:12 Guardado debug/pantalla_161209.png y .xml",
+       "16:12 Chat: 0 reels en el chat, 0 sin subir"
       ]
      }
     }
@@ -10197,7 +10197,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1169,
+   "corridas": 1170,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10206,7 +10206,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-24T18:50:28.464Z",
+   "ultimaCorrida": "2026-11-24T19:21:01.124Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10216,7 +10216,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-24T18:50:28.464Z",
+    "ultimoChequeo": "2026-11-24T19:21:01.124Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10571,16 +10571,16 @@
      },
      "2026-11-24": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       31,
-       31
+       32,
+       32
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       31,
-       31
+       32,
+       32
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       31,
-       31
+       32,
+       32
       ]
      }
     }
@@ -20451,7 +20451,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1151,
+   "corridas": 1152,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20460,13 +20460,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-24T18:50:28.464Z",
+   "ultimaCorrida": "2026-11-24T19:21:01.124Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-24",
-    "ultimoChequeo": "2026-11-24T18:50:28.464Z"
+    "ultimoChequeo": "2026-11-24T19:21:01.124Z"
    }
   },
   "feriados": {
@@ -20658,6 +20658,21 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-24T19:21:01.124Z",
+   "quien": "Dólar",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-24T19:21:01.124Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-24T19:21:01.124Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-24T18:50:28.464Z",
    "quien": "Mesa de entrada",
@@ -22142,26 +22157,10 @@
    "t": "2026-11-23T07:33:45.489Z",
    "quien": "Noticias de Villa María",
    "que": "no pude leer «Villa María trabajo empleo»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa María seguridad policía»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa María Córdoba»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Clima para la obra",
-   "que": "falló: fetch failed"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1816": "noticias_vm",
   "1817": "noticias_ar",
   "1818": "noticias_ar",
   "1819": "mundo_economia",
@@ -22660,7 +22659,8 @@
   "2440": "mundo_tecnologia",
   "2441": "mundo_salud",
   "2442": "mundo_salud",
-  "2443": "dolar"
+  "2443": "dolar",
+  "2444": "dolar"
  },
  "tgOffset": 196508530,
  "hechos": {
@@ -22682,7 +22682,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-24T18:50:28.464Z",
+ "actualizado": "2026-11-24T19:21:01.124Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
