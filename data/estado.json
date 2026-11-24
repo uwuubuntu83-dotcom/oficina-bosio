@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1159,
+   "corridas": 1160,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,9 +12,9 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T13:39:38.625Z",
-   "resumen": "💵 Dólar hoy (10:39 hs)\n• Oficial: compra $1550 · venta $1600\n• Blue: compra $1655 · venta $1675\n• Bolsa: compra $1682.6 · venta $1743.1\n• Contado con liquidación: compra $1801.4 · venta $1806.2\n• Mayorista: compra $1571",
-   "informe": "data/informes/dolar/2026-11-24-1039.md",
+   "ultimaCorrida": "2026-11-24T14:21:34.020Z",
+   "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 3.4% → $1684.6\nCripto: subió 2.8% → $1793.54\n\n💵 Dólar hoy (11:21 hs)\n• Oficial: compra $1555 · venta $1605 (+0.3%)\n• Blue: compra $1655 · venta $1675\n• Bolsa: compra $1684.6 · ",
+   "informe": "data/informes/dolar/2026-11-24-1121.md",
    "pausado": false,
    "memoria": {
     "dolarBase": {
@@ -36,7 +36,7 @@
      "cripto": 1744.12,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-24T13:39:38.625Z",
+    "ultimoChequeo": "2026-11-24T14:21:34.020Z",
     "resumenFecha": "2026-11-24",
     "hist": {
      "2026-10-30": {
@@ -265,16 +265,16 @@
       "tarjeta": 2080
      },
      "2026-11-24": {
-      "oficial": 1600,
+      "oficial": 1605,
       "blue": 1675,
-      "bolsa": 1743.1,
-      "contadoconliqui": 1806.2,
-      "mayorista": 1580,
-      "cripto": 1744.12,
-      "tarjeta": 2080
+      "bolsa": 1684.6,
+      "contadoconliqui": 1788,
+      "mayorista": 1584,
+      "cripto": 1793.54,
+      "tarjeta": 2086.5
      }
     },
-    "ultimaAlerta": "Blue: subió 2.1% → $1675|Bolsa: subió 5.7% → $1743.1|Contado con liquidación: subió 3.3% → $1806.2|Cripto: subió 3.3% → $1791.29"
+    "ultimaAlerta": "Bolsa: bajó 3.4% → $1684.6|Cripto: subió 2.8% → $1793.54"
    }
   },
   "inmuebles": {
@@ -5884,32 +5884,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T13:48:38.901Z",
+   "ultimaCorrida": "2026-11-24T14:19:51.366Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795528118901,
+     "t": 1795529991366,
      "redes_hoy": {
       "publicaciones": 10,
-      "historias": 16,
+      "historias": 17,
       "reels": 7,
       "seguidos": 46,
       "gringo": 2,
       "errores": 14,
-      "reinicios": 9,
+      "reinicios": 11,
       "ultimas": [
-       "10:25 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "10:25 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "10:31 No encontré un post adecuado para la historia",
-       "10:33 Instagram: ahora en @soycordobes.jpg",
-       "10:40 Post elegido de #memesargentinos",
-       "10:41 ✔ Historia compartida (avioncito)",
-       "10:42 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
-       "10:43 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
-       "10:43 ⚠ No pude volver a @maestromayordeobrasjb (la tarea tardó demasiado y se cortó). Reintento en la próxima tarea.",
-       "10:45 Instagram: ahora en @maestromayordeobrasjb"
+       "10:56 Instagram: ahora en @maestromayordeobrasjb",
+       "10:58 Instagram: ahora en @soycordobes.jpg",
+       "10:59 ✔ Historia compartida (avioncito)",
+       "11:01 LOTE capturas: subidas 2 a GitHub (capturas/20261124_1101)",
+       "11:01 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "11:03 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
+       "11:03 Instagram: ahora en @soycordobes.jpg",
+       "11:04 Guardado debug/pantalla_110420.png y .xml",
+       "11:04 Chat: 0 reels en el chat, 0 sin subir",
+       "11:10 Memes: los filtros descartaron todo; ultima pasada sin filtro de humor (solo hashtags de la cuenta)"
       ]
      }
     },
@@ -6284,23 +6284,23 @@
      },
      "2026-11-24": {
       "publicaciones": 10,
-      "historias": 16,
+      "historias": 17,
       "reels": 7,
       "seguidos": 46,
       "gringo": 2,
       "errores": 14,
-      "reinicios": 9,
+      "reinicios": 11,
       "ultimas": [
-       "10:25 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "10:25 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "10:31 No encontré un post adecuado para la historia",
-       "10:33 Instagram: ahora en @soycordobes.jpg",
-       "10:40 Post elegido de #memesargentinos",
-       "10:41 ✔ Historia compartida (avioncito)",
-       "10:42 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
-       "10:43 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
-       "10:43 ⚠ No pude volver a @maestromayordeobrasjb (la tarea tardó demasiado y se cortó). Reintento en la próxima tarea.",
-       "10:45 Instagram: ahora en @maestromayordeobrasjb"
+       "10:56 Instagram: ahora en @maestromayordeobrasjb",
+       "10:58 Instagram: ahora en @soycordobes.jpg",
+       "10:59 ✔ Historia compartida (avioncito)",
+       "11:01 LOTE capturas: subidas 2 a GitHub (capturas/20261124_1101)",
+       "11:01 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "11:03 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
+       "11:03 Instagram: ahora en @soycordobes.jpg",
+       "11:04 Guardado debug/pantalla_110420.png y .xml",
+       "11:04 Chat: 0 reels en el chat, 0 sin subir",
+       "11:10 Memes: los filtros descartaron todo; ultima pasada sin filtro de humor (solo hashtags de la cuenta)"
       ]
      }
     }
@@ -6399,7 +6399,7 @@
   },
   "vencimientos": {
    "estado": "listo",
-   "corridas": 197,
+   "corridas": 198,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -6408,12 +6408,16 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-24T11:11:14.905Z",
-   "resumen": "🧾 Vencimientos e impuestos\n\n• Reintegro por cumplimiento en el Monotributo: quiénes cobran el 100% o el 50% en marzo y cómo adherirse paso a paso (Infozona)\n  https://news.google.com/rss/articles/CBMi2AFBVV95cUxOeG50VHF",
-   "informe": "data/informes/vencimientos/2026-11-24-0811.md",
+   "ultimaCorrida": "2026-11-24T14:21:34.020Z",
+   "resumen": "🧾 Vencimientos e impuestos\n\n• Cómo recuperar un inmueble con la nueva ley de propiedad privada: plazos, trámite sumarísimo y requisitos (El Cronista)\n  https://www.cronista.com/economia-politica/como-recuperar-un-inmueb",
+   "informe": "data/informes/vencimientos/2026-11-24-1121.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "cómo recuperar un inmueble con la nueva ley de propiedad privada: plazos, trámite sumarísi",
+     "personal y claro ya tienen su personalidad bien clara: ahora llega tuenti, la marca que re",
+     "empleados de comercio: cómo quedan los sueldos de diciembre con aumento y aguinaldo",
+     "las empresas que más venden en la argentina, ejercicio 2009",
      "reintegro por cumplimiento en el monotributo: quiénes cobran el 100% o el 50% en marzo y c",
      "las claves de la semana: vencen obligaciones de precios de transferencia",
      "qué se sabe sobre la fecha de cobro en córdoba del aguinaldo de diciembre 2026:",
@@ -6850,20 +6854,8 @@
      "arca modifica la emisión de facturas del monotributo social desde noviembre",
      "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
     ],
-    "ultimoChequeo": "2026-11-24T11:11:14.905Z",
+    "ultimoChequeo": "2026-11-24T14:21:34.020Z",
     "semana": [
-     {
-      "titulo": "Entra en vigencia una nueva opción de Arca para financiar deudas pyme",
-      "link": "https://puntobiz.com.ar/economia/entra-en-vigencia-una-nueva-opcion-de-arca-para-financiar-deudas-pyme-20261116860",
-      "fuente": "Punto Biz",
-      "t": 1794833699159
-     },
-     {
-      "titulo": "Ley de Discapacidad: el Senado busca la sanción definitiva con un acuerdo que reúne a oficialismo y oposición",
-      "link": "https://grupolaprovincia.com/contenido/603410/ley-de-discapacidad-el-senado-busca-la-sancion-definitiva-con-un-acuerdo-que-reu",
-      "fuente": "Grupo La Provincia",
-      "t": 1794833699159
-     },
      {
       "titulo": "ARCA amplió su plan de pagos desde este lunes: qué deudas se pueden incluir y cuál es el nuevo plazo - Voces Criticas",
       "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQUDVTY0R3MG9mZ3JLZkJRSlZkNE9WaUpWM2ozekJrZVRrb1A2eF9ZcHExZXl1N2d6YUNUUUxiWHI5d2NZRHU5QVNzdFBQcTR2dnVCSXEzajAyNzZHQnh1TGxpWS1remVSZ3l2eWxvODNJNjRsZEVYdE4wZjdCTmRPZzNreFNOWU1FNi1TQy04YVRPU3NRMXRxQTV2WHNSN2hMRzczZDBDVE11N2kyT3ZfZnBhcXhnNlJ1QkhONHp0bW1vWlB3T1hGLXJ5NEdyQnlVRUZxaExmTWRPZlg3ZEdGOXBiWnFnaWdBMTB3M9IB8gFBVV95cUxQZE9YRHBzbHZURElLUUdPcEVhVWl0UnpLdTNyNjBOeFZxRzZtY1ViRDN0bUJ2NGxpZHctQ1poWGlteWNnNy1IeVpsRW1BT0VDcWxqM200Z0t1ZTNFemhLa3lCTE1oY2xBc1UyRFJCLVhIUjR3M191ZXRHYm5YYi03b1ZjUXNwanJzR2ZsSnM2cndwMDB3Mk41b3RLZDFMV0taRGlZNzIyTm1pYXkxM2cyNm5zZnNCSWlDUmNickRaRDQzeEMtNWhYb0Z4SXFuU3ZZeVpwbUVDQWhpY1RvdlZna3BKMzlycHU0LWctN2RkWWVHZw?oc=5",
@@ -7715,13 +7707,37 @@
       "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOeG50VHFabEVuNFNsbG5vRzN2WEUzRGhmVVlKY0dMLUVTYklLQ3lyamxjRnI3TEdJSGNHRlJteWp5d3BoTXVMX3pZQklHZG5hNl9CbE52eE5TWUNRbEpkQWkyeUtXb3ZjZURfdXlWTmVkcHB3YUMwY01QdGhyRlc1TExxWTdKVTJXallJX2NUWXFIU0tUZXhrSXVSdHNsakZ2dVBNaS1KX2FvLUJZTHpsTjBmU3RPMVFuZW95SkI2bVVkVXZGdmdvYVFHQTZReTh5R2pzQllKX2M?oc=5",
       "fuente": "Infozona",
       "t": 1795518680242
+     },
+     {
+      "titulo": "Cómo recuperar un inmueble con la nueva ley de propiedad privada: plazos, trámite sumarísimo y requisitos",
+      "link": "https://www.cronista.com/economia-politica/como-recuperar-un-inmueble-con-la-nueva-ley-de-propiedad-privada-plazos-tramite-sumarisimo-y-requisitos/",
+      "fuente": "El Cronista",
+      "t": 1795530102727
+     },
+     {
+      "titulo": "Personal y Claro ya tienen su personalidad bien clara: ahora llega Tuenti, la marca que revive de la mano de Metrotel",
+      "link": "https://infonegocios.info/plus/personal-y-claro-ya-tienen-su-personalidad-bien-clara-ahora-llega-tuenti-la-marca-que-revive-de-la-mano-de-metrotel",
+      "fuente": "InfoNegocios",
+      "t": 1795530102727
+     },
+     {
+      "titulo": "Empleados de comercio: cómo quedan los sueldos de diciembre con aumento y aguinaldo",
+      "link": "https://flipr.com.ar/entre-rios/r2820/empleados-de-comercio-como-quedan-los-sueldos-de-diciembre-con-aumento-y-aguinaldo/",
+      "fuente": "flipr",
+      "t": 1795530102727
+     },
+     {
+      "titulo": "Las empresas que más venden en la Argentina, ejercicio 2009",
+      "link": "https://mercado.com.ar/historia-economica/las-empresas-que-mas-venden-2009",
+      "fuente": "Revista Mercado",
+      "t": 1795530102727
      }
     ]
    }
   },
   "tarifas": {
    "estado": "listo",
-   "corridas": 198,
+   "corridas": 199,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7730,12 +7746,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-24T11:11:14.905Z",
-   "resumen": "🧾 Aumentos de servicios\n\n• Confirman en Córdoba los dos primeros casos de dengue de la temporada: son viajeros del exterior (La Radio 102.9)\n  https://news.google.com/rss/articles/CBMi1AFBVV95cUxPRzBXMy12N0tWWU9Uai00YUZ",
-   "informe": "data/informes/tarifas/2026-11-24-0811.md",
+   "ultimaCorrida": "2026-11-24T14:21:34.020Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• La Corte anuló artículos del DNU que liberaban aumentos de prepagas (Impacto Castex)\n  https://news.google.com/rss/articles/CBMiswFBVV95cUxOSnhRTjlQWXhETU40NWNyMVE2R3ZmeWRQOHBxRE01dlR3Xzh0MlpL",
+   "informe": "data/informes/tarifas/2026-11-24-1121.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "la corte anuló artículos del dnu que liberaban aumentos de prepagas",
+     "la corte suprema le puso límites a los aumentos de las prepagas: \"el argentino pagó de más",
+     "sánchez echa el resto desde el consejo de ministros: amplía el permiso de maternidad a 20 ",
+     "sin subsidios, el boleto mínimo de colectivo en el amba costaría más de $2.100",
+     "sueldo docente noviembre 2026",
+     "la corte declaró inconstitucional la liberación de los precios de las prepagas",
      "confirman en córdoba los dos primeros casos de dengue de la temporada: son viajeros del ex",
      "cuánto costaría el boleto mínimo de colectivo en buenos aires si no existieran los subsidi",
      "quiénes cobran anses hoy, 24 de noviembre de 2026",
@@ -8329,52 +8351,10 @@
      "petróleo y gas pierden producción en varias regiones: meta, casanare y córdoba registran c",
      "se viene otro “veranito”, que traerá temperaturas en aumento, un pico de calor de 32°c, in",
      "cortes de agua en bogotá del 10 al 12 de noviembre: localidades y horarios",
-     "la salud pública frente a los derechos arrasados: el diagnóstico antes del 41° congreso de",
-     "temas del día de efe internacional del martes 10 de noviembre de 2026 (13:00 horas)",
-     "clima en córdoba: cómo seguirá el tiempo este martes 10 de noviembre",
-     "león xiv alertó sobre el aumento de niños desplazados y reclamó más ayuda internacional",
-     "¿quiénes fueron el cura brochero y mama antula?",
-     "exxonmobil reanudará en diciembre las perforaciones de gas natural en chipre",
-     "acnur muestra preocupación por los naufragios en la ruta canaria, ante aumento de llegadas"
+     "la salud pública frente a los derechos arrasados: el diagnóstico antes del 41° congreso de"
     ],
-    "ultimoChequeo": "2026-11-24T11:11:14.905Z",
+    "ultimoChequeo": "2026-11-24T14:21:34.020Z",
     "semana": [
-     {
-      "titulo": "Las empresas que más venden en la Argentina, ejercicio 2011",
-      "link": "https://mercado.com.ar/historia-economica/las-empresas-que-mas-venden-2011",
-      "fuente": "Revista Mercado",
-      "t": 1794955596761
-     },
-     {
-      "titulo": "Presupuesto 2027: para tener dictamen, el Gobierno retrocedió en discapacidad",
-      "link": "https://elargentinodiario.com.ar/zona-destacada/17/11/2026/presupuesto-2027-para-tener-dictamen-el-gobierno-retrocedio-en-discapacidad/",
-      "fuente": "El Argentino Diario",
-      "t": 1794955596761
-     },
-     {
-      "titulo": "Villa Cura Brochero: ATE Córdoba pidió un fuerte aumento salarial para finalizar el 2026",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5MR3UydHRvOF9pdWJSSEZJMjh5ODRBS1R3R0VtUWExaThra25tVXZFd3gyRFZZTUE0aklZRHJLaWZzdVJ3QmU1UjZselROM1dTZlFjazZBRjBQaTlzZU5zUkNn?oc=5",
-      "fuente": "ATE",
-      "t": 1794966215098
-     },
-     {
-      "titulo": "Construir en Córdoba subió 2,3 % en octubre y el metro cuadrado superó los $1,06 millones",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPSHA3MERLNmVta3Q1T1V1dHk2Y2hvODkxYmJkUDJOY1dvR054LXBOOVNpU3BQNjFuVExWbGNwdW1PN01IR3pROVF0UExCc0p2T2JUQ1FCOHEwdVY4TWtYMWtfYlVSYzNpaXFvWndJa3FfdlR4MFVma3lXVjJwd0JOb1ZOR1R2elBtOXM1aEU3azV6SnRhSkJMakk2S2tKV1ZTUEhOcHk2MXhGZU0yLUNUa1hqNjAzTV9mTklsZWR0X1dzZw?oc=5",
-      "fuente": "Página|12",
-      "t": 1794966215098
-     },
-     {
-      "titulo": "Seguinos en TWITTER Estamos en Facebook Escuchanos en TuneIn",
-      "link": "https://www.powernoticias.com/v5/?show=140551",
-      "fuente": "Radio Power",
-      "t": 1794966215098
-     },
-     {
-      "titulo": "Veracruz atrae inversiones millonarias y proyecta casi 56 mil empleos: Sedecop",
-      "link": "https://imagendeveracruz.mx/estado/veracruz-atrae-inversiones-millonarias-y-proyecta-mas-de-56-mil-empleos-sedecop-20261117-0104.html",
-      "fuente": "Imagen de Veracruz",
-      "t": 1794966215098
-     },
      {
       "titulo": "Anuncia titular de Sedecop inversiones por 4 mil 270 mdd en Veracruz; prevén casi 26 mil empleos",
       "link": "https://imagendelgolfo.mx/estado/anuncia-titular-de-sedecop-inversiones-por-4-mil-270-mdd-en-veracruz-preven-casi-26-mil-empleos-20261117-0084.html",
@@ -10138,6 +10118,42 @@
       "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOa2UzbFJZUVpGeGJlY0swVVBoRUd1V0FBYmlmd2xwYlJUMXVUTmlDOGdfSE1OejI5SHNvUjFlMjJzNDBQSnIzbWw1ZVhjczN1VW9QRWZ3S1lzTkhCemp1Ul8zZVNod2UyVTlNbHZLR05waUhpanhpUFZJSzNQMDI4WWZma2dkLUk5MFRBb2FGRGRDaXJYTDl2UGtva19mWURTQkwtdHdSOXpwb3pmeFpUYUx4V1JYQkppX080ZkUxRm5FSVZHcTJZSjYydWpxeXZnU3fSAdsBQVVfeXFMTjlEWVBVWm5PTFVueTAzakRVUWdHM2tMLUx2enY5bWJRMlFJVGpBTHU1elc0UDFOM3RfOU80QTNHa1pnbnd1dmVJcGVUd3djUXZxcGdsaVJobGdubktCbGVsd2lfclNiTl9KLTJBeVo1OUpyeGdNck1Nb0E2eU0tRzRSc2dvX1dualhEcmNUWTB5bFVEMWlUS2QtY041dkxjOVVJUTFRUW1Ha1p4RWZack1CNjB2b3Q5Rm9IUE9aOHliVXdHMTZmX1Nhd2gxcllNMTU5X2hYOC1GbV9V?oc=5",
       "fuente": "El Liberal",
       "t": 1795518682968
+     },
+     {
+      "titulo": "La Corte anuló artículos del DNU que liberaban aumentos de prepagas",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSnhRTjlQWXhETU40NWNyMVE2R3ZmeWRQOHBxRE01dlR3Xzh0MlpLQzJ4LXpFeGkxT3hyX1dXdHlfb1FJVWREN1BidTlhU1hCSm93TEIyZWlRZmY4cjdpNm1nMzZDY0VodU1FQVZPejVqX2VsdGhFR2hCdGVkZUxBMU1ZVjEtT25nM3piX3FvclZTcXBHM3FmaW1abFN3YXh4Tnl0MkxIeHFoZU9BWlcydDdDZw?oc=5",
+      "fuente": "Impacto Castex",
+      "t": 1795530105534
+     },
+     {
+      "titulo": "La Corte Suprema le puso límites a los aumentos de las prepagas: \"El argentino pagó de más\"",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQcjVVa2lSQ2s4SDduSzVqbmI1MEdrRVYycjVyRkJ4RUJpbGszOERoMGtGb0U0eHpoTno2d1hsdlgteGc2SWh1em5YZnNzTThYbk9XeFZpU1hBcExtd3YxcmlWYkh2TVhZSFNwdHBlbkhaYzBiUUhneVNEWE9IY1pXb2x2N3phTFQwUE5jMTVDWlY3M1l2Rm1OajloUldwb3RmcFFob0l0cXBTWGpfbFJ5a00xVThycFJ3SDl2anNMR0RseTRueXRQWmVUeVQzLTFQWWtzU212NFYwR2czT01NS1U5eG3SAeoBQVVfeXFMTVZFekFHb2NhcXZaQUNGT1BRUUZseUNYUFBfbHFsX202UXUzRkhHUjZUSGJjcTZ0c1JQWDVKcHYtNlBUckd5ZVlQYXZLdU9WQ3V0V3QxRVViQTYwbjQtR0pWOEZ3Zi1sd2F3LTZJWjk0UUtOMjFPRFJ4UkNRN2h5SXZqR3A1NXVwcFgxdGJpQVJCQjdSRjBxZUlyNnBLdFhZWFE2ZEdnVDJWOFJGZDRITUV6N1hZdnpCNGUyWTBwWjZfbk1yUlFwY0RlVWdZWWc4dFJPbG4tdTYyV202VDI3YmUxVm5WVHNUNUJR?oc=5",
+      "fuente": "Cadena 3 Argentina",
+      "t": 1795530105534
+     },
+     {
+      "titulo": "Sánchez echa el resto desde el Consejo de Ministros: amplía el permiso de maternidad a 20 semanas a 5 días del 29-N",
+      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOWVN5M1JhYldiMUlneFhmLVlWaHN4bzA4aGlvdmtwUlB5MUh2OHBOYURkZlhBV0U4YWxQcGRnM0MwSTlMTE1XZVpwdlEzajdoY1ZuUWktUmZ4THd3Yjg1Y0lVM0JmSzRoTExZU3lOQ1h5WWZnU2hXaTZUOHdzTmlFS29sUE9nWXlEUFg4RUlXeFJENm9TdU10Zms1VWhIVTJHc0xKam54clFYTFZjZ0ctVWR4cUllZU9ZLVlRRUJVcFpjdldid0RPczR6N0xmazVlekt5cU1pY3dqU2g1UUtOekpJY0hTcTZucW5HQ9IB8gFBVV95cUxOdjUySEVUdEJza2hFRHdQdjRXcTZHUF9laFdyV3U4QjdQWEc2MEFOU3hsT0FvVVYzdm42S05vVmVxemxfVEppVnlkZmw2ZFZLRjdZNzUtaFpWYVpaMEpMOWhicWx0Szh3bVNLejdwbEE3LTU5SG5rSjViQnlJMmsySVZFLWxkUTRPUlRPQjFudEd1c0Rmb3hTM0M3VmE0d1pZUFR1bWZOYU1ZMVZITF9NWC1XdXZiU1VKTzNjM1NsUjkzX09NLTFFWFVpbjFiakp5MUd4TTJ2NTZpVnpDajF2UlhfZGxNOUF4UUVmQUtzZ1JuQQ?oc=5",
+      "fuente": "El Español",
+      "t": 1795530105534
+     },
+     {
+      "titulo": "Sin subsidios, el boleto mínimo de colectivo en el AMBA costaría más de $2.100",
+      "link": "https://www.iprofesional.com/economia/469845-precio-real-colectivo-amba-cuanto-sale-sin-subsidio-noviembre-2026",
+      "fuente": "iProfesional",
+      "t": 1795530105534
+     },
+     {
+      "titulo": "Sueldo docente noviembre 2026",
+      "link": "https://secretariomike.com/2026/11/23/sueldo-docente-noviembre-2026/",
+      "fuente": "secretariomike.com",
+      "t": 1795530105534
+     },
+     {
+      "titulo": "La Corte declaró inconstitucional la liberación de los precios de las prepagas",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPN1RtaXVHSVhhajdVZi1OUzdfNUVoaHJVRENBY2JHWTRqTU5PWGItX0piQ3l1eGJSbWNPRHp4MkR3MklVaVd2WFNhQVRrWXIxNFJlaHJiYzgtdUJyeldoMF90UF9IVEtSMzhWTTNQSzJiZDNWYmtKOEt3SldKNlVRWWZBQUhpYjNSSEFlMFpBbHRTSE1qTHRmdmtLSUNLRHI1MzZyci1IdE4yMWFQT19rU2tfTGJjenNQNkI5X1RUOVdsRVZoUUE?oc=5",
+      "fuente": "BHInfo",
+      "t": 1795530105534
      }
     ]
    }
@@ -10195,7 +10211,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1159,
+   "corridas": 1160,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10204,7 +10220,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-24T13:39:38.625Z",
+   "ultimaCorrida": "2026-11-24T14:21:34.020Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10214,7 +10230,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-24T13:39:38.625Z",
+    "ultimoChequeo": "2026-11-24T14:21:34.020Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10569,16 +10585,16 @@
      },
      "2026-11-24": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       21,
-       21
+       22,
+       22
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       21,
-       21
+       22,
+       22
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       21,
-       21
+       22,
+       22
       ]
      }
     }
@@ -10605,7 +10621,7 @@
   },
   "precio_mmo": {
    "estado": "listo",
-   "corridas": 196,
+   "corridas": 197,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10614,7 +10630,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-24T11:11:14.905Z",
+   "ultimaCorrida": "2026-11-24T14:21:34.020Z",
    "resumen": "🧱 Valor m² del Colegio de MMO\n\n• La falta de mano de obra duplica el precio del metro cuadrado de las viviendas en Sevilla (Diario Sur)\n  https://news.google.com/rss/articles/CBMipgFBVV95cUxNc3dubGNVQ1NxRGFrSE9HVWFNWHVn",
    "informe": "data/informes/precio_mmo/2026-11-24-0447.md",
    "pausado": false,
@@ -10725,7 +10741,7 @@
      "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
      "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
     ],
-    "ultimoChequeo": "2026-11-24T11:11:14.905Z",
+    "ultimoChequeo": "2026-11-24T14:21:34.020Z",
     "semana": [
      {
       "titulo": "El costo de construir en Córdoba superó los $1,06 millones por metro cuadrado y sigue en alza",
@@ -20494,7 +20510,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1141,
+   "corridas": 1142,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20503,13 +20519,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-24T13:39:38.625Z",
+   "ultimaCorrida": "2026-11-24T14:21:34.020Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-24",
-    "ultimoChequeo": "2026-11-24T13:39:38.625Z"
+    "ultimoChequeo": "2026-11-24T14:21:34.020Z"
    }
   },
   "feriados": {
@@ -20701,6 +20717,31 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-24T14:21:34.020Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-24T14:21:34.020Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-24T14:21:34.020Z",
+   "quien": "Dólar",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-24T14:21:34.020Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-24T14:21:34.020Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-24T13:51:40.571Z",
    "quien": "Gerente general",
@@ -22175,38 +22216,10 @@
    "t": "2026-11-23T02:27:26.524Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-23T02:27:26.524Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-23T01:57:40.668Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-23T01:57:40.668Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-23T01:27:44.668Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-23T01:27:44.668Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1787": "noticias_ar",
-  "1788": "comidas",
-  "1789": "noticias_tec",
   "1790": "vencimientos",
   "1791": "tarifas",
   "1792": "licitaciones",
@@ -22703,7 +22716,10 @@
   "2412": "comidas",
   "2413": "noticias_tec",
   "2414": "noticias_tec",
-  "2416": "dolar"
+  "2416": "dolar",
+  "2420": "dolar",
+  "2421": "vencimientos",
+  "2422": "tarifas"
  },
  "tgOffset": 196508530,
  "hechos": {
@@ -22725,7 +22741,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-24T13:51:40.571Z",
+ "actualizado": "2026-11-24T14:21:34.020Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
