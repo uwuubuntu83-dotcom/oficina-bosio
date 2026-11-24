@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1163,
+   "corridas": 1164,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,9 +12,9 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T15:51:56.075Z",
-   "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 2.4% → $1701.8\nCripto: subió 3.6% → $1807.15\n\n💵 Dólar hoy (12:20 hs)\n• Oficial: compra $1555 · venta $1605 (+0.3%)\n• Blue: compra $1670 · venta $1690 (+0.9%)\n• Bolsa: compra $1",
-   "informe": "data/informes/dolar/2026-11-24-1220.md",
+   "ultimaCorrida": "2026-11-24T16:20:41.518Z",
+   "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 3.2% → $1686.7\nCripto: subió 2.5% → $1788.1\n\n💵 Dólar hoy (13:20 hs)\n• Oficial: compra $1560 · venta $1610 (+0.6%)\n• Blue: compra $1670 · venta $1690 (+0.9%)\n• Bolsa: compra $16",
+   "informe": "data/informes/dolar/2026-11-24-1320.md",
    "pausado": false,
    "memoria": {
     "dolarBase": {
@@ -36,7 +36,7 @@
      "cripto": 1744.12,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-24T15:51:56.075Z",
+    "ultimoChequeo": "2026-11-24T16:20:41.518Z",
     "resumenFecha": "2026-11-24",
     "hist": {
      "2026-10-30": {
@@ -265,16 +265,16 @@
       "tarjeta": 2080
      },
      "2026-11-24": {
-      "oficial": 1605,
+      "oficial": 1610,
       "blue": 1690,
-      "bolsa": 1701.8,
-      "contadoconliqui": 1807.7,
-      "mayorista": 1590,
-      "cripto": 1807.15,
-      "tarjeta": 2086.5
+      "bolsa": 1686.7,
+      "contadoconliqui": 1789.9,
+      "mayorista": 1592,
+      "cripto": 1788.1,
+      "tarjeta": 2093
      }
     },
-    "ultimaAlerta": "Bolsa: bajó 2.4% → $1701.8|Cripto: subió 3.6% → $1807.15"
+    "ultimaAlerta": "Bolsa: bajó 3.2% → $1686.7|Cripto: subió 2.5% → $1788.1"
    }
   },
   "inmuebles": {
@@ -5962,32 +5962,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T15:48:17.118Z",
+   "ultimaCorrida": "2026-11-24T16:19:34.828Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795535297118,
+     "t": 1795537174828,
      "redes_hoy": {
-      "publicaciones": 14,
-      "historias": 21,
-      "reels": 9,
+      "publicaciones": 15,
+      "historias": 23,
+      "reels": 10,
       "seguidos": 58,
       "gringo": 2,
-      "errores": 18,
-      "reinicios": 13,
+      "errores": 20,
+      "reinicios": 14,
       "ultimas": [
-       "12:36 ✔ Historia compartida (avioncito)",
-       "12:38 Post elegido de #obraencurso",
-       "12:38 ✔ Historia compartida (avioncito)",
-       "12:40 Guardado debug/pantalla_124038.png y .xml",
-       "12:40 Chat: 0 reels en el chat, 0 sin subir",
-       "12:47 Error en obra_reel: Memes: no pude bajar ningún reel (no es de obra: 8, la IA dijo que no: 3, publicidad: 1)",
-       "12:47 Reel: lo reintento a las 13:47 (obra_reel, reintento 3)",
-       "12:47 Guardado debug/pantalla_124706.png y .xml",
-       "12:47 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "12:47 Celular conectado: SM-A515F | pantalla 1080x2400"
+       "13:12 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
+       "13:12 Instagram: ahora en @soycordobes.jpg",
+       "13:13 Guardado debug/pantalla_131324.png y .xml",
+       "13:13 Chat: 0 reels en el chat, 0 sin subir",
+       "13:14 Memes: tocado 'Descargar', esperando que baje el video...",
+       "13:15 Memes: reel descargado (10778 KB) de @kokytos_oficial",
+       "13:15 Memes: descripción lista (5 hashtags)",
+       "13:15 Memes: no encontré el '+'. Subo el video por el menú Compartir (plan B).",
+       "13:17 ✔ Memes: reel descargado y resubido en @soycordobes.jpg",
+       "13:18 Memes: video borrado del celular (ya estaba subido)"
       ]
      }
     },
@@ -6361,24 +6361,24 @@
       ]
      },
      "2026-11-24": {
-      "publicaciones": 14,
-      "historias": 21,
-      "reels": 9,
+      "publicaciones": 15,
+      "historias": 23,
+      "reels": 10,
       "seguidos": 58,
       "gringo": 2,
-      "errores": 18,
-      "reinicios": 13,
+      "errores": 20,
+      "reinicios": 14,
       "ultimas": [
-       "12:36 ✔ Historia compartida (avioncito)",
-       "12:38 Post elegido de #obraencurso",
-       "12:38 ✔ Historia compartida (avioncito)",
-       "12:40 Guardado debug/pantalla_124038.png y .xml",
-       "12:40 Chat: 0 reels en el chat, 0 sin subir",
-       "12:47 Error en obra_reel: Memes: no pude bajar ningún reel (no es de obra: 8, la IA dijo que no: 3, publicidad: 1)",
-       "12:47 Reel: lo reintento a las 13:47 (obra_reel, reintento 3)",
-       "12:47 Guardado debug/pantalla_124706.png y .xml",
-       "12:47 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "12:47 Celular conectado: SM-A515F | pantalla 1080x2400"
+       "13:12 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
+       "13:12 Instagram: ahora en @soycordobes.jpg",
+       "13:13 Guardado debug/pantalla_131324.png y .xml",
+       "13:13 Chat: 0 reels en el chat, 0 sin subir",
+       "13:14 Memes: tocado 'Descargar', esperando que baje el video...",
+       "13:15 Memes: reel descargado (10778 KB) de @kokytos_oficial",
+       "13:15 Memes: descripción lista (5 hashtags)",
+       "13:15 Memes: no encontré el '+'. Subo el video por el menú Compartir (plan B).",
+       "13:17 ✔ Memes: reel descargado y resubido en @soycordobes.jpg",
+       "13:18 Memes: video borrado del celular (ya estaba subido)"
       ]
      }
     }
@@ -10289,7 +10289,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1163,
+   "corridas": 1164,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10298,7 +10298,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-24T15:51:56.075Z",
+   "ultimaCorrida": "2026-11-24T16:20:41.518Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10308,7 +10308,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-24T15:51:56.075Z",
+    "ultimoChequeo": "2026-11-24T16:20:41.518Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10663,16 +10663,16 @@
      },
      "2026-11-24": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       25,
-       25
+       26,
+       26
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       25,
-       25
+       26,
+       26
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       25,
-       25
+       26,
+       26
       ]
      }
     }
@@ -17867,7 +17867,7 @@
   },
   "comidas": {
    "estado": "listo",
-   "corridas": 101,
+   "corridas": 102,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -17876,7 +17876,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T11:40:45.106Z",
+   "ultimaCorrida": "2026-11-24T16:20:41.518Z",
    "resumen": "🔒 Privado: te lo mandó por Telegram.",
    "informe": null,
    "pausado": false,
@@ -17884,10 +17884,11 @@
     "horas": {
      "fecha": "2026-11-24",
      "hechas": [
-      "08:30"
+      "08:30",
+      "13:00"
      ]
     },
-    "ultimoChequeo": "2026-11-24T11:40:45.106Z"
+    "ultimoChequeo": "2026-11-24T16:20:41.518Z"
    }
   },
   "ejercicio": {
@@ -20888,7 +20889,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1145,
+   "corridas": 1146,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20897,13 +20898,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-24T15:51:56.075Z",
+   "ultimaCorrida": "2026-11-24T16:20:41.518Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-24",
-    "ultimoChequeo": "2026-11-24T15:51:56.075Z"
+    "ultimoChequeo": "2026-11-24T16:20:41.518Z"
    }
   },
   "feriados": {
@@ -21085,8 +21086,8 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T12:28:00.000Z",
-   "resumen": "Publicando · hoy: 2 · publicado en «Trato Hecho Villa Maria 1» 09:28 · grupos: Compra - Venta Las Varillas (Córdoba), Trato Hecho Villa Maria 1, Trato Hecho Villa Nueva/ Villa María, Clasificados Villa Nueva",
+   "ultimaCorrida": "2026-11-24T16:07:00.000Z",
+   "resumen": "Publicando · hoy: 3 · publicado en «Clasificados Villa Nueva» 13:07 · grupos: Trato Hecho Villa Maria 1, Trato Hecho Villa Nueva/ Villa María, Clasificados Villa Nueva, TRATO HECHO VILLA MARIA/VILLA NUEVA",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -21095,6 +21096,26 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-24T16:20:41.518Z",
+   "quien": "¿Qué comiste?",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-24T16:20:41.518Z",
+   "quien": "Dólar",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-24T16:20:41.518Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-24T16:20:41.518Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-24T15:51:56.075Z",
    "quien": "Clientes y licitaciones",
@@ -22574,32 +22595,10 @@
    "t": "2026-11-23T05:04:39.841Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-23T04:34:40.138Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-23T04:34:40.138Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-23T04:34:40.138Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-23T04:34:40.138Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1792": "licitaciones",
-  "1793": "clima",
   "1794": "mundo_economia",
   "1795": "mundo_economia",
   "1796": "mundo_tecnologia",
@@ -23097,7 +23096,9 @@
   "2421": "vencimientos",
   "2422": "tarifas",
   "2423": "dolar",
-  "2424": "licitaciones"
+  "2424": "licitaciones",
+  "2425": "dolar",
+  "2426": "comidas"
  },
  "tgOffset": 196508530,
  "hechos": {
@@ -23119,7 +23120,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-24T15:51:56.075Z",
+ "actualizado": "2026-11-24T16:20:41.518Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
