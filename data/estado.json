@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1165,
+   "corridas": 1166,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,9 +12,9 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T16:51:12.491Z",
-   "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 3.2% → $1686.7\nCripto: subió 2.5% → $1788.1\n\n💵 Dólar hoy (13:20 hs)\n• Oficial: compra $1560 · venta $1610 (+0.6%)\n• Blue: compra $1670 · venta $1690 (+0.9%)\n• Bolsa: compra $16",
-   "informe": "data/informes/dolar/2026-11-24-1320.md",
+   "ultimaCorrida": "2026-11-24T17:21:12.866Z",
+   "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 2.9% → $1691.8\nCripto: subió 2.6% → $1790.18\n\n💵 Dólar hoy (14:21 hs)\n• Oficial: compra $1565 · venta $1615 (+0.9%)\n• Blue: compra $1670 · venta $1690 (+0.9%)\n• Bolsa: compra $1",
+   "informe": "data/informes/dolar/2026-11-24-1421.md",
    "pausado": false,
    "memoria": {
     "dolarBase": {
@@ -36,7 +36,7 @@
      "cripto": 1744.12,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-24T16:51:12.491Z",
+    "ultimoChequeo": "2026-11-24T17:21:12.866Z",
     "resumenFecha": "2026-11-24",
     "hist": {
      "2026-10-30": {
@@ -265,16 +265,16 @@
       "tarjeta": 2080
      },
      "2026-11-24": {
-      "oficial": 1610,
+      "oficial": 1615,
       "blue": 1690,
-      "bolsa": 1686.7,
-      "contadoconliqui": 1789.9,
-      "mayorista": 1592,
-      "cripto": 1788.1,
-      "tarjeta": 2093
+      "bolsa": 1691.8,
+      "contadoconliqui": 1793.3,
+      "mayorista": 1595,
+      "cripto": 1790.18,
+      "tarjeta": 2099.5
      }
     },
-    "ultimaAlerta": "Bolsa: bajó 3.2% → $1686.7|Cripto: subió 2.5% → $1788.1"
+    "ultimaAlerta": "Bolsa: bajó 2.9% → $1691.8|Cripto: subió 2.6% → $1790.18"
    }
   },
   "inmuebles": {
@@ -5662,13 +5662,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T16:50:45.188Z",
+   "ultimaCorrida": "2026-11-24T17:16:35.559Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795539045188,
+     "t": 1795540595559,
      "redes_hoy": {
       "publicaciones": 16,
       "historias": 23,
@@ -5676,18 +5676,18 @@
       "seguidos": 58,
       "gringo": 2,
       "errores": 20,
-      "reinicios": 14,
+      "reinicios": 15,
       "ultimas": [
-       "13:38 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «entrar al grupo «Compro y vendo en Córdo»: {'numero': 3, 'listo': False, 'por_que': 'Para entrar ",
-       "13:39 LOTE: no pude entrar al grupo Compro y vendo en Córdoba; pruebo otro grupo",
-       "13:39 LOTE: Facebook vuelve a quedar en la Página",
-       "13:40 LOTE capturas: subidas 31 a GitHub (capturas/20261124_1339)",
-       "13:40 LOTE: turno: no pude entrar a ningún grupo",
-       "13:41 Instagram: ahora en @soycordobes.jpg (doble toque en Perfil)",
-       "13:45 Post elegido de #humorcordobes",
-       "13:46 ✔ Repost publicado en tu perfil",
-       "13:49 LOTE capturas: subidas 2 a GitHub (capturas/20261124_1349)",
-       "13:49 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)"
+       "13:56 LOTE: busqué «COMPRA Y VENTA VILLA MARIA» y entré al grupo",
+       "13:56 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «entrar al grupo «COMPRA Y VENTA VILLA MA»: {'numero': 6, 'listo': False, 'por_que': \"Toco el g",
+       "13:56 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «entrar al grupo «COMPRA Y VENTA VILLA MA»: {'numero': 6, 'listo': False, 'por_que': 'Para entr",
+       "13:57 LOTE: no pude entrar al grupo COMPRA Y VENTA VILLA MARIA; pruebo otro grupo",
+       "13:57 LOTE: Facebook vuelve a quedar en la Página",
+       "13:57 LOTE: turno: no pude entrar a ningún grupo",
+       "14:04 No encontré un post adecuado para la historia",
+       "14:11 No encontré un post adecuado para la historia",
+       "14:12 Guardado debug/pantalla_141249.png y .xml",
+       "14:12 Chat: 0 reels en el chat, 0 sin subir"
       ]
      }
     },
@@ -6067,18 +6067,18 @@
       "seguidos": 58,
       "gringo": 2,
       "errores": 20,
-      "reinicios": 14,
+      "reinicios": 15,
       "ultimas": [
-       "13:38 LOTE: IA guía (gemini:gemini-3.5-flash-lite) para «entrar al grupo «Compro y vendo en Córdo»: {'numero': 3, 'listo': False, 'por_que': 'Para entrar ",
-       "13:39 LOTE: no pude entrar al grupo Compro y vendo en Córdoba; pruebo otro grupo",
-       "13:39 LOTE: Facebook vuelve a quedar en la Página",
-       "13:40 LOTE capturas: subidas 31 a GitHub (capturas/20261124_1339)",
-       "13:40 LOTE: turno: no pude entrar a ningún grupo",
-       "13:41 Instagram: ahora en @soycordobes.jpg (doble toque en Perfil)",
-       "13:45 Post elegido de #humorcordobes",
-       "13:46 ✔ Repost publicado en tu perfil",
-       "13:49 LOTE capturas: subidas 2 a GitHub (capturas/20261124_1349)",
-       "13:49 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)"
+       "13:56 LOTE: busqué «COMPRA Y VENTA VILLA MARIA» y entré al grupo",
+       "13:56 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «entrar al grupo «COMPRA Y VENTA VILLA MA»: {'numero': 6, 'listo': False, 'por_que': \"Toco el g",
+       "13:56 LOTE: IA guía (gemini:gemini-flash-lite-latest) para «entrar al grupo «COMPRA Y VENTA VILLA MA»: {'numero': 6, 'listo': False, 'por_que': 'Para entr",
+       "13:57 LOTE: no pude entrar al grupo COMPRA Y VENTA VILLA MARIA; pruebo otro grupo",
+       "13:57 LOTE: Facebook vuelve a quedar en la Página",
+       "13:57 LOTE: turno: no pude entrar a ningún grupo",
+       "14:04 No encontré un post adecuado para la historia",
+       "14:11 No encontré un post adecuado para la historia",
+       "14:12 Guardado debug/pantalla_141249.png y .xml",
+       "14:12 Chat: 0 reels en el chat, 0 sin subir"
       ]
      }
     }
@@ -6177,7 +6177,7 @@
   },
   "vencimientos": {
    "estado": "listo",
-   "corridas": 198,
+   "corridas": 199,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -6186,12 +6186,16 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-24T14:21:34.020Z",
-   "resumen": "🧾 Vencimientos e impuestos\n\n• Cómo recuperar un inmueble con la nueva ley de propiedad privada: plazos, trámite sumarísimo y requisitos (El Cronista)\n  https://www.cronista.com/economia-politica/como-recuperar-un-inmueb",
-   "informe": "data/informes/vencimientos/2026-11-24-1121.md",
+   "ultimaCorrida": "2026-11-24T17:21:12.866Z",
+   "resumen": "🧾 Vencimientos e impuestos\n\n• ARCA devuelve dinero a monotributistas: quiénes pueden cobrarlo y qué requisito es clave (Diario de Cuyo)\n  https://news.google.com/rss/articles/CBMi0AFBVV95cUxNbHdNOUY4NnByRUtyaE9BazN6eThW",
+   "informe": "data/informes/vencimientos/2026-11-24-1421.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "arca devuelve dinero a monotributistas: quiénes pueden cobrarlo y qué requisito es clave",
+     "arca devuelve dinero a monotributistas: cuáles son los requisitos para acceder al benefici",
+     "cómo inscribir a un nuevo trabajador y pagar menos cargas patronales con el rifl",
+     "todo lo que hay que saber sobre el aguinaldo: cuándo se cobra, cuánto se paga y cómo se ca",
      "cómo recuperar un inmueble con la nueva ley de propiedad privada: plazos, trámite sumarísi",
      "personal y claro ya tienen su personalidad bien clara: ahora llega tuenti, la marca que re",
      "empleados de comercio: cómo quedan los sueldos de diciembre con aumento y aguinaldo",
@@ -6632,44 +6636,8 @@
      "arca modifica la emisión de facturas del monotributo social desde noviembre",
      "monotributistas con cuotas impagas: cómo consultar el saldo en arca y financiar la deuda s"
     ],
-    "ultimoChequeo": "2026-11-24T14:21:34.020Z",
+    "ultimoChequeo": "2026-11-24T17:21:12.866Z",
     "semana": [
-     {
-      "titulo": "ARCA amplió su plan de pagos desde este lunes: qué deudas se pueden incluir y cuál es el nuevo plazo - Voces Criticas",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQUDVTY0R3MG9mZ3JLZkJRSlZkNE9WaUpWM2ozekJrZVRrb1A2eF9ZcHExZXl1N2d6YUNUUUxiWHI5d2NZRHU5QVNzdFBQcTR2dnVCSXEzajAyNzZHQnh1TGxpWS1remVSZ3l2eWxvODNJNjRsZEVYdE4wZjdCTmRPZzNreFNOWU1FNi1TQy04YVRPU3NRMXRxQTV2WHNSN2hMRzczZDBDVE11N2kyT3ZfZnBhcXhnNlJ1QkhONHp0bW1vWlB3T1hGLXJ5NEdyQnlVRUZxaExmTWRPZlg3ZEdGOXBiWnFnaWdBMTB3M9IB8gFBVV95cUxQZE9YRHBzbHZURElLUUdPcEVhVWl0UnpLdTNyNjBOeFZxRzZtY1ViRDN0bUJ2NGxpZHctQ1poWGlteWNnNy1IeVpsRW1BT0VDcWxqM200Z0t1ZTNFemhLa3lCTE1oY2xBc1UyRFJCLVhIUjR3M191ZXRHYm5YYi03b1ZjUXNwanJzR2ZsSnM2cndwMDB3Mk41b3RLZDFMV0taRGlZNzIyTm1pYXkxM2cyNm5zZnNCSWlDUmNickRaRDQzeEMtNWhYb0Z4SXFuU3ZZeVpwbUVDQWhpY1RvdlZna3BKMzlycHU0LWctN2RkWWVHZw?oc=5",
-      "fuente": "Voces Criticas - Salta",
-      "t": 1794845451627
-     },
-     {
-      "titulo": "ARCA: Aumentó el monto de aportes para monotributistas",
-      "link": "https://canalc.com.ar/arca-aumento-el-monto-de-aportes-para-monotributistas/",
-      "fuente": "Canal C",
-      "t": 1794845451627
-     },
-     {
-      "titulo": "Llaryora incluyó una baja de impuestos en el Presupuesto 2027: qué pasará con el Inmobiliario, Ingresos Brutos y otros tributos",
-      "link": "https://eldoce.tv/politica/2026/11/16/llaryora-incluyo-una-baja-de-impuestos-en-el-presupuesto-2027-que-pasara-con-el-inmobiliario-ingresos-brutos-y-otros-tributos/",
-      "fuente": "ElDoce.tv",
-      "t": 1794845451627
-     },
-     {
-      "titulo": "ARCA habilita desde hoy un plan de 18 cuotas para deudas vencidas hasta el 31 de octubre",
-      "link": "https://dolarhoy.com/economia/arca-habilita-desde-hoy-un-plan-de-18-cuotas-para-deudas-vencidas-hasta-el-31-de-octubre-2026111611130",
-      "fuente": "DolarHoy",
-      "t": 1794845451627
-     },
-     {
-      "titulo": "AUTONÓMOS: ARCA actualizó los aportes desde noviembre 2026, cuánto se paga por mes",
-      "link": "https://calcularsueldo.com.ar/impuestos/16506/autonomos-arca-actualizo-los-aportes-desde-noviembre-2026-cuanto-se-paga-por-mes.html",
-      "fuente": "calcularsueldo",
-      "t": 1794845451627
-     },
-     {
-      "titulo": "Llaryora anuncia un alivio fiscal millonario en Córdoba: qué impuestos baja en 2027",
-      "link": "https://www.perfil.com/cordoba/llaryora-anuncia-un-alivio-fiscal-millonario-en-cordoba-que-impuestos-baja-en-2027-adVXD0j4pQCN",
-      "fuente": "Perfil",
-      "t": 1794845451627
-     },
      {
       "titulo": "ARCA habilita la financiación de deudas hasta en 18 cuotas para pagos de las pymes: quiénes pueden acceder",
       "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNWGZqMEZnN1VfVkRqSXJvdW5xbGp0bFd2WU5TZ0hGM21xeU1BSVkwbjhYTHhxNERRWU1RRHc0elpTaUxSN19JclRHOEJrOFlZRnJKZlhIcUZyVHJBM0lPUFVwX0JDc1F3Y2Z3MFljOGVPdW4yMDZ0ZVViRUZONDlwcFY2dzBRdmI1cXpFVVpvWjRFZkllcVJLNldLSmg1dDA4M0h4VGtMMUtiN2xSWk9SSXhJdTFIeV9vZS1US3pxazdBNUM5UjdoaUNSUlA5YmdIQXJVd0ZBQU1NcXBoem1KOVBFcw?oc=5",
@@ -7509,13 +7477,37 @@
       "link": "https://mercado.com.ar/historia-economica/las-empresas-que-mas-venden-2009",
       "fuente": "Revista Mercado",
       "t": 1795530102727
+     },
+     {
+      "titulo": "ARCA devuelve dinero a monotributistas: quiénes pueden cobrarlo y qué requisito es clave",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNbHdNOUY4NnByRUtyaE9BazN6eThWWUpqc2RKd1JpcnRuSTNvLTZhaEtSbmtqX2lxc3ZubmotOFZNdVJsZktld2otX0hQRWxqYnk5eVB1SHJ2TnQ0QXFpazRwQVFlZV9kcWNESkw0eUh1TDVYRzh3QllpcVpVX1dRQno5NlZNMUF2VlF1NzRtRHczSHNhSkxjSF9ZdVVvWGN1YTBiSUVIX1FxSTVIMDBTUEpTc3RIaEpsYkZoSGFuTURCa3I2WmRJQmRURGQ3MUN5?oc=5",
+      "fuente": "Diario de Cuyo",
+      "t": 1795540878837
+     },
+     {
+      "titulo": "ARCA devuelve dinero a monotributistas: cuáles son los requisitos para acceder al beneficio",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQNUFrS1c1X3VBSDF5UXZHV3NBaGxvdEFud1B5REdvWmZ4N3hMZXpOTkVDamotSXc4bTc4Z2puWFcwcWkzOGpoOExnTEtnMkhsMHpHNVptVjl4V2xIWlVMU1ZfU0lVQ2NtNHBlVTJ5TkdKSFRXUlhVVUJjaU8yZThtWG5qNDZoX01ZaHI2SmN1Y21LV2haajNVMGdlOWdlZncxY0ZyMWZUd0lMb2Y0RDFUakFjS0tWalVGSFlxcFVUVlFRc0tTQjBWYg?oc=5",
+      "fuente": "Los Andes",
+      "t": 1795540878837
+     },
+     {
+      "titulo": "Cómo inscribir a un nuevo trabajador y pagar menos cargas patronales con el RIFL",
+      "link": "https://www.cronista.com/economia-politica/como-inscribir-a-un-nuevo-trabajador-y-pagar-menos-cargas-patronales-con-el-rifl/",
+      "fuente": "El Cronista",
+      "t": 1795540878837
+     },
+     {
+      "titulo": "Todo lo que hay que saber sobre el aguinaldo: cuándo se cobra, cuánto se paga y cómo se calcula para cada empleado",
+      "link": "https://www.infobae.com/economia/2026/11/19/todo-lo-que-hay-que-saber-sobre-el-aguinaldo-cuando-se-cobra-cuanto-se-paga-y-como-se-calcula-para-cada-empleado/",
+      "fuente": "Infobae",
+      "t": 1795540878837
      }
     ]
    }
   },
   "tarifas": {
    "estado": "listo",
-   "corridas": 199,
+   "corridas": 200,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -7524,12 +7516,18 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-24T14:21:34.020Z",
-   "resumen": "🧾 Aumentos de servicios\n\n• La Corte anuló artículos del DNU que liberaban aumentos de prepagas (Impacto Castex)\n  https://news.google.com/rss/articles/CBMiswFBVV95cUxOSnhRTjlQWXhETU40NWNyMVE2R3ZmeWRQOHBxRE01dlR3Xzh0MlpL",
-   "informe": "data/informes/tarifas/2026-11-24-1121.md",
+   "ultimaCorrida": "2026-11-24T17:21:12.866Z",
+   "resumen": "🧾 Aumentos de servicios\n\n• Luego de las últimas lluvias, así están los niveles de los diques de Córdoba (El Diario de Carlos Paz)\n  https://news.google.com/rss/articles/CBMi4gFBVV95cUxQR3FPVEROOW42NHVZQ1BuZGRmN0hxNVQtTn",
+   "informe": "data/informes/tarifas/2026-11-24-1421.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "luego de las últimas lluvias, así están los niveles de los diques de córdoba",
+     "dengue: córdoba confirmó los primeros dos casos importados de la temporada y reforzó la pr",
+     "clima en córdoba: cómo seguirá el tiempo este martes 24 de noviembre",
+     "córdoba registró dos casos de dengue importados",
+     "medicina prepaga. apuntes sobre el fallo de la corte",
+     "temperaturas en lima superarán los 32 grados y aún no inicia el verano",
      "la corte anuló artículos del dnu que liberaban aumentos de prepagas",
      "la corte suprema le puso límites a los aumentos de las prepagas: \"el argentino pagó de más",
      "sánchez echa el resto desde el consejo de ministros: amplía el permiso de maternidad a 20 ",
@@ -8123,52 +8121,10 @@
      "reporta municipio aumento de 325 mdp en ingresos propios, pero tuvo un recorte de 156 mdp ",
      "caída del 13,4 % en la producción de gas eleva a récord histórico las importaciones de col",
      "la provincia de buenos aires convocó a una audiencia pública para definir las tarifas de l",
-     "el papa congrega a miles de fieles en córdoba tras encabezar la misa más masiva de su pont",
-     "¿tu distrito está en riesgo? reportan más de 300 casos de dengue en una zona de lima",
-     "auh en noviembre 2026: cuánto cobro en total con el extra de $72.250 y el aumento del 1,93",
-     "petróleo y gas pierden producción en varias regiones: meta, casanare y córdoba registran c",
-     "se viene otro “veranito”, que traerá temperaturas en aumento, un pico de calor de 32°c, in",
-     "cortes de agua en bogotá del 10 al 12 de noviembre: localidades y horarios",
-     "la salud pública frente a los derechos arrasados: el diagnóstico antes del 41° congreso de"
+     "el papa congrega a miles de fieles en córdoba tras encabezar la misa más masiva de su pont"
     ],
-    "ultimoChequeo": "2026-11-24T14:21:34.020Z",
+    "ultimoChequeo": "2026-11-24T17:21:12.866Z",
     "semana": [
-     {
-      "titulo": "Anuncia titular de Sedecop inversiones por 4 mil 270 mdd en Veracruz; prevén casi 26 mil empleos",
-      "link": "https://imagendelgolfo.mx/estado/anuncia-titular-de-sedecop-inversiones-por-4-mil-270-mdd-en-veracruz-preven-casi-26-mil-empleos-20261117-0084.html",
-      "fuente": "Imagen del Golfo",
-      "t": 1794966215098
-     },
-     {
-      "titulo": "Myrian Prunotto: “Soy de las pocas que siguen peleando por los valores del radicalismo”",
-      "link": "https://www.cba24n.com.ar/cordoba/myrian-prunotto---soy-de-las-pocas-que-siguen-peleando-por-los-valores-del-radicalismo-_a6afb77c254c2d89a3c57d4c8",
-      "fuente": "Cba24n",
-      "t": 1794966215098
-     },
-     {
-      "titulo": "Presupuesto 2027: con aumentos a discapacidad y ajuste en universidades, el Gobierno logró dictaminar",
-      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdXBjR1F3WjRfZnRERHdoSXFMdElGZklTaHA2YTNSeHVOaXdDSVJzbXlwTEd1MFVvNzRmWEx5T3ZFcFVLSmp4S3RkenNYd1lOWGJDWHdHbmo1Vkg2VEhmY0NEM0JSZlcyQS1KS1ZCU1g1cnNYNTJCOXhvc0RKems4Ujdpd2NvLUtPb0NHVUhVNlZPVVJOYmw0YUJvZU1wLU1aM2FOQjk3TVc0akFjel9sbjh6R0JmbmNxU1NUWW5VWm9vMnJjMjlMMmtOX1pNQV9HN0F1b9IB1AFBVV95cUxOdXBjR1F3WjRfZnRERHdoSXFMdElGZklTaHA2YTNSeHVOaXdDSVJzbXlwTEd1MFVvNzRmWEx5T3ZFcFVLSmp4S3RkenNYd1lOWGJDWHdHbmo1Vkg2VEhmY0NEM0JSZlcyQS1KS1ZCU1g1cnNYNTJCOXhvc0RKems4Ujdpd2NvLUtPb0NHVUhVNlZPVVJOYmw0YUJvZU1wLU1aM2FOQjk3TVc0akFjel9sbjh6R0JmbmNxU1NUWW5VWm9vMnJjMjlMMmtOX1pNQV9HN0F1bw?oc=5",
-      "fuente": "Letra P",
-      "t": 1794977579961
-     },
-     {
-      "titulo": "El Papa y un país que no se pone de acuerdo",
-      "link": "https://www.lanacion.com.ar/politica/el-papa-y-un-pais-que-no-se-pone-de-acuerdo-nid17112026/",
-      "fuente": "LA NACION",
-      "t": 1794977579961
-     },
-     {
-      "titulo": "Mano de obra noviembre 2026: cuánto cobran albañiles, oficiales y ayudantes, con valores por jornada",
-      "link": "https://www.lanacion.com.ar/propiedades/construccion-y-diseno/mano-de-obra-noviembre-2026-cuanto-cobran-albaniles-oficiales-y-ayudantes-con-valores-por-jornada-nid18112026/",
-      "fuente": "LA NACION",
-      "t": 1794977579961
-     },
-     {
-      "titulo": "Qué pasa con las transferencias de dinero al caerse Apple Pay",
-      "link": "https://www.iproup.com/coffee-break/73223-que-pasa-con-las-transferencias-de-dinero-al-caerse-apple-pay",
-      "fuente": "iProUP",
-      "t": 1794977579961
-     },
      {
       "titulo": "Paritaria docente en Córdoba: el Gobierno garantizará la canasta básica para el cargo de maestro con 28 horas",
       "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNUV5UmQxVmV4MkVRLU5FeWVkTmRVQkttSVVmM29DamZPUC1vXzJDVzNVX3otb0ZTbzZFSV85ZGFmZFE0MW1nVFdKNHJtaThGRDRHSkJVUEhTNm5nOFNVNHpzQXotQXB4Yloyb24zakVWYWE1d2tYX1d3NzFxR1FKSHpnc3NBaWFDS0toSTM0UW5sQXJ2NDRYaElTNDNjemdtWmdzcDJCc3Q1NGZJVkNjVEZ6TEp2OHc1cC1CRHh0TzQ3YmFBclg3N0wyMVVURHJobkE?oc=5",
@@ -9932,6 +9888,42 @@
       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPN1RtaXVHSVhhajdVZi1OUzdfNUVoaHJVRENBY2JHWTRqTU5PWGItX0piQ3l1eGJSbWNPRHp4MkR3MklVaVd2WFNhQVRrWXIxNFJlaHJiYzgtdUJyeldoMF90UF9IVEtSMzhWTTNQSzJiZDNWYmtKOEt3SldKNlVRWWZBQUhpYjNSSEFlMFpBbHRTSE1qTHRmdmtLSUNLRHI1MzZyci1IdE4yMWFQT19rU2tfTGJjenNQNkI5X1RUOVdsRVZoUUE?oc=5",
       "fuente": "BHInfo",
       "t": 1795530105534
+     },
+     {
+      "titulo": "Luego de las últimas lluvias, así están los niveles de los diques de Córdoba",
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQR3FPVEROOW42NHVZQ1BuZGRmN0hxNVQtTnUzS2lyRmxEcmtFRFFoWlBMUGs0RmkzX0xRWTM2T2RPYkFVWktEa2JHZEtrTV9mdUFBQk5nSkhQUnctbXBQcXZWUHNMXzJIVlpTQVE4MVg0dkVaSDE3aUJUamtPVlltd0tnN29QbWUwemNkekw3RDB4Y3RvTWNVSmttaEpieVp2SGlKSmZpNFZQZEZvRWkwdGtvenh2SEotTDNNR1hPdWtDSW8zang2dHRtNWJsRlY2Y2kyQlktYWgxWkZwdmRlNnhn?oc=5",
+      "fuente": "El Diario de Carlos Paz",
+      "t": 1795540881433
+     },
+     {
+      "titulo": "Dengue: Córdoba confirmó los primeros dos casos importados de la temporada y reforzó la prevención",
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOUGszdlh6ZXpUUVM3c0NYaU5BOE11YXdVa0t2cFhZMWYzNnRVc1R6WEFwcEdmV05ZSG1aeW5GN0oyTV9YcHROSjd3SVZ6OWFYVTVYZVVmZ0ZyQWczS2k0clE3V0p4blVHSzlhRkRBTGxhRzVqbjFlMzgzMWt1M0J5X291eUxVWG5oV3M5T3BJQUlINWFkNzVhbVRkZ0NiRVJVUmF3OFRTLUxWN0RNODlpQWtXOXpXRkFoSExIaS13SmZJTWNLRGtJOGgxcGdvVHY5LVV1Q1BHZEFMZ0ptNVE?oc=5",
+      "fuente": "Diario de Cuyo",
+      "t": 1795540881433
+     },
+     {
+      "titulo": "Clima en Córdoba: cómo seguirá el tiempo este martes 24 de noviembre",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObXR3VDljdlRkMktYZzhkY2lTZ0podlp4em94V1ZkcTBkeHNfMXZXVWc1dzZ3eHhKOG84NVFoMVBGRjFiUjNOakxPZm54NkxCd3BneU4yNVFZWFNydzRIR1VHRGN3YkxUYW9MVDVvcnNhRlYzTkRJV09iVmlFNy1IVm1BTWhlOHhfYkctN2lCeWtvZmZzZHV2ZVZXcVRYZUpLWl92QnoxX1BmYl9zSWl5VS130gG3AUFVX3lxTE1wY3NmMkFjSkhzb3cwQ3lZWHVpYTZHMGotMWFYN1lUc2NRcEx1ckRCNzNNRTJjZGIyLXA3a2wwLWhHRnhiQ2hIcHBnY3B4ZHBVVEhLNWZjMDJPTkFpR1VtS2pmTlFDNjMwZE5sVmtGc08zRUhiTm9NeXhMMXZDYmhkWm52SUR0MnM0UEZ4SkFnQTZNamRGWngzcDI5MmpDZEVieDZPRnFxME5YR3hxUkRySEUxWHEzVQ?oc=5",
+      "fuente": "Cadena 3 Argentina",
+      "t": 1795540881433
+     },
+     {
+      "titulo": "Córdoba registró dos casos de dengue importados",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQWWgyQlo2dzIwVTdZbF8xZGRCRXg4Nm5sSmRaYmlhNDlGOUN5aUVta1dFd0lXcjFjZzNIUG9EbXhpVkt4UUpwRHQ0NTgzX1lMLVRobDlBcW5tM1NtZU5xR3J6MDB1YkxJaUdvSk5fWU0zZmJKYnR6Y1d3b1hBUFNGWk9CUkdlV0Y3WUhqUlJtZzN3NWg2aWZ6TWtFRWNzbXBxR3N3algwMWNVS0VoV1pIMVFrc1hzUXNLTWxIYzRRemlkQWhmRWdoLURhWQ?oc=5",
+      "fuente": "Data Diario",
+      "t": 1795540881433
+     },
+     {
+      "titulo": "Medicina prepaga. Apuntes sobre el fallo de la Corte",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbjZjNDNxVEROaTNZQmtwQ1BYbzZDVlVtVENOY25HZmtYVV81UV9BWnhnSmVRMGtOdEdQVHptV3FSdFhrMGtmWXlHRl8wWVNQUDdzRUJzUHJuX0FyeDZrZ2VhMHc1NFBsYk1fdzFPV0ctOWhrZVlEZkZHdkxQTEt6WjJTR0VJVGY2?oc=5",
+      "fuente": "Abogados.com.ar",
+      "t": 1795540881433
+     },
+     {
+      "titulo": "Temperaturas en Lima superarán los 32 grados y aún no inicia el verano",
+      "link": "https://www.atv.pe/noticia/temperaturas-lima-primavera/",
+      "fuente": "ATV",
+      "t": 1795540881433
      }
     ]
    }
@@ -9989,7 +9981,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1165,
+   "corridas": 1166,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -9998,7 +9990,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-24T16:51:12.491Z",
+   "ultimaCorrida": "2026-11-24T17:21:12.866Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10008,7 +10000,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-24T16:51:12.491Z",
+    "ultimoChequeo": "2026-11-24T17:21:12.866Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10363,16 +10355,16 @@
      },
      "2026-11-24": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       27,
-       27
+       28,
+       28
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       27,
-       27
+       28,
+       28
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       27,
-       27
+       28,
+       28
       ]
      }
     }
@@ -10399,7 +10391,7 @@
   },
   "precio_mmo": {
    "estado": "listo",
-   "corridas": 197,
+   "corridas": 198,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10408,7 +10400,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-24T14:21:34.020Z",
+   "ultimaCorrida": "2026-11-24T17:21:12.866Z",
    "resumen": "🧱 Valor m² del Colegio de MMO\n\n• La falta de mano de obra duplica el precio del metro cuadrado de las viviendas en Sevilla (Diario Sur)\n  https://news.google.com/rss/articles/CBMipgFBVV95cUxNc3dubGNVQ1NxRGFrSE9HVWFNWHVn",
    "informe": "data/informes/precio_mmo/2026-11-24-0447.md",
    "pausado": false,
@@ -10519,7 +10511,7 @@
      "construir en córdoba cuesta más de un millón de pesos por metro cuadrado",
      "el costo de construir se desacelera en córdoba: aumentó un 1,2% en septiembre y el metro c"
     ],
-    "ultimoChequeo": "2026-11-24T14:21:34.020Z",
+    "ultimoChequeo": "2026-11-24T17:21:12.866Z",
     "semana": [
      {
       "titulo": "El costo de construir en Córdoba superó los $1,06 millones por metro cuadrado y sigue en alza",
@@ -20439,7 +20431,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1147,
+   "corridas": 1148,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20448,13 +20440,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-24T16:51:12.491Z",
+   "ultimaCorrida": "2026-11-24T17:21:12.866Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-24",
-    "ultimoChequeo": "2026-11-24T16:51:12.491Z"
+    "ultimoChequeo": "2026-11-24T17:21:12.866Z"
    }
   },
   "feriados": {
@@ -20636,7 +20628,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T16:40:00.000Z",
+   "ultimaCorrida": "2026-11-24T16:57:00.000Z",
    "resumen": "Publicando · hoy: 3 · error: no pude entrar a ningún grupo · grupos: Trato Hecho Villa Maria 1, Trato Hecho Villa Nueva/ Villa María, Clasificados Villa Nueva, TRATO HECHO VILLA MARIA/VILLA NUEVA",
    "informe": null,
    "pausado": false,
@@ -20646,6 +20638,36 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-24T17:21:12.866Z",
+   "quien": "Aumentos de servicios",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-24T17:21:12.866Z",
+   "quien": "Aumentos de servicios",
+   "que": "no pude leer «aumento agua Villa María»: respondió 429"
+  },
+  {
+   "t": "2026-11-24T17:21:12.866Z",
+   "quien": "Vencimientos e impuestos",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-24T17:21:12.866Z",
+   "quien": "Dólar",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-24T17:21:12.866Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-24T17:21:12.866Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-24T16:51:12.491Z",
    "quien": "Lo último en tecnología",
@@ -22115,43 +22137,10 @@
    "t": "2026-11-23T07:04:10.418Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-23T06:33:28.783Z",
-   "quien": "Clientes y licitaciones",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-23T06:33:28.783Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-23T06:33:28.783Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-23T06:04:35.864Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-23T06:04:35.864Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-23T05:34:44.695Z",
-   "quien": "Clima para la obra",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1802": "licitaciones",
-  "1803": "clima",
-  "1805": "tarifas",
   "1806": "licitaciones",
   "1807": "noticias_tec",
   "1808": "comidas",
@@ -22648,7 +22637,10 @@
   "2429": "noticias_ar",
   "2430": "noticias_ar",
   "2431": "noticias_tec",
-  "2432": "noticias_tec"
+  "2432": "noticias_tec",
+  "2433": "dolar",
+  "2434": "vencimientos",
+  "2435": "tarifas"
  },
  "tgOffset": 196508530,
  "hechos": {
@@ -22670,7 +22662,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-24T16:51:12.491Z",
+ "actualizado": "2026-11-24T17:21:12.866Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
