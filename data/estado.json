@@ -5964,7 +5964,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "listo",
+   "estado": "sin señal",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -5975,7 +5975,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
    "ultimaCorrida": "2026-11-24T20:34:41.363Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 26 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 47 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -6003,7 +6003,7 @@
       ]
      }
     },
-    "avisoSinSenal": "2026-11-21T20:31:31.855Z",
+    "avisoSinSenal": "2026-11-24T20:34:41.363Z",
     "diario": {
      "2026-10-30": {
       "publicaciones": 21,
@@ -20975,6 +20975,21 @@
  },
  "log": [
   {
+   "t": "2026-11-24T21:21:40.133Z",
+   "quien": "Mantenimiento",
+   "que": "Celular bot (Instagram) no da señales hace 47 min"
+  },
+  {
+   "t": "2026-11-24T21:21:40.133Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-24T21:21:40.133Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
+  {
    "t": "2026-11-24T21:01:09.644Z",
    "quien": "Lo último en tecnología",
    "que": "entregó (sin IA)"
@@ -22458,21 +22473,6 @@
    "t": "2026-11-23T07:33:45.489Z",
    "quien": "Vencimientos e impuestos",
    "que": "no pude leer «ingresos brutos Córdoba vencimiento»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "no pude leer «monotributo vencimiento»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "no pude leer «vencimientos ARCA»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "no pude leer «descubrimiento científico»: respondió 503"
   }
  ],
  "pendientes": [],
@@ -22998,7 +22998,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-24T21:01:09.644Z",
+ "actualizado": "2026-11-24T21:21:40.133Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
