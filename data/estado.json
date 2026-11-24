@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1173,
+   "corridas": 1174,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T21:01:09.644Z",
+   "ultimaCorrida": "2026-11-24T21:51:45.734Z",
    "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 2.8% → $1695.1\n\n💵 Dólar hoy (17:20 hs)\n• Oficial: compra $1565 · venta $1615 (+0.9%)\n• Blue: compra $1680 · venta $1700 (+1.5%)\n• Bolsa: compra $1677.6 · venta $1695.1 (-2.8%)\n",
    "informe": "data/informes/dolar/2026-11-24-1720.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1744.12,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-24T21:01:09.644Z",
+    "ultimoChequeo": "2026-11-24T21:51:45.734Z",
     "resumenFecha": "2026-11-24",
     "hist": {
      "2026-10-30": {
@@ -270,7 +270,7 @@
       "bolsa": 1695.1,
       "contadoconliqui": 1797.1,
       "mayorista": 1593,
-      "cripto": 1775.58,
+      "cripto": 1777.74,
       "tarjeta": 2099.5
      }
     },
@@ -5975,7 +5975,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
    "ultimaCorrida": "2026-11-24T20:34:41.363Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 47 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 77 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
@@ -10305,7 +10305,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1173,
+   "corridas": 1174,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10314,7 +10314,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-24T21:01:09.644Z",
+   "ultimaCorrida": "2026-11-24T21:51:45.734Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10324,7 +10324,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-24T21:01:09.644Z",
+    "ultimoChequeo": "2026-11-24T21:51:45.734Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10679,16 +10679,16 @@
      },
      "2026-11-24": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       35,
-       35
+       36,
+       36
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       35,
-       35
+       36,
+       36
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       35,
-       35
+       36,
+       36
       ]
      }
     }
@@ -20767,7 +20767,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1155,
+   "corridas": 1156,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20776,13 +20776,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-24T21:01:09.644Z",
+   "ultimaCorrida": "2026-11-24T21:51:45.734Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-24",
-    "ultimoChequeo": "2026-11-24T21:01:09.644Z"
+    "ultimoChequeo": "2026-11-24T21:51:45.734Z"
    }
   },
   "feriados": {
@@ -20974,6 +20974,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-24T21:51:45.734Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-24T21:51:45.734Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-24T21:21:40.133Z",
    "quien": "Mantenimiento",
@@ -22463,16 +22473,6 @@
    "t": "2026-11-23T07:33:45.489Z",
    "quien": "Aumentos de servicios",
    "que": "no pude leer «aumento gas Córdoba»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Aumentos de servicios",
-   "que": "no pude leer «aumento tarifa luz Córdoba EPEC»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "no pude leer «ingresos brutos Córdoba vencimiento»: respondió 503"
   }
  ],
  "pendientes": [],
@@ -22998,7 +22998,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-24T21:21:40.133Z",
+ "actualizado": "2026-11-24T21:51:45.734Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
