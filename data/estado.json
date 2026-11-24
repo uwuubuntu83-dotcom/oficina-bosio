@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1175,
+   "corridas": 1176,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T22:21:45.080Z",
+   "ultimaCorrida": "2026-11-24T22:51:46.819Z",
    "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 2.8% → $1695.1\n\n💵 Dólar hoy (17:20 hs)\n• Oficial: compra $1565 · venta $1615 (+0.9%)\n• Blue: compra $1680 · venta $1700 (+1.5%)\n• Bolsa: compra $1677.6 · venta $1695.1 (-2.8%)\n",
    "informe": "data/informes/dolar/2026-11-24-1720.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1744.12,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-24T22:21:45.080Z",
+    "ultimoChequeo": "2026-11-24T22:51:46.819Z",
     "resumenFecha": "2026-11-24",
     "hist": {
      "2026-10-30": {
@@ -5972,7 +5972,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "falló",
+   "estado": "listo",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -5982,32 +5982,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T22:19:09.910Z",
-   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
+   "ultimaCorrida": "2026-11-24T22:50:28.167Z",
+   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795558749910,
+     "t": 1795560628167,
      "redes_hoy": {
       "publicaciones": 19,
       "historias": 27,
       "reels": 15,
-      "seguidos": 70,
+      "seguidos": 75,
       "gringo": 2,
       "errores": 30,
       "reinicios": 17,
       "ultimas": [
-       "17:18 ✔ Seguido (6/6): @zulmanajle42 (Zulma Najle), seguidor de @lasalvadorapizzas (#carlospaz)",
-       "17:20 Error en fb_compartir: {'code': -32002, 'data': \"Selector [description='Reel de Wilmer Sorto,Hace 5\\\\xa0sem,La albañilería sera 1 de las mejores pag",
-       "17:20 Guardado debug/pantalla_172057.png y .xml",
-       "17:20 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "17:21 Celular conectado: SM-A515F | pantalla 2400x1080",
-       "17:31 No encontré un post adecuado para la historia",
-       "17:37 ⚠ No pude volver a @maestromayordeobrasjb (device offline). Reintento en la próxima tarea.",
-       "17:37 Error en obra_historia: Remote end closed connection without response",
-       "17:37 adb connect 127.0.0.1:5555: failed to connect to '127.0.0.1:5555': Connection refused",
-       "17:37 Buscando el puerto Wi-Fi del celular en 127.0.0.1..."
+       "19:40 ✔ Memes: seguido (2/5) seguidores de @elkokunmemes",
+       "19:40 ✔ Memes: seguido (3/5) seguidores de @elkokunmemes",
+       "19:41 ✔ Memes: seguido (4/5) seguidores de @elkokunmemes",
+       "19:42 ✔ Memes: seguido (5/5) seguidores de @elkokunmemes",
+       "19:45 Instagram: ahora en @maestromayordeobrasjb",
+       "19:46 LOTE: en el perfil personal de Jonathan",
+       "19:46 LOTE: uso la lista de grupos de hoy (24 grupos, sin recorrer)",
+       "19:47 LOTE: busqué «COMPRA Y VENTA DE VEHICULOS US» y entré al grupo",
+       "19:48 LOTE: galería: 7 fotos a la vista, selección múltiple activada",
+       "19:48 LOTE: fotos marcadas: 7"
       ]
      }
     },
@@ -6384,21 +6384,21 @@
       "publicaciones": 19,
       "historias": 27,
       "reels": 15,
-      "seguidos": 70,
+      "seguidos": 75,
       "gringo": 2,
       "errores": 30,
       "reinicios": 17,
       "ultimas": [
-       "17:18 ✔ Seguido (6/6): @zulmanajle42 (Zulma Najle), seguidor de @lasalvadorapizzas (#carlospaz)",
-       "17:20 Error en fb_compartir: {'code': -32002, 'data': \"Selector [description='Reel de Wilmer Sorto,Hace 5\\\\xa0sem,La albañilería sera 1 de las mejores pag",
-       "17:20 Guardado debug/pantalla_172057.png y .xml",
-       "17:20 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "17:21 Celular conectado: SM-A515F | pantalla 2400x1080",
-       "17:31 No encontré un post adecuado para la historia",
-       "17:37 ⚠ No pude volver a @maestromayordeobrasjb (device offline). Reintento en la próxima tarea.",
-       "17:37 Error en obra_historia: Remote end closed connection without response",
-       "17:37 adb connect 127.0.0.1:5555: failed to connect to '127.0.0.1:5555': Connection refused",
-       "17:37 Buscando el puerto Wi-Fi del celular en 127.0.0.1..."
+       "19:40 ✔ Memes: seguido (2/5) seguidores de @elkokunmemes",
+       "19:40 ✔ Memes: seguido (3/5) seguidores de @elkokunmemes",
+       "19:41 ✔ Memes: seguido (4/5) seguidores de @elkokunmemes",
+       "19:42 ✔ Memes: seguido (5/5) seguidores de @elkokunmemes",
+       "19:45 Instagram: ahora en @maestromayordeobrasjb",
+       "19:46 LOTE: en el perfil personal de Jonathan",
+       "19:46 LOTE: uso la lista de grupos de hoy (24 grupos, sin recorrer)",
+       "19:47 LOTE: busqué «COMPRA Y VENTA DE VEHICULOS US» y entré al grupo",
+       "19:48 LOTE: galería: 7 fotos a la vista, selección múltiple activada",
+       "19:48 LOTE: fotos marcadas: 7"
       ]
      }
     }
@@ -10313,7 +10313,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1175,
+   "corridas": 1176,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10322,7 +10322,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-24T22:21:45.080Z",
+   "ultimaCorrida": "2026-11-24T22:51:46.819Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10332,7 +10332,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-24T22:21:45.080Z",
+    "ultimoChequeo": "2026-11-24T22:51:46.819Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10687,16 +10687,16 @@
      },
      "2026-11-24": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       37,
-       37
+       38,
+       38
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       37,
-       37
+       38,
+       38
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       37,
-       37
+       38,
+       38
       ]
      }
     }
@@ -20826,7 +20826,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1157,
+   "corridas": 1158,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20835,13 +20835,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-24T22:21:45.080Z",
+   "ultimaCorrida": "2026-11-24T22:51:46.819Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-24",
-    "ultimoChequeo": "2026-11-24T22:21:45.080Z"
+    "ultimoChequeo": "2026-11-24T22:51:46.819Z"
    }
   },
   "feriados": {
@@ -21013,7 +21013,7 @@
    "memoria": {}
   },
   "lote_fb": {
-   "estado": "sin señal",
+   "estado": "falló",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -21023,7 +21023,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T16:57:00.000Z",
+   "ultimaCorrida": "2026-11-24T22:36:00.000Z",
    "resumen": "Publicando · hoy: 3 · error: no pude entrar a ningún grupo · grupos: Trato Hecho Villa Maria 1, Trato Hecho Villa Nueva/ Villa María, Clasificados Villa Nueva, TRATO HECHO VILLA MARIA/VILLA NUEVA",
    "informe": null,
    "pausado": false,
@@ -21033,6 +21033,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-24T22:51:46.819Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-24T22:51:46.819Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-24T22:21:45.080Z",
    "quien": "Clientes y licitaciones",
@@ -22522,16 +22532,6 @@
    "t": "2026-11-23T07:33:45.489Z",
    "quien": "Lo último en tecnología",
    "que": "no pude leer «inteligencia artificial novedades»: respondió 503"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-23T07:33:45.489Z",
-   "quien": "Aumentos de servicios",
-   "que": "no pude leer «aumentos noviembre Córdoba»: respondió 503"
   }
  ],
  "pendientes": [],
@@ -23057,7 +23057,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-24T22:21:45.080Z",
+ "actualizado": "2026-11-24T22:51:46.819Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
