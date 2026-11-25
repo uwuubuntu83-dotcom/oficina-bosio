@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1205,
+   "corridas": 1206,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-25",
-   "ultimaCorrida": "2026-11-25T13:41:59.399Z",
+   "ultimaCorrida": "2026-11-25T14:12:03.927Z",
    "resumen": "💵 Dólar hoy (10:41 hs)\n• Oficial: compra $1565 · venta $1615\n• Blue: compra $1680 · venta $1700\n• Bolsa: compra $1677.6 · venta $1695.1\n• Contado con liquidación: compra $1793.4 · venta $1797.1\n• Mayorista: compra $1584",
    "informe": "data/informes/dolar/2026-11-25-1041.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1777.9,
      "tarjeta": 2099.5
     },
-    "ultimoChequeo": "2026-11-25T13:41:59.399Z",
+    "ultimoChequeo": "2026-11-25T14:12:03.927Z",
     "resumenFecha": "2026-11-25",
     "hist": {
      "2026-10-30": {
@@ -274,13 +274,13 @@
       "tarjeta": 2099.5
      },
      "2026-11-25": {
-      "oficial": 1615,
-      "blue": 1700,
-      "bolsa": 1695.1,
-      "contadoconliqui": 1797.1,
-      "mayorista": 1593,
-      "cripto": 1777.9,
-      "tarjeta": 2099.5
+      "oficial": 1625,
+      "blue": 1725,
+      "bolsa": 1686.5,
+      "contadoconliqui": 1792.3,
+      "mayorista": 1608,
+      "cripto": 1793.76,
+      "tarjeta": 2112.5
      }
     },
     "ultimaAlerta": "Bolsa: bajó 2.8% → $1695.1"
@@ -6064,32 +6064,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-25",
-   "ultimaCorrida": "2026-11-25T13:37:20.692Z",
+   "ultimaCorrida": "2026-11-25T14:08:26.390Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": "data/informes/celular_bot/2026-11-25-1012.md",
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795613840692,
+     "t": 1795615706390,
      "redes_hoy": {
       "publicaciones": 2,
       "historias": 3,
       "reels": 2,
-      "seguidos": 15,
+      "seguidos": 20,
       "gringo": 0,
-      "errores": 7,
-      "reinicios": 7,
+      "errores": 8,
+      "reinicios": 8,
       "ultimas": [
-       "10:24 Guardado debug/pantalla_102427.png y .xml",
-       "10:24 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "10:24 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "10:26 Instagram: ahora en @soycordobes.jpg",
-       "10:27 ✔ Memes: seguido (1/5) seguidores de @cheejoyitasperdidas",
-       "10:28 ✔ Memes: seguido (2/5) seguidores de @cheejoyitasperdidas",
-       "10:28 ✔ Memes: seguido (3/5) seguidores de @cheejoyitasperdidas",
-       "10:29 ✔ Memes: seguido (4/5) seguidores de @cheejoyitasperdidas",
-       "10:30 ✔ Memes: seguido (5/5) seguidores de @cheejoyitasperdidas",
-       "10:33 Instagram: ahora en @maestromayordeobrasjb"
+       "10:45 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
+       "10:46 ⚠ No pude volver a @maestromayordeobrasjb (la tarea tardó demasiado y se cortó). Reintento en la próxima tarea.",
+       "10:47 ✔ Seguido (1/5): @marcobiliato (Marco Andres Biliato), seguidor de @vmperimetrales (#villamaria)",
+       "10:49 ✔ Seguido (2/5): @karina.garcia1979 (Karina Garcia), seguidor de @vmperimetrales (#villamaria)",
+       "10:52 ✔ Seguido (3/5): @velascoosman (Osman Velasco), seguidor de @vmperimetrales (#villamaria)",
+       "10:55 ✔ Seguido (4/5): @sandrabettucci (Sandra Bettucci), seguidor de @brillamaslavado_vm (#bellville)",
+       "10:57 ✔ Seguido (5/5): @susanammonteverde (Susana Monteverde), seguidor de @brillamaslavado_vm (#bellville)",
+       "11:05 No encontré un reel adecuado para repostear",
+       "11:07 LOTE capturas: subidas 2 a GitHub (capturas/20261125_1107)",
+       "11:07 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)"
       ]
      }
     },
@@ -6487,21 +6487,21 @@
       "publicaciones": 2,
       "historias": 3,
       "reels": 2,
-      "seguidos": 15,
+      "seguidos": 20,
       "gringo": 0,
-      "errores": 7,
-      "reinicios": 7,
+      "errores": 8,
+      "reinicios": 8,
       "ultimas": [
-       "10:24 Guardado debug/pantalla_102427.png y .xml",
-       "10:24 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "10:24 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "10:26 Instagram: ahora en @soycordobes.jpg",
-       "10:27 ✔ Memes: seguido (1/5) seguidores de @cheejoyitasperdidas",
-       "10:28 ✔ Memes: seguido (2/5) seguidores de @cheejoyitasperdidas",
-       "10:28 ✔ Memes: seguido (3/5) seguidores de @cheejoyitasperdidas",
-       "10:29 ✔ Memes: seguido (4/5) seguidores de @cheejoyitasperdidas",
-       "10:30 ✔ Memes: seguido (5/5) seguidores de @cheejoyitasperdidas",
-       "10:33 Instagram: ahora en @maestromayordeobrasjb"
+       "10:45 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
+       "10:46 ⚠ No pude volver a @maestromayordeobrasjb (la tarea tardó demasiado y se cortó). Reintento en la próxima tarea.",
+       "10:47 ✔ Seguido (1/5): @marcobiliato (Marco Andres Biliato), seguidor de @vmperimetrales (#villamaria)",
+       "10:49 ✔ Seguido (2/5): @karina.garcia1979 (Karina Garcia), seguidor de @vmperimetrales (#villamaria)",
+       "10:52 ✔ Seguido (3/5): @velascoosman (Osman Velasco), seguidor de @vmperimetrales (#villamaria)",
+       "10:55 ✔ Seguido (4/5): @sandrabettucci (Sandra Bettucci), seguidor de @brillamaslavado_vm (#bellville)",
+       "10:57 ✔ Seguido (5/5): @susanammonteverde (Susana Monteverde), seguidor de @brillamaslavado_vm (#bellville)",
+       "11:05 No encontré un reel adecuado para repostear",
+       "11:07 LOTE capturas: subidas 2 a GitHub (capturas/20261125_1107)",
+       "11:07 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)"
       ]
      }
     }
@@ -10428,7 +10428,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1205,
+   "corridas": 1206,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10437,7 +10437,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-25T13:41:59.399Z",
+   "ultimaCorrida": "2026-11-25T14:12:03.927Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10447,7 +10447,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-25T13:41:59.399Z",
+    "ultimoChequeo": "2026-11-25T14:12:03.927Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10816,16 +10816,16 @@
      },
      "2026-11-25": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       21,
-       21
+       22,
+       22
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       21,
-       21
+       22,
+       22
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       21,
-       21
+       22,
+       22
       ]
      }
     }
@@ -20585,7 +20585,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1187,
+   "corridas": 1188,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20594,13 +20594,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-25T13:41:59.399Z",
+   "ultimaCorrida": "2026-11-25T14:12:03.927Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-25",
-    "ultimoChequeo": "2026-11-25T13:41:59.399Z"
+    "ultimoChequeo": "2026-11-25T14:12:03.927Z"
    }
   },
   "feriados": {
@@ -20792,6 +20792,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-25T14:12:03.927Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-25T14:12:03.927Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-25T13:41:59.399Z",
    "quien": "Dólar",
@@ -22281,16 +22291,6 @@
    "t": "2026-11-24T19:21:01.124Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T19:21:01.124Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T18:50:28.464Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
   }
  ],
  "pendientes": [],
@@ -22819,7 +22819,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-25T13:41:59.399Z",
+ "actualizado": "2026-11-25T14:12:03.927Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
