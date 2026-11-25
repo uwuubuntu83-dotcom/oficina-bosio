@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1181,
+   "corridas": 1182,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-25T01:21:06.960Z",
+   "ultimaCorrida": "2026-11-25T01:51:00.031Z",
    "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 2.8% → $1695.1\n\n💵 Dólar hoy (17:20 hs)\n• Oficial: compra $1565 · venta $1615 (+0.9%)\n• Blue: compra $1680 · venta $1700 (+1.5%)\n• Bolsa: compra $1677.6 · venta $1695.1 (-2.8%)\n",
    "informe": "data/informes/dolar/2026-11-24-1720.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1744.12,
      "tarjeta": 2080
     },
-    "ultimoChequeo": "2026-11-25T01:21:06.960Z",
+    "ultimoChequeo": "2026-11-25T01:51:00.031Z",
     "resumenFecha": "2026-11-24",
     "hist": {
      "2026-10-30": {
@@ -5981,7 +5981,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "sin señal",
+   "estado": "listo",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -5991,32 +5991,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T23:00:58.089Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 140 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "ultimaCorrida": "2026-11-25T01:48:54.918Z",
+   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795561258089,
+     "t": 1795571334918,
      "redes_hoy": {
       "publicaciones": 21,
       "historias": 27,
       "reels": 16,
       "seguidos": 75,
       "gringo": 2,
-      "errores": 30,
+      "errores": 39,
       "reinicios": 17,
       "ultimas": [
-       "19:48 LOTE: galería: 7 fotos a la vista, selección múltiple activada",
-       "19:48 LOTE: fotos marcadas: 7",
-       "19:51 LOTE: las fotos siguen subiendo después de 2 minutos",
-       "19:51 LOTE: ✔ Lote publicado en «COMPRA Y VENTA DE VEHICULOS USADOS EN CORDOBA»",
-       "19:52 LOTE: Facebook vuelve a quedar en la Página",
-       "19:53 LOTE capturas: subidas 22 a GitHub (capturas/20261124_1952)",
-       "19:55 Post elegido de #albañileria",
-       "19:55 ✔ Repost publicado en tu perfil",
-       "19:58 Guardado debug/pantalla_195815.png y .xml",
-       "19:58 Chat: 0 reels en el chat, 0 sin subir"
+       "22:25 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "22:25 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "22:27 Instagram: ahora en @soycordobes.jpg",
+       "22:33 No encontré un post adecuado para la historia",
+       "22:34 Instagram: ahora en @maestromayordeobrasjb",
+       "22:36 Instagram: ahora en @soycordobes.jpg",
+       "22:37 Guardado debug/pantalla_223704.png y .xml",
+       "22:37 Chat: 0 reels en el chat, 0 sin subir",
+       "22:42 Memes: pruebo abriendo reels de hashtags de humor",
+       "22:43 Memes: los filtros descartaron todo; ultima pasada sin filtro de humor (solo hashtags de la cuenta)"
       ]
      }
     },
@@ -6395,19 +6395,19 @@
       "reels": 16,
       "seguidos": 75,
       "gringo": 2,
-      "errores": 30,
+      "errores": 39,
       "reinicios": 17,
       "ultimas": [
-       "19:48 LOTE: galería: 7 fotos a la vista, selección múltiple activada",
-       "19:48 LOTE: fotos marcadas: 7",
-       "19:51 LOTE: las fotos siguen subiendo después de 2 minutos",
-       "19:51 LOTE: ✔ Lote publicado en «COMPRA Y VENTA DE VEHICULOS USADOS EN CORDOBA»",
-       "19:52 LOTE: Facebook vuelve a quedar en la Página",
-       "19:53 LOTE capturas: subidas 22 a GitHub (capturas/20261124_1952)",
-       "19:55 Post elegido de #albañileria",
-       "19:55 ✔ Repost publicado en tu perfil",
-       "19:58 Guardado debug/pantalla_195815.png y .xml",
-       "19:58 Chat: 0 reels en el chat, 0 sin subir"
+       "22:25 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "22:25 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "22:27 Instagram: ahora en @soycordobes.jpg",
+       "22:33 No encontré un post adecuado para la historia",
+       "22:34 Instagram: ahora en @maestromayordeobrasjb",
+       "22:36 Instagram: ahora en @soycordobes.jpg",
+       "22:37 Guardado debug/pantalla_223704.png y .xml",
+       "22:37 Chat: 0 reels en el chat, 0 sin subir",
+       "22:42 Memes: pruebo abriendo reels de hashtags de humor",
+       "22:43 Memes: los filtros descartaron todo; ultima pasada sin filtro de humor (solo hashtags de la cuenta)"
       ]
      }
     }
@@ -10327,7 +10327,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1181,
+   "corridas": 1182,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10336,7 +10336,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-25T01:21:06.960Z",
+   "ultimaCorrida": "2026-11-25T01:51:00.031Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10346,7 +10346,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-25T01:21:06.960Z",
+    "ultimoChequeo": "2026-11-25T01:51:00.031Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10701,16 +10701,16 @@
      },
      "2026-11-24": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       43,
-       43
+       44,
+       44
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       43,
-       43
+       44,
+       44
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       43,
-       43
+       44,
+       44
       ]
      }
     }
@@ -20701,7 +20701,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1163,
+   "corridas": 1164,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20710,13 +20710,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-25T01:21:06.960Z",
+   "ultimaCorrida": "2026-11-25T01:51:00.031Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-24",
-    "ultimoChequeo": "2026-11-25T01:21:06.960Z"
+    "ultimoChequeo": "2026-11-25T01:51:00.031Z"
    }
   },
   "feriados": {
@@ -20888,7 +20888,7 @@
    "memoria": {}
   },
   "lote_fb": {
-   "estado": "listo",
+   "estado": "falló",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -20898,8 +20898,8 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-24T22:51:00.000Z",
-   "resumen": "Publicando · hoy: 4 · publicado en «COMPRA Y VENTA DE VEHICULOS USADOS EN CORDOBA» 19:51 · grupos: Trato Hecho Villa Maria 1, Trato Hecho Villa Nueva/ Villa María, Clasificados Villa Nueva, CORDOBA VENDE TODO",
+   "ultimaCorrida": "2026-11-24T23:12:00.000Z",
+   "resumen": "Publicando · hoy: 4 · error: no pude entrar a ningún grupo · grupos: Trato Hecho Villa Maria 1, Trato Hecho Villa Nueva/ Villa María, Clasificados Villa Nueva, CORDOBA VENDE TODO",
    "informe": null,
    "pausado": false,
    "memoria": {
@@ -20908,6 +20908,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-25T01:51:00.031Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-25T01:51:00.031Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-25T01:21:06.960Z",
    "quien": "Informe del celu",
@@ -22397,16 +22407,6 @@
    "t": "2026-11-23T23:55:10.924Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-23T23:24:57.107Z",
-   "quien": "Gerente general",
-   "que": "mandó el parte del día (sin IA)"
-  },
-  {
-   "t": "2026-11-23T23:24:57.107Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
@@ -22932,7 +22932,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-25T01:21:06.960Z",
+ "actualizado": "2026-11-25T01:51:00.031Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
