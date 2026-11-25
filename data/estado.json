@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1184,
+   "corridas": 1185,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,31 +12,31 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-25T02:50:37.256Z",
+   "ultimaCorrida": "2026-11-25T03:20:48.575Z",
    "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 2.8% → $1695.1\n\n💵 Dólar hoy (17:20 hs)\n• Oficial: compra $1565 · venta $1615 (+0.9%)\n• Blue: compra $1680 · venta $1700 (+1.5%)\n• Bolsa: compra $1677.6 · venta $1695.1 (-2.8%)\n",
    "informe": "data/informes/dolar/2026-11-24-1720.md",
    "pausado": false,
    "memoria": {
     "dolarBase": {
-     "oficial": 1600,
-     "blue": 1675,
-     "bolsa": 1743.1,
-     "contadoconliqui": 1806.2,
-     "mayorista": 1580,
-     "cripto": 1744.12,
-     "tarjeta": 2080
+     "oficial": 1615,
+     "blue": 1700,
+     "bolsa": 1695.1,
+     "contadoconliqui": 1797.1,
+     "mayorista": 1593,
+     "cripto": 1777.74,
+     "tarjeta": 2099.5
     },
-    "dolarFecha": "2026-11-24",
+    "dolarFecha": "2026-11-25",
     "dolar": {
-     "oficial": 1600,
-     "blue": 1675,
-     "bolsa": 1743.1,
-     "contadoconliqui": 1806.2,
-     "mayorista": 1580,
-     "cripto": 1744.12,
-     "tarjeta": 2080
+     "oficial": 1615,
+     "blue": 1700,
+     "bolsa": 1695.1,
+     "contadoconliqui": 1797.1,
+     "mayorista": 1593,
+     "cripto": 1777.74,
+     "tarjeta": 2099.5
     },
-    "ultimoChequeo": "2026-11-25T02:50:37.256Z",
+    "ultimoChequeo": "2026-11-25T03:20:48.575Z",
     "resumenFecha": "2026-11-24",
     "hist": {
      "2026-10-30": {
@@ -272,6 +272,15 @@
       "mayorista": 1593,
       "cripto": 1777.74,
       "tarjeta": 2099.5
+     },
+     "2026-11-25": {
+      "oficial": 1615,
+      "blue": 1700,
+      "bolsa": 1695.1,
+      "contadoconliqui": 1797.1,
+      "mayorista": 1593,
+      "cripto": 1777.74,
+      "tarjeta": 2099.5
      }
     },
     "ultimaAlerta": "Bolsa: bajó 2.8% → $1695.1"
@@ -311,7 +320,7 @@
   },
   "licitaciones": {
    "estado": "listo",
-   "corridas": 599,
+   "corridas": 600,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -320,7 +329,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-25T02:20:49.931Z",
+   "ultimaCorrida": "2026-11-25T03:20:48.575Z",
    "resumen": "🧱 Clientes y licitaciones\n\n• Obras de licitación (Radio Dos)\n  https://www.radiodos.com.ar/t36724-obras-de-licitacion",
    "informe": "data/informes/licitaciones/2026-11-24-2221.md",
    "pausado": false,
@@ -629,7 +638,7 @@
      "el banco nación ya prestó los $32.000 millones de anses para hipotecarios: cuántos crédito",
      "pp acusa al gobierno de \"negar información de obra del museo arqueológico que tiene desde "
     ],
-    "ultimoChequeo": "2026-11-25T02:20:49.931Z",
+    "ultimoChequeo": "2026-11-25T03:20:48.575Z",
     "semana": [
      {
       "titulo": "Agua. Comenzó la construcción de un acueducto que abastecerá a Córdoba, Juárez Celman y Villa Allende",
@@ -1475,7 +1484,7 @@
   },
   "noticias_vm": {
    "estado": "listo",
-   "corridas": 599,
+   "corridas": 600,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -1484,12 +1493,14 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-25T02:20:49.931Z",
+   "ultimaCorrida": "2026-11-25T03:20:48.575Z",
    "resumen": "📰 Noticias de Villa María\n\n• Villa María alcanzó el 97% de su alumbrado público LED y se encamina al objetivo del 100% (Municipios de Argentina)\n  https://municipiosdeargentina.com/villa-maria-alcanzo-el-97-de-su-alumbr",
    "informe": "data/informes/noticias_vm/2026-11-24-2021.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "macabro hallazgo: un grupo de nenes encontró a cuatro perros colgados de los árboles",
+     "accastello y jure participaron de un encuentro con más de 100 emprendedores locales",
      "atentado en villavicencio: alias antonio medina fue incluido en resolución de paz del gobi",
      "encontraron cuatro perros colgados en un paraje rural de villa maría",
      "córdoba reunirá a emprendedores de toda la provincia en una nueva edición de emprende+",
@@ -2087,11 +2098,9 @@
      "viernes con cielo nublado y probabilidad de tormentas en villa carlos paz",
      "vendían drogas en una despensa y por delivery en villa ciudad parque: fueron detenidos",
      "playa y sol e indusplast estrenan local en villa nueva con más espacio y piscinas en exhib",
-     "municipio organiza una nueva jornada solidaria en mina clavero |",
-     "cambios en dos departamentales vecinas: quiénes estarán al frente",
-     "sufrió un problema de salud al volante y fue asistido en pleno centro"
+     "municipio organiza una nueva jornada solidaria en mina clavero |"
     ],
-    "ultimoChequeo": "2026-11-25T02:20:49.931Z",
+    "ultimoChequeo": "2026-11-25T03:20:48.575Z",
     "bandeja": [
      {
       "titulo": "Una batería de Villa Nueva fue campeona de un certamen nacional de carnaval",
@@ -2192,15 +2201,21 @@
       "titulo": "Cortes de luz de EPEC programados para el lunes 23 de noviembre - El Periódico",
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQaDlXZEd1MDJJTFQtRDViamNfLVBQRGtVeHB5bFpQY01LbW05VzI5MndpdlNCWFBpZnIyLWJlRFNDNGNpZzVLUUV3RzNzdm1raVd3Rk00dU9iY0ZXS3RsOGdhRTM3dW9HNVM3WFpicjFMT3lqYUU2NGw1OXVQdHNGNnJrbFBfc1V1NWloUGZDYkpCdWNRWXB5LU1fdGxkLWx6bzcwNk9EU0VETWFUQ2FsZmlVZklzVUpidXlyemcwSzQyUdIB0AFBVV95cUxOeFdLS3NKNUpnbHZ4eEpYRUIwS3ptcHFzZlRnNGhTdEtUaU11OTluNUtzdTU2enJpZ25rTjhqcHByZ0JTUGtFMUxhVmlJN3JMTHZzLW5pVmJEOW1oYjZUY2FMdFE2YWU5amVRUUdrbERUMnVCRDhnYlhpNEpDOEtUOUJBekJsRHZxREhWdjd3ZUpZV3R5SWZJRFNJZ3BYanEtMVdrV1QtWVVUMDJRVVNBUWxOeC1GMUQ0d0xmSTNEN25heUREUUthMEo0VDYwY2w3?oc=5",
       "fuente": "El Periódico - San Francisco"
+     },
+     {
+      "titulo": "Macabro hallazgo: un grupo de nenes encontró a cuatro perros colgados de los árboles",
+      "link": "https://notienred.info/2026/11/24/macabro-hallazgo-un-grupo-de-nenes-encontro-a-cuatro-perros-colgados-de-los-arboles/",
+      "fuente": "Noticias en Red"
+     },
+     {
+      "titulo": "Accastello y Jure participaron de un encuentro con más de 100 emprendedores locales",
+      "link": "https://www.lariberaweb.com/general/accastello-y-jure-participaron-de-un-encuentro-con-mas-de-100-emprendedores-locales/",
+      "fuente": "lariberaweb"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-24",
-     "hechas": [
-      "07:30",
-      "13:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-25",
+     "hechas": []
     },
     "semana": [
      {
@@ -3708,7 +3723,7 @@
   },
   "noticias_ar": {
    "estado": "listo",
-   "corridas": 599,
+   "corridas": 600,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -3717,12 +3732,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-25T02:20:49.931Z",
+   "ultimaCorrida": "2026-11-25T03:20:48.575Z",
    "resumen": "📰 Argentina: economía y obra pública\n\n• Qué significa que Argentina haya entrado en recesión técnica y qué se espera para fin de año (Los Andes)\n  https://www.losandes.com.ar/economia/que-significa-que-argentina-haya-en",
    "informe": "data/informes/noticias_ar/2026-11-24-2021.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "el presidente javier milei recibe a su homólogo de polonia, karol nawrocki, en la casa ros",
+     "el camino san antonio tendrá cuatro carriles en un tramo de 5,2 kilómetros (beneficia a 15",
+     "qué es la recesión técnica en la que entró argentina tras la caída de la actividad económi",
+     "el primer informe de santilli: crecimiento, coparticipación y la nueva estrategia para la ",
+     "crisis de la industria metalúrgica: cayó 2,1% interanual en octubre y acumula una baja del",
+     "prefabricadas con crédito: qué bancos financian casas industrializadas y con qué requisito",
+     "incompetencia de obras públicas; caos vial y obra eterna",
+     "mercado inmobiliario: qué puede pasar con los precios y el crédito en 2027",
+     "el gobierno aprobó un rigi por u$s50.750 m: \"la mayor inversión de la historia argentina\"",
+     "argentina negocia con italia la compra de tres fragatas y la incorporación de otros buques",
      "consumo en caída y producción estancada: las causas detrás de la recesión que atraviesa ar",
      "la economía argentina cayó en recesión técnica pese al repunte del 1,1% en septiembre",
      "piden a capufe mejor logística y vigilancia en la autopista ciudad mendoza-córdoba",
@@ -4312,70 +4337,10 @@
      "weretilneck y soria inauguraron las obras de techado y climatización del natatorio de la z",
      "rito de admisión para 9 seminaristas: manifestación pública de una vocación sacerdotal",
      "la rae celebra un pleno en la mezquita de córdoba en homenaje a góngora - el imparcial",
-     "alberto ades advirtió por la suba global del dólar y su impacto en la economía argentina",
-     "milei festejó la llegada de tesla mientras el mercado vuelve a darle la espalda",
-     "mercados en tensión: el impacto del contexto global y local en la economía argentina",
-     "así es el megaproyecto para exportar gas que será la mayor inversión de la historia argent",
-     "argentina, la peor de la región",
-     "llaryora regresa a san justo para habilitar una de las sedes universitarias",
-     "kicillof advirtió: \"argentina no es el patio trasero de nadie\"",
-     "obra pública: cornejo volvió a cuestionar los reclamos empresarios",
-     "argentina lng obtuvo el rigi y prepara una inversión de u$s 50.750 millones",
-     "trabajadores de río negro y neuquén podrían ver hasta 40.000 puestos en la obra de argenti",
-     "el gobierno aprobó el ingreso al rigi del proyecto argentina lng por u$s 50.750 millones"
+     "alberto ades advirtió por la suba global del dólar y su impacto en la economía argentina"
     ],
-    "ultimoChequeo": "2026-11-25T02:20:49.931Z",
+    "ultimoChequeo": "2026-11-25T03:20:48.575Z",
     "bandeja": [
-     {
-      "titulo": "Sindicatura convertida en aplausos al alcalde; renuncia a su obligación de vigilar",
-      "link": "https://www.elbuentono.com.mx/sindicatura-convertida-en-aplausos-al-alcalde-renuncia-a-su-obligacion-de-vigilar/",
-      "fuente": "El Buen Tono"
-     },
-     {
-      "titulo": "El Gobierno negó que la Argentina esté en recesión y aseguró que la economía volverá a crecer",
-      "link": "https://www.lagaceta.com.ar/nota/1164045/economia/gobierno-nego-argentina-este-recesion-aseguro-economia-volvera-crecer.html",
-      "fuente": "LA GACETA"
-     },
-     {
-      "titulo": "Milei lo hizo: la economía argentina entró en “recesión técnica”",
-      "link": "https://www.pagina12.com.ar/2026/11/24/milei-lo-hizo-la-economia-argentina-entro-en-recesion-tecnica/",
-      "fuente": "Página|12"
-     },
-     {
-      "titulo": "La Universidad de Antioquia halla las entregas de 1926 de \"La marquesa de Yolombó\"",
-      "link": "https://www.elespectador.com/el-magazin-cultural/la-universidad-de-antioquia-halla-las-entregas-de-1926-de-la-marquesa-de-yolombo-de-carrasquilla/",
-      "fuente": "El Espectador"
-     },
-     {
-      "titulo": "Firmó la Independencia argentina en 1816 y dejó la política para producir azúcar con 2 trapiches de madera: 38 años después, Tucumán tenía 24 fábricas y su casa hoy es ...",
-      "link": "https://www.canal26.com/historia/2026/11/23/firmo-la-independencia-argentina-en-1816-y-dejo-la-politica-para-producir-azucar-con-2-trapiches-de-madera-38-anos-despues-tucuman-tenia-24-fabricas-y-su-casa-hoy-es-un-museo-historico/",
-      "fuente": "Canal 26"
-     },
-     {
-      "titulo": "Argentina entra en recesión técnica tras dos trimestres consecutivos de caída",
-      "link": "https://www.sdpnoticias.com/internacional/argentina-entra-en-recesion-tecnica-tras-dos-trimestres-consecutivos-de-caida/",
-      "fuente": "sdpnoticias"
-     },
-     {
-      "titulo": "Dejó Buenos Aires tras 13 años en San Telmo y construyó con barro su casa en una ecoaldea de las sierras cordobesas",
-      "link": "https://www.infobae.com/tendencias/2026/11/24/dejo-buenos-aires-tras-13-anos-en-san-telmo-y-construyo-con-barro-su-casa-en-una-ecoaldea-de-las-sierras-cordobesas/",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "Qué significa que un país entre en recesión como pasa en la Argentina",
-      "link": "https://www.minutouno.com/economia/que-significa-que-un-pais-recesion-como-pasa-la-argentina-n6348834",
-      "fuente": "minutouno.com"
-     },
-     {
-      "titulo": "La economía de Argentina entró en recesión tras 35 meses de Javier Milei y Luis Caputo",
-      "link": "https://www.minutouno.com/economia/la-argentina-entro-recesion-35-meses-javier-milei-y-luis-caputo-n6348823",
-      "fuente": "minutouno.com"
-     },
-     {
-      "titulo": "La crisis de la actividad metalúrgica no encuentra piso: 6 de cada 10 máquinas estuvieron paradas durante octubre",
-      "link": "https://diarioelnorte.com.ar/la-crisis-de-la-actividad-metalurgica-no-encuentra-piso-6-de-cada-10-maquinas-estuvieron-paradas-durante-octubre/",
-      "fuente": "Diario EL NORTE"
-     },
      {
       "titulo": "La economía argentina, en recesión técnica",
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1XN2VMRGhuN0tiY0dWSmhmVkk0amNjMS0ydVAyc3B3QmxBYlFjY3lvRDZiNmhZaG5Wb2NYOFdTWXVrV1RnNjB1c3BJM3pLdXBrTjFXUjBXakhlNkJOeGZ6cFAzeWhtZ3RFbTl4bldjN2k1UWNwT014MWNHWjgwREE?oc=5",
@@ -4475,15 +4440,61 @@
       "titulo": "La economía argentina entró en recesión y crecen las dudas sobre el rumbo del Gobierno de Milei",
       "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOVkdIQksycFduMy1CN1BhMHV3cmtqYTFWckM2anl3am9HZDlFWUhlU3N4a08zV29mV3VrTXJYdG4ybjVSNVk1TUdIQjlKY0ZnQkZzRjBwLUhyM0xHR09yWmo1QkM2UUlzZ1k4YUdtcGtEUi0zU0FDMmZuZEhBVnRzZm4yR1Fpc1d0al9WTjZCYWRYMTY3RnVCUlE5ZG0tMkZqSTc0YW5VRmhvRXpmU2NITnZfd1FwUERpRnZfVy1PZmhFRWVjaGdGNGt0ZXN5QQ?oc=5",
       "fuente": "infocronos.com.ar"
+     },
+     {
+      "titulo": "El presidente Javier Milei recibe a su homólogo de Polonia, Karol Nawrocki, en la Casa Rosada",
+      "link": "https://efe.com/mundo/2026-11-25/argentina-milei-recibe-presidente-polonia-nawrocki/",
+      "fuente": "Agencia EFE"
+     },
+     {
+      "titulo": "El Camino San Antonio tendrá cuatro carriles en un tramo de 5,2 kilómetros (beneficia a 15.000 vecinos de 12 barrios del sur)",
+      "link": "https://infonegocios.info/de-cordoba-al-pais/el-camino-san-antonio-tendra-cuatro-carriles-en-un-tramo-de-5-2-kilometros-beneficia-a-15-000-vecinos-de-12-barrios-del-sur",
+      "fuente": "InfoNegocios"
+     },
+     {
+      "titulo": "Qué es la recesión técnica en la que entró Argentina tras la caída de la actividad económica",
+      "link": "https://radiomitre.cienradios.com/economia/que-es-la-recesion-tecnica-en-la-que-entro-argentina-tras-la-caida-de-la-actividad-economica/",
+      "fuente": "Radio Mitre"
+     },
+     {
+      "titulo": "El primer informe de Santilli: crecimiento, coparticipación y la nueva estrategia para la obra pública",
+      "link": "https://www.cronista.com/economia-politica/el-primer-informe-de-santilli-crecimiento-coparticipacion-y-la-nueva-estrategia-para-la-obra-publica/",
+      "fuente": "El Cronista"
+     },
+     {
+      "titulo": "Crisis de la industria metalúrgica: cayó 2,1% interanual en octubre y acumula una baja del 5% en el año",
+      "link": "https://www.canal12misiones.com/nacionales/crisis-de-la-industria-metalurgica",
+      "fuente": "Canal Doce Misiones"
+     },
+     {
+      "titulo": "Prefabricadas con crédito: qué bancos financian casas industrializadas y con qué requisitos",
+      "link": "https://www.lanacion.com.ar/propiedades/prefabricadas-con-credito-que-bancos-financian-casas-industrializadas-y-con-que-requisitos-nid24112026/",
+      "fuente": "LA NACION"
+     },
+     {
+      "titulo": "Incompetencia de Obras Públicas; caos vial y obra eterna",
+      "link": "https://www.elbuentono.com.mx/incompetencia-de-obras-publicas-caos-vial-y-obra-eterna/",
+      "fuente": "El Buen Tono"
+     },
+     {
+      "titulo": "Mercado inmobiliario: qué puede pasar con los precios y el crédito en 2027",
+      "link": "https://www.mdzol.com/economia/2026/11/21/mercado-inmobiliario-que-puede-pasar-con-los-precios-y-el-credito-en-2027-1996883.html",
+      "fuente": "MDZ Online"
+     },
+     {
+      "titulo": "El Gobierno aprobó un RIGI por u$s50.750 M: \"La mayor inversión de la historia argentina\"",
+      "link": "https://www.iprofesional.com/energia/469691-el-gobierno-aprobo-el-rigi-para-argentina-lng-por-us50750-millones",
+      "fuente": "iProfesional"
+     },
+     {
+      "titulo": "Argentina negocia con Italia la compra de tres fragatas y la incorporación de otros buques militares para modernizar la Armada",
+      "link": "https://www.infobae.com/politica/2026/11/19/argentina-negocia-con-italia-la-compra-de-tres-corbetas-y-la-incorporacion-de-otros-buques-militares-para-modernizar-la-armada/",
+      "fuente": "Infobae"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-24",
-     "hechas": [
-      "07:30",
-      "13:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-25",
+     "hechas": []
     },
     "semana": [
      {
@@ -6060,33 +6071,33 @@
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
-   "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-25T02:46:14.583Z",
+   "ultimaFecha": "2026-11-25",
+   "ultimaCorrida": "2026-11-25T03:17:28.459Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795574774583,
+     "t": 1795576648459,
      "redes_hoy": {
-      "publicaciones": 23,
-      "historias": 27,
-      "reels": 18,
-      "seguidos": 75,
-      "gringo": 2,
-      "errores": 41,
-      "reinicios": 18,
+      "publicaciones": 0,
+      "historias": 0,
+      "reels": 0,
+      "seguidos": 0,
+      "gringo": 0,
+      "errores": 1,
+      "reinicios": 0,
       "ultimas": [
-       "23:23 Guardado debug/pantalla_232348.png y .xml",
-       "23:23 Chat: 0 reels en el chat, 0 sin subir",
-       "23:31 Error en obra_reel: Memes: no pude bajar ningún reel (no es de obra: 4, la IA dijo que no: 1)",
-       "23:31 Guardado debug/pantalla_233107.png y .xml",
-       "23:31 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "23:31 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "23:36 No encontré un reel adecuado para repostear",
-       "23:37 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
-       "23:38 Instagram: ahora en @maestromayordeobrasjb",
-       "23:40 Instagram: ahora en @soycordobes.jpg"
+       "00:06 LOTE capturas: subidas 2 a GitHub (capturas/20261125_0006)",
+       "00:06 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "00:08 Instagram: ahora en @maestromayordeobrasjb",
+       "00:09 Error en fb_compartir: {'code': -32002, 'data': \"Selector [description='Reel de Constructores de ojos de agua,Hace 7\\\\xa0sem,En la trabajacion… .. &",
+       "00:09 Guardado debug/pantalla_000947.png y .xml",
+       "00:09 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:09 Celular conectado: SM-A515F | pantalla 2400x1080",
+       "00:11 Instagram: ahora en @soycordobes.jpg",
+       "00:12 Guardado debug/pantalla_001203.png y .xml",
+       "00:12 Chat: 0 reels en el chat, 0 sin subir"
       ]
      }
     },
@@ -6478,6 +6489,27 @@
        "23:37 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
        "23:38 Instagram: ahora en @maestromayordeobrasjb",
        "23:40 Instagram: ahora en @soycordobes.jpg"
+      ]
+     },
+     "2026-11-25": {
+      "publicaciones": 0,
+      "historias": 0,
+      "reels": 0,
+      "seguidos": 0,
+      "gringo": 0,
+      "errores": 1,
+      "reinicios": 0,
+      "ultimas": [
+       "00:06 LOTE capturas: subidas 2 a GitHub (capturas/20261125_0006)",
+       "00:06 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "00:08 Instagram: ahora en @maestromayordeobrasjb",
+       "00:09 Error en fb_compartir: {'code': -32002, 'data': \"Selector [description='Reel de Constructores de ojos de agua,Hace 7\\\\xa0sem,En la trabajacion… .. &",
+       "00:09 Guardado debug/pantalla_000947.png y .xml",
+       "00:09 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:09 Celular conectado: SM-A515F | pantalla 2400x1080",
+       "00:11 Instagram: ahora en @soycordobes.jpg",
+       "00:12 Guardado debug/pantalla_001203.png y .xml",
+       "00:12 Chat: 0 reels en el chat, 0 sin subir"
       ]
      }
     }
@@ -10400,7 +10432,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1184,
+   "corridas": 1185,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10409,7 +10441,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-25T02:50:37.256Z",
+   "ultimaCorrida": "2026-11-25T03:20:48.575Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10419,7 +10451,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-25T02:50:37.256Z",
+    "ultimoChequeo": "2026-11-25T03:20:48.575Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10785,6 +10817,20 @@
        46,
        46
       ]
+     },
+     "2026-11-25": {
+      "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
+       1,
+       1
+      ],
+      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
+       1,
+       1
+      ],
+      "https://bosio-central.uwuubuntu83.workers.dev/": [
+       1,
+       1
+      ]
      }
     }
    }
@@ -11142,7 +11188,7 @@
   },
   "mundo_economia": {
    "estado": "listo",
-   "corridas": 597,
+   "corridas": 598,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -11151,12 +11197,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-25T02:20:49.931Z",
+   "ultimaCorrida": "2026-11-25T03:20:48.575Z",
    "resumen": "🌎 Mundo: economía\n\n• Gabriel Oddone destacó la estabilidad del peso y desafió a los economistas: \"Opinan con frecuencia sobre las cosas que no se cumplen\" (Ámbito Financiero)\n  https://www.ambito.com/uruguay/gabriel-odd",
    "informe": "data/informes/mundo_economia/2026-11-24-2021.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "el turismo de mayores que mueve china: 2.500 trenes, casi el 80% de pasajeros jubilados y ",
+     "donald trump y xi jinping se reunieron el 19 de noviembre en shenzhen, china. cinco días d",
+     "bolsa hoy e ibex 35, en directo: últimas noticias de los mercados, euríbor, wall street, n",
+     "el niño amenaza la economía mundial y la diplomacia climática",
+     "edos 2026 reúne en valencia a empresas, industria y reguladores para impulsar el futuro de",
+     "estados unidos a la argentina: china controla el litio, la soja, la pesca y va por la infr",
+     "mensaje de estados unidos a la argentina: china ya controla el litio, la soja y la pesca y",
+     "lula afirma que el mercado financiero no le impondrá su ajuste fiscal a brasil",
+     "economía estudia limitar las comisiones por traspasar la cuenta financia europa",
+     "cómo se calcula la recesión económica y cómo se encuentra argentina hoy",
      "china suspende hasta enero los controles a la exportación de minerales estratégicos a ee.u",
      "¿cuánto cuesta el diésel en latinoamérica y en qué puesto se encuentra bolivia?",
      "india crece cerca del 7 %, pero modi cuestiona la falta de empleos y mejores salarios",
@@ -11746,69 +11802,9 @@
      "agenda de la semana: pib y pce en ee.uu., inflación en brasil y méxico y actividad en arge",
      "wall street: la corrección de nvidia y la suba de tasas de estados unidos reconfiguran el ",
      "motogp portugal: clasificación, carrera sprint y resultado de marc márquez, que puede ser ",
-     "vivían en rusia, las nuevas leyes obligaron a 24 familias a emigrar y fundaron un pueblo d",
-     "se alarga la reunión de la onu sobre \"robots asesinos\"",
-     "polonia denuncia una \"provocación\" rusa tras la caída de misiles cerca de la frontera ucra",
-     "una noche en el metro de kiev para escapar de los misiles rusos",
-     "aparecerá un nuevo territorio de desarrollo prioritario en rusia",
-     "shenzhen y el mundo que ya llegó – por matías caciabue - nodal",
-     "rusia reestablece el tráfico ferroviario por el puente de crimea y zelenski asegura que \"n",
-     "españa es el segundo país de la ue en pérdidas económicas per cápita por los fenómenos met",
-     "para putin, compartir foco con trump y xi eleva su perfil en el escenario global",
-     "bruselas apunta que la economía española crecerá más de lo previsto en 2026, pero sufrirá ",
-     "méxico: “prosperidad compartida”"
+     "vivían en rusia, las nuevas leyes obligaron a 24 familias a emigrar y fundaron un pueblo d"
     ],
     "bandeja": [
-     {
-      "titulo": "Un helicóptero militar se estrelló durante un vuelo de entrenamiento y murieron los cinco tripulantes",
-      "link": "https://tn.com.ar/videos/internacional/2026/11/24/un-helicoptero-militar-se-estrello-durante-un-vuelo-de-entrenamiento-y-murieron-los-cinco-tripulantes-video-2/",
-      "fuente": "Todo Noticias"
-     },
-     {
-      "titulo": "La economía argentina entró en recesión técnica: qué factores explican la caída de la actividad",
-      "link": "https://www.infobae.com/economia/2026/11/24/la-economia-argentina-entro-en-recesion-tecnica-que-factores-explican-la-caida-de-la-actividad/",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "Texas Roadhouse deberá aumentar los salarios en un estado desde 2027: cuánto cobrarán sus empleados",
-      "link": "https://www.clarin.com/estados-unidos/texas-roadhouse-debera-aumentar-salarios-estado-2027-cobraran-empleados_0_KGtxmxzPUR.html",
-      "fuente": "Clarín"
-     },
-     {
-      "titulo": "Poniendo los números a prueba: ¿GTA 6 hará que los gamers falten al trabajo y afecten la economía de Estados Unidos?",
-      "link": "https://www.msn.com/es-us/deportes/futbol/poniendo-los-n%C3%BAmeros-a-prueba-gta-6-har%C3%A1-que-los-gamers-falten-al-trabajo-y-afecten-la-econom%C3%ADa-de-estados-unidos/ar-AA2hIBVQ",
-      "fuente": "Telemundo 51 on MSN"
-     },
-     {
-      "titulo": "Brasil, el continente que despertó",
-      "link": "https://www.pressenza.com/es/2026/11/brasil-el-continente-que-desperto/",
-      "fuente": "Pressenza"
-     },
-     {
-      "titulo": "¿Cinco estados de Estados Unidos prohibieron los centros de datos por su consumo energético?",
-      "link": "https://ladiaria.com.uy/verifica/articulo/2026/11/cinco-estados-de-estados-unidos-prohibieron-los-centros-de-datos-por-su-consumo-energetico/",
-      "fuente": "la diaria"
-     },
-     {
-      "titulo": "Un gigante japonés en problemas",
-      "link": "https://www.lanacion.com.ar/economia/negocios/un-gigante-japones-en-problemas-nid21112026/",
-      "fuente": "LA NACION"
-     },
-     {
-      "titulo": "Taiwán, NVIDIA y el futuro de la IA: qué pasaría con la economía mundial si China invadiera la isla",
-      "link": "https://www.infobae.com/def/2026/11/21/taiwan-nvidia-y-el-futuro-de-la-ia-que-pasaria-con-la-economia-mundial-si-china-invadiera-la-isla/",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "Esteban Magnani: “La inteligencia artificial es una ruleta rusa y, si explota, se lleva puesta la economía”",
-      "link": "https://www.infobae.com/def/2026/11/21/esteban-magnani-la-inteligencia-artificial-es-una-ruleta-rusa-y-si-explota-se-lleva-puesta-la-economia/",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "La pesca europea no puede esperar a 2040",
-      "link": "https://www.msn.com/es-es/dinero/general/la-pesca-europea-no-puede-esperar-a-2040/ar-AA2hTn2G",
-      "fuente": "El Español on MSN"
-     },
      {
       "titulo": "Los precios al productor de servicios de Japón suben un 4.2% en octubre, afianzando el argumento para una subida de tasas del BOJ",
       "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOVGYyVjYyM3JJYWI5SmF5RU1PT01CSmNHek9yN05CeFJ0S2c1TVlpeXpXLThtTnNOS0VHUTMzNWJocWF1S2s1MVJwX0phNW9RVVY3RmZpVUtoSWRzRFVrNHVaa25uM0MxVWM5REJXTTU1MHJJNFVtenhZWE5TZ1RrUjFpdkY0N3Y0aHRqb0dhdXdzNjV2WG5nYkd4bGdtc0Joc1d0Q1k4Y1lHbTRqMF9rdTJxeUtFQzB4bzEwNDVWWDhXaWw5eC1Qa3R0RjZBSFd6TDh3blNFclJEQVN4NmQwQS03UURKMEN4VjRqOHFDRW1OTVpNcHdPeQ?oc=5",
@@ -11908,17 +11904,63 @@
       "titulo": "Iberia y Air Europa mantienen la ruta Madrid-Caracas",
       "link": "https://primicia.com.ve/categoria/economia/",
       "fuente": "Diario Primicia"
+     },
+     {
+      "titulo": "El turismo de mayores que mueve China: 2.500 trenes, casi el 80% de pasajeros jubilados y una edad de retiro que sube poco a poco",
+      "link": "https://www.infobae.com/generacion-silver/2026/11/25/el-turismo-de-mayores-que-mueve-china-2500-trenes-casi-el-80-de-pasajeros-jubilados-y-una-edad-de-retiro-que-sube-poco-a-poco/",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "Donald Trump y Xi Jinping se reunieron el 19 de noviembre en Shenzhen, China. Cinco días después, el presidente estadounidense prepara nuevos aranceles contra México y otras ...",
+      "link": "https://www.elimparcial.com/mundo/2026/11/24/cinco-dias-despues-de-reunirse-con-xi-jinping-en-china-trump-prepara-nuevos-aranceles-contra-mexico-china-y-otros-14-paises-por-los-subsidios-que-reciben-sus-industrias-una-medida-que-podria-encarecer-las-exportaciones-hacia-estados-unidos/",
+      "fuente": "EL IMPARCIAL"
+     },
+     {
+      "titulo": "Bolsa hoy e Ibex 35, en directo: últimas noticias de los mercados, Euríbor, Wall Street, Nasdaq, Dow Jones, criptomonedas...",
+      "link": "https://www.eleconomista.es/flash/20261124/",
+      "fuente": "elEconomista.es"
+     },
+     {
+      "titulo": "El Niño amenaza la economía mundial y la diplomacia climática",
+      "link": "https://urgente24.com/El-Ni%C3%B1o-COP31-sin-consensos",
+      "fuente": "Urgente24"
+     },
+     {
+      "titulo": "EDOS 2026 reúne en Valencia a empresas, industria y reguladores para impulsar el futuro de los drones y las tecnologías duales",
+      "link": "https://www.lasprovincias.es/economia/edos-2026-reune-valencia-empresas-industria-reguladores-20261123110541-nt.html",
+      "fuente": "Las Provincias"
+     },
+     {
+      "titulo": "Estados Unidos a la Argentina: China controla el litio, la soja, la pesca y va por la infraestructura digital",
+      "link": "https://www.analisisdigital.com.ar/economia/2026/11/22/estados-unidos-la-argentina-china-controla-el-litio-la-soja-la-pesca-y-va-por-la-infraestructura-digital",
+      "fuente": "Análisis"
+     },
+     {
+      "titulo": "Mensaje de Estados Unidos a la Argentina: China ya controla el litio, la soja y la pesca y va por el cobre y la infraestructura digital",
+      "link": "https://www.infobae.com/economia/2026/11/22/mensaje-de-estados-unidos-a-la-argentina-china-ya-controla-el-litio-la-soja-y-la-pesca-y-va-por-el-cobre-y-la-infraestructura-digital/",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "Lula afirma que el mercado financiero no le impondrá su ajuste fiscal a Brasil",
+      "link": "https://efe.com/economia/2026-11-21/lula-mercado-financiero-ajuste-fiscal-brasil/",
+      "fuente": "Agencia EFE"
+     },
+     {
+      "titulo": "Economía estudia limitar las comisiones por traspasar la cuenta Financia Europa",
+      "link": "https://cincodias.elpais.com/mercados-financieros/2026-11-20/economia-estudia-limitar-las-comisiones-por-traspasar-la-cuenta-financia-europa.html",
+      "fuente": "Cinco Días"
+     },
+     {
+      "titulo": "Cómo se calcula la recesión económica y cómo se encuentra Argentina hoy",
+      "link": "https://chequeado.com/",
+      "fuente": "Chequeado"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-24",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-25",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-25T02:20:49.931Z",
+    "ultimoChequeo": "2026-11-25T03:20:48.575Z",
     "semana": [
      {
       "titulo": "La Comisión Europea abre una consulta pública para mejorar la reparabilidad de los productos",
@@ -13425,7 +13467,7 @@
   },
   "mundo_tecnologia": {
    "estado": "listo",
-   "corridas": 597,
+   "corridas": 598,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -13434,12 +13476,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-25T02:20:49.931Z",
+   "ultimaCorrida": "2026-11-25T03:20:48.575Z",
    "resumen": "🌎 Mundo: tecnología\n\n• Japón mueve una fábrica de chips en camión a las aulas (ecosistemastartup)\n  https://ecosistemastartup.com/japon-mueve-una-fabrica-de-chips-en-camion-a-las-aulas/\n• Con impulso de China, la energí",
    "informe": "data/informes/mundo_tecnologia/2026-11-24-2021.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "nasa despliega aviones y tecnología satelital ante una operación militar en estados unidos",
+     "geely monjaro 2025: una suv china con lujo, tecnología y seguridad",
+     "sheinbaum acuerda con china instalar hospital inteligente en méxico e impulsar cooperación",
+     "la burbuja de la ia",
+     "un gigante japonés en problemas",
+     "esteban magnani: “la inteligencia artificial es una ruleta rusa y, si explota, se lleva pu",
+     "perú y japón acuerdan reforzar preparación frente a el niño",
+     "chile y japón acuerdan fortalecer suministro de cobre y minerales críticos",
+     "la cop31 prolonga las negociaciones, en plena pugna sobre los combustibles fósiles",
+     "misiles rusos caen en territorio polaco: varsovia denuncia \"provocación\" por parte de mosc",
      "los inversores japoneses buscan oportunidades en la agricultura vietnamita.",
      "detectaron una intrusión informática en sistemas de inteligencia de estados unidos",
      "alerta en eeuu: una brecha informática expuso datos de la cia y de su sistema de inteligen",
@@ -14029,69 +14081,9 @@
      "dinamarca acusa a rusia de planear asesinato y alerta por escalada de guerra híbrida en eu",
      "estados unidos — centros de datos consumen 1.8% de la electricidad de estados unidos",
      "tecnología de construcción de puentes sin hormigón en alemania: madera y granito",
-     "macron acusa a rusia de una apuesta irresponsable tras los incidentes en europa",
-     "cambios en la dirección nacional de ciberseguridad tras fallas técnicas en estados unidos",
-     "escándalo educativo por trampas con ia en corea del sur",
-     "la unión europea activa una prohibición para exportar residuos plásticos",
-     "corea del sur acelera su carrera por la infraestructura de i",
-     "arabia saudita intercepta tres misiles lanzados hacia riad",
-     "la inteligencia artificial resuelve las preguntas del examen de ingreso a la universidad d",
-     "los tazos de pokémon: de nacer en el japón del 1600 hasta morir en manos de los t-tazos po",
-     "visa, mastercard y jpmorgan confirman filtración de datos: qué información se expuso y qué",
-     "seúl promete hasta 5 años de cárcel a estudiantes por el uso de dispositivos en exámenes",
-     "qué hay detrás de la expansión nuclear de corea del norte"
+     "macron acusa a rusia de una apuesta irresponsable tras los incidentes en europa"
     ],
     "bandeja": [
-     {
-      "titulo": "Condena de Estados Unidos a Huawei por negocios con Irán: lo que se sabe del veredicto",
-      "link": "https://www.msn.com/es-mx/noticias/otras/condena-de-estados-unidos-a-huawei-por-negocios-con-ir%C3%A1n-lo-que-se-sabe-del-veredicto/ar-AA2i9okO",
-      "fuente": "Debate on MSN"
-     },
-     {
-      "titulo": "Presidenta Sheinbaum anuncia que México tendrá un hospital inteligente con tecnología de China y acuerda intercambio de médicos",
-      "link": "https://www.poresto.com/mexico/2026/11/24/presidenta-sheinbaum-anuncia-mexico-hospital-inteligente-tecnologia-china-acuerda-intercambio-medicos.html",
-      "fuente": "poresto"
-     },
-     {
-      "titulo": "¿Qué pasa si Rusia ataca a un país de la OTAN? La cláusula que puede provocar una gran guerra",
-      "link": "https://heraldodemexico.com.mx/mundo/2026/11/24/que-pasa-si-rusia-ataca-a-un-pais-de-la-otan-2923025.html",
-      "fuente": "El Heraldo de México"
-     },
-     {
-      "titulo": "Rusia envió un robot humanoide a la Estación Espacial Internacional para ayudar en tareas fuera de la nave",
-      "link": "https://www.infobae.com/tecno/2026/11/24/rusia-envio-un-robot-humanoide-a-la-estacion-espacial-internacional-para-ayudar-en-tareas-fuera-de-la-nave/",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "México y China colaborarán en tecnología médica y formación de especialistas",
-      "link": "https://eltiempomx.com/noticia/2026/mexico-y-china-colaboraran-en-tecnologia-medica-y-formacion-de-especialistas.html",
-      "fuente": "El Tiempo - Coahuila México"
-     },
-     {
-      "titulo": "Economía-Murtra pide que Europa cree su propia tecnología y avisa de que no puede depender de multimillonarios \"astutos\"",
-      "link": "https://www.infobae.com/america/agencias/2026/11/23/economia-murtra-pide-que-europa-cree-su-propia-tecnologia-y-avisa-de-que-no-puede-depender-de-multimillonarios-astutos/",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "El ministro de Educación de Corea del Sur renunció tras el escándalo de trampa con IA en los exámenes universitarios",
-      "link": "https://www.infobae.com/america/mundo/2026/11/23/el-ministro-de-educacion-de-corea-del-sur-renuncio-tras-el-escandalo-de-trampa-con-ia-en-los-examenes-universitarios/",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "Rastrea EU contactos de Alice Huang con espionaje chino",
-      "link": "https://diario.mx/estados-unidos/2026/nov/23/rastrea-eu-contactos-de-alice-huang-con-espionaje-chino-1150022.html",
-      "fuente": "El Diario"
-     },
-     {
-      "titulo": "Dos gigantes petroleros llegarán a Tamaulipas en 2027: así son Tláloc y Chalchi, las estructuras del proyecto Trión",
-      "link": "https://www.posta.com.mx/tamaulipas/dos-gigantes-petroleros-llegaran-a-tamaulipas-en-2027-asi-son-tlaloc-y-chalchi-las-estructuras-del-proyecto-trion/vl2280643",
-      "fuente": "POSTA México"
-     },
-     {
-      "titulo": "Estados Unidos pone la mira en Jujuy por la tecnología china utilizada en seguridad y las inversiones en litio",
-      "link": "https://www.todojujuy.com/pais/estados-unidos-pone-la-mira-jujuy-la-tecnologia-china-utilizada-seguridad-y-las-inversiones-litio-n299170",
-      "fuente": "TodoJujuy.com"
-     },
      {
       "titulo": "Huawei pierde la batalla judicial en Estados Unidos, acusada por negocios con Irán y robo de tecnología",
       "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPdFo5WS1hclRzMU1Nd1hGdnduaFJwdXVjWklqeEhMRWczZEpJamVoa0NQYTNHazhpWFEyajFhb004Njlod0w4Q0UyWm9fRFBvdGZxaTFzU3psVkx3MTdwc1M2Y2VCMEc5NHdOQThRQ0liSlo1VFlybmVnZXVmbVJkWUF3VHNnN0hWMDBXXzd1bXZpdmV3clZNUFVkdkZkaWFGT01vTXlXV1d4SUZNRm5OX2FfVjQxYTA4VDdKMEdMbS1LYXBGQjIyN1RmQnNFcGRGMU5GU1dGWEo?oc=5",
@@ -14191,17 +14183,63 @@
       "titulo": "Japón tiene un problema con el futuro de sus semiconductores. Su respuesta es una fábrica de chips sobre ruedas",
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOXzlaZVpNSS01VDZiRllwQlZOa0pSek5qVjVWVjFYSE11SGpJazd1UnJYWWMxMHZTZnlXZnhuSEdsYzBMXzY5MXBZbjVvVklKcWhFT1BBREpYZ3VwdnpqWGN3WUl1el9ubDJvQkhjTXViaUwza3QwQU5pUVdkMS1KR3dRbHBrQlZxUTRyWDJzNndjVGhfMkhCd1pWSi1XazNMU2JYRmtpSnN2bm5sSFJRNEpUYUk1eUNQanZ3dHlWbzMyUdIBxwFBVV95cUxOeF9scWk2NjJWMl8wQk9Gd01pamxUS3FqWmR6Q01sa1YxODV5SHJ0SmpRVldaM1g2b2NaU25qM2xJTjRXYWd3Z1FXTzJFeU5temJ6MVhOZXZCeEVIV0J0ZkVUc1Axa3MyR1lqQnJkT1otSjAwZGRKNEdBd1VtVEVxV2MzTHZXOWg3clM3aktHa21GTU51cFlXYjRZWW1rQnA4c0dITHB3MkFneDFsdC0wbUtLQ3FiaG0xcHZtR1MwMHVLYUczRjQ4?oc=5",
       "fuente": "Xataka"
+     },
+     {
+      "titulo": "NASA despliega aviones y tecnología satelital ante una operación militar en Estados Unidos: ¿qué está pasando?",
+      "link": "https://www.msn.com/es-co/tecnolog%C3%ADa/aviaci%C3%B3n/nasa-despliega-aviones-y-tecnolog%C3%ADa-satelital-ante-una-operaci%C3%B3n-militar-en-estados-unidos-qu%C3%A9-est%C3%A1-pasando/ar-AA2ia44t",
+      "fuente": "Semana on MSN"
+     },
+     {
+      "titulo": "Geely Monjaro 2025: una SUV china con lujo, tecnología y seguridad",
+      "link": "https://www.msn.com/es-es/motor/general/geely-monjaro-2025-una-suv-china-con-lujo-tecnolog%C3%ADa-y-seguridad/vi-AA28GKHn",
+      "fuente": "YouTube on MSN"
+     },
+     {
+      "titulo": "Sheinbaum acuerda con China instalar hospital inteligente en México e impulsar cooperación médica",
+      "link": "https://www.diariodemexico.com/mi-nacion/sheinbaum-acuerda-con-china-instalar-hospital-inteligente-en-mexico-impulsar-cooperacion-medica",
+      "fuente": "Diario de México"
+     },
+     {
+      "titulo": "La burbuja de la IA",
+      "link": "https://lasillarota.com/mundo/2026/11/22/burbuja-de-ia-que-tan-grande-es-el-riesgo-de-colapso-537927.html",
+      "fuente": "La Silla Rota"
+     },
+     {
+      "titulo": "Un gigante japonés en problemas",
+      "link": "https://www.lanacion.com.ar/economia/negocios/un-gigante-japones-en-problemas-nid21112026/",
+      "fuente": "LA NACION"
+     },
+     {
+      "titulo": "Esteban Magnani: “La inteligencia artificial es una ruleta rusa y, si explota, se lleva puesta la economía”",
+      "link": "https://www.infobae.com/def/2026/11/21/esteban-magnani-la-inteligencia-artificial-es-una-ruleta-rusa-y-si-explota-se-lleva-puesta-la-economia/",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "Perú y Japón acuerdan reforzar preparación frente a El Niño",
+      "link": "https://elperuano.pe/noticia/309411-peru-y-japon-acuerdan-reforzar-preparacion-frente-a-el-nino",
+      "fuente": "Diario Oficial El Peruano"
+     },
+     {
+      "titulo": "Chile y Japón acuerdan fortalecer suministro de cobre y minerales críticos",
+      "link": "https://www.rumbominero.com/otros-paises/chile-y-japon-acuerdan-fortalecer-suministro-de-cobre-y-minerales-criticos/",
+      "fuente": "Rumbo Minero"
+     },
+     {
+      "titulo": "La COP31 prolonga las negociaciones, en plena pugna sobre los combustibles fósiles",
+      "link": "https://unitel.bo/noticias/agencias/la-cop31-prolonga-las-negociaciones-en-plena-pugna-sobre-los-combustibles-fosiles-FL24947398",
+      "fuente": "unitel"
+     },
+     {
+      "titulo": "Misiles rusos caen en territorio polaco: Varsovia denuncia \"provocación\" por parte de Moscú",
+      "link": "https://www.emol.com/noticias/Internacional/2026/11/20/1217713/misiles-caen-polonia.html",
+      "fuente": "EMOL"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-24",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-25",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-25T02:20:49.931Z",
+    "ultimoChequeo": "2026-11-25T03:20:48.575Z",
     "semana": [
      {
       "titulo": "Rusia bloqueó una iniciativa de la ONU para regular el uso de los llamados \"robots asesinos\"",
@@ -15708,7 +15746,7 @@
   },
   "mundo_salud": {
    "estado": "listo",
-   "corridas": 597,
+   "corridas": 598,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -15717,12 +15755,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-25T02:20:49.931Z",
+   "ultimaCorrida": "2026-11-25T03:20:48.575Z",
    "resumen": "🌎 Mundo: salud y ciencia\n\n• OMS Reporta Primera Muerte en el Mundo por Virus AH5; Víctima Trabajaba en una Granja (N+ Noticias)\n  https://www.nmas.com.mx/salud/oms-reporta-primera-muerte-en-el-mundo-por-virus-ah5-victim",
    "informe": "data/informes/mundo_salud/2026-11-24-2021.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "denunciante acusa al \"mejor abogado de chile\" de nulo avance en caso de abuso tras pagar $",
+     "oms destina usd 2 millones a reforzar la vacunación y los centros de salud en cuba",
+     "avance de 'la promesa' del miércoles, 25 de noviembre: el caso de leocadia irá ante el jue",
+     "servicio universal de salud: sheinbaum alista 6 mil 710 consultorios para enero de 2027",
+     "sheinbaum acuerda con china traer el modelo de hospitales inteligentes a méxico",
+     "méxico-china: detalla sheinbaum plan de cooperación en salud",
+     "docente mendocina recibió una de las máximas condecoraciones que otorga japón",
+     "05:00h | 21 nov 2026 | poniendo las calles",
+     "el dato que preocupa a la oms: la resistencia antimicrobiana amenaza tratamientos y tambié",
+     "trump defiende sus vínculos \"fantásticos\" con xi y putin tras críticas por la cumbre",
      "méxico busca modernizar sus hospitales con tecnología e inteligencia artificial de china",
      "japón y corea ganan popularidad como destinos turísticos entre duranguenses - el sol de du",
      "astrónomos aficionados usan herramientas de ia para identificar posibles exoplanetas",
@@ -16312,69 +16360,9 @@
      "¿debería haber una edad en la que los médicos estén obligados a jubilarse?",
      "“no somos un país de mierda (todavía)”: daniel schteingart cuestiona los mitos sobre la de",
      "el secreto de quienes superan los cien años no está en el gimnasio ni en las dietas estric",
-     "la oms alerta de que más de 1.000 millones de personas viven con obesidad",
-     "ops retiró designación sanitaria a estados unidos, méxico y bolivia tras repunte en contag",
-     "la oms alertó por sustancias químicas presentes en productos cotidianos que pueden afectar",
-     "la oms publica sus primeras directrices sobre la diabetes de tipo 1 en el adulto",
-     "oms reconoce a sonora por su modelo de atención a migrantes",
-     "secretaría de salud pública de la ciudad de méxico fortalece la atención prehospitalaria a",
-     "con el objetivo de brindar herramientas para la detección temprana y el acompañamiento emo",
-     "el niño amenaza un 2027 con epidemias, hambre y mortalidad extrema",
-     "día internacional del hombre: desafíos en salud física y mental y por qué su esperanza de ",
-     "españa destaca la capacidad de maría neira para dirigir la oms en tiempos difíciles",
-     "garcía afirma que el apoyo de españa a la lucha contra la…"
+     "la oms alerta de que más de 1.000 millones de personas viven con obesidad"
     ],
     "bandeja": [
-     {
-      "titulo": "Informan primera muerte de gripe aviar por contacto con ganado lechero en Estados Unidos",
-      "link": "https://www.primerahora.com/noticias/mundo/notas/informan-primera-muerte-de-gripe-aviar-por-contacto-con-ganado-lechero-en-estados-unidos/",
-      "fuente": "Primera Hora"
-     },
-     {
-      "titulo": "CEDIMAT reúne especialistas nacionales e internacionales en torno al futuro de la salud femenina",
-      "link": "https://noticentro.com.do/cedimat-reune-especialistas-nacionales-e-internacionales-en-torno-al-futuro-de-la-salud-femenina/",
-      "fuente": "noticentro.com.do"
-     },
-     {
-      "titulo": "Sheinbaum acuerda con China instalación de un hospital inteligente en México",
-      "link": "https://oaxaca.eluniversal.com.mx/nacion/sheinbaum-acuerda-con-china-instalacion-de-un-hospital-inteligente-en-mexico/",
-      "fuente": "El Universal Oaxaca"
-     },
-     {
-      "titulo": "OMS confirma primera muerte por gripe aviar A(H5) en el mundo; tuvo contacto con ganado lechero infectado",
-      "link": "https://www.tvazteca.com/aztecanoticias/oms-confirma-primera-muerte-por-gripe-aviar-ah5-en-el-mundo-tuvo-contacto-con-ganado-lechero-infectado/",
-      "fuente": "TV Azteca"
-     },
-     {
-      "titulo": "México busca un hospital inteligente con China y avanzar en la diplomacia de los \"pandas\"",
-      "link": "https://www.infobae.com/america/agencias/2026/11/24/mexico-busca-un-hospital-inteligente-con-china-y-avanzar-en-la-diplomacia-de-los-pandas/",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "Opinión de un médico tras perder Estados Unidos el estatus de erradicación del sarampión",
-      "link": "https://www.infobae.com/salud/2026/11/24/opinion-de-un-medico-tras-perder-estados-unidos-el-estatus-de-erradicacion-del-sarampion/",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "Sheinbaum explica qué acordó con China para modernizar los hospitales públicos de México",
-      "link": "https://www.msn.com/es-mx/noticias/mexico/sheinbaum-explica-qu%C3%A9-acord%C3%B3-con-china-para-modernizar-los-hospitales-p%C3%BAblicos-de-m%C3%A9xico/ar-AA2i8MmJ",
-      "fuente": "Expansión Política on MSN"
-     },
-     {
-      "titulo": "Estados Unidos ampliará los descuentos de Medicare y 13 medicamentos tendrán precios hasta 84% más bajos",
-      "link": "https://www.cronista.com/usa/trending/estados-unidos-ampliara-los-descuentos-de-medicare-y-13-medicamentos-tendran-precios-hasta-84-mas-bajos/",
-      "fuente": "El Cronista"
-     },
-     {
-      "titulo": "Hallazgo en el Océano Pacífico: detectan huellas de las erupciones volcánicas más profundas jamás registradas, a más de 6.000 metros",
-      "link": "https://www.infobae.com/america/ciencia-america/2026/11/24/hallazgo-en-el-oceano-pacifico-detectan-huellas-de-las-erupciones-volcanicas-mas-profundas-jamas-registradas-a-mas-de-6000-metros/",
-      "fuente": "Infobae"
-     },
-     {
-      "titulo": "Alan Addi, el mexicano que se fue a combatir a Rusia, lleva más de dos semanas incomunicado",
-      "link": "https://www.msn.com/es-mx/noticias/other/alan-addi-el-mexicano-que-se-fue-a-combatir-a-rusia-lleva-m%C3%A1s-de-dos-semanas-incomunicado/ar-AA2i83en",
-      "fuente": "EL IMPARCIAL on MSN"
-     },
      {
       "titulo": "La diplomacia familiar del régimen de Nicaragua: Maurice y Laureano Ortega amplían presencia en Rusia, China y Bielorrusia",
       "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxONV9rbWRJY1lYSks2bXBmdFVOYkxhbUFEQW5tWlYwUk0tNE92RUhZUVlDUVd1Yzd5YlpCR0NFRUxhdklSX3ROV0s1RDNXLXY3eGJROEs2bG1PQ0d1VThMVHQ3cS1fdFQzQVFPQ0Q1d2FIZ2pGQzRYU1dUNlE4TlRGVllWYml0VVVJbHVvdVhqRG96eHdNLUdYRm9lOGNieHJxZUZzX1EtMWFYMHh2cXdnMFV5WFFHVGswLXlySzJTWEtaNEZWUFU4VzV5Qk9hNjFGZllXX0NMc0RzSHJUNTlodldJdWhPVlBkN2JHNzhzWVlJbzgyUElfSU9R0gGUAkFVX3lxTFBLaDhlVGhhQjF0dWdkYkRtRXNwNFRQMkhhU2J0Y2JZSjB1ai1aY2x3cC15bWo5MlBmbGxLcmlYckZ4RDJ6d1YzeEpjeWxCMF9fQm9VUmZtVUxwMURLRFVmMGhOcnBZVFZybTZPWnZrbTJpRkdxanA4aWRxMXV6bkttRVJRYlFDMldzTEFYVUJ2SUVWeUFJMlI1LW9UNVd0UzV6dnZuVVlfVFRzemhrazZxOHRZbHVuZ0k5TjhGSHJsemhmSmEzV2RJQ0VBSHcxMHVqZmVDLUZ2eU9aeVl3Qmt3UUw2MVpjS1hESEM0WFVyOHRWcXNwWkFQeEdZcjZNVzZvc2owSkNCZnNCd2h6ZmQtMDlLWA?oc=5",
@@ -16474,17 +16462,63 @@
       "titulo": "Acuerdo con China en salud incluye instalar un hospital inteligente y formación: CSP",
       "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMVROYWxDc1FPOHhnWTduNmdjTkw1QUlwVV9Za2xnWUFjM1JaQnc5UXQ2bGdpQ0RwMkJtZ3FHV3VaT0loajIxUU1RMWpkazJrWWp2SEFKYURkOHl2eW5rLUVUYWJXTG5HWGhRU2hnTWU3NEJOZjA3NkM0ejdMQXVPaGFZdExhd3I1MV9CYlFuSi1sbWRnQUZJQXBIeTJTU3pwVEFGX21xTUVNSkgxV2ZOSW11Y0ZxSUlJaXc?oc=5",
       "fuente": "SinEmbargo MX"
+     },
+     {
+      "titulo": "Denunciante acusa al \"mejor abogado de Chile\" de nulo avance en caso de abuso tras pagar $2,8 millones",
+      "link": "https://www.msn.com/es-cl/noticias/otras/denunciante-acusa-al-mejor-abogado-de-chile-de-nulo-avance-en-caso-de-abuso-tras-pagar-28-millones/ar-AA2ia3aK",
+      "fuente": "BioBioChile on MSN"
+     },
+     {
+      "titulo": "OMS destina USD 2 millones a reforzar la vacunación y los centros de salud en Cuba",
+      "link": "https://www.infobae.com/cuba/2026/11/25/oms-destina-usd-2-millones-a-reforzar-la-vacunacion-y-los-centros-de-salud-en-cuba/",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "Avance de 'La Promesa' del miércoles, 25 de noviembre: el caso de Leocadia irá ante el juez",
+      "link": "https://www.msn.com/es-es/news/other/avance-de-la-promesa-del-miércoles-25-de-noviembre-el-caso-de-leocadia-irá-ante-el-juez/ar-AA2i92Gw",
+      "fuente": "El Confidencial on MSN"
+     },
+     {
+      "titulo": "Servicio Universal de Salud: Sheinbaum alista 6 mil 710 consultorios para enero de 2027",
+      "link": "https://www.radioformula.com.mx/politica/servicio-universal-de-salud-sheinbaum-alista-6-mil-710-consultorios-para-enero-de-2027-20261124-0030.html",
+      "fuente": "Radio Fórmula"
+     },
+     {
+      "titulo": "Sheinbaum acuerda con China traer el modelo de hospitales inteligentes a México",
+      "link": "https://larevista.com.mx/nota/sheinbaum-acuerda-con-china-traer-el-modelo-de-hospitales-inteligentes-a-mexico-1795540528897",
+      "fuente": "La Revista"
+     },
+     {
+      "titulo": "México-China: Detalla Sheinbaum plan de cooperación en Salud",
+      "link": "https://mvsnoticias.com/nacional/2026/11/24/mexico-china-detalla-sheinbaum-plan-de-cooperacion-en-salud-754527.html",
+      "fuente": "MVS Noticias"
+     },
+     {
+      "titulo": "Docente mendocina recibió una de las máximas condecoraciones que otorga Japón",
+      "link": "https://www.diariouno.com.ar/sociedad/docente-mendocina-recibio-una-las-maximas-condecoraciones-que-otorga-japon-n1616994",
+      "fuente": "Diario UNO"
+     },
+     {
+      "titulo": "05:00H | 21 NOV 2026 | Poniendo las Calles",
+      "link": "https://www.cope.es/programas/poniendo-las-calles/horas-completas/05-00h-21-nov-2026-poniendo-calles-20261121_3479564.html",
+      "fuente": "COPE"
+     },
+     {
+      "titulo": "El dato que preocupa a la OMS: la resistencia antimicrobiana amenaza tratamientos y también afecta la salud animal",
+      "link": "https://www.infobae.com/salud/ciencia/2026/11/21/el-dato-que-preocupa-a-la-oms-la-resistencia-antimicrobiana-amenaza-tratamientos-y-tambien-afecta-la-salud-animal/",
+      "fuente": "Infobae"
+     },
+     {
+      "titulo": "Trump defiende sus vínculos \"fantásticos\" con Xi y Putin tras críticas por la cumbre",
+      "link": "https://www.lanacion.com.ar/estados-unidos/trump-defiende-sus-vinculos-fantasticos-con-xi-y-putin-tras-criticas-por-la-cumbre-nid20112026/",
+      "fuente": "LA NACION"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-24",
-     "hechas": [
-      "08:00",
-      "14:00",
-      "20:00"
-     ]
+     "fecha": "2026-11-25",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-25T02:20:49.931Z",
+    "ultimoChequeo": "2026-11-25T03:20:48.575Z",
     "semana": [
      {
       "titulo": "Apple Health AI Usage Study: Nueva IA de salud para iPhone",
@@ -18006,13 +18040,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-24",
-     "hechas": [
-      "08:30",
-      "13:00",
-      "17:30",
-      "21:30"
-     ]
+     "fecha": "2026-11-25",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-25T00:50:28.848Z"
    }
@@ -18034,10 +18063,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-24",
-     "hechas": [
-      "20:30"
-     ]
+     "fecha": "2026-11-25",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-24T23:50:55.552Z"
    }
@@ -18144,10 +18171,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-24",
-     "hechas": [
-      "09:00"
-     ]
+     "fecha": "2026-11-25",
+     "hechas": []
     },
     "instruido": true,
     "ultimoChequeo": "2026-11-24T12:10:56.285Z"
@@ -18170,17 +18195,15 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-24",
-     "hechas": [
-      "21:45"
-     ]
+     "fecha": "2026-11-25",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-25T00:50:28.848Z"
    }
   },
   "noticias_tec": {
    "estado": "listo",
-   "corridas": 597,
+   "corridas": 598,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -18189,12 +18212,22 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-25T02:20:49.931Z",
+   "ultimaCorrida": "2026-11-25T03:20:48.575Z",
    "resumen": "💻 Lo último en tecnología\n\n• De los chatbots a los ‘clones’ ejecutivos: cómo Cosmos, de Uami, busca que las empresas creen su propio software (Prensario Tila)\n  https://prensariotila.com/de-los-chatbots-a-los-clones-eje",
    "informe": "data/informes/noticias_tec/2026-11-24-2121.md",
    "pausado": false,
    "memoria": {
     "vistos": [
+     "la ia usa solo 1,9 galones de agua por cada $25 gastados, frente a los 308 del leche de al",
+     "dell technologies proporciona la base de datos e infraestructura de ia fiable para escalar",
+     "modelos de openai y anthropic que sus creadores temen soltar",
+     "la unam y capital one abren nuevo laboratorio para especializar a universitarios en ia, nu",
+     "descarga gratis el port para pc de silent hill, sin emulador, en español y con ray tracing",
+     "el gran día de anthropic: openai y google contraatacan",
+     "pagos con stablecoins ligados a china estuvieron 55% por encima de su línea base tras lanz",
+     "apple anuncia el desarrollo de su propio agente de ia para rivalizar con openai, meta y an",
+     "los mejores teléfonos que no se consiguen en argentina",
+     "“la ia está gobernada de forma medieval”: la dura crítica de la onu a las empresas que con",
      "de \"chepibe\" a \"influencer\": la rae incorporó más de 6.000 novedades a su diccionario",
      "opentable acuerda adquirir la empresa australiana de tecnología para restaurantes me&u",
      "corrientes: la unidad ¨ será sede de un workshop gratuito sobre marketing e inteligencia a",
@@ -18784,17 +18817,7 @@
      "amd ya vende venice, el primer procesador para servidores fabricado a 2 nm: 256 núcleos pe",
      "hackathon ual para digitalizar pueblos rurales",
      "california demanda a openai por hackeo de hugging face, cita advertencias ignoradas",
-     "milei: “la competencia ordena y baja los precios”",
-     "iphone 18, air 2 oled producción: marzo 2027 pista",
-     "ya están disponibles los nuevos equipos desktop compactos nvidia rtx spark",
-     "trump: el hackeo a la base de datos del fbi podría ser ventajoso",
-     "zoom muestra las novedades de su plataforma a sus partners",
-     "de pedir la compra por whatsapp a supermercados sin cajeros: las novedades que ya prueban ",
-     "fmi revisa la ia: cambios inmediatos para políticas y mercados",
-     "whatsapp: así funciona la nueva barra de navegación adaptable",
-     "¿y si los edificios comenzaran a construirse solos?",
-     "delcy rodríguez ordena gestiones para desbloquear chatgpt y otras plataformas de ia en ven",
-     "desarrollan una aplicación móvil con ia para facilitar la movilidad de personas con discap"
+     "milei: “la competencia ordena y baja los precios”"
     ],
     "bandeja": [
      {
@@ -18896,18 +18919,63 @@
       "titulo": "Un investigador de Anthropic advirtió que la IA podría dejar sin empleo a casi toda la humanidad para siempre",
       "link": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNSDZNRGNQdzZZVER2eGFPSVNRY2wwaXF6SHU2aC02T1lXZzllTlFma2hiNHJjb0x4bFFFMjdmbGg0UVowMWhFVjh3ZXFsR3VSOWxQMjBOM3BKNFQwVVhaVWJTUGs4ZTMya01teDZqTzMxdkJzU20yZnRWNGpUaWVxWlY3anpBY2UzSFNDVzBlN1ZMUnNnSkN1WWg0WkZ0eVJEVi1JeEdMdldkeTktNGpDazZlVWVuSXdmMnN5cTVyQ25vaVJMdzZXN2R2ZXpyMTdLQWw1bmV5bEtXckg1cUswNFdFTkk4Q3VrMElrVGlvOFM0R2R1dUM4anMzQXlDTEHSAf8BQVVfeXFMTUg2TURjUHc2WVREdnhhT0lTUWNsMGlxekh1NmgtNk9ZV2c5ZU5RZmtoYjRyY29MeGxRRTI3ZmxoNFFaMDFoRVY4d2VxbEd1UjlsUDIwTjNwSjRUMFVYWlViU1BrOGUzMmtNbXg2ak8zMXZCc1NtMmZ0VjRqVGllcVpWN2p6QWNlM0hTQ1cwZTdWTFJzZ0pDdVloNFpGdHlSRFYtSXhHTHZXZHk5LTRqQ2s2ZVVlbkl3ZjJzeXE1ckNub2lSTHc2VzdkdmV6cjE3S0FsNW5leWxLV3JINXFLMDRXRU5JOEN1azBJa1RpbzhTNEdkdXVDOGpzM0F5Q0xB?oc=5",
       "fuente": "TN"
+     },
+     {
+      "titulo": "La IA usa solo 1,9 galones de agua por cada $25 gastados, frente a los 308 del leche de almendras, según un estudio",
+      "link": "https://www.cryptopolitan.com/es/ai-uses-1-9-gallons-of-water-for-every-25/",
+      "fuente": "Cryptopolitan"
+     },
+     {
+      "titulo": "Dell Technologies proporciona la base de datos e infraestructura de IA fiable para escalar la IA agéntica empresarial",
+      "link": "https://espaciodiario.com/dell-technologies-proporciona-la-base-de-datos-e-infraestructura-de-ia-fiable-para-escalar-la-ia-agentica-empresarial/",
+      "fuente": "espaciodiario.com"
+     },
+     {
+      "titulo": "Modelos de OpenAI y Anthropic que sus creadores temen soltar",
+      "link": "https://tecnologiageek.com/modelos-openai-anthropic-peligrosos/",
+      "fuente": "Tecnología Geek"
+     },
+     {
+      "titulo": "La UNAM y Capital One abren nuevo laboratorio para especializar a universitarios en IA, nube e inglés",
+      "link": "https://expansion.mx/tecnologia/2026/11/24/la-unam-y-capital-one-abren-nuevo-laboratorio",
+      "fuente": "Expansión"
+     },
+     {
+      "titulo": "Descarga gratis el port para PC de Silent Hill, sin emulador, en español y con ray tracing y HDR",
+      "link": "https://www.tarreo.com/pc/descarga-gratis-port-pc-silent-hill-sin-emulador-espanol-ray-tracing/",
+      "fuente": "Tarreo"
+     },
+     {
+      "titulo": "El gran día de Anthropic: OpenAI y Google contraatacan",
+      "link": "https://www.elnacional.cat/oneconomia/es/on-ia/gran-dia-anthropic-openai-google-contraatacan_1728821_102.html",
+      "fuente": "El Nacional"
+     },
+     {
+      "titulo": "Pagos con stablecoins ligados a China estuvieron 55% por encima de su línea base tras lanzamientos de IA de EE. UU.",
+      "link": "https://www.diariobitcoin.com/regulacion/pagos-con-stablecoins-ligados-a-china-estuvieron-55-por-encima-de-su-linea-base-tras-lanzamientos-de-ia-de-ee-uu/",
+      "fuente": "DiarioBitcoin"
+     },
+     {
+      "titulo": "Apple anuncia el desarrollo de su propio agente de IA para rivalizar con OpenAI, Meta y Anthropic",
+      "link": "https://infoarenales.com/2026/11/21/apple-prepara-su-propio-agente-de-inteligencia-artificial-para-competir-con-openai-meta-y-anthropic/",
+      "fuente": "infoarenales"
+     },
+     {
+      "titulo": "Los mejores teléfonos que no se consiguen en Argentina",
+      "link": "https://www.mdzol.com/tecnologia/2026/11/21/los-mejores-telefonos-que-no-se-consiguen-en-argentina-1995750.html",
+      "fuente": "MDZ Online"
+     },
+     {
+      "titulo": "“La IA está gobernada de forma medieval”: la dura crítica de la ONU a las empresas que controlan la inteligencia artificial",
+      "link": "https://tn.com.ar/tecno/novedades/2026/11/20/la-ia-esta-gobernada-de-forma-medieval-la-dura-critica-de-la-onu-a-las-empresas-que-controlan-la-inteligencia-artificial/",
+      "fuente": "Todo Noticias"
      }
     ],
     "entregas": {
-     "fecha": "2026-11-24",
-     "hechas": [
-      "09:00",
-      "13:00",
-      "17:00",
-      "21:00"
-     ]
+     "fecha": "2026-11-25",
+     "hechas": []
     },
-    "ultimoChequeo": "2026-11-25T02:20:49.931Z",
+    "ultimoChequeo": "2026-11-25T03:20:48.575Z",
     "semana": [
      {
       "titulo": "Casi 200 páginas web, entre ellas BBC e IKEA, fueron afectadas por un ciberataque",
@@ -20729,10 +20797,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-24",
-     "hechas": [
-      "22:00"
-     ]
+     "fecha": "2026-11-25",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-25T01:21:06.960Z"
    }
@@ -20864,10 +20930,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-24",
-     "hechas": [
-      "06:50"
-     ]
+     "fecha": "2026-11-25",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-24T10:29:06.595Z"
    }
@@ -20914,10 +20978,8 @@
    "pausado": false,
    "memoria": {
     "horas": {
-     "fecha": "2026-11-24",
-     "hechas": [
-      "10:00"
-     ]
+     "fecha": "2026-11-25",
+     "hechas": []
     },
     "ultimoChequeo": "2026-11-24T13:10:30.187Z"
    }
@@ -20974,7 +21036,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1166,
+   "corridas": 1167,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20983,13 +21045,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-25T02:50:37.256Z",
+   "ultimaCorrida": "2026-11-25T03:20:48.575Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-24",
-    "ultimoChequeo": "2026-11-25T02:50:37.256Z"
+    "ultimoChequeo": "2026-11-25T03:20:48.575Z"
    }
   },
   "feriados": {
@@ -21161,7 +21223,7 @@
    "memoria": {}
   },
   "lote_fb": {
-   "estado": "falló",
+   "estado": "sin señal",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -21176,11 +21238,231 @@
    "informe": null,
    "pausado": false,
    "memoria": {
-    "avisoSinSenal": "2026-11-24T16:57:00.000Z"
+    "avisoSinSenal": "2026-11-24T23:12:00.000Z"
    }
   }
  },
  "log": [
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Lo último en tecnología",
+   "que": "no pude leer «ciberseguridad alerta»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Lo último en tecnología",
+   "que": "no pude leer «celulares lanzamiento»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Lo último en tecnología",
+   "que": "no pude leer «GitHub herramienta nueva»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Lo último en tecnología",
+   "que": "no pude leer «programación software novedades»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Lo último en tecnología",
+   "que": "no pude leer «OpenAI Google Anthropic Meta anuncio»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Lo último en tecnología",
+   "que": "no pude leer «nuevo modelo de IA lanzamiento»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Lo último en tecnología",
+   "que": "no pude leer «inteligencia artificial novedades»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: salud y ciencia",
+   "que": "no pude leer «descubrimiento científico»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: salud y ciencia",
+   "que": "no pude leer «OMS salud mundial»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: salud y ciencia",
+   "que": "no pude leer «Rusia salud»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: salud y ciencia",
+   "que": "no pude leer «Estados Unidos salud avance médico»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: salud y ciencia",
+   "que": "no pude leer «Japón salud ciencia»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: salud y ciencia",
+   "que": "no pude leer «China salud avance médico»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: tecnología",
+   "que": "no pude leer «Europa tecnología»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: tecnología",
+   "que": "no pude leer «Corea del Sur tecnología»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: tecnología",
+   "que": "no pude leer «Rusia tecnología»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: tecnología",
+   "que": "no pude leer «Estados Unidos tecnología»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: tecnología",
+   "que": "no pude leer «Japón tecnología»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: tecnología",
+   "que": "no pude leer «China tecnología»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: economía",
+   "que": "no pude leer «India Brasil economía»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: economía",
+   "que": "no pude leer «Europa economía»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: economía",
+   "que": "no pude leer «Rusia economía»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: economía",
+   "que": "no pude leer «Estados Unidos economía»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: economía",
+   "que": "no pude leer «Japón economía»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mundo: economía",
+   "que": "no pude leer «China economía»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Argentina: economía y obra pública",
+   "que": "no pude leer «créditos hipotecarios Argentina»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Argentina: economía y obra pública",
+   "que": "no pude leer «obra pública Córdoba»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Argentina: economía y obra pública",
+   "que": "no pude leer «construcción Argentina»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Argentina: economía y obra pública",
+   "que": "no pude leer «economía Argentina»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Noticias de Villa María",
+   "que": "no pude leer «\"Villa María Ya\"»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Noticias de Villa María",
+   "que": "no pude leer «\"Villa María Vivo\"»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Noticias de Villa María",
+   "que": "no pude leer «\"El Diario del Centro del País\"»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Noticias de Villa María",
+   "que": "no pude leer «Villa Nueva Córdoba»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Noticias de Villa María",
+   "que": "no pude leer «Villa María clima tormenta»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Noticias de Villa María",
+   "que": "no pude leer «Villa María trabajo empleo»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Noticias de Villa María",
+   "que": "no pude leer «Villa María seguridad policía»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Noticias de Villa María",
+   "que": "no pude leer «Villa María Córdoba»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Clientes y licitaciones",
+   "que": "no pude leer «concurso de precios obra Córdoba»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Clientes y licitaciones",
+   "que": "no pude leer «licitación vivienda Córdoba»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Clientes y licitaciones",
+   "que": "no pude leer «licitación pública Villa María»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Clientes y licitaciones",
+   "que": "no pude leer «licitación obra Córdoba»: respondió 503"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mantenimiento",
+   "que": "Venta del lote (Facebook) no da señales hace 249 min"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-25T03:20:48.575Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-25T02:50:37.256Z",
    "quien": "Mesa de entrada",
@@ -22460,226 +22742,6 @@
    "t": "2026-11-24T10:29:06.595Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T09:48:35.158Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T09:48:35.158Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T09:17:29.098Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T09:17:29.098Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T08:47:42.053Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T08:47:42.053Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T08:17:37.175Z",
-   "quien": "Lo último en tecnología",
-   "que": "no pude leer «ciberseguridad alerta»: respondió 429"
-  },
-  {
-   "t": "2026-11-24T08:17:37.175Z",
-   "quien": "Lo último en tecnología",
-   "que": "no pude leer «celulares lanzamiento»: respondió 429"
-  },
-  {
-   "t": "2026-11-24T08:17:37.175Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T08:17:37.175Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T07:47:36.921Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T07:47:36.921Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T07:47:36.921Z",
-   "quien": "Valor m² del Colegio de MMO",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T07:47:36.921Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T07:47:36.921Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T07:17:42.694Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T07:17:42.694Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T06:47:33.032Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T06:47:33.032Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T06:17:48.095Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "no pude leer «OMS salud mundial»: respondió 429"
-  },
-  {
-   "t": "2026-11-24T06:17:48.095Z",
-   "quien": "Mundo: tecnología",
-   "que": "no pude leer «China tecnología»: respondió 429"
-  },
-  {
-   "t": "2026-11-24T06:17:48.095Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T06:17:48.095Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T05:47:43.436Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T05:47:43.436Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T05:18:43.220Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T05:18:43.220Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T04:49:00.871Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T04:49:00.871Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T04:49:00.871Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T04:20:01.483Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T04:20:01.483Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T03:49:39.557Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T03:49:39.557Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T03:19:53.159Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T03:19:53.159Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T02:49:29.731Z",
-   "quien": "Mantenimiento",
-   "que": "Venta del lote (Facebook) no da señales hace 241 min"
-  },
-  {
-   "t": "2026-11-24T02:49:29.731Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T02:49:29.731Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T02:19:33.884Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T02:19:33.884Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T01:49:40.419Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T01:49:40.419Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T01:49:40.419Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
   }
  ],
  "pendientes": [],
@@ -23195,17 +23257,13 @@
   "buenDia": "2026-11-24"
  },
  "consumo": {
-  "fecha": "2026-11-24",
-  "consultas": 12,
+  "fecha": "2026-11-25",
+  "consultas": 0,
   "busquedas": 0,
-  "por": {
-   "cfai": 8,
-   "github": 2,
-   "llm7": 2
-  }
+  "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-25T02:50:37.256Z",
+ "actualizado": "2026-11-25T03:20:48.575Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -23230,116 +23288,9 @@
   ]
  },
  "ia": {
-  "fecha": "2026-11-24",
-  "agotado": {
-   "cfai:@cf/meta/llama-3.3-70b-instruct-fp8-fast": 1795528334800,
-   "cfai:@cf/meta/llama-4-scout-17b-16e-instruct": 1795528337286,
-   "cfai:@cf/mistralai/mistral-small-3.1-24b-instruct": 1795528339808,
-   "cfai:@cf/qwen/qwen2.5-coder-32b-instruct": 1795528342391,
-   "llm7:gpt-oss:20b": 1795528332535,
-   "llm7": 1795614704707
-  },
-  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
-  "vivos": {
-   "llm7": {
-    "fecha": "2026-11-24",
-    "ids": [
-     "Inkling-Small",
-     "Voxtral-Mini-3B-2507",
-     "Voxtral-Small-24B-2507",
-     "XiaomiMiMo/MiMo-V2.6-Flash",
-     "XiaomiMiMo/MiMo-V2.6-Pro",
-     "anthropic/claude-opus-4-6",
-     "anthropic/claude-opus-4-7",
-     "anthropic/claude-opus-4-8",
-     "anthropic/claude-sonnet-4-6",
-     "anthropic/claude-sonnet-5",
-     "anthropic/claude-sonnet-5-5",
-     "chroma-v.46-flash",
-     "claude-fable-5",
-     "claude-fable-5-2",
-     "claude-haiku-4-5",
-     "claude-haiku-5-5",
-     "claude-opus-4-6",
-     "claude-opus-4-8",
-     "claude-opus-5",
-     "claude-opus-5-5",
-     "claude-opus-5.5",
-     "claude-sonnet-4-6",
-     "claude-sonnet-5",
-     "codestral-latest",
-     "codex/gpt-6-astra",
-     "codex/gpt-6.1-terra",
-     "dark-beast-krea2",
-     "deepseek-v4-flash-0731-fast",
-     "deepseek-v4-flash:0731",
-     "deepseek-v4-pro",
-     "deepseek-v4.1-flash",
-     "gemini-3-flash",
-     "gemini-3.0-pro-image",
-     "gemini-3.1-flash-image",
-     "gemini-3.1-pro",
-     "gemini-3.5-flash-lite",
-     "gemini-3.6-flash",
-     "gemini-3.6-flash-high",
-     "gemini-3.8-flash",
-     "gemini-3.8-flash-high",
-     "gemini-4-argon",
-     "gemini-nano-banana-2.1",
-     "gemini-omni-flash",
-     "gemma-3-27b",
-     "gemma-4-uncensored",
-     "gemma4:31b",
-     "glm-5.2",
-     "glm-5.3",
-     "glm-5.3-flash",
-     "glm-5.3-uncensored",
-     "gpt-5.6-luna",
-     "gpt-5.6-sol",
-     "gpt-5.6-terra",
-     "gpt-6-astra",
-     "gpt-6-luna",
-     "gpt-6-sol",
-     "gpt-6.1-sol",
-     "gpt-6.2-astra",
-     "gpt-6.2-sol",
-     "gpt-image-2",
-     "gpt-image-2-6-flare",
-     "gpt-image-2.5",
-     "gpt-image-2.6",
-     "gpt-oss:120b",
-     "gpt-oss:20b",
-     "grok-4.7",
-     "grok-imagine-image",
-     "jev-latest",
-     "kimi-k2.6",
-     "kimi-k2.7-code",
-     "kimi-k3",
-     "kimi-k3.1-pro",
-     "kling-v3.0-pro",
-     "kling-v3.0-turbo",
-     "llama-4-maverick",
-     "mimo-v2.6-flash",
-     "mimo-v2.6-pro",
-     "minimax-h3-image",
-     "minimax-m3",
-     "minimax-m3.1-flash",
-     "mistral-Nemo-Instruct-2407",
-     "muse-spark-open",
-     "qwen-image-3",
-     "qwen-image-3-pro",
-     "seedance-2.0",
-     "seedance-2.0-fast",
-     "seedance-2.0-mini",
-     "z-image-turbo"
-    ]
-   }
-  },
-  "ultimo": {
-   "prov": "GitHub Models",
-   "modelo": "openai/gpt-4.1-mini",
-   "t": "2026-11-24T13:51:40.571Z"
-  }
+  "fecha": "2026-11-25",
+  "agotado": {},
+  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
  },
  "dueno": 1237559052,
  "pendientesCant": 0
