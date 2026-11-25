@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1219,
+   "corridas": 1220,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-25",
-   "ultimaCorrida": "2026-11-25T20:58:34.445Z",
+   "ultimaCorrida": "2026-11-25T21:29:09.217Z",
    "resumen": "🚨 Movimiento fuerte del dólar\nContado con liquidación: bajó 2.2% → $1758.3\n\n💵 Dólar hoy (15:29 hs)\n• Oficial: compra $1580 · venta $1630 (+0.9%)\n• Blue: compra $1710 · venta $1730 (+1.8%)\n• Bolsa: compra $1662.2 · vent",
    "informe": "data/informes/dolar/2026-11-25-1529.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1777.9,
      "tarjeta": 2099.5
     },
-    "ultimoChequeo": "2026-11-25T20:58:34.445Z",
+    "ultimoChequeo": "2026-11-25T21:29:09.217Z",
     "resumenFecha": "2026-11-25",
     "hist": {
      "2026-10-30": {
@@ -279,7 +279,7 @@
       "bolsa": 1688.7,
       "contadoconliqui": 1767.9,
       "mayorista": 1604,
-      "cripto": 1763.66,
+      "cripto": 1762.53,
       "tarjeta": 2119
      }
     },
@@ -5936,32 +5936,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-25",
-   "ultimaCorrida": "2026-11-25T20:53:50.603Z",
+   "ultimaCorrida": "2026-11-25T21:25:03.723Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": "data/informes/celular_bot/2026-11-25-1012.md",
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795640030603,
+     "t": 1795641903723,
      "redes_hoy": {
       "publicaciones": 4,
       "historias": 8,
       "reels": 6,
       "seguidos": 26,
       "gringo": 0,
-      "errores": 64,
-      "reinicios": 99,
+      "errores": 70,
+      "reinicios": 107,
       "ultimas": [
-       "17:46 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "17:47 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
-       "17:49 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
-       "17:50 No leo en qué cuenta está Instagram (intento 3/3). Reinicio Instagram.",
-       "17:51 Guardado debug/pantalla_175149.png y .xml",
-       "17:51 Error en memes_reel: No quedó en la cuenta soycordobes.jpg (está en desconocida)",
-       "17:51 Guardado debug/pantalla_175150.png y .xml",
-       "17:51 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "17:51 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "17:53 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)"
+       "18:16 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "18:16 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "18:18 Error en fb_historia: No encontré ninguno de: ['Menú', 'Menu']",
+       "18:18 Guardado debug/pantalla_181809.png y .xml",
+       "18:18 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "18:18 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "18:23 Error en fb_seguir: No encontré ninguno de: ['Menú', 'Menu']",
+       "18:23 Guardado debug/pantalla_182311.png y .xml",
+       "18:23 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "18:23 Celular conectado: SM-A515F | pantalla 1080x2400"
       ]
      }
     },
@@ -6361,19 +6361,19 @@
       "reels": 6,
       "seguidos": 26,
       "gringo": 0,
-      "errores": 64,
-      "reinicios": 99,
+      "errores": 70,
+      "reinicios": 107,
       "ultimas": [
-       "17:46 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "17:47 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
-       "17:49 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram.",
-       "17:50 No leo en qué cuenta está Instagram (intento 3/3). Reinicio Instagram.",
-       "17:51 Guardado debug/pantalla_175149.png y .xml",
-       "17:51 Error en memes_reel: No quedó en la cuenta soycordobes.jpg (está en desconocida)",
-       "17:51 Guardado debug/pantalla_175150.png y .xml",
-       "17:51 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "17:51 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "17:53 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)"
+       "18:16 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "18:16 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "18:18 Error en fb_historia: No encontré ninguno de: ['Menú', 'Menu']",
+       "18:18 Guardado debug/pantalla_181809.png y .xml",
+       "18:18 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "18:18 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "18:23 Error en fb_seguir: No encontré ninguno de: ['Menú', 'Menu']",
+       "18:23 Guardado debug/pantalla_182311.png y .xml",
+       "18:23 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "18:23 Celular conectado: SM-A515F | pantalla 1080x2400"
       ]
      }
     }
@@ -10357,7 +10357,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1219,
+   "corridas": 1220,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10366,7 +10366,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-25T20:58:34.445Z",
+   "ultimaCorrida": "2026-11-25T21:29:09.217Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10376,7 +10376,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-25T20:58:34.445Z",
+    "ultimoChequeo": "2026-11-25T21:29:09.217Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10745,16 +10745,16 @@
      },
      "2026-11-25": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       35,
-       35
+       36,
+       36
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       35,
-       35
+       36,
+       36
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       35,
-       35
+       36,
+       36
       ]
      }
     }
@@ -20674,7 +20674,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1201,
+   "corridas": 1202,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20683,13 +20683,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-25T20:58:34.445Z",
+   "ultimaCorrida": "2026-11-25T21:29:09.217Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-25",
-    "ultimoChequeo": "2026-11-25T20:58:34.445Z"
+    "ultimoChequeo": "2026-11-25T21:29:09.217Z"
    }
   },
   "feriados": {
@@ -20861,7 +20861,7 @@
    "memoria": {}
   },
   "lote_fb": {
-   "estado": "falló",
+   "estado": "sin señal",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -20876,11 +20876,26 @@
    "informe": null,
    "pausado": false,
    "memoria": {
-    "avisoSinSenal": "2026-11-25T12:24:00.000Z"
+    "avisoSinSenal": "2026-11-25T17:17:00.000Z"
    }
   }
  },
  "log": [
+  {
+   "t": "2026-11-25T21:29:09.217Z",
+   "quien": "Mantenimiento",
+   "que": "Venta del lote (Facebook) no da señales hace 252 min"
+  },
+  {
+   "t": "2026-11-25T21:29:09.217Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-25T21:29:09.217Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-25T20:58:34.445Z",
    "quien": "Lo último en tecnología",
@@ -22365,21 +22380,6 @@
    "t": "2026-11-24T23:21:10.435Z",
    "quien": "Argentina: economía y obra pública",
    "que": "no pude leer «créditos hipotecarios Argentina»: respondió 503"
-  },
-  {
-   "t": "2026-11-24T23:21:10.435Z",
-   "quien": "Argentina: economía y obra pública",
-   "que": "no pude leer «obra pública Córdoba»: respondió 503"
-  },
-  {
-   "t": "2026-11-24T23:21:10.435Z",
-   "quien": "Argentina: economía y obra pública",
-   "que": "no pude leer «construcción Argentina»: respondió 503"
-  },
-  {
-   "t": "2026-11-24T23:21:10.435Z",
-   "quien": "Argentina: economía y obra pública",
-   "que": "no pude leer «economía Argentina»: respondió 503"
   }
  ],
  "pendientes": [],
@@ -22908,7 +22908,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-25T20:58:34.445Z",
+ "actualizado": "2026-11-25T21:29:09.217Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
