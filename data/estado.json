@@ -6099,32 +6099,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-25",
-   "ultimaCorrida": "2026-11-25T14:39:33.895Z",
+   "ultimaCorrida": "2026-11-25T14:55:08.546Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
    "informe": "data/informes/celular_bot/2026-11-25-1012.md",
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795617573895,
+     "t": 1795618508546,
      "redes_hoy": {
       "publicaciones": 3,
       "historias": 3,
       "reels": 4,
       "seguidos": 20,
       "gringo": 0,
-      "errores": 8,
+      "errores": 10,
       "reinicios": 8,
       "ultimas": [
-       "11:26 Memes: tocado 'Descargar', esperando que baje el video...",
-       "11:27 Memes: reel descargado (7323 KB) de @mojojoargento",
-       "11:27 Memes: descripción lista (5 hashtags)",
-       "11:27 Memes: video elegido de la galería (    seleccionado imagen en miniatura de video creado(a) el 2)",
-       "11:29 ✔ Memes: reel descargado y resubido en @soycordobes.jpg",
-       "11:30 Memes: video borrado del celular (ya estaba subido)",
-       "11:31 Instagram: ahora en @maestromayordeobrasjb",
-       "11:36 No encontré un post adecuado para la historia",
-       "11:38 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
-       "11:39 Instagram: ahora en @maestromayordeobrasjb"
+       "11:47 Chat: 0 reels en el chat, 0 sin subir",
+       "11:53 Error en obra_reel: Memes: no pude bajar ningún reel (no es de obra: 14, la IA dijo que no: 4)",
+       "11:53 Reel: lo reintento a las 12:30 (obra_reel, reintento 1)",
+       "11:53 Guardado debug/pantalla_115337.png y .xml",
+       "11:53 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "11:53 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "11:54 Error en fb_historia: {'code': -32002, 'data': \"Selector [description='Reel de BuildZone,Hace 14 h,#albañil #humor #contrucion #buildzone\\\\u2060&#10",
+       "11:54 Guardado debug/pantalla_115438.png y .xml",
+       "11:54 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "11:54 Celular conectado: SM-A515F | pantalla 1080x2400"
       ]
      }
     },
@@ -6524,19 +6524,19 @@
       "reels": 4,
       "seguidos": 20,
       "gringo": 0,
-      "errores": 8,
+      "errores": 10,
       "reinicios": 8,
       "ultimas": [
-       "11:26 Memes: tocado 'Descargar', esperando que baje el video...",
-       "11:27 Memes: reel descargado (7323 KB) de @mojojoargento",
-       "11:27 Memes: descripción lista (5 hashtags)",
-       "11:27 Memes: video elegido de la galería (    seleccionado imagen en miniatura de video creado(a) el 2)",
-       "11:29 ✔ Memes: reel descargado y resubido en @soycordobes.jpg",
-       "11:30 Memes: video borrado del celular (ya estaba subido)",
-       "11:31 Instagram: ahora en @maestromayordeobrasjb",
-       "11:36 No encontré un post adecuado para la historia",
-       "11:38 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
-       "11:39 Instagram: ahora en @maestromayordeobrasjb"
+       "11:47 Chat: 0 reels en el chat, 0 sin subir",
+       "11:53 Error en obra_reel: Memes: no pude bajar ningún reel (no es de obra: 14, la IA dijo que no: 4)",
+       "11:53 Reel: lo reintento a las 12:30 (obra_reel, reintento 1)",
+       "11:53 Guardado debug/pantalla_115337.png y .xml",
+       "11:53 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "11:53 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "11:54 Error en fb_historia: {'code': -32002, 'data': \"Selector [description='Reel de BuildZone,Hace 14 h,#albañil #humor #contrucion #buildzone\\\\u2060&#10",
+       "11:54 Guardado debug/pantalla_115438.png y .xml",
+       "11:54 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "11:54 Celular conectado: SM-A515F | pantalla 1080x2400"
       ]
      }
     }
@@ -21065,6 +21065,16 @@
  },
  "log": [
   {
+   "t": "2026-11-25T14:56:21.494Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-25T14:56:21.494Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
+  {
    "t": "2026-11-25T14:41:54.881Z",
    "quien": "Aumentos de servicios",
    "que": "entregó (sin IA)"
@@ -22553,16 +22563,6 @@
    "t": "2026-11-24T21:01:09.644Z",
    "quien": "Clientes y licitaciones",
    "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T21:01:09.644Z",
-   "quien": "Clientes y licitaciones",
-   "que": "no pude leer «licitación vivienda Córdoba»: respondió 429"
-  },
-  {
-   "t": "2026-11-24T21:01:09.644Z",
-   "quien": "Clientes y licitaciones",
-   "que": "no pude leer «licitación obra Córdoba»: respondió 429"
   }
  ],
  "pendientes": [],
@@ -23091,7 +23091,7 @@
   }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-25T14:41:54.881Z",
+ "actualizado": "2026-11-25T14:56:21.494Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
