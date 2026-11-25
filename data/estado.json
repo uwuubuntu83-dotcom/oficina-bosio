@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1199,
+   "corridas": 1200,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-24",
-   "ultimaCorrida": "2026-11-25T10:39:03.540Z",
+   "ultimaCorrida": "2026-11-25T11:08:55.176Z",
    "resumen": "🚨 Movimiento fuerte del dólar\nBolsa: bajó 2.8% → $1695.1\n\n💵 Dólar hoy (17:20 hs)\n• Oficial: compra $1565 · venta $1615 (+0.9%)\n• Blue: compra $1680 · venta $1700 (+1.5%)\n• Bolsa: compra $1677.6 · venta $1695.1 (-2.8%)\n",
    "informe": "data/informes/dolar/2026-11-24-1720.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1777.74,
      "tarjeta": 2099.5
     },
-    "ultimoChequeo": "2026-11-25T10:39:03.540Z",
+    "ultimoChequeo": "2026-11-25T11:08:55.176Z",
     "resumenFecha": "2026-11-24",
     "hist": {
      "2026-10-30": {
@@ -5804,7 +5804,7 @@
    "modelo": "Google Gemini · gemini-3.6-flash"
   },
   "celular_bot": {
-   "estado": "sin señal",
+   "estado": "falló",
    "corridas": 0,
    "fallas": 0,
    "fallasSeguidas": 0,
@@ -5814,32 +5814,32 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-25",
-   "ultimaCorrida": "2026-11-25T03:33:06.777Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 426 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "ultimaCorrida": "2026-11-25T11:07:38.197Z",
+   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
    "informe": null,
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795577586777,
+     "t": 1795604858197,
      "redes_hoy": {
       "publicaciones": 0,
       "historias": 0,
       "reels": 0,
       "seguidos": 0,
       "gringo": 0,
-      "errores": 3,
-      "reinicios": 1,
+      "errores": 6,
+      "reinicios": 2,
       "ultimas": [
-       "00:18 Memes: los filtros descartaron todo; ultima pasada sin filtro de humor (solo hashtags de la cuenta)",
-       "00:29 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
-       "00:29 ⚠ No pude volver a @maestromayordeobrasjb (la tarea tardó demasiado y se cortó). Reintento en la próxima tarea.",
-       "00:29 Error en memes_reel: Memes: no pude bajar ningún reel (sin humor: 5, la IA dijo que no: 23, cartel Edits cerrado: 1, publicidad: 2)",
-       "00:29 Reel: lo reintento a las 01:00 (memes_reel, reintento 3)",
-       "00:29 Guardado debug/pantalla_002952.png y .xml",
-       "00:29 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "00:29 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "00:31 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
-       "00:32 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram."
+       "00:34 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:34 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "00:35 Error en fb_historia: No encontré ninguno de: ['Menú', 'Menu']",
+       "00:35 Guardado debug/pantalla_003521.png y .xml",
+       "00:35 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:35 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "00:36 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "00:37 Error en obra_reel: Remote end closed connection without response",
+       "00:37 adb connect 127.0.0.1:5555: failed to connect to '127.0.0.1:5555': Connection refused",
+       "00:37 Buscando el puerto Wi-Fi del celular en 127.0.0.1..."
       ]
      }
     },
@@ -6239,19 +6239,19 @@
       "reels": 0,
       "seguidos": 0,
       "gringo": 0,
-      "errores": 3,
-      "reinicios": 1,
+      "errores": 6,
+      "reinicios": 2,
       "ultimas": [
-       "00:18 Memes: los filtros descartaron todo; ultima pasada sin filtro de humor (solo hashtags de la cuenta)",
-       "00:29 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
-       "00:29 ⚠ No pude volver a @maestromayordeobrasjb (la tarea tardó demasiado y se cortó). Reintento en la próxima tarea.",
-       "00:29 Error en memes_reel: Memes: no pude bajar ningún reel (sin humor: 5, la IA dijo que no: 23, cartel Edits cerrado: 1, publicidad: 2)",
-       "00:29 Reel: lo reintento a las 01:00 (memes_reel, reintento 3)",
-       "00:29 Guardado debug/pantalla_002952.png y .xml",
-       "00:29 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
-       "00:29 Celular conectado: SM-A515F | pantalla 1080x2400",
-       "00:31 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
-       "00:32 No leo en qué cuenta está Instagram (intento 2/3). Reinicio Instagram."
+       "00:34 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:34 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "00:35 Error en fb_historia: No encontré ninguno de: ['Menú', 'Menu']",
+       "00:35 Guardado debug/pantalla_003521.png y .xml",
+       "00:35 adb connect 127.0.0.1:5555: already connected to 127.0.0.1:5555",
+       "00:35 Celular conectado: SM-A515F | pantalla 1080x2400",
+       "00:36 No leo en qué cuenta está Instagram: vuelvo al inicio de Instagram y miro de nuevo (sin reiniciar)",
+       "00:37 Error en obra_reel: Remote end closed connection without response",
+       "00:37 adb connect 127.0.0.1:5555: failed to connect to '127.0.0.1:5555': Connection refused",
+       "00:37 Buscando el puerto Wi-Fi del celular en 127.0.0.1..."
       ]
      }
     }
@@ -10175,7 +10175,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1199,
+   "corridas": 1200,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10184,7 +10184,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-25T10:39:03.540Z",
+   "ultimaCorrida": "2026-11-25T11:08:55.176Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10194,7 +10194,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-25T10:39:03.540Z",
+    "ultimoChequeo": "2026-11-25T11:08:55.176Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10563,16 +10563,16 @@
      },
      "2026-11-25": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       15,
-       15
+       16,
+       16
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       15,
-       15
+       16,
+       16
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       15,
-       15
+       16,
+       16
       ]
      }
     }
@@ -20788,7 +20788,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1181,
+   "corridas": 1182,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20797,13 +20797,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-25T10:39:03.540Z",
+   "ultimaCorrida": "2026-11-25T11:08:55.176Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
-    "fechasAvisadas": "2026-11-24",
-    "ultimoChequeo": "2026-11-25T10:39:03.540Z"
+    "fechasAvisadas": "2026-11-25",
+    "ultimoChequeo": "2026-11-25T11:08:55.176Z"
    }
   },
   "feriados": {
@@ -20995,6 +20995,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-25T11:08:55.176Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-25T11:08:55.176Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-25T10:39:03.540Z",
    "quien": "Argentina: economía y obra pública",
@@ -22484,16 +22494,6 @@
    "t": "2026-11-24T14:51:07.125Z",
    "quien": "Noticias de Villa María",
    "que": "no pude leer «Villa María seguridad policía»: respondió 429"
-  },
-  {
-   "t": "2026-11-24T14:51:07.125Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T14:51:07.125Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
   }
  ],
  "pendientes": [],
@@ -23015,7 +23015,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-25T10:39:03.540Z",
+ "actualizado": "2026-11-25T11:08:55.176Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
