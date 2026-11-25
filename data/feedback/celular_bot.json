@@ -1,0 +1,15 @@
+[
+ {
+  "t": "2026-11-25T13:12:29.160Z",
+  "tipo": "calidad",
+  "puntaje": 8,
+  "problemas": [
+   "Falta manejo de credenciales seguras (no se menciona uso de variables de entorno o cifrado)",
+   "No se valida la existencia de archivos antes de intentar subir (p.ej. `imagen_path` en `publicar_historia`)",
+   "El logging a `/sdcard/bosio/logs.txt` no está implementado en el código",
+   "No hay control de tasa de acciones (50/hora) más allá de `time.sleep(10)` en `interactuar_gringo`",
+   "La función `interactuar_gringo` no sigue especificaciones concretas (qué acciones exactas se realizan con 'el gringo')"
+  ],
+  "mejorar": "Implementar logging estructurado con `logging` de Python, añadir validación de archivos antes de subir, usar variables de entorno para credenciales (ej: `python-dotenv`), y documentar endpoint de Cloudflare para reporte de estado cada 15s."
+ }
+]

@@ -1302,10 +1302,10 @@
    "pausado": false
   },
   "escapadas": {
-   "estado": "falló",
+   "estado": "esperando",
    "corridas": 0,
    "fallas": 1,
-   "fallasSeguidas": 1,
+   "fallasSeguidas": 0,
    "puntaje": null,
    "historial": [],
    "likes": 0,
@@ -1337,7 +1337,7 @@
   },
   "gerente": {
    "estado": "esperando",
-   "resumen": "Mandó el parte del día",
+   "resumen": "Habló con vos",
    "ultimaCorrida": null
   },
   "terrenos": {
@@ -5969,41 +5969,47 @@
   },
   "celular_bot": {
    "estado": "listo",
-   "corridas": 0,
+   "corridas": 1,
    "fallas": 0,
    "fallasSeguidas": 0,
-   "puntaje": null,
-   "historial": [],
+   "puntaje": 8,
+   "historial": [
+    {
+     "f": "2026-11-25T13:12:29.160Z",
+     "p": 8,
+     "orden": false
+    }
+   ],
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-25",
-   "ultimaCorrida": "2026-11-25T13:06:15.858Z",
-   "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: trabajando · ",
-   "informe": null,
+   "ultimaCorrida": "2026-11-25T13:12:29.160Z",
+   "resumen": "Entregable:  \nScript en Python para automatizar tareas en Instagram desde el Samsung A51 con Termux. Usa la librería `instagrapi` para evitar bloqueos. Ejecutar en Termux con Python 3.9+.  \n\n```python\nfrom instagrapi imp",
+   "informe": "data/informes/celular_bot/2026-11-25-1012.md",
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795611975858,
+     "t": 1795612286650,
      "redes_hoy": {
       "publicaciones": 2,
-      "historias": 2,
+      "historias": 3,
       "reels": 2,
       "seguidos": 5,
       "gringo": 0,
       "errores": 6,
       "reinicios": 7,
       "ultimas": [
-       "09:50 Instagram: ahora en @maestromayordeobrasjb",
-       "09:51 Guardado debug/pantalla_095129.png y .xml",
-       "09:51 Chat: 0 reels en el chat, 0 sin subir",
        "09:55 Memes: tocado 'Descargar', esperando que baje el video...",
        "09:56 Memes: reel descargado (19643 KB) de @unales.arq",
        "09:56 Memes: descripción lista (5 hashtags)",
        "09:56 Memes: no encontré el '+'. Subo el video por el menú Compartir (plan B).",
        "09:58 ✔ Memes: reel descargado y resubido en @maestromayordeobrasjb",
        "10:01 Facebook: toqué Publicar como la Página — revisar que aparezca",
-       "10:03 Instagram: ahora en @soycordobes.jpg"
+       "10:03 Instagram: ahora en @soycordobes.jpg",
+       "10:06 Post elegido de #cordobeses",
+       "10:06 ✔ Historia compartida (avioncito)",
+       "10:10 Instagram: ahora en @maestromayordeobrasjb"
       ]
      }
     },
@@ -6399,27 +6405,28 @@
      },
      "2026-11-25": {
       "publicaciones": 2,
-      "historias": 2,
+      "historias": 3,
       "reels": 2,
       "seguidos": 5,
       "gringo": 0,
       "errores": 6,
       "reinicios": 7,
       "ultimas": [
-       "09:50 Instagram: ahora en @maestromayordeobrasjb",
-       "09:51 Guardado debug/pantalla_095129.png y .xml",
-       "09:51 Chat: 0 reels en el chat, 0 sin subir",
        "09:55 Memes: tocado 'Descargar', esperando que baje el video...",
        "09:56 Memes: reel descargado (19643 KB) de @unales.arq",
        "09:56 Memes: descripción lista (5 hashtags)",
        "09:56 Memes: no encontré el '+'. Subo el video por el menú Compartir (plan B).",
        "09:58 ✔ Memes: reel descargado y resubido en @maestromayordeobrasjb",
        "10:01 Facebook: toqué Publicar como la Página — revisar que aparezca",
-       "10:03 Instagram: ahora en @soycordobes.jpg"
+       "10:03 Instagram: ahora en @soycordobes.jpg",
+       "10:06 Post elegido de #cordobeses",
+       "10:06 ✔ Historia compartida (avioncito)",
+       "10:10 Instagram: ahora en @maestromayordeobrasjb"
       ]
      }
     }
-   }
+   },
+   "modelo": "Cohere · command-a-03-2025"
   },
   "vuelos": {
    "estado": "esperando",
@@ -6490,23 +6497,23 @@
    "memoria": {}
   },
   "clima": {
-   "estado": "falló",
-   "corridas": 249,
+   "estado": "listo",
+   "corridas": 250,
    "fallas": 39,
-   "fallasSeguidas": 3,
+   "fallasSeguidas": 0,
    "puntaje": null,
    "historial": [],
    "likes": 0,
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-30",
-   "ultimaCorrida": "2026-11-23T08:32:44.681Z",
-   "resumen": "Falló: fetch failed",
-   "informe": "data/informes/clima/2026-11-23-0234.md",
+   "ultimaCorrida": "2026-11-25T13:12:29.160Z",
+   "resumen": "🌤️ Clima en Villa María, Córdoba\n• Hoy 25/11: 14° a 28° · lluvia 0% · viento 12 km/h\n• Mañana 26/11: 15° a 27° · lluvia 8% · viento 18 km/h\n• Pasado 27/11: 15° a 28° · lluvia 2% · viento 15 km/h\n\n✅ Sin lluvias fuertes n",
+   "informe": "data/informes/clima/2026-11-25-1012.md",
    "pausado": true,
    "memoria": {
-    "ultimoChequeo": "2026-11-23T05:34:44.695Z",
-    "ultimoAviso": "Hoy: 100% de lluvia (21.8 mm)",
+    "ultimoChequeo": "2026-11-25T13:12:29.160Z",
+    "ultimoAviso": "",
     "resumenFecha": "2026-10-30",
     "autoReintento": "2026-11-22",
     "autoReintentos": 3
@@ -20525,6 +20532,86 @@
  },
  "log": [
   {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Clima para la obra",
+   "que": "entregó (sin IA)"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Celular bot (Instagram)",
+   "que": "entregó (8/10 · Cohere · command-a-03-2025)"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Control de calidad",
+   "que": "Celular bot (Instagram): 8/10 · Falta manejo de credenciales seguras (no se menciona uso de variables de entorno o cifrado)"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Celular bot (Instagram)",
+   "que": "empezó su tarea"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Gerente general",
+   "que": "respondió y movió parte"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Gerente general",
+   "que": "mandó el parte del día (sin IA)"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "IA",
+   "que": "SambaNova: se quedó sin créditos gratis, la salteo por hoy"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Gerente general",
+   "que": "respondió y movió correr celular_bot, correr clima, pausar escapa, activar escapa"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Jonathan",
+   "que": "activar Escapadas de finde"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Jonathan",
+   "que": "pausar Escapadas de finde"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Jonathan",
+   "que": "correr Clima para la obra"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Jonathan",
+   "que": "correr Celular bot (Instagram)"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Jonathan",
+   "que": "mandó una orden por Telegram"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Jonathan",
+   "que": "mandó una orden por Telegram"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Mesa de entrada",
+   "que": "llegaron 2 mensajes de Telegram"
+  },
+  {
+   "t": "2026-11-25T13:12:29.160Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
+  {
    "t": "2026-11-25T13:07:28.763Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
@@ -21943,92 +22030,10 @@
    "t": "2026-11-24T18:21:08.237Z",
    "quien": "Mesa de entrada",
    "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T18:21:08.237Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T17:50:31.206Z",
-   "quien": "Mundo: salud y ciencia",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T17:50:31.206Z",
-   "quien": "Mundo: tecnología",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T17:50:31.206Z",
-   "quien": "Mundo: economía",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T17:50:31.206Z",
-   "quien": "Clientes y licitaciones",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T17:50:31.206Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T17:50:31.206Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T17:21:12.866Z",
-   "quien": "Aumentos de servicios",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T17:21:12.866Z",
-   "quien": "Aumentos de servicios",
-   "que": "no pude leer «aumento agua Villa María»: respondió 429"
-  },
-  {
-   "t": "2026-11-24T17:21:12.866Z",
-   "quien": "Vencimientos e impuestos",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T17:21:12.866Z",
-   "quien": "Dólar",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T17:21:12.866Z",
-   "quien": "Mesa de entrada",
-   "que": "sin mensajes nuevos"
-  },
-  {
-   "t": "2026-11-24T17:21:12.866Z",
-   "quien": "Oficina",
-   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-24T16:51:12.491Z",
-   "quien": "Lo último en tecnología",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T16:51:12.491Z",
-   "quien": "Argentina: economía y obra pública",
-   "que": "entregó (sin IA)"
-  },
-  {
-   "t": "2026-11-24T16:51:12.491Z",
-   "quien": "Noticias de Villa María",
-   "que": "entregó (sin IA)"
   }
  ],
  "pendientes": [],
  "mensajes": {
-  "1877": "tarifas",
-  "1878": "tarifas",
   "1879": "licitaciones",
   "1880": "comidas",
   "1881": "clima",
@@ -22526,9 +22531,11 @@
   "2502": "vencimientos",
   "2503": "tarifas",
   "2504": "licitaciones",
-  "2505": "noticias_tec"
+  "2505": "noticias_tec",
+  "2518": "celular_bot",
+  "2519": "clima"
  },
- "tgOffset": 196508530,
+ "tgOffset": 196508532,
  "hechos": {
   "parte": "2026-11-24",
   "entrenamiento": "2026-11-24",
@@ -22539,12 +22546,19 @@
  },
  "consumo": {
   "fecha": "2026-11-25",
-  "consultas": 0,
+  "consultas": 23,
   "busquedas": 0,
-  "por": {}
+  "por": {
+   "groq": 2,
+   "openrouter": 3,
+   "cerebras": 5,
+   "sambanova": 3,
+   "nvidia": 7,
+   "cohere": 3
+  }
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-25T13:07:28.763Z",
+ "actualizado": "2026-11-25T13:12:29.160Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
@@ -22570,8 +22584,109 @@
  },
  "ia": {
   "fecha": "2026-11-25",
-  "agotado": {},
-  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3"
+  "agotado": {
+   "groq:openai/gpt-oss-120b": 1795612951197,
+   "openrouter:google/gemma-4-26b-a4b-it:free": 1795612387661,
+   "openrouter:google/gemma-4-31b-it:free": 1795612390087,
+   "openrouter:nvidia/nemotron-3.5-super-vl:free": 1795612392593,
+   "cerebras:gpt-oss-120b": 1795698762831,
+   "cerebras:qwen-3.8-27b": 1795698765319,
+   "cerebras:zai-glm-4.7": true,
+   "sambanova:gpt-oss-120b": 1795613087927,
+   "sambanova:GLM-5.3": 1795612518891,
+   "sambanova": 1795698890476,
+   "nvidia:z-ai/glm-5.3-flash": 1795613210515,
+   "nvidia:moonshotai/kimi-k3.1-pro": 1795613330516,
+   "nvidia:mistralai/mistral-large-4-1t-a52b": 1795613450517,
+   "cerebras:llama-3.3-70b": true,
+   "cerebras:qwen-3-32b": true,
+   "nvidia:google/gemma-3-12b-it": true,
+   "nvidia:meta/llama-3.3-70b-instruct": true,
+   "nvidia:openai/gpt-oss-120b": true,
+   "nvidia:qwen/qwen3-next-80b-a3b-instruct": true
+  },
+  "huella": "bYGgOLG154bb71e4xMYw2k9maac9xEj4gWYuAxYAmg0=sVt3",
+  "vivos": {
+   "groq": {
+    "fecha": "2026-11-25",
+    "ids": [
+     "canopylabs/orpheus-arabic-saudi",
+     "openai/gpt-oss-20b",
+     "canopylabs/orpheus-v1-english",
+     "qwen/qwen3.8-27b",
+     "allam-2-7b",
+     "openai/gpt-oss-120b"
+    ]
+   },
+   "cerebras": {
+    "fecha": "2026-11-25",
+    "ids": [
+     "gpt-oss-120b",
+     "qwen-3.8-27b"
+    ]
+   },
+   "sambanova": {
+    "fecha": "2026-11-25",
+    "ids": [
+     "GLM-5.3",
+     "MiniMax-M3.1-Flash",
+     "gemma-4-31B-it",
+     "gpt-oss-120b"
+    ]
+   },
+   "nvidia": {
+    "fecha": "2026-11-25",
+    "ids": [
+     "bigcode/starcoder2-15b",
+     "fastino/gliner2-pii",
+     "google/gemma-3-12b-it",
+     "google/gemma-3-4b-it",
+     "minimaxai/minimax-m3.1-flash",
+     "mistralai/mistral-large-4-1t-a52b",
+     "moonshotai/kimi-k3.1-pro",
+     "nvidia/ai-synthetic-video-detector",
+     "nvidia/cosmos-reason2-8b",
+     "nvidia/ising-calibration-1.5-31b",
+     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+     "nvidia/nemotron-3-ultra-550b-a55b",
+     "nvidia/nemotron-3.5-bolt-e4b",
+     "nvidia/nemotron-3.5-lightning-30b-a3b",
+     "nvidia/nemotron-3.5-super-vl-120b-a12b",
+     "nvidia/riva-translate-4b-instruct-v2",
+     "poolside/laguna-xs-2.1",
+     "stepfun-ai/step-5-preview",
+     "z-ai/glm-5.3-flash"
+    ]
+   },
+   "cohere": {
+    "fecha": "2026-11-25",
+    "ids": [
+     "c4ai-aya-expanse-32b",
+     "c4ai-aya-vision-32b",
+     "command-a-03-2025",
+     "command-a-plus-05-2026",
+     "command-a-reasoning-08-2025",
+     "command-a-translate-08-2025",
+     "command-a-vision-07-2025",
+     "command-r-08-2024",
+     "command-r-plus-08-2024",
+     "command-r7b-12-2024",
+     "command-r7b-arabic-02-2025",
+     "north-mini-code-1.0",
+     "north-small-translate-1.0",
+     "parse-v5.0",
+     "tiny-aya-earth",
+     "tiny-aya-fire",
+     "tiny-aya-global",
+     "tiny-aya-water"
+    ]
+   }
+  },
+  "ultimo": {
+   "prov": "Cohere",
+   "modelo": "command-a-03-2025",
+   "t": "2026-11-25T13:12:29.160Z"
+  }
  },
  "dueno": 1237559052,
  "pendientesCant": 0
