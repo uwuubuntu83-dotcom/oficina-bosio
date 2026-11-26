@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1233,
+   "corridas": 1234,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-25",
-   "ultimaCorrida": "2026-11-26T04:05:36.445Z",
+   "ultimaCorrida": "2026-11-26T04:37:21.705Z",
    "resumen": "🚨 Movimiento fuerte del dólar\nContado con liquidación: bajó 2.2% → $1758.3\n\n💵 Dólar hoy (15:29 hs)\n• Oficial: compra $1580 · venta $1630 (+0.9%)\n• Blue: compra $1710 · venta $1730 (+1.8%)\n• Bolsa: compra $1662.2 · vent",
    "informe": "data/informes/dolar/2026-11-25-1529.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1762.53,
      "tarjeta": 2119
     },
-    "ultimoChequeo": "2026-11-26T04:05:36.445Z",
+    "ultimoChequeo": "2026-11-26T04:37:21.705Z",
     "resumenFecha": "2026-11-25",
     "hist": {
      "2026-10-30": {
@@ -5892,7 +5892,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-25",
    "ultimaCorrida": "2026-11-25T23:45:34.364Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 260 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 292 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": "data/informes/celular_bot/2026-11-25-1012.md",
    "pausado": true,
    "memoria": {
@@ -10341,7 +10341,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1233,
+   "corridas": 1234,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10350,7 +10350,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-26T04:05:36.445Z",
+   "ultimaCorrida": "2026-11-26T04:37:21.705Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10360,7 +10360,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-26T04:05:36.445Z",
+    "ultimoChequeo": "2026-11-26T04:37:21.705Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10743,16 +10743,16 @@
      },
      "2026-11-26": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       3,
-       3
+       4,
+       4
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       3,
-       3
+       4,
+       4
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       3,
-       3
+       4,
+       4
       ]
      }
     }
@@ -20753,7 +20753,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1215,
+   "corridas": 1216,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20762,13 +20762,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-26T04:05:36.445Z",
+   "ultimaCorrida": "2026-11-26T04:37:21.705Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-25",
-    "ultimoChequeo": "2026-11-26T04:05:36.445Z"
+    "ultimoChequeo": "2026-11-26T04:37:21.705Z"
    }
   },
   "feriados": {
@@ -20960,6 +20960,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-26T04:37:21.705Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-26T04:37:21.705Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-26T04:05:36.445Z",
    "quien": "Clientes y licitaciones",
@@ -22449,16 +22459,6 @@
    "t": "2026-11-25T00:21:07.428Z",
    "quien": "Noticias de Villa María",
    "que": "no pude leer «\"Villa María Vivo\"»: respondió 503"
-  },
-  {
-   "t": "2026-11-25T00:21:07.428Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «\"El Diario del Centro del País\"»: respondió 503"
-  },
-  {
-   "t": "2026-11-25T00:21:07.428Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa Nueva Córdoba»: respondió 503"
   }
  ],
  "pendientes": [],
@@ -22980,7 +22980,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-26T04:05:36.445Z",
+ "actualizado": "2026-11-26T04:37:21.705Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
