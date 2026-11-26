@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1263,
+   "corridas": 1264,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-26",
-   "ultimaCorrida": "2026-11-26T19:44:48.649Z",
+   "ultimaCorrida": "2026-11-26T20:14:34.694Z",
    "resumen": "💵 Dólar hoy (10:57 hs)\n• Oficial: compra $1580 · venta $1630\n• Blue: compra $1690 · venta $1710\n• Bolsa: compra $1664 · venta $1688.7\n• Contado con liquidación: compra $1765.6 · venta $1767.9\n• Mayorista: compra $1595 ·",
    "informe": "data/informes/dolar/2026-11-26-1057.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1762.87,
      "tarjeta": 2119
     },
-    "ultimoChequeo": "2026-11-26T19:44:48.649Z",
+    "ultimoChequeo": "2026-11-26T20:14:34.694Z",
     "resumenFecha": "2026-11-26",
     "hist": {
      "2026-10-30": {
@@ -285,10 +285,10 @@
      "2026-11-26": {
       "oficial": 1625,
       "blue": 1710,
-      "bolsa": 1666.3,
+      "bolsa": 1666.4,
       "contadoconliqui": 1767.9,
-      "mayorista": 1601,
-      "cripto": 1758.91,
+      "mayorista": 1601.5,
+      "cripto": 1750.08,
       "tarjeta": 2112.5
      }
     },
@@ -5915,13 +5915,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-26",
-   "ultimaCorrida": "2026-11-26T19:44:30.961Z",
+   "ultimaCorrida": "2026-11-26T20:10:29.782Z",
    "resumen": "📱 Celu bot · 🟢 andando · Bot de Instagram: parado · ",
    "informe": "data/informes/celular_bot/2026-11-25-1012.md",
    "pausado": true,
    "memoria": {
     "celu": {
-     "t": 1795722270961,
+     "t": 1795723829782,
      "redes_hoy": {
       "publicaciones": 0,
       "historias": 0,
@@ -10379,7 +10379,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1263,
+   "corridas": 1264,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10388,7 +10388,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-26T19:44:48.649Z",
+   "ultimaCorrida": "2026-11-26T20:14:34.694Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10398,7 +10398,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-26T19:44:48.649Z",
+    "ultimoChequeo": "2026-11-26T20:14:34.694Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10781,16 +10781,16 @@
      },
      "2026-11-26": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       33,
-       33
+       34,
+       34
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       33,
-       33
+       34,
+       34
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       33,
-       33
+       34,
+       34
       ]
      }
     }
@@ -20793,7 +20793,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1245,
+   "corridas": 1246,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20802,13 +20802,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-26T19:44:48.649Z",
+   "ultimaCorrida": "2026-11-26T20:14:34.694Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-26",
-    "ultimoChequeo": "2026-11-26T19:44:48.649Z"
+    "ultimoChequeo": "2026-11-26T20:14:34.694Z"
    }
   },
   "feriados": {
@@ -21000,6 +21000,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-26T20:14:34.694Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-26T20:14:34.694Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-26T19:44:48.649Z",
    "quien": "Clientes y licitaciones",
@@ -22489,16 +22499,6 @@
    "t": "2026-11-25T10:08:49.456Z",
    "quien": "Oficina",
    "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
-  },
-  {
-   "t": "2026-11-25T09:38:28.955Z",
-   "quien": "Mundo: economía",
-   "que": "no pude leer «China economía»: respondió 429"
-  },
-  {
-   "t": "2026-11-25T09:38:28.955Z",
-   "quien": "Clientes y licitaciones",
-   "que": "no pude leer «licitación obra Córdoba»: respondió 429"
   }
  ],
  "pendientes": [],
@@ -23020,7 +23020,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-26T19:44:48.649Z",
+ "actualizado": "2026-11-26T20:14:34.694Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
