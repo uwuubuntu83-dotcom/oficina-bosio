@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1285,
+   "corridas": 1286,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-26",
-   "ultimaCorrida": "2026-11-27T07:00:43.918Z",
+   "ultimaCorrida": "2026-11-27T07:30:44.163Z",
    "resumen": "💵 Dólar hoy (10:57 hs)\n• Oficial: compra $1580 · venta $1630\n• Blue: compra $1690 · venta $1710\n• Bolsa: compra $1664 · venta $1688.7\n• Contado con liquidación: compra $1765.6 · venta $1767.9\n• Mayorista: compra $1595 ·",
    "informe": "data/informes/dolar/2026-11-26-1057.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1752.96,
      "tarjeta": 2112.5
     },
-    "ultimoChequeo": "2026-11-27T07:00:43.918Z",
+    "ultimoChequeo": "2026-11-27T07:30:44.163Z",
     "resumenFecha": "2026-11-26",
     "hist": {
      "2026-10-30": {
@@ -6082,7 +6082,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-26",
    "ultimaCorrida": "2026-11-26T20:42:03.952Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 619 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 649 min (revisá la depuración inalámbrica) · Bot de Instagram: parado · ",
    "informe": "data/informes/celular_bot/2026-11-25-1012.md",
    "pausado": true,
    "memoria": {
@@ -10538,7 +10538,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1285,
+   "corridas": 1286,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10547,7 +10547,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-27T07:00:43.918Z",
+   "ultimaCorrida": "2026-11-27T07:30:44.163Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10557,7 +10557,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-27T07:00:43.918Z",
+    "ultimoChequeo": "2026-11-27T07:30:44.163Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10954,16 +10954,16 @@
      },
      "2026-11-27": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       9,
-       9
+       10,
+       10
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       9,
-       9
+       10,
+       10
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       9,
-       9
+       10,
+       10
       ]
      }
     }
@@ -21115,7 +21115,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1267,
+   "corridas": 1268,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -21124,13 +21124,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-27T07:00:43.918Z",
+   "ultimaCorrida": "2026-11-27T07:30:44.163Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-26",
-    "ultimoChequeo": "2026-11-27T07:00:43.918Z"
+    "ultimoChequeo": "2026-11-27T07:30:44.163Z"
    }
   },
   "feriados": {
@@ -21322,6 +21322,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-27T07:30:44.163Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-27T07:30:44.163Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-27T07:00:43.918Z",
    "quien": "Aumentos de servicios",
@@ -22811,16 +22821,6 @@
    "t": "2026-11-26T00:05:43.444Z",
    "quien": "Noticias de Villa María",
    "que": "no pude leer «\"Villa María Vivo\"»: respondió 429"
-  },
-  {
-   "t": "2026-11-26T00:05:43.444Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa María trabajo empleo»: respondió 429"
-  },
-  {
-   "t": "2026-11-26T00:05:43.444Z",
-   "quien": "Noticias de Villa María",
-   "que": "no pude leer «Villa María seguridad policía»: respondió 429"
   }
  ],
  "pendientes": [],
@@ -23342,7 +23342,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-27T07:00:43.918Z",
+ "actualizado": "2026-11-27T07:30:44.163Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
