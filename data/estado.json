@@ -3,7 +3,7 @@
  "bots": {
   "dolar": {
    "estado": "listo",
-   "corridas": 1333,
+   "corridas": 1334,
    "fallas": 1,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -12,7 +12,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-11-27",
-   "ultimaCorrida": "2026-11-28T08:25:35.244Z",
+   "ultimaCorrida": "2026-11-28T08:54:39.971Z",
    "resumen": "💵 Dólar hoy (10:31 hs)\n• Oficial: compra $1575 · venta $1625\n• Blue: compra $1690 · venta $1710\n• Bolsa: compra $1657.2 · venta $1666.4\n• Contado con liquidación: compra $1765.6 · venta $1767.9\n• Mayorista: compra $1592",
    "informe": "data/informes/dolar/2026-11-27-1031.md",
    "pausado": false,
@@ -36,7 +36,7 @@
      "cripto": 1742.22,
      "tarjeta": 2112.5
     },
-    "ultimoChequeo": "2026-11-28T08:25:35.244Z",
+    "ultimoChequeo": "2026-11-28T08:54:39.971Z",
     "resumenFecha": "2026-11-27",
     "hist": {
      "2026-10-30": {
@@ -6095,7 +6095,7 @@
    "nivel": 1,
    "ultimaFecha": "2026-11-27",
    "ultimaCorrida": "2026-11-28T00:24:45.943Z",
-   "resumen": "📱 Celu bot · 🔴 no responde hace 481 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
+   "resumen": "📱 Celu bot · 🔴 no responde hace 510 min (revisá la depuración inalámbrica) · Bot de Instagram: trabajando · ",
    "informe": "data/informes/celular_bot/2026-11-25-1012.md",
    "pausado": true,
    "memoria": {
@@ -10495,7 +10495,7 @@
   },
   "paginas": {
    "estado": "listo",
-   "corridas": 1333,
+   "corridas": 1334,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -10504,7 +10504,7 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": "2026-10-29",
-   "ultimaCorrida": "2026-11-28T08:25:35.244Z",
+   "ultimaCorrida": "2026-11-28T08:54:39.971Z",
    "resumen": "✅ Volvió: https://bosio-central.uwuubuntu83.workers.dev/",
    "informe": "data/informes/paginas/2026-10-29-2353.md",
    "pausado": false,
@@ -10514,7 +10514,7 @@
      "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": false,
      "https://bosio-central.uwuubuntu83.workers.dev/": false
     },
-    "ultimoChequeo": "2026-11-28T08:25:35.244Z",
+    "ultimoChequeo": "2026-11-28T08:54:39.971Z",
     "resumenFecha": "2026-10-29",
     "uptime": {
      "2026-10-30": {
@@ -10925,16 +10925,16 @@
      },
      "2026-11-28": {
       "https://uwuubuntu83-dotcom.github.io/oficina-bosio/": [
-       11,
-       11
+       12,
+       12
       ],
       "https://uwuubuntu83-dotcom.github.io/bosio-app-studio/": [
-       11,
-       11
+       12,
+       12
       ],
       "https://bosio-central.uwuubuntu83.workers.dev/": [
-       11,
-       11
+       12,
+       12
       ]
      }
     }
@@ -20906,7 +20906,7 @@
   },
   "recordatorios": {
    "estado": "listo",
-   "corridas": 1315,
+   "corridas": 1316,
    "fallas": 0,
    "fallasSeguidas": 0,
    "puntaje": null,
@@ -20915,13 +20915,13 @@
    "dislikes": 0,
    "nivel": 1,
    "ultimaFecha": null,
-   "ultimaCorrida": "2026-11-28T08:25:35.244Z",
+   "ultimaCorrida": "2026-11-28T08:54:39.971Z",
    "resumen": "🔒 Privado",
    "informe": null,
    "pausado": false,
    "memoria": {
     "fechasAvisadas": "2026-11-27",
-    "ultimoChequeo": "2026-11-28T08:25:35.244Z"
+    "ultimoChequeo": "2026-11-28T08:54:39.971Z"
    }
   },
   "feriados": {
@@ -21113,6 +21113,16 @@
   }
  },
  "log": [
+  {
+   "t": "2026-11-28T08:54:39.971Z",
+   "quien": "Mesa de entrada",
+   "que": "sin mensajes nuevos"
+  },
+  {
+   "t": "2026-11-28T08:54:39.971Z",
+   "quien": "Oficina",
+   "que": "abre (auto) · IA conectadas: gemini, github, groq, openrouter, cerebras, sambanova, nvidia, cohere, huggingface, zai, llm7, upstage, local, pollinations, cfai"
+  },
   {
    "t": "2026-11-28T08:25:35.244Z",
    "quien": "Clientes y licitaciones",
@@ -22602,16 +22612,6 @@
    "t": "2026-11-26T20:44:48.037Z",
    "quien": "Lo último en tecnología",
    "que": "no pude leer «ciberseguridad alerta»: respondió 503"
-  },
-  {
-   "t": "2026-11-26T20:44:48.037Z",
-   "quien": "Lo último en tecnología",
-   "que": "no pude leer «celulares lanzamiento»: respondió 503"
-  },
-  {
-   "t": "2026-11-26T20:44:48.037Z",
-   "quien": "Lo último en tecnología",
-   "que": "no pude leer «GitHub herramienta nueva»: respondió 503"
   }
  ],
  "pendientes": [],
@@ -23133,7 +23133,7 @@
   "por": {}
  },
  "botUsuario": "GrupoBosiobot",
- "actualizado": "2026-11-28T08:25:35.244Z",
+ "actualizado": "2026-11-28T08:54:39.971Z",
  "modelo": "gemini-3.8-flash",
  "config": {
   "telegram": true,
